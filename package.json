@@ -1,7 +1,7 @@
 {
   "name": "@jsconfjp/website",
   "version": "0.0.1",
-  "description": "Website",
+  "description": "JSConf Japan Website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
