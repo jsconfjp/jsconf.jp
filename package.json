@@ -1,0 +1,20 @@
+{
+  "name": "@jsconfjp/website",
+  "version": "0.0.1",
+  "description": "Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsconfjp/jsconf.jp.git"
+  },
+  "keywords": [],
+  "author": "JSConf Japan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsconfjp/jsconf.jp/issues"
+  },
+  "homepage": "https://github.com/jsconfjp/jsconf.jp#readme"
+}
