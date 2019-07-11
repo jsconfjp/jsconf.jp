@@ -13,6 +13,18 @@ export function Header(props: Props) {
       <h1>
         <Link to="/">{siteTitle}</Link>
       </h1>
+
+      <Link to="speakers">Speakers</Link>
+      <span>/</span>
+      <Link to="venue">Venue</Link>
+      <span>/</span>
+      <Link to="schedule">Schedule</Link>
+      <span>/</span>
+      <Link to="timetable">Timetable</Link>
+      <span>/</span>
+      <Link to="sponsors">Sponsors</Link>
+      <span>/</span>
+      <Link to="about">About</Link>
     </header>
   )
 }
