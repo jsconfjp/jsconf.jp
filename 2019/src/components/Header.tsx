@@ -5,12 +5,14 @@ type Props = {
   siteTitle: string
 }
 
-const Header = ({ siteTitle }: Props) => (
-  <header>
-    <h1>
-      <Link to="/">{siteTitle}</Link>
-    </h1>
-  </header>
-)
+export function Header(props: Props) {
+  const { siteTitle } = props
 
-export default Header
+  return (
+    <header>
+      <h1>
+        <Link to="/">{siteTitle}</Link>
+      </h1>
+    </header>
+  )
+}
