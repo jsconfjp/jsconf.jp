@@ -1,9 +1,17 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "jsconfjp-2019",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "license": "UNLICENSED",
+  "repository": "jsconfjp/jsconf.jp",
+  "author": "Leko <leko.noor@gmail.com>",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
   "dependencies": {
     "gatsby": "^2.13.13",
     "gatsby-image": "^2.2.4",
@@ -25,24 +33,5 @@
     "@types/react-dom": "^16.8.4",
     "prettier": "^1.18.2",
     "typescript": "^3.5.3"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
