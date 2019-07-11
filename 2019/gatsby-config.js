@@ -3,6 +3,7 @@ module.exports = {
     title: `JSConf JP`,
     description: `WIP`,
     author: `JSConf JP`,
+    twitter: `jsconfjp`,
   },
   plugins: [
     `gatsby-plugin-typescript`,
