@@ -7,12 +7,13 @@ import { SEO } from "../components/Seo"
 import { Hero } from "../components/Hero"
 import { SubTitle } from "../components/SubTitle"
 import { SpeakerList } from "../components/SpeakerList"
+import { SponsorList } from "../components/SponsorList"
 import { LinkButton } from "../components/LinkButton"
 
 export default function IndexPage() {
   const { t } = useTranslation()
-  const guestSpeakers = useStaticQuery(graphql`
-    query GuestSpeakers {
+  const { allSpeakersYaml, allSponsorsYaml } = useStaticQuery(graphql`
+    query {
       allSpeakersYaml(filter: { featured: { eq: true } }) {
         edges {
           node {
@@ -25,9 +26,19 @@ export default function IndexPage() {
           }
         }
       }
+      allSponsorsYaml {
+        edges {
+          node {
+            name
+            url
+            pr
+          }
+        }
+      }
     }
   `)
-  const speakers = guestSpeakers.allSpeakersYaml.edges.map(({ node }) => node)
+  const guestSpeakers = allSpeakersYaml.edges.map(({ node }) => node)
+  const sponsors = allSponsorsYaml.edges.map(({ node }) => node)
 
   return (
     <Layout>
@@ -39,7 +50,7 @@ export default function IndexPage() {
       />
 
       <SubTitle>{t("guestSpeakers")}</SubTitle>
-      <SpeakerList speakers={speakers} />
+      <SpeakerList speakers={guestSpeakers} />
       <LinkButton theme="primary" to="/speakers">
         {t("goToGuests")}
       </LinkButton>
@@ -61,6 +72,9 @@ export default function IndexPage() {
       <LinkButton theme="primary" to="/venue">
         {t("moreDetails")}
       </LinkButton>
+
+      <SubTitle>{t("sponsors")}</SubTitle>
+      <SponsorList sponsors={sponsors} />
     </Layout>
   )
 }
