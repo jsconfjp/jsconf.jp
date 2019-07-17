@@ -14,8 +14,9 @@ export default function SponsorsPage() {
         edges {
           node {
             name
+            grade
             url
-            pr
+            logoUrl
           }
         }
       }

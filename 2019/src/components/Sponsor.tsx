@@ -1,6 +1,7 @@
 import React from "react"
 
 export type Props = {
+  grade: "platinum" | "gold" | "silver" | "bronze"
   logoUrl: string
   url: string
 }

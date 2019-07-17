@@ -33,8 +33,9 @@ export default function IndexPage() {
         edges {
           node {
             name
+            grade
             url
-            pr
+            logoUrl
           }
         }
       }
