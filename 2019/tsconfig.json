@@ -6,6 +6,7 @@
     "removeComments": false /* Do not emit comments to output. */,
     "noEmit": true /* Do not emit outputs. */,
     "downlevelIteration": true /* Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'. */,
+    "typeRoots": ["node_modules/@types", "types"],
 
     /* Strict Type-Checking Options */
     "strict": true /* Enable all strict type-checking options. */,
