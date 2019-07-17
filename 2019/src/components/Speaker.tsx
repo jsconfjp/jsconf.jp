@@ -1,7 +1,7 @@
 import React from "react"
 import { Logo } from './Logo'
 
-type Props = {
+export type Props = {
     name: string,
     photo: string,
     biography: string,
