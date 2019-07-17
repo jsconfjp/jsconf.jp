@@ -4,8 +4,8 @@ export type Props = {
   children: React.ReactNode
 }
 
-export function SubTitle(props: Props) {
+export function Title(props: Props) {
   const { children } = props
 
-  return <h2 style={{ textTransform: "uppercase" }}>{children}</h2>
+  return <h1 style={{ textTransform: "uppercase" }}>{children}</h1>
 }

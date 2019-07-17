@@ -2,6 +2,7 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 
 import { Layout } from "../components/Layout"
+import { Title } from "../components/Title"
 import { SEO } from "../components/Seo"
 
 export default function TimetablePage() {
@@ -9,6 +10,7 @@ export default function TimetablePage() {
   return (
     <Layout>
       <SEO title="Timetable" />
+      <Title>{t("timetable")}</Title>
       TODO: Timetable
     </Layout>
   )

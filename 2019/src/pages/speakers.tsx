@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next"
 
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
+import { Title } from "../components/Title"
 import { SpeakerList } from "../components/SpeakerList"
 
 export default function SpeakersPage() {
@@ -29,6 +30,7 @@ export default function SpeakersPage() {
   return (
     <Layout>
       <SEO title="Speakers" />
+      <Title>{t("speakers")}</Title>
       <SpeakerList speakers={speakers} />
     </Layout>
   )
