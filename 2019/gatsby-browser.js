@@ -16,6 +16,9 @@ const resources = {
       schedule: "schedule",
       day1: "Day 1",
       day2: "Day 2",
+      tickets: "Tickets",
+      ticketsDescription: "TODO: description",
+      comingSoon: "Coming soon",
     },
   },
   ja: {
@@ -29,6 +32,9 @@ const resources = {
       schedule: "schedule",
       day1: "Day 1",
       day2: "Day 2",
+      tickets: "Tickets",
+      ticketsDescription: "TODO: description",
+      comingSoon: "Coming soon",
     },
   },
 }

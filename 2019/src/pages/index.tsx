@@ -51,6 +51,10 @@ export default function IndexPage() {
       <LinkButton theme="secondary" to="/timetable#day2">
         {t("day2")}
       </LinkButton>
+
+      <SubTitle>{t("tickets")}</SubTitle>
+      <p>{t("ticketsDescription")}</p>
+      <LinkButton theme="primary">{t("comingSoon")}</LinkButton>
     </Layout>
   )
 }
