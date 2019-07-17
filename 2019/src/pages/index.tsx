@@ -37,10 +37,19 @@ export default function IndexPage() {
         subTitle={t("festivalPeriod")}
         description={t("description")}
       />
+
       <SubTitle>{t("guestSpeakers")}</SubTitle>
       <SpeakerList speakers={speakers} />
       <LinkButton theme="primary" to="/speakers">
         {t("goToGuests")}
+      </LinkButton>
+
+      <SubTitle>{t("schedule")}</SubTitle>
+      <LinkButton theme="secondary" to="/timetable#day1">
+        {t("day1")}
+      </LinkButton>
+      <LinkButton theme="secondary" to="/timetable#day2">
+        {t("day2")}
       </LinkButton>
     </Layout>
   )

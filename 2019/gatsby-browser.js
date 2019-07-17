@@ -1,5 +1,5 @@
 import i18n from "i18next"
-import LanguageDetector from 'i18next-browser-languagedetector';
+import LanguageDetector from "i18next-browser-languagedetector"
 import { initReactI18next } from "react-i18next"
 
 // the translations
@@ -7,20 +7,28 @@ import { initReactI18next } from "react-i18next"
 const resources = {
   en: {
     translation: {
-      "siteName": "JSConf JP",
-      "description": "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the first event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
-      "festivalPeriod": "November 30th, December 1st 2019",
-      "guestSpeakers": "Guest speakers",
-      "goToGuests": "CHECK ALL SPEAKERS",
+      siteName: "JSConf JP",
+      description:
+        "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the first event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
+      festivalPeriod: "November 30th, December 1st 2019",
+      guestSpeakers: "Guest speakers",
+      goToGuests: "CHECK ALL SPEAKERS",
+      schedule: "schedule",
+      day1: "Day 1",
+      day2: "Day 2",
     },
   },
   ja: {
     translation: {
-      "siteName": "JSConf JP",
-      "description": "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the first event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
-      "festivalPeriod": "November 30th, December 1st 2019",
-      "guestSpeakers": "Guest speakers",
-      "goToGuests": "CHECK ALL SPEAKERS",
+      siteName: "JSConf JP",
+      description:
+        "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the first event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
+      festivalPeriod: "November 30th, December 1st 2019",
+      guestSpeakers: "Guest speakers",
+      goToGuests: "CHECK ALL SPEAKERS",
+      schedule: "schedule",
+      day1: "Day 1",
+      day2: "Day 2",
     },
   },
 }
@@ -30,7 +38,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'en',
+    fallbackLng: "en",
     keySeparator: false, // we do not use keys in form messages.welcome
 
     interpolation: {
@@ -39,11 +47,11 @@ i18n
 
     // https://github.com/i18next/i18next-browser-languageDetector#detector-options
     detection: {
-      order: ['querystring', 'localStorage', 'navigator'],
-      lookupQuerystring: 'lang',
-      lookupCookie: 'lang',
-      lookupLocalStorage: 'lang',
-      caches: ['localStorage'],
-      excludeCacheFor: ['cimode'],
-    }
+      order: ["querystring", "localStorage", "navigator"],
+      lookupQuerystring: "lang",
+      lookupCookie: "lang",
+      lookupLocalStorage: "lang",
+      caches: ["localStorage"],
+      excludeCacheFor: ["cimode"],
+    },
   })
