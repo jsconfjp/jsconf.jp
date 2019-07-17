@@ -7,6 +7,7 @@ import { SEO } from "../components/Seo"
 import { Hero } from "../components/Hero"
 import { SubTitle } from "../components/SubTitle"
 import { SpeakerList } from "../components/SpeakerList"
+import { LinkButton } from "../components/LinkButton"
 
 export default function IndexPage() {
   const { t } = useTranslation()
@@ -40,6 +41,9 @@ export default function IndexPage() {
       <SpeakerList
         speakers={speakers}
       />
+      <LinkButton theme="primary" to="/speakers">
+        {t('goToGuests')}
+      </LinkButton>
     </Layout>
   )
 }
