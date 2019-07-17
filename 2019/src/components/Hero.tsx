@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 import { Logo } from "./Logo"
 
 type Props = {
@@ -7,15 +8,21 @@ type Props = {
   description: string
 }
 
+const Box = styled.div`
+  display: flex;
+`
+
 export function Hero(props: Props) {
   const { title, subTitle, description } = props
 
   return (
-    <>
+    <Box>
       <Logo />
-      <h1>{title}</h1>
-      <h2>{subTitle}</h2>
-      <p>{description}</p>
-    </>
+      <div style={{ flex: 1 }}>
+        <h1>{title}</h1>
+        <h2>{subTitle}</h2>
+        <p>{description}</p>
+      </div>
+    </Box>
   )
 }
