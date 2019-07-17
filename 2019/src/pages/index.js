@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next"
 
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
@@ -33,16 +33,14 @@ export default function IndexPage() {
     <Layout>
       <SEO title="Home" />
       <Hero
-        title={t('siteName')}
-        subTitle={t('festivalPeriod')}
-        description={t('description')}
+        title={t("siteName")}
+        subTitle={t("festivalPeriod")}
+        description={t("description")}
       />
-      <SubTitle>{t('guestSpeakers')}</SubTitle>
-      <SpeakerList
-        speakers={speakers}
-      />
+      <SubTitle>{t("guestSpeakers")}</SubTitle>
+      <SpeakerList speakers={speakers} />
       <LinkButton theme="primary" to="/speakers">
-        {t('goToGuests')}
+        {t("goToGuests")}
       </LinkButton>
     </Layout>
   )

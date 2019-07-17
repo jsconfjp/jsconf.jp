@@ -29,9 +29,7 @@ export default function SpeakersPage() {
   return (
     <Layout>
       <SEO title="Speakers" />
-      <SpeakerList
-        speakers={speakers}
-      />
+      <SpeakerList speakers={speakers} />
     </Layout>
   )
 }

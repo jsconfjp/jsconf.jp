@@ -23,7 +23,7 @@ export function SEO({ description, lang, meta, title }: Props) {
           }
         }
       }
-    `
+    `,
   )
 
   const metaDescription = description || site.siteMetadata.description

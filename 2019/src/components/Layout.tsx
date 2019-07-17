@@ -16,7 +16,7 @@ export function Layout({ children }: Props) {
     (lang: string) => {
       i18n.changeLanguage(lang)
     },
-    [i18n]
+    [i18n],
   )
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
