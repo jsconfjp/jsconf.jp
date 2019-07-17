@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { Sponsor, Props as SponsorType } from "./Sponsor"
 import { SubTitle } from "./SubTitle"
@@ -6,6 +7,19 @@ import { SubTitle } from "./SubTitle"
 export type Props = {
   sponsors: SponsorType[]
 }
+
+const PlatinumContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`
+const GoldContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+`
+const OtherContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+`
 
 export function SponsorList(props: Props) {
   const { sponsors } = props
@@ -27,24 +41,32 @@ export function SponsorList(props: Props) {
   return (
     <>
       <SubTitle>{t("sponsor.platinum")}</SubTitle>
-      {grades.platinum.map(platinumSponsor => (
-        <Sponsor {...platinumSponsor} />
-      ))}
+      <PlatinumContainer>
+        {grades.platinum.map(platinumSponsor => (
+          <Sponsor {...platinumSponsor} />
+        ))}
+      </PlatinumContainer>
 
       <SubTitle>{t("sponsor.gold")}</SubTitle>
-      {grades.gold.map(goldSponsor => (
-        <Sponsor {...goldSponsor} />
-      ))}
+      <GoldContainer>
+        {grades.gold.map(goldSponsor => (
+          <Sponsor {...goldSponsor} />
+        ))}
+      </GoldContainer>
 
       <SubTitle>{t("sponsor.silver")}</SubTitle>
-      {grades.silver.map(silverSponsor => (
-        <Sponsor {...silverSponsor} />
-      ))}
+      <OtherContainer>
+        {grades.silver.map(silverSponsor => (
+          <Sponsor {...silverSponsor} />
+        ))}
+      </OtherContainer>
 
       <SubTitle>{t("sponsor.bronze")}</SubTitle>
-      {grades.bronze.map(bronzeSponsor => (
-        <Sponsor {...bronzeSponsor} />
-      ))}
+      <OtherContainer>
+        {grades.bronze.map(bronzeSponsor => (
+          <Sponsor {...bronzeSponsor} />
+        ))}
+      </OtherContainer>
     </>
   )
 }
