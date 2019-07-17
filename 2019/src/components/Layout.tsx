@@ -5,19 +5,23 @@ import { useTranslation } from "react-i18next"
 import { Header } from "./Header"
 import { LanguageSwitch } from "./LanguageSwitch"
 import "./layout.css"
+import { Button } from "./Button"
 
 type Props = {
   children: React.ReactNode
 }
 
 export function Layout({ children }: Props) {
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
   const onChangeLanguage = useCallback(
     (lang: string) => {
       i18n.changeLanguage(lang)
     },
     [i18n],
   )
+  const onRequestBackToTop = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }, [])
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -34,6 +38,9 @@ export function Layout({ children }: Props) {
       <Header siteTitle={data.site.siteMetadata.title} />
       <LanguageSwitch languages={["en", "ja"]} onChange={onChangeLanguage} />
       <main>{children}</main>
+      <Button theme="primary" onClick={onRequestBackToTop}>
+        {t("backToTop")}
+      </Button>
       <footer>
         &copy; 2019-{new Date().getFullYear()}{" "}
         <a

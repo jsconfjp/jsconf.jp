@@ -11,6 +11,7 @@ import { SubTitle } from "../components/SubTitle"
 import { SpeakerList } from "../components/SpeakerList"
 import { SponsorList } from "../components/SponsorList"
 import { LinkButton } from "../components/LinkButton"
+import { Button } from "../components/Button"
 
 export default function IndexPage() {
   const { t } = useTranslation()
@@ -67,7 +68,9 @@ export default function IndexPage() {
 
       <SubTitle>{t("tickets")}</SubTitle>
       <p>{t("ticketsDescription")}</p>
-      <LinkButton theme="primary">{t("comingSoon")}</LinkButton>
+      <Button theme="primary" onClick={() => {}}>
+        {t("comingSoon")}
+      </Button>
 
       <SubTitle>{t("venue")}</SubTitle>
       <Map width={600} height={450} />
