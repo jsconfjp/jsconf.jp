@@ -55,6 +55,12 @@ export default function IndexPage() {
       <SubTitle>{t("tickets")}</SubTitle>
       <p>{t("ticketsDescription")}</p>
       <LinkButton theme="primary">{t("comingSoon")}</LinkButton>
+
+      <SubTitle>{t("venue")}</SubTitle>
+      <p>TODO: Venue</p>
+      <LinkButton theme="primary" to="/venue">
+        {t("moreDetails")}
+      </LinkButton>
     </Layout>
   )
 }

@@ -19,6 +19,8 @@ const resources = {
       tickets: "Tickets",
       ticketsDescription: "TODO: description",
       comingSoon: "Coming soon",
+      venue: "Venue",
+      moreDetails: "More details",
     },
   },
   ja: {
@@ -35,6 +37,8 @@ const resources = {
       tickets: "Tickets",
       ticketsDescription: "TODO: description",
       comingSoon: "Coming soon",
+      venue: "Venue",
+      moreDetails: "More details",
     },
   },
 }
