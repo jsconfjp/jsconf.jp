@@ -12,6 +12,11 @@
     "pretest": "tsc",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "dependencies": {
     "gatsby": "^2.13.18",
     "gatsby-image": "^2.2.4",
@@ -35,7 +40,9 @@
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
     "@types/react-helmet": "^5.0.8",
+    "husky": "^3.0.0",
     "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
     "typescript": "^3.5.3"
   }
 }
