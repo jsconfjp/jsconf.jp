@@ -41,7 +41,7 @@ export function Layout({ children }: Props) {
         <Header siteTitle={data.site.siteMetadata.title} />
         <LanguageSwitch languages={["en", "ja"]} onChange={onChangeLanguage} />
         <main>{children}</main>
-        <Button theme="primary" onClick={onRequestBackToTop}>
+        <Button color="primary" onClick={onRequestBackToTop}>
           {t("backToTop")}
         </Button>
         <footer>

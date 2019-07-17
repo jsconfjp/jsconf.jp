@@ -55,28 +55,28 @@ export default function IndexPage() {
 
       <SubTitle>{t("guestSpeakers")}</SubTitle>
       <SpeakerList speakers={guestSpeakers} />
-      <LinkButton theme="primary" to="/speakers">
+      <LinkButton color="primary" to="/speakers">
         {t("goToGuests")}
       </LinkButton>
 
       <SubTitle>{t("schedule")}</SubTitle>
-      <LinkButton theme="secondary" to="/timetable#day1">
+      <LinkButton color="secondary" to="/timetable#day1">
         {t("day1")}
       </LinkButton>
-      <LinkButton theme="secondary" to="/timetable#day2">
+      <LinkButton color="secondary" to="/timetable#day2">
         {t("day2")}
       </LinkButton>
 
       <SubTitle>{t("tickets")}</SubTitle>
       <p>{t("ticketsDescription")}</p>
-      <Button theme="primary" onClick={() => {}}>
+      <Button color="primary" onClick={() => {}}>
         {t("comingSoon")}
       </Button>
 
       <SubTitle>{t("venue")}</SubTitle>
       <Map width={600} height={450} />
       <Address />
-      <LinkButton theme="primary" to="/venue">
+      <LinkButton color="primary" to="/venue">
         {t("moreDetails")}
       </LinkButton>
 

@@ -1,5 +1,5 @@
 import React from "react"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import { Link } from "gatsby"
 
 const InternalBox = styled(Link)`
@@ -33,31 +33,31 @@ const ExternalSecondaryBox = styled(ExternalBox)`
 `
 
 export type Props = {
-  theme: "primary" | "secondary"
+  color: "primary" | "secondary"
   to: string
   children: React.ReactNode
 }
 
 export function LinkButton(props: Props) {
-  const { theme, to, children } = props
+  const { color, to, children } = props
 
   if (to.startsWith("/")) {
-    if (theme === "primary") {
+    if (color === "primary") {
       return <InternalPrimaryBox to={to}>{children}</InternalPrimaryBox>
-    } else if (theme === "secondary") {
+    } else if (color === "secondary") {
       return <InternalSecondaryBox to={to}>{children}</InternalSecondaryBox>
     } else {
       return <InternalBox to={to}>{children}</InternalBox>
     }
   }
 
-  if (theme === "primary") {
+  if (color === "primary") {
     return (
       <ExternalPrimaryBox href={to} target="_blank">
         {children}
       </ExternalPrimaryBox>
     )
-  } else if (theme === "secondary") {
+  } else if (color === "secondary") {
     return (
       <ExternalSecondaryBox href={to} target="_blank">
         {children}

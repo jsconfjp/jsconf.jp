@@ -16,17 +16,17 @@ const SecondaryBox = styled(Box)`
 `
 
 export type Props = {
-  theme: "primary" | "secondary"
+  color: "primary" | "secondary"
   children: React.ReactNode
   onClick: () => void
 }
 
 export function Button(props: Props) {
-  const { theme, children, onClick } = props
+  const { color, children, onClick } = props
 
-  if (theme === "primary") {
+  if (color === "primary") {
     return <PrimaryBox onClick={onClick}>{children}</PrimaryBox>
-  } else if (theme === "secondary") {
+  } else if (color === "secondary") {
     return <SecondaryBox onClick={onClick}>{children}</SecondaryBox>
   } else {
     return <Box onClick={onClick}>{children}</Box>
