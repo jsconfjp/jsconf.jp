@@ -16,7 +16,6 @@ export default function IndexPage() {
         subTitle={t('festivalPeriod')}
         description={t('description')}
       />
-      <h1>{t('welcome')}</h1>
     </Layout>
   )
 }
