@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next"
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
 import { Hero } from "../components/Hero"
+import { Map } from "../components/Map"
+import { Address } from "../components/Address"
 import { SubTitle } from "../components/SubTitle"
 import { SpeakerList } from "../components/SpeakerList"
 import { SponsorList } from "../components/SponsorList"
@@ -68,7 +70,8 @@ export default function IndexPage() {
       <LinkButton theme="primary">{t("comingSoon")}</LinkButton>
 
       <SubTitle>{t("venue")}</SubTitle>
-      <p>TODO: Venue</p>
+      <Map width={600} height={450} />
+      <Address />
       <LinkButton theme="primary" to="/venue">
         {t("moreDetails")}
       </LinkButton>
