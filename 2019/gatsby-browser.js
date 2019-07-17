@@ -22,6 +22,9 @@ const resources = {
       venue: "Venue",
       moreDetails: "More details",
       sponsors: "Sponsors",
+      "venue.name": "3331 Arts Chiyoda",
+      "venue.address": "〒101-0021 6-11-14 Sotokanda Chiyoda-ku Tokyo",
+      "venue.url": "https://www.3331.jp/rentalspace/",
     },
   },
   ja: {
@@ -41,6 +44,9 @@ const resources = {
       venue: "Venue",
       moreDetails: "More details",
       sponsors: "Sponsors",
+      "venue.name": "アーツ千代田 3331",
+      "venue.address": "〒101-0021 東京都千代田区外神田6丁目11-14",
+      "venue.url": "https://www.3331.jp/rentalspace/",
     },
   },
 }
