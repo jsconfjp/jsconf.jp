@@ -27,7 +27,6 @@ export function SponsorList(props: Props) {
   const grades = sponsors.reduce(
     (acc, sponsor) => ({
       ...acc,
-      _: console.log(sponsor, acc),
       [sponsor.grade]: acc[sponsor.grade].concat([sponsor]),
     }),
     {
