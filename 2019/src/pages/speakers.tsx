@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next"
 
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
+import { Speaker } from "../components/Speaker"
 
 export default function SpeakersPage() {
   const data = useStaticQuery(graphql`
@@ -28,19 +29,14 @@ export default function SpeakersPage() {
     <Layout>
       <SEO title="Speakers" />
       {data.allSpeakersYaml.edges.map(({ node }) => (
-        <div key={node.name}>
-          <h2>{node.name}</h2>
-          <img src={node.photo} width="100" />
-          <p>{node.biography}</p>
-          <p>
-            <a href={node.github} target="_blank">
-              GitHub
-            </a>
-            <a href={node.twitter} target="_blank">
-              Twitter
-            </a>
-          </p>
-        </div>
+        <Speaker
+          key={node.name}
+          name={node.name}
+          photo={node.photo}
+          biography={node.biography}
+          github={node.github}
+          twitter={node.twitter}
+        />
       ))}
     </Layout>
   )
