@@ -17,7 +17,7 @@ export default function SpeakersPage() {
             name
             github
             twitter
-            photo
+            photoURL
             biography
           }
         }

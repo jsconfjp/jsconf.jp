@@ -24,7 +24,7 @@ export default function IndexPage() {
             name
             github
             twitter
-            photo
+            photoURL
             biography
           }
         }

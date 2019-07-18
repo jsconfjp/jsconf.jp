@@ -1,6 +1,24 @@
-- name: Anna Henningsen
+- name: Nadieh Bremer
   featured: true
   github: addaleax
-  twitter: addaleax
-  photo: https://addaleax.net/addaleax.jpg
-  biography: Over the last 2 and a half years, Anna has been one of the most active contributors to Node.js core. Currently pursuing a Masterâ€™s degree in mathematics in Germany, she is fueled by a passion for Node and its community.
+  twitter: NadiehBremer
+  photoURL: https://lh4.googleusercontent.com/yfd-93UTuPJjFNpUQT5Jinmzv5gtO2qFVwGOX1v5IKQS05hd70j5_8oLnEuBifwlMl_h-xoj=w371
+  biography: TBA
+- name: Henry Zhu
+  featured: true
+  github: hzoo
+  twitter: left_pad
+  photoURL: https://lh6.googleusercontent.com/LT5iEjUAU7rbYWwtvfkfvUWPYmdaWGK0iDCyxTFGIrWm_qVnIPbjAAp_q5iNOSuXgZLs3aw=w371
+  biography: TBA
+- name: Guillermo Rauch
+  featured: true
+  github: rauchg
+  twitter: rauchg
+  photoURL: https://lh3.googleusercontent.com/KgqW-zinehawsI33AFNQxlH5-_SwlZJZkmiiLxV84ix0KqGho_L8VIIFZMn574hN4J8SAgqv=w371
+  biography: TBA
+- name: Dominic Tarr
+  featured: true
+  github: addaleax
+  twitter: dominictarr
+  photoURL: https://lh6.googleusercontent.com/gSp8nOzLqy-gw9aiOiF-Tp3txoW3kfEQbBwuiGJOGHJAoqBgsf7imFox9VeiPZ2HLzGaI3qCSg=w371
+  biography: TBA
