@@ -5,6 +5,7 @@ import "styled-components"
 declare module "styled-components" {
   export interface DefaultTheme {
     colors: {
+      base: string
       primary: string
       secondary: string
     }

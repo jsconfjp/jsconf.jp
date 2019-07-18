@@ -12,6 +12,8 @@ import { SpeakerList } from "../components/SpeakerList"
 import { SponsorList } from "../components/SponsorList"
 import { LinkButton } from "../components/LinkButton"
 import { Button } from "../components/Button"
+import { Card } from "../components/Card"
+import { Centerize } from "../components/Centerize"
 
 export default function IndexPage() {
   const { t } = useTranslation()
@@ -47,41 +49,59 @@ export default function IndexPage() {
   return (
     <Layout>
       <SEO title="Home" />
-      <Hero
-        title={t("siteName")}
-        subTitle={t("festivalPeriod")}
-        description={t("description")}
-      />
+      <Centerize>
+        <Hero
+          title={t("siteName")}
+          subTitle={t("festivalPeriod")}
+          description={t("description")}
+        />
+      </Centerize>
 
-      <SubTitle>{t("guestSpeakers")}</SubTitle>
-      <SpeakerList speakers={guestSpeakers} />
-      <LinkButton color="primary" to="/speakers">
-        {t("goToGuests")}
-      </LinkButton>
+      <Card>
+        <Centerize>
+          <SubTitle>{t("guestSpeakers")}</SubTitle>
+          <SpeakerList speakers={guestSpeakers} />
+          <LinkButton color="primary" to="/speakers">
+            {t("goToGuests")}
+          </LinkButton>
+        </Centerize>
+      </Card>
 
-      <SubTitle>{t("schedule")}</SubTitle>
-      <LinkButton color="secondary" to="/timetable#day1">
-        {t("day1")}
-      </LinkButton>
-      <LinkButton color="secondary" to="/timetable#day2">
-        {t("day2")}
-      </LinkButton>
+      <Centerize>
+        <SubTitle>{t("schedule")}</SubTitle>
+        <div style={{ display: "flex" }}>
+          <LinkButton color="secondary" to="/timetable#day1">
+            {t("day1")}
+          </LinkButton>
+          <LinkButton color="secondary" to="/timetable#day2">
+            {t("day2")}
+          </LinkButton>
+        </div>
+      </Centerize>
 
-      <SubTitle>{t("tickets")}</SubTitle>
-      <p>{t("ticketsDescription")}</p>
-      <Button color="primary" onClick={() => {}}>
-        {t("comingSoon")}
-      </Button>
+      <Card>
+        <Centerize>
+          <SubTitle>{t("tickets")}</SubTitle>
+          <p>{t("ticketsDescription")}</p>
+          <Button color="primary" onClick={() => {}}>
+            {t("comingSoon")}
+          </Button>
+        </Centerize>
+      </Card>
 
-      <SubTitle>{t("venue")}</SubTitle>
-      <Map width={600} height={450} />
-      <Address />
-      <LinkButton color="primary" to="/venue">
-        {t("moreDetails")}
-      </LinkButton>
+      <Centerize>
+        <SubTitle>{t("venue")}</SubTitle>
+        <Map width={600} height={450} />
+        <Address />
+        <LinkButton color="primary" to="/venue">
+          {t("moreDetails")}
+        </LinkButton>
+      </Centerize>
 
-      <SubTitle>{t("sponsors")}</SubTitle>
-      <SponsorList sponsors={sponsors} />
+      <Centerize>
+        <SubTitle>{t("sponsors")}</SubTitle>
+        <SponsorList sponsors={sponsors} />
+      </Centerize>
     </Layout>
   )
 }
