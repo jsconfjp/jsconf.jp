@@ -2,9 +2,12 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-type Props = {}
+type Props = {
+  size: number
+}
 
-export function Logo(_props: Props) {
+export function Logo(props: Props) {
+  const { size } = props
   const { file } = useStaticQuery(
     graphql`
       query {
@@ -19,5 +22,14 @@ export function Logo(_props: Props) {
     `,
   )
 
-  return <Img fixed={file.childImageSharp.fixed} />
+  return (
+    <Img
+      style={{ width: size, height: size }}
+      fixed={file.childImageSharp.fixed}
+    />
+  )
+}
+
+Logo.defaultProps = {
+  size: 125,
 }

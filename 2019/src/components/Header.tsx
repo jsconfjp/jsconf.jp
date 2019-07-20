@@ -12,6 +12,15 @@ type Props = {
 
 const Box = styled.header`
   display: flex;
+  position: sticky;
+  background-color: ${({ theme }) => theme.colors.base};
+  z-index: 1;
+  top: 0;
+  height: 60;
+  box-shadow: 2px 0px 5px ${({ theme }) => theme.colors.shadow};
+`
+const Brand = styled.h1`
+  margin: 0;
 `
 const MenuBox = styled.div`
   flex: 1;
@@ -23,6 +32,7 @@ const MenuItem = styled(Link)`
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  text-transform: uppercase;
 `
 const LinkButton = styled(_LinkButton)``
 
@@ -32,18 +42,16 @@ export function Header(props: Props) {
 
   return (
     <Box>
-      <Logo />
-      <h1>
+      <Logo size={40} />
+      <Brand>
         <Link to="/">{siteTitle}</Link>
-      </h1>
+      </Brand>
 
       <MenuBox>
         <MenuItem to="speakers">{t("speakers")}</MenuItem>
         <MenuItem to="venue">{t("venue")}</MenuItem>
         <MenuItem to="schedule">{t("schedule")}</MenuItem>
-        <MenuItem to="timetable">{t("timetable")}</MenuItem>
         <MenuItem to="sponsors">{t("sponsors")}</MenuItem>
-        <MenuItem to="about">{t("about")}</MenuItem>
         <LinkButton to="https://example.com" color="primary">
           {t("tickets")}
         </LinkButton>
