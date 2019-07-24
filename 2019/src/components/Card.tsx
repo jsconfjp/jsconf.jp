@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const Box = styled.div`
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 10px ${({ theme }) => theme.colors.shadow};
   background-color: ${({ theme }) => theme.colors.base};
 `
 

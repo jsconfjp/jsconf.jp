@@ -4,8 +4,8 @@ import { DefaultTheme } from "styled-components"
 export const theme: DefaultTheme = {
   colors: {
     base: "#ffffff",
-    shadow: "rgba(0, 0, 0, 0.5)",
-    primary: "orange",
-    secondary: "lightgreen",
+    shadow: "rgba(0, 0, 0, 0.16)",
+    primary: "#FF5700",
+    secondary: "#3BB3AA",
   },
 }
