@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next"
 
 import { theme } from "../theme"
 import { Header } from "./Header"
+import { Footer } from "./Footer"
 import { LanguageSwitch } from "./LanguageSwitch"
 import { Button } from "./Button"
 import "./layout.css"
@@ -44,15 +45,7 @@ export function Layout({ children }: Props) {
         <Button color="primary" onClick={onRequestBackToTop}>
           {t("backToTop")}
         </Button>
-        <footer>
-          &copy; 2019-{new Date().getFullYear()}{" "}
-          <a
-            target="_blank"
-            href={`https://twitter.com/${data.site.siteMetadata.twitter}`}
-          >
-            @{data.site.siteMetadata.twitter}
-          </a>
-        </footer>
+        <Footer />
       </>
     </ThemeProvider>
   )
