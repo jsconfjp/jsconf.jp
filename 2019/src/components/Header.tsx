@@ -4,10 +4,12 @@ import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
 
 import { Logo } from "./Logo"
+import { LanguageSwitch } from "./LanguageSwitch"
 import { LinkButton as _LinkButton } from "./LinkButton"
 
 type Props = {
   siteTitle: string
+  onChangeLanguage: (lang: string) => void
 }
 
 const Box = styled.header`
@@ -37,14 +39,16 @@ const MenuItem = styled(Link)`
 const LinkButton = styled(_LinkButton)``
 
 export function Header(props: Props) {
-  const { siteTitle } = props
+  const { onChangeLanguage } = props
   const { t } = useTranslation()
 
   return (
     <Box>
-      <Logo size={40} />
+      <Link to="/">
+        <Logo size={40} />
+      </Link>
       <Brand>
-        <Link to="/">{siteTitle}</Link>
+        <LanguageSwitch languages={["en", "ja"]} onChange={onChangeLanguage} />
       </Brand>
 
       <MenuBox>

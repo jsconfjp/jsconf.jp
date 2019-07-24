@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next"
 import { theme } from "../theme"
 import { Header } from "./Header"
 import { Footer } from "./Footer"
-import { LanguageSwitch } from "./LanguageSwitch"
 import { Button } from "./Button"
 import "./layout.css"
 
@@ -39,8 +38,10 @@ export function Layout({ children }: Props) {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <LanguageSwitch languages={["en", "ja"]} onChange={onChangeLanguage} />
+        <Header
+          siteTitle={data.site.siteMetadata.title}
+          onChangeLanguage={onChangeLanguage}
+        />
         <main>{children}</main>
         <Button color="primary" onClick={onRequestBackToTop}>
           {t("backToTop")}
