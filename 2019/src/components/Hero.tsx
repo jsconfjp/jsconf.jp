@@ -10,6 +10,8 @@ type Props = {
 
 const Box = styled.div`
   display: flex;
+  margin-top: 120px;
+  margin-bottom: 100px;
 `
 
 export function Hero(props: Props) {

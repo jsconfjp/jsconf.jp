@@ -7,6 +7,9 @@ const Box = styled.div`
   align-items: center;
   justify-content: center;
 `
+const ResponsiveBox = styled.div`
+  max-width: 1200px;
+`
 
 export type Props = {
   children: React.ReactNode
@@ -15,5 +18,9 @@ export type Props = {
 export function Centerize(props: Props) {
   const { children } = props
 
-  return <Box>{children}</Box>
+  return (
+    <Box>
+      <ResponsiveBox>{children}</ResponsiveBox>
+    </Box>
+  )
 }
