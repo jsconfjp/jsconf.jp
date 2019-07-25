@@ -19,8 +19,8 @@ export function Hero(props: Props) {
 
   return (
     <Box>
-      <Logo />
-      <div style={{ flex: 1 }}>
+      <Logo size={270} />
+      <div style={{ flex: 1, marginLeft: 60 }}>
         <h1>{title}</h1>
         <h2>{subTitle}</h2>
         <p>{description}</p>
