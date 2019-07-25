@@ -14,7 +14,7 @@ export default function VenuePage() {
     <Layout>
       <SEO title="Venue" />
       <Title>{t("venue")}</Title>
-      <Map width={600} height={450} />
+      <Map width={940} height={500} />
       <Address />
     </Layout>
   )

@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import { useTranslation } from "react-i18next"
 
@@ -14,6 +15,11 @@ import { LinkButton } from "../components/LinkButton"
 import { Button } from "../components/Button"
 import { Card } from "../components/Card"
 import { Centerize } from "../components/Centerize"
+
+const CardBox = styled.div`
+  max-width: 1080px;
+  margin: 0 auto;
+`
 
 export default function IndexPage() {
   const { t } = useTranslation()
@@ -57,15 +63,17 @@ export default function IndexPage() {
         />
       </Centerize>
 
-      <Card>
-        <Centerize>
-          <SubTitle>{t("guestSpeakers")}</SubTitle>
-          <SpeakerList speakers={guestSpeakers} />
-          <LinkButton color="primary" to="/speakers">
-            {t("goToGuests")}
-          </LinkButton>
-        </Centerize>
-      </Card>
+      <CardBox>
+        <Card>
+          <Centerize>
+            <SubTitle>{t("guestSpeakers")}</SubTitle>
+            <SpeakerList speakers={guestSpeakers} />
+            <LinkButton color="primary" to="/speakers">
+              {t("goToGuests")}
+            </LinkButton>
+          </Centerize>
+        </Card>
+      </CardBox>
 
       <Centerize>
         <SubTitle>{t("schedule")}</SubTitle>
@@ -79,19 +87,21 @@ export default function IndexPage() {
         </div>
       </Centerize>
 
-      <Card>
-        <Centerize>
-          <SubTitle>{t("tickets")}</SubTitle>
-          <p>{t("ticketsDescription")}</p>
-          <Button color="primary" onClick={() => {}}>
-            {t("comingSoon")}
-          </Button>
-        </Centerize>
-      </Card>
+      <CardBox>
+        <Card>
+          <Centerize>
+            <SubTitle>{t("tickets")}</SubTitle>
+            <p>{t("ticketsDescription")}</p>
+            <Button color="primary" onClick={() => {}}>
+              {t("comingSoon")}
+            </Button>
+          </Centerize>
+        </Card>
+      </CardBox>
 
       <Centerize>
         <SubTitle>{t("venue")}</SubTitle>
-        <Map width={600} height={450} />
+        <Map width={940} height={500} />
         <Address />
         <LinkButton color="primary" to="/venue">
           {t("moreDetails")}
