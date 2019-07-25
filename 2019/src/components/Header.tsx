@@ -22,7 +22,10 @@ const Box = styled.header`
   box-shadow: 2px 0px 5px ${({ theme }) => theme.colors.shadow};
 `
 const Brand = styled.h1`
+  display: flex;
+  align-items: center;
   margin: 0;
+  padding: 20px 40px;
 `
 const MenuBox = styled.div`
   flex: 1;
@@ -40,15 +43,24 @@ const LinkButton = styled(_LinkButton)``
 
 export function Header(props: Props) {
   const { onChangeLanguage } = props
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   return (
     <Box>
-      <Link to="/">
-        <Logo size={40} />
-      </Link>
       <Brand>
-        <LanguageSwitch languages={["en", "ja"]} onChange={onChangeLanguage} />
+        <>
+          <Link to="/">
+            <Logo size={46} />
+          </Link>
+          <LanguageSwitch
+            languages={{
+              ja: "日本語",
+              en: "EN",
+            }}
+            currentLanguage={i18n.language}
+            onChange={onChangeLanguage}
+          />
+        </>
       </Brand>
 
       <MenuBox>
