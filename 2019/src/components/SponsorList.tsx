@@ -8,17 +8,22 @@ export type Props = {
   sponsors: SponsorType[]
 }
 
-const PlatinumContainer = styled.div`
+const PlatinumBox = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 `
-const GoldContainer = styled.div`
+const GoldBox = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 60px;
+  grid-row-gap: 30px;
 `
-const OtherContainer = styled.div`
+const OtherBox = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 60px;
+  grid-row-gap: 30px;
 `
 
 export function SponsorList(props: Props) {
@@ -40,32 +45,32 @@ export function SponsorList(props: Props) {
   return (
     <>
       <SubTitle>{t("sponsor.platinum")}</SubTitle>
-      <PlatinumContainer>
+      <PlatinumBox>
         {grades.platinum.map(platinumSponsor => (
           <Sponsor {...platinumSponsor} />
         ))}
-      </PlatinumContainer>
+      </PlatinumBox>
 
       <SubTitle>{t("sponsor.gold")}</SubTitle>
-      <GoldContainer>
+      <GoldBox>
         {grades.gold.map(goldSponsor => (
           <Sponsor {...goldSponsor} />
         ))}
-      </GoldContainer>
+      </GoldBox>
 
       <SubTitle>{t("sponsor.silver")}</SubTitle>
-      <OtherContainer>
+      <OtherBox>
         {grades.silver.map(silverSponsor => (
           <Sponsor {...silverSponsor} />
         ))}
-      </OtherContainer>
+      </OtherBox>
 
       <SubTitle>{t("sponsor.bronze")}</SubTitle>
-      <OtherContainer>
+      <OtherBox>
         {grades.bronze.map(bronzeSponsor => (
           <Sponsor {...bronzeSponsor} />
         ))}
-      </OtherContainer>
+      </OtherBox>
     </>
   )
 }

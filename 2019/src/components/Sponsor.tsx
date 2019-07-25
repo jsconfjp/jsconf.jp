@@ -1,4 +1,10 @@
 import React from "react"
+import styled from "styled-components"
+
+const Box = styled.a`
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  font-size: 0;
+`
 
 export type Props = {
   grade: "platinum" | "gold" | "silver" | "bronze"
@@ -10,8 +16,8 @@ export function Sponsor(props: Props) {
   const { logoUrl, url } = props
 
   return (
-    <a href={url} target="_blank">
-      <img src={logoUrl || "https://example.com"} />
-    </a>
+    <Box href={url} target="_blank">
+      <img src={logoUrl} width="100%" />
+    </Box>
   )
 }
