@@ -9,6 +9,7 @@ type Props = {
 
 const Lang = styled.a`
   text-decoration: none;
+  font-family: ${({ theme }) => theme.fonts.header};
   font-size: 20px;
   color: ${({ theme }) => theme.colors.disabled};
 
