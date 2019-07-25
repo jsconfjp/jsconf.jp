@@ -14,12 +14,23 @@ type Props = {
 
 const Box = styled.header`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   position: sticky;
   background-color: ${({ theme }) => theme.colors.base};
   z-index: 1;
   top: 0;
-  height: 60;
+  height: 90px;
   box-shadow: 2px 0px 5px ${({ theme }) => theme.colors.shadow};
+`
+const InnerBox = styled.div`
+  display: flex;
+  width: 100%;
+  height: 90px;
+
+  @media (min-width: ${({ theme }) => theme.width}) {
+    width: ${({ theme }) => theme.width};
+  }
 `
 const Brand = styled.h1`
   display: flex;
@@ -29,13 +40,15 @@ const Brand = styled.h1`
 `
 const LogoLink = styled(Link)`
   margin-right: 20px;
+  line-height: 0;
 `
 const MenuBox = styled.div`
   flex: 1;
   display: flex;
+  justify-content: flex-end;
 `
 const MenuItem = styled(Link)`
-  flex: 1;
+  margin: 0 19px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,31 +63,33 @@ export function Header(props: Props) {
 
   return (
     <Box>
-      <Brand>
-        <>
-          <LogoLink to="/">
-            <Logo size={46} />
-          </LogoLink>
-          <LanguageSwitch
-            languages={{
-              ja: "日本語",
-              en: "EN",
-            }}
-            currentLanguage={i18n.language}
-            onChange={onChangeLanguage}
-          />
-        </>
-      </Brand>
+      <InnerBox>
+        <Brand>
+          <>
+            <LogoLink to="/">
+              <Logo size={46} />
+            </LogoLink>
+            <LanguageSwitch
+              languages={{
+                ja: "日本語",
+                en: "EN",
+              }}
+              currentLanguage={i18n.language}
+              onChange={onChangeLanguage}
+            />
+          </>
+        </Brand>
 
-      <MenuBox>
-        <MenuItem to="speakers">{t("speakers")}</MenuItem>
-        <MenuItem to="venue">{t("venue")}</MenuItem>
-        <MenuItem to="schedule">{t("schedule")}</MenuItem>
-        <MenuItem to="sponsors">{t("sponsors")}</MenuItem>
-        <LinkButton to="https://example.com" color="primary">
-          {t("tickets")}
-        </LinkButton>
-      </MenuBox>
+        <MenuBox>
+          <MenuItem to="speakers">{t("speakers")}</MenuItem>
+          <MenuItem to="venue">{t("venue")}</MenuItem>
+          <MenuItem to="schedule">{t("schedule")}</MenuItem>
+          <MenuItem to="sponsors">{t("sponsors")}</MenuItem>
+          <LinkButton to="https://example.com" color="primary">
+            {t("tickets")}
+          </LinkButton>
+        </MenuBox>
+      </InnerBox>
     </Box>
   )
 }

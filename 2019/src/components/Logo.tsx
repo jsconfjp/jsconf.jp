@@ -8,7 +8,7 @@ type Props = {
 export function Logo(props: Props) {
   const { size } = props
 
-  return <img style={{ width: size, height: size }} src={logo} />
+  return <img width={size} height={size} src={logo} />
 }
 
 Logo.defaultProps = {
