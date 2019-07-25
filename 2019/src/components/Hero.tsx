@@ -11,8 +11,9 @@ type Props = {
 const Box = styled.div`
   display: flex;
   margin-top: 120px;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   width: 910px;
+  align-items: center;
 `
 const Title = styled.h1`
   margin: 0;
