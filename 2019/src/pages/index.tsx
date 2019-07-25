@@ -18,7 +18,7 @@ import { Centerize } from "../components/Centerize"
 
 const CardBox = styled.div`
   max-width: 1080px;
-  margin: 0 auto;
+  margin: 80px auto;
 `
 
 export default function IndexPage() {
@@ -33,7 +33,7 @@ export default function IndexPage() {
             github
             twitter
             photoURL
-            biography
+            talkTitle
           }
         }
       }
@@ -65,13 +65,11 @@ export default function IndexPage() {
 
       <CardBox>
         <Card>
-          <Centerize>
-            <SubTitle>{t("guestSpeakers")}</SubTitle>
-            <SpeakerList speakers={guestSpeakers} />
-            <LinkButton color="primary" to="/speakers">
-              {t("goToGuests")}
-            </LinkButton>
-          </Centerize>
+          <SubTitle>{t("guestSpeakers")}</SubTitle>
+          <SpeakerList speakers={guestSpeakers} />
+          <LinkButton color="primary" to="/speakers">
+            {t("goToGuests")}
+          </LinkButton>
         </Card>
       </CardBox>
 

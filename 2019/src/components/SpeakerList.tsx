@@ -9,6 +9,8 @@ export type Props = {
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 60px;
+  grid-row-gap: 60px;
 `
 
 export function SpeakerList(props: Props) {
@@ -21,7 +23,7 @@ export function SpeakerList(props: Props) {
           key={speaker.name}
           name={speaker.name}
           photoURL={speaker.photoURL}
-          biography={speaker.biography}
+          talkTitle={speaker.talkTitle}
           github={speaker.github}
           twitter={speaker.twitter}
         />

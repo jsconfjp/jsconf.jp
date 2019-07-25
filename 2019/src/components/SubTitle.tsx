@@ -6,9 +6,11 @@ export type Props = {
 }
 
 const Box = styled.h2`
+  text-align: center;
   text-transform: uppercase;
   font-family: ${({ theme }) => theme.fonts.header};
   font-size: 40px;
+  margin: 0 0 1em;
 `
 
 export function SubTitle(props: Props) {

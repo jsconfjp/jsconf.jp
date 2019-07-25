@@ -4,29 +4,34 @@ import styled from "styled-components"
 export type Props = {
   name: string
   photoURL: string
-  biography: string
+  talkTitle: string
   github: string
   twitter: string
 }
 
-const Container = styled.div``
+const Title = styled.h2`
+  margin: 0;
+  padding: 10px;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
+  text-align: center;
+  font-family: ${({ theme }) => theme.fonts.text};
+  font-size: 20px;
+`
+const Name = styled.p`
+  margin-bottom: 0;
+  text-align: center;
+  font-family: ${({ theme }) => theme.fonts.text};
+  font-size: 16px;
+`
 
 export function Speaker(props: Props) {
-  const { name, photoURL, biography, github, twitter } = props
+  const { name, photoURL, talkTitle } = props
 
   return (
-    <Container>
-      <img src={photoURL} width="100" />
-      <h2>{name}</h2>
-      <p>{biography}</p>
-      <p>
-        <a href={github} target="_blank">
-          GitHub
-        </a>
-        <a href={twitter} target="_blank">
-          Twitter
-        </a>
-      </p>
-    </Container>
+    <div>
+      <img src={photoURL} width="100%" />
+      <Title>{talkTitle}</Title>
+      <Name>{name}</Name>
+    </div>
   )
 }
