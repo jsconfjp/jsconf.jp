@@ -27,6 +27,9 @@ const Brand = styled.h1`
   margin: 0;
   padding: 20px 40px;
 `
+const LogoLink = styled(Link)`
+  margin-right: 20px;
+`
 const MenuBox = styled.div`
   flex: 1;
   display: flex;
@@ -49,9 +52,9 @@ export function Header(props: Props) {
     <Box>
       <Brand>
         <>
-          <Link to="/">
+          <LogoLink to="/">
             <Logo size={46} />
-          </Link>
+          </LogoLink>
           <LanguageSwitch
             languages={{
               ja: "日本語",
