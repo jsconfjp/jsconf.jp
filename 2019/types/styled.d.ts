@@ -15,6 +15,10 @@ declare module "styled-components" {
       disabledText: string
       border: string
     }
+    fonts: {
+      header: string
+      text: string
+    }
     breakpoints: {
       mobile: string
     }

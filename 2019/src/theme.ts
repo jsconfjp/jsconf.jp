@@ -13,6 +13,10 @@ export const theme: DefaultTheme = {
     disabledText: "#7E7E7E",
     border: "#DBDBDB",
   },
+  fonts: {
+    header: "Lato",
+    text: "Arial",
+  },
   breakpoints: {
     mobile: "@media (max-width: 576px)",
   },
