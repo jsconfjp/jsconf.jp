@@ -2,6 +2,7 @@ import { DefaultTheme } from "styled-components"
 
 // https://www.styled-components.com/docs/advanced#theming
 export const theme: DefaultTheme = {
+  width: "1200px",
   colors: {
     base: "#ffffff",
     text: "#000000",
@@ -11,5 +12,8 @@ export const theme: DefaultTheme = {
     disabled: "#DBDBDB",
     disabledText: "#7E7E7E",
     border: "#DBDBDB",
+  },
+  breakpoints: {
+    mobile: "@media (max-width: 576px)",
   },
 }

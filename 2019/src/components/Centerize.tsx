@@ -8,7 +8,7 @@ const Box = styled.div`
   justify-content: center;
 `
 const ResponsiveBox = styled.div`
-  max-width: 1200px;
+  max-width: ${({ theme }) => theme.width};
 `
 
 export type Props = {
