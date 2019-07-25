@@ -52,6 +52,10 @@ const MenuItem = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
+  color: ${({ theme }) => theme.colors.text};
+  font-family: ${({ theme }) => theme.fonts.header};
+  font-weight: bold;
+  font-size: 20px;
   text-decoration: none;
   text-transform: uppercase;
 `
