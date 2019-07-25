@@ -2,6 +2,9 @@ import React from "react"
 import styled from "styled-components"
 
 const Box = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid ${({ theme }) => theme.colors.border};
   font-size: 0;
 `
