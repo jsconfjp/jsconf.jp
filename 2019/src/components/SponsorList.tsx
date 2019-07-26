@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { Sponsor, Props as SponsorType } from "./Sponsor"
-import { SubTitle } from "./SubTitle"
 
 export type Props = {
   sponsors: SponsorType[]
@@ -24,6 +23,11 @@ const OtherBox = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 60px;
   grid-row-gap: 30px;
+`
+const SubTitle = styled.h3`
+  font-family: ${({ theme }) => theme.fonts.header};
+  text-align: center;
+  font-size: 30px;
 `
 
 export function SponsorList(props: Props) {
