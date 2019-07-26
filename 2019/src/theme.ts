@@ -5,6 +5,7 @@ export const theme: DefaultTheme = {
   width: "1200px",
   colors: {
     base: "#ffffff",
+    baseDimmed: "#F5F5F5",
     text: "#000000",
     shadow: "rgba(0, 0, 0, 0.16)",
     primary: "#FF5700",

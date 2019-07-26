@@ -7,6 +7,7 @@ declare module "styled-components" {
     width: string
     colors: {
       base: string
+      baseDimmed: string
       text: string
       shadow: string
       primary: string

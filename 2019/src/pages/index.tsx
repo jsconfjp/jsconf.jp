@@ -12,13 +12,15 @@ import { SubTitle } from "../components/SubTitle"
 import { SpeakerList } from "../components/SpeakerList"
 import { SponsorList } from "../components/SponsorList"
 import { LinkButton } from "../components/LinkButton"
-import { Button } from "../components/Button"
 import { Card } from "../components/Card"
 import { Centerize } from "../components/Centerize"
 
 const CardBox = styled.div`
   max-width: 1080px;
   margin: 80px auto;
+`
+const SponsorBox = styled.div`
+  background-color: ${({ theme }) => theme.colors.baseDimmed};
 `
 
 export default function IndexPage() {
@@ -67,19 +69,27 @@ export default function IndexPage() {
         <Card>
           <SubTitle>{t("guestSpeakers")}</SubTitle>
           <SpeakerList speakers={guestSpeakers} />
-          <LinkButton color="primary" to="/speakers">
-            {t("goToGuests")}
-          </LinkButton>
+          <Centerize>
+            <LinkButton color="primary" to="/speakers">
+              {t("goToGuests")}
+            </LinkButton>
+          </Centerize>
         </Card>
       </CardBox>
 
       <Centerize>
         <SubTitle>{t("schedule")}</SubTitle>
-        <div style={{ display: "flex" }}>
-          <LinkButton color="secondary" to="/timetable#day1">
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            width: 910,
+          }}
+        >
+          <LinkButton color="secondary" size="large" to="/timetable#day1">
             {t("day1")}
           </LinkButton>
-          <LinkButton color="secondary" to="/timetable#day2">
+          <LinkButton color="secondary" size="large" to="/timetable#day2">
             {t("day2")}
           </LinkButton>
         </div>
@@ -90,9 +100,16 @@ export default function IndexPage() {
           <Centerize>
             <SubTitle>{t("tickets")}</SubTitle>
             <p>{t("ticketsDescription")}</p>
-            <Button color="primary" onClick={() => {}}>
-              {t("comingSoon")}
-            </Button>
+            <Centerize>
+              <LinkButton
+                color="primary"
+                size="large"
+                to="https://example.com"
+                disabled
+              >
+                {t("comingSoon")}
+              </LinkButton>
+            </Centerize>
           </Centerize>
         </Card>
       </CardBox>
@@ -106,10 +123,12 @@ export default function IndexPage() {
         </LinkButton>
       </Centerize>
 
-      <Centerize>
-        <SubTitle>{t("sponsors")}</SubTitle>
-        <SponsorList sponsors={sponsors} />
-      </Centerize>
+      <SponsorBox>
+        <Centerize>
+          <SubTitle>{t("sponsors")}</SubTitle>
+          <SponsorList sponsors={sponsors} />
+        </Centerize>
+      </SponsorBox>
     </Layout>
   )
 }
