@@ -14,7 +14,15 @@ import { SponsorList } from "../components/SponsorList"
 import { LinkButton } from "../components/LinkButton"
 import { Card } from "../components/Card"
 import { Centerize } from "../components/Centerize"
+import bg from "../images/bg.png"
+import bgFlipX from "../images/bg-flip-x.png"
 
+const WavyBox = styled.div`
+  background-image: url("${bg}"), url("${bgFlipX}");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top -830px right -300px, center left -450px;
+  background-size: 100%, 120%;
+`
 const CardBox = styled.div`
   max-width: 1080px;
   margin: 80px auto;
@@ -56,79 +64,81 @@ export default function IndexPage() {
 
   return (
     <Layout>
-      <SEO title="Home" />
-      <Centerize>
-        <Hero
-          title={t("siteName")}
-          subTitle={t("festivalPeriod")}
-          description={t("description")}
-        />
-      </Centerize>
+      <WavyBox>
+        <SEO title="Home" />
+        <Centerize>
+          <Hero
+            title={t("siteName")}
+            subTitle={t("festivalPeriod")}
+            description={t("description")}
+          />
+        </Centerize>
 
-      <CardBox>
-        <Card>
-          <SubTitle>{t("guestSpeakers")}</SubTitle>
-          <SpeakerList speakers={guestSpeakers} />
-          <Centerize>
-            <LinkButton color="primary" to="/speakers">
-              {t("goToGuests")}
-            </LinkButton>
-          </Centerize>
-        </Card>
-      </CardBox>
-
-      <Centerize>
-        <SubTitle>{t("schedule")}</SubTitle>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            width: 910,
-          }}
-        >
-          <LinkButton color="secondary" size="large" to="/timetable#day1">
-            {t("day1")}
-          </LinkButton>
-          <LinkButton color="secondary" size="large" to="/timetable#day2">
-            {t("day2")}
-          </LinkButton>
-        </div>
-      </Centerize>
-
-      <CardBox>
-        <Card>
-          <Centerize>
-            <SubTitle>{t("tickets")}</SubTitle>
-            <p>{t("ticketsDescription")}</p>
+        <CardBox>
+          <Card>
+            <SubTitle>{t("guestSpeakers")}</SubTitle>
+            <SpeakerList speakers={guestSpeakers} />
             <Centerize>
-              <LinkButton
-                color="primary"
-                size="large"
-                to="https://example.com"
-                disabled
-              >
-                {t("comingSoon")}
+              <LinkButton color="primary" to="/speakers">
+                {t("goToGuests")}
               </LinkButton>
             </Centerize>
-          </Centerize>
-        </Card>
-      </CardBox>
+          </Card>
+        </CardBox>
 
-      <Centerize>
-        <SubTitle>{t("venue")}</SubTitle>
-        <Map width={940} height={500} />
-        <Address />
-        <LinkButton color="primary" to="/venue">
-          {t("moreDetails")}
-        </LinkButton>
-      </Centerize>
-
-      <SponsorBox>
         <Centerize>
-          <SubTitle>{t("sponsors")}</SubTitle>
-          <SponsorList sponsors={sponsors} />
+          <SubTitle>{t("schedule")}</SubTitle>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              width: 910,
+            }}
+          >
+            <LinkButton color="secondary" size="large" to="/timetable#day1">
+              {t("day1")}
+            </LinkButton>
+            <LinkButton color="secondary" size="large" to="/timetable#day2">
+              {t("day2")}
+            </LinkButton>
+          </div>
         </Centerize>
-      </SponsorBox>
+
+        <CardBox>
+          <Card>
+            <Centerize>
+              <SubTitle>{t("tickets")}</SubTitle>
+              <p>{t("ticketsDescription")}</p>
+              <Centerize>
+                <LinkButton
+                  color="primary"
+                  size="large"
+                  to="https://example.com"
+                  disabled
+                >
+                  {t("comingSoon")}
+                </LinkButton>
+              </Centerize>
+            </Centerize>
+          </Card>
+        </CardBox>
+
+        <Centerize>
+          <SubTitle>{t("venue")}</SubTitle>
+          <Map width={940} height={500} />
+          <Address />
+          <LinkButton color="primary" to="/venue">
+            {t("moreDetails")}
+          </LinkButton>
+        </Centerize>
+
+        <SponsorBox>
+          <Centerize>
+            <SubTitle>{t("sponsors")}</SubTitle>
+            <SponsorList sponsors={sponsors} />
+          </Centerize>
+        </SponsorBox>
+      </WavyBox>
     </Layout>
   )
 }
