@@ -6,7 +6,7 @@ const buttonStyle = css`
   display: flex;
   cursor: pointer;
   background-color: ${({ theme }) => theme.colors.disabled};
-  color: white;
+  color: ${({ theme }) => theme.colors.disabledText};
   font-family: ${({ theme }) => theme.fonts.header};
   font-weight: bold;
   align-items: center;
@@ -22,7 +22,8 @@ const buttonStyle = css`
     padding: 0.6em 0;
     font-size: 24px;
   }
-  &.small {
+  &.inline {
+    width: 100%;
     font-size: 20px;
   }
 `
@@ -32,9 +33,11 @@ const InternalBox = styled(Link)`
   text-decoration: none;
 `
 const InternalPrimaryBox = styled(InternalBox)`
+  color: white;
   background-color: ${({ theme }) => theme.colors.primary};
 `
 const InternalSecondaryBox = styled(InternalBox)`
+  color: white;
   background-color: ${({ theme }) => theme.colors.secondary};
 `
 
@@ -43,14 +46,16 @@ const ExternalBox = styled.a`
   text-decoration: none;
 `
 const ExternalPrimaryBox = styled(ExternalBox)`
+  color: white;
   background-color: ${({ theme }) => theme.colors.primary};
 `
 const ExternalSecondaryBox = styled(ExternalBox)`
+  color: white;
   background-color: ${({ theme }) => theme.colors.secondary};
 `
 
 export type Props = {
-  color: "primary" | "secondary"
+  color?: "primary" | "secondary"
   size: "inline" | "normal" | "large"
   to: string
   disabled: boolean

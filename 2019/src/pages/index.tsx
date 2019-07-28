@@ -111,9 +111,9 @@ export default function IndexPage() {
               <p>{t("ticketsDescription")}</p>
               <Centerize>
                 <LinkButton
-                  color="primary"
+                  // color="primary"
                   size="large"
-                  to="https://example.com"
+                  to="#"
                   disabled
                 >
                   {t("comingSoon")}

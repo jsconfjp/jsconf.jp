@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next"
 
 import { Logo } from "./Logo"
 import { LanguageSwitch } from "./LanguageSwitch"
-import { LinkButton as _LinkButton } from "./LinkButton"
+import { LinkButton } from "./LinkButton"
 
 type Props = {
   siteTitle: string
@@ -58,8 +58,20 @@ const MenuItem = styled(Link)`
   font-size: 20px;
   text-decoration: none;
   text-transform: uppercase;
+
+  :last-of-type {
+    margin-right: 40px;
+  }
 `
-const LinkButton = styled(_LinkButton)``
+const TicketBox = styled.div`
+  display: flex;
+  align-self: stretch;
+  width: 200px;
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    width: 160px;
+  }
+`
 
 export function Header(props: Props) {
   const { onChangeLanguage } = props
@@ -89,9 +101,15 @@ export function Header(props: Props) {
           <MenuItem to="venue">{t("venue")}</MenuItem>
           <MenuItem to="schedule">{t("schedule")}</MenuItem>
           <MenuItem to="sponsors">{t("sponsors")}</MenuItem>
-          <LinkButton to="https://example.com" color="primary" size="inline">
-            {t("tickets")}
-          </LinkButton>
+          <TicketBox>
+            <LinkButton
+              // color="primary"
+              to="#"
+              size="inline"
+            >
+              {t("tickets")}
+            </LinkButton>
+          </TicketBox>
         </MenuBox>
       </InnerBox>
     </Box>
