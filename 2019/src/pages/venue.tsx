@@ -6,6 +6,8 @@ import { SEO } from "../components/Seo"
 import { Title } from "../components/Title"
 import { Map } from "../components/Map"
 import { Address } from "../components/Address"
+import { ResponsiveBox } from "../components/ResponsiveBox"
+import { Breadcrumb } from "../components/Breadcrumb"
 
 export default function VenuePage() {
   const { t } = useTranslation()
@@ -13,9 +15,13 @@ export default function VenuePage() {
   return (
     <Layout>
       <SEO title="Venue" />
-      <Title>{t("venue")}</Title>
-      <Map width={940} height={500} />
-      <Address />
+      <ResponsiveBox>
+        <Breadcrumb path={[t("venue")]} />
+
+        <Title>{t("venue")}</Title>
+        <Map width={940} height={500} />
+        <Address />
+      </ResponsiveBox>
     </Layout>
   )
 }

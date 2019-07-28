@@ -28,6 +28,8 @@ const CardBox = styled.div`
   margin: 80px auto;
 `
 const SponsorBox = styled.div`
+  margin-top: 80px;
+  padding: 100px 0;
   background-color: ${({ theme }) => theme.colors.baseDimmed};
 `
 
@@ -127,9 +129,11 @@ export default function IndexPage() {
           <SubTitle>{t("venue")}</SubTitle>
           <Map width={940} height={500} />
           <Address />
-          <LinkButton color="primary" to="/venue">
-            {t("moreDetails")}
-          </LinkButton>
+          <Centerize>
+            <LinkButton color="primary" to="/venue">
+              {t("moreDetails")}
+            </LinkButton>
+          </Centerize>
         </Centerize>
 
         <SponsorBox>

@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next"
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
 import { Title } from "../components/Title"
+import { ResponsiveBox } from "../components/ResponsiveBox"
+import { Breadcrumb } from "../components/Breadcrumb"
 
 export default function AboutUsPage() {
   const { t } = useTranslation()
@@ -23,15 +25,18 @@ export default function AboutUsPage() {
   return (
     <Layout>
       <SEO title="About us" />
-      <Title>{t("aboutUs")}</Title>
-      {data.allMembersYaml.edges.map(({ node }) => (
-        <div key={node}>
-          <img src={`https://twitter.com/${node.twitter}/profile_image`} />
-          <a target="_blank" href={`https://twitter.com/${node.twitter}`}>
-            @{node.twitter}
-          </a>
-        </div>
-      ))}
+      <ResponsiveBox>
+        <Breadcrumb path={[t("aboutUs")]} />
+        <Title>{t("aboutUs")}</Title>
+        {data.allMembersYaml.edges.map(({ node }) => (
+          <div key={node}>
+            <img src={`https://twitter.com/${node.twitter}/profile_image`} />
+            <a target="_blank" href={`https://twitter.com/${node.twitter}`}>
+              @{node.twitter}
+            </a>
+          </div>
+        ))}
+      </ResponsiveBox>
     </Layout>
   )
 }

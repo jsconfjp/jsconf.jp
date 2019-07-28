@@ -6,6 +6,8 @@ import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
 import { Title } from "../components/Title"
 import { SponsorList } from "../components/SponsorList"
+import { ResponsiveBox } from "../components/ResponsiveBox"
+import { Breadcrumb } from "../components/Breadcrumb"
 
 export default function SponsorsPage() {
   const data = useStaticQuery(graphql`
@@ -28,8 +30,11 @@ export default function SponsorsPage() {
   return (
     <Layout>
       <SEO title="Sponsors" />
-      <Title>{t("sponsors")}</Title>
-      <SponsorList sponsors={sponsors} />
+      <ResponsiveBox>
+        <Breadcrumb path={[t("sponsors")]} />
+        <Title>{t("sponsors")}</Title>
+        <SponsorList sponsors={sponsors} />
+      </ResponsiveBox>
     </Layout>
   )
 }

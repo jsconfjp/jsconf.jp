@@ -5,6 +5,7 @@ import "styled-components"
 declare module "styled-components" {
   export interface DefaultTheme {
     width: string
+    innerWidth: string
     colors: {
       base: string
       baseDimmed: string

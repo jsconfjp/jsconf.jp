@@ -3,6 +3,7 @@ import { DefaultTheme } from "styled-components"
 // https://www.styled-components.com/docs/advanced#theming
 export const theme: DefaultTheme = {
   width: "1200px",
+  innerWidth: "940px",
   colors: {
     base: "#ffffff",
     baseDimmed: "#F5F5F5",
