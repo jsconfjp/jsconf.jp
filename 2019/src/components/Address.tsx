@@ -1,22 +1,71 @@
 import React from "react"
+import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 
 type Props = {}
+
+const Title = styled.h3`
+  margin-bottom: 0;
+  font-size: 24px;
+  font-family: ${({ theme }) => theme.fonts.text};
+  font-weight: bold;
+`
+const Text = styled.p`
+  margin: 0.4em 0;
+  font-size: 18px;
+  font-family: ${({ theme }) => theme.fonts.text};
+`
+const Link = styled.a`
+  font-size: 18px;
+  font-family: ${({ theme }) => theme.fonts.text};
+`
+const HyphenList = styled.ul`
+  padding: 0;
+`
+const HyphenListItem = styled.li`
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  font-size: 18px;
+  font-family: ${({ theme }) => theme.fonts.text};
+
+  :before {
+    content: "-";
+    margin-right: 0.5em;
+  }
+`
 
 export function Address(_props: Props) {
   const { t } = useTranslation()
 
   return (
     <>
-      <h3>{t("venue.name")}</h3>
-      <p>
+      <Title>{t("venue.name")}</Title>
+      <Text>
         <small>{t("venue.address")}</small>
-      </p>
-      <p>
-        <a target="_blank" href={t("venue.url")}>
+      </Text>
+      <Text>
+        <Link target="_blank" href={t("venue.url")}>
           {t("venue.url")}
-        </a>
-      </p>
+        </Link>
+      </Text>
+      <HyphenList>
+        <HyphenListItem>
+          <Text>{t("venue.accessByTokyoMetroGinzaLine")}</Text>
+        </HyphenListItem>
+        <HyphenListItem>
+          <Text>{t("venue.accessByTokyoMetroChiyodaLine")}</Text>
+        </HyphenListItem>
+        <HyphenListItem>
+          <Text>{t("venue.accessByToeiOedoLine")}</Text>
+        </HyphenListItem>
+        <HyphenListItem>
+          <Text>{t("venue.accessByJrOkachimachiStation")}</Text>
+        </HyphenListItem>
+        <HyphenListItem>
+          <Text>{t("venue.accessByJrAkihabaraStation")}</Text>
+        </HyphenListItem>
+      </HyphenList>
     </>
   )
 }

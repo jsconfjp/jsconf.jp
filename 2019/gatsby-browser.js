@@ -19,7 +19,7 @@ const resources = {
       day1: "Day 1",
       day2: "Day 2",
       tickets: "Tickets",
-      ticketsDescription: "TODO: description",
+      ticketsDescription: "Tickets will be available from October 1th.",
       comingSoon: "Coming soon",
       venue: "Venue",
       moreDetails: "More details",
@@ -31,6 +31,16 @@ const resources = {
       "venue.name": "3331 Arts Chiyoda",
       "venue.address": "〒101-0021 6-11-14 Sotokanda Chiyoda-ku Tokyo",
       "venue.url": "https://www.3331.jp/rentalspace/",
+      "venue.accessByTokyoMetroGinzaLine":
+        "1 min. from Tokyo Metro Ginza Line Suehirocho station (Exit 4)",
+      "venue.accessByTokyoMetroChiyodaLine":
+        "3 min. from Tokyo Metro Chiyoda Line Yushima station (Exit 6)",
+      "venue.accessByToeiOedoLine":
+        "6 min. from Toei Oedo Line Ueno-Okachimachi station (Exit A1)",
+      "venue.accessByJrOkachimachiStation":
+        "7 min. from JR Okachimachi station (Southern Exit)",
+      "venue.accessByJrAkihabaraStation":
+        "8 min. from JR Akihabara station (Electric City Exit)",
     },
   },
   ja: {
@@ -59,6 +69,16 @@ const resources = {
       "venue.name": "アーツ千代田 3331",
       "venue.address": "〒101-0021 東京都千代田区外神田6丁目11-14",
       "venue.url": "https://www.3331.jp/rentalspace/",
+      "venue.accessByTokyoMetroGinzaLine":
+        "1 min. from Tokyo Metro Ginza Line Suehirocho station (Exit 4)",
+      "venue.accessByTokyoMetroChiyodaLine":
+        "3 min. from Tokyo Metro Chiyoda Line Yushima station (Exit 6)",
+      "venue.accessByToeiOedoLine":
+        "6 min. from Toei Oedo Line Ueno-Okachimachi station (Exit A1)",
+      "venue.accessByJrOkachimachiStation":
+        "7 min. from JR Okachimachi station (Southern Exit)",
+      "venue.accessByJrAkihabaraStation":
+        "8 min. from JR Akihabara station (Electric City Exit)",
     },
   },
 }
