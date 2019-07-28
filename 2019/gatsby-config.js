@@ -9,6 +9,8 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-zopfli`,
+    `gatsby-plugin-brotli`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
