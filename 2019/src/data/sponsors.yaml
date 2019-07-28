@@ -6,13 +6,13 @@
   url: https://connehito.com/
   # Need Adobe Illustlator
   # https://www.dropbox.com/s/vgyoquetcjp7nrw/connehito-logo-150320.ai?dl=0
-  logoUrl: "http://placehold.jp/450x150.png?text=TODO:connehito.com"
+  logoUrl: "https://placehold.jp/450x150.png?text=TODO:connehito.com"
   grade: silver
 - name: ヤフー株式会社
   url: https://www.yahoo.co.jp
   # Need Adobe Illustlator
   # https://www.dropbox.com/s/xufuq5hoqjvwzkm/Yahoo%21%20JAPAN%20Logo.zip?dl=0
-  logoUrl: "http://placehold.jp/450x150.png?text=TODO:www.yahoo.co.jp"
+  logoUrl: "https://placehold.jp/450x150.png?text=TODO:www.yahoo.co.jp"
   grade: platinum
 - name: Hamee株式会社
   url: https://recruit.hamee.co.jp/about?c=jsconf
@@ -33,7 +33,7 @@
 - name: 株式会社ラクス
   url: https://www.rakus.co.jp/
   # TODO
-  logoUrl: "http://placehold.jp/450x150.png?text=TODO:www.rakus.co.jp"
+  logoUrl: "https://placehold.jp/450x150.png?text=TODO:www.rakus.co.jp"
   grade: bronze
 - name: 株式会社ディー・エヌ・エー
   url: https://dena.com
@@ -41,5 +41,5 @@
   grade: bronze
 - name: Twitter
   url: https://www.twitter.com
-  logoUrl: "http://placehold.jp/450x150.png?text=TODO:Twitter"
+  logoUrl: "https://placehold.jp/450x150.png?text=TODO:Twitter"
   grade: gold
