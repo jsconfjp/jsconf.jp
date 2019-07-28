@@ -1,5 +1,5 @@
 import React, { useCallback } from "react"
-import { ThemeProvider } from "styled-components"
+import styled, { ThemeProvider } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import { useTranslation } from "react-i18next"
 
@@ -12,6 +12,15 @@ import "./layout.css"
 type Props = {
   children: React.ReactNode
 }
+
+const MainBox = styled.div`
+  position: relative;
+`
+const BackToTopBox = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 40px;
+`
 
 export function Layout({ children }: Props) {
   const { t, i18n } = useTranslation()
@@ -42,10 +51,14 @@ export function Layout({ children }: Props) {
           siteTitle={data.site.siteMetadata.title}
           onChangeLanguage={onChangeLanguage}
         />
-        <main>{children}</main>
-        <Button color="primary" onClick={onRequestBackToTop}>
-          {t("backToTop")}
-        </Button>
+        <MainBox>
+          <main>{children}</main>
+          <BackToTopBox>
+            <Button color="primary" onClick={onRequestBackToTop}>
+              {t("backToTop")}
+            </Button>
+          </BackToTopBox>
+        </MainBox>
         <Footer />
       </>
     </ThemeProvider>

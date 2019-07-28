@@ -4,14 +4,15 @@ import styled from "styled-components"
 const Box = styled.div`
   cursor: pointer;
   display: inline-block;
-  color: white;
-  background-color: lightgray;
-  padding: 10px 20px;
+  font-family: ${({ theme }) => theme.fonts.header};
+  padding: 10px 24px;
 `
 const PrimaryBox = styled(Box)`
+  color: white;
   background-color: ${({ theme }) => theme.colors.primary};
 `
 const SecondaryBox = styled(Box)`
+  color: white;
   background-color: ${({ theme }) => theme.colors.secondary};
 `
 
