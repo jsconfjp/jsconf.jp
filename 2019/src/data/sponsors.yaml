@@ -1,6 +1,6 @@
 - name: mediba
   url: https://www.mediba.jp/
-  logoUrl: sponsors/mediba.png
+  logoUrl: /sponsors/mediba.png
   grade: gold
 - name: コネヒト株式会社
   url: https://connehito.com/
@@ -16,19 +16,19 @@
   grade: platinum
 - name: Hamee株式会社
   url: https://recruit.hamee.co.jp/about?c=jsconf
-  logoUrl: sponsors/hamee.png
+  logoUrl: /sponsors/hamee.png
   grade: silver
 - name: 株式会社メドレー
   url: https://www.medley.jp/
-  logoUrl: sponsors/medley.png
+  logoUrl: /sponsors/medley.png
   grade: silver
 - name: Elastic
   url: https://elastic.co
-  logoUrl: sponsors/elastic.png
+  logoUrl: /sponsors/elastic.png
   grade: bronze
 - name: Nota Inc.
   url: https://notainc.com/
-  logoUrl: sponsors/nota.png
+  logoUrl: /sponsors/nota.png
   grade: silver
 - name: 株式会社ラクス
   url: https://www.rakus.co.jp/
@@ -37,7 +37,9 @@
   grade: bronze
 - name: 株式会社ディー・エヌ・エー
   url: https://dena.com
-  # TODO: Need password
-  # https://upload.hdedrive.com/ui/dena.jp/dl/SB1562548194-6e92ff8f-3ec0-4ef2-a1ba-fae46d220c44
-  logoUrl: "http://placehold.jp/450x150.png?text=TODO:dena.com"
+  logoUrl: /sponsors/dena.png
   grade: bronze
+- name: Twitter
+  url: https://www.twitter.com
+  logoUrl: "http://placehold.jp/450x150.png?text=TODO:Twitter"
+  grade: gold
