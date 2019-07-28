@@ -30,8 +30,9 @@ const buttonStyle = css`
   }
 
   ${({ theme }) => theme.breakpoints.mobile} {
-    &.large {
-      padding: 0.6em 0;
+    &.large,
+    &.normal {
+      padding: 0.4em 0;
     }
   }
 `

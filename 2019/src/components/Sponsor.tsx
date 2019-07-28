@@ -15,16 +15,19 @@ const Img = styled.img`
   box-sizing: border-box;
 
   &.platinum {
-    width: 780px;
+    width: 100%;
+    max-width: 780px;
     height: 200px;
   }
   &.gold {
-    width: 440px;
+    width: 100%;
+    max-width: 440px;
     height: 125px;
   }
   &.silver,
   &.bronze {
-    width: 273px;
+    width: 100%;
+    max-width: 273px;
     height: 97px;
   }
 `

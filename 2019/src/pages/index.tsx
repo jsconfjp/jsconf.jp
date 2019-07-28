@@ -18,10 +18,17 @@ import bg from "../images/bg.png"
 import bgFlipX from "../images/bg-flip-x.png"
 
 const WavyBox = styled.div`
+  margin: 0;
   background-image: url("${bg}"), url("${bgFlipX}");
   background-repeat: no-repeat, no-repeat;
   background-position: top -830px right -300px, center left -450px;
   background-size: 100%, 120%;
+`
+const Container = styled.div`
+  padding: 0;
+  ${({ theme }) => theme.breakpoints.mobile} {
+    padding: 0 1em;
+  }
 `
 const Card = styled(_Card)`
   max-width: 1080px;
@@ -29,7 +36,7 @@ const Card = styled(_Card)`
   padding: 70px;
 
   ${({ theme }) => theme.breakpoints.mobile} {
-    margin: 80px 1em;
+    margin: 80px 0;
     padding: 1em;
   }
 `
@@ -41,11 +48,6 @@ const SchedulesBox = styled.div`
 
   ${({ theme }) => theme.breakpoints.mobile} {
     flex-direction: column;
-  }
-`
-const MapBox = styled.div`
-  ${({ theme }) => theme.breakpoints.mobile} {
-    margin: 0 2em;
   }
 `
 const SponsorBox = styled.div`
@@ -89,56 +91,56 @@ export default function IndexPage() {
     <Layout>
       <WavyBox>
         <SEO title="Home" />
-        <Centerize>
-          <Hero
-            title={t("siteName")}
-            subTitle={t("festivalPeriod")}
-            description={t("description")}
-          />
-        </Centerize>
-
-        <Card>
-          <SubTitle>{t("guestSpeakers")}</SubTitle>
-          <SpeakerList speakers={guestSpeakers} />
+        <Container>
           <Centerize>
-            <LinkButton color="primary" to="/speakers">
-              {t("goToGuests")}
-            </LinkButton>
+            <Hero
+              title={t("siteName")}
+              subTitle={t("festivalPeriod")}
+              description={t("description")}
+            />
           </Centerize>
-        </Card>
 
-        <Centerize>
-          <SubTitle>{t("schedule")}</SubTitle>
-          <SchedulesBox>
-            <LinkButton color="secondary" size="large" to="/timetable#day1">
-              {t("day1")}
-            </LinkButton>
-            <LinkButton color="secondary" size="large" to="/timetable#day2">
-              {t("day2")}
-            </LinkButton>
-          </SchedulesBox>
-        </Centerize>
-
-        <Card>
-          <Centerize>
-            <SubTitle>{t("tickets")}</SubTitle>
-            <p>{t("ticketsDescription")}</p>
+          <Card>
+            <SubTitle>{t("guestSpeakers")}</SubTitle>
+            <SpeakerList speakers={guestSpeakers} />
             <Centerize>
-              <LinkButton
-                // color="primary"
-                size="large"
-                to="#"
-                disabled
-              >
-                {t("comingSoon")}
+              <LinkButton color="primary" to="/speakers">
+                {t("goToGuests")}
               </LinkButton>
             </Centerize>
-          </Centerize>
-        </Card>
+          </Card>
 
-        <Centerize>
-          <SubTitle>{t("venue")}</SubTitle>
-          <MapBox>
+          <Centerize>
+            <SubTitle>{t("schedule")}</SubTitle>
+            <SchedulesBox>
+              <LinkButton color="secondary" size="large" to="/timetable#day1">
+                {t("day1")}
+              </LinkButton>
+              <LinkButton color="secondary" size="large" to="/timetable#day2">
+                {t("day2")}
+              </LinkButton>
+            </SchedulesBox>
+          </Centerize>
+
+          <Card>
+            <Centerize>
+              <SubTitle>{t("tickets")}</SubTitle>
+              <p>{t("ticketsDescription")}</p>
+              <Centerize>
+                <LinkButton
+                  // color="primary"
+                  size="large"
+                  to="#"
+                  disabled
+                >
+                  {t("comingSoon")}
+                </LinkButton>
+              </Centerize>
+            </Centerize>
+          </Card>
+
+          <Centerize>
+            <SubTitle>{t("venue")}</SubTitle>
             <Map width={940} height={500} />
             <Address />
             <Centerize>
@@ -146,13 +148,15 @@ export default function IndexPage() {
                 {t("moreDetails")}
               </LinkButton>
             </Centerize>
-          </MapBox>
-        </Centerize>
+          </Centerize>
+        </Container>
 
         <SponsorBox>
           <Centerize>
-            <SubTitle>{t("sponsors")}</SubTitle>
-            <SponsorList sponsors={sponsors} />
+            <Container>
+              <SubTitle>{t("sponsors")}</SubTitle>
+              <SponsorList sponsors={sponsors} />
+            </Container>
           </Centerize>
         </SponsorBox>
       </WavyBox>

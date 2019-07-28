@@ -26,7 +26,7 @@ const TextBox = styled.div`
   margin-left: 60px;
 
   ${({ theme }) => theme.breakpoints.mobile} {
-    margin: 0 1em;
+    margin: 0;
   }
 `
 const Title = styled.h1`

@@ -1,11 +1,21 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { useTranslation } from "react-i18next"
 import { Sponsor, Props as SponsorType } from "./Sponsor"
 
 export type Props = {
   sponsors: SponsorType[]
 }
+
+const baseGridStyle = css`
+  grid-column-gap: 60px;
+  grid-row-gap: 30px;
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+`
 
 const PlatinumBox = styled.div`
   display: flex;
@@ -15,14 +25,12 @@ const PlatinumBox = styled.div`
 const GoldBox = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 60px;
-  grid-row-gap: 30px;
+  ${baseGridStyle}
 `
 const OtherBox = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 60px;
-  grid-row-gap: 30px;
+  ${baseGridStyle}
 `
 const SubTitle = styled.h3`
   font-family: ${({ theme }) => theme.fonts.header};
