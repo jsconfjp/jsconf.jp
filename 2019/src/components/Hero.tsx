@@ -14,6 +14,20 @@ const Box = styled.div`
   margin-bottom: 20px;
   width: 910px;
   align-items: center;
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    margin-top: 60px;
+    flex-direction: column;
+    width: 100%;
+  }
+`
+const TextBox = styled.div`
+  flex: 1;
+  margin-left: 60px;
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    margin: 0 20px;
+  }
 `
 const Title = styled.h1`
   margin: 0;
@@ -37,11 +51,11 @@ export function Hero(props: Props) {
   return (
     <Box>
       <Logo size={270} />
-      <div style={{ flex: 1, marginLeft: 60 }}>
+      <TextBox>
         <Title>{title}</Title>
         <SubTitle>{subTitle}</SubTitle>
         <Paragraph>{description}</Paragraph>
-      </div>
+      </TextBox>
     </Box>
   )
 }
