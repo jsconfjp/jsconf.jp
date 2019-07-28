@@ -6,7 +6,27 @@ const Box = styled.a`
   align-items: center;
   justify-content: center;
   border: 1px solid ${({ theme }) => theme.colors.border};
+  background-color: ${({ theme }) => theme.colors.base};
   font-size: 0;
+`
+const Img = styled.img`
+  padding: 20px;
+  object-fit: contain;
+  box-sizing: border-box;
+
+  &.platinum {
+    width: 780px;
+    height: 200px;
+  }
+  &.gold {
+    width: 440px;
+    height: 125px;
+  }
+  &.silver,
+  &.bronze {
+    width: 273px;
+    height: 97px;
+  }
 `
 
 export type Props = {
@@ -16,11 +36,11 @@ export type Props = {
 }
 
 export function Sponsor(props: Props) {
-  const { logoUrl, url } = props
+  const { logoUrl, url, grade } = props
 
   return (
     <Box href={url} target="_blank">
-      <img src={logoUrl} width="100%" />
+      <Img src={logoUrl} width="100%" className={grade} />
     </Box>
   )
 }
