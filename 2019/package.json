@@ -35,6 +35,7 @@
     "i18next-browser-languagedetector": "^3.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-headroom": "^2.2.8",
     "react-helmet": "^5.2.1",
     "react-i18next": "^10.11.4",
     "styled-components": "^4.3.2"

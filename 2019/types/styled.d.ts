@@ -23,6 +23,7 @@ declare module "styled-components" {
     }
     breakpoints: {
       mobile: string
+      largerThanMobile: string
     }
   }
 }

@@ -6,6 +6,8 @@ import { useTranslation } from "react-i18next"
 import { Logo } from "./Logo"
 import { LanguageSwitch } from "./LanguageSwitch"
 import { LinkButton } from "./LinkButton"
+// import { ShowOnlyMobile } from "./ShowOnlyMobile"
+// import { ShowNotMobile } from "./ShowNotMobile"
 
 type Props = {
   siteTitle: string
@@ -27,10 +29,7 @@ const InnerBox = styled.div`
   display: flex;
   width: 100%;
   height: 90px;
-
-  @media (min-width: ${({ theme }) => theme.width}) {
-    width: ${({ theme }) => theme.width};
-  }
+  max-width: ${({ theme }) => theme.width};
 `
 const Brand = styled.h1`
   display: flex;
@@ -67,10 +66,6 @@ const TicketBox = styled.div`
   display: flex;
   align-self: stretch;
   width: 200px;
-
-  ${({ theme }) => theme.breakpoints.mobile} {
-    width: 160px;
-  }
 `
 
 export function Header(props: Props) {

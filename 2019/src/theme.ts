@@ -21,5 +21,6 @@ export const theme: DefaultTheme = {
   },
   breakpoints: {
     mobile: "@media (max-width: 576px)",
+    largerThanMobile: "@media (min-width: 577px)",
   },
 }

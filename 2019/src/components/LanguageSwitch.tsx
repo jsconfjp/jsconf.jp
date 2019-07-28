@@ -21,7 +21,7 @@ const Lang = styled.a`
     margin: 0px 8px;
     content: "/";
   }
-  :last-child::after {
+  :last-of-type::after {
     content: "";
   }
 `

@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next"
 
 import { theme } from "../theme"
 import { Header } from "./Header"
+import { HeaderMobile } from "./HeaderMobile"
 import { Footer } from "./Footer"
 import { Button } from "./Button"
 import "./layout.css"
@@ -20,6 +21,16 @@ const BackToTopBox = styled.div`
   position: absolute;
   bottom: 0;
   right: 40px;
+`
+const OnlyMobile = styled.div`
+  ${({ theme }) => theme.breakpoints.largerThanMobile} {
+    display: none;
+  }
+`
+const NotMobile = styled.div`
+  ${({ theme }) => theme.breakpoints.mobile} {
+    display: none;
+  }
 `
 
 export function Layout({ children }: Props) {
@@ -47,10 +58,18 @@ export function Layout({ children }: Props) {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <Header
-          siteTitle={data.site.siteMetadata.title}
-          onChangeLanguage={onChangeLanguage}
-        />
+        <OnlyMobile>
+          <HeaderMobile
+            siteTitle={data.site.siteMetadata.title}
+            onChangeLanguage={onChangeLanguage}
+          />
+        </OnlyMobile>
+        <NotMobile>
+          <Header
+            siteTitle={data.site.siteMetadata.title}
+            onChangeLanguage={onChangeLanguage}
+          />
+        </NotMobile>
         <MainBox>
           <main>{children}</main>
           <BackToTopBox>
