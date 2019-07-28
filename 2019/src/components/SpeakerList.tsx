@@ -11,6 +11,12 @@ const Container = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 60px;
   grid-row-gap: 60px;
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
 `
 
 export function SpeakerList(props: Props) {

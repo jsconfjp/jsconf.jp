@@ -12,7 +12,7 @@ import { SubTitle } from "../components/SubTitle"
 import { SpeakerList } from "../components/SpeakerList"
 import { SponsorList } from "../components/SponsorList"
 import { LinkButton } from "../components/LinkButton"
-import { Card } from "../components/Card"
+import { Card as _Card } from "../components/Card"
 import { Centerize } from "../components/Centerize"
 import bg from "../images/bg.png"
 import bgFlipX from "../images/bg-flip-x.png"
@@ -23,9 +23,15 @@ const WavyBox = styled.div`
   background-position: top -830px right -300px, center left -450px;
   background-size: 100%, 120%;
 `
-const CardBox = styled.div`
+const Card = styled(_Card)`
   max-width: 1080px;
   margin: 80px auto;
+  padding: 70px;
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    margin: 80px 1em;
+    padding: 1em;
+  }
 `
 const SponsorBox = styled.div`
   margin-top: 80px;
@@ -76,17 +82,15 @@ export default function IndexPage() {
           />
         </Centerize>
 
-        <CardBox>
-          <Card>
-            <SubTitle>{t("guestSpeakers")}</SubTitle>
-            <SpeakerList speakers={guestSpeakers} />
-            <Centerize>
-              <LinkButton color="primary" to="/speakers">
-                {t("goToGuests")}
-              </LinkButton>
-            </Centerize>
-          </Card>
-        </CardBox>
+        <Card>
+          <SubTitle>{t("guestSpeakers")}</SubTitle>
+          <SpeakerList speakers={guestSpeakers} />
+          <Centerize>
+            <LinkButton color="primary" to="/speakers">
+              {t("goToGuests")}
+            </LinkButton>
+          </Centerize>
+        </Card>
 
         <Centerize>
           <SubTitle>{t("schedule")}</SubTitle>
@@ -106,24 +110,22 @@ export default function IndexPage() {
           </div>
         </Centerize>
 
-        <CardBox>
-          <Card>
+        <Card>
+          <Centerize>
+            <SubTitle>{t("tickets")}</SubTitle>
+            <p>{t("ticketsDescription")}</p>
             <Centerize>
-              <SubTitle>{t("tickets")}</SubTitle>
-              <p>{t("ticketsDescription")}</p>
-              <Centerize>
-                <LinkButton
-                  // color="primary"
-                  size="large"
-                  to="#"
-                  disabled
-                >
-                  {t("comingSoon")}
-                </LinkButton>
-              </Centerize>
+              <LinkButton
+                // color="primary"
+                size="large"
+                to="#"
+                disabled
+              >
+                {t("comingSoon")}
+              </LinkButton>
             </Centerize>
-          </Card>
-        </CardBox>
+          </Centerize>
+        </Card>
 
         <Centerize>
           <SubTitle>{t("venue")}</SubTitle>
