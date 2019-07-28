@@ -10,6 +10,10 @@ const Box = styled.footer`
 `
 const LinksBox = styled.div`
   display: flex;
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    flex-direction: column;
+  }
 `
 const Link = styled.a`
   ::after {
@@ -18,6 +22,12 @@ const Link = styled.a`
   }
   :last-child::after {
     content: "";
+  }
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    ::after {
+      content: "";
+    }
   }
 `
 
