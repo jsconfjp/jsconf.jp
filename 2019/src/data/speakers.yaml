@@ -2,27 +2,27 @@
   featured: true
   github: addaleax
   twitter: NadiehBremer
-  photoURL: speakers/nadieh-bremer.jpg
+  photoURL: /speakers/nadieh-bremer.jpg
   talkTitle: TBA
   biography: TBA
 - name: Henry Zhu
   featured: true
   github: hzoo
   twitter: left_pad
-  photoURL: speakers/henry-zhu.png
+  photoURL: /speakers/henry-zhu.png
   talkTitle: TBA
   biography: TBA
 - name: Guillermo Rauch
   featured: true
   github: rauchg
   twitter: rauchg
-  photoURL: speakers/guillermo-rauch.jpg
+  photoURL: /speakers/guillermo-rauch.jpg
   talkTitle: TBA
   biography: TBA
 - name: Dominic Tarr
   featured: true
   github: addaleax
   twitter: dominictarr
-  photoURL: speakers/dominic-tarr.jpg
+  photoURL: /speakers/dominic-tarr.jpg
   talkTitle: TBA
   biography: TBA
