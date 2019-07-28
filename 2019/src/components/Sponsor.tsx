@@ -17,18 +17,22 @@ const Img = styled.img`
   &.platinum {
     width: 100%;
     max-width: 780px;
-    height: 200px;
+    max-height: 200px;
   }
   &.gold {
     width: 100%;
     max-width: 440px;
-    height: 125px;
+    max-height: 125px;
   }
   &.silver,
   &.bronze {
     width: 100%;
     max-width: 273px;
-    height: 97px;
+    max-height: 97px;
+  }
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    padding: 10px;
   }
 `
 
