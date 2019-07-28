@@ -28,6 +28,12 @@ const buttonStyle = css`
     width: 100%;
     font-size: 20px;
   }
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    &.large {
+      padding: 0.6em 0;
+    }
+  }
 `
 
 const InternalBox = styled(Link)`

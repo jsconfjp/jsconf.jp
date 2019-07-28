@@ -33,6 +33,21 @@ const Card = styled(_Card)`
     padding: 1em;
   }
 `
+const SchedulesBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 3em);
+  max-width: 910px;
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    flex-direction: column;
+  }
+`
+const MapBox = styled.div`
+  ${({ theme }) => theme.breakpoints.mobile} {
+    margin: 0 2em;
+  }
+`
 const SponsorBox = styled.div`
   margin-top: 80px;
   padding: 100px 0;
@@ -94,20 +109,14 @@ export default function IndexPage() {
 
         <Centerize>
           <SubTitle>{t("schedule")}</SubTitle>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              width: 910,
-            }}
-          >
+          <SchedulesBox>
             <LinkButton color="secondary" size="large" to="/timetable#day1">
               {t("day1")}
             </LinkButton>
             <LinkButton color="secondary" size="large" to="/timetable#day2">
               {t("day2")}
             </LinkButton>
-          </div>
+          </SchedulesBox>
         </Centerize>
 
         <Card>
@@ -129,13 +138,15 @@ export default function IndexPage() {
 
         <Centerize>
           <SubTitle>{t("venue")}</SubTitle>
-          <Map width={940} height={500} />
-          <Address />
-          <Centerize>
-            <LinkButton color="primary" to="/venue">
-              {t("moreDetails")}
-            </LinkButton>
-          </Centerize>
+          <MapBox>
+            <Map width={940} height={500} />
+            <Address />
+            <Centerize>
+              <LinkButton color="primary" to="/venue">
+                {t("moreDetails")}
+              </LinkButton>
+            </Centerize>
+          </MapBox>
         </Centerize>
 
         <SponsorBox>
