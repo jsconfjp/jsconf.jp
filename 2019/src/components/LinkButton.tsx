@@ -13,12 +13,14 @@ const buttonStyle = css`
   justify-content: center;
 
   &.large {
-    width: 440px;
+    width: 100%;
+    max-width: 440px;
     padding: 1.4em 0;
     font-size: 24px;
   }
   &.normal {
-    width: 440px;
+    width: 100%;
+    max-width: 440px;
     padding: 0.6em 0;
     font-size: 24px;
   }
