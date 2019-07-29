@@ -59,28 +59,28 @@ export function SponsorList(props: Props) {
       <SubTitle>{t("sponsor.platinum")}</SubTitle>
       <PlatinumBox>
         {grades.platinum.map(platinumSponsor => (
-          <Sponsor {...platinumSponsor} />
+          <Sponsor key={platinumSponsor.url} {...platinumSponsor} />
         ))}
       </PlatinumBox>
 
       <SubTitle>{t("sponsor.gold")}</SubTitle>
       <GoldBox>
         {grades.gold.map(goldSponsor => (
-          <Sponsor {...goldSponsor} />
+          <Sponsor key={goldSponsor.url} {...goldSponsor} />
         ))}
       </GoldBox>
 
       <SubTitle>{t("sponsor.silver")}</SubTitle>
       <OtherBox>
         {grades.silver.map(silverSponsor => (
-          <Sponsor {...silverSponsor} />
+          <Sponsor key={silverSponsor.url} {...silverSponsor} />
         ))}
       </OtherBox>
 
       <SubTitle>{t("sponsor.bronze")}</SubTitle>
       <OtherBox>
         {grades.bronze.map(bronzeSponsor => (
-          <Sponsor {...bronzeSponsor} />
+          <Sponsor key={bronzeSponsor.url} {...bronzeSponsor} />
         ))}
       </OtherBox>
     </>
