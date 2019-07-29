@@ -4,6 +4,7 @@ module.exports = {
     description: `WIP`,
     author: `JSConf JP`,
     twitter: `jsconfjp`,
+    siteUrl: `https://jsconf.jp`,
   },
   plugins: [
     `gatsby-plugin-typescript`,
@@ -11,6 +12,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-zopfli`,
     `gatsby-plugin-brotli`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
