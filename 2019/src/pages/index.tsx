@@ -128,6 +128,9 @@ export default function IndexPage() {
               <p>{t("ticketsDescription")}</p>
               <Centerize>
                 <LinkButton
+                  onClick={() =>
+                    ga("send", "event", "Conversion", "OpenTickets", "index")
+                  }
                   // color="primary"
                   size="large"
                   to="#"

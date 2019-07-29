@@ -69,27 +69,28 @@ export type Props = {
   to: string
   disabled: boolean
   children: React.ReactNode
+  onClick?: () => void
 }
 
 export function LinkButton(props: Props) {
-  const { color, to, size, children } = props
+  const { color, to, size, children, onClick } = props
 
   if (to.startsWith("/")) {
     if (color === "primary") {
       return (
-        <InternalPrimaryBox className={size} to={to}>
+        <InternalPrimaryBox className={size} onClick={onClick} to={to}>
           {children}
         </InternalPrimaryBox>
       )
     } else if (color === "secondary") {
       return (
-        <InternalSecondaryBox className={size} to={to}>
+        <InternalSecondaryBox className={size} onClick={onClick} to={to}>
           {children}
         </InternalSecondaryBox>
       )
     } else {
       return (
-        <InternalBox className={size} to={to}>
+        <InternalBox className={size} onClick={onClick} to={to}>
           {children}
         </InternalBox>
       )
@@ -98,19 +99,29 @@ export function LinkButton(props: Props) {
 
   if (color === "primary") {
     return (
-      <ExternalPrimaryBox href={to} target="_blank" className={size}>
+      <ExternalPrimaryBox
+        href={to}
+        target="_blank"
+        className={size}
+        onClick={onClick}
+      >
         {children}
       </ExternalPrimaryBox>
     )
   } else if (color === "secondary") {
     return (
-      <ExternalSecondaryBox href={to} target="_blank" className={size}>
+      <ExternalSecondaryBox
+        href={to}
+        target="_blank"
+        className={size}
+        onClick={onClick}
+      >
         {children}
       </ExternalSecondaryBox>
     )
   } else {
     return (
-      <ExternalBox href={to} target="_blank" className={size}>
+      <ExternalBox href={to} target="_blank" className={size} onClick={onClick}>
         {children}
       </ExternalBox>
     )

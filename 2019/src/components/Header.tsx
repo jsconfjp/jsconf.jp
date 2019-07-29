@@ -6,8 +6,6 @@ import { useTranslation } from "react-i18next"
 import { Logo } from "./Logo"
 import { LanguageSwitch } from "./LanguageSwitch"
 import { LinkButton } from "./LinkButton"
-// import { ShowOnlyMobile } from "./ShowOnlyMobile"
-// import { ShowNotMobile } from "./ShowNotMobile"
 
 type Props = {
   siteTitle: string
@@ -98,6 +96,9 @@ export function Header(props: Props) {
           <MenuItem to="sponsors">{t("sponsors")}</MenuItem>
           <TicketBox>
             <LinkButton
+              onClick={() =>
+                ga("send", "event", "Conversion", "OpenTickets", "Header")
+              }
               // color="primary"
               to="#"
               size="inline"
