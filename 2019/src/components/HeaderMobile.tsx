@@ -99,9 +99,6 @@ export function HeaderMobile(props: Props) {
 
           <TicketBox>
             <LinkButton
-              onClick={() =>
-                ga("send", "event", "Conversion", "OpenTickets", "HeaderMobile")
-              }
               // color="primary"
               to="#"
               size="inline"

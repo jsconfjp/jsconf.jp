@@ -1,6 +1,7 @@
 import React from "react"
 import styled, { css } from "styled-components"
 import { Link } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const buttonStyle = css`
   display: flex;
@@ -50,7 +51,7 @@ const InternalSecondaryBox = styled(InternalBox)`
   background-color: ${({ theme }) => theme.colors.secondary};
 `
 
-const ExternalBox = styled.a`
+const ExternalBox = styled(OutboundLink)`
   ${buttonStyle}
   text-decoration: none;
 `
@@ -69,28 +70,27 @@ export type Props = {
   to: string
   disabled: boolean
   children: React.ReactNode
-  onClick?: () => void
 }
 
 export function LinkButton(props: Props) {
-  const { color, to, size, children, onClick } = props
+  const { color, to, size, children } = props
 
   if (to.startsWith("/")) {
     if (color === "primary") {
       return (
-        <InternalPrimaryBox className={size} onClick={onClick} to={to}>
+        <InternalPrimaryBox className={size} to={to}>
           {children}
         </InternalPrimaryBox>
       )
     } else if (color === "secondary") {
       return (
-        <InternalSecondaryBox className={size} onClick={onClick} to={to}>
+        <InternalSecondaryBox className={size} to={to}>
           {children}
         </InternalSecondaryBox>
       )
     } else {
       return (
-        <InternalBox className={size} onClick={onClick} to={to}>
+        <InternalBox className={size} to={to}>
           {children}
         </InternalBox>
       )
@@ -99,29 +99,19 @@ export function LinkButton(props: Props) {
 
   if (color === "primary") {
     return (
-      <ExternalPrimaryBox
-        href={to}
-        target="_blank"
-        className={size}
-        onClick={onClick}
-      >
+      <ExternalPrimaryBox href={to} target="_blank" className={size}>
         {children}
       </ExternalPrimaryBox>
     )
   } else if (color === "secondary") {
     return (
-      <ExternalSecondaryBox
-        href={to}
-        target="_blank"
-        className={size}
-        onClick={onClick}
-      >
+      <ExternalSecondaryBox href={to} target="_blank" className={size}>
         {children}
       </ExternalSecondaryBox>
     )
   } else {
     return (
-      <ExternalBox href={to} target="_blank" className={size} onClick={onClick}>
+      <ExternalBox href={to} target="_blank" className={size}>
         {children}
       </ExternalBox>
     )

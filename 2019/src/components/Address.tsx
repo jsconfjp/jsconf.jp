@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 type Props = {}
 
@@ -15,7 +16,7 @@ const Text = styled.p`
   font-size: 18px;
   font-family: ${({ theme }) => theme.fonts.text};
 `
-const Link = styled.a`
+const Link = styled(OutboundLink)`
   font-size: 18px;
   font-family: ${({ theme }) => theme.fonts.text};
 `

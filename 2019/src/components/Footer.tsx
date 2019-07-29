@@ -1,5 +1,9 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
+
+type Props = {}
 
 const Box = styled.footer`
   padding: 40px 0;
@@ -15,7 +19,7 @@ const LinksBox = styled.div`
     flex-direction: column;
   }
 `
-const Link = styled.a`
+const ExternalLink = styled(OutboundLink)`
   ::after {
     margin: 0px 8px;
     content: "|";
@@ -35,18 +39,16 @@ export function Footer(_props: Props) {
   return (
     <Box>
       <LinksBox>
-        <Link href="https://nodejs.org/" target="_blank">
+        <ExternalLink href="https://nodejs.org/" target="_blank">
           Node.js
-        </Link>
-        <Link href="https://nodefest.jp/2018/" target="_blank">
+        </ExternalLink>
+        <ExternalLink href="https://nodefest.jp/2018/" target="_blank">
           Nodefest 2018
-        </Link>
-        <Link href="https://nodejs.jp/" target="_blank">
+        </ExternalLink>
+        <ExternalLink href="https://nodejs.jp/" target="_blank">
           Japan Node.js Association
-        </Link>
-        <Link href="/coc" target="_blank">
-          Code of Conduct
-        </Link>
+        </ExternalLink>
+        <Link to="/coc">Code of Conduct</Link>
       </LinksBox>
       <small>&copy; 2019-{new Date().getFullYear()} JSConf JP</small>
     </Box>

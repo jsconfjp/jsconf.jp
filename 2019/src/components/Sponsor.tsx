@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
-const Box = styled.a`
+const Box = styled(OutboundLink)`
   display: flex;
   align-items: center;
   justify-content: center;

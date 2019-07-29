@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { useTranslation } from "react-i18next"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
@@ -31,9 +32,12 @@ export default function AboutUsPage() {
         {data.allMembersYaml.edges.map(({ node }) => (
           <div key={node}>
             <img src={`https://twitter.com/${node.twitter}/profile_image`} />
-            <a target="_blank" href={`https://twitter.com/${node.twitter}`}>
+            <OutboundLink
+              target="_blank"
+              href={`https://twitter.com/${node.twitter}`}
+            >
               @{node.twitter}
-            </a>
+            </OutboundLink>
           </div>
         ))}
       </ResponsiveBox>

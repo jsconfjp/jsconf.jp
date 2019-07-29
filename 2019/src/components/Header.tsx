@@ -96,9 +96,6 @@ export function Header(props: Props) {
           <MenuItem to="sponsors">{t("sponsors")}</MenuItem>
           <TicketBox>
             <LinkButton
-              onClick={() =>
-                ga("send", "event", "Conversion", "OpenTickets", "Header")
-              }
               // color="primary"
               to="#"
               size="inline"
