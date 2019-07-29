@@ -12,6 +12,12 @@ module.exports = {
     `gatsby-plugin-zopfli`,
     `gatsby-plugin-brotli`,
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-144754908-1`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
