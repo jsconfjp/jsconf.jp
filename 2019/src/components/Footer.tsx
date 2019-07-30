@@ -48,7 +48,7 @@ export function Footer(_props: Props) {
         <ExternalLink href="https://nodejs.jp/" target="_blank">
           Japan Node.js Association
         </ExternalLink>
-        <Link to="/coc">Code of Conduct</Link>
+        <Link to="/code-of-conduct">Code of Conduct</Link>
       </LinksBox>
       <small>&copy; 2019-{new Date().getFullYear()} JSConf JP</small>
     </Box>

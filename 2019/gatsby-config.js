@@ -33,8 +33,24 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `articles`,
+        path: `${__dirname}/src/data`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-external-links`,
+        ],
       },
     },
     `gatsby-transformer-yaml`,
