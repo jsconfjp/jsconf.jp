@@ -37,6 +37,10 @@ export function SEO({ description, lang, meta, title }: Props) {
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={([
         {
+          name: `viewport`,
+          content: `width=device-width`,
+        },
+        {
           name: `description`,
           content: metaDescription,
         },

@@ -12,7 +12,8 @@ const Box = styled.div`
   display: flex;
   margin-top: 120px;
   margin-bottom: 20px;
-  width: 910px;
+  width: 100%;
+  max-width: 910px;
   align-items: center;
 
   ${({ theme }) => theme.breakpoints.mobile} {

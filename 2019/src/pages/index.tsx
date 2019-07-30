@@ -25,10 +25,7 @@ const WavyBox = styled.div`
   background-size: 100%, 120%;
 `
 const Container = styled.div`
-  padding: 0;
-  ${({ theme }) => theme.breakpoints.mobile} {
-    padding: 0 1em;
-  }
+  padding: 0 1em;
 `
 const Card = styled(_Card)`
   max-width: 1080px;

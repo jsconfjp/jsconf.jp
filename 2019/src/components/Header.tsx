@@ -45,7 +45,7 @@ const MenuBox = styled.div`
   justify-content: flex-end;
 `
 const MenuItem = styled(Link)`
-  margin: 0 19px;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,9 +61,10 @@ const MenuItem = styled(Link)`
   }
 `
 const TicketBox = styled.div`
+  flex: 1;
   display: flex;
   align-self: stretch;
-  width: 200px;
+  max-width: 200px;
 `
 
 export function Header(props: Props) {
