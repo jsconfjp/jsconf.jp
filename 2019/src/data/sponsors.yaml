@@ -8,9 +8,7 @@
   grade: silver
 - name: ヤフー株式会社
   url: https://www.yahoo.co.jp
-  # Need Adobe Illustlator
-  # https://www.dropbox.com/s/xufuq5hoqjvwzkm/Yahoo%21%20JAPAN%20Logo.zip?dl=0
-  logoUrl: "https://placehold.jp/450x150.png?text=TODO:www.yahoo.co.jp"
+  logoUrl: /sponsors/yahoo.png
   grade: platinum
 - name: Hamee株式会社
   url: https://recruit.hamee.co.jp/about?c=jsconf
