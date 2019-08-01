@@ -11,7 +11,7 @@ export default function TimetablePage() {
   const { t } = useTranslation()
   return (
     <Layout>
-      <SEO title="Timetable" />
+      <SEO title={t("timetable")} description={t("timetable.description")} />
       <ResponsiveBox>
         <Breadcrumb path={[t("timetable")]} />
         <Title>{t("timetable")}</Title>

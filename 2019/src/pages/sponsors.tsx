@@ -29,7 +29,7 @@ export default function SponsorsPage() {
 
   return (
     <Layout>
-      <SEO title="Sponsors" />
+      <SEO title={t("sponsors")} description={t("sponsors.description")} />
       <ResponsiveBox>
         <Breadcrumb path={[t("sponsors")]} />
         <Title>{t("sponsors")}</Title>

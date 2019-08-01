@@ -31,7 +31,7 @@ export default function SpeakersPage() {
 
   return (
     <Layout>
-      <SEO title="Speakers" />
+      <SEO title={t("guestSpeakers")} description={t("speakers.description")} />
       <ResponsiveBox>
         <Breadcrumb path={[t("speakers")]} />
         <Title>{t("speakers")}</Title>

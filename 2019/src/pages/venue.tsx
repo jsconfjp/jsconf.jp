@@ -14,7 +14,7 @@ export default function VenuePage() {
 
   return (
     <Layout>
-      <SEO title="Venue" />
+      <SEO title={t("venue")} description={t("venue.address")} />
       <ResponsiveBox>
         <Breadcrumb path={[t("venue")]} />
 

@@ -25,7 +25,7 @@ export default function AboutUsPage() {
 
   return (
     <Layout>
-      <SEO title="About us" />
+      <SEO title={t("aboutUs")} description={t("about.description")} />
       <ResponsiveBox>
         <Breadcrumb path={[t("aboutUs")]} />
         <Title>{t("aboutUs")}</Title>

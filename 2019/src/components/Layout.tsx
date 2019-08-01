@@ -1,8 +1,9 @@
 import React, { useCallback } from "react"
 import styled, { ThemeProvider } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
-import { useTranslation } from "react-i18next"
+import { useTranslation, useSSR } from "react-i18next"
 
+import { store as i18nStore } from "../i18n"
 import { theme } from "../theme"
 import { Header } from "./Header"
 import { HeaderMobile } from "./HeaderMobile"
@@ -34,6 +35,9 @@ const NotMobile = styled.div`
 `
 
 export function Layout({ children }: Props) {
+  // https://react.i18next.com/latest/ssr#passing-initial-translations-initial-language-down-to-client
+  // useSSR(i18nStore, "en")
+
   const { t, i18n } = useTranslation()
   const onChangeLanguage = useCallback(
     (lang: string) => {

@@ -11,7 +11,7 @@ export default function SchedulePage() {
   const { t } = useTranslation()
   return (
     <Layout>
-      <SEO title="Schedule" />
+      <SEO title={t("schedule")} description={t("schedule.description")} />{" "}
       <ResponsiveBox>
         <Breadcrumb path={[t("schedule")]} />
         <Title>{t("schedule")}</Title>

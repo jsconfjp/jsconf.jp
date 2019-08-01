@@ -87,7 +87,7 @@ export default function IndexPage() {
   return (
     <Layout>
       <WavyBox>
-        <SEO title="Home" />
+        <SEO title={t("siteName")} description={t("description")} />
         <Container>
           <Centerize>
             <Hero
