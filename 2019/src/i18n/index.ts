@@ -16,6 +16,7 @@ export const store = i18n
     resources,
     fallbackLng: "en",
     keySeparator: false, // we do not use keys in form messages.welcome
+    preload: ["en"], // we do not use keys in form messages.welcome
 
     interpolation: {
       escapeValue: false, // react already safes from xss

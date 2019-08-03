@@ -12,7 +12,7 @@ type Props = {
 }
 
 export function SEO({ description, lang, meta, title }: Props) {
-  const { site } = useStaticQuery(
+  const { site, logo } = useStaticQuery(
     graphql`
       query {
         site {
@@ -20,7 +20,11 @@ export function SEO({ description, lang, meta, title }: Props) {
             title
             description
             author
+            siteUrl
           }
+        }
+        logo: file(relativePath: { in: "logo.png" }) {
+          publicURL
         }
       }
     `,
@@ -51,6 +55,10 @@ export function SEO({ description, lang, meta, title }: Props) {
         {
           property: `og:description`,
           content: metaDescription,
+        },
+        {
+          property: `og:image`,
+          content: `${site.siteMetadata.siteUrl}${logo.publicURL}`,
         },
         {
           property: `og:type`,
