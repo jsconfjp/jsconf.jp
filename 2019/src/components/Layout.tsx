@@ -1,14 +1,14 @@
 import React, { useCallback } from "react"
 import styled, { ThemeProvider } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
-import { useTranslation, useSSR } from "react-i18next"
+import { useTranslation } from "react-i18next"
 
-import { store as i18nStore } from "../i18n"
 import { theme } from "../theme"
 import { Header } from "./Header"
 import { HeaderMobile } from "./HeaderMobile"
 import { Footer } from "./Footer"
 import { Button } from "./Button"
+import { SmoothScroll } from "./SmoothScroll"
 import "./layout.css"
 
 type Props = {
@@ -35,9 +35,6 @@ const NotMobile = styled.div`
 `
 
 export function Layout({ children }: Props) {
-  // https://react.i18next.com/latest/ssr#passing-initial-translations-initial-language-down-to-client
-  // useSSR(i18nStore, "en")
-
   const { t, i18n } = useTranslation()
   const onChangeLanguage = useCallback(
     (lang: string) => {
@@ -45,9 +42,6 @@ export function Layout({ children }: Props) {
     },
     [i18n],
   )
-  const onRequestBackToTop = useCallback(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }, [])
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -77,9 +71,9 @@ export function Layout({ children }: Props) {
         <MainBox>
           <main>{children}</main>
           <BackToTopBox>
-            <Button color="primary" onClick={onRequestBackToTop}>
-              {t("backToTop")}
-            </Button>
+            <SmoothScroll selector="body">
+              <Button color="primary">{t("backToTop")}</Button>
+            </SmoothScroll>
           </BackToTopBox>
         </MainBox>
         <Footer />

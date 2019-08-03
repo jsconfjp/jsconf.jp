@@ -1,4 +1,4 @@
-import React from "react"
+import React, { MouseEventHandler } from "react"
 import styled, { css } from "styled-components"
 import { Link } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
@@ -69,28 +69,29 @@ export type Props = {
   size: "inline" | "normal" | "large"
   to: string
   disabled: boolean
+  onClick?: MouseEventHandler
   children: React.ReactNode
 }
 
 export function LinkButton(props: Props) {
-  const { color, to, size, children } = props
+  const { color, to, size, onClick, children } = props
 
-  if (to.startsWith("/")) {
+  if (!to.startsWith("http")) {
     if (color === "primary") {
       return (
-        <InternalPrimaryBox className={size} to={to}>
+        <InternalPrimaryBox onClick={onClick} className={size} to={to}>
           {children}
         </InternalPrimaryBox>
       )
     } else if (color === "secondary") {
       return (
-        <InternalSecondaryBox className={size} to={to}>
+        <InternalSecondaryBox onClick={onClick} className={size} to={to}>
           {children}
         </InternalSecondaryBox>
       )
     } else {
       return (
-        <InternalBox className={size} to={to}>
+        <InternalBox onClick={onClick} className={size} to={to}>
           {children}
         </InternalBox>
       )
@@ -99,19 +100,29 @@ export function LinkButton(props: Props) {
 
   if (color === "primary") {
     return (
-      <ExternalPrimaryBox href={to} target="_blank" className={size}>
+      <ExternalPrimaryBox
+        href={to}
+        target="_blank"
+        onClick={onClick}
+        className={size}
+      >
         {children}
       </ExternalPrimaryBox>
     )
   } else if (color === "secondary") {
     return (
-      <ExternalSecondaryBox href={to} target="_blank" className={size}>
+      <ExternalSecondaryBox
+        href={to}
+        target="_blank"
+        onClick={onClick}
+        className={size}
+      >
         {children}
       </ExternalSecondaryBox>
     )
   } else {
     return (
-      <ExternalBox href={to} target="_blank" className={size}>
+      <ExternalBox href={to} target="_blank" onClick={onClick} className={size}>
         {children}
       </ExternalBox>
     )

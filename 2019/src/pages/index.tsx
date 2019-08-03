@@ -110,10 +110,10 @@ export default function IndexPage() {
           <Centerize>
             <SubTitle>{t("schedule")}</SubTitle>
             <SchedulesBox>
-              <LinkButton color="secondary" size="large" to="/timetable#day1">
+              <LinkButton color="secondary" size="large" to="/schedule#day1">
                 {t("day1")}
               </LinkButton>
-              <LinkButton color="secondary" size="large" to="/timetable#day2">
+              <LinkButton color="secondary" size="large" to="/schedule#day2">
                 {t("day2")}
               </LinkButton>
             </SchedulesBox>

@@ -16,6 +16,10 @@ declare module "styled-components" {
       disabled: string
       disabledText: string
       border: string
+      roomA: string
+      roomABorder: string
+      roomB: string
+      roomBBorder: string
     }
     fonts: {
       header: string
