@@ -1,7 +1,12 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+import React from "react"
+import { renderToString } from "react-dom/server"
+import { getI18n } from "react-i18next"
+import { store } from "./src/i18n"
 
-// You can delete this file if you're not using it
+export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
+  return store.then(() => {
+    const i18n = getI18n()
+    i18n.changeLanguage("en")
+    replaceBodyHTMLString(renderToString(<>{bodyComponent}</>))
+  })
+}
