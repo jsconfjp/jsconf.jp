@@ -19,7 +19,7 @@ const SecondaryBox = styled(Box)`
 export type Props = {
   color: "primary" | "secondary"
   children: React.ReactNode
-  onClick: () => void
+  onClick?: () => void
 }
 
 export function Button(props: Props) {
