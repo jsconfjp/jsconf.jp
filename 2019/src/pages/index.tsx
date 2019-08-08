@@ -37,6 +37,11 @@ const Card = styled(_Card)`
     padding: 1em;
   }
 `
+const VenueBox = styled.div`
+  width: 100%;
+  max-width: ${({ theme }) => theme.innerWidth};
+  margin: 0 auto;
+`
 const SchedulesBox = styled.div`
   display: flex;
   justify-content: space-between;
@@ -136,16 +141,16 @@ export default function IndexPage() {
             </Centerize>
           </Card>
 
-          <Centerize>
+          <VenueBox>
             <SubTitle>{t("venue")}</SubTitle>
             <Map width={940} height={500} />
-            <Address />
+            <Address summary />
             <Centerize>
               <LinkButton color="primary" to="/venue">
                 {t("moreDetails")}
               </LinkButton>
             </Centerize>
-          </Centerize>
+          </VenueBox>
         </Container>
 
         <SponsorBox>

@@ -30,6 +30,8 @@ export const en = {
     "venue.name": "3331 Arts Chiyoda",
     "venue.address": "〒101-0021 6-11-14 Sotokanda Chiyoda-ku Tokyo",
     "venue.url": "https://www.3331.jp/rentalspace/",
+    "venue.accessBytrain": "ACCESS BY TRAIN",
+    "venue.accessByPlane": "ACCESS BY PLANE",
     "venue.accessByTokyoMetroGinzaLine":
       "1 min. from Tokyo Metro Ginza Line Suehirocho station (Exit 4)",
     "venue.accessByTokyoMetroChiyodaLine":
@@ -40,5 +42,11 @@ export const en = {
       "7 min. from JR Okachimachi station (Southern Exit)",
     "venue.accessByJrAkihabaraStation":
       "8 min. from JR Akihabara station (Electric City Exit)",
+    "venue.accessByNaritaAirport":
+      "Approx. 70 minutes from Narita Airport to JR Akihabara Station",
+    "venue.accessByHanedaAirport":
+      "Approx. 40 minutes from Haneda Airport to JR Akihabara Station",
+    "venue.accessByAkihabaraSt":
+      "* 8 minutes by foot from JR Akihabara Station Electric Town Gate",
   },
 }

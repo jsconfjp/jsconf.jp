@@ -20,7 +20,7 @@ export default function VenuePage() {
 
         <Title>{t("venue")}</Title>
         <Map width={940} height={500} />
-        <Address />
+        <Address summary={false} />
       </ResponsiveBox>
     </Layout>
   )

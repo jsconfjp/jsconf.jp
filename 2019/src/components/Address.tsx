@@ -3,13 +3,25 @@ import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
-type Props = {}
+type Props = {
+  summary: boolean
+}
 
 const Title = styled.h3`
   margin-bottom: 0;
   font-size: 24px;
   font-family: ${({ theme }) => theme.fonts.text};
   font-weight: bold;
+`
+const SubTitle = styled.h4`
+  display: inline-block;
+  margin: 40px 0 0;
+  padding: 8px 10px;
+  font-size: 18px;
+  font-family: ${({ theme }) => theme.fonts.text};
+  font-weight: bold;
+  color: ${({ theme }) => theme.colors.base};
+  background-color: ${({ theme }) => theme.colors.primary};
 `
 const Text = styled.p`
   margin: 0.4em 0;
@@ -36,7 +48,8 @@ const HyphenListItem = styled.li`
   }
 `
 
-export function Address(_props: Props) {
+export function Address(props: Props) {
+  const { summary } = props
   const { t } = useTranslation()
 
   return (
@@ -50,6 +63,8 @@ export function Address(_props: Props) {
           {t("venue.url")}
         </Link>
       </Text>
+
+      <SubTitle>{t("venue.accessBytrain")}</SubTitle>
       <HyphenList>
         <HyphenListItem>
           <Text>{t("venue.accessByTokyoMetroGinzaLine")}</Text>
@@ -67,6 +82,21 @@ export function Address(_props: Props) {
           <Text>{t("venue.accessByJrAkihabaraStation")}</Text>
         </HyphenListItem>
       </HyphenList>
+
+      {summary ? null : (
+        <>
+          <SubTitle>{t("venue.accessByPlane")}</SubTitle>
+          <HyphenList>
+            <HyphenListItem>
+              <Text>{t("venue.accessByNaritaAirport")}</Text>
+            </HyphenListItem>
+            <HyphenListItem>
+              <Text>{t("venue.accessByHanedaAirport")}</Text>
+            </HyphenListItem>
+          </HyphenList>
+          <Text>{t("venue.accessByAkihabaraSt")}</Text>
+        </>
+      )}
     </>
   )
 }
