@@ -18,6 +18,7 @@ export const theme: DefaultTheme = {
     roomABorder: "#FF5700",
     roomB: "#D3EEEC",
     roomBBorder: "#3BB3AA",
+    accessibility: "#D3EEEC",
   },
   fonts: {
     header: "Lato",

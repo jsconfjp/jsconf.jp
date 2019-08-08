@@ -48,5 +48,16 @@ export const en = {
       "Approx. 40 minutes from Haneda Airport to JR Akihabara Station",
     "venue.accessByAkihabaraSt":
       "* 8 minutes by foot from JR Akihabara Station Electric Town Gate",
+    "venue.accessibilityTitle": "ACCESSIBILITY",
+    "venue.accessibility": `
+・A parking space is provided for the disabled. Please call 03-6803-2441 or email to info(at)3331.jp to make a reservation.
+・Ramped entrance with call bell
+・Elevator (B1F – Rooftop) *Rooftop opens only during
+・Accessible Restroom (1F)
+・Written Communication
+・Assistance Dog Allowed
+・Wheelchair Rental (Please ask at Information Desk)
+・Admission is free for holders of Disability Certificate and their escorts (up to one per certificate holder). If you are living overseas, please bring relevant proof of status
+    `,
   },
 }
