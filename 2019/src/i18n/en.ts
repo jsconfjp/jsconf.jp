@@ -22,6 +22,8 @@ export const en = {
     comingSoon: "Coming soon",
     venue: "Venue",
     moreDetails: "More details",
+    callForSponsors: "Call For Sponsors",
+    becomeASponsor: "Become a sponsor",
     sponsors: "Sponsors",
     "sponsor.platinum": "Platinum",
     "sponsor.gold": "Gold",
