@@ -14,11 +14,17 @@ const Img = styled.img`
   padding: 20px;
   object-fit: contain;
   box-sizing: border-box;
+  width: 100%;
 
   &.platinum {
-    width: 100%;
-    max-width: 780px;
-    max-height: 200px;
+    width: 780px;
+    height: 200px;
+
+    ${({ theme }) => theme.breakpoints.mobile} {
+      width: 100%;
+      max-width: 780px;
+      max-height: 160px;
+    }
   }
   &.gold {
     width: 100%;

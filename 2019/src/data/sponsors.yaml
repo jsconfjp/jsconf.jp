@@ -38,3 +38,11 @@
   url: https://www.twitter.com
   logoUrl: /sponsors/twitter.png
   grade: gold
+- name: RECRUIT
+  url: https://www.recruit.co.jp/employment/
+  logoUrl: /sponsors/recruit.jpg
+  grade: platinum
+- name: CureApp
+  url: https://cureapp.co.jp/engineers.html
+  logoUrl: /sponsors/cureapp.png
+  grade: gold

@@ -18,9 +18,12 @@ const baseGridStyle = css`
 `
 
 const PlatinumBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  ${baseGridStyle}
 `
 const GoldBox = styled.div`
   display: grid;
