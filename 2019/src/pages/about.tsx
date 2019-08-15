@@ -29,7 +29,7 @@ export default function AboutUsPage() {
       <ResponsiveBox>
         <Breadcrumb path={[t("aboutUs")]} />
         <Title>{t("aboutUs")}</Title>
-        {data.allMembersYaml.edges.map(({ node }) => (
+        {data.allMembersYaml.edges.map(({ node }: any) => (
           <div key={node}>
             <img src={`https://twitter.com/${node.twitter}/profile_image`} />
             <OutboundLink
