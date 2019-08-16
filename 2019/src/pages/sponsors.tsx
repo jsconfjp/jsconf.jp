@@ -24,7 +24,7 @@ export default function SponsorsPage() {
       }
     }
   `)
-  const sponsors = data.allSponsorsYaml.edges.map(({ node }) => node)
+  const sponsors = data.allSponsorsYaml.edges.map(({ node }: any) => node)
   const { t } = useTranslation()
 
   return (

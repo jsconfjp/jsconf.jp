@@ -86,8 +86,8 @@ export default function IndexPage() {
       }
     }
   `)
-  const guestSpeakers = allSpeakersYaml.edges.map(({ node }) => node)
-  const sponsors = allSponsorsYaml.edges.map(({ node }) => node)
+  const guestSpeakers = allSpeakersYaml.edges.map(({ node }: any) => node)
+  const sponsors = allSponsorsYaml.edges.map(({ node }: any) => node)
 
   return (
     <Layout>
