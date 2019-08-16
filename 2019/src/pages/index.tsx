@@ -141,31 +141,31 @@ export default function IndexPage() {
             </Centerize>
           </Card>
 
-          <Card>
+          <Centerize>
+            <SubTitle>{t("callForSponsors")}</SubTitle>
             <Centerize>
-              <SubTitle>{t("callForSponsors")}</SubTitle>
-              <Centerize>
-                <LinkButton
-                  color="primary"
-                  size="large"
-                  to="https://docs.google.com/forms/d/e/1FAIpQLSd6373GnVMxTaT7QhKoPk60D8C70QZTCZugKlCuXWcQBq0v4A/viewform"
-                >
-                  {t("becomeASponsor")}
-                </LinkButton>
-              </Centerize>
-            </Centerize>
-          </Card>
-
-          <VenueBox>
-            <SubTitle>{t("venue")}</SubTitle>
-            <Map width={940} height={500} />
-            <Address summary />
-            <Centerize>
-              <LinkButton color="primary" to="/venue">
-                {t("moreDetails")}
+              <LinkButton
+                color="primary"
+                size="large"
+                to="https://docs.google.com/forms/d/e/1FAIpQLSd6373GnVMxTaT7QhKoPk60D8C70QZTCZugKlCuXWcQBq0v4A/viewform"
+              >
+                {t("becomeASponsor")}
               </LinkButton>
             </Centerize>
-          </VenueBox>
+          </Centerize>
+
+          <Card>
+            <VenueBox>
+              <SubTitle>{t("venue")}</SubTitle>
+              <Map width={940} height={500} />
+              <Address summary />
+              <Centerize>
+                <LinkButton color="primary" to="/venue">
+                  {t("moreDetails")}
+                </LinkButton>
+              </Centerize>
+            </VenueBox>
+          </Card>
         </Container>
 
         <SponsorBox>
