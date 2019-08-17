@@ -5,7 +5,7 @@ module.exports = {
     description: `WIP`,
     author: `JSConf JP`,
     twitter: `jsconfjp`,
-    siteUrl: `https://jsconf.jp/2019`,
+    siteUrl: `https://jsconf.jp`,
   },
   plugins: [
     `gatsby-plugin-typescript`,
