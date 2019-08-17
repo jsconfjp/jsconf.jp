@@ -9,7 +9,6 @@ export const ja: {
     description:
       "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the first event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
     festivalPeriod: "November 30th, December 1st 2019",
-    ticketsDescription: "TODO: description",
     "venue.name": "アーツ千代田 3331",
     "venue.address": "〒101-0021 東京都千代田区外神田6丁目11-14",
     "venue.url": "https://www.3331.jp/rentalspace/",
