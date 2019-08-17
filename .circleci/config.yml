@@ -22,12 +22,14 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "2019/package-lock.json" }}
       - run: cd 2019 && npm ci
-      - run: cd 2019 && npm test
-      - run: cd 2019 && npm run build
       - save_cache:
           paths:
             - 2019/node_modules
           key: v1-dependencies-{{ checksum "2019/package-lock.json" }}
+      - run: cd 2019 && npm test
+      - run: cd 2019 && npm run build
+      - store_artifacts:
+          path: 2019/public
   deploy:
     docker:
       - image: circleci/node:lts-browsers
