@@ -38,6 +38,8 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "2019/package-lock.json" }}
       - run: mkdir dist
+      - run: cp docs/* dist/
+      - run: cp -f redirect.html dist/index.html
       - run: cd 2019 && npm run build && mv public ../dist/2019
       - run: git config --global user.name "CircleCI deploy"
       - run: git config --global user.email "circleci@example.com"
