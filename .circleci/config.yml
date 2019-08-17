@@ -42,7 +42,7 @@ jobs:
       - run: mkdir dist
       - run: cp docs/* dist/
       - run: cp -f redirect.html dist/index.html
-      - run: cd 2019 && npm run build && mv public ../dist/2019
+      - run: cd 2019 && npm run build -- --prefix-paths && mv public ../dist/2019
       - run: git config --global user.name "CircleCI deploy"
       - run: git config --global user.email "circleci@example.com"
       - run: npx gh-pages --dist dist --message "[skip ci] Updates"
