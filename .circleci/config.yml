@@ -1,0 +1,43 @@
+workflows:
+  version: 2
+  test_deploy_2019:
+    jobs:
+      - 2019_test
+      - deploy:
+          requires:
+            - 2019_test
+          filters:
+            branches:
+              only:
+                - master
+version: 2
+jobs:
+  2019_test:
+    docker:
+      - image: circleci/node:lts-browsers
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "2019/package.json" }}
+      - run: cd 2019 && npm ci
+      - run: cd 2019 && npm test
+      - run: cd 2019 && npm run build
+      - save_cache:
+          paths:
+            - 2019/node_modules
+          key: v1-dependencies-{{ checksum "2019/package.json" }}
+  deploy:
+    docker:
+      - image: circleci/node:lts-browsers
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "2019/package.json" }}
+      - run: cd 2019 && npm run build && mv public ../dist/2019
+      - run: git config --global user.name "CircleCI deploy"
+      - run: git config --global user.email "circleci@example.com"
+      - run: npx gh-pages --dist dist --message "[skip ci] Updates"

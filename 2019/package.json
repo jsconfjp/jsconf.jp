@@ -1,0 +1,61 @@
+{
+  "name": "jsconfjp-2019",
+  "private": true,
+  "license": "UNLICENSED",
+  "repository": "jsconfjp/jsconf.jp",
+  "author": "Leko <leko.noor@gmail.com>",
+  "scripts": {
+    "build": "gatsby build",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "pretest": "tsc",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {
+    "gatsby": "^2.13.18",
+    "gatsby-image": "^2.2.4",
+    "gatsby-plugin-brotli": "^1.2.3",
+    "gatsby-plugin-google-analytics": "^2.1.4",
+    "gatsby-plugin-manifest": "^2.2.1",
+    "gatsby-plugin-offline": "^2.2.1",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.2",
+    "gatsby-plugin-react-helmet": "^3.1.0",
+    "gatsby-plugin-sharp": "^2.2.6",
+    "gatsby-plugin-sitemap": "^2.2.4",
+    "gatsby-plugin-styled-components": "^3.1.2",
+    "gatsby-plugin-typescript": "^2.1.1",
+    "gatsby-plugin-zopfli": "^1.2.3",
+    "gatsby-remark-autolink-headers": "^2.1.3",
+    "gatsby-remark-external-links": "0.0.4",
+    "gatsby-source-filesystem": "^2.1.5",
+    "gatsby-transformer-remark": "^2.6.10",
+    "gatsby-transformer-sharp": "^2.2.1",
+    "gatsby-transformer-yaml": "^2.2.1",
+    "i18next": "^17.0.6",
+    "i18next-browser-languagedetector": "^3.0.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-headroom": "^2.2.8",
+    "react-helmet": "^5.2.1",
+    "react-i18next": "^10.11.4",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.2",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-headroom": "^2.2.1",
+    "@types/react-helmet": "^5.0.8",
+    "@types/styled-components": "4.1.8",
+    "husky": "^3.0.0",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "typescript": "^3.5.3"
+  }
+}
