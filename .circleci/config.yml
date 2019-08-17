@@ -1,6 +1,6 @@
 workflows:
   version: 2
-  test_deploy_2019:
+  test_deploy:
     jobs:
       - 2019_test
       - deploy:
@@ -20,14 +20,14 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "2019/package.json" }}
+            - v1-dependencies-{{ checksum "2019/package-lock.json" }}
       - run: cd 2019 && npm ci
       - run: cd 2019 && npm test
       - run: cd 2019 && npm run build
       - save_cache:
           paths:
             - 2019/node_modules
-          key: v1-dependencies-{{ checksum "2019/package.json" }}
+          key: v1-dependencies-{{ checksum "2019/package-lock.json" }}
   deploy:
     docker:
       - image: circleci/node:lts-browsers
@@ -36,7 +36,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "2019/package.json" }}
+            - v1-dependencies-{{ checksum "2019/package-lock.json" }}
+      - run: mkdir dist
       - run: cd 2019 && npm run build && mv public ../dist/2019
       - run: git config --global user.name "CircleCI deploy"
       - run: git config --global user.email "circleci@example.com"
