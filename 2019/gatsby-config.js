@@ -1,10 +1,11 @@
 module.exports = {
+  pathPrefix: `/2019`,
   siteMetadata: {
     title: `JSConf JP`,
     description: `WIP`,
     author: `JSConf JP`,
     twitter: `jsconfjp`,
-    siteUrl: `https://jsconf.jp`,
+    siteUrl: `https://jsconf.jp/2019`,
   },
   plugins: [
     `gatsby-plugin-typescript`,

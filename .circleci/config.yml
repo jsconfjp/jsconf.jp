@@ -22,12 +22,14 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "2019/package-lock.json" }}
       - run: cd 2019 && npm ci
-      - run: cd 2019 && npm test
-      - run: cd 2019 && npm run build
       - save_cache:
           paths:
             - 2019/node_modules
           key: v1-dependencies-{{ checksum "2019/package-lock.json" }}
+      - run: cd 2019 && npm test
+      - run: cd 2019 && npm run build
+      - store_artifacts:
+          path: 2019/public
   deploy:
     docker:
       - image: circleci/node:lts-browsers
@@ -40,7 +42,7 @@ jobs:
       - run: mkdir dist
       - run: cp docs/* dist/
       - run: cp -f redirect.html dist/index.html
-      - run: cd 2019 && npm run build && mv public ../dist/2019
+      - run: cd 2019 && npm run build -- --prefix-paths && mv public ../dist/2019
       - run: git config --global user.name "CircleCI deploy"
       - run: git config --global user.email "circleci@example.com"
       - run: npx gh-pages --dist dist --message "[skip ci] Updates"

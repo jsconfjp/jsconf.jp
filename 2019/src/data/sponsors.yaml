@@ -1,48 +1,48 @@
 - name: mediba
   url: https://www.mediba.jp/
-  logoUrl: /sponsors/mediba.png
+  logoUrl: /2019/sponsors/mediba.png
   grade: gold
 - name: コネヒト株式会社
   url: https://connehito.com/
-  logoUrl: /sponsors/connehito.png
+  logoUrl: /2019/sponsors/connehito.png
   grade: silver
 - name: ヤフー株式会社
   url: https://www.yahoo.co.jp
-  logoUrl: /sponsors/yahoo.png
+  logoUrl: /2019/sponsors/yahoo.png
   grade: platinum
 - name: Hamee株式会社
   url: https://recruit.hamee.co.jp/about?c=jsconf
-  logoUrl: /sponsors/hamee.png
+  logoUrl: /2019/sponsors/hamee.png
   grade: silver
 - name: 株式会社メドレー
   url: https://www.medley.jp/
-  logoUrl: /sponsors/medley.png
+  logoUrl: /2019/sponsors/medley.png
   grade: silver
 - name: Elastic
   url: https://elastic.co
-  logoUrl: /sponsors/elastic.png
+  logoUrl: /2019/sponsors/elastic.png
   grade: bronze
 - name: Nota Inc.
   url: https://notainc.com/
-  logoUrl: /sponsors/nota.png
+  logoUrl: /2019/sponsors/nota.png
   grade: silver
 - name: 株式会社ラクス
   url: https://www.rakus.co.jp/
-  logoUrl: /sponsors/rakus.png
+  logoUrl: /2019/sponsors/rakus.png
   grade: bronze
 - name: 株式会社ディー・エヌ・エー
   url: https://dena.com
-  logoUrl: /sponsors/dena.png
+  logoUrl: /2019/sponsors/dena.png
   grade: bronze
 - name: Twitter
   url: https://www.twitter.com
-  logoUrl: /sponsors/twitter.png
+  logoUrl: /2019/sponsors/twitter.png
   grade: gold
 - name: RECRUIT
   url: https://www.recruit.co.jp/employment/
-  logoUrl: /sponsors/recruit.jpg
+  logoUrl: /2019/sponsors/recruit.jpg
   grade: platinum
 - name: CureApp
   url: https://cureapp.co.jp/engineers.html
-  logoUrl: /sponsors/cureapp.png
+  logoUrl: /2019/sponsors/cureapp.png
   grade: gold
