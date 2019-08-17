@@ -11,38 +11,41 @@ const Lang = styled.a`
   text-decoration: none;
   font-family: ${({ theme }) => theme.fonts.header};
   font-size: 20px;
-  color: ${({ theme }) => theme.colors.disabled};
+  border-bottom: 4px solid ${({ theme }) => theme.colors.primary};
 
   &[href="#"] {
     color: ${({ theme }) => theme.colors.text};
+    border-bottom-color: transparent;
   }
-
-  ::after {
-    margin: 0px 8px;
-    content: "/";
-  }
-  :last-of-type::after {
-    content: "";
-  }
+`
+const Separator = styled.span`
+  font-family: ${({ theme }) => theme.fonts.header};
+  font-size: 20px;
+  color: ${({ theme }) => theme.colors.disabled};
+  margin: 0 0.5em;
 `
 
 export function LanguageSwitch(props: Props) {
   const { onChange, currentLanguage, languages } = props
+  const langKeys = Object.keys(languages)
 
   return (
     <>
-      {Object.keys(languages).map(langKey => {
+      {langKeys.map((langKey, i) => {
         return (
-          <Lang
-            key={langKey}
-            href={currentLanguage === langKey ? undefined : "#"}
-            onClick={e => {
-              e.preventDefault()
-              onChange(langKey)
-            }}
-          >
-            {languages[langKey]}
-          </Lang>
+          <>
+            <Lang
+              key={langKey}
+              href={currentLanguage === langKey ? undefined : "#"}
+              onClick={e => {
+                e.preventDefault()
+                onChange(langKey)
+              }}
+            >
+              {languages[langKey]}
+            </Lang>
+            {i + 1 === langKeys.length ? null : <Separator>/</Separator>}
+          </>
         )
       })}
     </>
