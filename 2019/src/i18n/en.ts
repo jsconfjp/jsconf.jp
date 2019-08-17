@@ -18,7 +18,7 @@ export const en = {
     day1: "Day 1",
     day2: "Day 2",
     tickets: "Tickets",
-    ticketsDescription: "Tickets will be available from October 1th.",
+    buyTickets: "Buy Tickets",
     comingSoon: "Coming soon",
     venue: "Venue",
     moreDetails: "More details",

@@ -99,8 +99,8 @@ export function HeaderMobile(props: Props) {
 
           <TicketBox>
             <LinkButton
-              // color="primary"
-              to="#"
+              color="primary"
+              to="https://pretix.eu/jsconfjp/2019/"
               size="inline"
             >
               {t("tickets")}

@@ -97,8 +97,8 @@ export function Header(props: Props) {
           <MenuItem to="sponsors">{t("sponsors")}</MenuItem>
           <TicketBox>
             <LinkButton
-              // color="primary"
-              to="#"
+              color="primary"
+              to="https://pretix.eu/jsconfjp/2019/"
               size="inline"
             >
               {t("tickets")}

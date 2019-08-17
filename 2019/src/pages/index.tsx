@@ -127,15 +127,13 @@ export default function IndexPage() {
           <Card>
             <Centerize>
               <SubTitle>{t("tickets")}</SubTitle>
-              <p>{t("ticketsDescription")}</p>
               <Centerize>
                 <LinkButton
-                  // color="primary"
+                  color="primary"
                   size="large"
-                  to="#"
-                  disabled
+                  to="https://pretix.eu/jsconfjp/2019/"
                 >
-                  {t("comingSoon")}
+                  {t("buyTickets")}
                 </LinkButton>
               </Centerize>
             </Centerize>
