@@ -67,7 +67,6 @@ export default function IndexPage() {
           node {
             featured
             name
-            github
             twitter
             photoURL
             talkTitle
