@@ -37,3 +37,38 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+
+## Development
+
+### Update sponsors
+
+If you want to add sponsor, you need to add elements to the array of `src/data/sponsors.yaml` like as:
+
+https://github.com/jsconfjp/jsconf.jp/blob/5eb2d5d22f7168e3f988f78e873e589b6ab7a5c3/2019/src/data/sponsors.yaml#L41-L44
+
+### Update speakers
+
+If you want to add speaker, you need to add elements to the array of `src/data/speakers.yaml` like as:
+
+https://github.com/jsconfjp/jsconf.jp/blob/5eb2d5d22f7168e3f988f78e873e589b6ab7a5c3/2019/src/data/speakers.yaml#L8-L14
+
+### Update timetable
+
+TBA.
+The source code is located in `src/pages/schedule.tsx`.
+
+### Update styled-components theme
+
+If you want to update styled-components theme, you need to update two files as below:
+
+- types/styled.d.ts
+- src/theme.ts
+
+### Internationalization(i18n)
+
+We using [i18next-react](https://github.com/i18next/react-i18next) as i18n library.
+
+- Configuration: `src/i18n/index.ts` [API reference](https://www.i18next.com/overview/configuration-options)
+- Engligh: `src/i18n/en.ts`
+- Japanese: `src/i18n/ja.ts`
+- UI to change display language: `src/components/LanguageSwitch.tsx`
