@@ -1,0 +1,11 @@
+[build]
+    publish = "dist/"
+    command = '''
+    mkdir dist
+    echo 'User-agent: *' >> dist/robots.txt
+    echo 'Disallow: /' >> dist/robots.txt
+    cp docs/* dist/
+    cp -f redirect.html dist/index.html
+
+    cd 2019 && npm i && npm run build -- --prefix-paths && mv public ../dist/2019
+    '''
