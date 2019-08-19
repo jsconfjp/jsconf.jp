@@ -17,7 +17,6 @@ export default function SpeakersPage() {
           node {
             featured
             name
-            github
             twitter
             photoURL
             talkTitle
