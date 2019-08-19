@@ -1,0 +1,8 @@
+[build]
+    publish = "dist/"
+    command = '''
+    mkdir dist
+    cp docs/* dist/
+    cp -f redirect.html dist/index.html
+    cd 2019 && npm run build -- --prefix-paths && mv public ../dist/2019
+    '''
