@@ -42,16 +42,16 @@ const VenueBox = styled.div`
   max-width: ${({ theme }) => theme.innerWidth};
   margin: 0 auto;
 `
-const SchedulesBox = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: calc(100% - 3em);
-  max-width: 910px;
+// const SchedulesBox = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   width: calc(100% - 3em);
+//   max-width: 910px;
 
-  ${({ theme }) => theme.breakpoints.mobile} {
-    flex-direction: column;
-  }
-`
+//   ${({ theme }) => theme.breakpoints.mobile} {
+//     flex-direction: column;
+//   }
+// `
 const SponsorBox = styled.div`
   margin-top: 80px;
   padding: 100px 0;
@@ -112,7 +112,7 @@ export default function IndexPage() {
             </Centerize>
           </Card>
 
-          <Centerize>
+          {/* <Centerize>
             <SubTitle>{t("schedule")}</SubTitle>
             <SchedulesBox>
               <LinkButton color="secondary" size="large" to="/schedule#day1">
@@ -122,7 +122,7 @@ export default function IndexPage() {
                 {t("day2")}
               </LinkButton>
             </SchedulesBox>
-          </Centerize>
+          </Centerize> */}
 
           <Card>
             <Centerize>
