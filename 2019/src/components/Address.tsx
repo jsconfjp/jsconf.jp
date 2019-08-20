@@ -93,8 +93,10 @@ export function Address(props: Props) {
             <HyphenListItem>
               <Text>{t("venue.accessByHanedaAirport")}</Text>
             </HyphenListItem>
+            <HyphenListItem>
+              <Text>{t("venue.accessByJrAkihabaraStation")}</Text>
+            </HyphenListItem>
           </HyphenList>
-          <Text>{t("venue.accessByAkihabaraSt")}</Text>
         </>
       )}
     </>
