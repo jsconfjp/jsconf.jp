@@ -2,6 +2,7 @@ export const en = {
   translation: {
     "about.description": "TODO: about.description",
     "schedule.description": "TODO: schedule.description",
+    speakers: "Speakers",
     "speakers.description": "",
     "sponsors.description": "",
     timetable: "Timetable",
@@ -48,8 +49,6 @@ export const en = {
       "Approx. 70 minutes from Narita Airport to JR Akihabara Station",
     "venue.accessByHanedaAirport":
       "Approx. 40 minutes from Haneda Airport to JR Akihabara Station",
-    "venue.accessByAkihabaraSt":
-      "* 8 minutes by foot from JR Akihabara Station Electric Town Gate",
     "venue.accessibilityTitle": "ACCESSIBILITY",
     "venue.accessibility": `
 ・A parking space is provided for the disabled. Please call 03-6803-2441 or email to info(at)3331.jp to make a reservation.
