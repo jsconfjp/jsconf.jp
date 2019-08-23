@@ -27,7 +27,7 @@ jobs:
             - 2019/node_modules
           key: v1-dependencies-{{ checksum "2019/package-lock.json" }}
       - run: cd 2019 && npm test
-      - run: cd 2019 && npm run build
+      - run: cd 2019 && npm run build -- --prefix-paths
       - run:
           name: Install NotoSansCJK JP
           command: |
