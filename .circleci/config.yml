@@ -28,6 +28,18 @@ jobs:
           key: v1-dependencies-{{ checksum "2019/package-lock.json" }}
       - run: cd 2019 && npm test
       - run: cd 2019 && npm run build
+      - run:
+          name: Install NotoSansCJK JP
+          command: |
+            mkdir /tmp/fonts
+            cd /tmp/fonts
+            wget https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip
+            unzip NotoSansCJKjp-hinted.zip
+            mkdir -p ~/.fonts
+            cp *otf ~/.fonts
+            fc-cache -f -v
+            fc-match --all
+            rm -rf /tmp/fonts
       - run: cd 2019 && ./scripts/take-screenshots
       - store_artifacts:
           path: 2019/__screenshots__
