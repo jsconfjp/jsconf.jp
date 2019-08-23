@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -eu
+
+URL=http://localhost:4000/2019/
+
+npx light-server -s public --servePrefix /2019 &
+npx sumoguri $URL --locales en-US,ja-JP --viewports 1080x860,375x812
+kill $! # $! means PID of last background process
