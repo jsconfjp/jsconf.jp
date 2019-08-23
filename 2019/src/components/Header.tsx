@@ -91,10 +91,10 @@ export function Header(props: Props) {
         </Brand>
 
         <MenuBox>
-          <MenuItem to="speakers">{t("speakers")}</MenuItem>
-          <MenuItem to="venue">{t("venue")}</MenuItem>
-          {/* <MenuItem to="schedule">{t("schedule")}</MenuItem> */}
-          <MenuItem to="sponsors">{t("sponsors")}</MenuItem>
+          <MenuItem to="/speakers/">{t("speakers")}</MenuItem>
+          <MenuItem to="/venue/">{t("venue")}</MenuItem>
+          {/* <MenuItem to="/schedule/">{t("schedule")}</MenuItem> */}
+          <MenuItem to="/sponsors/">{t("sponsors")}</MenuItem>
           <TicketBox>
             <LinkButton
               color="primary"

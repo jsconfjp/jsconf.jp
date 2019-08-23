@@ -105,7 +105,7 @@ export default function IndexPage() {
             <SubTitle>{t("guestSpeakers")}</SubTitle>
             <SpeakerList speakers={guestSpeakers} />
             <Centerize>
-              <LinkButton color="primary" to="/speakers">
+              <LinkButton color="primary" to="/speakers/">
                 {t("goToGuests")}
               </LinkButton>
             </Centerize>
@@ -114,10 +114,10 @@ export default function IndexPage() {
           {/* <Centerize>
             <SubTitle>{t("schedule")}</SubTitle>
             <SchedulesBox>
-              <LinkButton color="secondary" size="large" to="/schedule#day1">
+              <LinkButton color="secondary" size="large" to="/schedule/#day1">
                 {t("day1")}
               </LinkButton>
-              <LinkButton color="secondary" size="large" to="/schedule#day2">
+              <LinkButton color="secondary" size="large" to="/schedule/#day2">
                 {t("day2")}
               </LinkButton>
             </SchedulesBox>
@@ -157,7 +157,7 @@ export default function IndexPage() {
               <Map width={940} height={500} />
               <Address summary />
               <Centerize>
-                <LinkButton color="primary" to="/venue">
+                <LinkButton color="primary" to="/venue/">
                   {t("moreDetails")}
                 </LinkButton>
               </Centerize>
