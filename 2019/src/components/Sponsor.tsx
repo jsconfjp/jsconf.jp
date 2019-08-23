@@ -40,6 +40,12 @@ const Img = styled.img`
 
   ${({ theme }) => theme.breakpoints.mobile} {
     padding: 10px;
+
+    &.bronze {
+      width: 100%;
+      max-width: 273px;
+      max-height: 40px;
+    }
   }
 `
 
