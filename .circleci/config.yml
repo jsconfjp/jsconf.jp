@@ -28,6 +28,9 @@ jobs:
           key: v1-dependencies-{{ checksum "2019/package-lock.json" }}
       - run: cd 2019 && npm test
       - run: cd 2019 && npm run build
+      - run: cd 2019 && ./scripts/take-screenshots
+      - store_artifacts:
+          path: 2019/__screenshots__
       - store_artifacts:
           path: 2019/public
   deploy:
