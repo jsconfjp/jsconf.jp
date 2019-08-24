@@ -1,17 +1,20 @@
 export const en = {
   translation: {
-    "about.description": "TODO: about.description",
-    "schedule.description": "TODO: schedule.description",
-    speakers: "Speakers",
+    // If you want to override OGP description,
+    // you can add custom description by editing this lines.
+    "about.description": "",
+    "schedule.description": "",
     "speakers.description": "",
     "sponsors.description": "",
-    timetable: "Timetable",
     "timetable.description": "",
+
     backToTop: "TOP",
     siteName: "JSConf JP",
+    festivalPeriod: "November 30th, December 1st 2019",
     description:
       "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the first event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
-    festivalPeriod: "November 30th, December 1st 2019",
+    speakers: "Speakers",
+    timetable: "Timetable",
     aboutUs: "About us",
     guestSpeakers: "Guest speakers",
     goToGuests: "CHECK ALL SPEAKERS",
