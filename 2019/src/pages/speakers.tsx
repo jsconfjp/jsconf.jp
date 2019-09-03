@@ -15,6 +15,7 @@ export default function SpeakersPage() {
       allSpeakersYaml {
         edges {
           node {
+            uuid
             featured
             name
             twitter

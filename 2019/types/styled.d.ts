@@ -16,6 +16,7 @@ declare module "styled-components" {
       disabled: string
       disabledText: string
       border: string
+      talkBg: string
       roomA: string
       roomABorder: string
       roomB: string

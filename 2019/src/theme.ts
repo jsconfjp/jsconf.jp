@@ -14,6 +14,7 @@ export const theme: DefaultTheme = {
     disabled: "#DBDBDB",
     disabledText: "#7E7E7E",
     border: "#DBDBDB",
+    talkBg: "#FFE9DE",
     roomA: "#FFE9DE",
     roomABorder: "#FF5700",
     roomB: "#D3EEEC",

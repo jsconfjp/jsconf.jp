@@ -8,6 +8,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const mdTemplate = path.resolve(`./src/templates/markdown.tsx`)
+    const speakerTemplate = path.resolve(`./src/templates/speaker.tsx`)
     resolve(
       graphql(`
         query {
@@ -24,6 +25,20 @@ exports.createPages = ({ graphql, actions }) => {
               }
             }
           }
+          allSpeakersYaml {
+            edges {
+              node {
+                uuid
+                name
+                biography
+                photoURL
+                talkTitle
+                talkDescription
+                spokenLanguage
+                slideLanguage
+              }
+            }
+          }
         }
       `).then(result => {
         if (result.errors) {
@@ -31,13 +46,23 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         const posts = result.data.allMarkdownRemark.edges
-        posts.forEach(post => {
+        const speakers = result.data.allSpeakersYaml.edges
+        posts.forEach(({ node: post }) => {
           createPage({
-            path: `${post.node.fields.slug}`,
+            path: `${post.fields.slug}`,
             component: mdTemplate,
             context: {
-              post: post.node,
-              slug: post.node.fields.slug,
+              post: post,
+              slug: post.fields.slug,
+            },
+          })
+        })
+        speakers.forEach(({ node: speaker }) => {
+          createPage({
+            path: `speaker/${speaker.uuid}`,
+            component: speakerTemplate,
+            context: {
+              speaker: speaker,
             },
           })
         })

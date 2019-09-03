@@ -28,9 +28,11 @@ export function Breadcrumb(props: Props) {
       <Link to="/">
         <Text>{t("top")}</Text>
       </Link>
-      <Text>></Text>
       {path.map(label => (
-        <Text key={label}>{label}</Text>
+        <>
+          <Text>></Text>
+          <Text key={label}>{label}</Text>
+        </>
       ))}
     </Box>
   )

@@ -1,14 +1,24 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 export type Props = {
+  uuid: string
   name: string
+  biography: string
   photoURL: string
   talkTitle: string
+  talkDescription: string
+  spokenLanguage: string
+  slideLanguage: string
   github: string
   twitter: string
 }
 
+const LinkContainer = styled(Link)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.text};
+`
 const Title = styled.h2`
   margin: 0;
   padding: 10px;
@@ -25,13 +35,13 @@ const Name = styled.p`
 `
 
 export function Speaker(props: Props) {
-  const { name, photoURL, talkTitle } = props
+  const { uuid, name, photoURL, talkTitle } = props
 
   return (
-    <div>
+    <LinkContainer to={`speaker/${uuid}`}>
       <img src={photoURL} width="100%" />
       <Title>{talkTitle}</Title>
       <Name>{name}</Name>
-    </div>
+    </LinkContainer>
   )
 }

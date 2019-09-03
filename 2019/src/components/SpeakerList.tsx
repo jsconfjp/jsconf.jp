@@ -27,6 +27,7 @@ export function SpeakerList(props: Props) {
       {speakers.map(speaker => (
         <Speaker
           key={speaker.name}
+          uuid={speaker.uuid}
           name={speaker.name}
           photoURL={speaker.photoURL}
           talkTitle={speaker.talkTitle}

@@ -65,6 +65,7 @@ export default function IndexPage() {
       allSpeakersYaml(filter: { featured: { eq: true } }) {
         edges {
           node {
+            uuid
             featured
             name
             twitter
