@@ -7,12 +7,13 @@ import { SEO } from "../components/Seo"
 import { Title } from "../components/Title"
 import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
-import { Props as SpeakerType } from "../components/Speaker"
+import { SpeakerType, TalkType } from "../components/Speaker"
 import { SubTitle } from "../components/SubTitle"
 
 type Props = {
   pageContext: {
-    speaker: SpeakerType
+    speakers: SpeakerType[]
+    talk: TalkType
   }
 }
 
@@ -66,43 +67,41 @@ const TalkTitle = styled(SubTitle)`
 export default function Speaker(props: Props) {
   const { i18n } = useTranslation()
   const {
-    pageContext: { speaker },
+    pageContext: { speakers, talk },
   } = props
   const {
-    name,
-    talkTitle,
-    talkTitleJa,
-    talkDescription,
-    talkDescriptionJa,
+    title,
+    titleJa,
+    description,
+    descriptionJa,
     spokenLanguage,
     slideLanguage,
-    biography,
-    biographyJa,
-    photoURL,
-  } = speaker
+    date,
+    startsAt,
+    endsAt,
+    room,
+  } = talk
   const isEnglish = i18n.language === "en"
-
-  const date = "TBA"
-  const startsAt = "XX:XX"
-  const endsAt = "XX:XX"
-  const room = "TBA"
+  const speakerNames = speakers.map(speaker => speaker.name).join(" and ")
 
   return (
     <Layout>
-      <SEO title={`${talkTitle} - ${name}`} />
+      <SEO title={`${title} - ${speakerNames}`} />
       <ResponsiveBox>
-        <Breadcrumb path={["speakers", name]} />
-        <Title>{name}</Title>
-        <SpeakerBox>
-          <Avatar src={photoURL} />
-          <Biography>
-            {isEnglish ? biography : biographyJa || biography}
-          </Biography>
-        </SpeakerBox>
+        <Breadcrumb path={["talk", title]} />
+        <Title>{speakerNames}</Title>
+        {speakers.map(speaker => (
+          <SpeakerBox key={speaker.uuid}>
+            <Avatar src={speaker.photoURL} />
+            <Biography>
+              {isEnglish
+                ? speaker.biography
+                : speaker.biographyJa || speaker.biography}
+            </Biography>
+          </SpeakerBox>
+        ))}
         <TalkBox>
-          <TalkTitle>
-            {isEnglish ? talkTitle : talkTitleJa || talkTitle}
-          </TalkTitle>
+          <TalkTitle>{isEnglish ? title : titleJa || title}</TalkTitle>
           <p>
             {date}, {startsAt} - {endsAt}
             <br />
@@ -114,7 +113,7 @@ export default function Speaker(props: Props) {
             <br />
           </p>
           <Description>
-            {isEnglish ? talkDescription : talkDescriptionJa || talkDescription}
+            {isEnglish ? description : descriptionJa || description}
           </Description>
         </TalkBox>
       </ResponsiveBox>

@@ -33,12 +33,24 @@ exports.createPages = ({ graphql, actions }) => {
                 biography
                 biographyJa
                 photoURL
-                talkTitle
-                talkTitleJa
-                talkDescription
-                talkDescriptionJa
+              }
+            }
+          }
+          allTalksYaml {
+            edges {
+              node {
+                uuid
+                title
+                titleJa
+                description
+                descriptionJa
                 spokenLanguage
                 slideLanguage
+                speakerIDs
+                date
+                startsAt
+                endsAt
+                room
               }
             }
           }
@@ -49,7 +61,6 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         const posts = result.data.allMarkdownRemark.edges
-        const speakers = result.data.allSpeakersYaml.edges
         posts.forEach(({ node: post }) => {
           createPage({
             path: `${post.fields.slug}`,
@@ -60,12 +71,32 @@ exports.createPages = ({ graphql, actions }) => {
             },
           })
         })
-        speakers.forEach(({ node: speaker }) => {
+
+        const speakers = result.data.allSpeakersYaml.edges.map(
+          ({ node }) => node,
+        )
+        const speakerMap = speakers.reduce(
+          (acc, speaker) => ({ ...acc, [speaker.uuid]: speaker }),
+          {},
+        )
+        const talks = result.data.allTalksYaml.edges.map(({ node }) => node)
+        talks.forEach(talk => {
+          const talkSpeakers = talk.speakerIDs.map(speakerID => {
+            const speaker = speakerMap[speakerID]
+            if (!speaker) {
+              throw new Error(
+                `Speaker not found: speakerID=${speakerID}, talk=${talk.uuid}`,
+              )
+            }
+            return speaker
+          })
+
           createPage({
-            path: `speaker/${speaker.uuid}`,
+            path: `talk/${talk.uuid}`,
             component: speakerTemplate,
             context: {
-              speaker: speaker,
+              speakers: talkSpeakers,
+              talk,
             },
           })
         })

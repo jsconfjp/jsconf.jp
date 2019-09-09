@@ -1,9 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import { Speaker, Props as SpeakerType } from "./Speaker"
+import { Speaker, SpeakerType, TalkType } from "./Speaker"
 
 export type Props = {
   speakers: SpeakerType[]
+  talks: TalkType[]
 }
 
 const Container = styled.div`
@@ -20,26 +21,23 @@ const Container = styled.div`
 `
 
 export function SpeakerList(props: Props) {
-  const { speakers } = props
+  const { speakers, talks } = props
+  const talkMap: { [uuid: string]: TalkType } = talks.reduce(
+    (acc, talk) =>
+      talk.speakerIDs.reduce(
+        (acc, speakerID) => ({ ...acc, [speakerID]: talk }),
+        acc,
+      ),
+    {},
+  )
 
   return (
     <Container>
       {speakers.map(speaker => (
         <Speaker
           key={speaker.name}
-          uuid={speaker.uuid}
-          name={speaker.name}
-          biography={speaker.biography}
-          biographyJa={speaker.biographyJa}
-          photoURL={speaker.photoURL}
-          talkTitle={speaker.talkTitle}
-          talkTitleJa={speaker.talkTitleJa}
-          talkDescription={speaker.talkDescription}
-          talkDescriptionJa={speaker.talkDescriptionJa}
-          spokenLanguage={speaker.spokenLanguage}
-          slideLanguage={speaker.slideLanguage}
-          github={speaker.github}
-          twitter={speaker.twitter}
+          speaker={speaker}
+          talk={talkMap[speaker.uuid]}
         />
       ))}
     </Container>

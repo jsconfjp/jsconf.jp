@@ -3,20 +3,34 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
 
-export type Props = {
+export type TalkType = {
+  uuid: string
+  title: string
+  titleJa: string
+  description: string
+  descriptionJa: string
+  spokenLanguage: string
+  slideLanguage: string
+  speakerIDs: string[]
+  date: string
+  startsAt: string
+  endsAt: string
+  room: string
+}
+
+export type SpeakerType = {
   uuid: string
   name: string
   biography: string
   biographyJa: string
   photoURL: string
-  talkTitle: string
-  talkTitleJa: string
-  talkDescription: string
-  talkDescriptionJa: string
-  spokenLanguage: string
-  slideLanguage: string
   github: string
   twitter: string
+}
+
+export type Props = {
+  speaker: SpeakerType
+  talk: TalkType
 }
 
 const LinkContainer = styled(Link)`
@@ -40,13 +54,15 @@ const Name = styled.p`
 
 export function Speaker(props: Props) {
   const { i18n } = useTranslation()
-  const { uuid, name, photoURL, talkTitle, talkTitleJa } = props
+  const { talk, speaker } = props
+  const { uuid, title, titleJa } = talk
+  const { name, photoURL } = speaker
   const isEnglish = i18n.language === "en"
 
   return (
-    <LinkContainer to={`speaker/${uuid}`}>
+    <LinkContainer to={`talk/${uuid}`}>
       <img src={photoURL} width="100%" />
-      <Title>{isEnglish ? talkTitle : talkTitleJa || talkTitle}</Title>
+      <Title>{isEnglish ? title : titleJa || title}</Title>
       <Name>{name}</Name>
     </LinkContainer>
   )

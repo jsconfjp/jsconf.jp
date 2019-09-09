@@ -42,16 +42,16 @@ const VenueBox = styled.div`
   max-width: ${({ theme }) => theme.innerWidth};
   margin: 0 auto;
 `
-// const SchedulesBox = styled.div`
-//   display: flex;
-//   justify-content: space-between;
-//   width: calc(100% - 3em);
-//   max-width: 910px;
+const SchedulesBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 3em);
+  max-width: 910px;
 
-//   ${({ theme }) => theme.breakpoints.mobile} {
-//     flex-direction: column;
-//   }
-// `
+  ${({ theme }) => theme.breakpoints.mobile} {
+    flex-direction: column;
+  }
+`
 const SponsorBox = styled.div`
   margin-top: 80px;
   padding: 100px 0;
@@ -60,21 +60,12 @@ const SponsorBox = styled.div`
 
 export default function IndexPage() {
   const { t } = useTranslation()
-  const { allSpeakersYaml, allSponsorsYaml } = useStaticQuery(graphql`
+  const {
+    allSpeakersYaml,
+    allSponsorsYaml,
+    allTalksYaml,
+  } = useStaticQuery(graphql`
     query {
-      allSpeakersYaml(filter: { featured: { eq: true } }) {
-        edges {
-          node {
-            uuid
-            featured
-            name
-            twitter
-            photoURL
-            talkTitle
-            talkTitleJa
-          }
-        }
-      }
       allSponsorsYaml {
         edges {
           node {
@@ -85,10 +76,36 @@ export default function IndexPage() {
           }
         }
       }
+      allSpeakersYaml(filter: { featured: { eq: true } }) {
+        edges {
+          node {
+            uuid
+            name
+            biography
+            biographyJa
+            photoURL
+          }
+        }
+      }
+      allTalksYaml {
+        edges {
+          node {
+            uuid
+            title
+            titleJa
+            description
+            descriptionJa
+            spokenLanguage
+            slideLanguage
+            speakerIDs
+          }
+        }
+      }
     }
   `)
   const guestSpeakers = allSpeakersYaml.edges.map(({ node }: any) => node)
   const sponsors = allSponsorsYaml.edges.map(({ node }: any) => node)
+  const talks = allTalksYaml.edges.map(({ node }: any) => node)
 
   return (
     <Layout>
@@ -105,7 +122,7 @@ export default function IndexPage() {
 
           <Card>
             <SubTitle>{t("guestSpeakers")}</SubTitle>
-            <SpeakerList speakers={guestSpeakers} />
+            <SpeakerList speakers={guestSpeakers} talks={talks} />
             <Centerize>
               <LinkButton color="primary" to="/speakers/">
                 {t("goToGuests")}
@@ -113,7 +130,7 @@ export default function IndexPage() {
             </Centerize>
           </Card>
 
-          {/* <Centerize>
+          <Centerize>
             <SubTitle>{t("schedule")}</SubTitle>
             <SchedulesBox>
               <LinkButton color="secondary" size="large" to="/schedule/#day1">
@@ -123,7 +140,7 @@ export default function IndexPage() {
                 {t("day2")}
               </LinkButton>
             </SchedulesBox>
-          </Centerize> */}
+          </Centerize>
 
           <Card>
             <Centerize>

@@ -10,25 +10,38 @@ import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
 
 export default function SpeakersPage() {
-  const data = useStaticQuery(graphql`
+  const { allSpeakersYaml, allTalksYaml } = useStaticQuery(graphql`
     query Speakers {
       allSpeakersYaml {
         edges {
           node {
             uuid
-            featured
             name
-            twitter
+            biography
+            biographyJa
             photoURL
-            talkTitle
-            talkTitleJa
+          }
+        }
+      }
+      allTalksYaml {
+        edges {
+          node {
+            uuid
+            title
+            titleJa
+            description
+            descriptionJa
+            spokenLanguage
+            slideLanguage
+            speakerIDs
           }
         }
       }
     }
   `)
   const { t } = useTranslation()
-  const speakers = data.allSpeakersYaml.edges.map(({ node }: any) => node)
+  const speakers = allSpeakersYaml.edges.map(({ node }: any) => node)
+  const talks = allTalksYaml.edges.map(({ node }: any) => node)
 
   return (
     <Layout>
@@ -36,7 +49,7 @@ export default function SpeakersPage() {
       <ResponsiveBox>
         <Breadcrumb path={[t("speakers")]} />
         <Title>{t("speakers")}</Title>
-        <SpeakerList speakers={speakers} />
+        <SpeakerList speakers={speakers} talks={talks} />
       </ResponsiveBox>
     </Layout>
   )
