@@ -36,6 +36,8 @@ export const en = {
     "venue.name": "3331 Arts Chiyoda",
     "venue.address": "〒101-0021 6-11-14 Sotokanda Chiyoda-ku Tokyo",
     "venue.url": "https://www.3331.jp/rentalspace/",
+    "venue.additionalMap":
+      "View map of the vicinity around the venue with hotels and things",
     "venue.accessBytrain": "ACCESS BY TRAIN",
     "venue.accessByPlane": "ACCESS BY PLANE",
     "venue.accessByTokyoMetroGinzaLine":
