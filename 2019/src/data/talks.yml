@@ -1,78 +1,641 @@
-- uuid: nadieh-bremer-01
+- uuid: making-less-of-the-web-with-feature-policy
+  date: 2019/11/30
+  startsAt: 17:15
+  endsAt: 17:45
+  room: A
+  title: Making less of the web with feature policy
+  titleJa: ""
+  spokenLanguage: en
+  slideLanguage: ""
+  description: |
+    The web platform has seen a decade of furious expansion, with websites now able to access USB, vibration, bluetooth, and geolocation, as well as store huge amounts of data on end user devices, trigger background sync and notifications, and even get paid from users' digital wallets. But with this expansion has come an increased scope for attacks, costly mistakes and performance regressions.  Feature policy is a new feature designed to actually disable or limit features of the platform.  With a feature policy, developers can solve performance issues, improve security, police their development team's best practices, and even stop third party scripts from misbehaving. All with one new HTTP header.
+  descriptionJa: ""
+  speakerIDs:
+    - andrew-betts
+- uuid: the-state-of-java-script
+  date: 2019/11/30
+  startsAt: 13:30
+  endsAt: 14:00
+  room: A
+  title: The State of JavaScript
+  titleJa: ""
+  spokenLanguage: en
+  slideLanguage: ""
+  description: |
+    We run the yearly State of JavaScript survey (http://stateofjs.com). In this talk, we'll introduce the project, take a look back at past surveys and trends, and maybe even preview some of the results from the upcoming 2019 survey.
+  descriptionJa: ""
+  speakerIDs:
+    - sacha-greif
+    - benitte-raphael
+- uuid: visualizing-connections
+  date: 2019/11/30
+  startsAt: 14:15
+  endsAt: 14:45
+  room: A
+  title: Visualizing Connections
+  titleJa: ""
+  spokenLanguage: en
+  slideLanguage: ""
+  description: |
+    Connections are a part of us, of the world. From the connections between people, between cultures, within language, and more. In these days when more data is collected daily than we could ever hope to explore, the variety in connections being gathered is opening up the possibility to visualize these (often complex) networks.
+    During this talk, Nadieh will take you through the design process of several of her (interactive) data visualization works, from personal projects to client work. The common thread they all share, is that they all reveal connections, but all differently. From a family tree of 3000 people connected to the European Royal houses, to those existing between our Intangible Cultural Heritage created for UNESCO, to connections we have drawn in the night skies and more. Revealing that all types connections are unique and revealing the intricacies that lie within them requires a creative, iterative and custom approach.
+  descriptionJa: ""
   speakerIDs:
     - nadieh-bremer
+- uuid: tba
+  date: 2019/11/30
+  startsAt: 15:30
+  endsAt: 16:00
+  room: A
   title: TBA
-  titleJa: TBA
-  description: TBA
-  descriptionJa: TBA
-  spokenLanguage: English
-  slideLanguage: English
-  date: TBA
-  startsAt: "XX:XX"
-  endsAt: "XX:XX"
-  room: TBA
-- uuid: henry-zhu-01
-  speakerIDs:
-    - henry-zhu
-  title: TBA
-  titleJa: TBA
-  description: TBA
-  descriptionJa: TBA
-  spokenLanguage: English
-  slideLanguage: English
-  date: TBA
-  startsAt: "XX:XX"
-  endsAt: "XX:XX"
-  room: TBA
-- uuid: guillermo-rauch-01
+  titleJa: ""
+  spokenLanguage: en
+  slideLanguage: ""
+  description: ""
+  descriptionJa: ""
   speakerIDs:
     - guillermo-rauch
-  title: TBA
-  titleJa: TBA
-  description: TBA
-  descriptionJa: TBA
-  spokenLanguage: English
-  slideLanguage: English
-  date: TBA
-  startsAt: "XX:XX"
-  endsAt: "XX:XX"
-  room: TBA
-- uuid: dominic-tarr-01
-  speakerIDs:
-    - dominic-tarr
-  title: TBA
-  titleJa: TBA
-  description: TBA
-  descriptionJa: TBA
-  spokenLanguage: English
-  slideLanguage: English
-  date: TBA
-  startsAt: "XX:XX"
-  endsAt: "XX:XX"
-  room: TBA
-- uuid: shirley-wu-01
-  speakerIDs:
-    - shirley-wu
-  title: TBA
-  titleJa: TBA
-  description: TBA
-  descriptionJa: TBA
-  spokenLanguage: English
-  slideLanguage: English
-  date: TBA
-  startsAt: "XX:XX"
-  endsAt: "XX:XX"
-  room: TBA
-- uuid: kitson-kelly-01
+- uuid: deno-a-new-way-to-java-script
+  date: 2019/11/30
+  startsAt: 16:45
+  endsAt: 17:15
+  room: A
+  title: Deno - A new way to JavaScript
+  titleJa: ""
+  spokenLanguage: en
+  slideLanguage: ""
+  description: |
+    Deno is a secure TypeScript/JavaScript runtime built with Rust and V8.  In this talk we will discuss the brief yet interesting history of Deno so far, the current state of the project, some of the design decisions and architecture, as well as provide a live demonstration.
+  descriptionJa: ""
   speakerIDs:
     - kitson-kelly
+- uuid: tba
+  date:
+  startsAt:
+  endsAt:
+  room:
   title: TBA
-  titleJa: TBA
-  description: TBA
-  descriptionJa: TBA
-  spokenLanguage: English
-  slideLanguage: English
-  date: TBA
-  startsAt: "XX:XX"
-  endsAt: "XX:XX"
-  room: TBA
+  titleJa: ""
+  spokenLanguage: en
+  slideLanguage: ""
+  description: ""
+  descriptionJa: ""
+  speakerIDs:
+    - shirley-wu
+- uuid: tba
+  date:
+  startsAt:
+  endsAt:
+  room:
+  title: TBA
+  titleJa: ""
+  spokenLanguage: ja
+  slideLanguage: ""
+  description: ""
+  descriptionJa: ""
+  speakerIDs:
+    - jxck
+- uuid: tba
+  date:
+  startsAt:
+  endsAt:
+  room:
+  title: TBA
+  titleJa: ""
+  spokenLanguage: en
+  slideLanguage: ""
+  description: ""
+  descriptionJa: ""
+  speakerIDs:
+    - jan-lehnardt
+- uuid: hypercharged
+  date:
+  startsAt:
+  endsAt:
+  room:
+  title: Hypercharged
+  titleJa: ""
+  spokenLanguage: en
+  slideLanguage: ""
+  description: |
+    Write what, now how: A declarative approach to presentation, side effects, and subscriptions.
+  descriptionJa: ""
+  speakerIDs:
+    - jorge-bucaran
+- uuid: predictive-prefetching-for-improved-performance
+  date: 2019/11/30
+  startsAt: 18:15
+  endsAt: 19:15
+  room: A
+  title: Predictive Prefetching for improved performance
+  titleJa: ""
+  spokenLanguage: en
+  slideLanguage: ""
+  description: |
+    This talk outlines an idea for applying a data-driven approach to optimising loading performance on the web using Guess JS. By building a model of pages a user is likely to visit, given an arbitrary entry-page, a solution could calculate the likelihood a user will visit a given next page or set of pages and prefetch resources for them while the user is still viewing their current page. This has the possibility of improving page-load performance for subsequent page visits as there's a strong chance a page will already be in the user's cache.
+  descriptionJa: ""
+  speakerIDs:
+    - praveen-yedidi
+- uuid: four-years-of-js-procedural-generation
+  date: 2019/11/30
+  startsAt: 16:45
+  endsAt: 17:15
+  room: B
+  title: Four Years of JS Procedural Generation
+  titleJa: ""
+  spokenLanguage: ja
+  slideLanguage: ""
+  description: |
+    This talk will be a demo-heavy melange of techniques born of 4-5 years of work on procedural generation in JS - specifically with 3D voxel worlds, procedural music, and image synthesis. The takeaway for listeners will be inspiration and starting points for using ProcGen in their own projects or everyday work. Demos all run in Node or the browser - 3D demos use a webGL voxel engine (https://github.com/andyhall/noa), music demos play dynamically via WebAudio, etc.
+    Thanks for considering!
+  descriptionJa: ""
+  speakerIDs:
+    - andy-hall
+- uuid: build-and-scale-multiple-voice-application-by-using-type-script
+  date:
+  startsAt:
+  endsAt:
+  room:
+  title: Build and scale multiple Voice application by using TypeScript
+  titleJa: Build and scale multiple Voice application by using TypeScript
+  spokenLanguage: ja
+  slideLanguage: ""
+  description: |
+    We can build own voice application by using Node.js and TypeScript.
+    And many people are starting development or publishing their own application.
+    But there are few contents to manage and maintain the several application source code.
+
+    Today, I will talk about how to maintain several VUI application by a single repository.
+
+    \# Keywords
+    - ask-sdk-model
+    - Serverless Framework
+    - SAM
+    - AWS CDK
+    - Lerna
+  descriptionJa: |
+    Alexaのような音声アプリケーションもNode.jsで開発することができます。
+    個人で簡単に開発をはじめることができますが、まだ複数のアプリケーションを管理する方法についてはまだあまり国内で話題になっていません。
+
+    今回は１つのコードベースを元に５つ以上のスキルを公開・アップデートするという取り組みを行うなかで気づいた点やTypeScriptを利用することで得られる恩恵などについて紹介します。
+
+    \# Keywords
+    - ask-sdk-model
+    - Serverless Framework
+    - SAM
+    - AWS CDK
+    - Lerna
+  speakerIDs:
+    - hidetaka-okamoto
+- uuid: tba
+  date:
+  startsAt:
+  endsAt:
+  room:
+  title: TBA
+  titleJa: 最新のWeb技術でIoT開発をする
+  spokenLanguage: ja
+  slideLanguage: ""
+  description: ""
+  descriptionJa: |
+    JavaScriptはクライアントサイドでHTMLを動的に動かしたり、サーバーサイドとして様々な処理をしたりすることができますが、リアルサイドとして現実世界のモーターやセンサなどの"もの"を制御することもできます。リアルサイドでもJavaScriptを使うことで、ディスプレイの枠にとらわれない表現方法が可能になったり、部屋に人がいるかなどの現実の状態を取得する事が可能になったりと、できることがまた一段と広がります。 本セッションではJavaScriptでのリアルサイドについて、どんな技術選択肢があるかから扱う方法、どういったものが作れるか等についてお話します。
+  speakerIDs:
+    - kohei-kido
+- uuid: building-the-layered-server-application-achieved-by-inversify-js
+  date:
+  startsAt:
+  endsAt:
+  room:
+  title: Building the layered server application achieved by InversifyJS
+  titleJa: InversifyJSを用いたレイヤードアーキテクチャの構築
+  spokenLanguage: ja
+  slideLanguage: ""
+  description: |
+    We have traditionally suffered from tightly coupled applications. The complexity of dependencies hinders testing and leads to confusion. Let's simplify it using the library InversifyJS for DIP (Dependency Inversion Principle).
+
+    I will introduce the construction of a server application that combines InversifyJS, Knex.js, Express, and TypeScript.
+  descriptionJa: |
+    我々はかつてから、大きなアプリケーションを開発する際に、密結合に悩まされてきました。 依存関係の複雑さがテストを妨げ、生産性を低下させます。そこでDIP（依存性逆転の原則）を実現するためのライブラリ"InversifyJS"を導入することで、この問題を解決しましょう。
+
+    InversifyJS, Knex.js, Express、そしてTypeScriptを組み合わせたサーバーアプリケーションの設計を紹介します。"
+  speakerIDs:
+    - okuno-kentaro
+- uuid: building-one-touch-sign-in-experience-using-web-authn
+  date: 2019/11/30
+  startsAt: 14:15
+  endsAt: 14:45
+  room: B
+  title: Building one touch sign-in experience using WebAuthn
+  titleJa: ""
+  spokenLanguage: en
+  slideLanguage: ""
+  description: |
+    WebAuthn is a browser API that enables strong authentication using public key based cryptography. In this session we will walk through basics of WebAuthn and how it works. Then we'll cover how to build a user experience that enables users to re-authenticate to a website using a fingerprint (or a biometric sensor).
+  descriptionJa: ""
+  speakerIDs:
+    - eiji-kitamura
+- uuid: tba
+  date: 2019/11/30
+  startsAt: 18:15
+  endsAt: 19:15
+  room: A
+  title: TBA
+  titleJa: Node.js でつくる Node.js - WASM ミニミニコンパイラー
+  spokenLanguage: ja
+  slideLanguage: ""
+  description: ""
+  descriptionJa: |
+    昨年のセッション「Node.jsでつくるNode.js ミニインタープリター/コンパイラー」の続編です。WASMを学ぶために、Node.jsでミニミニWASMコンパイラーを作ってみました。前回使ったLLVMとはまた異なるWASMの仕組みを、ちょっとだけ垣間見ることができました。
+  speakerIDs:
+    - masashi-ganeko
+- uuid: web-components-era-phase-2
+  date: 2019/11/30
+  startsAt: 18:15
+  endsAt: 19:15
+  room: A
+  title: WebComponents era phase 2
+  titleJa: ""
+  spokenLanguage: ja
+  slideLanguage: ""
+  description: ""
+  descriptionJa: |
+    WebComponentsは長らく「将来の技術」と言われて来ましたが普及には至っていません。しかし、ブラウザのネイティブサポートが昨年末のFirefoxのサポートとEdgeのChromium化によってほぼ100%になることが見込まれ、既存の開発方法論との組み合わせの親和性が上がり、またサーバーサイドレンダリングというサーバーCPU負荷の高い処理の負荷軽減も期待できます。
+
+    https://qiita.com/shibukawa/private/5a36147ec103d35c1b5e
+  speakerIDs:
+    - yoshiki-shibukawa
+- uuid: discovering-animals-with-ai-and-javascript
+  date:
+  startsAt:
+  endsAt:
+  room:
+  title: Discovering Animals with AI and Javascript
+  titleJa: ""
+  spokenLanguage: ja
+  slideLanguage: ""
+  description: |
+    As a volunteer for the Vancouver aquarium, I built a web app for identifying hundreds of different kinds of animals that we have on-site and I’d like to share how others can do the same. I’ll give a quick introduction to machine learning, then go over how it can be used to identify animals. Then, I’ll show  how that can be done on mobile browsers using Tensorflow JS and the user’s phone camera.
+
+    This talk is intended for JavaScript developers with all levels of experience. The only requirement is an interest in AI and, more importantly, in animals. 
+
+    People attending the talk will learn:
+
+    - How machine learning is used to detect, locate and classify objects in an image
+    - How Tensorflow JS can be used to do this in the browser
+    - How to improve your models with the help of users
+
+    The key takeaway is that working with machine learning in the browser is easy, useful and fun!
+  descriptionJa: |
+    バンクーバー水族館のボランティアとして、何百もの生き物の種類を認識するウェブアプリを開発致しました。そこで今回は皆様にその使用方法についてお伝えしたいと思います。まず、マシーンラーニングを簡単に紹介しまして、動物の認識方法を説明させていただきます。そして、TensorflowJSを使い、ユーザーの携帯電話のカメラでその認識をする方法も説明致します。
+
+    このプレゼンテーションは、全レベルのJavascript開発者の方が対象です。ただ一つの対象者の条件は、AIに興味があること。それよりもさらにたいせつなことは生き物にどれほど興味があるかどうかです。
+
+    プレゼンテーションの３つのポイント：
+    - どういう風にしてマシーンラーニングで印象付けし、対象を分類して位置を見つけるか
+    - Tensorflow JS とブラウザを使いその過程を作成する
+    - マシーンラーニングのモデルをユーザーの協力で改善させる
+  speakerIDs:
+    - jonny-kalambay
+- uuid: wrap-up-runtime-friendly-java-script
+  date: 2019/11/30
+  startsAt: 15:30
+  endsAt: 16:00
+  room: B
+  title: "Wrap-up: Runtime-friendly JavaScript"
+  titleJa: ""
+  spokenLanguage: ja
+  slideLanguage: ""
+  description: |
+    Let's wrap up what runtime-friendly performant JavaScript is like, introducing how runtime(such as v8, node.js etc.) handles scripts: Internal Representation, JIT, Eventloop etc. I will also mention tools(node options, chrome devtool) and the overhead of normal language feature(like object instantiation and Map/Set).
+
+    Plot (draft)
+    - Fundamentals
+       - Runtime
+       - IR & JIT
+    - Node
+       - Async & non-blocking I/O
+       - Stream
+       - Eventloop
+           - libuv
+    - V8
+       - Crankshaft, FullCodeGen, TurboFun, Ignition
+    - Internal Representation
+       - Object IR
+           - elements & properties
+           - Hidden Class
+           - JSON.parse
+       - String IR
+           - flatstr
+       - Array IR
+       - Number IR
+    - JIT
+       - Hot code
+       - Inline Cache
+    - Tools
+       - trace: opt, deopt, ic
+       - chrome devtool
+       - (d8)
+    - Principle of high performance
+       - Application
+           - Maintainability is first
+               - Various people will join your team
+           - Choose performant libraries
+               - Core functionarities are run many times
+           - Use util library instead of your own ones
+               - tested
+               - performant
+               - used
+       - Library
+           - Low-overhead is nicer
+               - (TBD)
+    - Techniques
+       - Avoid runtime overhead
+           - Object instantiation
+           - Map, Set, Object
+           - Regexp
+       - Avoid blocking I/O
+           - Sync, Async
+           - Macro/micro tasks
+       - PIFE/IIFE
+    - Performant libraries
+       - bluebird
+       - ajv
+       - pico(nearForm)
+       - fastify(nearForm)
+    - Appendix
+       - node-gyp
+       - quickjs, hermes
+  descriptionJa: ""
+  speakerIDs:
+    - sho-miyamoto
+- uuid: migration-from-react-native-to-pwa
+  date:
+  startsAt:
+  endsAt:
+  room:
+  title: Migration from React Native to PWA
+  titleJa: ""
+  spokenLanguage: ja
+  slideLanguage: ""
+  description: ""
+  descriptionJa: |
+    \## 対象とする聞き手
+    - クロスプラットフォーム開発フレームワークによるアプリ開発やマルチプラットフォーム対応を考えている方
+    - すでにネイティブ言語以外でのネイティブアプリ開発・運用をしており、マイグレーションを考えている方
+    - React Nativeの利用経験は問いません
+
+    \## トークの内容
+    ここ数年でReact Nativeの導入・運用事例や、Airbnbの例に代表されるようにReact Nativeアプリをネイティブ言語で刷新する事例も耳聞するところとなりました。また、そうした時流での技術選定について「React Native VS PWA」「React Native VS Swift/Kotlin」のような二項対立で評価が行われることもあります。しかし、React NativeからPWAへと移行した事例について聞くことは多くありません。
+
+    このトークは、React Nativeで作られたアプリをPWAとして刷新したプロジェクトの事例を通じて得られた知見について話すケーススタディです。具体的には「""開発できる""は""運用できる""を意味しない」という辛みと、改めて気づく「Webというプラットフォームの開発体験の良さ」が軸になる予定です。
+
+    同アプリが業務システムであることなど固有の事情もこの事例では含みますが、発表を通じて以下のことをお伝えします。
+
+    - React Native appからPWAに移行するに至った経緯、技術選定
+    - 移行において工夫したこと
+    - 以下の2パターンのアプリケーションの開発・運用で学んだこと
+      - iOS/Android両プラットフォーム対応しているReact Native app
+      - iOS/Android/Webの3つのプラットフォームに対応するPWA/Hybrid app
+  speakerIDs:
+    - masato-ohba
+- uuid: browser-ap-is-the-unknown-super-heroes
+  date:
+  startsAt:
+  endsAt:
+  room:
+  title: "Browser APIs: the unknown Super Heroes"
+  titleJa: ""
+  spokenLanguage: en
+  slideLanguage: ""
+  description: |
+    Still think browsers are only capable of parsing HTML, CSS and JavaScript? Think again!
+    Browsers have become much more powerful and contain numerous APIs that can enrich the user experience or are just plain fun.
+
+    This talk will introduce you to some of them (like Bluetooth, battery, speech, audio, location, ...) and show you how easy it is to unleash their power with JavaScript.
+  descriptionJa: ""
+  speakerIDs:
+    - rowdy-rabouw
+- uuid: license-violation-of-react-applications
+  date: 2019/11/30
+  startsAt: 18:15
+  endsAt: 19:15
+  room: A
+  title: License violation of React Applications
+  titleJa: React アプリのライセンス違反について
+  spokenLanguage: ja
+  slideLanguage: ""
+  description: |
+    Hi React app creators, are you sure your React applications don't violate license of React or dependent modules? Do you know if you are creating apps with CRA (Create React App), you will violate licenses of React by default? I'll talk about license notice problems and it's solutions.
+  descriptionJa: |
+    React アプリ作者の皆さん、React や依存モジュール群のライセンスに違反してない自信はありますか？CRA (Create React App) でアプリを作るとデフォルトで React のライセンス違反になってしまっているのはご存じですか？React のライセンス表記問題と解決策についてお話しします。
+  speakerIDs:
+    - dynamis
+- uuid: tba
+  date: 2019/11/30
+  startsAt: 14:45
+  endsAt: 15:15
+  room: A
+  title: TBA
+  titleJa: ""
+  spokenLanguage: en
+  slideLanguage: ""
+  description: ""
+  descriptionJa: ""
+  speakerIDs:
+    - henry-zhu
+- uuid: cache-me-if-you-can
+  date: 2019/11/30
+  startsAt: 18:15
+  endsAt: 19:15
+  room: A
+  title: Cache Me If You Can
+  titleJa: ""
+  spokenLanguage: en
+  slideLanguage: ""
+  description: |
+    Web caching is one of the most powerful techniques you can use to improve the performance of your websites. But like with many other optimization methods, it's not always clear where to start. When should you cache your resources? For how long? And how do you invalidate them? It can be an intimidating subject; but fear not, understanding its fundamentals is surprisingly simple.  In this talk, I will walk you through the basics of HTTP Caching: how it works, how to manage it, and how to implement simple but effective strategies that will make your sites faster, leaner, and more responsive.
+  descriptionJa: ""
+  speakerIDs:
+    - maxi-ferreira
+- uuid: pika-reimagining-the-registry
+  date:
+  startsAt:
+  endsAt:
+  room:
+  title: "Pika: Reimagining the Registry"
+  titleJa: ""
+  spokenLanguage: en
+  slideLanguage: ""
+  description: |
+    What if you could do web development today without a bundler?
+
+    This talk explores the good, the bad and the ugly of modern JavaScript development. Learn how Node.js, npm, React, Browserify and Webpack all influenced JavaScript's tooling-heavy evolution over the last decade. Then, look towards the future at how projects like Pika (www.pika.dev) are reimagining web development for 2019 and beyond. Finally, learn how you can start to leverage these modern projects today for faster, smaller, and less complex JavaScript applications.
+  descriptionJa: ""
+  speakerIDs:
+    - fred-schott
+- uuid: analysis-of-an-exploited-npm-package
+  date:
+  startsAt:
+  endsAt:
+  room:
+  title: Analysis of an exploited npm package
+  titleJa: ""
+  spokenLanguage: en
+  slideLanguage: ""
+  description: |
+    How did 8 million developers download malicious code with no one noticing?
+
+    In late 2018, a popular node.js package changed ownership. This package became the delivery mechanism for malicious code that traversed through multiple environments to inject its final payload into a mobile application. This exploit existed in the wild for 48 days and was downloaded over 8 million times before it was found. How was it found? What was its purpose and how did it happen in the first place?
+
+    This exploit is one example of a well-planned, sophisticated attack that targeted the most valuable and privileged computers in a company, development and build machines. In this session we will dive into how the attack happened, the three payloads, how they worked, how they were obfuscated, and what their goal ultimately was.
+
+    This is not node/npm specific and any public repository of source code is vulnerable. This is a growing risk that many companies are absorbing without fully understanding and, without better management, will inevitably lead to incredible exploits in the future.
+  descriptionJa: ""
+  speakerIDs:
+    - jarrod-overson
+- uuid: tba
+  date:
+  startsAt:
+  endsAt:
+  room:
+  title: TBA
+  titleJa: JavaScriptとSwift/JavaをつなげるCapacitorと、これからのWeb Frontned.
+  spokenLanguage: ja
+  slideLanguage: ""
+  description: ""
+  descriptionJa: |
+    Web技術を使った次世代のクロスプラットフォームライブラリとしてCapacitorが登場しました。特徴は何といっても、JavaScriptとSwift/Javaの連携容易性です。JavaScriptの世界はWebブラウザに留まらない時代がやってきました。
+
+    本セッションではCapacitorの概要とプラグイン開発、そしてWeb Frontendが今後どうなっていくかを考えます。
+  speakerIDs:
+    - sakakibara
+- uuid: how-to-boost-your-code-with-web-assembly
+  date: 2019/11/30
+  startsAt: 16:00
+  endsAt: 16:30
+  room: B
+  title: How to Boost Your Code with WebAssembly
+  titleJa: ""
+  spokenLanguage: ja
+  slideLanguage: ""
+  description: ""
+  descriptionJa: |
+    WebAssemblyはバイナリ表現の実行可能形式です。JavaScriptと異なり、パースの時間を短縮できることや実行が高速であることがメリットとされていますが、制約も大きく扱いの難しい技術です。
+
+    そんな中、「コードの一部をWebAssemblyで書いて高速化」ということをした、あるいはしたい、という話をしばしば目にするようになってきました。
+
+    そんな夢のようなことが本当にできるのか、できるとしたらどのくらいの難易度で、どのくらいの効果があるのか。実際にやってみた結果を報告します。
+  speakerIDs:
+    - fuji-goro
+- uuid: tba
+  date: 2019/11/30
+  startsAt: 16:00
+  endsAt: 16:30
+  room: A
+  title: TBA
+  titleJa: ""
+  spokenLanguage: en
+  slideLanguage: ""
+  description: ""
+  descriptionJa: ""
+  speakerIDs:
+    - dominic-tarr
+- uuid: from-electron-to-wasm-to-rust-aaand-back-to-electron
+  date:
+  startsAt:
+  endsAt:
+  room:
+  title: From Electron, to WASM, to Rust (aaand back to Electron)
+  titleJa: ""
+  spokenLanguage: en
+  slideLanguage: ""
+  description: |
+    So you heard you can run WebAssembly in the browser, but what does this look like IRL? Seeking the much talked about performance benefits of running WASM in the browser, Compass (GUI for MongoDB) took the great leap forward and rewrote part of the application -- a schema parser responsible for document analysis -- in Rust. As it turns out, the rumours are true, I repeat the rumours are true: offloading parts of your application to Rust makes it fast, and in some of our cases, heaps fast.
+
+    In this talk I will cover converting a part of an codebase from JavaScript to Rust, bringing it to Electron, adding WASM to an existing React app, and deploying this whole lot to production. As Compass still talks to MongoDB via Node.js, I will also cover how we used Rust to improve performance without losing data integrity. This talk is about a success story, but also about a bunch of smol mishaps, fun woopses and lil' dead ends we encountered and how we managed to overcome along the way.
+  descriptionJa: ""
+  speakerIDs:
+    - irina-shestak
+- uuid: tba
+  date:
+  startsAt:
+  endsAt:
+  room:
+  title: TBA
+  titleJa: ""
+  spokenLanguage: ja
+  slideLanguage: ""
+  description: ""
+  descriptionJa: ""
+  speakerIDs:
+    - mariko-kosaka
+- uuid: closing
+  date:
+  startsAt:
+  endsAt:
+  room:
+  title: Closing
+  titleJa: ""
+  spokenLanguage: ja
+  slideLanguage: ""
+  description: ""
+  descriptionJa: ""
+  speakerIDs:
+    - yosuke-furukawa
+- uuid: tba
+  date: 2019/11/30
+  startsAt: 14:45
+  endsAt: 15:15
+  room: B
+  title: TBA
+  titleJa: 覚醒するアクセシビリティ
+  spokenLanguage: ja
+  slideLanguage: ""
+  description: ""
+  descriptionJa: |
+    どんなエンジニアになろうか決めかねていた自分が、ある日突然「私はウェブをやるために生まれてきた」と思うに至った、アクセシビリティの話です。
+
+    「アクセシビリティって何？」という人から、「大事なのはわかっているけどいつも後回しにしてしまう」という人まで、明日からアクセシブルな実装をせずにはいられない、ウェブの本質に迫ります。
+  speakerIDs:
+    - lena-morita
+- uuid: declarative-programming-with-react
+  date: 2019/11/30
+  startsAt: 17:15
+  endsAt: 17:45
+  room: B
+  title: Declarative Programming with React
+  titleJa: Declarative Programming with React
+  spokenLanguage: en
+  slideLanguage: ""
+  description: |
+    React is a JavaScript library for building user interfaces, which make UI programming declarative.
+
+    What's the benefits of declarative programming over imperative programming?
+    I'm going to explain why declarative programming is useful.
+
+    Do you know that React isn't only for DOM?
+    You probably imagine react-native, which is to build Native Apps with React.
+
+    What about other environments?
+
+    React has a way to create custom renderers so you can make anything declarative with React!!!
+
+    In this talk, I'm going to introduce the architecture of custom renderers and some ideas about existing custom renderers and build a new custom renderer on live coding!!!
+  descriptionJa: |
+    Reactは宣言的にUIを構築できるJavaScriptのライブラリです。
+
+    このトークではまず最初に、手続き的ではなく宣言的にUIを構築することのメリットについて改めて解説します。
+
+    ReactがDOM以外の環境に対しても使われていることを知っていますか？
+    おそらく、ネイティブアプリを構築するためのReact Nativeについては知っている人も多いのではないでしょうか？
+
+    他の環境についてはどうしょう？
+
+    Reactはそのためのカスタムレンダラの仕組みを持っています。
+    それを使うことで様々なものをReactを使って宣言的に記述出来るようになります！
+
+    このトークでは、カスタムレンダラのアーキテクチャや既存のカスタムレンダラについての紹介だけでなく、独自のカスタムレンダラをライブで作ってみたいと思います！
+
+    ※このトークは英語で行う予定ですが、日本語での補足も入れてながら行いたいと思います。
+  speakerIDs:
+    - toru-kobayashi
