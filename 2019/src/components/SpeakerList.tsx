@@ -30,9 +30,12 @@ export function SpeakerList(props: Props) {
           uuid={speaker.uuid}
           name={speaker.name}
           biography={speaker.biography}
+          biographyJa={speaker.biographyJa}
           photoURL={speaker.photoURL}
           talkTitle={speaker.talkTitle}
+          talkTitleJa={speaker.talkTitleJa}
           talkDescription={speaker.talkDescription}
+          talkDescriptionJa={speaker.talkDescriptionJa}
           spokenLanguage={speaker.spokenLanguage}
           slideLanguage={speaker.slideLanguage}
           github={speaker.github}

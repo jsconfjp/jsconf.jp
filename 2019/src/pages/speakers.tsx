@@ -21,6 +21,7 @@ export default function SpeakersPage() {
             twitter
             photoURL
             talkTitle
+            talkTitleJa
           }
         }
       }

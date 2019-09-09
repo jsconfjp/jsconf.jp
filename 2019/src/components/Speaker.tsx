@@ -1,14 +1,18 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { useTranslation } from "react-i18next"
 
 export type Props = {
   uuid: string
   name: string
   biography: string
+  biographyJa: string
   photoURL: string
   talkTitle: string
+  talkTitleJa: string
   talkDescription: string
+  talkDescriptionJa: string
   spokenLanguage: string
   slideLanguage: string
   github: string
@@ -35,12 +39,14 @@ const Name = styled.p`
 `
 
 export function Speaker(props: Props) {
-  const { uuid, name, photoURL, talkTitle } = props
+  const { i18n } = useTranslation()
+  const { uuid, name, photoURL, talkTitle, talkTitleJa } = props
+  const isEnglish = i18n.language === "en"
 
   return (
     <LinkContainer to={`speaker/${uuid}`}>
       <img src={photoURL} width="100%" />
-      <Title>{talkTitle}</Title>
+      <Title>{isEnglish ? talkTitle : talkTitleJa || talkTitle}</Title>
       <Name>{name}</Name>
     </LinkContainer>
   )

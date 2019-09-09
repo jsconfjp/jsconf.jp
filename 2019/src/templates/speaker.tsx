@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { useTranslation } from "react-i18next"
 
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
@@ -63,18 +64,24 @@ const TalkTitle = styled(SubTitle)`
 `
 
 export default function Speaker(props: Props) {
+  const { i18n } = useTranslation()
   const {
     pageContext: { speaker },
   } = props
   const {
     name,
     talkTitle,
+    talkTitleJa,
     talkDescription,
+    talkDescriptionJa,
     spokenLanguage,
     slideLanguage,
     biography,
+    biographyJa,
     photoURL,
   } = speaker
+  const isEnglish = i18n.language === "en"
+
   const date = "TBA"
   const startsAt = "XX:XX"
   const endsAt = "XX:XX"
@@ -88,10 +95,14 @@ export default function Speaker(props: Props) {
         <Title>{name}</Title>
         <SpeakerBox>
           <Avatar src={photoURL} />
-          <Biography>{biography}</Biography>
+          <Biography>
+            {isEnglish ? biography : biographyJa || biography}
+          </Biography>
         </SpeakerBox>
         <TalkBox>
-          <TalkTitle>{talkTitle}</TalkTitle>
+          <TalkTitle>
+            {isEnglish ? talkTitle : talkTitleJa || talkTitle}
+          </TalkTitle>
           <p>
             {date}, {startsAt} - {endsAt}
             <br />
@@ -102,7 +113,9 @@ export default function Speaker(props: Props) {
             Slide language: {slideLanguage}
             <br />
           </p>
-          <Description>{talkDescription}</Description>
+          <Description>
+            {isEnglish ? talkDescription : talkDescriptionJa || talkDescription}
+          </Description>
         </TalkBox>
       </ResponsiveBox>
     </Layout>

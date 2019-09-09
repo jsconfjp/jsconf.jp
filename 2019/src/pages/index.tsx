@@ -71,6 +71,7 @@ export default function IndexPage() {
             twitter
             photoURL
             talkTitle
+            talkTitleJa
           }
         }
       }

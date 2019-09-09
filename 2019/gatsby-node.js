@@ -31,9 +31,12 @@ exports.createPages = ({ graphql, actions }) => {
                 uuid
                 name
                 biography
+                biographyJa
                 photoURL
                 talkTitle
+                talkTitleJa
                 talkDescription
+                talkDescriptionJa
                 spokenLanguage
                 slideLanguage
               }
