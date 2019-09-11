@@ -57,12 +57,14 @@ export function Speaker(props: Props) {
   const { talk, speaker } = props
   const { uuid, title, titleJa } = talk
   const { name, photoURL } = speaker
-  const isEnglish = i18n.language === "en"
+  const enOrJa = (enStr: string, jaStr: string) => {
+    return i18n.language === "en" ? enStr || jaStr : jaStr || enStr
+  }
 
   return (
     <LinkContainer to={`talk/${uuid}`}>
       <img src={photoURL} width="100%" />
-      <Title>{isEnglish ? title : titleJa || title}</Title>
+      <Title>{enOrJa(title, titleJa)}</Title>
       <Name>{name}</Name>
     </LinkContainer>
   )

@@ -33,13 +33,17 @@ export function SpeakerList(props: Props) {
 
   return (
     <Container>
-      {speakers.map(speaker => (
-        <Speaker
-          key={speaker.name}
-          speaker={speaker}
-          talk={talkMap[speaker.uuid]}
-        />
-      ))}
+      {speakers
+        .filter(speaker => talkMap[speaker.uuid])
+        .map(speaker => {
+          return (
+            <Speaker
+              key={speaker.name}
+              speaker={speaker}
+              talk={talkMap[speaker.uuid]}
+            />
+          )
+        })}
     </Container>
   )
 }

@@ -81,8 +81,10 @@ export default function Speaker(props: Props) {
     endsAt,
     room,
   } = talk
-  const isEnglish = i18n.language === "en"
   const speakerNames = speakers.map(speaker => speaker.name).join(" and ")
+  const enOrJa = (enStr: string, jaStr: string) => {
+    return i18n.language === "en" ? enStr || jaStr : jaStr || enStr
+  }
 
   return (
     <Layout>
@@ -94,14 +96,12 @@ export default function Speaker(props: Props) {
           <SpeakerBox key={speaker.uuid}>
             <Avatar src={speaker.photoURL} />
             <Biography>
-              {isEnglish
-                ? speaker.biography
-                : speaker.biographyJa || speaker.biography}
+              {enOrJa(speaker.biography, speaker.biographyJa)}
             </Biography>
           </SpeakerBox>
         ))}
         <TalkBox>
-          <TalkTitle>{isEnglish ? title : titleJa || title}</TalkTitle>
+          <TalkTitle>{enOrJa(title, titleJa)}</TalkTitle>
           <p>
             {date}, {startsAt} - {endsAt}
             <br />
@@ -112,9 +112,7 @@ export default function Speaker(props: Props) {
             Slide language: {slideLanguage}
             <br />
           </p>
-          <Description>
-            {isEnglish ? description : descriptionJa || description}
-          </Description>
+          <Description>{enOrJa(description, descriptionJa)}</Description>
         </TalkBox>
       </ResponsiveBox>
     </Layout>
