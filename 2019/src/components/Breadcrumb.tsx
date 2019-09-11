@@ -29,10 +29,10 @@ export function Breadcrumb(props: Props) {
         <Text>{t("top")}</Text>
       </Link>
       {path.map(label => (
-        <>
+        <React.Fragment key={label}>
           <Text>></Text>
           <Text key={label}>{label}</Text>
-        </>
+        </React.Fragment>
       ))}
     </Box>
   )

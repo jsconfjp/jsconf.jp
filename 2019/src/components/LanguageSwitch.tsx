@@ -33,9 +33,8 @@ export function LanguageSwitch(props: Props) {
     <>
       {langKeys.map((langKey, i) => {
         return (
-          <>
+          <React.Fragment key={langKey}>
             <Lang
-              key={langKey}
               href={currentLanguage === langKey ? undefined : "#"}
               onClick={e => {
                 e.preventDefault()
@@ -45,7 +44,7 @@ export function LanguageSwitch(props: Props) {
               {languages[langKey]}
             </Lang>
             {i + 1 === langKeys.length ? null : <Separator>/</Separator>}
-          </>
+          </React.Fragment>
         )
       })}
     </>
