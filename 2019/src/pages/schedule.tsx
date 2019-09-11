@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
+import { useStaticQuery, graphql } from "gatsby"
 
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
@@ -10,6 +11,8 @@ import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
 import { LinkButton } from "../components/LinkButton"
 import { SmoothScroll } from "../components/SmoothScroll"
+import { TalkType, SpeakerType } from "../components/Speaker"
+import { generateTimetable } from "../util/generateTimetable"
 
 const DaysButtonBox = styled.div`
   display: flex;
@@ -44,6 +47,7 @@ const Box = styled.div<{ area: string; isBreak: boolean }>`
   width: 100%;
   box-sizing: border-box;
   padding: 1em;
+  margin-bottom: 0.5em;
   background-color: ${({ area, isBreak, theme }) =>
     isBreak
       ? theme.colors.disabled
@@ -82,64 +86,45 @@ const Text = styled.span`
 `
 
 export default function SchedulePage() {
-  const { t } = useTranslation()
-
-  const mockData = [
-    {
-      timebox: "10:00-10:30",
-      items: [
-        {
-          break: false,
-          room: "A",
-          label: "Doors open",
-        },
-      ],
-    },
-    {
-      timebox: "10:30-10:45",
-      items: [
-        {
-          break: false,
-          room: "A",
-          label: "Keynote",
-        },
-      ],
-    },
-    {
-      timebox: "10:45-11:15",
-      items: [
-        {
-          break: false,
-          room: "A",
-          label: "Offline-First Collaborative Data Structures By Mathias Buus",
-        },
-        {
-          break: false,
-          room: "B",
-          label:
-            "Let's start machine learning with JavaScript By Shuhei Kitsuka",
-        },
-      ],
-    },
-    {
-      timebox: "11:15-11:30",
-      items: [
-        {
-          break: true,
-          room: "A",
-          label: "Break",
-        },
-        {
-          break: true,
-          room: "B",
-          label: "Break",
-        },
-      ],
-    },
-  ]
-  const timetable = {
-    day1: mockData,
-    day2: mockData,
+  const { t, i18n } = useTranslation()
+  const { allSpeakersYaml, allTalksYaml } = useStaticQuery(graphql`
+    query {
+      allSpeakersYaml {
+        edges {
+          node {
+            uuid
+            name
+          }
+        }
+      }
+      allTalksYaml {
+        edges {
+          node {
+            uuid
+            title
+            titleJa
+            description
+            descriptionJa
+            spokenLanguage
+            slideLanguage
+            speakerIDs
+            startsAt
+            endsAt
+            room
+            date
+          }
+        }
+      }
+    }
+  `)
+  const speakers: SpeakerType[] = allSpeakersYaml.edges.map(
+    ({ node }: any) => node,
+  )
+  const talks: TalkType[] = allTalksYaml.edges.map(({ node }: any) => node)
+  const timetable = generateTimetable({ speakers, talks })
+  const days = ["day1", "day2"] as const
+  const enOrJa = (enStr: string, jaStr: string) => {
+    return i18n.language === "en" ? enStr || jaStr : jaStr || enStr
   }
 
   return (
@@ -161,36 +146,28 @@ export default function SchedulePage() {
           </SmoothScroll>
         </DaysButtonBox>
 
-        <SubTitle id="day1">{t("day1")}</SubTitle>
-        {timetable.day1.map(item => (
-          <TimeBox key={item.timebox}>
-            {item.items.map(event => (
-              <Box
-                key={`${event.room}_${event.label}`}
-                area={event.room}
-                isBreak={event.break}
-              >
-                <Text>{item.timebox}</Text>
-                <Text>{event.label}</Text>
-              </Box>
+        {days.map(day => (
+          <React.Fragment key={day}>
+            <SubTitle id={day}>{t(day)}</SubTitle>
+            {timetable[day].map(({ timebox, sessions }) => (
+              <TimeBox key={timebox}>
+                {sessions.map(s => (
+                  <Box key={s.room + s.uuid} area={s.room} isBreak={s.break}>
+                    <Text>
+                      {s.startsAt}-{s.endsAt}
+                    </Text>
+                    <Text>{enOrJa(s.title, s.titleJa)}</Text>
+                    {s.speakers.length ? (
+                      <Text>
+                        by{" "}
+                        {s.speakers.map(speaker => speaker.name).join(" and ")}
+                      </Text>
+                    ) : null}
+                  </Box>
+                ))}
+              </TimeBox>
             ))}
-          </TimeBox>
-        ))}
-
-        <SubTitle id="day2">{t("day2")}</SubTitle>
-        {timetable.day2.map(item => (
-          <TimeBox key={item.timebox}>
-            {item.items.map(event => (
-              <Box
-                key={`${event.room}_${event.label}`}
-                area={event.room}
-                isBreak={event.break}
-              >
-                <Text>{item.timebox}</Text>
-                <Text>{event.label}</Text>
-              </Box>
-            ))}
-          </TimeBox>
+          </React.Fragment>
         ))}
       </ResponsiveBox>
     </Layout>

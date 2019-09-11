@@ -4,62 +4,51 @@
   photoURL: /2019/speakers/nadieh-bremer.jpg
   biography: |
     Nadieh Bremer is a graduated Astronomer, turned data scientist, turned data visualization designer, based near Amsterdam. She's working as a freelancer under the name "Visual Cinnamon". As 2017's "Best Individual" in the Information is Beautiful Awards, she focuses on uniquely crafted (interactive) data visualizations that both engage and enlighten its audience. Working for companies such as Google News Lab & UNESCO to small start-ups. From printed magazines to interactive experiences online to more promotionally focused visuals for press releases, data-driven reports, and data art.
-  biographyJa: |
-    TODO
+  # biographyJa:
 - uuid: henry-zhu
   name: Henry Zhu
   featured: true
   photoURL: https://jsconf.jp/2019/speakers/henry-zhu.png
-  biography: |
-    TODO
-  biographyJa: |
-    TODO
+  biography: TBA
+  # biographyJa:
 - uuid: guillermo-rauch
   name: Guillermo Rauch
   featured: true
   photoURL: https://jsconf.jp/2019/speakers/guillermo-rauch.jpg
-  biography: |
-    TODO
-  biographyJa: |
-    TODO
+  biography: TBA
+  # biographyJa:
 - uuid: dominic-tarr
   name: Dominic Tarr
   featured: true
   photoURL: https://jsconf.jp/2019/speakers/dominic-tarr.jpg
-  biography: |
-    TODO
-  biographyJa: |
-    TODO
+  biography: TBA
+  # biographyJa:
 - uuid: shirley-wu
   name: Shirley Wu
   featured: true
   photoURL: https://jsconf.jp/2019/speakers/sxywu.jpg
   biography: |
     Shirley Wu is an award-winning creative focused on data-driven art and visualizations.  She has worked with clients such as Google, The Guardian, SFMOMA, and NBC Universal to develop custom, highly interactive data visualizations.  She combines her love of art, math, and code into colorful, compelling narratives that push the boundaries of the web.  Her work can be found at sxywu.com.
-  biographyJa: |
-    TODO
+  # biographyJa:
 - uuid: kitson-kelly
   name: Kitson Kelly
   featured: true
   photoURL: https://jsconf.jp/2019/speakers/kitsonk.jpg
   biography: |
     Kitson (Kit or Kit-san) has been in technology for almost 25 years.  He currently works for ThoughtWorks as a Technical Principal, but his passion is contributing to open source.  He started contributing to Deno soon after Ryan Dahl announced the project in 2018 and has continued to be one of the core contributors to the project since then.
-  biographyJa: |
-    TODO
+  # biographyJa:
 - uuid: andrew-betts
   name: Andrew Betts
   photoURL: https://trib.tv/wp-content/uploads/2014/10/IMG_0430.jpg
   biography: |
     Andrew is a web developer and developer advocate for Fastly, working with developers across the world to help make the web faster, more secure, more reliable and easier to work with. He founded a web consultancy which was ultimately acquired by the Financial Times, led the team that created their pioneering HTML5 web app, and founded the FT’s Labs division. He has also been an elected member of the W3C Technical Architecture Group, a committee of nine people who guide the development of the World Wide Web.
-  biographyJa: |
-    TODO
+  # biographyJa:
 - uuid: sacha-greif
   name: Sacha Greif
   photoURL: https://decwap8ztgrry.cloudfront.net/items/1d0Z0A1k3a0o3u0x3x3s/sachagreif-headshot.jpg
   biography: |
     Sacha Greif is an independent designer and developer. He runs Sidebar, a daily design newsletter, and also created Vulcan.js, a full-stack JavaScript framework.
-  biographyJa: |
-    TODO
+  # biographyJa:
 - uuid: jxck
   name: Jxck
   photoURL: https://logo.jxck.io/jxck.256x256.png
@@ -72,8 +61,7 @@
   photoURL: https://pbs.twimg.com/profile_images/1151406614752169984/pJdsa0mM_400x400.png
   biography: |
     Jan is a developer from Berlin, Germany and works on Greenkeeper, CouchDB, and offline-first web technologies at Neighbourhoodie. He’s also the co-curator of JSConf EU, which ran for the 10th time this year.
-  biographyJa: |
-    TODO
+  # biographyJa:
 - uuid: jorge-bucaran
   name: Jorge Bucaran
   photoURL: https://pbs.twimg.com/profile_images/1161224425607331840/SeQyVhTi_400x400.jpg
@@ -86,15 +74,13 @@
   photoURL: https://avatars1.githubusercontent.com/u/501335
   biography: |
     Praveen is a multi-disciplined engineer with almost a decade of experience spanning various client, server and cloud infrastructure technologies. He is a conference speaker and an active open source contributor. He contributed to projects like Kubernetes, gVisor, Grafana, Terraform, firecracker-containerd. He loves building cool things that help teams build cool things!
-  biographyJa: |
-    TODO
+  # biographyJa:
 - uuid: andy-hall
   name: Andy Hall
   photoURL: http://aphall.com/images/profile_500.png
   biography: |
     Andy Hall is a game developer in Tokyo. He’s been making web stuff since the 90s, and used to work at Adobe Japan as a creative evangelist. He spends his time wherever code and art overlap.
-  biographyJa: |
-    TODO
+  # biographyJa:
 - uuid: hidetaka-okamoto
   name: Hidetaka Okamoto
   photoURL: https://avatars2.githubusercontent.com/u/6883571?s=400&v=4
@@ -103,13 +89,11 @@
     ask-sdk core contributor
     AWS Samurai 2017
     Digitalcube Co. Ltd. Developer
-  biographyJa: |
-    TODO
+  # biographyJa:
 - uuid: kohei-kido
   name: 木戸 康平
   photoURL: https://obniz.io/images/jobs/member_kido.jpg
-  biography: |
-    TODO
+  # biography:
   biographyJa: |
     IoTサービスobnizを制作しているCambrianRoboticsのCo-Founder。
 
@@ -130,8 +114,7 @@
   photoURL: https://doc-00-10-docs.googleusercontent.com/docs/securesc/dbfa40fqgct21qvbvfn7lu8di255qj06/opj5m86oo1tpn04cc66lg3v2gnb8pp2p/1567756800000/04109842465149891628/14271599137442704777/0B_3hs2CGuDbSdnE3X0w1RHBHWVU
   biography: |
     Eiji is a staff developer advocate at Google working on the open web, currently focusing to make identity and payment on the web as open, seamless and frictionless as possible. He is also enthusiastic about open web standard technologies.
-  biographyJa: |
-    TODO
+  # biographyJa:
 - uuid: masashi-ganeko
   name: がねこまさし
   photoURL: https://drive.google.com/file/d/1ByQxI47XFN3JBlL0qB06DhSIZPiCLssv/view?usp=sharing
@@ -146,15 +129,13 @@
 - uuid: yoshiki-shibukawa
   name: Yoshiki Shibukawa
   photoURL: https://pbs.twimg.com/profile_images/429335769145020417/720SYQMp_400x400.jpeg
-  biography: |
-    TODO
+  # biography:
   biographyJa: |
     フューチャー歴2年でフロントエンド開発含めていろいろやっています。Real World HTTPの著者です。
 - uuid: jonny-kalambay
   name: Jonny Kalambay
   photoURL: https://jonnyk-misc.s3.ca-central-1.amazonaws.com/portfolio/zenhub-headshot-4454-wide.jpg
-  biography: |
-    TODO
+  # biography:
   biographyJa: |
     ジョニーKalambayは、Zenhubのためのソフトウェアを書き込み灯台研究所でコーディングを教え、そしてYouTubeでチュートリアルを作ります。彼はまた、彼は野生生物教育や保全のための機械学習を使用するように促されたところで、バンクーバー水族館、でボランティア。彼はコーディングいない場合は、ジョニーは言語を勉強し、または彼のペットのカメを供給し、スキューバダイビングを見つけることができます。
 - uuid: sho-miyamoto
@@ -165,8 +146,7 @@
 
     https://github.com/antidotech
     https://twittercom/antidotech
-  biographyJa: |
-    TODO
+  # biographyJa:
 - uuid: masato-ohba
   name: ohbarye
   photoURL: https://avatars3.githubusercontent.com/u/1811616
@@ -183,8 +163,7 @@
   photoURL: https://double-r.nl/rowdyrabouw.jpg
   biography: |
     Rowdy Rabouw is a web developer with over 20 years’ experience in HTML, CSS, JavaScript and PHP. He’s been working as a freelancer since 2004 and has been employed by the Dutch insurance company Nationale-Nederlanden since 1992. Currently, he is a Senior Developer working on Vue.js, Node.js and NativeScript projects and is a Progress Developer Expert for NativeScript.
-  biographyJa: |
-    TODO
+  # biographyJa:
 - uuid: dynamis
   name: dynamis
   photoURL: http://f.dynamis.jp/photo/petitpanda-1000.png
@@ -195,8 +174,7 @@
 - uuid: fuji-goro
   name: FUJI Goro / @__gfx__
   photoURL: https://avatars3.githubusercontent.com/u/101800?s=460&v=4
-  biography: |
-    TODO
+  # biography:
   biographyJa: |
     ソフトウェアエンジニア。 TypeScript や GraphQL、WebAssemblyに興味あり。
 - uuid: maxi-ferreira
@@ -204,27 +182,23 @@
   photoURL: https://www.maxiferreira.com/maxi-headshot.jpg
   biography: |
     Maxi is a software developer and data scientist living in Córdoba, Argentina. He likes writing code that is fast, clear, and clean, in that order. Maxi currently works at Help Scout, where he specializes in web performance and the development of third-party JavaScript applications.
-  biographyJa: |
-    TODO
+  # biographyJa:
 - uuid: fred-schott
   name: Fred K. Schott
   photoURL: https://pbs.twimg.com/profile_images/1103118723756355584/EqxiIv5-_400x400.jpg
   biography: |
     Fred Schott is a JavaScript developer in San Francisco, CA. He is currently working on Pika - a collection of tools and projects to move the JavaScript ecosystem forward. He likes cute dogs. Please share cute dog photos with him if you have any.
-  biographyJa: |
-    TODO
+  # biographyJa:
 - uuid: jarrod-overson
   name: Jarrod Overson
   photoURL: https://avatars1.githubusercontent.com/u/842798?s=400&v=4
   biography: |
     Jarrod is a Director of Engineering at Shape Security where he led the development of Shape's Enterprise Defense. Jarrod is a frequent speaker on modern web threats and cybercrime and has been quoted by Forbes, the Wall Street Journal, CNET among others. He’s the co-author of O’Reilly’s Developing Web Components, creator of Plato, a static analysis tool for web applications, and frequently writes and records topics about reverse engineering and automation.
-  biographyJa: |
-    TODO
+  # biographyJa:
 - uuid: sakakibara
   name: 榊原昌彦
   photoURL: https://pbs.twimg.com/profile_images/1153523994596786176/YI3YImHe_400x400.jpg
-  biography: |
-    TODO
+  # biography:
   biographyJa: |
     Ionic Japan User Group 代表、Ionic Framework コントリビューター、一般社団法人リレーションデザイン研究所代表など。著書「Ionicで作るモバイルアプリ制作入門」。
 - uuid: benitte-raphael
@@ -232,15 +206,13 @@
   photoURL: https://pbs.twimg.com/profile_images/851309905189285889/9Bh0aRgF_400x400.jpg
   biography: |
     Raphael Benitte is a graphic designer and data visualization expert. He created the Nivo.js dataviz library for React.
-  biographyJa: |
-    TODO
+  # biographyJa:
 - uuid: sacha-greif
   name: Sacha Greif
   photoURL: https://decwap8ztgrry.cloudfront.net/items/1d0Z0A1k3a0o3u0x3x3s/sachagreif-headshot.jpg
   biography: |
     Sacha Greif is an independent designer and developer. He runs Sidebar, a daily design newsletter, and also created Vulcan.js, a full-stack JavaScript framework.
-  biographyJa: |
-    TODO
+  # biographyJa:
 - uuid: irina-shestak
   name: Irina Shestak
   photoURL: https://lh3.googleusercontent.com/MvZ5dpHwnnHr77NGA63suDA2F7n2O7NVOv_QwJh0vEA7SP71H60KJIjtCNarjLsdt8W0SKWiJLOIhEtrcGvoRYM2X-mBnNBdIdN9Hs8tIsQ2OjPJgPgTiiPw_UDqz0xgqb0nknQ2y5Dgmj3x91VxqypEBIBq6VWTmDrEzC3GeVlssF2lS3LXpFb0P0waWQZS2FzOllV5DmW1_YIBGvOA1Bfw9S1SEWV168H-BBMH8ppS6FfvAsBVj8gmUwrb2DRWbcP8TZpD-A82EuSLeAyc9UOYWYXLFEBYw1VazSpln-GD330RZG5v3xGZSUh5iqZo478R3oNPTyG3_9VakDknybiFvZMJCZuNvMWEguo3tqejB8LYqRgZHLBTlf4mfkY9D6JtvSR8jR8gIfhKRbWja8fAM_PQa6zul5jbXKQyNB3WFeMBNGnYKrksz1rZ8oDSewuWxaAtl09AwyolH_Vm-aKIzexlG1InIYaQcgtfAbI6K7JXboesP_LVkEcmTQHamARC-FuZh7fDcZHGIFxNwhsCqnERgIUQMEcFZjq_PfAC6TyB4sJPE__DSqkphjm2F_Vd387K4QzlHlDySjH-e3BQE1swyuR3Ve-zKihlvANhtcMmFubQfNmcIS0lIJiPiqtGdf7pZy3UqqDSbgn5gD8dOryLVSp7NjVxH95e46S-bCUPU_NSFYKx8WzCFcsRJesuujotVYskkUue_q8Fk4vOO-AvPwobJ4kEkL89k1EdCsKZoQ=w1248-h1664-no
@@ -248,27 +220,22 @@
     Irina is a Berlin-via-Londong-via-Vancouver engineer writing JavaScript and Rust over at MongoDB. Irina has given talks at conferences around the world about her various adventures in the world of programming, including JSConfAU, NodeFest Tokyo, NordicJS and BrazilJS.
 
     Outside of writing code in the code editor™, she makes zines (such as Data Ownership in Rust, Traits Traits Traits, A Smol Zine on HTTP/2), pets her cats Chashu and Nori, and maintains (give or take) 40 house plants.
-  biographyJa: |
-    TODO
+  # biographyJa:
 - uuid: mariko-kosaka
   name: Mariko Kosaka
   photoURL: https://pbs.twimg.com/profile_images/593793041816629248/yKbOT56n_400x400.jpg
-  biography: |
-    TODO
-  biographyJa: |
-    TODO
+  biography: TBA
+  # biographyJa:
 - uuid: yosuke-furukawa
   name: 古川 陽介
   photoURL: https://nodefest.jp/2018/img/speakers/pic-yosuke_furukawa.jpg
-  biography: |
-    TODO
+  # biography:
   biographyJa: |
     ㈱リクルートテクノロジーズ所属。Node.js日本ユーザーグループ代表であり、大人気イベント「東京Node学園」の主催者。HTML5expertsにも選ばれている。
 - uuid: lena-morita
   name: Lena Morita
   photoURL: https://jaguchi.com/wp-content/uploads/2018/08/low_res_400px-300x300.png
-  biography: |
-    TODO
+  # biography:
   biographyJa: |
     Automattic で Simplenote や Happy Tools などのウェブアプリ開発に携わるエンジニア。出版物や UI/UX のデザインに従事した後、ウェブに目覚めて現職へ。テック業界で働く女性のキャリア支援を行う国際 NPO 法人、Women Who Code 東京支部のディレクターも務める。
     https://jaguchi.com
@@ -281,5 +248,23 @@
 
     I enjoy writing code on OSS.
     https://github.com/koba04
+  # biographyJa:
+- uuid: satoshi-ebihara
+  name: 海老原 圭吾
+  photoURL: https://doc-14-2g-docs.googleusercontent.com/docs/securesc/svciahbtddk5ghj50rne812qe9bfo917/m3ot185u6i4vkasn2k8quf554dskpk2v/1568109600000/11940387528191418269/12092384443199837719/1MPvLK9f1YXZtB-G4_PeKOzPqbp4A3v9O?nonce=pqo5d7shpjplg&user=12092384443199837719&hash=trqb9g0ea0r3krjnd7rkn9tqnpn6vst8
+  # biography:
   biographyJa: |
-    TODO
+    Fringe81株式会社でフロントエンドエンジニアをしています。
+    普段はUniposというElmで作られたプロダクトの開発をしています。
+- uuid: benjamin-gruenbaum
+  name: Benjamin Gruenbaum
+  photoURL: https://avatars3.githubusercontent.com/u/1315533?s=400&v=4
+  biography: |
+    Data Scientist & Developer @ Testim.io. Open source lover, Node.js core collaborator, core team at Bluebird, Sinon, MobX and other open source libraries.
+  # biographyJa:
+- uuid: takuto-wada
+  name: Takuto Wada
+  photoURL: https://www.dropbox.com/s/w4mvuaheuk3gf33/twada.png?dl=1
+  # biography:
+  biographyJa: |
+    学生時代にソフトウェア工学を学び、オブジェクト指向分析/設計に傾倒。執筆活動や講演、ハンズオンイベントなどを通じてテスト駆動開発を広めようと努力している。 『プログラマが知るべき97のこと』（オライリージャパン、2010）監修。『SQLアンチパターン』（オライリージャパン、2013）監訳。『テスト駆動開発』（オーム社、2017）翻訳。 power-assert-js 作者。

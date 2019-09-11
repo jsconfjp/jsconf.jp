@@ -92,7 +92,7 @@ exports.createPages = ({ graphql, actions }) => {
           })
 
           createPage({
-            path: `talk/${talk.uuid}`,
+            path: `talk/${encodeURIComponent(talk.uuid)}`,
             component: speakerTemplate,
             context: {
               speakers: talkSpeakers,
