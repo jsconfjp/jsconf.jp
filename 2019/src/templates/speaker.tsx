@@ -90,7 +90,7 @@ export default function Speaker(props: Props) {
 
   return (
     <Layout>
-      <SEO title={`${title} - ${speakerNames}`} />
+      <SEO title={`${enOrJa(title, titleJa)} - ${speakerNames}`} />
       <ResponsiveBox>
         <Breadcrumb path={["talk", title]} />
         <Title>{speakerNames}</Title>
