@@ -145,7 +145,7 @@ export function HeaderMobile(props: Props) {
             </LanguageSwitchBox>
             <MenuItem to="/speakers/">{t("speakers")}</MenuItem>
             <MenuItem to="/venue/">{t("venue")}</MenuItem>
-            {/* <MenuItem to="/schedule/">{t("schedule")}</MenuItem> */}
+            <MenuItem to="/schedule/">{t("schedule")}</MenuItem>
             <MenuItem to="/sponsors/">{t("sponsors")}</MenuItem>
           </MenuBox>
         )}
