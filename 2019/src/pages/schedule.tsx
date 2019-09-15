@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { useStaticQuery, graphql } from "gatsby"
+import _Link from "gatsby-link"
 
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
@@ -40,6 +41,10 @@ const TimeBox = styled.div`
     display: flex;
     flex-direction: column;
   }
+`
+const Link = styled(_Link)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.text};
 `
 const Box = styled.div<{ area: string; isBreak: boolean }>`
   grid-column: ${({ area }) => area};
@@ -151,20 +156,28 @@ export default function SchedulePage() {
             <SubTitle id={day}>{t(day)}</SubTitle>
             {timetable[day].map(({ timebox, sessions }) => (
               <TimeBox key={timebox}>
-                {sessions.map(s => (
-                  <Box key={s.room + s.uuid} area={s.room} isBreak={s.break}>
-                    <Text>
-                      {s.startsAt}-{s.endsAt}
-                    </Text>
-                    <Text>{enOrJa(s.title, s.titleJa)}</Text>
-                    {s.speakers.length ? (
+                {sessions.map(s => {
+                  const content = (
+                    <Box key={s.room + s.uuid} area={s.room} isBreak={s.break}>
                       <Text>
-                        by{" "}
-                        {s.speakers.map(speaker => speaker.name).join(" and ")}
+                        {s.startsAt}-{s.endsAt}
                       </Text>
-                    ) : null}
-                  </Box>
-                ))}
+                      <Text>{enOrJa(s.title, s.titleJa)}</Text>
+                      {s.speakers.length ? (
+                        <Text>
+                          by{" "}
+                          {s.speakers
+                            .map(speaker => speaker.name)
+                            .join(" and ")}
+                        </Text>
+                      ) : null}
+                    </Box>
+                  )
+                  if (s.uuid) {
+                    return <Link to={`talk/${s.uuid}`}>{content}</Link>
+                  }
+                  return content
+                })}
               </TimeBox>
             ))}
           </React.Fragment>
