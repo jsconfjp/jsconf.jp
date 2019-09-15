@@ -9,13 +9,13 @@ import { SEO } from "../components/Seo"
 import { Title } from "../components/Title"
 import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
-import { SpeakerType, TalkType } from "../components/Speaker"
+import { SpeakerType, TalkType, AvatarType } from "../components/Speaker"
 import { SubTitle } from "../components/SubTitle"
 
 type Props = {
   pageContext: {
     speakers: SpeakerType[]
-    avatars: any[]
+    avatars: AvatarType[]
     talk: TalkType
   }
 }

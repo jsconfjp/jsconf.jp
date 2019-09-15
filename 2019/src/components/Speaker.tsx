@@ -30,6 +30,7 @@ export type SpeakerType = {
 
 export type AvatarType = {
   originalName: string
+  originalImg: string
 } & FluidObject
 
 export type Props = {
