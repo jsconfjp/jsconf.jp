@@ -830,3 +830,31 @@
     Babel や ESLint の登場により JavaScript の AST に触れる機会は若干増えてきましたが、それでもほとんどのプログラマは触れたことがないのではないかと思います。このセッションでは、まず JavaScript AST の入門から始まり、ライブコーディング形式で実際にツールを作りながら、 JavaScript AST を扱うプログラミングの勘所をご覧いただきます。
   speakerIDs:
     - takuto-wada
+- uuid: JavaScriptのままでTypeScriptを始める
+  date: 2019/12/01
+  startsAt: "14:45"
+  endsAt: "15:15"
+  room: B
+  titleJa: JavaScriptのままでTypeScriptを始める
+  spokenLanguage: ja
+  descriptionJa: TypeScript の --allowJs と --checkJs オプションを使うと *.js のまま tsc で型検証ができるので、コンパイルを開発手順に含めずに JS をそのまま扱う小さなプロジェクトや、あるいは導入できないあれやこれやの事情があっても型の恩恵に預かれる、という話をしたいです。
+  speakerIDs:
+    - ginpei-takanashi
+- uuid: GraphQLを用いたECサイトにおけるパフォーマンス改善
+  date: 2019/12/01
+  startsAt: "14:15"
+  endsAt: "14:45"
+  room: B
+  titleJa: GraphQLを用いたECサイトにおけるパフォーマンス改善
+  spokenLanguage: ja
+  descriptionJa: |
+    概要: ECサイトリニューアルにおける事例を題材にサービスの性能改善の方法を実際の事例をもとにお話します。該当のサイトはGraphQL + React + SSRを導入しており、ベーシックな性能改善の話からGraphQLの活用例まで含めてお話する予定です。
+
+    ECサイトはリニューアル時にはGraphQL + React + SSRといった構成を採用していましたが、リリースを優先した結果、性能が十分ではなく、speed insightで20点台でした。ECサイトは商品数やキャンペーンによる価格変更などがあり、ニュースサイトのような静的コンテンツの多いサイトとは異なるパフォーマンス改善が求められます。こうした非常に低いパフォーマンスのサイトをn点（現在鋭意改善中）まで引き上げた事例を紹介します。
+
+    具体的には以下のような内容を紹介する予定です。
+    * 計測環境の導入による課題の抽出 (Speed insightの活用やDatadogなどのAPMツールを活用した計測環境の導入とそれによるサーバー側のパフォーマンス改善など）
+    * フロントエンドサイドにおける改善 (bundle sizeの改善やlazy-loadの導入）
+    * キャッシュ戦略 (HTML cacheやuser belongingなコンテンツを分離することによるcacheの効きやすいGraphQLのquery設計）
+  speakerIDs:
+    - nobuhiko-sawai

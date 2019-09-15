@@ -235,3 +235,17 @@
   photoURL: /2019/speakers/takuto-wada.png
   biographyJa: |
     学生時代にソフトウェア工学を学び、オブジェクト指向分析/設計に傾倒。執筆活動や講演、ハンズオンイベントなどを通じてテスト駆動開発を広めようと努力している。 『プログラマが知るべき97のこと』（オライリージャパン、2010）監修。『SQLアンチパターン』（オライリージャパン、2013）監訳。『テスト駆動開発』（オーム社、2017）翻訳。 power-assert-js 作者。
+- uuid: ginpei-takanashi
+  name: 高梨ギンペイ
+  photoURL: /2019/speakers/ginpei-takanashi.png
+  biography: |
+    A guy who writes JavaScript and make JapaneseSushi in Vancouver, Canada.
+  biographyJa: |
+    カナダのバンクーバーでJavaScriptを書いたりJapaneseSushiを握ったりしています。
+- uuid: nobuhiko-sawai
+  name: 澤井宣彦
+  photoURL: /2019/speakers/nobuhiko-sawai.jpg
+  biography: |
+    TODO
+  biographyJa: |
+    株式会社FiNC Technologiesにて、Railsを用いたマイクロサービスアーキテクチャによるアプリのサーバサイドとReact.jsを用いた法人向けサービスのフロントエンド開発を担当する。
