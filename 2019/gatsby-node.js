@@ -32,7 +32,6 @@ exports.createPages = ({ graphql, actions }) => {
                 name
                 biography
                 biographyJa
-                photoURL
               }
             }
           }
@@ -51,6 +50,21 @@ exports.createPages = ({ graphql, actions }) => {
                 startsAt
                 endsAt
                 room
+              }
+            }
+          }
+          allFile(filter: { relativePath: { regex: "/speakers/" } }) {
+            nodes {
+              childImageSharp {
+                fluid(maxWidth: 262, maxHeight: 262) {
+                  originalName
+                  aspectRatio
+                  src
+                  srcSet
+                  srcWebp
+                  srcSetWebp
+                  sizes
+                }
               }
             }
           }
@@ -79,6 +93,16 @@ exports.createPages = ({ graphql, actions }) => {
           (acc, speaker) => ({ ...acc, [speaker.uuid]: speaker }),
           {},
         )
+        const avatars = result.data.allFile.nodes
+          .filter(avatar => avatar.childImageSharp)
+          .map(avatar => avatar.childImageSharp.fluid)
+        const avatarMap = avatars.reduce(
+          (acc, avatar) => ({
+            ...acc,
+            [avatar.originalName.split(".")[0]]: avatar,
+          }),
+          {},
+        )
         const talks = result.data.allTalksYaml.edges.map(({ node }) => node)
         talks.forEach(talk => {
           const talkSpeakers = talk.speakerIDs.map(speakerID => {
@@ -90,12 +114,22 @@ exports.createPages = ({ graphql, actions }) => {
             }
             return speaker
           })
+          const speakerAvatars = talkSpeakers.map(speaker => {
+            const avatar = avatarMap[speaker.uuid]
+            if (!avatar) {
+              throw new Error(
+                `Avatar not found: speakerID=${speaker.uuid}, talk=${talk.uuid}`,
+              )
+            }
+            return avatar
+          })
 
           createPage({
             path: `talk/${encodeURIComponent(talk.uuid)}`,
             component: speakerTemplate,
             context: {
               speakers: talkSpeakers,
+              avatars: speakerAvatars,
               talk,
             },
           })

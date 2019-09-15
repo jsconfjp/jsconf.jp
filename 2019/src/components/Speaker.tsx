@@ -2,8 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
-
-import { SquareAvatar } from "./SquareAvatar"
+import Image, { FluidObject } from "gatsby-image"
 
 export type TalkType = {
   uuid: string
@@ -25,19 +24,31 @@ export type SpeakerType = {
   name: string
   biography: string
   biographyJa: string
-  photoURL: string
   github: string
   twitter: string
 }
 
+export type AvatarType = {
+  originalName: string
+} & FluidObject
+
 export type Props = {
   speaker: SpeakerType
+  avatar: AvatarType
   talk: TalkType
 }
 
 const LinkContainer = styled(Link)`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.text};
+`
+const Avatar = styled(Image)`
+  width: 100%;
+  max-width: 273px;
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    max-width: fit-content;
+  }
 `
 const Title = styled.h2`
   margin: 0;
@@ -56,9 +67,9 @@ const Name = styled.p`
 
 export function Speaker(props: Props) {
   const { i18n } = useTranslation()
-  const { talk, speaker } = props
+  const { talk, speaker, avatar } = props
   const { uuid, title, titleJa } = talk
-  const { name, photoURL } = speaker
+  const { name } = speaker
 
   const enOrJa = (enStr: string, jaStr: string) => {
     return i18n.language === "en" ? enStr || jaStr : jaStr || enStr
@@ -66,7 +77,7 @@ export function Speaker(props: Props) {
 
   return (
     <LinkContainer to={`talk/${uuid}`}>
-      <SquareAvatar src={photoURL} />
+      <Avatar fluid={avatar} loading="lazy" />
       <Title>{enOrJa(title, titleJa)}</Title>
       <Name>{name}</Name>
     </LinkContainer>

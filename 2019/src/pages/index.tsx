@@ -63,6 +63,7 @@ export default function IndexPage() {
   const {
     allSpeakersYaml,
     allSponsorsYaml,
+    allFile,
     allTalksYaml,
   } = useStaticQuery(graphql`
     query {
@@ -83,7 +84,6 @@ export default function IndexPage() {
             name
             biography
             biographyJa
-            photoURL
           }
         }
       }
@@ -101,11 +101,29 @@ export default function IndexPage() {
           }
         }
       }
+      allFile(filter: { relativePath: { regex: "/speakers/" } }) {
+        nodes {
+          childImageSharp {
+            fluid(maxWidth: 262, maxHeight: 262) {
+              originalName
+              aspectRatio
+              src
+              srcSet
+              srcWebp
+              srcSetWebp
+              sizes
+            }
+          }
+        }
+      }
     }
   `)
   const guestSpeakers = allSpeakersYaml.edges.map(({ node }: any) => node)
   const sponsors = allSponsorsYaml.edges.map(({ node }: any) => node)
   const talks = allTalksYaml.edges.map(({ node }: any) => node)
+  const avatars = allFile.nodes
+    .filter((avatar: any) => avatar.childImageSharp)
+    .map((avatar: any) => avatar.childImageSharp.fluid)
 
   return (
     <Layout>
@@ -122,7 +140,11 @@ export default function IndexPage() {
 
           <Card>
             <SubTitle>{t("guestSpeakers")}</SubTitle>
-            <SpeakerList speakers={guestSpeakers} talks={talks} />
+            <SpeakerList
+              speakers={guestSpeakers}
+              avatars={avatars}
+              talks={talks}
+            />
             <Centerize>
               <LinkButton color="primary" to="/speakers/">
                 {t("goToGuests")}

@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
+import Image from "gatsby-image"
 
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
@@ -13,6 +14,7 @@ import { SubTitle } from "../components/SubTitle"
 type Props = {
   pageContext: {
     speakers: SpeakerType[]
+    avatars: any[]
     talk: TalkType
   }
 }
@@ -40,7 +42,7 @@ const Biography = styled(Description)`
     margin-top: 40px;
   }
 `
-const Avatar = styled.img`
+const Avatar = styled(Image)`
   width: 100%;
   max-width: 273px;
 
@@ -67,7 +69,7 @@ const TalkTitle = styled(SubTitle)`
 export default function Speaker(props: Props) {
   const { i18n } = useTranslation()
   const {
-    pageContext: { speakers, talk },
+    pageContext: { speakers, avatars, talk },
   } = props
   const {
     title,
@@ -92,9 +94,9 @@ export default function Speaker(props: Props) {
       <ResponsiveBox>
         <Breadcrumb path={["talk", title]} />
         <Title>{speakerNames}</Title>
-        {speakers.map(speaker => (
+        {speakers.map((speaker, i) => (
           <SpeakerBox key={speaker.uuid}>
-            <Avatar src={speaker.photoURL} />
+            <Avatar fluid={avatars[i]} loading="eager" />
             <Biography>
               {enOrJa(speaker.biography, speaker.biographyJa)}
             </Biography>

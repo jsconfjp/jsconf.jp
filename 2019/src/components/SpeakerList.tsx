@@ -1,9 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import { Speaker, SpeakerType, TalkType } from "./Speaker"
+import { Speaker, SpeakerType, TalkType, AvatarType } from "./Speaker"
 
 export type Props = {
   speakers: SpeakerType[]
+  avatars: AvatarType[]
   talks: TalkType[]
 }
 
@@ -21,13 +22,17 @@ const Container = styled.div`
 `
 
 export function SpeakerList(props: Props) {
-  const { speakers, talks } = props
+  const { speakers, avatars, talks } = props
   const talkMap: { [uuid: string]: TalkType } = talks.reduce(
     (acc, talk) =>
       talk.speakerIDs.reduce(
         (acc, speakerID) => ({ ...acc, [speakerID]: talk }),
         acc,
       ),
+    {},
+  )
+  const avatarMap: { [uuid: string]: AvatarType } = avatars.reduce(
+    (acc, avatar) => ({ ...acc, [avatar.originalName.split(".")[0]]: avatar }),
     {},
   )
 
@@ -41,6 +46,7 @@ export function SpeakerList(props: Props) {
               key={speaker.name}
               speaker={speaker}
               talk={talkMap[speaker.uuid]}
+              avatar={avatarMap[speaker.uuid]}
             />
           )
         })}
