@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import Image from "gatsby-image"
+import Markdown from "react-markdown"
 
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
@@ -28,7 +29,7 @@ const SpeakerBox = styled.div`
     flex-direction: column;
   }
 `
-const Description = styled.p`
+const Description = styled(Markdown)`
   font-family: ${({ theme }) => theme.fonts.text};
   font-size: 18px;
 `
@@ -97,9 +98,9 @@ export default function Speaker(props: Props) {
         {speakers.map((speaker, i) => (
           <SpeakerBox key={speaker.uuid}>
             <Avatar fluid={avatars[i]} loading="eager" />
-            <Biography>
-              {enOrJa(speaker.biography, speaker.biographyJa)}
-            </Biography>
+            <Biography
+              source={enOrJa(speaker.biography, speaker.biographyJa)}
+            />
           </SpeakerBox>
         ))}
         <TalkBox>
@@ -109,12 +110,12 @@ export default function Speaker(props: Props) {
             <br />
             Room: {room}
             <br />
-            Spoken language: {spokenLanguage}
+            Spoken language: {spokenLanguage || "TBA"}
             <br />
-            Slide language: {slideLanguage}
+            Slide language: {slideLanguage || "TBA"}
             <br />
           </p>
-          <Description>{enOrJa(description, descriptionJa)}</Description>
+          <Description source={enOrJa(description, descriptionJa)} />
         </TalkBox>
       </ResponsiveBox>
     </Layout>
