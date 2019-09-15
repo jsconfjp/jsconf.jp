@@ -91,7 +91,10 @@ export default function Speaker(props: Props) {
 
   return (
     <Layout>
-      <SEO title={`${enOrJa(title, titleJa)} - ${speakerNames}`} />
+      <SEO
+        title={`${enOrJa(title, titleJa)} - ${speakerNames}`}
+        ogImage={avatars[0].originalImg}
+      />
       <ResponsiveBox>
         <Breadcrumb path={["talk", title]} />
         <Title>{speakerNames}</Title>

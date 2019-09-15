@@ -204,7 +204,6 @@
     カナダのバンクーバーでJavaScriptを書いたりJapaneseSushiを握ったりしています。
 - uuid: nobuhiko-sawai
   name: 澤井宣彦
-  biography: |
-    TODO
+  # biography: ''
   biographyJa: |
     株式会社FiNC Technologiesにて、Railsを用いたマイクロサービスアーキテクチャによるアプリのサーバサイドとReact.jsを用いた法人向けサービスのフロントエンド開発を担当する。
