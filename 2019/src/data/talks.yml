@@ -331,7 +331,7 @@
     - Lerna
   speakerIDs:
     - hidetaka-okamoto
-- uuid: 最新のWeb技術でIoT開発をする
+- uuid: iot-development-with-modern-web-technologies
   date: "2019/12/01"
   startsAt: "17:15"
   endsAt: "17:45"
@@ -378,7 +378,7 @@
   # descriptionJa: ""
   speakerIDs:
     - eiji-kitamura
-- uuid: Node.js でつくる Node.js - WASM ミニミニコンパイラー
+- uuid: create-nodejs-with-nodejs-tiny-wasm-compiler
   date: 2019/11/30
   startsAt: "18:15"
   endsAt: "19:15"
@@ -637,7 +637,7 @@
   # descriptionJa: ""
   speakerIDs:
     - jarrod-overson
-- uuid: JavaScriptとSwift/JavaをつなげるCapacitorと、これからのWeb Frontned.
+- uuid: connect-javascript-swift-and-java-with-capacitor
   date: "2019/12/01"
   startsAt: "16:00"
   endsAt: "16:30"
@@ -725,7 +725,7 @@
   # description: ""
   # descriptionJa: ""
   speakerIDs: []
-- uuid: 覚醒するアクセシビリティ
+- uuid: awakening-accessibility
   date: 2019/11/30
   startsAt: "14:45"
   endsAt: "15:15"
@@ -782,7 +782,7 @@
     ※このトークは英語で行う予定ですが、日本語での補足も入れてながら行いたいと思います。
   speakerIDs:
     - toru-kobayashi
-- uuid: 大規模アプリケーション開発でのElm実践
+- uuid: practical-elm-on-large-scale-development-projects
   date: "2019/12/01"
   startsAt: "16:45"
   endsAt: "17:15"
@@ -817,7 +817,7 @@
   # descriptionJa: TODO
   speakerIDs:
     - benjamin-gruenbaum
-- uuid: "JavaScript AST プログラミング: 入門とその1歩先へ"
+- uuid: ast-programming-with-javascript-beyond-the-beginner
   date: 2019/12/01
   startsAt: "15:30"
   endsAt: "16:00"
@@ -830,7 +830,7 @@
     Babel や ESLint の登場により JavaScript の AST に触れる機会は若干増えてきましたが、それでもほとんどのプログラマは触れたことがないのではないかと思います。このセッションでは、まず JavaScript AST の入門から始まり、ライブコーディング形式で実際にツールを作りながら、 JavaScript AST を扱うプログラミングの勘所をご覧いただきます。
   speakerIDs:
     - takuto-wada
-- uuid: JavaScriptのままでTypeScriptを始める
+- uuid: starting-typescript-with-javascript
   date: 2019/12/01
   startsAt: "14:45"
   endsAt: "15:15"
@@ -840,7 +840,7 @@
   descriptionJa: TypeScript の --allowJs と --checkJs オプションを使うと *.js のまま tsc で型検証ができるので、コンパイルを開発手順に含めずに JS をそのまま扱う小さなプロジェクトや、あるいは導入できないあれやこれやの事情があっても型の恩恵に預かれる、という話をしたいです。
   speakerIDs:
     - ginpei-takanashi
-- uuid: GraphQLを用いたECサイトにおけるパフォーマンス改善
+- uuid: increase-performance-with-graphql-on-e-commerce-site
   date: 2019/12/01
   startsAt: "14:15"
   endsAt: "14:45"

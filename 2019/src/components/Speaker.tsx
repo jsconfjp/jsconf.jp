@@ -75,6 +75,16 @@ export function Speaker(props: Props) {
     return i18n.language === "en" ? enStr || jaStr : jaStr || enStr
   }
 
+  if (uuid.endsWith("TBA")) {
+    return (
+      <div>
+        <Avatar fluid={avatar} loading="lazy" />
+        <Title>{enOrJa(title, titleJa)}</Title>
+        <Name>{name}</Name>
+      </div>
+    )
+  }
+
   return (
     <LinkContainer to={`talk/${uuid}`}>
       <Avatar fluid={avatar} loading="lazy" />
