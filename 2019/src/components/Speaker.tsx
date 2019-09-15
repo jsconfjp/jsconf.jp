@@ -46,10 +46,6 @@ const LinkContainer = styled(Link)`
 const Avatar = styled(Image)`
   width: 100%;
   max-width: 273px;
-
-  ${({ theme }) => theme.breakpoints.mobile} {
-    max-width: fit-content;
-  }
 `
 const Title = styled.h2`
   margin: 0;
@@ -58,6 +54,7 @@ const Title = styled.h2`
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.text};
   font-size: 20px;
+  word-break: break-all;
 `
 const Name = styled.p`
   margin-bottom: 0;
@@ -80,7 +77,7 @@ export function Speaker(props: Props) {
     return (
       <div>
         <Avatar fluid={avatar} loading="lazy" />
-        <Title>{enOrJa(title, titleJa)}</Title>
+        <Title lang="en">{enOrJa(title, titleJa)}</Title>
         <Name>{name}</Name>
       </div>
     )

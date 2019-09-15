@@ -48,7 +48,7 @@ const Avatar = styled(Image)`
   max-width: 273px;
 
   ${({ theme }) => theme.breakpoints.mobile} {
-    max-width: fit-content;
+    max-width: 100%;
   }
 `
 const TalkBox = styled.div`
