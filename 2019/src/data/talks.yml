@@ -186,7 +186,7 @@
   # descriptionJa: ""
   speakerIDs:
     - nadieh-bremer
-- uuid:
+- uuid: guillermo-rauch-TBA
   date: 2019/11/30
   startsAt: "15:30"
   endsAt: "16:00"
@@ -213,7 +213,7 @@
   # descriptionJa: ""
   speakerIDs:
     - kitson-kelly
-- uuid:
+- uuid: shirley-wu-TBA
   date: "2019/12/01"
   startsAt: "11:00"
   endsAt: "11:30"
@@ -226,7 +226,7 @@
   # descriptionJa: ""
   speakerIDs:
     - shirley-wu
-- uuid:
+- uuid: jxck-TBA
   date: "2019/12/01"
   startsAt: "13:00"
   endsAt: "13:30"
@@ -239,7 +239,7 @@
   # descriptionJa: ""
   speakerIDs:
     - jxck
-- uuid:
+- uuid: jan-lehnardt-TBA
   date: "2019/12/01"
   startsAt: "14:15"
   endsAt: "14:45"
@@ -574,7 +574,7 @@
     React アプリ作者の皆さん、React や依存モジュール群のライセンスに違反してない自信はありますか？CRA (Create React App) でアプリを作るとデフォルトで React のライセンス違反になってしまっているのはご存じですか？React のライセンス表記問題と解決策についてお話しします。
   speakerIDs:
     - dynamis
-- uuid:
+- uuid: henry-zhu-TBA
   date: 2019/11/30
   startsAt: "14:45"
   endsAt: "15:15"
@@ -671,7 +671,7 @@
     そんな夢のようなことが本当にできるのか、できるとしたらどのくらいの難易度で、どのくらいの効果があるのか。実際にやってみた結果を報告します。
   speakerIDs:
     - fuji-goro
-- uuid:
+- uuid: dominic-tarr-TBA
   date: 2019/11/30
   startsAt: "16:00"
   endsAt: "16:30"
@@ -700,7 +700,7 @@
   # descriptionJa: ""
   speakerIDs:
     - irina-shestak
-- uuid:
+- uuid: mariko-kosaka-TBA
   date: "2019/12/01"
   startsAt: "18:30"
   endsAt: "19:00"
