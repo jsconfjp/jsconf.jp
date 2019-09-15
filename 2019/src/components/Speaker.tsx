@@ -1,7 +1,9 @@
-import React, { useLayoutEffect, useState, useRef } from "react"
+import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
+
+import { SquareAvatar } from "./SquareAvatar"
 
 export type TalkType = {
   uuid: string
@@ -37,10 +39,6 @@ const LinkContainer = styled(Link)`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.text};
 `
-const Avatar = styled.img`
-  width: 100%;
-  object-fit: cover;
-`
 const Title = styled.h2`
   margin: 0;
   padding: 10px;
@@ -61,14 +59,6 @@ export function Speaker(props: Props) {
   const { talk, speaker } = props
   const { uuid, title, titleJa } = talk
   const { name, photoURL } = speaker
-  const ref = useRef<HTMLImageElement>(null)
-  const [width, setWidth] = useState<string | number>("auto")
-  useLayoutEffect(() => {
-    return () => {
-      const { width } = ref.current!.getBoundingClientRect()
-      setWidth(width)
-    }
-  }, [ref])
 
   const enOrJa = (enStr: string, jaStr: string) => {
     return i18n.language === "en" ? enStr || jaStr : jaStr || enStr
@@ -76,7 +66,7 @@ export function Speaker(props: Props) {
 
   return (
     <LinkContainer to={`talk/${uuid}`}>
-      <Avatar src={photoURL} width="100%" height={width} ref={ref} />
+      <SquareAvatar src={photoURL} />
       <Title>{enOrJa(title, titleJa)}</Title>
       <Name>{name}</Name>
     </LinkContainer>
