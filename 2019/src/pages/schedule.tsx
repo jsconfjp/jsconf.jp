@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useLayoutEffect } from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { useStaticQuery, graphql } from "gatsby"
@@ -11,7 +11,6 @@ import { SubTitle as _SubTitle } from "../components/SubTitle"
 import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
 import { LinkButton } from "../components/LinkButton"
-import { SmoothScroll } from "../components/SmoothScroll"
 import { TalkType, SpeakerType } from "../components/Speaker"
 import { generateTimetable } from "../util/generateTimetable"
 import { dates } from "../util/misc"
@@ -137,6 +136,21 @@ export default function SchedulePage() {
     dateStyle: "medium",
   })
 
+  // Open page with hash (ex. direct access, reload)
+  useLayoutEffect(() => {
+    if (!location.hash) {
+      return
+    }
+
+    const selector = location.hash
+    const el = document.querySelector(selector)
+    if (!el) {
+      return
+    }
+    const { top } = el.getBoundingClientRect()
+    window.scrollTo({ top })
+  }, [])
+
   return (
     <Layout>
       <SEO title={t("schedule")} description={t("schedule.description")} />{" "}
@@ -144,16 +158,12 @@ export default function SchedulePage() {
         <Breadcrumb path={[t("schedule")]} />
         <Title>{t("schedule")}</Title>
         <DaysButtonBox>
-          <SmoothScroll selector="#day1">
-            <LinkButton color="secondary" size="large" to="/schedule#day1">
-              {t("day1")} ({dateTimeFormatter.format(dates.day1)})
-            </LinkButton>
-          </SmoothScroll>
-          <SmoothScroll selector="#day2">
-            <LinkButton color="secondary" size="large" to="/schedule#day2">
-              {t("day2")} ({dateTimeFormatter.format(dates.day2)})
-            </LinkButton>
-          </SmoothScroll>
+          <LinkButton color="secondary" size="large" to="/schedule/#day1">
+            {t("day1")} ({dateTimeFormatter.format(dates.day1)})
+          </LinkButton>
+          <LinkButton color="secondary" size="large" to="/schedule/#day2">
+            {t("day2")} ({dateTimeFormatter.format(dates.day2)})
+          </LinkButton>
         </DaysButtonBox>
 
         {days.map(day => (
