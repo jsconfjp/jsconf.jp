@@ -11,6 +11,7 @@ import { SubTitle as _SubTitle } from "../components/SubTitle"
 import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
 import { LinkButton } from "../components/LinkButton"
+import { RoomLegend } from "../components/RoomLegend"
 import { TalkType, SpeakerType } from "../components/Speaker"
 import { generateTimetable } from "../util/generateTimetable"
 import { dates } from "../util/misc"
@@ -30,6 +31,9 @@ const SubTitle = styled(_SubTitle)`
   padding: 0.2em 1em;
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 `
+const RoomLegendBox = styled.div`
+  margin-bottom: 2em;
+`
 const TimeBox = styled.div`
   display: grid;
   width: 100%;
@@ -46,7 +50,7 @@ const Link = styled(_Link)`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.text};
 `
-const Box = styled.div<{ area: string; isBreak: boolean }>`
+const Box = styled.div<{ area: "A" | "B"; isBreak: boolean }>`
   grid-column: ${({ area }) => area};
   position: relative;
   width: 100%;
@@ -54,18 +58,12 @@ const Box = styled.div<{ area: string; isBreak: boolean }>`
   padding: 1em;
   margin-bottom: 0.5em;
   background-color: ${({ area, isBreak, theme }) =>
-    isBreak
-      ? theme.colors.disabled
-      : area === "A"
-      ? theme.colors.roomA
-      : theme.colors.roomB};
+    // @ts-ignore Dynamic access
+    isBreak ? theme.colors.disabled : theme.colors[`room${area}`]};
   border-left: 5px solid;
   border-color: ${({ area, isBreak, theme }) =>
-    isBreak
-      ? theme.colors.disabledText
-      : area === "A"
-      ? theme.colors.roomABorder
-      : theme.colors.roomBBorder};
+    // @ts-ignore Dynamic access
+    isBreak ? theme.colors.disabledText : theme.colors[`room${area}Border`]};
 
   ::before {
     content: "";
@@ -77,11 +75,8 @@ const Box = styled.div<{ area: string; isBreak: boolean }>`
     height: 16px;
     border-radius: 100%;
     background-color: ${({ area, isBreak, theme }) =>
-      isBreak
-        ? theme.colors.disabledText
-        : area === "A"
-        ? theme.colors.roomABorder
-        : theme.colors.roomBBorder};
+      // @ts-ignore Dynamic access
+      isBreak ? theme.colors.disabledText : theme.colors[`room${area}Border`]};
   }
 `
 const Text = styled.span`
@@ -171,6 +166,9 @@ export default function SchedulePage() {
             <SubTitle id={day}>
               {t(day)} ({dateTimeFormatter.format(dates[day])})
             </SubTitle>
+            <RoomLegendBox>
+              <RoomLegend />
+            </RoomLegendBox>
             {timetable[day].map(({ timebox, sessions }) => (
               <TimeBox key={timebox}>
                 {sessions.map(s => {

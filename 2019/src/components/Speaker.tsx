@@ -16,7 +16,7 @@ export type TalkType = {
   date: string
   startsAt: string
   endsAt: string
-  room: string
+  room: "A" | "B"
 }
 
 export type SpeakerType = {
