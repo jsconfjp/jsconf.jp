@@ -28,7 +28,7 @@ export function Breadcrumb(props: Props) {
       <Link to="/">
         <Text>{t("top")}</Text>
       </Link>
-      {path.map(label => {
+      {path.filter(Boolean).map(label => {
         const path = typeof label === "string" ? { label, to: null } : label
         return (
           <React.Fragment key={path.label}>
