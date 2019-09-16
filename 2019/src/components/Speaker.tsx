@@ -73,7 +73,7 @@ export function Speaker(props: Props) {
     return i18n.language === "en" ? enStr || jaStr : jaStr || enStr
   }
 
-  if (!uuid || uuid.endsWith("TBA")) {
+  if (!uuid || title === "TBA") {
     return (
       <div>
         <Avatar fluid={avatar} loading="lazy" />
