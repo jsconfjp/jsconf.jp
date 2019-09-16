@@ -14,6 +14,7 @@ import { SponsorList } from "../components/SponsorList"
 import { LinkButton } from "../components/LinkButton"
 import { Card as _Card } from "../components/Card"
 import { Centerize } from "../components/Centerize"
+import { dates } from "../util/misc"
 import bg from "../images/bg.png"
 import bgFlipX from "../images/bg-flip-x.png"
 
@@ -59,7 +60,7 @@ const SponsorBox = styled.div`
 `
 
 export default function IndexPage() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const {
     allSpeakersYaml,
     allSponsorsYaml,
@@ -124,6 +125,10 @@ export default function IndexPage() {
   const avatars = allFile.nodes
     .filter((avatar: any) => avatar.childImageSharp)
     .map((avatar: any) => avatar.childImageSharp.fluid)
+  const dateTimeFormatter = new Intl.DateTimeFormat(i18n.language, {
+    // @ts-ignore dateStyle' does not exist in type 'DateTimeFormatOptions'
+    dateStyle: "medium",
+  })
 
   return (
     <Layout>
@@ -156,10 +161,10 @@ export default function IndexPage() {
             <SubTitle>{t("schedule")}</SubTitle>
             <SchedulesBox>
               <LinkButton color="secondary" size="large" to="/schedule/#day1">
-                {t("day1")}
+                {t("day1")} ({dateTimeFormatter.format(dates.day1)})
               </LinkButton>
               <LinkButton color="secondary" size="large" to="/schedule/#day2">
-                {t("day2")}
+                {t("day2")} ({dateTimeFormatter.format(dates.day2)})
               </LinkButton>
             </SchedulesBox>
           </Centerize>

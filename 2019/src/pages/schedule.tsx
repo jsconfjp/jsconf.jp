@@ -14,6 +14,7 @@ import { LinkButton } from "../components/LinkButton"
 import { SmoothScroll } from "../components/SmoothScroll"
 import { TalkType, SpeakerType } from "../components/Speaker"
 import { generateTimetable } from "../util/generateTimetable"
+import { dates } from "../util/misc"
 
 const DaysButtonBox = styled.div`
   display: flex;
@@ -131,6 +132,10 @@ export default function SchedulePage() {
   const enOrJa = (enStr: string, jaStr: string) => {
     return i18n.language === "en" ? enStr || jaStr : jaStr || enStr
   }
+  const dateTimeFormatter = new Intl.DateTimeFormat(i18n.language, {
+    // @ts-ignore dateStyle' does not exist in type 'DateTimeFormatOptions'
+    dateStyle: "medium",
+  })
 
   return (
     <Layout>
@@ -141,19 +146,21 @@ export default function SchedulePage() {
         <DaysButtonBox>
           <SmoothScroll selector="#day1">
             <LinkButton color="secondary" size="large" to="/schedule#day1">
-              {t("day1")}
+              {t("day1")} ({dateTimeFormatter.format(dates.day1)})
             </LinkButton>
           </SmoothScroll>
           <SmoothScroll selector="#day2">
             <LinkButton color="secondary" size="large" to="/schedule#day2">
-              {t("day2")}
+              {t("day2")} ({dateTimeFormatter.format(dates.day2)})
             </LinkButton>
           </SmoothScroll>
         </DaysButtonBox>
 
         {days.map(day => (
           <React.Fragment key={day}>
-            <SubTitle id={day}>{t(day)}</SubTitle>
+            <SubTitle id={day}>
+              {t(day)} ({dateTimeFormatter.format(dates[day])})
+            </SubTitle>
             {timetable[day].map(({ timebox, sessions }) => (
               <TimeBox key={timebox}>
                 {sessions.map(s => {
