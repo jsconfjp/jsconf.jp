@@ -149,7 +149,7 @@
   room: A
   title: Making less of the web with feature policy
   # titleJa: ""
-  spokenLanguage: en
+  spokenLanguage: English
   slideLanguage: ""
   description: |
     The web platform has seen a decade of furious expansion, with websites now able to access USB, vibration, bluetooth, and geolocation, as well as store huge amounts of data on end user devices, trigger background sync and notifications, and even get paid from users' digital wallets. But with this expansion has come an increased scope for attacks, costly mistakes and performance regressions.  Feature policy is a new feature designed to actually disable or limit features of the platform.  With a feature policy, developers can solve performance issues, improve security, police their development team's best practices, and even stop third party scripts from misbehaving. All with one new HTTP header.
@@ -163,7 +163,7 @@
   room: A
   title: The State of JavaScript
   # titleJa: ""
-  spokenLanguage: en
+  spokenLanguage: English
   slideLanguage: ""
   description: |
     We run the yearly State of JavaScript survey (http://stateofjs.com). In this talk, we'll introduce the project, take a look back at past surveys and trends, and maybe even preview some of the results from the upcoming 2019 survey.
@@ -178,7 +178,7 @@
   room: A
   title: Visualizing Connections
   # titleJa: ""
-  spokenLanguage: en
+  spokenLanguage: English
   slideLanguage: ""
   description: |
     Connections are a part of us, of the world. From the connections between people, between cultures, within language, and more. In these days when more data is collected daily than we could ever hope to explore, the variety in connections being gathered is opening up the possibility to visualize these (often complex) networks.
@@ -193,7 +193,7 @@
   room: A
   title: TBA
   # titleJa: ""
-  spokenLanguage: en
+  spokenLanguage: English
   slideLanguage: ""
   # description: ""
   # descriptionJa: ""
@@ -206,7 +206,7 @@
   room: A
   title: Deno - A new way to JavaScript
   # titleJa: ""
-  spokenLanguage: en
+  spokenLanguage: English
   slideLanguage: ""
   description: |
     Deno is a secure TypeScript/JavaScript runtime built with Rust and V8.  In this talk we will discuss the brief yet interesting history of Deno so far, the current state of the project, some of the design decisions and architecture, as well as provide a live demonstration.
@@ -220,7 +220,7 @@
   room: A
   title: TBA
   # titleJa: ""
-  spokenLanguage: en
+  spokenLanguage: English
   slideLanguage: ""
   # description: ""
   # descriptionJa: ""
@@ -233,7 +233,7 @@
   room: A
   title: TBA
   # titleJa: ""
-  spokenLanguage: ja
+  spokenLanguage: Japanese
   slideLanguage: ""
   # description: ""
   # descriptionJa: ""
@@ -246,7 +246,7 @@
   room: A
   title: TBA
   # titleJa: ""
-  spokenLanguage: en
+  spokenLanguage: English
   slideLanguage: ""
   # description: ""
   # descriptionJa: ""
@@ -259,7 +259,7 @@
   room: A
   title: Hypercharged
   # titleJa: ""
-  spokenLanguage: en
+  spokenLanguage: English
   slideLanguage: ""
   description: |
     Write what, now how: A declarative approach to presentation, side effects, and subscriptions.
@@ -273,7 +273,7 @@
   room: A
   title: Predictive Prefetching for improved performance
   # titleJa: ""
-  spokenLanguage: en
+  spokenLanguage: English
   slideLanguage: ""
   description: |
     This talk outlines an idea for applying a data-driven approach to optimising loading performance on the web using Guess JS. By building a model of pages a user is likely to visit, given an arbitrary entry-page, a solution could calculate the likelihood a user will visit a given next page or set of pages and prefetch resources for them while the user is still viewing their current page. This has the possibility of improving page-load performance for subsequent page visits as there's a strong chance a page will already be in the user's cache.
@@ -287,7 +287,7 @@
   room: B
   title: Four Years of JS Procedural Generation
   # titleJa: ""
-  spokenLanguage: ja
+  spokenLanguage: Japanese
   slideLanguage: ""
   description: |
     This talk will be a demo-heavy melange of techniques born of 4-5 years of work on procedural generation in JS - specifically with 3D voxel worlds, procedural music, and image synthesis. The takeaway for listeners will be inspiration and starting points for using ProcGen in their own projects or everyday work. Demos all run in Node or the browser - 3D demos use a webGL voxel engine (https://github.com/andyhall/noa), music demos play dynamically via WebAudio, etc.
@@ -302,7 +302,7 @@
   room: B
   title: Build and scale multiple Voice application by using TypeScript
   titleJa: Build and scale multiple Voice application by using TypeScript
-  spokenLanguage: ja
+  spokenLanguage: Japanese
   slideLanguage: ""
   description: |
     We can build own voice application by using Node.js and TypeScript.
@@ -338,7 +338,7 @@
   room: B
   # title: TODO
   titleJa: 最新のWeb技術でIoT開発をする
-  spokenLanguage: ja
+  spokenLanguage: Japanese
   slideLanguage: ""
   # description: ""
   descriptionJa: |
@@ -352,7 +352,7 @@
   room: B
   title: Building the layered server application achieved by InversifyJS
   titleJa: InversifyJSを用いたレイヤードアーキテクチャの構築
-  spokenLanguage: ja
+  spokenLanguage: Japanese
   slideLanguage: ""
   description: |
     We have traditionally suffered from tightly coupled applications. The complexity of dependencies hinders testing and leads to confusion. Let's simplify it using the library InversifyJS for DIP (Dependency Inversion Principle).
@@ -371,7 +371,7 @@
   room: B
   title: Building one touch sign-in experience using WebAuthn
   # titleJa: ""
-  spokenLanguage: en
+  spokenLanguage: English
   slideLanguage: ""
   description: |
     WebAuthn is a browser API that enables strong authentication using public key based cryptography. In this session we will walk through basics of WebAuthn and how it works. Then we'll cover how to build a user experience that enables users to re-authenticate to a website using a fingerprint (or a biometric sensor).
@@ -385,7 +385,7 @@
   room: A
   # title: TODO
   titleJa: Node.js でつくる Node.js - WASM ミニミニコンパイラー
-  spokenLanguage: ja
+  spokenLanguage: Japanese
   slideLanguage: ""
   # description: ""
   descriptionJa: |
@@ -399,7 +399,7 @@
   room: A
   title: WebComponents era phase 2
   # titleJa: ""
-  spokenLanguage: ja
+  spokenLanguage: Japanese
   slideLanguage: ""
   # description: ""
   descriptionJa: |
@@ -415,7 +415,7 @@
   room: A
   title: Discovering Animals with AI and Javascript
   # titleJa: ""
-  spokenLanguage: ja
+  spokenLanguage: Japanese
   slideLanguage: ""
   description: |
     As a volunteer for the Vancouver aquarium, I built a web app for identifying hundreds of different kinds of animals that we have on-site and I’d like to share how others can do the same. I’ll give a quick introduction to machine learning, then go over how it can be used to identify animals. Then, I’ll show  how that can be done on mobile browsers using Tensorflow JS and the user’s phone camera.
@@ -447,7 +447,7 @@
   room: B
   title: "Wrap-up: Runtime-friendly JavaScript"
   # titleJa: ""
-  spokenLanguage: ja
+  spokenLanguage: Japanese
   slideLanguage: ""
   description: |
     Let's wrap up what runtime-friendly performant JavaScript is like, introducing how runtime(such as v8, node.js etc.) handles scripts: Internal Representation, JIT, Eventloop etc. I will also mention tools(node options, chrome devtool) and the overhead of normal language feature(like object instantiation and Map/Set).
@@ -519,7 +519,7 @@
   room: B
   title: Migration from React Native to PWA
   # titleJa: ""
-  spokenLanguage: ja
+  spokenLanguage: Japanese
   slideLanguage: ""
   # description: ""
   descriptionJa: |
@@ -549,7 +549,7 @@
   room: A
   title: "Browser APIs: the unknown Super Heroes"
   # titleJa: ""
-  spokenLanguage: en
+  spokenLanguage: English
   slideLanguage: ""
   description: |
     Still think browsers are only capable of parsing HTML, CSS and JavaScript? Think again!
@@ -566,7 +566,7 @@
   room: A
   title: License violation of React Applications
   titleJa: React アプリのライセンス違反について
-  spokenLanguage: ja
+  spokenLanguage: Japanese
   slideLanguage: ""
   description: |
     Hi React app creators, are you sure your React applications don't violate license of React or dependent modules? Do you know if you are creating apps with CRA (Create React App), you will violate licenses of React by default? I'll talk about license notice problems and it's solutions.
@@ -581,7 +581,7 @@
   room: A
   title: TBA
   # titleJa: ""
-  spokenLanguage: en
+  spokenLanguage: English
   slideLanguage: ""
   # description: ""
   # descriptionJa: ""
@@ -594,7 +594,7 @@
   room: A
   title: Cache Me If You Can
   # titleJa: ""
-  spokenLanguage: en
+  spokenLanguage: English
   slideLanguage: ""
   description: |
     Web caching is one of the most powerful techniques you can use to improve the performance of your websites. But like with many other optimization methods, it's not always clear where to start. When should you cache your resources? For how long? And how do you invalidate them? It can be an intimidating subject; but fear not, understanding its fundamentals is surprisingly simple.  In this talk, I will walk you through the basics of HTTP Caching: how it works, how to manage it, and how to implement simple but effective strategies that will make your sites faster, leaner, and more responsive.
@@ -608,7 +608,7 @@
   room: A
   title: "Pika: Reimagining the Registry"
   # titleJa: ""
-  spokenLanguage: en
+  spokenLanguage: English
   slideLanguage: ""
   description: |
     What if you could do web development today without a bundler?
@@ -624,7 +624,7 @@
   room: A
   title: Analysis of an exploited npm package
   # titleJa: ""
-  spokenLanguage: en
+  spokenLanguage: English
   slideLanguage: ""
   description: |
     How did 8 million developers download malicious code with no one noticing?
@@ -644,7 +644,7 @@
   room: B
   # title: TODO
   titleJa: JavaScriptとSwift/JavaをつなげるCapacitorと、これからのWeb Frontned.
-  spokenLanguage: ja
+  spokenLanguage: Japanese
   slideLanguage: ""
   # description: ""
   descriptionJa: |
@@ -660,7 +660,7 @@
   room: B
   title: How to Boost Your Code with WebAssembly
   # titleJa: ""
-  spokenLanguage: ja
+  spokenLanguage: Japanese
   slideLanguage: ""
   # description: ""
   descriptionJa: |
@@ -678,7 +678,7 @@
   room: A
   title: TBA
   # titleJa: ""
-  spokenLanguage: en
+  spokenLanguage: English
   slideLanguage: ""
   # description: ""
   # descriptionJa: ""
@@ -691,7 +691,7 @@
   room: A
   title: JavaScript, Rust and Wasm Walk into a Ramen Shop ...
   # titleJa: ""
-  spokenLanguage: en
+  spokenLanguage: English
   slideLanguage: ""
   description: |
     So you heard you can run WebAssembly in the browser, but what does this look like IRL? Seeking the much talked about performance benefits of running WASM in the browser, Compass (GUI for MongoDB) took the great leap forward and rewrote part of the application -- a schema parser responsible for document analysis -- in Rust. As it turns out, the rumours are true, I repeat the rumours are true: offloading parts of your application to Rust makes it fast, and in some of our cases, heaps fast.
@@ -707,7 +707,7 @@
   room: A
   title: TBA
   # titleJa: ""
-  spokenLanguage: ja
+  spokenLanguage: Japanese
   slideLanguage: ""
   # description: ""
   # descriptionJa: ""
@@ -720,7 +720,7 @@
   room: A
   title: Closing
   # titleJa: ""
-  spokenLanguage: ja
+  spokenLanguage: Japanese
   slideLanguage: ""
   # description: ""
   # descriptionJa: ""
@@ -732,7 +732,7 @@
   room: B
   # title: TODO
   titleJa: 覚醒するアクセシビリティ
-  spokenLanguage: ja
+  spokenLanguage: Japanese
   slideLanguage: ""
   # description: ""
   descriptionJa: |
@@ -748,7 +748,7 @@
   room: B
   title: Declarative Programming with React
   titleJa: Declarative Programming with React
-  spokenLanguage: en
+  spokenLanguage: English
   slideLanguage: ""
   description: |
     React is a JavaScript library for building user interfaces, which make UI programming declarative.
@@ -789,7 +789,7 @@
   room: B
   # title: TODO
   titleJa: 大規模アプリケーション開発でのElm実践
-  spokenLanguage: ja
+  spokenLanguage: Japanese
   # description:
   descriptionJa: |
     最近話題に上がるようになってきたAltJSのElmについてご紹介します。
@@ -805,7 +805,7 @@
   room: A
   title: Anatomy of a Click
   # titleJa: TODO
-  spokenLanguage: en
+  spokenLanguage: English
   description: |
     What actually happens when you click your mouse in your browser window?
 
@@ -824,7 +824,7 @@
   room: B
   # title: TODO
   titleJa: "JavaScript AST プログラミング: 入門とその1歩先へ"
-  spokenLanguage: ja
+  spokenLanguage: Japanese
   # description: TODO
   descriptionJa: |
     Babel や ESLint の登場により JavaScript の AST に触れる機会は若干増えてきましたが、それでもほとんどのプログラマは触れたことがないのではないかと思います。このセッションでは、まず JavaScript AST の入門から始まり、ライブコーディング形式で実際にツールを作りながら、 JavaScript AST を扱うプログラミングの勘所をご覧いただきます。
@@ -836,7 +836,7 @@
   endsAt: "15:15"
   room: B
   titleJa: JavaScriptのままでTypeScriptを始める
-  spokenLanguage: ja
+  spokenLanguage: Japanese
   descriptionJa: TypeScript の --allowJs と --checkJs オプションを使うと *.js のまま tsc で型検証ができるので、コンパイルを開発手順に含めずに JS をそのまま扱う小さなプロジェクトや、あるいは導入できないあれやこれやの事情があっても型の恩恵に預かれる、という話をしたいです。
   speakerIDs:
     - ginpei-takanashi
@@ -846,7 +846,7 @@
   endsAt: "14:45"
   room: B
   titleJa: GraphQLを用いたECサイトにおけるパフォーマンス改善
-  spokenLanguage: ja
+  spokenLanguage: Japanese
   descriptionJa: |
     概要: ECサイトリニューアルにおける事例を題材にサービスの性能改善の方法を実際の事例をもとにお話します。該当のサイトはGraphQL + React + SSRを導入しており、ベーシックな性能改善の話からGraphQLの活用例まで含めてお話する予定です。
 

@@ -33,5 +33,9 @@ export const ja: {
     moreDetails: "詳細",
     "venue.accessByNaritaAirport": "成田空港からJR 秋葉原駅まで約70分",
     "venue.accessByHanedaAirport": "羽田空港からJR 秋葉原駅まで約40分",
+    // @ts-ignore It's not defined in en.ts
+    Japanese: "日本語",
+    // @ts-ignore It's not defined in en.ts
+    English: "英語",
   },
 }

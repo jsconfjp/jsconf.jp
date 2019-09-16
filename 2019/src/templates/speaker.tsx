@@ -68,7 +68,7 @@ const TalkTitle = styled(SubTitle)`
 `
 
 export default function Speaker(props: Props) {
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
   const {
     pageContext: { speakers, avatars, talk },
   } = props
@@ -113,9 +113,13 @@ export default function Speaker(props: Props) {
             <br />
             Room: {room}
             <br />
-            Spoken language: {spokenLanguage || "TBA"}
-            <br />
-            Slide language: {slideLanguage || "TBA"}
+            Spoken language: {t(spokenLanguage)}
+            {slideLanguage ? (
+              <>
+                <br />
+                Slide language: {t(slideLanguage)}
+              </>
+            ) : null}
             <br />
           </p>
           <Description source={enOrJa(description, descriptionJa)} />
