@@ -153,10 +153,6 @@
   name: Raphaël Benitte
   biography: |
     Raphael Benitte is a graphic designer and data visualization expert. He created the Nivo.js dataviz library for React.
-- uuid: sacha-greif
-  name: Sacha Greif
-  biography: |
-    Sacha Greif is an independent designer and developer. He runs Sidebar, a daily design newsletter, and also created Vulcan.js, a full-stack JavaScript framework.
 - uuid: irina-shestak
   name: Irina Shestak
   biography: |
