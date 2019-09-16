@@ -142,7 +142,19 @@
   room: B
   title: Break
   speakerIDs: []
-- uuid: making-less-of-the-web-with-feature-policy
+- uuid: closing
+  date: "2019/12/01"
+  startsAt: "19:00"
+  endsAt: "19:30"
+  room: A
+  title: Closing
+  # titleJa: ""
+  spokenLanguage: Japanese
+  slideLanguage: ""
+  # description: ""
+  # descriptionJa: ""
+  speakerIDs: []
+- uuid: andrew-betts
   date: 2019/11/30
   startsAt: "17:15"
   endsAt: "17:45"
@@ -156,7 +168,7 @@
   # descriptionJa: ""
   speakerIDs:
     - andrew-betts
-- uuid: the-state-of-java-script
+- uuid: s-greif-r-benitte
   date: 2019/11/30
   startsAt: "13:30"
   endsAt: "14:00"
@@ -171,7 +183,7 @@
   speakerIDs:
     - sacha-greif
     - benitte-raphael
-- uuid: visualizing-connections
+- uuid: nadieh-bremer
   date: 2019/11/30
   startsAt: "14:15"
   endsAt: "14:45"
@@ -199,7 +211,7 @@
   # descriptionJa: ""
   speakerIDs:
     - guillermo-rauch
-- uuid: deno-a-new-way-to-java-script
+- uuid: kitson-kelly
   date: 2019/11/30
   startsAt: "16:45"
   endsAt: "17:15"
@@ -252,7 +264,7 @@
   # descriptionJa: ""
   speakerIDs:
     - jan-lehnardt
-- uuid: hypercharged
+- uuid: jorge-bucaran
   date: "2019/12/01"
   startsAt: "11:30"
   endsAt: "12:00"
@@ -266,7 +278,7 @@
   # descriptionJa: ""
   speakerIDs:
     - jorge-bucaran
-- uuid: predictive-prefetching-for-improved-performance
+- uuid: praveen-yedidi
   date: 2019/11/30
   startsAt: "18:15"
   endsAt: "18:25"
@@ -280,7 +292,7 @@
   # descriptionJa: ""
   speakerIDs:
     - praveen-yedidi
-- uuid: four-years-of-js-procedural-generation
+- uuid: andy-hall
   date: 2019/11/30
   startsAt: "16:45"
   endsAt: "17:15"
@@ -295,7 +307,7 @@
   # descriptionJa: ""
   speakerIDs:
     - andy-hall
-- uuid: build-and-scale-multiple-voice-application-by-using-type-script
+- uuid: hidetaka-okamoto
   date: "2019/12/01"
   startsAt: "11:30"
   endsAt: "12:00"
@@ -331,7 +343,7 @@
     - Lerna
   speakerIDs:
     - hidetaka-okamoto
-- uuid: iot-development-with-modern-web-technologies
+- uuid: kohei-kido
   date: "2019/12/01"
   startsAt: "17:15"
   endsAt: "17:45"
@@ -345,7 +357,7 @@
     JavaScriptはクライアントサイドでHTMLを動的に動かしたり、サーバーサイドとして様々な処理をしたりすることができますが、リアルサイドとして現実世界のモーターやセンサなどの"もの"を制御することもできます。リアルサイドでもJavaScriptを使うことで、ディスプレイの枠にとらわれない表現方法が可能になったり、部屋に人がいるかなどの現実の状態を取得する事が可能になったりと、できることがまた一段と広がります。 本セッションではJavaScriptでのリアルサイドについて、どんな技術選択肢があるかから扱う方法、どういったものが作れるか等についてお話します。
   speakerIDs:
     - kohei-kido
-- uuid: building-the-layered-server-application-achieved-by-inversify-js
+- uuid: okuno-kentaro
   date: "2019/12/01"
   startsAt: "11:00"
   endsAt: "11:30"
@@ -364,7 +376,7 @@
     InversifyJS, Knex.js, Express、そしてTypeScriptを組み合わせたサーバーアプリケーションの設計を紹介します。"
   speakerIDs:
     - okuno-kentaro
-- uuid: building-one-touch-sign-in-experience-using-web-authn
+- uuid: eiji-kitamura
   date: 2019/11/30
   startsAt: "14:15"
   endsAt: "14:45"
@@ -378,7 +390,7 @@
   # descriptionJa: ""
   speakerIDs:
     - eiji-kitamura
-- uuid: create-nodejs-with-nodejs-tiny-wasm-compiler
+- uuid: masashi-ganeko
   date: 2019/11/30
   startsAt: "18:45"
   endsAt: "18:55"
@@ -392,7 +404,7 @@
     昨年のセッション「Node.jsでつくるNode.js ミニインタープリター/コンパイラー」の続編です。WASMを学ぶために、Node.jsでミニミニWASMコンパイラーを作ってみました。前回使ったLLVMとはまた異なるWASMの仕組みを、ちょっとだけ垣間見ることができました。
   speakerIDs:
     - masashi-ganeko
-- uuid: web-components-era-phase-2
+- uuid: yoshiki-shibukawa
   date: 2019/11/30
   startsAt: "18:25"
   endsAt: "18:35"
@@ -408,7 +420,7 @@
     https://qiita.com/shibukawa/private/5a36147ec103d35c1b5e
   speakerIDs:
     - yoshiki-shibukawa
-- uuid: discovering-animals-with-ai-and-javascript
+- uuid: jonny-kalambay
   date: "2019/12/01"
   startsAt: "16:45"
   endsAt: "17:15"
@@ -440,7 +452,7 @@
     - マシーンラーニングのモデルをユーザーの協力で改善させる
   speakerIDs:
     - jonny-kalambay
-- uuid: wrap-up-runtime-friendly-java-script
+- uuid: sho-miyamoto
   date: 2019/11/30
   startsAt: "15:30"
   endsAt: "16:00"
@@ -512,7 +524,7 @@
   # descriptionJa: ""
   speakerIDs:
     - sho-miyamoto
-- uuid: migration-from-react-native-to-pwa
+- uuid: masato-ohba
   date: "2019/12/01"
   startsAt: "13:30"
   endsAt: "14:00"
@@ -542,7 +554,7 @@
       - iOS/Android/Webの3つのプラットフォームに対応するPWA/Hybrid app
   speakerIDs:
     - masato-ohba
-- uuid: browser-ap-is-the-unknown-super-heroes
+- uuid: rowdy-rabouw
   date: "2019/12/01"
   startsAt: "15:30"
   endsAt: "16:00"
@@ -559,7 +571,7 @@
   # descriptionJa: ""
   speakerIDs:
     - rowdy-rabouw
-- uuid: license-violation-of-react-applications
+- uuid: dynamis
   date: 2019/11/30
   startsAt: "18:55"
   endsAt: "19:05"
@@ -574,7 +586,7 @@
     React アプリ作者の皆さん、React や依存モジュール群のライセンスに違反してない自信はありますか？CRA (Create React App) でアプリを作るとデフォルトで React のライセンス違反になってしまっているのはご存じですか？React のライセンス表記問題と解決策についてお話しします。
   speakerIDs:
     - dynamis
-- uuid:
+- uuid: henry-zhu
   date: 2019/11/30
   startsAt: "14:45"
   endsAt: "15:15"
@@ -587,7 +599,7 @@
   # descriptionJa: ""
   speakerIDs:
     - henry-zhu
-- uuid: cache-me-if-you-can
+- uuid: maxi-ferreira
   date: 2019/11/30
   startsAt: "18:35"
   endsAt: "18:45"
@@ -601,7 +613,7 @@
   # descriptionJa: ""
   speakerIDs:
     - maxi-ferreira
-- uuid: pika-reimagining-the-registry
+- uuid: fred-schott
   date: "2019/12/01"
   startsAt: "17:15"
   endsAt: "17:45"
@@ -617,7 +629,7 @@
   # descriptionJa: ""
   speakerIDs:
     - fred-schott
-- uuid: analysis-of-an-exploited-npm-package
+- uuid: jarrod-overson
   date: "2019/12/01"
   startsAt: "14:45"
   endsAt: "15:15"
@@ -637,7 +649,7 @@
   # descriptionJa: ""
   speakerIDs:
     - jarrod-overson
-- uuid: connect-javascript-swift-and-java-with-capacitor
+- uuid: sakakibara
   date: "2019/12/01"
   startsAt: "16:00"
   endsAt: "16:30"
@@ -653,7 +665,7 @@
     本セッションではCapacitorの概要とプラグイン開発、そしてWeb Frontendが今後どうなっていくかを考えます。
   speakerIDs:
     - sakakibara
-- uuid: how-to-boost-your-code-with-web-assembly
+- uuid: fuji-goro
   date: 2019/11/30
   startsAt: "16:00"
   endsAt: "16:30"
@@ -671,7 +683,7 @@
     そんな夢のようなことが本当にできるのか、できるとしたらどのくらいの難易度で、どのくらいの効果があるのか。実際にやってみた結果を報告します。
   speakerIDs:
     - fuji-goro
-- uuid:
+- uuid: dominic-tarr
   date: 2019/11/30
   startsAt: "16:00"
   endsAt: "16:30"
@@ -684,7 +696,7 @@
   # descriptionJa: ""
   speakerIDs:
     - dominic-tarr
-- uuid: java-script-rust-and-wasm-walk-into-a-ramen-shop
+- uuid: irina-shestak
   date: "2019/12/01"
   startsAt: "13:30"
   endsAt: "14:00"
@@ -700,7 +712,7 @@
   # descriptionJa: ""
   speakerIDs:
     - irina-shestak
-- uuid:
+- uuid: mariko-kosaka
   date: "2019/12/01"
   startsAt: "18:30"
   endsAt: "19:00"
@@ -713,19 +725,7 @@
   # descriptionJa: ""
   speakerIDs:
     - mariko-kosaka
-- uuid: closing
-  date: "2019/12/01"
-  startsAt: "19:00"
-  endsAt: "19:30"
-  room: A
-  title: Closing
-  # titleJa: ""
-  spokenLanguage: Japanese
-  slideLanguage: ""
-  # description: ""
-  # descriptionJa: ""
-  speakerIDs: []
-- uuid: awakening-accessibility
+- uuid: lena-morita
   date: 2019/11/30
   startsAt: "14:45"
   endsAt: "15:15"
@@ -741,7 +741,7 @@
     「アクセシビリティって何？」という人から、「大事なのはわかっているけどいつも後回しにしてしまう」という人まで、明日からアクセシブルな実装をせずにはいられない、ウェブの本質に迫ります。
   speakerIDs:
     - lena-morita
-- uuid: declarative-programming-with-react
+- uuid: toru-kobayashi
   date: 2019/11/30
   startsAt: "17:15"
   endsAt: "17:45"
@@ -782,7 +782,7 @@
     ※このトークは英語で行う予定ですが、日本語での補足も入れてながら行いたいと思います。
   speakerIDs:
     - toru-kobayashi
-- uuid: practical-elm-on-large-scale-development-projects
+- uuid: satoshi-ebihara
   date: "2019/12/01"
   startsAt: "16:45"
   endsAt: "17:15"
@@ -798,7 +798,7 @@
     実際にElmを大規模アプリケーション開発に使用して感じていることを、Uniposを題材にして失敗談も踏まえてお話します。
   speakerIDs:
     - satoshi-ebihara
-- uuid: anatomy-of-a-click
+- uuid: benjamin-gruenbaum
   date: "2019/12/01"
   startsAt: "16:00"
   endsAt: "16:30"
@@ -817,7 +817,7 @@
   # descriptionJa: TODO
   speakerIDs:
     - benjamin-gruenbaum
-- uuid: ast-programming-with-javascript-beyond-the-beginner
+- uuid: takuto-wada
   date: 2019/12/01
   startsAt: "15:30"
   endsAt: "16:00"
@@ -830,7 +830,7 @@
     Babel や ESLint の登場により JavaScript の AST に触れる機会は若干増えてきましたが、それでもほとんどのプログラマは触れたことがないのではないかと思います。このセッションでは、まず JavaScript AST の入門から始まり、ライブコーディング形式で実際にツールを作りながら、 JavaScript AST を扱うプログラミングの勘所をご覧いただきます。
   speakerIDs:
     - takuto-wada
-- uuid: starting-typescript-with-javascript
+- uuid: ginpei-takanashi
   date: 2019/12/01
   startsAt: "14:45"
   endsAt: "15:15"
@@ -840,7 +840,7 @@
   descriptionJa: TypeScript の --allowJs と --checkJs オプションを使うと *.js のまま tsc で型検証ができるので、コンパイルを開発手順に含めずに JS をそのまま扱う小さなプロジェクトや、あるいは導入できないあれやこれやの事情があっても型の恩恵に預かれる、という話をしたいです。
   speakerIDs:
     - ginpei-takanashi
-- uuid: increase-performance-with-graphql-on-e-commerce-site
+- uuid: nobuhiko-sawai
   date: 2019/12/01
   startsAt: "14:15"
   endsAt: "14:45"
