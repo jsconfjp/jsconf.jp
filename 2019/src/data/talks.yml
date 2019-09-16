@@ -269,7 +269,7 @@
 - uuid: predictive-prefetching-for-improved-performance
   date: 2019/11/30
   startsAt: "18:15"
-  endsAt: "19:15"
+  endsAt: "18:25"
   room: A
   title: Predictive Prefetching for improved performance
   # titleJa: ""
@@ -380,8 +380,8 @@
     - eiji-kitamura
 - uuid: create-nodejs-with-nodejs-tiny-wasm-compiler
   date: 2019/11/30
-  startsAt: "18:15"
-  endsAt: "19:15"
+  startsAt: "18:45"
+  endsAt: "18:55"
   room: A
   # title: TODO
   titleJa: Node.js でつくる Node.js - WASM ミニミニコンパイラー
@@ -394,8 +394,8 @@
     - masashi-ganeko
 - uuid: web-components-era-phase-2
   date: 2019/11/30
-  startsAt: "18:15"
-  endsAt: "19:15"
+  startsAt: "18:25"
+  endsAt: "18:35"
   room: A
   title: Web Components era phase 2
   # titleJa: ""
@@ -561,8 +561,8 @@
     - rowdy-rabouw
 - uuid: license-violation-of-react-applications
   date: 2019/11/30
-  startsAt: "18:15"
-  endsAt: "19:15"
+  startsAt: "18:55"
+  endsAt: "19:05"
   room: A
   title: License violation of React Applications
   titleJa: React アプリのライセンス違反について
@@ -589,8 +589,8 @@
     - henry-zhu
 - uuid: cache-me-if-you-can
   date: 2019/11/30
-  startsAt: "18:15"
-  endsAt: "19:15"
+  startsAt: "18:35"
+  endsAt: "18:45"
   room: A
   title: Cache Me If You Can
   # titleJa: ""
