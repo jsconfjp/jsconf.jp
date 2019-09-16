@@ -180,7 +180,7 @@ export default function SchedulePage() {
                       ) : null}
                     </Box>
                   )
-                  if (s.uuid) {
+                  if (s.uuid && s.speakers.length) {
                     return <Link to={`talk/${s.uuid}`}>{content}</Link>
                   }
                   return content
