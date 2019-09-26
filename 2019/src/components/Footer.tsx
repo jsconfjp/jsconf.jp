@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { useTranslation } from "react-i18next"
+import { Link as _Link } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 type Props = {}
@@ -15,27 +16,37 @@ const Box = styled.footer`
 const LinksBox = styled.div`
   display: flex;
 
-  ${({ theme }) => theme.breakpoints.mobile} {
-    flex-direction: column;
-  }
-`
-const ExternalLink = styled(OutboundLink)`
-  ::after {
+  & > a::after {
     margin: 0px 8px;
     content: "|";
   }
-  :last-child::after {
+  & > a:last-child::after {
     content: "";
   }
 
   ${({ theme }) => theme.breakpoints.mobile} {
+    flex-direction: column;
+  }
+`
+const Link = styled(_Link)`
+  line-height: 1.8em;
+  ${({ theme }) => theme.breakpoints.mobile} {
     ::after {
-      content: "";
+      content: "" !important;
+    }
+  }
+`
+const ExternalLink = styled(OutboundLink)`
+  line-height: 1.8em;
+  ${({ theme }) => theme.breakpoints.mobile} {
+    ::after {
+      content: "" !important;
     }
   }
 `
 
 export function Footer(_props: Props) {
+  const { t } = useTranslation()
   return (
     <Box>
       <LinksBox>
@@ -48,7 +59,10 @@ export function Footer(_props: Props) {
         <ExternalLink href="https://nodejs.jp/" target="_blank">
           Japan Node.js Association
         </ExternalLink>
-        <Link to="/code-of-conduct/">Code of Conduct</Link>
+        <Link to="/code-of-conduct/">{t("code-of-conduct")}</Link>
+        <Link to="/jp-specified-commercial-transactions-act/">
+          {t("jp-specified-commercial-transactions-act")}
+        </Link>
       </LinksBox>
       <small>&copy; 2019-{new Date().getFullYear()} JSConf JP</small>
     </Box>

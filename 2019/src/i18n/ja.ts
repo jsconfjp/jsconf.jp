@@ -17,6 +17,8 @@ export const ja: {
     callForSponsors: "スポンサー募集",
     becomeASponsor: "スポンサー申込みフォームへ",
     schedule: "開催スケジュール",
+    "jp-specified-commercial-transactions-act": "特定商取引法に基づく表示",
+    "code-of-conduct": "行動規範",
     venue: "会場アクセス",
     "venue.name": "アーツ千代田 3331",
     "venue.address": "〒101-0021 東京都千代田区外神田6丁目11-14",

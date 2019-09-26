@@ -24,6 +24,8 @@ export const en = {
     tickets: "Tickets",
     buyTickets: "Buy Tickets",
     comingSoon: "Coming soon",
+    "jp-specified-commercial-transactions-act": "特定商取引法に基づく表示",
+    "code-of-conduct": "Code of Conduct",
     venue: "Venue",
     moreDetails: "More details",
     callForSponsors: "Call For Sponsors",
