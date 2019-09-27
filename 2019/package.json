@@ -49,16 +49,21 @@
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
+    "@types/js-yaml": "^3.12.1",
     "@types/lodash": "^4.14.138",
-    "@types/node": "^12.6.2",
+    "@types/node": "^12.7.8",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
     "@types/react-headroom": "^2.2.1",
     "@types/react-helmet": "^5.0.8",
     "@types/styled-components": "4.1.8",
+    "chalk": "^2.4.2",
     "husky": "^3.0.0",
+    "js-yaml": "^3.13.1",
     "prettier": "^1.18.2",
     "pretty-quick": "^1.11.1",
-    "typescript": "^3.5.3"
+    "ts-node": "^8.4.1",
+    "typescript": "^3.5.3",
+    "xlsx": "^0.15.1"
   }
 }
