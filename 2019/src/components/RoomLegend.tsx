@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Rooms, rooms } from "../util/misc"
 
 const Box = styled.div`
   display: flex;
@@ -12,7 +13,7 @@ const RoomBox = styled.div`
   flex-direction: row;
   align-items: center;
 `
-const Circle = styled.div<{ area: "A" | "B" }>`
+const Circle = styled.div<{ area: Rooms }>`
   width: 30px;
   height: 30px;
   border-radius: 30px;
@@ -28,8 +29,6 @@ const Text = styled.span`
 `
 
 export function RoomLegend() {
-  const rooms = ["A", "B", "C"] as const
-
   return (
     <Box>
       {rooms.map(room => (

@@ -6,7 +6,6 @@ import fetch from "node-fetch"
 import imageType from "image-type"
 import chalk from "chalk"
 import changeCase from "change-case"
-import { dates } from "../src/util/misc"
 
 type PresenterRow = {
   Timestamp: number
@@ -86,23 +85,25 @@ console.log(
   chalk.cyan(`Save speakers to ${path.relative(process.cwd(), DIST_SPEAKERS)}`),
 )
 
+const toPath = (uuid: string, ext: string) => {
+  return path.join(
+    __dirname,
+    "..",
+    "src",
+    "images",
+    "speakers",
+    `${uuid}.${ext}`,
+  )
+}
 Promise.all(
-  speakerRows.map(async speakerRow => {
-    const toPath = (uuid, ext) => {
-      return path.join(
-        __dirname,
-        "..",
-        "src",
-        "images",
-        "speakers",
-        `${speakerRow.uuid}.${ext}`,
-      )
-    }
-    const extensions = ["jpg", "png"]
-    const exists = extensions.find(ext => {
-      return fs.existsSync(toPath(speakerRow.uuid, ext))
+  speakerRows
+    .filter(speakerRow => {
+      const extensions = ["jpg", "png"]
+      return !extensions.some(ext => {
+        return fs.existsSync(toPath(speakerRow.uuid, ext))
+      })
     })
-    if (!exists) {
+    .map(async speakerRow => {
       console.log(
         chalk.dim(`fetch ${speakerRow.uuid}'s avatar from ${speakerRow.image}`),
       )
@@ -128,8 +129,7 @@ Promise.all(
           )}`,
         ),
       )
-    }
-  }),
+    }),
 )
 
 // Talks

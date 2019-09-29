@@ -2,6 +2,7 @@ import groupBy from "lodash/groupBy"
 import sortBy from "lodash/sortBy"
 import mapValues from "lodash/mapValues"
 
+import { Dates } from "../util/misc"
 // FIXME: Should not import from here
 import { SpeakerType, TalkType } from "../components/Speaker"
 
@@ -15,8 +16,7 @@ type Timebox = {
   sessions: Session[]
 }
 type Timetable = {
-  day1: Timebox[]
-  day2: Timebox[]
+  [K in Dates]: Timebox[]
 }
 
 export function generateTimetable({

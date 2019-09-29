@@ -14,7 +14,7 @@ import { LinkButton } from "../components/LinkButton"
 import { RoomLegend } from "../components/RoomLegend"
 import { TalkType, SpeakerType } from "../components/Speaker"
 import { generateTimetable } from "../util/generateTimetable"
-import { dates } from "../util/misc"
+import { Dates, dates, Rooms } from "../util/misc"
 
 const DaysButtonBox = styled.div`
   display: flex;
@@ -50,7 +50,7 @@ const Link = styled(_Link)`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.text};
 `
-const Box = styled.div<{ area: "A" | "B" | "C"; isBreak: boolean }>`
+const Box = styled.div<{ area: Rooms; isBreak: boolean }>`
   grid-column: ${({ area }) => area};
   position: relative;
   width: 100%;
@@ -122,7 +122,7 @@ export default function SchedulePage() {
   )
   const talks: TalkType[] = allTalksYaml.edges.map(({ node }: any) => node)
   const timetable = generateTimetable({ speakers, talks })
-  const days = ["day1", "day2"] as const
+  const days = Object.keys(dates).sort() as Dates[]
   const enOrJa = (enStr: string, jaStr: string) => {
     return i18n.language === "en" ? enStr || jaStr : jaStr || enStr
   }
