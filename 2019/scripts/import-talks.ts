@@ -2,11 +2,14 @@ import fs from "fs"
 import path from "path"
 import * as XLSX from "xlsx"
 import * as YAML from "js-yaml"
+import fetch from "node-fetch"
+import imageType from "image-type"
 import chalk from "chalk"
+import changeCase from "change-case"
+import { dates } from "../src/util/misc"
 
 type PresenterRow = {
   Timestamp: number
-  link: string
   featured: boolean
   uuid: string
   presentations: string
@@ -16,7 +19,31 @@ type PresenterRow = {
   "biography-en": string
   "biography-ja": string
 }
-// type PresentationRow = {}
+type PresentationRow = {
+  Timestamp: number
+  uuid: string
+  "title-en": string
+  "title-ja": string
+  "spoken-language": string
+  "description-en": string
+  "description-ja": string
+}
+type TimetableRow = {
+  start: string
+  end: string
+  a: string
+  b: string
+  c: string
+}
+type Session = {
+  uuid: string
+  date: string
+  startsAt: string
+  endsAt: string
+  room: "A" | "B" | "C"
+}
+
+const todoToEmpty = (str: string) => str.replace("TODO", "").trim()
 
 const DIST_SPEAKERS = path.resolve(
   __dirname,
@@ -25,7 +52,7 @@ const DIST_SPEAKERS = path.resolve(
   "data",
   "speakers.yaml",
 )
-// const DIST_TALKS = path.resolve(__dirname, '..', 'src', 'data', 'talks.yaml')
+const DIST_TALKS = path.resolve(__dirname, "..", "src", "data", "talks.yml")
 
 const [file] = process.argv.slice(2)
 if (!file) {
@@ -37,26 +64,170 @@ const xlsxFilePath = path.isAbsolute(file)
   ? file
   : path.join(process.cwd(), file)
 const workBook = XLSX.readFile(xlsxFilePath)
-const { presenters } = workBook.Sheets
 
-const speakers = XLSX.utils
+// Speakers
+const { presenters } = workBook.Sheets
+const speakerRows = XLSX.utils
   .sheet_to_json<PresenterRow>(presenters)
   .filter(row => !!row.Timestamp)
+const speakers = speakerRows
   .map(row => ({
     uuid: row.uuid,
     name: row.name,
     featured: row.featured,
-    biography: row["biography-en"].replace("TODO", "").trim(),
-    biographyJa: row["biography-ja"].replace("TODO", "").trim(),
+    biography: todoToEmpty(row["biography-en"]),
+    biographyJa: todoToEmpty(row["biography-ja"]),
   }))
   .sort((a, b) => a.uuid[0].localeCompare(b.uuid[0]))
 
 fs.writeFileSync(DIST_SPEAKERS, YAML.safeDump(speakers))
-console.log(chalk.cyan(`Fetch ${speakers.length} speakers`))
+console.log(chalk.dim(`Fetch ${speakers.length} speakers`))
 console.log(
   chalk.cyan(`Save speakers to ${path.relative(process.cwd(), DIST_SPEAKERS)}`),
 )
 
-// const talks = utils.sheet_to_json(presentations).map(() => ({
+Promise.all(
+  speakerRows.map(async speakerRow => {
+    const toPath = (uuid, ext) => {
+      return path.join(
+        __dirname,
+        "..",
+        "src",
+        "images",
+        "speakers",
+        `${speakerRow.uuid}.${ext}`,
+      )
+    }
+    const extensions = ["jpg", "png"]
+    const exists = extensions.find(ext => {
+      return fs.existsSync(toPath(speakerRow.uuid, ext))
+    })
+    if (!exists) {
+      console.log(
+        chalk.dim(`fetch ${speakerRow.uuid}'s avatar from ${speakerRow.image}`),
+      )
+      const buff = await fetch(speakerRow.image).then(res => res.buffer())
+      const type = imageType(buff)
+      if (!type) {
+        throw new Error(
+          `Invalid image format: ${
+            speakerRow.image
+          }\nMaybe this URL is not pointed at image, so please access in browser and save it to ${toPath(
+            speakerRow.uuid,
+            "xxx",
+          )} manually.`,
+        )
+      }
+      const avatarPath = toPath(speakerRow.uuid, type.ext)
+      fs.writeFileSync(avatarPath, buff)
+      console.log(
+        chalk.cyan(
+          `Sabve ${speakerRow.uuid}'s avatar to ${path.relative(
+            process.cwd(),
+            avatarPath,
+          )}`,
+        ),
+      )
+    }
+  }),
+)
 
-// }))
+// Talks
+const mapTalks = (acc: Omit<Session, "date">[], row: TimetableRow) => {
+  const { start: startsAt, end: endsAt } = row
+  return acc.concat(
+    [
+      {
+        uuid: row.a,
+        startsAt,
+        endsAt,
+        room: "A" as const,
+      },
+      {
+        uuid: row.b,
+        startsAt,
+        endsAt,
+        room: "B" as const,
+      },
+      {
+        uuid: row.c,
+        startsAt,
+        endsAt,
+        room: "C" as const,
+      },
+    ].filter(talk => !!talk.uuid),
+  )
+}
+const addDate = (date: string) => (row: Omit<Session, "date">): Session => ({
+  ...row,
+  date,
+})
+const notTalkIds = [
+  "open",
+  "opening-talk",
+  "break",
+  "Party",
+  "Closing",
+  "panel-discussion",
+  "sponsor-yahoo",
+  "sponsor-recruit",
+  "sponsor-talk",
+]
+const { presentations, 20191130: day1, 20191201: day2 } = workBook.Sheets
+const sessions = [
+  ...XLSX.utils
+    .sheet_to_json<TimetableRow>(day1)
+    .reduce(mapTalks, [])
+    .map(addDate("day1")),
+  ...XLSX.utils
+    .sheet_to_json<TimetableRow>(day2)
+    .reduce(mapTalks, [])
+    .map(addDate("day2")),
+]
+const talkRows = XLSX.utils
+  .sheet_to_json<PresentationRow>(presentations)
+  .filter(row => !!row.Timestamp)
+
+const talks = sessions
+  .map(session => {
+    const talk = talkRows.find(row => row.uuid === session.uuid)
+    const speakers = speakerRows.filter(
+      ({ presentations }) => presentations === session.uuid,
+    )
+
+    if (notTalkIds.includes(session.uuid)) {
+      return {
+        ...session,
+        uuid: `${session.date}-break-${session.room}-${session.startsAt}`,
+        title: changeCase.upperCaseFirst(session.uuid.replace("-", " ")),
+        speakerIDs: [],
+      }
+    } else if (session.uuid === "lisi-linhart") {
+      return null
+    } else if (!talk) {
+      throw new Error(`Talk not found: ${session.uuid}`)
+    }
+
+    return {
+      uuid: talk.uuid,
+      date: session.date,
+      startsAt: session.startsAt,
+      endsAt: session.endsAt,
+      room: session.room,
+      title: todoToEmpty(talk["title-en"]),
+      titleJa: todoToEmpty(talk["title-ja"]),
+      description: todoToEmpty(talk["description-en"]),
+      descriptionJa: todoToEmpty(talk["description-ja"]),
+      spokenLanguage: talk["spoken-language"],
+      slideLanguage: "",
+      speakerIDs: speakers.map(({ uuid }) => uuid),
+    }
+  })
+  .filter(el => el != null)
+  .sort((a, b) => a!.uuid[0].localeCompare(b!.uuid[0]))
+
+fs.writeFileSync(DIST_TALKS, YAML.safeDump(talks))
+console.log(chalk.dim(`Fetch ${talks.length} sessions`))
+console.log(
+  chalk.cyan(`Save sessions to ${path.relative(process.cwd(), DIST_TALKS)}`),
+)
