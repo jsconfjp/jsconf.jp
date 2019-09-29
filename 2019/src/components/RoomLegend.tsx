@@ -28,7 +28,7 @@ const Text = styled.span`
 `
 
 export function RoomLegend() {
-  const rooms = ["A", "B"] as const
+  const rooms = ["A", "B", "C"] as const
 
   return (
     <Box>

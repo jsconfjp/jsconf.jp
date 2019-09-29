@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next"
 import Image from "gatsby-image"
 import Markdown from "react-markdown"
 
+import { dates } from "../util/misc"
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
 import { Title } from "../components/Title"
@@ -84,6 +85,11 @@ export default function Speaker(props: Props) {
     endsAt,
     room,
   } = talk
+  const dateFormatter = Intl.DateTimeFormat(i18n.language, {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  })
   const speakerNames = speakers.map(speaker => speaker.name).join(" and ")
   const enOrJa = (enStr: string, jaStr: string) => {
     return i18n.language === "en" ? enStr || jaStr : jaStr || enStr
@@ -109,7 +115,7 @@ export default function Speaker(props: Props) {
         <TalkBox>
           <TalkTitle>{enOrJa(title, titleJa)}</TalkTitle>
           <p>
-            {date}, {startsAt} - {endsAt}
+            {dateFormatter.format(dates[date])}, {startsAt} - {endsAt}
             <br />
             Room: {room}
             <br />

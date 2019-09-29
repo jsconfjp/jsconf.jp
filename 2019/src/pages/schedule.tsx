@@ -37,7 +37,7 @@ const RoomLegendBox = styled.div`
 const TimeBox = styled.div`
   display: grid;
   width: 100%;
-  grid-template: "A B" auto / 1fr 1fr;
+  grid-template: "A B C" auto / 1fr 1fr 1fr;
   grid-column-gap: 40px;
   margin-bottom: 40px;
 
@@ -50,7 +50,7 @@ const Link = styled(_Link)`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.text};
 `
-const Box = styled.div<{ area: "A" | "B"; isBreak: boolean }>`
+const Box = styled.div<{ area: "A" | "B" | "C"; isBreak: boolean }>`
   grid-column: ${({ area }) => area};
   position: relative;
   width: 100%;
@@ -177,7 +177,7 @@ export default function SchedulePage() {
                       <Text>
                         {s.startsAt}-{s.endsAt}
                       </Text>
-                      <Text>{enOrJa(s.title, s.titleJa)}</Text>
+                      <Text>{enOrJa(s.title, s.titleJa) || "TBA"}</Text>
                       {s.speakers.length ? (
                         <Text>
                           by{" "}

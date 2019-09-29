@@ -62,7 +62,7 @@ export function generateTimetable({
   })
 
   return {
-    day1: talksByTimeboxes["2019/11/30"] || [],
-    day2: talksByTimeboxes["2019/12/01"] || [],
+    day1: talksByTimeboxes.day1 || [],
+    day2: talksByTimeboxes.day2 || [],
   }
 }
