@@ -278,6 +278,14 @@
     株式会社ラクス所属。
     新卒でラクスに入社し、Mail Dealer・Chat Dealer・配配メールなどの開発に従事。
     技術経験としてはPHP・Node.jsなどを4年ほど経験し、サーバサイドからフロントエンドまで幅広く担当。
+- uuid: maria-clara
+  name: Maria Clara
+  featured: false
+  biography: >-
+    Software Developer and former ML undergraduate researcher, currently
+    building amazing digital experiences at Work & Co. Brazilian, dog mom and
+    triathlete.
+  biographyJa: ""
 - uuid: nadieh-bremer
   name: Nadieh Bremer
   featured: true
@@ -392,11 +400,11 @@
   name: Samuel Agnew
   featured: false
   biography: >-
-    Sam Agnew is a developer evangelist at Twilio and loves inspiring and
-    equipping developers around the world. He particularly enjoys being a member
-    of the New York JavaScript and Python communities. The only thing he finds
-    more satisfying than writing code is playing fast guitar solos and hacking
-    old video games.
+    Sam Agnew is a developer evangelist at Twilio and loves showing developers
+    around the world the joys of creative coding. He particularly enjoys being a
+    member of the JavaScript and Python communities in New York City. The only
+    thing he finds more satisfying than writing code is playing fast guitar
+    solos and hacking old video games.
   biographyJa: ""
 - uuid: sam-bellen
   name: Sam Bellen
@@ -442,12 +450,13 @@
   name: Tetsuharu OHZEKI
   featured: false
   biography: Open Source Software Engineer.
-  biographyJa: ""
+  biographyJa: Open Source Software Engineer.
 - uuid: takeshi-kato
   name: 加藤 健志
   featured: false
   biography: ""
-  biographyJa: 株式会社ミツエーリンクスでUI開発者として、主にフロントエンドを担当しています。会社の技術ブログを書いたりもしています。サウナが好きです。
+  biographyJa: >-
+    株式会社ミツエーリンクスでUI開発者として、主にフロントエンド開発を行っています。その他、フロントエンドブログの執筆や、新規サービスのリリースにも携わっています。サウナが好きです。
 - uuid: yoshiki-shibukawa
   name: Yoshiki Shibukawa
   featured: false
