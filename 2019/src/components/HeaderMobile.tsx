@@ -86,6 +86,10 @@ export function InnerHeaderMobile(props: Props) {
   const toggleMenu = useCallback(() => {
     setMenuOpen(!menuOpen)
   }, [menuOpen])
+  const changeLanguage = (language: string) => {
+    setMenuOpen(false)
+    onChangeLanguage(language)
+  }
   return (
     <Box>
       <InnerBox>
@@ -138,7 +142,7 @@ export function InnerHeaderMobile(props: Props) {
                 en: "EN",
               }}
               currentLanguage={i18n.language}
-              onChange={onChangeLanguage}
+              onChange={changeLanguage}
             />
           </LanguageSwitchBox>
           <MenuItem to="/speakers/">{t("speakers")}</MenuItem>
