@@ -21,6 +21,8 @@ declare module "styled-components" {
       roomABorder: string
       roomB: string
       roomBBorder: string
+      roomC: string
+      roomCBorder: string
       accessibility: string
     }
     fonts: {
