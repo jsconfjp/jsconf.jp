@@ -79,77 +79,83 @@ const Path = styled.path.attrs(({ theme }) => ({
   fill: theme.colors.primary,
 }))``
 
-export function HeaderMobile(props: Props) {
+export function InnerHeaderMobile(props: Props) {
   const { onChangeLanguage } = props
   const { t, i18n } = useTranslation()
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
   const toggleMenu = useCallback(() => {
+    console.log('toggle');
     setMenuOpen(!menuOpen)
   }, [menuOpen])
+  return (
+    <Box>
+      <InnerBox>
+        <Brand>
+          <LogoLink to="/">
+            <Logo size={46} />
+          </LogoLink>
+        </Brand>
 
+        <TicketBox>
+          <LinkButton
+            color="primary"
+            to="https://pretix.eu/jsconfjp/2019/"
+            size="inline"
+          >
+            {t("tickets")}
+          </LinkButton>
+        </TicketBox>
+
+        <svg
+          width={48}
+          height={48}
+          viewBox="0,0,100,100"
+          onTouchEnd={toggleMenu}
+        >
+          {menuOpen ? (
+            <Path
+              d={[
+                `M0,5 L5,0 L100,95 L95,100 L0,5`,
+                `M95,0 L100,5 L5,100 L0,95 L95,0`,
+              ].join(" ")}
+            />
+          ) : (
+            <Path
+              d={[
+                `M0,0 L100,0 L100,10 L0,10 L0,0`,
+                `M0,45 L100,45 L100,55 L0,55 L0,0`,
+                `M0,90 L100,90 L100,100 L0,100 L0,0`,
+              ].join(" ")}
+            />
+          )}
+        </svg>
+      </InnerBox>
+      {menuOpen && (
+        <MenuBox>
+          <LanguageSwitchBox>
+            <LanguageSwitch
+              languages={{
+                ja: "日本語",
+                en: "EN",
+              }}
+              currentLanguage={i18n.language}
+              onChange={onChangeLanguage}
+            />
+          </LanguageSwitchBox>
+          <MenuItem to="/speakers/">{t("speakers")}</MenuItem>
+          <MenuItem to="/venue/">{t("venue")}</MenuItem>
+          <MenuItem to="/schedule/">{t("schedule")}</MenuItem>
+          <MenuItem to="/sponsors/">{t("sponsors")}</MenuItem>
+        </MenuBox>
+      )}
+    </Box>
+  )
+}
+
+export function HeaderMobile(props: Props) {
   return (
     <Headroom>
-      <Box>
-        <InnerBox>
-          <Brand>
-            <LogoLink to="/">
-              <Logo size={46} />
-            </LogoLink>
-          </Brand>
-
-          <TicketBox>
-            <LinkButton
-              color="primary"
-              to="https://pretix.eu/jsconfjp/2019/"
-              size="inline"
-            >
-              {t("tickets")}
-            </LinkButton>
-          </TicketBox>
-
-          <svg
-            width={48}
-            height={48}
-            viewBox="0,0,100,100"
-            onTouchEnd={toggleMenu}
-          >
-            {menuOpen ? (
-              <Path
-                d={[
-                  `M0,5 L5,0 L100,95 L95,100 L0,5`,
-                  `M95,0 L100,5 L5,100 L0,95 L95,0`,
-                ].join(" ")}
-              />
-            ) : (
-              <Path
-                d={[
-                  `M0,0 L100,0 L100,10 L0,10 L0,0`,
-                  `M0,45 L100,45 L100,55 L0,55 L0,0`,
-                  `M0,90 L100,90 L100,100 L0,100 L0,0`,
-                ].join(" ")}
-              />
-            )}
-          </svg>
-        </InnerBox>
-        {menuOpen && (
-          <MenuBox>
-            <LanguageSwitchBox>
-              <LanguageSwitch
-                languages={{
-                  ja: "日本語",
-                  en: "EN",
-                }}
-                currentLanguage={i18n.language}
-                onChange={onChangeLanguage}
-              />
-            </LanguageSwitchBox>
-            <MenuItem to="/speakers/">{t("speakers")}</MenuItem>
-            <MenuItem to="/venue/">{t("venue")}</MenuItem>
-            <MenuItem to="/schedule/">{t("schedule")}</MenuItem>
-            <MenuItem to="/sponsors/">{t("sponsors")}</MenuItem>
-          </MenuBox>
-        )}
-      </Box>
+      <InnerHeaderMobile {...props} />
     </Headroom>
   )
 }
