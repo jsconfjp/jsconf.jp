@@ -84,7 +84,6 @@ export function InnerHeaderMobile(props: Props) {
   const { t, i18n } = useTranslation()
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
   const toggleMenu = useCallback(() => {
-    console.log('toggle');
     setMenuOpen(!menuOpen)
   }, [menuOpen])
   return (
