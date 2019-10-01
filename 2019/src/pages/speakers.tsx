@@ -10,23 +10,55 @@ import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
 
 export default function SpeakersPage() {
-  const data = useStaticQuery(graphql`
+  const { allSpeakersYaml, allTalksYaml, allFile } = useStaticQuery(graphql`
     query Speakers {
       allSpeakersYaml {
         edges {
           node {
-            featured
+            uuid
             name
-            twitter
-            photoURL
-            talkTitle
+            biography
+            biographyJa
+          }
+        }
+      }
+      allTalksYaml {
+        edges {
+          node {
+            uuid
+            title
+            titleJa
+            description
+            descriptionJa
+            spokenLanguage
+            slideLanguage
+            speakerIDs
+          }
+        }
+      }
+      allFile(filter: { relativePath: { regex: "/speakers/" } }) {
+        nodes {
+          childImageSharp {
+            fluid(maxWidth: 262, maxHeight: 262) {
+              originalName
+              aspectRatio
+              src
+              srcSet
+              srcWebp
+              srcSetWebp
+              sizes
+            }
           }
         }
       }
     }
   `)
   const { t } = useTranslation()
-  const speakers = data.allSpeakersYaml.edges.map(({ node }: any) => node)
+  const speakers = allSpeakersYaml.edges.map(({ node }: any) => node)
+  const avatars = allFile.nodes
+    .filter((avatar: any) => avatar.childImageSharp)
+    .map((avatar: any) => avatar.childImageSharp.fluid)
+  const talks = allTalksYaml.edges.map(({ node }: any) => node)
 
   return (
     <Layout>
@@ -34,7 +66,7 @@ export default function SpeakersPage() {
       <ResponsiveBox>
         <Breadcrumb path={[t("speakers")]} />
         <Title>{t("speakers")}</Title>
-        <SpeakerList speakers={speakers} />
+        <SpeakerList speakers={speakers} avatars={avatars} talks={talks} />
       </ResponsiveBox>
     </Layout>
   )

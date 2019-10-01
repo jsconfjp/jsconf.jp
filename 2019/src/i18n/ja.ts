@@ -35,6 +35,10 @@ export const ja: {
     moreDetails: "詳細",
     "venue.accessByNaritaAirport": "成田空港からJR 秋葉原駅まで約70分",
     "venue.accessByHanedaAirport": "羽田空港からJR 秋葉原駅まで約40分",
+    // @ts-ignore It's not defined in en.ts
+    Japanese: "日本語",
+    // @ts-ignore It's not defined in en.ts
+    English: "英語",
     "venue.accessibility": `
 ・会場には障害がある人用の駐車スペースを用意しております。
 ・ご利用の際には、事前に 03-6803-2441 、またはinfo(at)3331.jp 宛にご連絡お願いします。

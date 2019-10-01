@@ -9,9 +9,10 @@ type Props = {
   lang: "en" | "ja"
   meta: MetaProps[]
   title: string
+  ogImage?: string
 }
 
-export function SEO({ description, lang, meta, title }: Props) {
+export function SEO({ description, ogImage, lang, meta, title }: Props) {
   const { site, logo } = useStaticQuery(
     graphql`
       query {
@@ -29,7 +30,7 @@ export function SEO({ description, lang, meta, title }: Props) {
       }
     `,
   )
-
+  const defaultOgImage = `${site.siteMetadata.siteUrl}${logo.publicURL}`
   const metaDescription = description || site.siteMetadata.description
 
   return (
@@ -58,7 +59,9 @@ export function SEO({ description, lang, meta, title }: Props) {
         },
         {
           property: `og:image`,
-          content: `${site.siteMetadata.siteUrl}${logo.publicURL}`,
+          content: ogImage
+            ? `${site.siteMetadata.siteUrl}${ogImage}`
+            : defaultOgImage,
         },
         {
           property: `og:type`,

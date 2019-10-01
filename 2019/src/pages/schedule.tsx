@@ -1,6 +1,8 @@
-import React from "react"
+import React, { useLayoutEffect } from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
+import { useStaticQuery, graphql } from "gatsby"
+import _Link from "gatsby-link"
 
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
@@ -9,7 +11,10 @@ import { SubTitle as _SubTitle } from "../components/SubTitle"
 import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
 import { LinkButton } from "../components/LinkButton"
-import { SmoothScroll } from "../components/SmoothScroll"
+import { RoomLegend } from "../components/RoomLegend"
+import { TalkType, SpeakerType } from "../components/Speaker"
+import { generateTimetable } from "../util/generateTimetable"
+import { Dates, dates, Rooms } from "../util/misc"
 
 const DaysButtonBox = styled.div`
   display: flex;
@@ -26,10 +31,13 @@ const SubTitle = styled(_SubTitle)`
   padding: 0.2em 1em;
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 `
+const RoomLegendBox = styled.div`
+  margin-bottom: 2em;
+`
 const TimeBox = styled.div`
   display: grid;
   width: 100%;
-  grid-template: "A B" auto / 1fr 1fr;
+  grid-template: "A B C" auto / 1fr 1fr 1fr;
   grid-column-gap: 40px;
   margin-bottom: 40px;
 
@@ -38,25 +46,24 @@ const TimeBox = styled.div`
     flex-direction: column;
   }
 `
-const Box = styled.div<{ area: string; isBreak: boolean }>`
+const Link = styled(_Link)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.text};
+`
+const Box = styled.div<{ area: Rooms; isBreak: boolean }>`
   grid-column: ${({ area }) => area};
   position: relative;
   width: 100%;
   box-sizing: border-box;
   padding: 1em;
+  margin-bottom: 0.5em;
   background-color: ${({ area, isBreak, theme }) =>
-    isBreak
-      ? theme.colors.disabled
-      : area === "A"
-      ? theme.colors.roomA
-      : theme.colors.roomB};
+    // @ts-ignore Dynamic access
+    isBreak ? theme.colors.disabled : theme.colors[`room${area}`]};
   border-left: 5px solid;
   border-color: ${({ area, isBreak, theme }) =>
-    isBreak
-      ? theme.colors.disabledText
-      : area === "A"
-      ? theme.colors.roomABorder
-      : theme.colors.roomBBorder};
+    // @ts-ignore Dynamic access
+    isBreak ? theme.colors.disabledText : theme.colors[`room${area}Border`]};
 
   ::before {
     content: "";
@@ -68,11 +75,8 @@ const Box = styled.div<{ area: string; isBreak: boolean }>`
     height: 16px;
     border-radius: 100%;
     background-color: ${({ area, isBreak, theme }) =>
-      isBreak
-        ? theme.colors.disabledText
-        : area === "A"
-        ? theme.colors.roomABorder
-        : theme.colors.roomBBorder};
+      // @ts-ignore Dynamic access
+      isBreak ? theme.colors.disabledText : theme.colors[`room${area}Border`]};
   }
 `
 const Text = styled.span`
@@ -82,65 +86,65 @@ const Text = styled.span`
 `
 
 export default function SchedulePage() {
-  const { t } = useTranslation()
-
-  const mockData = [
-    {
-      timebox: "10:00-10:30",
-      items: [
-        {
-          break: false,
-          room: "A",
-          label: "Doors open",
-        },
-      ],
-    },
-    {
-      timebox: "10:30-10:45",
-      items: [
-        {
-          break: false,
-          room: "A",
-          label: "Keynote",
-        },
-      ],
-    },
-    {
-      timebox: "10:45-11:15",
-      items: [
-        {
-          break: false,
-          room: "A",
-          label: "Offline-First Collaborative Data Structures By Mathias Buus",
-        },
-        {
-          break: false,
-          room: "B",
-          label:
-            "Let's start machine learning with JavaScript By Shuhei Kitsuka",
-        },
-      ],
-    },
-    {
-      timebox: "11:15-11:30",
-      items: [
-        {
-          break: true,
-          room: "A",
-          label: "Break",
-        },
-        {
-          break: true,
-          room: "B",
-          label: "Break",
-        },
-      ],
-    },
-  ]
-  const timetable = {
-    day1: mockData,
-    day2: mockData,
+  const { t, i18n } = useTranslation()
+  const { allSpeakersYaml, allTalksYaml } = useStaticQuery(graphql`
+    query {
+      allSpeakersYaml {
+        edges {
+          node {
+            uuid
+            name
+          }
+        }
+      }
+      allTalksYaml {
+        edges {
+          node {
+            uuid
+            title
+            titleJa
+            description
+            descriptionJa
+            spokenLanguage
+            slideLanguage
+            speakerIDs
+            startsAt
+            endsAt
+            room
+            date
+          }
+        }
+      }
+    }
+  `)
+  const speakers: SpeakerType[] = allSpeakersYaml.edges.map(
+    ({ node }: any) => node,
+  )
+  const talks: TalkType[] = allTalksYaml.edges.map(({ node }: any) => node)
+  const timetable = generateTimetable({ speakers, talks })
+  const days = Object.keys(dates).sort() as Dates[]
+  const enOrJa = (enStr: string, jaStr: string) => {
+    return i18n.language === "en" ? enStr || jaStr : jaStr || enStr
   }
+  const dateTimeFormatter = new Intl.DateTimeFormat(i18n.language, {
+    // @ts-ignore dateStyle' does not exist in type 'DateTimeFormatOptions'
+    dateStyle: "medium",
+  })
+
+  // Open page with hash (ex. direct access, reload)
+  useLayoutEffect(() => {
+    if (!location.hash) {
+      return
+    }
+
+    const selector = location.hash
+    const el = document.querySelector(selector)
+    if (!el) {
+      return
+    }
+    const { top } = el.getBoundingClientRect()
+    window.scrollTo({ top })
+  }, [])
 
   return (
     <Layout>
@@ -149,48 +153,49 @@ export default function SchedulePage() {
         <Breadcrumb path={[t("schedule")]} />
         <Title>{t("schedule")}</Title>
         <DaysButtonBox>
-          <SmoothScroll selector="#day1">
-            <LinkButton color="secondary" size="large" to="/schedule#day1">
-              {t("day1")}
-            </LinkButton>
-          </SmoothScroll>
-          <SmoothScroll selector="#day2">
-            <LinkButton color="secondary" size="large" to="/schedule#day2">
-              {t("day2")}
-            </LinkButton>
-          </SmoothScroll>
+          <LinkButton color="secondary" size="large" to="/schedule/#day1">
+            {t("day1")} ({dateTimeFormatter.format(dates.day1)})
+          </LinkButton>
+          <LinkButton color="secondary" size="large" to="/schedule/#day2">
+            {t("day2")} ({dateTimeFormatter.format(dates.day2)})
+          </LinkButton>
         </DaysButtonBox>
 
-        <SubTitle id="day1">{t("day1")}</SubTitle>
-        {timetable.day1.map(item => (
-          <TimeBox key={item.timebox}>
-            {item.items.map(event => (
-              <Box
-                key={`${event.room}_${event.label}`}
-                area={event.room}
-                isBreak={event.break}
-              >
-                <Text>{item.timebox}</Text>
-                <Text>{event.label}</Text>
-              </Box>
+        {days.map(day => (
+          <React.Fragment key={day}>
+            <SubTitle id={day}>
+              {t(day)} ({dateTimeFormatter.format(dates[day])})
+            </SubTitle>
+            <RoomLegendBox>
+              <RoomLegend />
+            </RoomLegendBox>
+            {timetable[day].map(({ timebox, sessions }) => (
+              <TimeBox key={timebox}>
+                {sessions.map(s => {
+                  const content = (
+                    <Box key={s.room + s.uuid} area={s.room} isBreak={s.break}>
+                      <Text>
+                        {s.startsAt}-{s.endsAt}
+                      </Text>
+                      <Text>{enOrJa(s.title, s.titleJa) || "TBA"}</Text>
+                      {s.speakers.length ? (
+                        <Text>
+                          by{" "}
+                          {s.speakers
+                            .map(speaker => speaker.name)
+                            .join(" and ")}
+                        </Text>
+                      ) : null}
+                    </Box>
+                  )
+                  if (s.uuid && s.speakers.length) {
+                    return <Link to={`talk/${s.uuid}`}>{content}</Link>
+                  }
+                  return content
+                })}
+              </TimeBox>
             ))}
-          </TimeBox>
-        ))}
-
-        <SubTitle id="day2">{t("day2")}</SubTitle>
-        {timetable.day2.map(item => (
-          <TimeBox key={item.timebox}>
-            {item.items.map(event => (
-              <Box
-                key={`${event.room}_${event.label}`}
-                area={event.room}
-                isBreak={event.break}
-              >
-                <Text>{item.timebox}</Text>
-                <Text>{event.label}</Text>
-              </Box>
-            ))}
-          </TimeBox>
+          </React.Fragment>
         ))}
       </ResponsiveBox>
     </Layout>

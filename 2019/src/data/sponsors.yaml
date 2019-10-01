@@ -42,3 +42,19 @@
   url: https://cureapp.co.jp/engineers.html
   logoUrl: /2019/sponsors/cureapp.png
   grade: gold
+# - name: CureApp
+#   url: https://cureapp.co.jp/engineers.html
+#   logoUrl: /2019/sponsors/cureapp.png
+#   grade: gold
+- name: 合同会社DMM.com
+  url: https://dmm-corp.com/
+  logoUrl: /2019/sponsors/dmm.png
+  grade: gold
+- name: サイボウズ株式会社
+  url: https://cybozu.co.jp/
+  logoUrl: /2019/sponsors/cybozu.png
+  grade: gold
+- name: 株式会社ドワンゴ
+  url: https://dwango.co.jp/
+  logoUrl: /2019/sponsors/dwango.png
+  grade: gold

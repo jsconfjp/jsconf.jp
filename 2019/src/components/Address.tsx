@@ -63,6 +63,14 @@ export function Address(props: Props) {
           {t("venue.url")}
         </Link>
       </Text>
+      <Text>
+        <Link
+          href="https://www.google.com/maps/d/u/0/viewer?mid=1EHjtxICBFoB_QKSJC9fPTEi-AP2wm_Hl&ll=35.703930662979026%2C139.7698484894413&z=14"
+          target="_blank"
+        >
+          {t("venue.additionalMap")}
+        </Link>
+      </Text>
 
       <SubTitle>{t("venue.accessBytrain")}</SubTitle>
       <HyphenList>

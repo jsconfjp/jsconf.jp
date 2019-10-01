@@ -39,23 +39,35 @@
     "gatsby-transformer-yaml": "^2.2.1",
     "i18next": "^17.0.6",
     "i18next-browser-languagedetector": "^3.0.1",
+    "lodash": "^4.17.15",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-headroom": "^2.2.8",
     "react-helmet": "^5.2.1",
     "react-i18next": "^10.11.4",
+    "react-markdown": "^4.2.2",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "@types/node": "^12.6.2",
+    "@types/js-yaml": "^3.12.1",
+    "@types/lodash": "^4.14.138",
+    "@types/node": "^12.7.8",
+    "@types/node-fetch": "^2.5.2",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
     "@types/react-headroom": "^2.2.1",
     "@types/react-helmet": "^5.0.8",
     "@types/styled-components": "4.1.8",
+    "chalk": "^2.4.2",
+    "change-case": "^3.1.0",
     "husky": "^3.0.0",
+    "image-type": "^4.1.0",
+    "js-yaml": "^3.13.1",
+    "node-fetch": "^2.6.0",
     "prettier": "^1.18.2",
     "pretty-quick": "^1.11.1",
-    "typescript": "^3.5.3"
+    "ts-node": "^8.4.1",
+    "typescript": "^3.5.3",
+    "xlsx": "^0.15.1"
   }
 }

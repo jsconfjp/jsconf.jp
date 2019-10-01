@@ -46,16 +46,18 @@ If you want to add sponsor, you need to add elements to the array of `src/data/s
 
 https://github.com/jsconfjp/jsconf.jp/blob/5eb2d5d22f7168e3f988f78e873e589b6ab7a5c3/2019/src/data/sponsors.yaml#L41-L44
 
-### Update speakers
+### Update speakers, talks, timetable
 
-If you want to add speaker, you need to add elements to the array of `src/data/speakers.yaml` like as:
+If you want to add speaker, talks or timetable, you need to follow instructions as below:
 
-https://github.com/jsconfjp/jsconf.jp/blob/5eb2d5d22f7168e3f988f78e873e589b6ab7a5c3/2019/src/data/speakers.yaml#L8-L14
+1. Open Google Sheets named `Schedule - JSConfJP 2019`
+   - you don't know sheet URL? Please contact organizers
+1. Download it as `Microsoft Excel(.xlsx)`
+1. Run `scripts/import-talks.ts` with path of downloaded file
 
-### Update timetable
-
-TBA.
-The source code is located in `src/pages/schedule.tsx`.
+```
+npx ts-node scripts/import-talks.ts PATH/TO/.xlsx
+```
 
 ### Update styled-components theme
 

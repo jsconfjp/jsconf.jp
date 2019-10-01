@@ -14,6 +14,7 @@ import { SponsorList } from "../components/SponsorList"
 import { LinkButton } from "../components/LinkButton"
 import { Card as _Card } from "../components/Card"
 import { Centerize } from "../components/Centerize"
+import { dates } from "../util/misc"
 import bg from "../images/bg.png"
 import bgFlipX from "../images/bg-flip-x.png"
 
@@ -42,16 +43,16 @@ const VenueBox = styled.div`
   max-width: ${({ theme }) => theme.innerWidth};
   margin: 0 auto;
 `
-// const SchedulesBox = styled.div`
-//   display: flex;
-//   justify-content: space-between;
-//   width: calc(100% - 3em);
-//   max-width: 910px;
+const SchedulesBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 3em);
+  max-width: 910px;
 
-//   ${({ theme }) => theme.breakpoints.mobile} {
-//     flex-direction: column;
-//   }
-// `
+  ${({ theme }) => theme.breakpoints.mobile} {
+    flex-direction: column;
+  }
+`
 const SponsorBox = styled.div`
   margin-top: 80px;
   padding: 100px 0;
@@ -59,20 +60,14 @@ const SponsorBox = styled.div`
 `
 
 export default function IndexPage() {
-  const { t } = useTranslation()
-  const { allSpeakersYaml, allSponsorsYaml } = useStaticQuery(graphql`
+  const { t, i18n } = useTranslation()
+  const {
+    allSpeakersYaml,
+    allSponsorsYaml,
+    allFile,
+    allTalksYaml,
+  } = useStaticQuery(graphql`
     query {
-      allSpeakersYaml(filter: { featured: { eq: true } }) {
-        edges {
-          node {
-            featured
-            name
-            twitter
-            photoURL
-            talkTitle
-          }
-        }
-      }
       allSponsorsYaml {
         edges {
           node {
@@ -83,10 +78,57 @@ export default function IndexPage() {
           }
         }
       }
+      allSpeakersYaml(filter: { featured: { eq: true } }) {
+        edges {
+          node {
+            uuid
+            name
+            biography
+            biographyJa
+          }
+        }
+      }
+      allTalksYaml {
+        edges {
+          node {
+            uuid
+            title
+            titleJa
+            description
+            descriptionJa
+            spokenLanguage
+            slideLanguage
+            speakerIDs
+          }
+        }
+      }
+      allFile(filter: { relativePath: { regex: "/speakers/" } }) {
+        nodes {
+          childImageSharp {
+            fluid(maxWidth: 262, maxHeight: 262) {
+              originalName
+              aspectRatio
+              src
+              srcSet
+              srcWebp
+              srcSetWebp
+              sizes
+            }
+          }
+        }
+      }
     }
   `)
   const guestSpeakers = allSpeakersYaml.edges.map(({ node }: any) => node)
   const sponsors = allSponsorsYaml.edges.map(({ node }: any) => node)
+  const talks = allTalksYaml.edges.map(({ node }: any) => node)
+  const avatars = allFile.nodes
+    .filter((avatar: any) => avatar.childImageSharp)
+    .map((avatar: any) => avatar.childImageSharp.fluid)
+  const dateTimeFormatter = new Intl.DateTimeFormat(i18n.language, {
+    // @ts-ignore dateStyle' does not exist in type 'DateTimeFormatOptions'
+    dateStyle: "medium",
+  })
 
   return (
     <Layout>
@@ -103,7 +145,11 @@ export default function IndexPage() {
 
           <Card>
             <SubTitle>{t("guestSpeakers")}</SubTitle>
-            <SpeakerList speakers={guestSpeakers} />
+            <SpeakerList
+              speakers={guestSpeakers}
+              avatars={avatars}
+              talks={talks}
+            />
             <Centerize>
               <LinkButton color="primary" to="/speakers/">
                 {t("goToGuests")}
@@ -111,17 +157,17 @@ export default function IndexPage() {
             </Centerize>
           </Card>
 
-          {/* <Centerize>
+          <Centerize>
             <SubTitle>{t("schedule")}</SubTitle>
             <SchedulesBox>
               <LinkButton color="secondary" size="large" to="/schedule/#day1">
-                {t("day1")}
+                {t("day1")} ({dateTimeFormatter.format(dates.day1)})
               </LinkButton>
               <LinkButton color="secondary" size="large" to="/schedule/#day2">
-                {t("day2")}
+                {t("day2")} ({dateTimeFormatter.format(dates.day2)})
               </LinkButton>
             </SchedulesBox>
-          </Centerize> */}
+          </Centerize>
 
           <Card>
             <Centerize>
