@@ -42,10 +42,10 @@
   url: https://cureapp.co.jp/engineers.html
   logoUrl: /2019/sponsors/cureapp.png
   grade: gold
-# - name: CureApp
-#   url: https://cureapp.co.jp/engineers.html
-#   logoUrl: /2019/sponsors/cureapp.png
-#   grade: gold
+- name: 株式会社メルカリ
+  url: https://www.mercari.com/jp/
+  logoUrl: /2019/sponsors/mercari.png
+  grade: gold
 - name: 合同会社DMM.com
   url: https://dmm-corp.com/
   logoUrl: /2019/sponsors/dmm.png
@@ -58,3 +58,11 @@
   url: https://dwango.co.jp/
   logoUrl: /2019/sponsors/dwango.png
   grade: gold
+- name: スマートニュース株式会社
+  url: https://www.smartnews.com/
+  logoUrl: /2019/sponsors/smartnews.png
+  grade: silver
+# - name: Itsuki Inc.
+#   url: https://itsuki.io/
+#   logoUrl: /2019/sponsors/.png
+#   grade: bronze
