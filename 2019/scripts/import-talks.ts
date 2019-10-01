@@ -42,7 +42,11 @@ type Session = {
   room: "A" | "B" | "C"
 }
 
-const todoToEmpty = (str: string) => str.replace("TODO", "").trim()
+const todoToEmpty = (str: string) =>
+  str
+    .replace("TODO", "")
+    .replace("TBA", "")
+    .trim()
 
 const DIST_SPEAKERS = path.resolve(
   __dirname,
