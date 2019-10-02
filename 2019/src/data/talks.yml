@@ -954,10 +954,6 @@
     - 以下の2パターンのアプリケーションの開発・運用で学んだこと
       - iOS/Android両プラットフォーム対応しているReact Native app
       - iOS/Android/Webの3つのプラットフォームに対応するPWA/Hybrid app
-
-    ## 審査員の方へ
-
-    より詳細なPitchを以下に記載しております。もし審査に迷われましたらご参考にしていただければと思います。
   spokenLanguage: ja
   slideLanguage: ""
   speakerIDs:
@@ -1424,7 +1420,7 @@
   startsAt: "18:25"
   endsAt: "18:35"
   room: A
-  title: WebComponents era phase 2
+  title: Web Components era phase 2
   titleJa: ""
   description: ""
   descriptionJa: >-
