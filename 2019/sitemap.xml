@@ -14,7 +14,6 @@
 <url> <loc>https://jsconf.jp/2019/talk/day1-break-A-15%3A15</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jsconf.jp/2019/talk/day1-break-B-15%3A15</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jsconf.jp/2019/talk/day1-break-C-15%3A15</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jsconf.jp/2019/talk/dominic-tarr</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jsconf.jp/2019/talk/day1-break-A-16%3A30</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jsconf.jp/2019/talk/day1-break-B-16%3A30</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jsconf.jp/2019/talk/day1-break-C-16%3A30</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -24,6 +23,7 @@
 <url> <loc>https://jsconf.jp/2019/talk/dynamis</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jsconf.jp/2019/talk/day1-break-A-19%3A15</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jsconf.jp/2019/talk/day2-break-A-10%3A00</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jsconf.jp/2019/talk/dominic-tarr</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jsconf.jp/2019/talk/day2-break-A-12%3A00</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jsconf.jp/2019/talk/day2-break-B-12%3A00</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jsconf.jp/2019/talk/day2-break-A-14%3A00</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -55,8 +55,8 @@
 <url> <loc>https://jsconf.jp/2019/talk/henry-zhu</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jsconf.jp/2019/talk/hidetaka-okamoto</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jsconf.jp/2019/talk/irina-shestak</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jsconf.jp/2019/talk/jennifer-wong</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jsconf.jp/2019/talk/jorge-bucaran</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jsconf.jp/2019/talk/jennifer-wong</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jsconf.jp/2019/talk/jxck</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jsconf.jp/2019/talk/jarrod-overson</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jsconf.jp/2019/talk/jonny-kalambay</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
