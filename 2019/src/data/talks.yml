@@ -30,7 +30,7 @@
   endsAt: "17:45"
   room: A
   title: Headers for Hackers
-  titleJa: ""
+  titleJa: Headers for Hackers
   description: >-
     HTTP has been gradually adding lots of new and exotic headers, and more are
     on the way. Learn about current best practices with Vary, Link,
@@ -40,7 +40,18 @@
     control over many aspects of the way a browser will process the page, and is
     often a more effective or more secure option than trying to achieve the same
     effect with tags or script in the page.
-  descriptionJa: ""
+  descriptionJa: >-
+    HTTP は今まで様々な新しく独特な header を追加してきており、今もなお追加され続けています。
+
+
+    現存している Header の Vary, Link, Content-Security-Policy, Referrer-Policy,
+    Client-Hints, Clear-Site-Data and Alt-Svc のベストプラクティスや、
+
+    これから来る Feature-Policy や Variants, Early-Hints and Origin-Policy などの Proposal
+    について学びましょう。
+
+    HTTP
+    はブラウザがどのようにページをプロセスするかにおいてとてもパワフルな制御が行うことができる上、同じ効果をページ上のタグやスクリプトで得るよりも効果的かつ安全に行えます。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -78,22 +89,22 @@
   startsAt: "13:30"
   endsAt: "14:00"
   room: C
-  title: "2029: A Javascript Odyssey"
+  title: "npm i -g @next-and-beyond: Building the future of package management"
   titleJa: ""
   description: >-
-    The year is 2029, the browser wars are finally over. The world is in chaos
-    but the web is stronger than ever. We saw the rise and fall of great
-    frameworks that changed how we built things but we also lost brave fellows
-    along the way to JS fatigue. React v30.0 was just released, ES10 is the new
-    de facto standard for writing modern applications, and Javascript is used to
-    control androids that dream of electric sheep.
+    It’s been 10 years since it all started. Ten years of continuously improving
+    and revolutionizing package management for the modern web. One million
+    published packages later, the npm registry is the largest repository of open
+    source ever. The public registry and its accompanying CLI are here to stay.
 
 
-    Rewind to 2019. Is WebAssembly the future of web development? How will the
-    web look like in 10 years? The pace of technology change can be scary at
-    times so… how can we keep up in this fast-paced world? Should we keep
-    betting on JS? Let’s discuss together the future of the web and understand
-    why we should be pretty excited about it!
+    You always wanted to contribute but didn’t know where to start? This is your
+    talk! Let’s demystify the npm CLI, walk through it’s most hairiest bits and
+    pieces, and chat about what’s coming up. With v7 and v8 on the works, the
+    future looks promising: workspaces, first-class support for symbolic links,
+    yarn.lock compatibility, performance and speed upgrades,  tink (a package
+    unwinder for JS) and more are only but a few of the exciting new changes you
+    can help us build!
   descriptionJa: ""
   spokenLanguage: en
   slideLanguage: ""
@@ -155,19 +166,6 @@
   date: day1
   title: Break
   speakerIDs: []
-- uuid: dominic-tarr
-  date: day1
-  startsAt: "16:00"
-  endsAt: "16:30"
-  room: A
-  title: ""
-  titleJa: ""
-  description: ""
-  descriptionJa: ""
-  spokenLanguage: en
-  slideLanguage: ""
-  speakerIDs:
-    - dominic-tarr
 - uuid: "day1-break-A-16:30"
   startsAt: "16:30"
   endsAt: "16:45"
@@ -244,6 +242,19 @@
   date: day2
   title: Open
   speakerIDs: []
+- uuid: dominic-tarr
+  date: day2
+  startsAt: "11:30"
+  endsAt: "12:00"
+  room: A
+  title: ""
+  titleJa: ""
+  description: ""
+  descriptionJa: ""
+  spokenLanguage: en
+  slideLanguage: ""
+  speakerIDs:
+    - dominic-tarr
 - uuid: "day2-break-A-12:00"
   startsAt: "12:00"
   endsAt: "13:00"
@@ -449,7 +460,7 @@
   endsAt: "17:45"
   room: A
   title: "Pika: Reimagining the Registry"
-  titleJa: ""
+  titleJa: "Pika: レジストリの再創造"
   description: >-
     What if you could do web development today without a bundler?
 
@@ -461,7 +472,15 @@
     reimagining web development for 2019 and beyond. Finally, learn how you can
     start to leverage these modern projects today for faster, smaller, and less
     complex JavaScript applications.
-  descriptionJa: ""
+  descriptionJa: >-
+    もし、今 Web の開発を Bundler 無しで行えるとしたら？
+
+
+    このトークではモダンな JavaScript 開発の良いところ、悪いところ、そして汚いところについて話します。この 10 年間、Node.js,
+    npm, React, Browserify, そして Webpack がそれぞれ現在の JavaScript
+    のツールに依存した進化にどのように影響してきたのか。そして、Pika (www.pika.dev) によって未来の Web
+    開発がどのようになっていくのか。そして最後に、今のモダンなプロジェクトから離れより速く、より小さく、そしてより簡潔な JavaScript
+    アプリを作っていくにはどうしたら良いのか。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -501,7 +520,7 @@
   endsAt: "15:15"
   room: A
   title: Defining Open Source
-  titleJa: ""
+  titleJa: 「オープンソース」の定義
   description: >-
     Why is open source important? We all rely on it, whether we know it or not
     (programmer or not). And yet it's hard to grasp what it really represents:
@@ -509,7 +528,10 @@
     greater community, or just whatever we want? I'd like to present some
     thoughts about the current status of this term, what maintainers actually
     do, and an idea of a future that still has open source.
-  descriptionJa: ""
+  descriptionJa: >-
+    オープンソースはなぜ大事なのか？我々はみんな知らずともその恩恵を受けている。プログラマーであるかどうかは関係なしに。しかし、オープンソースが本来どういうものなのかを把握するのは難しい。
+
+    コードの自由なのか？大きなコミュニティに無償で提供することなのか？それとも我々は好きにすればよいのか？オープンソースという言葉の現状について、そしてメンテナーは実際何をしているのか、そしてオープンソースの未来はどうなっていくのか、私が思うところについて発表します。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -599,6 +621,21 @@
   slideLanguage: ""
   speakerIDs:
     - irina-shestak
+- uuid: jorge-bucaran
+  date: day1
+  startsAt: "16:00"
+  endsAt: "16:30"
+  room: A
+  title: Hypercharged
+  titleJa: Hypercharged
+  description: >-
+    Write what, not how: A declarative approach to presentation, side effects,
+    and subscriptions.
+  descriptionJa: 宣言的アプローチで行うプレゼンテーション、サイドエフェクト、そしてサブスクリプション
+  spokenLanguage: en
+  slideLanguage: ""
+  speakerIDs:
+    - jorge-bucaran
 - uuid: jennifer-wong
   date: day2
   startsAt: "11:00"
@@ -631,21 +668,6 @@
   slideLanguage: ""
   speakerIDs:
     - jennifer-wong
-- uuid: jorge-bucaran
-  date: day2
-  startsAt: "11:30"
-  endsAt: "12:00"
-  room: A
-  title: Hypercharged
-  titleJa: ""
-  description: >-
-    Write what, now how: A declarative approach to presentation, side effects,
-    and subscriptions.
-  descriptionJa: ""
-  spokenLanguage: en
-  slideLanguage: ""
-  speakerIDs:
-    - jorge-bucaran
 - uuid: jxck
   date: day2
   startsAt: "13:00"
@@ -665,7 +687,7 @@
   endsAt: "15:15"
   room: A
   title: Analysis of an exploited npm package
-  titleJa: ""
+  titleJa: 悪用された npm パッケージの分析
   description: >-
     How did 8 million developers download malicious code with no one noticing?
 
@@ -689,7 +711,22 @@
     vulnerable. This is a growing risk that many companies are absorbing without
     fully understanding and, without better management, will inevitably lead to
     incredible exploits in the future.
-  descriptionJa: ""
+  descriptionJa: >-
+    悪意あるコードは 800 万人もの開発者の目をすり抜けてどうダウンロードされてしまったのか？
+
+
+    2018 年の終わり頃、ある node.js
+    のパッケージのオーナーシップが譲渡されました。そのパッケージは複数の環境下を横断し、最終的にモバイルアプリまでの経路を司る悪意のあるパッケージとなりました。この搾取は
+    48 日間続き、見つかるまでに 800
+    万件以上のダウンロードが行われました。どう発見されたのか？何が目的だったのか？そしてどうして起こってしまったのか？
+
+
+    これは良く計算、洗練された、会社の最も大事なシステムや開発、ビルドマシンが狙われた攻撃の一つの例です。このセッションではこの攻撃がどう行われたか、３つの
+    Payload がどう動いていたか、それがどう難読化されていたか、そしてそれが何を目的としていたかについて発表します。
+
+
+    これは node/npm
+    に限った話ではなく、パブリックなソースコードのリポジトリ全てで起こりうることです。これは多くの会社が全てを理解しないまま抱えている、今もなお育っているリスクであり、マネジメントしていかなければ、今後さらなる被害を与えかねません。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -752,13 +789,15 @@
   endsAt: "17:15"
   room: A
   title: Deno - A new way to JavaScript
-  titleJa: ""
+  titleJa: Deno - JavaScript の新たな道筋
   description: >-
     Deno is a secure TypeScript/JavaScript runtime built with Rust and V8.  In
     this talk we will discuss the brief yet interesting history of Deno so far,
     the current state of the project, some of the design decisions and
     architecture, as well as provide a live demonstration.
-  descriptionJa: ""
+  descriptionJa: >-
+    Deno は Rust と V8 でビルドされたセキュアな TypeScript/ JavaScript のランタイムです。この発表では、Deno
+    の簡潔な、それでいて興味深い歴史と、Deno の現状、そして Deno のデザイン設計や構造について、ライブデモ込みで話していきます。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -863,7 +902,7 @@
   endsAt: "18:45"
   room: A
   title: Cache Me If You Can
-  titleJa: ""
+  titleJa: キャッシュ・ミー・イフ・ユー・キャン
   description: >-
     Web caching is one of the most powerful techniques you can use to improve
     the performance of your websites. But like with many other optimization
@@ -874,7 +913,10 @@
     HTTP Caching: how it works, how to manage it, and how to implement simple
     but effective strategies that will make your sites faster, leaner, and more
     responsive.
-  descriptionJa: ""
+  descriptionJa: >-
+    Web キャッシュは Web
+    サイトのパフォーマンスを改善する最もパワフルなテクニックの一つです。しかし、他のパフォーマンス改善メソッドのように、どこから始めればいいのかがわかりにくいこともあります。どの段階でリソースのキャッシュを行えばいいのか？いつまで持っていればいいのか？どうやって無効にするのか？複雑さに威圧されてしまうかもしれません。でも安心してください、基本を理解すれば驚くほど単純です。このトークでは、HTTP
+    キャッシュの基本について案内します。どういうものなのか、どう管理するのか、あなたのサイトをより高速、より軽く、よりレスポンシブにする単純かつ効果的な導入方法について発表します。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -977,7 +1019,7 @@
   endsAt: "14:45"
   room: A
   title: Visualizing Connections
-  titleJa: ""
+  titleJa: 「繋がり」の可視化
   description: >-
     Connections are a part of us, of the world. From the connections between
     people, between cultures, within language, and more. In these days when more
@@ -994,7 +1036,16 @@
     drawn in the night skies and more. Revealing that all types connections are
     unique and revealing the intricacies that lie within them requires a
     creative, iterative and custom approach.
-  descriptionJa: ""
+  descriptionJa: >-
+    「繋がり」と言うのは我々の一部であり、世界の一部でもあります。人と人、文化間の繋がり、言語の繋がりなど様々です。我々が探求しきれないほどのデータが日常的に集まるこの現代において、発見されていく新たな繋がりは、ときには複雑なネットワークであっても可視化できる可能性を秘めています。
+
+
+    この発表では、Nadieh
+    が作成した個人制作からクライアントとの作品まで、数々のインタラクティブなデータビジュアリゼーション作品におけるデザインプロセスについて話していきます。
+
+    これらの作品に共通していることは、これらが様々な「繋がり」を様々な方法で表していると言うこと。3000
+    人からなるヨーロッパ貴族の家系の繋がりや、UNESCO
+    の様々な文化遺産の間にある繋がり、我々が夜空に描いた星々の繋がりなど。全ての繋がりは独特であり、その複雑さを解きほぐすにはクリエイティブな、反復的、かつ特殊なアプローチが必要なのです。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -1085,7 +1136,7 @@
   endsAt: "18:25"
   room: A
   title: Predictive Prefetching for improved performance
-  titleJa: ""
+  titleJa: 予測的 Prefetching によるパフォーマンス改善
   description: >-
     This talk outlines an idea for applying a data-driven approach to optimising
     loading performance on the web using Guess JS. By building a model of pages
@@ -1095,7 +1146,11 @@
     current page. This has the possibility of improving page-load performance
     for subsequent page visits as there's a strong chance a page will already be
     in the user's cache.
-  descriptionJa: ""
+  descriptionJa: >-
+    このトークでは Guess JS による Web
+    におけるデータドリブンなパフォーマンス改善のアイデアについて話します。エントリーページからユーザがアクセスするであろうページのモデルを作成し、ユーザがまだ読んでいる間にそのページやページ郡の
+    Prefetch
+    を行いあらかじめ読み込んでおく。これによってユーザが次に読み込むページが高速になります、なぜならそれらのページはすでにキャッシュされているから。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -1129,13 +1184,16 @@
   endsAt: "14:00"
   room: A
   title: The State of JavaScript
-  titleJa: ""
+  titleJa: The State of JavaScript
   description: >-
     We run the yearly State of JavaScript survey (http://stateofjs.com). In this
     talk, we'll introduce the project, take a look back at past surveys and
     trends, and maybe even preview some of the results from the upcoming 2019
     survey.
-  descriptionJa: ""
+  descriptionJa: >-
+    我々は毎年 State of JavaScript (http://stateofjs.com) という JavaScript
+    に関するアンケートを行っています。この発表では State of JavaScript
+    についての紹介や、以前のアンケート結果やトレンドについて話していきます。さらに来たる今年のアンケートの結果のプレビューも行うかもしれません。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -1376,8 +1434,8 @@
   startsAt: "15:30"
   endsAt: "16:00"
   room: B
-  title: Your benchmark may not guide a real application performanceot
-  titleJa: あなたのベンチマークは実際にアプリケーションを速くしないかも？
+  title: Your benchmark may not guide a real application performance
+  titleJa: Your benchmark may not guide a real application performance
   description: >-
     Are you working on improving a performance?
 
