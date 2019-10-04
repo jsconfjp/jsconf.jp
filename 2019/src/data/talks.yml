@@ -598,7 +598,7 @@
   endsAt: "14:00"
   room: A
   title: "JavaScript, Rust and Wasm Walk into a Ramen Shop ..."
-  titleJa: ""
+  titleJa: "JavaScript, Rust and Wasm Walk into a Ramen Shop ..."
   description: >-
     So you heard you can run WebAssembly in the browser, but what does this look
     like IRL? Seeking the much talked about performance benefits of running Wasm
@@ -616,7 +616,18 @@
     without losing data integrity. This talk is about a success story, but also
     about a bunch of smol mishaps, fun woopses and lil' dead ends we encountered
     and how we managed to overcome along the way.
-  descriptionJa: ""
+  descriptionJa: >-
+    WebAssembly がブラウザで動くのはご存知かとおもいます。しかし、実際にはどういったものなのでしょう？ 世に溢れてる Wasm
+    によるブラウザのパフォーマンス改善を読み解き、Compass (MongoDB 用の GUI)は大きな一歩を踏み出し、アプリの一部 -
+    ドキュメント検証のためのスキーマパーサ - を Rust
+    に書き換えました。結果、噂は本当でした、大事なことなので二回言います、噂は本当でした！アプリの一部を Rust
+    に置き換えることはパフォーマンス改善に大きく繋がります。ときには、heap も高速化します。
+
+
+    このトークでは、JavaScript で書かれたアプリの一部を Rust に書き換え、Electron に持っていき、既存の React アプリに
+    Wasm を組み込み、それをプロダクションに持っていくことについて話します。Compass の MongoDB との接続部分は Node.js
+    で動いているので、どの様にデータの整合性を保ったまま Rust
+    を使いパフォーマンスを改善したのかについても話します。このトークはサクセスストーリーですが、その裏で起きた細かいハプニングや、うっかりや行き詰まり、そしてそこをどう乗り越えたまでを公開します。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -642,7 +653,7 @@
   endsAt: "11:30"
   room: A
   title: Time Is But an Illusion… in JavaScript
-  titleJa: ""
+  titleJa: 時間はただの幻想である… JavaScriptにおいては
   description: >-
     Time in JavaScript is weird. But why is time so terrible in JavaScript? Why
     do we need libraries like Moment.js? And what exactly are Greenwich Mean
@@ -663,7 +674,21 @@
 
     Let’s kill time together talking about JavaScript time! Because we know,
     time heals all.
-  descriptionJa: ""
+  descriptionJa: >-
+    JavaScript における時間の扱いは少々特殊です。なぜ JavaScript の時間はこんなにも扱いにくいのだろう？ なぜ、Moment.js
+    のようなライブラリが必要なんだろう？ Greenwich Mean Time と Coordinated Universal Times
+    とは一体なんなんだろう？
+
+
+    フォーマッティング、タイムゾーン、i18n 対応、繰り返し設定、うるう年、サマータイム、などなど、時間については全人類悩んでいます！
+
+
+    時は金なりです。時間を扱うポピュラーなライブラリを使って、私達が JavaScript
+    の時間問題をどう解決していっているかについて話します。JavaScript の Date object がどう始まったかについて、そしてその
+    prototype で何が出来るかについて見ていきます。時のねじれを読み解き、日付や時間の対処法を見つけていきます。
+
+
+    JavaScript の時間について話して時間を潰しましょう！なぜなら時間はすべてを解決してくれるから。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -902,7 +927,7 @@
   endsAt: "18:45"
   room: A
   title: Cache Me If You Can
-  titleJa: キャッシュ・ミー・イフ・ユー・キャン
+  titleJa: Cache Me If You Can
   description: >-
     Web caching is one of the most powerful techniques you can use to improve
     the performance of your websites. But like with many other optimization
@@ -1236,9 +1261,20 @@
   startsAt: "11:00"
   endsAt: "11:30"
   room: C
-  title: ""
+  title: Build an interactive data visualization with Vue.js and D3.js
   titleJa: ""
-  description: ""
+  description: >-
+    As we generate more and more data in this world, many companies are now
+    prioritizing visualizing these data to make sense of them.  D3.js is the
+    most powerful tool for building custom data visualizations in the web, but
+    also has quite a learning curve.  In this workshop, we will learn how to use
+    D3.js to translate raw data into what we need to display them on a webpage,
+    and use Vue.js to render them to the DOM and manage interactions between
+    them.
+
+
+    With Vue.js and D3.js together, we can make highly custom, complex
+    interactive visualizations in just a few hundred lines of code.
   descriptionJa: ""
   spokenLanguage: en
   slideLanguage: ""
@@ -1249,9 +1285,20 @@
   startsAt: "11:30"
   endsAt: "12:00"
   room: C
-  title: ""
+  title: Build an interactive data visualization with Vue.js and D3.js
   titleJa: ""
-  description: ""
+  description: >-
+    As we generate more and more data in this world, many companies are now
+    prioritizing visualizing these data to make sense of them.  D3.js is the
+    most powerful tool for building custom data visualizations in the web, but
+    also has quite a learning curve.  In this workshop, we will learn how to use
+    D3.js to translate raw data into what we need to display them on a webpage,
+    and use Vue.js to render them to the DOM and manage interactions between
+    them.
+
+
+    With Vue.js and D3.js together, we can make highly custom, complex
+    interactive visualizations in just a few hundred lines of code.
   descriptionJa: ""
   spokenLanguage: en
   slideLanguage: ""
@@ -1262,9 +1309,20 @@
   startsAt: "12:00"
   endsAt: "13:00"
   room: C
-  title: ""
+  title: Build an interactive data visualization with Vue.js and D3.js
   titleJa: ""
-  description: ""
+  description: >-
+    As we generate more and more data in this world, many companies are now
+    prioritizing visualizing these data to make sense of them.  D3.js is the
+    most powerful tool for building custom data visualizations in the web, but
+    also has quite a learning curve.  In this workshop, we will learn how to use
+    D3.js to translate raw data into what we need to display them on a webpage,
+    and use Vue.js to render them to the DOM and manage interactions between
+    them.
+
+
+    With Vue.js and D3.js together, we can make highly custom, complex
+    interactive visualizations in just a few hundred lines of code.
   descriptionJa: ""
   spokenLanguage: en
   slideLanguage: ""
