@@ -62,7 +62,7 @@
   endsAt: "16:30"
   room: A
   title: Anatomy of a Click
-  titleJa: ""
+  titleJa: Anatomy of a Click
   description: >-
     What actually happens when you click your mouse in your browser window?
 
@@ -79,7 +79,19 @@
     Ideally at the end of the talk you will have a much deeper understanding of
     how browsers dispatch events and could utilize that knowledge to write
     better front-end code.
-  descriptionJa: ""
+  descriptionJa: >-
+    ブラウザウィンドウ上でマウスをクリックしたとき、裏側では何がおこっているでしょう？
+
+
+    このトークでは、Web
+    ブラウザがどのように動いているか、そしてマウスがクリックされたときに何が起こるのかについて、深く追求していきます。さらに、ブラウザが裏で何をしているか、内部でイベントはどう動いているのか、なぜそう動くのかについて話していきます。
+
+
+    Benjamin は Puppeteer や Selenium のような Web
+    自動化ツールがどのようにユーザアクションを模倣するのか、どういうときに失敗するとか、なぜ失敗するのかについて話します。
+
+
+    トークの終わる頃にはあなたブラウザがイベントをどのように発火しているかについてより深い知識を得ることができ、より良いフロントエンドのコードをかけるようになることを願っています。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -90,7 +102,7 @@
   endsAt: "14:00"
   room: C
   title: "npm i -g @next-and-beyond: Building the future of package management"
-  titleJa: ""
+  titleJa: "npm i -g @next-and-beyond: Building the future of package management"
   description: >-
     It’s been 10 years since it all started. Ten years of continuously improving
     and revolutionizing package management for the modern web. One million
@@ -105,7 +117,14 @@
     yarn.lock compatibility, performance and speed upgrades,  tink (a package
     unwinder for JS) and more are only but a few of the exciting new changes you
     can help us build!
-  descriptionJa: ""
+  descriptionJa: >-
+    すべては１０年前にはじまった。１０年間、モダン Web の為の package management を改善し、変革を起こしてきた。publish
+    された package は１００万を超え、今では npm registry
+    は世界最大のオープンソースの為のリポジトリとなった。パブリックレジストリとその為の CLI は我々と共にある。 
+    どこからコントリビュートすればいいかわからない？このトークはあなたにピッタリだ。npm CLI の謎を解き明かし、npm の今後について語ろう。npm
+    v7 と v8 では workspaces, first-class support for symbolic links, yarn.lock
+    互換性、パフォーマンスと速度改善、tink (JS の package
+    unwinder)などなど、様々な追加があり、これはまだ序の口だ。他にもエキサイティングな変更が待っている、それを自分たちの手で作っていこう！
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -422,14 +441,16 @@
   endsAt: "14:45"
   room: B
   title: Building one touch sign-in experience using WebAuthn
-  titleJa: ""
+  titleJa: WebAuthnを使ったOne touch sign-inの実装
   description: >-
     WebAuthn is a browser API that enables strong authentication using public
     key based cryptography. In this session we will walk through basics of
     WebAuthn and how it works. Then we'll cover how to build a user experience
     that enables users to re-authenticate to a website using a fingerprint (or a
     biometric sensor).
-  descriptionJa: ""
+  descriptionJa: >-
+    WebAuthn は公開キーと暗号をベースとした強固な認証を行えるブラウザの API です。このセッションでは、WebAuthn
+    の基本をカバーし、Web サイト上で二度目以降の認証を指紋認証（それか他の生体認証）で行えるような UX を提供する方法を紹介します。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -440,8 +461,20 @@
   endsAt: "16:30"
   room: B
   title: How to Boost Your Code with WebAssembly
-  titleJa: ""
-  description: ""
+  titleJa: How to Boost Your Code with WebAssembly
+  description: >-
+    WebAssembly is an executable format written in binary. It's known to reduce
+    the duration of parsing, and its execution time is much faster compared to
+    JavaScript. However, it also has many limitations.
+
+
+    Recently, I've been hearing from many people wanting to write, or has been
+    writing part of their code in WebAssembly to improve with performance.
+
+
+    Is such a magical feature actually possible? How hard it is to accomplish?
+    How much change will it make? I will report what I have learned from my
+    experience of actually writing WebAssembly.
   descriptionJa: >-
     WebAssemblyはバイナリ表現の実行可能形式です。JavaScriptと異なり、パースの時間を短縮できることや実行が高速であることがメリットとされていますが、制約も大きく扱いの難しい技術です。
 
@@ -832,9 +865,20 @@
   startsAt: "17:15"
   endsAt: "17:45"
   room: B
-  title: ""
+  title: IoT development with modern web technologies
   titleJa: 最新のWeb技術でIoT開発をする
-  description: ""
+  description: >-
+    JavaScript can be used various cases, like HTML dynamically from the client
+    side, or handle computations on server side.
+
+    What it can also do is to manipulate physical things in "real side" such as
+    motors and sensors. With the power of JavaScript, we are able to express
+    things beyond what is being displayed on the screen , and get current state
+    of real life such as getting the number of people in a room.
+
+
+    In this session, you will learn about "real side" development in JavaScript.
+    What tools can be used, and what can be done with it.
   descriptionJa: >-
     JavaScriptはクライアントサイドでHTMLを動的に動かしたり、サーバーサイドとして様々な処理をしたりすることができますが、リアルサイドとして現実世界のモーターやセンサなどの"もの"を制御することもできます。リアルサイドでもJavaScriptを使うことで、ディスプレイの枠にとらわれない表現方法が可能になったり、部屋に人がいるかなどの現実の状態を取得する事が可能になったりと、できることがまた一段と広がります。
     本セッションではJavaScriptでのリアルサイドについて、どんな技術選択肢があるかから扱う方法、どういったものが作れるか等についてお話します。
@@ -872,7 +916,7 @@
   endsAt: "16:00"
   room: C
   title: Technical SEO for JavaScript developers
-  titleJa: ""
+  titleJa: JS開発者のためのSEOテクニック
   description: >-
     I am sick and tired of SEOs, marketing folks and developers spreading fear,
     uncertainty and doubt about SEO and JavaScript.
@@ -894,7 +938,24 @@
 
     - Debugging tools and techniques to make sure people can find the things you
     put on the web
-  descriptionJa: ""
+  descriptionJa: >-
+    もうつかれた。SEO にもマーケティングにも開発者が SEO と JavaScript について不安や疑惑を抱いていることについてもこりごりだ。
+
+
+    このトークでは Web 開発者に向けて、Googlebot や他の Crawler
+    があなたのコンテンツをどう見ているか、そしてよくある落とし穴をどう避けるかについて、わかりやすく説明する。
+
+
+    以下のことについて語っていく。
+
+
+    - Crawler があなたのコンテンツをどう見て index するか。
+
+    - 何が動いて何が動かないのか。
+
+    - よくあるミスや勘違いとそれらの対処法。
+
+    - あなたが Web 上に上げたものを他の人が見つかる様にするデバッグツールやテクニック。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -905,7 +966,7 @@
   endsAt: "17:15"
   room: C
   title: You might also like...
-  titleJa: ""
+  titleJa: You might also like...
   description: >-
     Think about Netflix, Spotify or your favorite e-commerce, a lot of content
     we consume and products we buy come from recommendations made by machines.
@@ -916,7 +977,12 @@
 
     In this talk, I present how to leverage graph theory to build your own
     recommender system with JavaScript.
-  descriptionJa: ""
+  descriptionJa: >-
+    Netflix や Spotify、それかあなたの好きな E
+    コマースサイトを想像してみてください。我々が購入するコンテンツやプロダクトの多くは機械が作成したおすすめから来ているものです。おすすめシステム、そしてその裏側で動いているメカニズムは近年多くの注目を浴びてきており、情報過多な現代を乗り越えるのに役立っています。
+
+
+    このトークでは、グラフ理論を用いて、JacaScript で自分だけのおすすめシステムを作成する方法について発表します。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -951,9 +1017,15 @@
   startsAt: "18:45"
   endsAt: "18:55"
   room: A
-  title: ""
+  title: Creating a mini mini node.js - wasm compiler using node.js
   titleJa: Node.js でつくる Node.js - WASM ミニミニコンパイラー
-  description: ""
+  description: >-
+    This is a continuation of last year's session, "Creating a small node.js
+    interpreter/compiler with node.js". To familiarize myself with WASM, I've
+    created a very small WASM compiler using Node.js.
+
+    I was able to get a little grasp of the works behind WASM, which was
+    different from LLVM that I used for last session.
   descriptionJa: >-
     昨年のセッション「Node.jsでつくるNode.js
     ミニインタープリター/コンパイラー」の続編です。WASMを学ぶために、Node.jsでミニミニWASMコンパイラーを作ってみました。前回使ったLLVMとはまた異なるWASMの仕組みを、ちょっとだけ垣間見ることができました。
@@ -988,7 +1060,48 @@
   room: B
   title: Migration from React Native to PWA
   titleJa: Migration from React Native to PWA
-  description: ""
+  description: >-
+    ## Target Audience
+
+
+    - Developers who are thinking of developing multi platform applications in a
+    cross platform development framework.
+
+    - Developers who have been creating and maintaining Native Apps without the
+    use of Native Language, and are thinking of migrating.
+
+    - No experience of React Native Required.
+
+
+    ## Talk Overview
+
+
+    In the past few years, there has been cases of companies starting to write
+    their applications in React Native, or companies like AirBnB switching from
+    React Native to Native Language. There are also ongoing debates about "React
+    Native vs PWA" and "React Native vs Swift/Kotlin". However, there aren't
+    many examples of migrating React Native app to PWA.
+
+
+    In this talk, he will be presenting a case study of a project that has
+    migrated from application made with React Native to PWA. Especially, the
+    difference between "can be devleoped" and "can be maintained" and its
+    hardship, as well as realization of good developer experience by building in
+    web platform.
+
+
+    There are some project specific details in this use case, but the basic
+    outline will be the following:
+
+
+    - Background behind the decision of switching from React Native app to PWA
+
+    - What was done to make the migration
+
+    - What he has learned from developing and maintaining applications in the
+    following pattern:
+      - React Native app that has support for both iOS and Android
+      - PWA/Hybrid app that has support for iOS/Android/Web
   descriptionJa: >-
     ## 対象とする聞き手
 
@@ -1081,7 +1194,7 @@
   endsAt: "17:45"
   room: C
   title: Web Accessibility in a Nutshell
-  titleJa: ""
+  titleJa: Web Accessibilityのすゝめ
   description: >-
     The internet is changing the way all of us are living, and Web applications
     should spark joy for everyone with any capabilities. How would you develop
@@ -1092,7 +1205,13 @@
     In this talk, I will go through best practices to create accessible UI
     components both in design and implementation and see how Netflix pioneers
     accessibility on its signup flow.
-  descriptionJa: ""
+  descriptionJa: >-
+    人生は変化の連続であるように、インターネットもまた常に変化の連続である。Web
+    アプリはどんな背景がある人でも「ときめき」を感じれるものでありたい。もし、ヨーロッパの人はこのサイトを使えないとわかっていたら、あなたならどのようにサイトを設計する？あなたはアクセシビリティを優先するだろうか？
+
+
+    このトークでは、UI のアクセシビリティ対応のベストプラクティスについて、デザイン観点と実装の観点から見ていきます。Netflix
+    がアクセシビリティの先駆者としてどのようなサインアップのフローを設計しているかを伝えていきます。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -1102,9 +1221,36 @@
   startsAt: "14:15"
   endsAt: "14:45"
   room: B
-  title: ""
+  title: Performance tuning in EC site with GraphQL
   titleJa: GraphQLを用いたECサイトにおけるパフォーマンス改善
-  description: ""
+  description: >-
+    Overview: This talk will be about performance tuning based on actual case he
+    experienced during renewal of E-Commerce site. The site is powered by
+    GraphQL + React + SSR, and he will be talking about basic performance tuning
+    as well as actual usecase of GraphQL.
+
+
+    During renewal, we were using GraphQL + React + SSR, but as a result of
+    prioritizing the release, the performance was not up to par, and speed
+    insight showed 20s. As E-Commerce site requires decent amounf of items, and
+    show special sales at time, the approach to improving the performance can be
+    a bit different from static sites such as news websites. With this renewal,
+    we were able to improve performance of a non-performant site to xxx
+    (improvent is ongoing).
+
+
+    We will go in details for:
+
+
+    - Separating the issue by applying appropriate performance measurement,
+    using tools such as Speed insight and increasee performance of server by
+    using APM tools usch as DataDog.
+
+    - Improvement in Fronet-end side. (reducing bundle size, and utilizing
+    lazy-loading)
+
+    - Manage cache approprately (using HTML cache and separate user belonging
+    contents to design GraphQL queries that can easily be cached.)
   descriptionJa: >-
     概要: ECサイトリニューアルにおける事例を題材にサービスの性能改善の方法を実際の事例をもとにお話します。該当のサイトはGraphQL + React
     + SSRを導入しており、ベーシックな性能改善の話からGraphQLの活用例まで含めてお話する予定です。
@@ -1186,7 +1332,7 @@
   endsAt: "16:00"
   room: A
   title: "Browser APIs: the unknown Super Heroes"
-  titleJa: ""
+  titleJa: "Browser APIs: 知られざるヒーロー達"
   description: >-
     Still think browsers are only capable of parsing HTML, CSS and JavaScript?
     Think again!
@@ -1198,7 +1344,14 @@
     This talk will introduce you to some of them (like Bluetooth, battery,
     speech, audio, location, ...) and show you how easy it is to unleash their
     power with JavaScript.
-  descriptionJa: ""
+  descriptionJa: >-
+    未だにブラウザは HTML、CSS、JavaScript をパースするだけのものだと思っていませんか？考え直しましょう！
+
+    ブラウザはパワフルな成長を遂げ、UX の向上を測ったり、いろんな楽しいことができる数々の API が用意されています。
+
+
+    このトークでは、それらの API の一部、(Bluetooth, battery, speech, audio, location
+    等)を紹介し、その導入がいかに楽にできるのかについてお伝えします。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -1230,9 +1383,78 @@
   endsAt: "16:00"
   room: B
   title: "Wrap-up: Runtime-friendly JavaScript"
-  titleJa: ""
+  titleJa: "Wrap-up: Runtime-friendly JavaScript"
   description: "Let's wrap up what runtime-friendly performant JavaScript is like, introducing how runtime(such as v8, node.js etc.) handles scripts: Internal Representation, JIT, Eventloop etc. I will also mention tools(node options, chrome devtool) and the overhead of normal language feature(like object instantiation and Map/Set).\n\nPlot (draft)\n- Fundamentals\n\_ \_- Runtime\n\_ \_- IR & JIT\n- Node\n\_ \_- Async & non-blocking I/O\n\_ \_- Stream\n\_ \_- Eventloop\n\_ \_ \_ \_- libuv\n- V8\n\_ \_- Crankshaft, FullCodeGen, TurboFun, Ignition\n- Internal Representation\n\_ \_- Object IR\n\_ \_ \_ \_- elements & properties\n\_ \_ \_ \_- Hidden Class\n\_ \_ \_ \_- JSON.parse\n\_ \_- String IR\n\_ \_ \_ \_- flatstr\n\_ \_- Array IR\n\_ \_- Number IR\n- JIT\n\_ \_- Hot code\n\_ \_- Inline Cache\n- Tools\n\_ \_- trace: opt, deopt, ic\n\_ \_- chrome devtool\n\_ \_- (d8)\n- Principle of high performance\n\_ \_- Application\n\_ \_ \_ \_- Maintainability is first\n\_ \_ \_ \_ \_ \_- Various people will join your team\n\_ \_ \_ \_- Choose performant libraries\n\_ \_ \_ \_ \_ \_- Core functionarities are run many times\n\_ \_ \_ \_- Use util library instead of your own ones\n\_ \_ \_ \_ \_ \_- tested\n\_ \_ \_ \_ \_ \_- performant\n\_ \_ \_ \_ \_ \_- used\n\_ \_- Library\n\_ \_ \_ \_- Low-overhead is nicer\n\_ \_ \_ \_ \_ \_- (TBD)\n- Techniques\n\_ \_- Avoid runtime overhead\n\_ \_ \_ \_- Object instantiation\n\_ \_ \_ \_- Map, Set, Object\n\_ \_ \_ \_- Regexp\n\_ \_- Avoid blocking I/O\n\_ \_ \_ \_- Sync, Async\n\_ \_ \_ \_- Macro/micro tasks\n\_ \_- PIFE/IIFE\n- Performant libraries\n\_ \_- bluebird\n\_ \_- ajv\n\_ \_- pico(nearForm)\n\_ \_- fastify(nearForm)\n- Appendix\n\_ \_- node-gyp\n\_ \_- quickjs, hermes"
-  descriptionJa: ""
+  descriptionJa: >-
+    実行時に高速ランタイムフレンドリーな JavaScript とはどのようなものなのか？
+
+    このトークでは、v8, node.js などのランタイムが Internal Representation, JIT, Eventloop
+    などを使用し、スクリプトをどの用に処理しているかについて話します。
+
+    さらに、node options や chrome devtool などのツールを使う上でのテクニックや、
+
+    object のインスタンス化や Map, Set などの言語機能がどのような Overhead を抱えているかについて発表します。
+
+
+    Plot (draft)
+
+
+    - Fundamentals
+      - Runtime
+      - IR & JIT
+    - Node
+      - Async & non-blocking I/O
+      - Stream
+      - Eventloop
+        - libuv
+    - V8
+      - Crankshaft, FullCodeGen, TurboFun, Ignition
+    - Internal Representation
+      - Object IR
+        - elements & properties
+        - Hidden Class
+        - JSON.parse
+      - String IR
+        - flatstr
+      - Array IR
+      - Number IR
+    - JIT
+      - Hot code
+      - Inline Cache
+    - Tools
+      - trace: opt, deopt, ic
+      - chrome devtool
+      - (d8)
+    - Principle of high performance
+      - Application
+        - Maintainability is first
+          - Various people will join your team
+        - Choose performant libraries
+          - Core functionarities are run many times
+        - Use util library instead of your own ones
+          - tested
+          - performant
+          - used
+      - Library
+        - Low-overhead is nicer
+          - (TBD)
+    - Techniques
+      - Avoid runtime overhead
+        - Object instantiation
+        - Map, Set, Object
+        - Regexp
+      - Avoid blocking I/O
+        - Sync, Async
+        - Macro/micro tasks
+      - PIFE/IIFE
+    - Performant libraries
+      - bluebird
+      - ajv
+      - pico(nearForm)
+      - fastify(nearForm)
+    - Appendix
+      - node-gyp
+      - quickjs, hermes
   spokenLanguage: ja
   slideLanguage: ""
   speakerIDs:
@@ -1243,7 +1465,7 @@
   endsAt: "16:30"
   room: C
   title: Playing Pokémon Together with Node.js
-  titleJa: ""
+  titleJa: Playing Pokémon Together with Node.js
   description: >-
     Pocket Monsters filled many of our childhoods, and some of our adulthoods,
     with joy. In this live coding adventure, we will recapture the magic of
@@ -1251,7 +1473,11 @@
     server-side JavaScript interacting with Gameboy emulator scripts. By the end
     of this session, you will learn how to write video game emulator scripts and
     interact with them using Node.js and Express.
-  descriptionJa: ""
+  descriptionJa: >-
+    ポケモンは多くの人の幼少期と、一部の人は成長してからも共にあり、喜びを与えてくれた。このライブコーディングセッションでは、その魔法のような喜びを
+    Twilio の電話番号を組み込んだ Server Side JS で作成された Gameboy Emulator scripts
+    で再現しよう。このセッションが終わった頃には、あなたはゲームの Emulator scripts を書き、それを Node.js と Express
+    で動かせるようになるだろう。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -1262,7 +1488,7 @@
   endsAt: "11:30"
   room: C
   title: Build an interactive data visualization with Vue.js and D3.js
-  titleJa: ""
+  titleJa: Vue.js で D3.js を使ったインタラクティブなデータの可視化
   description: >-
     As we generate more and more data in this world, many companies are now
     prioritizing visualizing these data to make sense of them.  D3.js is the
@@ -1275,7 +1501,13 @@
 
     With Vue.js and D3.js together, we can make highly custom, complex
     interactive visualizations in just a few hundred lines of code.
-  descriptionJa: ""
+  descriptionJa: >-
+    この世に新たなデータを増やしていくたびに、多くの会社は集めたデータを自分達がわかるように可視化することに注力を上げています。D3.js は Web
+    上で好きなようにデータの可視化を行うための最高のツールですが、 習い始めがとても難しいです。このワークショップでは、D3.js
+    の使い方を学び、生データを Web サイトで表示できる形に変換し、Vue.js を使って DOM に描画してユーザが動かせるところまで持っていきます。
+
+
+    Vue.js と D3.js を組み合わせれば、数百行のコードでインタラクティブでカスタマイズ可能なデータの可視化が実現できます。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -1286,7 +1518,7 @@
   endsAt: "12:00"
   room: C
   title: Build an interactive data visualization with Vue.js and D3.js
-  titleJa: ""
+  titleJa: Vue.js で D3.js を使ったインタラクティブなデータの可視化
   description: >-
     As we generate more and more data in this world, many companies are now
     prioritizing visualizing these data to make sense of them.  D3.js is the
@@ -1299,7 +1531,13 @@
 
     With Vue.js and D3.js together, we can make highly custom, complex
     interactive visualizations in just a few hundred lines of code.
-  descriptionJa: ""
+  descriptionJa: >-
+    この世に新たなデータを増やしていくたびに、多くの会社は集めたデータを自分達がわかるように可視化することに注力を上げています。D3.js は Web
+    上で好きなようにデータの可視化を行うための最高のツールですが、 習い始めがとても難しいです。このワークショップでは、D3.js
+    の使い方を学び、生データを Web サイトで表示できる形に変換し、Vue.js を使って DOM に描画してユーザが動かせるところまで持っていきます。
+
+
+    Vue.js と D3.js を組み合わせれば、数百行のコードでインタラクティブでカスタマイズ可能なデータの可視化が実現できます。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -1310,7 +1548,7 @@
   endsAt: "13:00"
   room: C
   title: Build an interactive data visualization with Vue.js and D3.js
-  titleJa: ""
+  titleJa: Vue.js で D3.js を使ったインタラクティブなデータの可視化
   description: >-
     As we generate more and more data in this world, many companies are now
     prioritizing visualizing these data to make sense of them.  D3.js is the
@@ -1323,7 +1561,13 @@
 
     With Vue.js and D3.js together, we can make highly custom, complex
     interactive visualizations in just a few hundred lines of code.
-  descriptionJa: ""
+  descriptionJa: >-
+    この世に新たなデータを増やしていくたびに、多くの会社は集めたデータを自分達がわかるように可視化することに注力を上げています。D3.js は Web
+    上で好きなようにデータの可視化を行うための最高のツールですが、 習い始めがとても難しいです。このワークショップでは、D3.js
+    の使い方を学び、生データを Web サイトで表示できる形に変換し、Vue.js を使って DOM に描画してユーザが動かせるところまで持っていきます。
+
+
+    Vue.js と D3.js を組み合わせれば、数百行のコードでインタラクティブでカスタマイズ可能なデータの可視化が実現できます。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -1334,7 +1578,7 @@
   endsAt: "13:30"
   room: C
   title: Passwords are so 1990
-  titleJa: ""
+  titleJa: パスワードは90年代の代物だ
   description: >-
     As long as we’ve been using the internet, and way before that, we have been
     authenticating through some sort of username and password combination. It
@@ -1349,7 +1593,13 @@
     The audience does not need any specific knowledge as this talk will not go
     into implementation details, but aims to give a view of what’s to come in
     terms of authentication.
-  descriptionJa: ""
+  descriptionJa: >-
+    古代の時代から我々は認証プロセス何かしらのユーザー名とパスワードを組み合わせて行ってきた。それがあたりまえだった。現代の無限に増え続ける Web
+    アプリの裏で、データブリーチの被害も増え続けている。もし認証にパスワードが必要なかったとしたらどうだろう？
+
+
+    このトークでは、認証プロセスのこれまでの歴史、現状、そしてこれからのことについて話します。認証の基本から Web Authentication API
+    を使ったパスワードのいらない生体認証まで、そしてその間にある様々な認証についてを説明します。このトークを聴くのに特別な事前知識は必要ありません。このトークは実装の詳細について語るのではなく、あくまで認証の全貌について、これからどうなっていくのかを伝えていきます。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -1359,9 +1609,21 @@
   startsAt: "16:00"
   endsAt: "16:30"
   room: B
-  title: ""
+  title: >-
+    Capacitor: linking JavaScript with Swift/Java, and the future of Web
+    Frontend
   titleJa: JavaScriptとSwift/JavaをつなげるCapacitorと、これからのWeb Frontned.
-  description: ""
+  description: >-
+    Capacitor has entered the table as a next generation cross-platform library
+    using web technology.
+
+    It's unique feature is linking JavaScript with Swift/Java with ease. The
+    world of JavaScript is no longer limited to just Web browsers.
+
+
+    In this session, he will present the overview of Capacitor, as well as
+    devlopment of its plugins, and where the Web Frontend will be heading in the
+    future.
   descriptionJa: >-
     Web技術を使った次世代のクロスプラットフォームライブラリとしてCapacitorが登場しました。特徴は何といっても、JavaScriptとSwift/Javaの連携容易性です。JavaScriptの世界はWebブラウザに留まらない時代がやってきました。
 
@@ -1396,9 +1658,14 @@
   startsAt: "14:15"
   endsAt: "14:45"
   room: C
-  title: ""
+  title: "JavaScript AST programming: Introduction and beyond"
   titleJa: "JavaScript AST プログラミング: 入門とその1歩先へ"
-  description: ""
+  description: >-
+    With the appearence of Babel and ESLint, the opportunity to play around with
+    JavaScript's AST has been increasing. Still, most programmers seem to have
+    never touched AST. In this session, he will begin with an introduction to
+    AST, and explain some key points of programming in JavaaScript AST, by
+    creating a tool in a live coding format.
   descriptionJa: >-
     Babel や ESLint の登場により JavaScript の AST
     に触れる機会は若干増えてきましたが、それでもほとんどのプログラマは触れたことがないのではないかと思います。このセッションでは、まず JavaScript
