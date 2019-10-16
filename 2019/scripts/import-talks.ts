@@ -13,6 +13,7 @@ type PresenterRow = {
   uuid: string
   presentations: string
   "presentation-title-en": string
+  invited: "cfp" | "cancel" | "invitation"
   name: string
   image: string
   "biography-en": string
@@ -73,6 +74,7 @@ const { presenters } = workBook.Sheets
 const speakerRows = XLSX.utils
   .sheet_to_json<PresenterRow>(presenters)
   .filter(row => !!row.Timestamp)
+  .filter(row => row.invited !== "cancel")
 const speakers = speakerRows
   .map(row => ({
     uuid: row.uuid,
