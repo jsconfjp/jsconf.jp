@@ -92,7 +92,25 @@
 - uuid: guillermo-rauch
   name: Guillermo Rauch
   featured: true
-  biography: ""
+  biography: >-
+    [feel free to abridge] Guillermo Rauch is the founder of ZEIT, co-creator of
+    Now and Next.js, and former CTO and co-founder of LearnBoost and Cloudup,
+    acquired by Wordpress.com in 2013. His background and expertise is in the
+    realtime web. He's the creator of socket.io, one of the most popular
+    JavaScript projects on GitHub, with implementations in many different
+    programming languages and frameworks (currently running the realtime backend
+    of high profile apps like Microsoft Office online). He created the first
+    MongoDB ORM for Node.JS, MongooseJS. Before that he was a core developer of
+    the MooTools JavaScript framework. He's the author of "Smashing Node.JS"
+    published by Wiley in 2012, best-selling book about Node.JS on Amazon in
+    multiple programming categories. He's spoken at dozens of conferences all
+    around the world about JavaScript and the realtime web, such as O'Reilly
+    OSCon, QCon and NDC. Originally from Argentina, he dropped out of highschool
+    and moved to the US to pursue his passions in the San Francisco startup
+    world. He's passionate about open source as an education medium. He's a
+    former mentor of an Open Source Engineering class organized and pioneered by
+    Stanford, with students from Harvard, MIT, Carnegie Mellon, UPenn, Columbia
+    and others.
   biographyJa: ""
 - uuid: ginpei-takanashi
   name: 高梨ギンペイ
@@ -384,24 +402,6 @@
     1992 年にオランダの保険会社である Nationale-Nederlanden に努め、2004
     年からはフリーランスエンジニアとして活動しています。現在は Senior Developer として Vue.js, Node.js および
     NativeScript で開発しており、NativeScript の Progress Developer Expert でもあります。
-- uuid: sacha-greif
-  name: Sacha Greif
-  featured: false
-  biography: >-
-    "Sacha Greif is an independent designer and developer. He runs Sidebar, a
-    daily design newsletter, and also created Vulcan.js, a full-stack JavaScript
-    framework. 
-
-
-    Raphael Benitte is a graphic designer and data visualization expert. He
-    created the Nivo.js dataviz library for React. "
-  biographyJa: >-
-    Sacha Greif は独立したデザイナー及びエンジニアです。彼は Sidebar と言うデザインのメールマガジンを運営しており、フルスタックな
-    JavaScript フレームワークである、Vulcan.js の作者でもあります。
-
-
-    Raphael Benitte はグラフィックデザイナーであり、データビジュアリゼーションとエキスパートです。React
-    用のデータビジュアリゼーションライブラリである Nivo.js の作者。
 - uuid: shirley-wu
   name: Shirley Wu
   featured: true
@@ -414,7 +414,7 @@
     found at sxywu.com.
   biographyJa: >-
     Shirley Wu はデータ・ドリブン・アートとビジュアリゼーションに関して様々な受賞歴を持つクリエイターです。彼女は Google, The
-    Guardian, SFMOHA, NVC Universal
+    Guardian, SFMOMA, NBC Universal
     など、様々なクライアントと共に働き、カスタマイズされたインタラクティブなデータヴィジュアライゼーションを実装しています。彼女は彼女が持つアート、数学、コーディングに対する情熱をカラフルで
     説得力のあるストーリーを創造し、Web の限界を広げています。彼女の作品は sxywu.com にて確認できます。
 - uuid: sho-miyamoto
@@ -517,7 +517,9 @@
 - uuid: yoshiki-shibukawa
   name: Yoshiki Shibukawa
   featured: false
-  biography: ""
+  biography: >-
+    Yoshiki is a 2nd year front-end developer at Future corporation. He is also
+    the author of Real World HTTP.
   biographyJa: フューチャー歴2年でフロントエンド開発含めていろいろやっています。Real World HTTPの著者です。
 - uuid: yosuke-furukawa
   name: 古川 陽介

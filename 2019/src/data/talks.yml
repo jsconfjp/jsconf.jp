@@ -536,9 +536,13 @@
   startsAt: "14:45"
   endsAt: "15:15"
   room: B
-  title: ""
+  title: Starting TypeScript from JavaScript
   titleJa: JavaScriptのままでTypeScriptを始める
-  description: ""
+  description: >-
+    When you use `--allowJs` and `--checkJs` option for typescript, you can run
+    `tsc` while having `*.js` files. This talk will be about being able to work
+    on projects with some type safety, for small projects or projects that
+    cannot convert to typescript for what ever circumstances.
   descriptionJa: >-
     TypeScript の --allowJs と --checkJs オプションを使うと *.js のまま tsc
     で型検証ができるので、コンパイルを開発手順に含めずに JS
@@ -795,7 +799,7 @@
   endsAt: "17:15"
   room: A
   title: Discovering Animals with AI and Javascript
-  titleJa: ""
+  titleJa: AI と JavaScript による 生物認識
   description: >-
     As a volunteer for the Vancouver aquarium, I built a web app for identifying
     hundreds of different kinds of animals that we have on-site and I’d like to
@@ -1638,9 +1642,17 @@
   startsAt: "16:45"
   endsAt: "17:15"
   room: B
-  title: ""
+  title: Developing with Elm in a large application
   titleJa: 大規模アプリケーション開発でのElm実践
-  description: ""
+  description: >-
+    I will be talking about Elm, an AltJS that has been the recent center of
+    attention. Elm is a pure functional programming language. Usually, when we
+    imagine a pure functional programming languages, they are often hard to work
+    with, but Elm has some functions limited to have an easier learning curve.
+    We have a profuct called Unipos, which is built with Elm with 6 front-end
+    engineers. We have over 70k lines of Elm code in our production. This talk
+    will be about my experience of using Elm in a large production, as well as
+    some some trouble we had while making our product, Unipos.
   descriptionJa: >-
     最近話題に上がるようになってきたAltJSのElmについてご紹介します。
 
@@ -1680,9 +1692,18 @@
   startsAt: "16:45"
   endsAt: "17:15"
   room: B
-  title: ""
+  title: Understanding Streams API
   titleJa: Streams APIをちゃんと理解する
-  description: ""
+  description: >-
+    Streams API is very hard to understand. Its usecases are still not much
+    known to public. With the era of 5G coming around the corder, we may get an
+    increase of video streaming with large files. Streams API will come in handy
+    for those situations. In this talk, he will be talking about Streams API and
+    its usecase, and how it works behind the scene.
+
+
+    - This talk will be about Streams Web API. It will not include Stream in
+    Node.js
   descriptionJa: >-
     なかなか理解するのが難しいStreams
     API。その使いどころも未だ未知数です。5G時代を目前に控えた今、Web上でさらに大容量の動画などが配信され始めるかもしれません。そんなときに活躍するであろうStreams
@@ -1804,8 +1825,16 @@
   endsAt: "18:35"
   room: A
   title: Web Components era phase 2
-  titleJa: ""
-  description: ""
+  titleJa: Web Components era phase 2
+  description: >-
+    WebComponents has been said to be the "upcoming feature", but it still has
+    yet to be standarized. However, with Firefox supporting WebComponents, and
+    Edge becoming Chromium base, we can say that we will get 100% native support
+    in browsers. WebComponents can be integrated with existing products, and we
+    can also reduce CPU cost of server side rendering. 
+
+
+    https://qiita.com/shibukawa/private/5a36147ec103d35c1b5e
   descriptionJa: >-
     WebComponentsは長らく「将来の技術」と言われて来ましたが普及には至っていません。しかし、ブラウザのネイティブサポートが昨年末のFirefoxのサポートとEdgeのChromium化によってほぼ100%になることが見込まれ、既存の開発方法論との組み合わせの親和性が上がり、またサーバーサイドレンダリングというサーバーCPU負荷の高い処理の負荷軽減も期待できます。
 
