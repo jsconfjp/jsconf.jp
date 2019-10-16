@@ -1676,7 +1676,7 @@
     With the appearence of Babel and ESLint, the opportunity to play around with
     JavaScript's AST has been increasing. Still, most programmers seem to have
     never touched AST. In this session, he will begin with an introduction to
-    AST, and explain some key points of programming in JavaaScript AST, by
+    AST, and explain some key points of programming in JavaScript AST, by
     creating a tool in a live coding format.
   descriptionJa: >-
     Babel や ESLint の登場により JavaScript の AST
