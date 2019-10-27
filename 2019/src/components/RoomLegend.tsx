@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { useTranslation } from "react-i18next"
 import { Rooms, rooms } from "../util/misc"
 
 const Box = styled.div`
@@ -9,9 +10,11 @@ const Box = styled.div`
   justify-content: space-around;
 `
 const RoomBox = styled.div`
+  flex: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 `
 const Circle = styled.div<{ area: Rooms }>`
   width: 30px;
@@ -29,12 +32,13 @@ const Text = styled.span`
 `
 
 export function RoomLegend() {
+  const { t } = useTranslation()
   return (
     <Box>
       {rooms.map(room => (
         <RoomBox key={room}>
           <Circle area={room} />
-          <Text>Room {room}</Text>
+          <Text>{t(`room${room}`)}</Text>
         </RoomBox>
       ))}
     </Box>
