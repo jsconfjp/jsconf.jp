@@ -23,7 +23,7 @@ export const en = {
     day2: "Day 2",
     roomA: "Room A(Gymnasium)",
     roomB: "Room B(B105)",
-    roomC: "Room C(Community space)",
+    roomC: "Room C(Rooftop)",
     tickets: "Tickets",
     buyTickets: "Buy Tickets",
     comingSoon: "Coming soon",
