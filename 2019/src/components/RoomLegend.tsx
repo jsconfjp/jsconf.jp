@@ -8,13 +8,21 @@ const Box = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
 const RoomBox = styled.div`
   flex: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    margin-bottom: 1em;
+  }
 `
 const Circle = styled.div<{ area: Rooms }>`
   width: 30px;
@@ -25,6 +33,7 @@ const Circle = styled.div<{ area: Rooms }>`
     theme.colors[`room${area}Border`]};
 `
 const Text = styled.span`
+  flex: 1;
   margin-left: 10px;
   font-weight: bold;
   font-size: 20px;
