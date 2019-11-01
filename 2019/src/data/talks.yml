@@ -227,10 +227,17 @@
   date: day1
   title: Break
   speakerIDs: []
+- uuid: "day1-break-A-18:15"
+  startsAt: "18:15"
+  endsAt: "18:45"
+  room: A
+  date: day1
+  title: Sponsor talk
+  speakerIDs: []
 - uuid: dynamis
   date: day1
-  startsAt: "18:55"
-  endsAt: "19:05"
+  startsAt: "19:25"
+  endsAt: "19:35"
   room: A
   title: License violation of React Applications
   titleJa: React アプリのライセンス違反について
@@ -247,9 +254,9 @@
   slideLanguage: ""
   speakerIDs:
     - dynamis
-- uuid: "day1-break-A-19:15"
-  startsAt: "19:15"
-  endsAt: "19:45"
+- uuid: "day1-break-A-19:35"
+  startsAt: "19:35"
+  endsAt: "21:00"
   room: A
   date: day1
   title: Party
@@ -680,7 +687,7 @@
     Write what, not how: A declarative approach to presentation, side effects,
     and subscriptions.
   descriptionJa: 宣言的アプローチで行うプレゼンテーション、サイドエフェクト、そしてサブスクリプション
-  spokenLanguage: en/ja
+  spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
     - jorge-bucaran
@@ -799,49 +806,37 @@
   endsAt: "17:15"
   room: A
   title: Discovering Animals with AI and Javascript
-  titleJa: AI と JavaScript による 生物認識
+  titleJa: AIとJavaScript による生物認識
   description: >-
-    As a volunteer for the Vancouver aquarium, I built a web app for identifying
-    hundreds of different kinds of animals that we have on-site and I’d like to
-    share how others can do the same. I’ll give a quick introduction to machine
-    learning, then go over how it can be used to identify animals. Then, I’ll
-    show  how that can be done on mobile browsers using Tensorflow JS and the
-    user’s phone camera.
+    Learn how to identify objects and animals using machine learning and
+    Javascript, with a practical example. Here's what we will go over:
 
 
-    This talk is intended for JavaScript developers with all levels of
-    experience. The only requirement is an interest in AI and, more importantly,
-    in animals. 
+    - Quick introduction to machine learning
+
+    - How it can be done on the mobile browsers with Tensorflow JS
+
+    - Walkthrough of building a dog-identification app
+
+    - Advanced machine learning practices
+
+    - Performance considerations
 
 
-    People attending the talk will learn:
+    A little bit of Javascript experience is preferred, but developers of all
+    levels can learn from this talk!
+  descriptionJa: |-
+    このプレゼンテーションでは、実用例でJavascriptとマシーンラーニングで生き物の種類を認識する方法を紹介します。
 
+    プレゼンテーションの５つのポイント：
+    - マシンラーニングの基本
+    - Tensorflow JS と携帯のブラウザを使いその過程を作成する
+    - 簡単な犬の種類を認識するアプリを開発する方法
+    - マシンラーニングの高度な概念
+    - パフォーマンス考慮事項.
 
-    - How machine learning is used to detect, locate and classify objects in an
-    image
-
-    - How Tensorflow JS can be used to do this in the browser
-
-    - How to improve your models with the help of users
-
-
-    The key takeaway is that working with machine learning in the browser is
-    easy, useful and fun!
-  descriptionJa: >-
-    バンクーバー水族館のボランティアとして、何百もの生き物の種類を認識するウェブアプリを開発致しました。そこで今回は皆様にその使用方法についてお伝えしたいと思います。まず、マシーンラーニングを簡単に紹介しまして、動物の認識方法を説明させていただきます。そして、TensorflowJSを使い、ユーザーの携帯電話のカメラでその認識をする方法も説明致します。
-
-
-    このプレゼンテーションは、全レベルのJavascript開発者の方が対象です。ただ一つの対象者の条件は、AIに興味があること。それよりもさらにたいせつなことは生き物にどれほど興味があるかどうかです。
-
-
-    プレゼンテーションの３つのポイント：
-
-    - どういう風にしてマシーンラーニングで印象付けし、対象を分類して位置を見つけるか
-
-    - Tensorflow JS とブラウザを使いその過程を作成する
-
-    - マシーンラーニングのモデルをユーザーの協力で改善させる
-  spokenLanguage: ja
+    経験がある全レベルのJavascript開発者の方が対象です。
+  spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
     - jonny-kalambay
@@ -993,8 +988,8 @@
     - maria-clara
 - uuid: maxi-ferreira
   date: day1
-  startsAt: "18:35"
-  endsAt: "18:45"
+  startsAt: "19:05"
+  endsAt: "19:15"
   room: A
   title: Cache Me If You Can
   titleJa: Cache Me If You Can
@@ -1018,22 +1013,22 @@
     - maxi-ferreira
 - uuid: masashi-ganeko
   date: day1
-  startsAt: "18:45"
-  endsAt: "18:55"
+  startsAt: "19:15"
+  endsAt: "19:25"
   room: A
-  title: Creating a mini mini node.js - wasm compiler using node.js
-  titleJa: Node.js でつくる Node.js - WASM ミニミニコンパイラー
+  title: Build tiny node.js - WASM/WASI compiler using node.js
+  titleJa: Node.js でつくる Node.js - WASM/WASI ミニミニコンパイラー
   description: >-
-    This is a continuation of last year's session, "Creating a small node.js
-    interpreter/compiler with node.js". To familiarize myself with WASM, I've
-    created a very small WASM compiler using Node.js.
+    his is a continuation of last year's session, "Build Node.js
+    mini-interpreter and mini-compiler". To learn WASM, I've built a tiny WASM
+    compiler using Node.js. 
 
-    I was able to get a little grasp of the works behind WASM, which was
-    different from LLVM that I used for last session.
+    I would like to talk about some difference between WASM and LLVM, and my
+    small challenge for supporting WASI runtime.
   descriptionJa: >-
     昨年のセッション「Node.jsでつくるNode.js
-    ミニインタープリター/コンパイラー」の続編です。WASMを学ぶために、Node.jsでミニミニWASMコンパイラーを作ってみました。前回使ったLLVMとはまた異なるWASMの仕組みを、ちょっとだけ垣間見ることができました。
-  spokenLanguage: ja
+    ミニインタープリター/コンパイラー」の続編です。WASMを学ぶために、Node.jsでミニミニWASMコンパイラーを作ってみました。LLVMとの仕組みの違いや、ちょっとだけWASIを間見た話をお伝えします。
+  spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
     - masashi-ganeko
@@ -1307,8 +1302,8 @@
     - okuno-kentaro
 - uuid: praveen-yedidi
   date: day1
-  startsAt: "18:15"
-  endsAt: "18:25"
+  startsAt: "18:45"
+  endsAt: "18:55"
   room: A
   title: Predictive Prefetching for improved performance
   titleJa: 予測的 Prefetching によるパフォーマンス改善
@@ -1821,8 +1816,8 @@
     - tetsuharu-ohzeki
 - uuid: yoshiki-shibukawa
   date: day1
-  startsAt: "18:25"
-  endsAt: "18:35"
+  startsAt: "18:55"
+  endsAt: "19:05"
   room: A
   title: Web Components era phase 2
   titleJa: Web Components era phase 2
