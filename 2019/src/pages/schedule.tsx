@@ -38,8 +38,9 @@ const TimeBox = styled.div`
   display: grid;
   width: 100%;
   grid-template: "A B C" auto / 1fr 1fr 1fr;
-  grid-column-gap: 40px;
-  margin-bottom: 40px;
+  grid-column-gap: 2em;
+  margin-bottom: 2em;
+  align-content: stretch;
 
   ${({ theme }) => theme.breakpoints.mobile} {
     display: flex;
@@ -54,6 +55,7 @@ const Box = styled.div<{ area: Rooms; isBreak: boolean }>`
   grid-column: ${({ area }) => area};
   position: relative;
   width: 100%;
+  height: 100%;
   box-sizing: border-box;
   padding: 1em;
   margin-bottom: 0.5em;

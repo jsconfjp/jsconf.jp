@@ -179,7 +179,11 @@
 - uuid: jonny-kalambay
   name: Jonny Kalambay
   featured: false
-  biography: ""
+  biography: >-
+    Jonny works as developer at Zenhub and an instructor at Lighthouse Labs. He
+    also makes programming tutorials on Youtube and Medium. When away from the
+    keyboard, Jonny can be found studying languages, volunteering at the
+    aquarium, scuba diving or taking care of his pet turtle Roshi.
   biographyJa: >-
     ジョニーKalambayは、Zenhubのためのソフトウェアを書き込み灯台研究所でコーディングを教え、そしてYouTubeでチュートリアルを作ります。彼はまた、彼は野生生物教育や保全のための機械学習を使用するように促されたところで、バンクーバー水族館、でボランティア。彼はコーディングいない場合は、ジョニーは言語を勉強し、または彼のペットのカメを供給し、スキューバダイビングを見つけることができます。
 - uuid: jarrod-overson
