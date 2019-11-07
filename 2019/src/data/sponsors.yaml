@@ -62,10 +62,10 @@
   url: https://www.smartnews.com/
   logoUrl: /2019/sponsors/smartnews.png
   grade: silver
-# - name: Itsuki Inc.
-#   url: https://itsuki.io/
-#   logoUrl: /2019/sponsors/.png
-#   grade: bronze
+- name: Itsuki Inc.
+  url: https://itsuki.io/
+  logoUrl: /2019/sponsors/itsuki.png
+  grade: bronze
 - name: フューチャー株式会社
   url: https://www.future.co.jp/
   logoUrl: /2019/sponsors/future.png
