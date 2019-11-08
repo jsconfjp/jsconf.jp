@@ -78,3 +78,7 @@
   url: https://auth0.com/jp/
   logoUrl: /2019/sponsors/auth0.png
   grade: silver
+- name: Twilio
+  url: https://www.twilio.com/
+  logoUrl: /2019/sponsors/twilio.svg
+  grade: gold
