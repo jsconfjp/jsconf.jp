@@ -17,6 +17,7 @@ import { TalkType, SpeakerType } from "../components/Speaker"
 import { generateTimetable } from "../util/generateTimetable"
 import { rangeTimeBoxes, escapeTime } from "../util/rangeTimeBoxes"
 import { Dates, times, Rooms, rooms } from "../util/misc"
+import { enOrJa } from "../util/languages"
 
 const Grid = styled.div<{ startsAt: Date; endsAt: Date }>`
   display: grid;
@@ -138,9 +139,6 @@ export default function SchedulePage() {
   const talks: TalkType[] = allTalksYaml.edges.map(({ node }: any) => node)
   const timetable = generateTimetable({ speakers, talks })
   const days = Object.keys(times).sort() as Dates[]
-  const enOrJa = (enStr: string, jaStr: string) => {
-    return i18n.language === "en" ? enStr || jaStr : jaStr || enStr
-  }
   const dateTimeFormatter = new Intl.DateTimeFormat(i18n.language, {
     // @ts-ignore dateStyle' does not exist in type 'DateTimeFormatOptions'
     dateStyle: "medium",
@@ -205,7 +203,7 @@ export default function SchedulePage() {
                       <Text>
                         {s.startsAt}-{s.endsAt}
                       </Text>
-                      <Text>{enOrJa(s.title, s.titleJa) || "TBA"}</Text>
+                      <Text>{enOrJa(i18n)(s.title, s.titleJa) || "TBA"}</Text>
                       {s.speakers.length ? (
                         <Text>
                           by{" "}
