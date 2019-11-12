@@ -230,6 +230,20 @@ const talks = sessions
   .filter(el => el != null)
   .sort((a, b) => a!.uuid[0].localeCompare(b!.uuid[0]))
 
+// 同じUUIDのトークをマージする
+for (let talk of talks) {
+  const index = talks.indexOf(talk)
+  const restTalks = talks.slice(index + 1)
+
+  for (let restTalk of restTalks) {
+    if (talk!.uuid === restTalk!.uuid) {
+      const restTalkIndex = talks.indexOf(restTalk)
+      talks.splice(restTalkIndex, 1)
+      talk!.endsAt = restTalk!.endsAt
+    }
+  }
+}
+
 fs.writeFileSync(DIST_TALKS, YAML.safeDump(talks))
 console.log(chalk.dim(`Fetch ${talks.length} sessions`))
 console.log(
