@@ -6,7 +6,6 @@ import fetch from "node-fetch"
 import imageType from "image-type"
 import chalk from "chalk"
 import changeCase from "change-case"
-import uniq from "lodash/uniq"
 
 type PresenterRow = {
   Timestamp: number
@@ -41,7 +40,6 @@ type Session = {
   date: string
   startsAt: string
   endsAt: string
-  hiddenTimeBoxes?: string[]
   room: "A" | "B" | "C"
 }
 
@@ -227,7 +225,6 @@ const talks = sessions
       spokenLanguage: talk["spoken-language"],
       slideLanguage: "",
       speakerIDs: speakers.map(({ uuid }) => uuid),
-      hiddenTimeBoxes: null,
     }
   })
   .filter(el => el != null)
@@ -242,10 +239,6 @@ for (let talk of talks) {
     if (talk!.uuid === restTalk!.uuid) {
       const restTalkIndex = talks.indexOf(restTalk)
       talks.splice(restTalkIndex, 1)
-      talk!.hiddenTimeBoxes = talk!.hiddenTimeBoxes || [talk!.endsAt]
-      talk!.hiddenTimeBoxes = uniq(
-        talk!.hiddenTimeBoxes.concat([restTalk!.startsAt]),
-      )
       talk!.endsAt = restTalk!.endsAt
     }
   }

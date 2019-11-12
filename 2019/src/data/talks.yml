@@ -24,7 +24,6 @@
   slideLanguage: ""
   speakerIDs:
     - andy-hall
-  hiddenTimeBoxes: null
 - uuid: andrew-betts
   date: day1
   startsAt: "17:15"
@@ -57,7 +56,6 @@
   slideLanguage: ""
   speakerIDs:
     - andrew-betts
-  hiddenTimeBoxes: null
 - uuid: benjamin-gruenbaum
   date: day2
   startsAt: "16:00"
@@ -98,7 +96,6 @@
   slideLanguage: ""
   speakerIDs:
     - benjamin-gruenbaum
-  hiddenTimeBoxes: null
 - uuid: claudia-hernandez
   date: day2
   startsAt: "13:30"
@@ -132,7 +129,6 @@
   slideLanguage: ""
   speakerIDs:
     - claudia-hernandez
-  hiddenTimeBoxes: null
 - uuid: "day1-break-A-12:00"
   startsAt: "12:00"
   endsAt: "13:00"
@@ -154,38 +150,10 @@
   date: day1
   title: Break
   speakerIDs: []
-- uuid: "day1-break-B-14:00"
-  startsAt: "14:00"
-  endsAt: "14:15"
-  room: B
-  date: day1
-  title: Break
-  speakerIDs: []
-- uuid: "day1-break-C-14:00"
-  startsAt: "14:00"
-  endsAt: "14:15"
-  room: C
-  date: day1
-  title: Break
-  speakerIDs: []
 - uuid: "day1-break-A-15:15"
   startsAt: "15:15"
   endsAt: "15:30"
   room: A
-  date: day1
-  title: Break
-  speakerIDs: []
-- uuid: "day1-break-B-15:15"
-  startsAt: "15:15"
-  endsAt: "15:30"
-  room: B
-  date: day1
-  title: Break
-  speakerIDs: []
-- uuid: "day1-break-C-15:15"
-  startsAt: "15:15"
-  endsAt: "15:30"
-  room: C
   date: day1
   title: Break
   speakerIDs: []
@@ -196,38 +164,10 @@
   date: day1
   title: Break
   speakerIDs: []
-- uuid: "day1-break-B-16:30"
-  startsAt: "16:30"
-  endsAt: "16:45"
-  room: B
-  date: day1
-  title: Break
-  speakerIDs: []
-- uuid: "day1-break-C-16:30"
-  startsAt: "16:30"
-  endsAt: "16:45"
-  room: C
-  date: day1
-  title: Break
-  speakerIDs: []
 - uuid: "day1-break-A-17:45"
   startsAt: "17:45"
   endsAt: "18:15"
   room: A
-  date: day1
-  title: Break
-  speakerIDs: []
-- uuid: "day1-break-B-17:45"
-  startsAt: "17:45"
-  endsAt: "18:15"
-  room: B
-  date: day1
-  title: Break
-  speakerIDs: []
-- uuid: "day1-break-C-17:45"
-  startsAt: "17:45"
-  endsAt: "18:15"
-  room: C
   date: day1
   title: Break
   speakerIDs: []
@@ -258,7 +198,6 @@
   slideLanguage: ""
   speakerIDs:
     - dynamis
-  hiddenTimeBoxes: null
 - uuid: "day1-break-A-19:35"
   startsAt: "19:35"
   endsAt: "21:00"
@@ -286,7 +225,6 @@
   slideLanguage: ""
   speakerIDs:
     - dominic-tarr
-  hiddenTimeBoxes: null
 - uuid: "day2-break-A-12:00"
   startsAt: "12:00"
   endsAt: "13:00"
@@ -294,31 +232,10 @@
   date: day2
   title: Break
   speakerIDs: []
-- uuid: "day2-break-B-12:00"
-  startsAt: "12:00"
-  endsAt: "13:00"
-  room: B
-  date: day2
-  title: Break
-  speakerIDs: []
 - uuid: "day2-break-A-14:00"
   startsAt: "14:00"
   endsAt: "14:15"
   room: A
-  date: day2
-  title: Break
-  speakerIDs: []
-- uuid: "day2-break-B-14:00"
-  startsAt: "14:00"
-  endsAt: "14:15"
-  room: B
-  date: day2
-  title: Break
-  speakerIDs: []
-- uuid: "day2-break-C-14:00"
-  startsAt: "14:00"
-  endsAt: "14:15"
-  room: C
   date: day2
   title: Break
   speakerIDs: []
@@ -336,13 +253,6 @@
   date: day2
   title: Break
   speakerIDs: []
-- uuid: "day2-break-B-15:15"
-  startsAt: "15:15"
-  endsAt: "15:30"
-  room: B
-  date: day2
-  title: Break
-  speakerIDs: []
 - uuid: "day2-break-A-16:30"
   startsAt: "16:30"
   endsAt: "16:45"
@@ -350,31 +260,10 @@
   date: day2
   title: Break
   speakerIDs: []
-- uuid: "day2-break-B-16:30"
-  startsAt: "16:30"
-  endsAt: "16:45"
-  room: B
-  date: day2
-  title: Break
-  speakerIDs: []
 - uuid: "day2-break-A-17:45"
   startsAt: "17:45"
   endsAt: "18:00"
   room: A
-  date: day2
-  title: Break
-  speakerIDs: []
-- uuid: "day2-break-B-17:45"
-  startsAt: "17:45"
-  endsAt: "18:00"
-  room: B
-  date: day2
-  title: Break
-  speakerIDs: []
-- uuid: "day2-break-C-17:45"
-  startsAt: "17:45"
-  endsAt: "18:00"
-  room: C
   date: day2
   title: Break
   speakerIDs: []
@@ -412,7 +301,6 @@
   slideLanguage: ""
   speakerIDs:
     - eiji-kitamura
-  hiddenTimeBoxes: null
 - uuid: fuji-goro
   date: day1
   startsAt: "16:00"
@@ -445,7 +333,6 @@
   slideLanguage: ""
   speakerIDs:
     - fuji-goro
-  hiddenTimeBoxes: null
 - uuid: fred-schott
   date: day2
   startsAt: "17:15"
@@ -477,7 +364,6 @@
   slideLanguage: ""
   speakerIDs:
     - fred-schott
-  hiddenTimeBoxes: null
 - uuid: guillermo-rauch
   date: day1
   startsAt: "15:30"
@@ -491,7 +377,6 @@
   slideLanguage: ""
   speakerIDs:
     - guillermo-rauch
-  hiddenTimeBoxes: null
 - uuid: ginpei-takanashi
   date: day2
   startsAt: "14:45"
@@ -512,7 +397,6 @@
   slideLanguage: ""
   speakerIDs:
     - ginpei-takanashi
-  hiddenTimeBoxes: null
 - uuid: henry-zhu
   date: day1
   startsAt: "14:45"
@@ -535,7 +419,6 @@
   slideLanguage: ""
   speakerIDs:
     - henry-zhu
-  hiddenTimeBoxes: null
 - uuid: hidetaka-okamoto
   date: day2
   startsAt: "11:30"
@@ -592,7 +475,6 @@
   slideLanguage: ""
   speakerIDs:
     - hidetaka-okamoto
-  hiddenTimeBoxes: null
 - uuid: irina-shestak
   date: day2
   startsAt: "13:30"
@@ -633,7 +515,6 @@
   slideLanguage: ""
   speakerIDs:
     - irina-shestak
-  hiddenTimeBoxes: null
 - uuid: jorge-bucaran
   date: day1
   startsAt: "16:00"
@@ -649,7 +530,6 @@
   slideLanguage: ""
   speakerIDs:
     - jorge-bucaran
-  hiddenTimeBoxes: null
 - uuid: jennifer-wong
   date: day2
   startsAt: "11:00"
@@ -696,7 +576,6 @@
   slideLanguage: ""
   speakerIDs:
     - jennifer-wong
-  hiddenTimeBoxes: null
 - uuid: jxck
   date: day2
   startsAt: "13:00"
@@ -710,7 +589,6 @@
   slideLanguage: ""
   speakerIDs:
     - jxck
-  hiddenTimeBoxes: null
 - uuid: jarrod-overson
   date: day2
   startsAt: "14:45"
@@ -761,7 +639,6 @@
   slideLanguage: ""
   speakerIDs:
     - jarrod-overson
-  hiddenTimeBoxes: null
 - uuid: jonny-kalambay
   date: day2
   startsAt: "16:45"
@@ -802,7 +679,6 @@
   slideLanguage: ""
   speakerIDs:
     - jonny-kalambay
-  hiddenTimeBoxes: null
 - uuid: kitson-kelly
   date: day1
   startsAt: "16:45"
@@ -822,7 +698,6 @@
   slideLanguage: ""
   speakerIDs:
     - kitson-kelly
-  hiddenTimeBoxes: null
 - uuid: kohei-kido
   date: day2
   startsAt: "17:15"
@@ -849,7 +724,6 @@
   slideLanguage: ""
   speakerIDs:
     - kohei-kido
-  hiddenTimeBoxes: null
 - uuid: lena-morita
   date: day1
   startsAt: "14:45"
@@ -874,7 +748,6 @@
   slideLanguage: ""
   speakerIDs:
     - lena-morita
-  hiddenTimeBoxes: null
 - uuid: martin-splitt
   date: day1
   startsAt: "15:30"
@@ -925,7 +798,6 @@
   slideLanguage: ""
   speakerIDs:
     - martin-splitt
-  hiddenTimeBoxes: null
 - uuid: maria-clara
   date: day1
   startsAt: "16:45"
@@ -953,7 +825,6 @@
   slideLanguage: ""
   speakerIDs:
     - maria-clara
-  hiddenTimeBoxes: null
 - uuid: maxi-ferreira
   date: day1
   startsAt: "19:05"
@@ -979,7 +850,6 @@
   slideLanguage: ""
   speakerIDs:
     - maxi-ferreira
-  hiddenTimeBoxes: null
 - uuid: masashi-ganeko
   date: day1
   startsAt: "19:15"
@@ -1001,7 +871,6 @@
   slideLanguage: ""
   speakerIDs:
     - masashi-ganeko
-  hiddenTimeBoxes: null
 - uuid: masato-nishihara
   date: day2
   startsAt: "13:00"
@@ -1022,7 +891,6 @@
   slideLanguage: ""
   speakerIDs:
     - masato-nishihara
-  hiddenTimeBoxes: null
 - uuid: masato-ohba
   date: day2
   startsAt: "13:30"
@@ -1108,7 +976,6 @@
   slideLanguage: ""
   speakerIDs:
     - masato-ohba
-  hiddenTimeBoxes: null
 - uuid: mariko-kosaka
   date: day2
   startsAt: "18:30"
@@ -1122,7 +989,6 @@
   slideLanguage: ""
   speakerIDs:
     - mariko-kosaka
-  hiddenTimeBoxes: null
 - uuid: nadieh-bremer
   date: day1
   startsAt: "14:15"
@@ -1160,7 +1026,6 @@
   slideLanguage: ""
   speakerIDs:
     - nadieh-bremer
-  hiddenTimeBoxes: null
 - uuid: nazanin-delam
   date: day1
   startsAt: "17:15"
@@ -1189,7 +1054,6 @@
   slideLanguage: ""
   speakerIDs:
     - nazanin-delam
-  hiddenTimeBoxes: null
 - uuid: nobuhiko-sawai
   date: day2
   startsAt: "14:15"
@@ -1248,7 +1112,6 @@
   slideLanguage: ""
   speakerIDs:
     - nobuhiko-sawai
-  hiddenTimeBoxes: null
 - uuid: okuno-kentaro
   date: day2
   startsAt: "11:00"
@@ -1276,7 +1139,6 @@
   slideLanguage: ""
   speakerIDs:
     - okuno-kentaro
-  hiddenTimeBoxes: null
 - uuid: praveen-yedidi
   date: day1
   startsAt: "18:45"
@@ -1302,7 +1164,6 @@
   slideLanguage: ""
   speakerIDs:
     - praveen-yedidi
-  hiddenTimeBoxes: null
 - uuid: rowdy-rabouw
   date: day2
   startsAt: "15:30"
@@ -1333,7 +1194,6 @@
   slideLanguage: ""
   speakerIDs:
     - rowdy-rabouw
-  hiddenTimeBoxes: null
 - uuid: s-greif-r-benitte
   date: day1
   startsAt: "13:30"
@@ -1355,7 +1215,6 @@
   speakerIDs:
     - benitte-raphael
     - sacha-greif
-  hiddenTimeBoxes: null
 - uuid: sho-miyamoto
   date: day1
   startsAt: "15:30"
@@ -1438,7 +1297,6 @@
   slideLanguage: ""
   speakerIDs:
     - sho-miyamoto
-  hiddenTimeBoxes: null
 - uuid: samuel-agnew
   date: day1
   startsAt: "16:00"
@@ -1462,7 +1320,6 @@
   slideLanguage: ""
   speakerIDs:
     - samuel-agnew
-  hiddenTimeBoxes: null
 - uuid: shirley-wu
   date: day2
   startsAt: "11:00"
@@ -1493,9 +1350,6 @@
   slideLanguage: ""
   speakerIDs:
     - shirley-wu
-  hiddenTimeBoxes:
-    - "11:30"
-    - "12:00"
 - uuid: sam-bellen
   date: day2
   startsAt: "13:00"
@@ -1528,7 +1382,6 @@
   slideLanguage: ""
   speakerIDs:
     - sam-bellen
-  hiddenTimeBoxes: null
 - uuid: sponsor-yahoo
   date: day2
   startsAt: "14:15"
@@ -1550,10 +1403,6 @@
   slideLanguage: ""
   speakerIDs:
     - daiki-kuriyama
-  hiddenTimeBoxes:
-    - "14:45"
-    - "15:15"
-    - "15:30"
 - uuid: sakakibara
   date: day2
   startsAt: "16:00"
@@ -1583,7 +1432,6 @@
   slideLanguage: ""
   speakerIDs:
     - sakakibara
-  hiddenTimeBoxes: null
 - uuid: sponsor-recruit
   date: day2
   startsAt: "16:00"
@@ -1607,10 +1455,6 @@
   slideLanguage: ""
   speakerIDs:
     - satoshi-arai
-  hiddenTimeBoxes:
-    - "16:30"
-    - "16:45"
-    - "17:15"
 - uuid: satoshi-ebihara
   date: day2
   startsAt: "16:45"
@@ -1639,7 +1483,6 @@
   slideLanguage: ""
   speakerIDs:
     - satoshi-ebihara
-  hiddenTimeBoxes: null
 - uuid: takuto-wada
   date: day1
   startsAt: "14:15"
@@ -1662,7 +1505,6 @@
   slideLanguage: ""
   speakerIDs:
     - takuto-wada
-  hiddenTimeBoxes: null
 - uuid: takeshi-kato
   date: day1
   startsAt: "16:45"
@@ -1691,7 +1533,6 @@
   slideLanguage: ""
   speakerIDs:
     - takeshi-kato
-  hiddenTimeBoxes: null
 - uuid: toru-kobayashi
   date: day1
   startsAt: "17:15"
@@ -1752,7 +1593,6 @@
   slideLanguage: ""
   speakerIDs:
     - toru-kobayashi
-  hiddenTimeBoxes: null
 - uuid: tetsuharu-ohzeki
   date: day2
   startsAt: "15:30"
@@ -1797,7 +1637,6 @@
   slideLanguage: ""
   speakerIDs:
     - tetsuharu-ohzeki
-  hiddenTimeBoxes: null
 - uuid: yoshiki-shibukawa
   date: day1
   startsAt: "18:55"
@@ -1823,4 +1662,3 @@
   slideLanguage: ""
   speakerIDs:
     - yoshiki-shibukawa
-  hiddenTimeBoxes: null
