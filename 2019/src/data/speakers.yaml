@@ -61,6 +61,13 @@
   featured: true
   biography: ""
   biographyJa: ""
+- uuid: daiki-kuriyama
+  name: 栗山 太希
+  featured: false
+  biography: ""
+  biographyJa: >-
+    ヤフー株式会社にてチャットシステムの開発と運用を担当。Node.js の言語サポートチームにも所属。日々 Node.js
+    関係の案件に首を突っ込んでいる。
 - uuid: eiji-kitamura
   name: Eiji Kitamura
   featured: false
@@ -484,6 +491,15 @@
     When I'm not behind a computer, you can me find playing the guitar, having a
     beer at a concert, or trying to snap the next perfect picture.
   biographyJa: ""
+- uuid: satoshi-arai
+  name: 新井 智士
+  featured: false
+  biography: ""
+  biographyJa: >-
+    株式会社リクルートテクノロジーズ　フロントエンド テクニカル リード エンジニア
+    リクルートテクノロジーズのウェブアプリケーションの開発、設計に関わるリードエンジニア、現在は SUUMO
+    でウェブアプリケーションのパフォーマンスモニタリングを中心にエンジニアの育成と新規アーキテクチャの設計開発を実施。過去に「ブレイクスルー
+    JavaScript」というタイトルの本を執筆。
 - uuid: toru-kobayashi
   name: Toru Kobayashi
   featured: false

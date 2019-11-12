@@ -114,6 +114,7 @@ export default function SchedulePage() {
             endsAt
             room
             date
+            hiddenTimeBoxes
           }
         }
       }
@@ -191,7 +192,11 @@ export default function SchedulePage() {
                     </Box>
                   )
                   if (s.uuid && s.speakers.length) {
-                    return <Link to={`talk/${s.uuid}`}>{content}</Link>
+                    return (
+                      <Link key={s.room + s.uuid} to={`talk/${s.uuid}`}>
+                        {content}
+                      </Link>
+                    )
                   }
                   return content
                 })}

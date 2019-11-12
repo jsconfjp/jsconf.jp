@@ -16,6 +16,7 @@ export type TalkType = {
   date: "day1" | "day2"
   startsAt: string
   endsAt: string
+  hiddenTimeBoxes: string[] | null
   room: "A" | "B"
 }
 

@@ -6,6 +6,7 @@ import fetch from "node-fetch"
 import imageType from "image-type"
 import chalk from "chalk"
 import changeCase from "change-case"
+import uniq from "lodash/uniq"
 
 type PresenterRow = {
   Timestamp: number
@@ -40,6 +41,7 @@ type Session = {
   date: string
   startsAt: string
   endsAt: string
+  hiddenTimeBoxes?: string[]
   room: "A" | "B" | "C"
 }
 
@@ -175,8 +177,6 @@ const notTalkIds = [
   "Party",
   "Closing",
   "panel-discussion",
-  "sponsor-yahoo",
-  "sponsor-recruit",
   "sponsor-talk",
 ]
 const { presentations, 20191130: day1, 20191201: day2 } = workBook.Sheets
@@ -227,10 +227,29 @@ const talks = sessions
       spokenLanguage: talk["spoken-language"],
       slideLanguage: "",
       speakerIDs: speakers.map(({ uuid }) => uuid),
+      hiddenTimeBoxes: null,
     }
   })
   .filter(el => el != null)
   .sort((a, b) => a!.uuid[0].localeCompare(b!.uuid[0]))
+
+// 同じUUIDのトークをマージする
+for (let talk of talks) {
+  const index = talks.indexOf(talk)
+  const restTalks = talks.slice(index + 1)
+
+  for (let restTalk of restTalks) {
+    if (talk!.uuid === restTalk!.uuid) {
+      const restTalkIndex = talks.indexOf(restTalk)
+      talks.splice(restTalkIndex, 1)
+      talk!.hiddenTimeBoxes = talk!.hiddenTimeBoxes || [talk!.endsAt]
+      talk!.hiddenTimeBoxes = uniq(
+        talk!.hiddenTimeBoxes.concat([restTalk!.startsAt]),
+      )
+      talk!.endsAt = restTalk!.endsAt
+    }
+  }
+}
 
 fs.writeFileSync(DIST_TALKS, YAML.safeDump(talks))
 console.log(chalk.dim(`Fetch ${talks.length} sessions`))

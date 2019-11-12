@@ -24,6 +24,7 @@
   slideLanguage: ""
   speakerIDs:
     - andy-hall
+  hiddenTimeBoxes: null
 - uuid: andrew-betts
   date: day1
   startsAt: "17:15"
@@ -56,6 +57,7 @@
   slideLanguage: ""
   speakerIDs:
     - andrew-betts
+  hiddenTimeBoxes: null
 - uuid: benjamin-gruenbaum
   date: day2
   startsAt: "16:00"
@@ -96,6 +98,7 @@
   slideLanguage: ""
   speakerIDs:
     - benjamin-gruenbaum
+  hiddenTimeBoxes: null
 - uuid: claudia-hernandez
   date: day2
   startsAt: "13:30"
@@ -129,6 +132,7 @@
   slideLanguage: ""
   speakerIDs:
     - claudia-hernandez
+  hiddenTimeBoxes: null
 - uuid: "day1-break-A-12:00"
   startsAt: "12:00"
   endsAt: "13:00"
@@ -254,6 +258,7 @@
   slideLanguage: ""
   speakerIDs:
     - dynamis
+  hiddenTimeBoxes: null
 - uuid: "day1-break-A-19:35"
   startsAt: "19:35"
   endsAt: "21:00"
@@ -281,6 +286,7 @@
   slideLanguage: ""
   speakerIDs:
     - dominic-tarr
+  hiddenTimeBoxes: null
 - uuid: "day2-break-A-12:00"
   startsAt: "12:00"
   endsAt: "13:00"
@@ -323,20 +329,6 @@
   date: day2
   title: Panel discussion
   speakerIDs: []
-- uuid: "day2-break-C-14:15"
-  startsAt: "14:15"
-  endsAt: "14:45"
-  room: C
-  date: day2
-  title: Sponsor yahoo
-  speakerIDs: []
-- uuid: "day2-break-C-14:45"
-  startsAt: "14:45"
-  endsAt: "15:15"
-  room: C
-  date: day2
-  title: Sponsor yahoo
-  speakerIDs: []
 - uuid: "day2-break-A-15:15"
   startsAt: "15:15"
   endsAt: "15:30"
@@ -351,27 +343,6 @@
   date: day2
   title: Break
   speakerIDs: []
-- uuid: "day2-break-C-15:15"
-  startsAt: "15:15"
-  endsAt: "15:30"
-  room: C
-  date: day2
-  title: Break
-  speakerIDs: []
-- uuid: "day2-break-C-15:30"
-  startsAt: "15:30"
-  endsAt: "16:00"
-  room: C
-  date: day2
-  title: Sponsor yahoo
-  speakerIDs: []
-- uuid: "day2-break-C-16:00"
-  startsAt: "16:00"
-  endsAt: "16:30"
-  room: C
-  date: day2
-  title: Sponsor recruit
-  speakerIDs: []
 - uuid: "day2-break-A-16:30"
   startsAt: "16:30"
   endsAt: "16:45"
@@ -385,27 +356,6 @@
   room: B
   date: day2
   title: Break
-  speakerIDs: []
-- uuid: "day2-break-C-16:30"
-  startsAt: "16:30"
-  endsAt: "16:45"
-  room: C
-  date: day2
-  title: Break
-  speakerIDs: []
-- uuid: "day2-break-C-16:45"
-  startsAt: "16:45"
-  endsAt: "17:15"
-  room: C
-  date: day2
-  title: Sponsor recruit
-  speakerIDs: []
-- uuid: "day2-break-C-17:15"
-  startsAt: "17:15"
-  endsAt: "17:45"
-  room: C
-  date: day2
-  title: Sponsor recruit
   speakerIDs: []
 - uuid: "day2-break-A-17:45"
   startsAt: "17:45"
@@ -462,6 +412,7 @@
   slideLanguage: ""
   speakerIDs:
     - eiji-kitamura
+  hiddenTimeBoxes: null
 - uuid: fuji-goro
   date: day1
   startsAt: "16:00"
@@ -494,6 +445,7 @@
   slideLanguage: ""
   speakerIDs:
     - fuji-goro
+  hiddenTimeBoxes: null
 - uuid: fred-schott
   date: day2
   startsAt: "17:15"
@@ -525,6 +477,7 @@
   slideLanguage: ""
   speakerIDs:
     - fred-schott
+  hiddenTimeBoxes: null
 - uuid: guillermo-rauch
   date: day1
   startsAt: "15:30"
@@ -538,6 +491,7 @@
   slideLanguage: ""
   speakerIDs:
     - guillermo-rauch
+  hiddenTimeBoxes: null
 - uuid: ginpei-takanashi
   date: day2
   startsAt: "14:45"
@@ -558,6 +512,7 @@
   slideLanguage: ""
   speakerIDs:
     - ginpei-takanashi
+  hiddenTimeBoxes: null
 - uuid: henry-zhu
   date: day1
   startsAt: "14:45"
@@ -580,6 +535,7 @@
   slideLanguage: ""
   speakerIDs:
     - henry-zhu
+  hiddenTimeBoxes: null
 - uuid: hidetaka-okamoto
   date: day2
   startsAt: "11:30"
@@ -636,6 +592,7 @@
   slideLanguage: ""
   speakerIDs:
     - hidetaka-okamoto
+  hiddenTimeBoxes: null
 - uuid: irina-shestak
   date: day2
   startsAt: "13:30"
@@ -676,6 +633,7 @@
   slideLanguage: ""
   speakerIDs:
     - irina-shestak
+  hiddenTimeBoxes: null
 - uuid: jorge-bucaran
   date: day1
   startsAt: "16:00"
@@ -687,10 +645,11 @@
     Write what, not how: A declarative approach to presentation, side effects,
     and subscriptions.
   descriptionJa: 宣言的アプローチで行うプレゼンテーション、サイドエフェクト、そしてサブスクリプション
-  spokenLanguage: en/ja
+  spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
     - jorge-bucaran
+  hiddenTimeBoxes: null
 - uuid: jennifer-wong
   date: day2
   startsAt: "11:00"
@@ -737,6 +696,7 @@
   slideLanguage: ""
   speakerIDs:
     - jennifer-wong
+  hiddenTimeBoxes: null
 - uuid: jxck
   date: day2
   startsAt: "13:00"
@@ -750,6 +710,7 @@
   slideLanguage: ""
   speakerIDs:
     - jxck
+  hiddenTimeBoxes: null
 - uuid: jarrod-overson
   date: day2
   startsAt: "14:45"
@@ -800,6 +761,7 @@
   slideLanguage: ""
   speakerIDs:
     - jarrod-overson
+  hiddenTimeBoxes: null
 - uuid: jonny-kalambay
   date: day2
   startsAt: "16:45"
@@ -840,6 +802,7 @@
   slideLanguage: ""
   speakerIDs:
     - jonny-kalambay
+  hiddenTimeBoxes: null
 - uuid: kitson-kelly
   date: day1
   startsAt: "16:45"
@@ -859,6 +822,7 @@
   slideLanguage: ""
   speakerIDs:
     - kitson-kelly
+  hiddenTimeBoxes: null
 - uuid: kohei-kido
   date: day2
   startsAt: "17:15"
@@ -885,6 +849,7 @@
   slideLanguage: ""
   speakerIDs:
     - kohei-kido
+  hiddenTimeBoxes: null
 - uuid: lena-morita
   date: day1
   startsAt: "14:45"
@@ -909,6 +874,7 @@
   slideLanguage: ""
   speakerIDs:
     - lena-morita
+  hiddenTimeBoxes: null
 - uuid: martin-splitt
   date: day1
   startsAt: "15:30"
@@ -959,6 +925,7 @@
   slideLanguage: ""
   speakerIDs:
     - martin-splitt
+  hiddenTimeBoxes: null
 - uuid: maria-clara
   date: day1
   startsAt: "16:45"
@@ -986,6 +953,7 @@
   slideLanguage: ""
   speakerIDs:
     - maria-clara
+  hiddenTimeBoxes: null
 - uuid: maxi-ferreira
   date: day1
   startsAt: "19:05"
@@ -1011,6 +979,7 @@
   slideLanguage: ""
   speakerIDs:
     - maxi-ferreira
+  hiddenTimeBoxes: null
 - uuid: masashi-ganeko
   date: day1
   startsAt: "19:15"
@@ -1019,7 +988,7 @@
   title: Build tiny node.js - WASM/WASI compiler using node.js
   titleJa: Node.js でつくる Node.js - WASM/WASI ミニミニコンパイラー
   description: >-
-    his is a continuation of last year's session, "Build Node.js
+    This is the continuation of last year's session, "Build Node.js
     mini-interpreter and mini-compiler". To learn WASM, I've built a tiny WASM
     compiler using Node.js. 
 
@@ -1032,6 +1001,7 @@
   slideLanguage: ""
   speakerIDs:
     - masashi-ganeko
+  hiddenTimeBoxes: null
 - uuid: masato-nishihara
   date: day2
   startsAt: "13:00"
@@ -1052,6 +1022,7 @@
   slideLanguage: ""
   speakerIDs:
     - masato-nishihara
+  hiddenTimeBoxes: null
 - uuid: masato-ohba
   date: day2
   startsAt: "13:30"
@@ -1120,7 +1091,7 @@
 
 
     このトークは、React
-    Nativeで作られたアプリをPWAとして刷新したプロジェクトの事例を通じて得られた知見について話すケーススタディです。具体的には「""開発できる""は""運用できる""を意味しない」という辛みと、改めて気づく「Webというプラットフォームの開発体験の良さ」が軸になる予定です。
+    Nativeで作られたアプリをPWAとして刷新したプロジェクトの事例を通じて得られた知見について話すケーススタディです。具体的には「"開発できる"は"運用できる"を意味しない」という辛みと、改めて気づく「Webというプラットフォームの開発体験の良さ」が軸になる予定です。
 
 
     同アプリが業務システムであることなど固有の事情もこの事例では含みますが、発表を通じて以下のことをお伝えします。
@@ -1137,6 +1108,7 @@
   slideLanguage: ""
   speakerIDs:
     - masato-ohba
+  hiddenTimeBoxes: null
 - uuid: mariko-kosaka
   date: day2
   startsAt: "18:30"
@@ -1150,6 +1122,7 @@
   slideLanguage: ""
   speakerIDs:
     - mariko-kosaka
+  hiddenTimeBoxes: null
 - uuid: nadieh-bremer
   date: day1
   startsAt: "14:15"
@@ -1187,6 +1160,7 @@
   slideLanguage: ""
   speakerIDs:
     - nadieh-bremer
+  hiddenTimeBoxes: null
 - uuid: nazanin-delam
   date: day1
   startsAt: "17:15"
@@ -1215,6 +1189,7 @@
   slideLanguage: ""
   speakerIDs:
     - nazanin-delam
+  hiddenTimeBoxes: null
 - uuid: nobuhiko-sawai
   date: day2
   startsAt: "14:15"
@@ -1273,6 +1248,7 @@
   slideLanguage: ""
   speakerIDs:
     - nobuhiko-sawai
+  hiddenTimeBoxes: null
 - uuid: okuno-kentaro
   date: day2
   startsAt: "11:00"
@@ -1300,6 +1276,7 @@
   slideLanguage: ""
   speakerIDs:
     - okuno-kentaro
+  hiddenTimeBoxes: null
 - uuid: praveen-yedidi
   date: day1
   startsAt: "18:45"
@@ -1325,6 +1302,7 @@
   slideLanguage: ""
   speakerIDs:
     - praveen-yedidi
+  hiddenTimeBoxes: null
 - uuid: rowdy-rabouw
   date: day2
   startsAt: "15:30"
@@ -1355,6 +1333,7 @@
   slideLanguage: ""
   speakerIDs:
     - rowdy-rabouw
+  hiddenTimeBoxes: null
 - uuid: s-greif-r-benitte
   date: day1
   startsAt: "13:30"
@@ -1376,6 +1355,7 @@
   speakerIDs:
     - benitte-raphael
     - sacha-greif
+  hiddenTimeBoxes: null
 - uuid: sho-miyamoto
   date: day1
   startsAt: "15:30"
@@ -1458,6 +1438,7 @@
   slideLanguage: ""
   speakerIDs:
     - sho-miyamoto
+  hiddenTimeBoxes: null
 - uuid: samuel-agnew
   date: day1
   startsAt: "16:00"
@@ -1481,69 +1462,10 @@
   slideLanguage: ""
   speakerIDs:
     - samuel-agnew
+  hiddenTimeBoxes: null
 - uuid: shirley-wu
   date: day2
   startsAt: "11:00"
-  endsAt: "11:30"
-  room: C
-  title: Build an interactive data visualization with Vue.js and D3.js
-  titleJa: Vue.js で D3.js を使ったインタラクティブなデータの可視化
-  description: >-
-    As we generate more and more data in this world, many companies are now
-    prioritizing visualizing these data to make sense of them.  D3.js is the
-    most powerful tool for building custom data visualizations in the web, but
-    also has quite a learning curve.  In this workshop, we will learn how to use
-    D3.js to translate raw data into what we need to display them on a webpage,
-    and use Vue.js to render them to the DOM and manage interactions between
-    them.
-
-
-    With Vue.js and D3.js together, we can make highly custom, complex
-    interactive visualizations in just a few hundred lines of code.
-  descriptionJa: >-
-    この世に新たなデータを増やしていくたびに、多くの会社は集めたデータを自分達がわかるように可視化することに注力を上げています。D3.js は Web
-    上で好きなようにデータの可視化を行うための最高のツールですが、 習い始めがとても難しいです。このワークショップでは、D3.js
-    の使い方を学び、生データを Web サイトで表示できる形に変換し、Vue.js を使って DOM に描画してユーザが動かせるところまで持っていきます。
-
-
-    Vue.js と D3.js を組み合わせれば、数百行のコードでインタラクティブでカスタマイズ可能なデータの可視化が実現できます。
-  spokenLanguage: en
-  slideLanguage: ""
-  speakerIDs:
-    - shirley-wu
-- uuid: shirley-wu
-  date: day2
-  startsAt: "11:30"
-  endsAt: "12:00"
-  room: C
-  title: Build an interactive data visualization with Vue.js and D3.js
-  titleJa: Vue.js で D3.js を使ったインタラクティブなデータの可視化
-  description: >-
-    As we generate more and more data in this world, many companies are now
-    prioritizing visualizing these data to make sense of them.  D3.js is the
-    most powerful tool for building custom data visualizations in the web, but
-    also has quite a learning curve.  In this workshop, we will learn how to use
-    D3.js to translate raw data into what we need to display them on a webpage,
-    and use Vue.js to render them to the DOM and manage interactions between
-    them.
-
-
-    With Vue.js and D3.js together, we can make highly custom, complex
-    interactive visualizations in just a few hundred lines of code.
-  descriptionJa: >-
-    この世に新たなデータを増やしていくたびに、多くの会社は集めたデータを自分達がわかるように可視化することに注力を上げています。D3.js は Web
-    上で好きなようにデータの可視化を行うための最高のツールですが、 習い始めがとても難しいです。このワークショップでは、D3.js
-    の使い方を学び、生データを Web サイトで表示できる形に変換し、Vue.js を使って DOM に描画してユーザが動かせるところまで持っていきます。
-
-
-    Vue.js と D3.js を組み合わせれば、数百行のコードでインタラクティブでカスタマイズ可能なデータの可視化が実現できます。
-  spokenLanguage: en
-  slideLanguage: ""
-  speakerIDs:
-    - shirley-wu
-- uuid: shirley-wu
-  date: day2
-  startsAt: "12:00"
   endsAt: "13:00"
   room: C
   title: Build an interactive data visualization with Vue.js and D3.js
@@ -1571,6 +1493,9 @@
   slideLanguage: ""
   speakerIDs:
     - shirley-wu
+  hiddenTimeBoxes:
+    - "11:30"
+    - "12:00"
 - uuid: sam-bellen
   date: day2
   startsAt: "13:00"
@@ -1603,6 +1528,32 @@
   slideLanguage: ""
   speakerIDs:
     - sam-bellen
+  hiddenTimeBoxes: null
+- uuid: sponsor-yahoo
+  date: day2
+  startsAt: "14:15"
+  endsAt: "16:00"
+  room: C
+  title: Minimum Hands-on Node.js
+  titleJa: Minimum Hands-on Node.js
+  description: ""
+  descriptionJa: >-
+    Node.js
+    を最速で理解するための速習型ワークショップ。必要最小限の項目に絞った実用的なノウハウと、初学者が失敗しがちなポイントを体験・解説します。Node.js
+    v12 の内容を含みますのでお楽しみに。
+
+    「JavaScript なら多少わかるけど Node.js はいまひとつ」という方におすすめ。Yahoo! JAPAN
+    の社内およびグループ会社向けに開催されている実績あるワークショップです。この 90 分で Node.js をものにしてください！
+
+    演習を含みますので、Node.js が動作する環境をご用意ください。
+  spokenLanguage: ja
+  slideLanguage: ""
+  speakerIDs:
+    - daiki-kuriyama
+  hiddenTimeBoxes:
+    - "14:45"
+    - "15:15"
+    - "15:30"
 - uuid: sakakibara
   date: day2
   startsAt: "16:00"
@@ -1632,6 +1583,34 @@
   slideLanguage: ""
   speakerIDs:
     - sakakibara
+  hiddenTimeBoxes: null
+- uuid: sponsor-recruit
+  date: day2
+  startsAt: "16:00"
+  endsAt: "17:45"
+  room: C
+  title: Recruit Speed Hackathon
+  titleJa: Recruit Speed Hackathon
+  description: >-
+    Recruit で行われている Speed Hackathon
+    の実際の講習を行います。リクルートでは、ウェブサイトを対象にどこまで高速化できるかを競うハッカソンを開催しています。その場で実際の jsconf.jp
+    のサイトを高速化します。
+
+    演習は数名が1組になって実施します。
+  descriptionJa: >-
+    Recruit で行われている Speed Hackathon
+    の実際の講習を行います。リクルートでは、ウェブサイトを対象にどこまで高速化できるかを競うハッカソンを開催しています。その場で実際の jsconf.jp
+    のサイトを高速化します。
+
+    演習は数名が1組になって実施します。
+  spokenLanguage: ja
+  slideLanguage: ""
+  speakerIDs:
+    - satoshi-arai
+  hiddenTimeBoxes:
+    - "16:30"
+    - "16:45"
+    - "17:15"
 - uuid: satoshi-ebihara
   date: day2
   startsAt: "16:45"
@@ -1660,6 +1639,7 @@
   slideLanguage: ""
   speakerIDs:
     - satoshi-ebihara
+  hiddenTimeBoxes: null
 - uuid: takuto-wada
   date: day1
   startsAt: "14:15"
@@ -1682,6 +1662,7 @@
   slideLanguage: ""
   speakerIDs:
     - takuto-wada
+  hiddenTimeBoxes: null
 - uuid: takeshi-kato
   date: day1
   startsAt: "16:45"
@@ -1710,6 +1691,7 @@
   slideLanguage: ""
   speakerIDs:
     - takeshi-kato
+  hiddenTimeBoxes: null
 - uuid: toru-kobayashi
   date: day1
   startsAt: "17:15"
@@ -1770,6 +1752,7 @@
   slideLanguage: ""
   speakerIDs:
     - toru-kobayashi
+  hiddenTimeBoxes: null
 - uuid: tetsuharu-ohzeki
   date: day2
   startsAt: "15:30"
@@ -1814,6 +1797,7 @@
   slideLanguage: ""
   speakerIDs:
     - tetsuharu-ohzeki
+  hiddenTimeBoxes: null
 - uuid: yoshiki-shibukawa
   date: day1
   startsAt: "18:55"
@@ -1839,3 +1823,4 @@
   slideLanguage: ""
   speakerIDs:
     - yoshiki-shibukawa
+  hiddenTimeBoxes: null
