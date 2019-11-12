@@ -175,8 +175,6 @@ const notTalkIds = [
   "Party",
   "Closing",
   "panel-discussion",
-  "sponsor-yahoo",
-  "sponsor-recruit",
   "sponsor-talk",
 ]
 const { presentations, 20191130: day1, 20191201: day2 } = workBook.Sheets
