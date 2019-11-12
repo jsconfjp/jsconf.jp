@@ -33,7 +33,26 @@ export function generateTimetable({
 
   const talksByDay = groupBy(talks, talk => talk.date)
   const talksByTimeboxes = mapValues(talksByDay, (talks): Timebox[] => {
-    const sessions = sortBy(talks, talk => talk.room).map(talk => ({
+    const splittedTalks = talks.reduce(
+      (acc, talk) => {
+        if (!talk.hiddenTimeBoxes) {
+          return acc.concat([talk])
+        }
+
+        const timeboxes = [talk.startsAt, ...talk.hiddenTimeBoxes].concat([
+          talk.endsAt,
+        ])
+        const newTalks = timeboxes.slice(1).map((time, i) => ({
+          ...talk,
+          startsAt: timeboxes[i],
+          endsAt: time,
+        }))
+
+        return acc.concat(newTalks)
+      },
+      [] as TalkType[],
+    )
+    const sessions = sortBy(splittedTalks, talk => talk.room).map(talk => ({
       ...talk,
       break: talk.title === "Break",
       speakers: talk.speakerIDs.map(speakerID => {
