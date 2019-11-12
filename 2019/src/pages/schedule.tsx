@@ -36,14 +36,15 @@ const Grid = styled.div<{ startsAt: Date; endsAt: Date }>`
     flex-direction: column;
   }
 `
-const Area = styled.div<{
+const Area = styled(_Link)<{
   track: Rooms
   startsAt: string
   endsAt: string
   isBreak: boolean
 }>`
-  position: relative;
   padding: 1em;
+  text-decoration: none;
+  position: relative;
   grid-column: ${({ track, isBreak }) => (isBreak ? "A / D" : track)};
   grid-row: ${({ startsAt, endsAt }) =>
     `t-${escapeTime(startsAt)} / t-${escapeTime(endsAt)}`};
@@ -92,11 +93,8 @@ const SubTitle = styled(_SubTitle)`
 const RoomLegendBox = styled.div`
   margin-bottom: 2em;
 `
-const Link = styled(_Link)`
-  text-decoration: none;
-  color: ${({ theme }) => theme.colors.text};
-`
 const Text = styled.span`
+  color: ${({ theme }) => theme.colors.text};
   display: block;
   font-size: 20px;
   font-family: ${({ theme }) => theme.fonts.text};
@@ -196,29 +194,25 @@ export default function SchedulePage() {
                   const hasDescription = s.uuid && s.speakers.length
                   return (
                     <Area
+                      to={hasDescription ? `talk/${s.uuid}` : undefined}
                       key={s.room + s.uuid}
                       track={s.room}
                       startsAt={s.startsAt}
                       endsAt={s.endsAt}
                       isBreak={s.break}
                     >
-                      <Link
-                        key={s.room + s.uuid}
-                        to={hasDescription ? `talk/${s.uuid}` : undefined}
-                      >
+                      <Text>
+                        {s.startsAt}-{s.endsAt}
+                      </Text>
+                      <Text>{enOrJa(s.title, s.titleJa) || "TBA"}</Text>
+                      {s.speakers.length ? (
                         <Text>
-                          {s.startsAt}-{s.endsAt}
+                          by{" "}
+                          {s.speakers
+                            .map(speaker => speaker.name)
+                            .join(" and ")}
                         </Text>
-                        <Text>{enOrJa(s.title, s.titleJa) || "TBA"}</Text>
-                        {s.speakers.length ? (
-                          <Text>
-                            by{" "}
-                            {s.speakers
-                              .map(speaker => speaker.name)
-                              .join(" and ")}
-                          </Text>
-                        ) : null}
-                      </Link>
+                      ) : null}
                     </Area>
                   )
                 })}
