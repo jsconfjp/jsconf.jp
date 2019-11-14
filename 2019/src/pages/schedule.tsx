@@ -21,15 +21,14 @@ import { Dates, times, Rooms, rooms } from "../util/misc"
 const Grid = styled.div<{ startsAt: Date; endsAt: Date }>`
   display: grid;
   grid-column-gap: 1em;
-  grid-row-gap: 1em;
   grid-template-columns: ${rooms
     .concat("D" as Rooms)
     .map(r => `[${r}]`)
     .join(" 1fr ")};
   grid-template-rows: ${({ startsAt, endsAt }) =>
-    rangeTimeBoxes(15, startsAt.getHours(), endsAt.getHours())
+    rangeTimeBoxes(5, startsAt.getHours(), endsAt.getHours())
       .map(t => `[t-${escapeTime(t)}]`)
-      .join(" 1fr ")};
+      .join(" minmax(1em, max-content) ")};
 
   ${({ theme }) => theme.breakpoints.mobile} {
     display: flex;
@@ -42,6 +41,7 @@ const Area = styled(_Link)<{
   endsAt: string
   isBreak: boolean
 }>`
+  margin-bottom: 1em;
   padding: 1em;
   text-decoration: none;
   position: relative;
@@ -50,7 +50,7 @@ const Area = styled(_Link)<{
     `t-${escapeTime(startsAt)} / t-${escapeTime(endsAt)}`};
   background-color: ${({ track, isBreak, theme }) =>
     // @ts-ignore Dynamic access
-    isBreak ? theme.colors.disabled : theme.colors[`room${track}`]};
+    isBreak ? theme.colors.disabled + "cc" : theme.colors[`room${track}`]};
   border-left: 5px solid;
   border-color: ${({ track, isBreak, theme }) =>
     // @ts-ignore Dynamic access
@@ -194,6 +194,7 @@ export default function SchedulePage() {
                   const hasDescription = s.uuid && s.speakers.length
                   return (
                     <Area
+                      // @ts-ignore Type 'undefined' is not assignable to type 'string'
                       to={hasDescription ? `talk/${s.uuid}` : undefined}
                       key={s.room + s.uuid}
                       track={s.room}
