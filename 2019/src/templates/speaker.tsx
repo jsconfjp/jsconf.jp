@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import Image from "gatsby-image"
 import Markdown from "react-markdown"
 
-import { dates } from "../util/misc"
+import { times } from "../util/misc"
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
 import { Title } from "../components/Title"
@@ -115,7 +115,7 @@ export default function Speaker(props: Props) {
         <TalkBox>
           <TalkTitle>{enOrJa(title, titleJa)}</TalkTitle>
           <p>
-            {dateFormatter.format(dates[date])}, {startsAt} - {endsAt}
+            {dateFormatter.format(times[date].startsAt)}, {startsAt} - {endsAt}
             <br />
             Room: {room}
             <br />
