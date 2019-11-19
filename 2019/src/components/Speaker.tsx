@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
 import Image, { FluidObject } from "gatsby-image"
+import { enOrJa } from "../util/languages"
 
 export type TalkType = {
   uuid: string
@@ -70,15 +71,11 @@ export function Speaker(props: Props) {
   const { uuid, title, titleJa } = talk
   const { name } = speaker
 
-  const enOrJa = (enStr: string, jaStr: string) => {
-    return i18n.language === "en" ? enStr || jaStr : jaStr || enStr
-  }
-
   if (!uuid || title === "TBA") {
     return (
       <div>
         <Avatar fluid={avatar} loading="lazy" />
-        <Title lang="en">{enOrJa(title, titleJa)}</Title>
+        <Title lang="en">{enOrJa(i18n)(title, titleJa)}</Title>
         <Name>{name}</Name>
       </div>
     )
@@ -87,7 +84,7 @@ export function Speaker(props: Props) {
   return (
     <LinkContainer to={`talk/${uuid}`}>
       <Avatar fluid={avatar} loading="lazy" />
-      <Title>{enOrJa(title, titleJa)}</Title>
+      <Title>{enOrJa(i18n)(title, titleJa)}</Title>
       <Name>{name}</Name>
     </LinkContainer>
   )

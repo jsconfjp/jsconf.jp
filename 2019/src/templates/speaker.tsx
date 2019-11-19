@@ -12,6 +12,7 @@ import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
 import { SpeakerType, TalkType, AvatarType } from "../components/Speaker"
 import { SubTitle } from "../components/SubTitle"
+import { enOrJa } from "../util/languages"
 
 type Props = {
   pageContext: {
@@ -91,14 +92,11 @@ export default function Speaker(props: Props) {
     day: "2-digit",
   })
   const speakerNames = speakers.map(speaker => speaker.name).join(" and ")
-  const enOrJa = (enStr: string, jaStr: string) => {
-    return i18n.language === "en" ? enStr || jaStr : jaStr || enStr
-  }
 
   return (
     <Layout>
       <SEO
-        title={`${enOrJa(title, titleJa)} - ${speakerNames}`}
+        title={`${enOrJa(i18n)(title, titleJa)} - ${speakerNames}`}
         ogImage={avatars.length ? avatars[0].originalImg : undefined}
       />
       <ResponsiveBox>
@@ -108,12 +106,12 @@ export default function Speaker(props: Props) {
           <SpeakerBox key={speaker.uuid}>
             <Avatar fluid={avatars[i]} loading="eager" />
             <Biography
-              source={enOrJa(speaker.biography, speaker.biographyJa)}
+              source={enOrJa(i18n)(speaker.biography, speaker.biographyJa)}
             />
           </SpeakerBox>
         ))}
         <TalkBox>
-          <TalkTitle>{enOrJa(title, titleJa)}</TalkTitle>
+          <TalkTitle>{enOrJa(i18n)(title, titleJa)}</TalkTitle>
           <p>
             {dateFormatter.format(times[date].startsAt)}, {startsAt} - {endsAt}
             <br />
@@ -128,7 +126,7 @@ export default function Speaker(props: Props) {
             ) : null}
             <br />
           </p>
-          <Description source={enOrJa(description, descriptionJa)} />
+          <Description source={enOrJa(i18n)(description, descriptionJa)} />
         </TalkBox>
       </ResponsiveBox>
     </Layout>
