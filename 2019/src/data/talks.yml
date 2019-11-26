@@ -171,12 +171,12 @@
   date: day1
   title: Break
   speakerIDs: []
-- uuid: "day1-break-A-18:15"
+- uuid: sponsor-talk-1
   startsAt: "18:15"
   endsAt: "18:45"
   room: A
   date: day1
-  title: Sponsor talk
+  title: Sponsor talk (mediba, メルカリ, サイボウズ, CureApp)
   speakerIDs: []
 - uuid: dynamis
   date: day1
@@ -239,13 +239,22 @@
   date: day2
   title: Break
   speakerIDs: []
-- uuid: "day2-break-A-14:15"
+- uuid: yosuke-furukawa
   startsAt: "14:15"
   endsAt: "14:45"
   room: A
   date: day2
-  title: Panel discussion
-  speakerIDs: []
+  title: JSConf Panel Talks
+  description: >-
+    Do you have any suggestions/opinions/requests to JSConf organizers?
+    If you have those requests, feel free to join this session and request us.
+    Guest panelist is Jan Lehnardt aka JSConf EU organizer.
+  descriptionJa: >-
+    JSConf JP 内でコミュニティのオーガナイザーに求めていることをリクエストできるようにします。
+    ゲストには JSConf EU のオーガナイザーの Jan Lehnardt をお呼びし、JSConf をより良くするためのパネルトークを行います。
+  speakerIDs:
+    - yosuke-furukawa
+    - jan-lehnardt
 - uuid: "day2-break-A-15:15"
   startsAt: "15:15"
   endsAt: "15:30"
@@ -267,12 +276,12 @@
   date: day2
   title: Break
   speakerIDs: []
-- uuid: "day2-break-A-18:00"
+- uuid: sponsor-talk-2
   startsAt: "18:00"
   endsAt: "18:30"
   room: A
   date: day2
-  title: Sponsor talk
+  title: Sponsor talk Yahoo! Japan, リクルート, ドワンゴ, DMM, Twilio
   speakerIDs: []
 - uuid: "day2-break-A-19:00"
   startsAt: "19:00"
