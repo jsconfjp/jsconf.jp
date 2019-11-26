@@ -249,9 +249,11 @@
     Do you have any suggestions/opinions/requests to JSConf organizers?
     If you have those requests, feel free to join this session and request us.
     Guest panelist is Jan Lehnardt aka JSConf EU organizer.
+    JSConf Panel url => https://app.sli.do/event/woeivd3o/live/questions
   descriptionJa: >-
     JSConf JP 内でコミュニティのオーガナイザーに求めていることをリクエストできるようにします。
     ゲストには JSConf EU のオーガナイザーの Jan Lehnardt をお呼びし、JSConf をより良くするためのパネルトークを行います。
+    JSConf Panel url => https://app.sli.do/event/woeivd3o/live/questions
   speakerIDs:
     - yosuke-furukawa
     - jan-lehnardt
