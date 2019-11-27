@@ -10,16 +10,17 @@
     That way you don't have to make the things, but things still get made. Easy!
 
 
-    Join me for a whirlwind tour of things made and lessons learned in four
-    years of JS procedural content generation. With forays into voxel terrain,
-    image synthesis, and dynamically created WebGL music, this talk will focus
-    on high-level approaches that can be applied anywhere, even far afield from
-    game development.
+    This talk will be a brief tour of lessons learned from four years of JS
+    procedural content generation. With forays into voxel terrain, image
+    synthesis, and dynamic Web Audio music, it will focus on high-level
+    techniques useful for all kinds of content, even far afield from game
+    development.
   descriptionJa: >-
-    物を作るのは大変。その代わりに、物を作ってくれるプログラムを作ってみない？そうすると物を作らなくても、物は作られる。あら簡単！
+    やはりコンテンツを作るのは大変でしょ！　自分の代わりに作ってくれるプログラムを開発してみませんか？そしたら自分は作業しなくても、ほら！　あら簡単!
 
 
-    本トークでは、約４年間プロシージャルコンテンツと遊んだ私が作った物や学んだレッスンを軽く紹介します。ボクセル世界、画像合成、そして動的なWebGL音楽などに触れながら、ゲーム開発に限らず幅広く使える概念やテクニックをお伝えします。
+    このセッションでは約４年間プロシージャルコンテンツと遊んできた私の経験を紹介します。ボクセル世界、画像合成、そして動的なWeb
+    Audio音楽などに触れながら、ゲーム開発に限らず幅広く使える概念やテクニックなどをシェアします。
   spokenLanguage: ja
   slideLanguage: ""
   speakerIDs:
@@ -171,13 +172,6 @@
   date: day1
   title: Break
   speakerIDs: []
-- uuid: sponsor-talk-1
-  startsAt: "18:15"
-  endsAt: "18:45"
-  room: A
-  date: day1
-  title: Sponsor talk (mediba, メルカリ, サイボウズ, CureApp)
-  speakerIDs: []
 - uuid: dynamis
   date: day1
   startsAt: "19:25"
@@ -217,10 +211,10 @@
   startsAt: "11:30"
   endsAt: "12:00"
   room: A
-  title: ""
-  titleJa: ""
-  description: ""
-  descriptionJa: ""
+  title: Life of Streams
+  titleJa: ストリームの人生
+  description: A reflection on his work on evolving streams.
+  descriptionJa: Stream システム改善の反映について
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
@@ -239,24 +233,6 @@
   date: day2
   title: Break
   speakerIDs: []
-- uuid: yosuke-furukawa
-  startsAt: "14:15"
-  endsAt: "14:45"
-  room: A
-  date: day2
-  title: JSConf Panel Talks
-  description: >-
-    Do you have any suggestions/opinions/requests to JSConf organizers?
-    If you have those requests, feel free to join this session and request us.
-    Guest panelist is Jan Lehnardt aka JSConf EU organizer.
-    JSConf Panel url => https://app.sli.do/event/woeivd3o/live/questions
-  descriptionJa: >-
-    JSConf JP 内でコミュニティのオーガナイザーに求めていることをリクエストできるようにします。
-    ゲストには JSConf EU のオーガナイザーの Jan Lehnardt をお呼びし、JSConf をより良くするためのパネルトークを行います。
-    JSConf Panel url => https://app.sli.do/event/woeivd3o/live/questions
-  speakerIDs:
-    - yosuke-furukawa
-    - jan-lehnardt
 - uuid: "day2-break-A-15:15"
   startsAt: "15:15"
   endsAt: "15:30"
@@ -278,13 +254,6 @@
   date: day2
   title: Break
   speakerIDs: []
-- uuid: sponsor-talk-2
-  startsAt: "18:00"
-  endsAt: "18:30"
-  room: A
-  date: day2
-  title: Sponsor talk Yahoo! Japan, リクルート, ドワンゴ, DMM, Twilio
-  speakerIDs: []
 - uuid: "day2-break-A-19:00"
   startsAt: "19:00"
   endsAt: "19:30"
@@ -297,18 +266,18 @@
   startsAt: "14:15"
   endsAt: "14:45"
   room: B
-  title: Building one touch sign-in experience using WebAuthn
-  titleJa: WebAuthnを使ったOne touch sign-inの実装
+  title: Building a more secure sign-in experience using WebAuthn
+  titleJa: WebAuthnを使ってより安全なログインを実現する
   description: >-
     WebAuthn is a browser API that enables strong authentication using public
     key based cryptography. In this session we will walk through basics of
     WebAuthn and how it works. Then we'll cover how to build a user experience
-    that enables users to re-authenticate to a website using a fingerprint (or a
-    biometric sensor).
+    that enables users to sign-in with a second factor or to re-authenticate
+    them to a website using biometrics.
   descriptionJa: >-
-    WebAuthn は公開キーと暗号をベースとした強固な認証を行えるブラウザの API です。このセッションでは、WebAuthn
-    の基本をカバーし、Web サイト上で二度目以降の認証を指紋認証（それか他の生体認証）で行えるような UX を提供する方法を紹介します。
-  spokenLanguage: en
+    WebAuthn は公開鍵暗号をベースとした強固な認証を行えるブラウザの API です。このセッションでは、WebAuthn
+    の基本に加え、二要素認証、または生体情報を使った再認証をウェブサイト上で実現する方法について解説します。
+  spokenLanguage: ja
   slideLanguage: ""
   speakerIDs:
     - eiji-kitamura
@@ -531,12 +500,13 @@
   startsAt: "16:00"
   endsAt: "16:30"
   room: A
-  title: Write What Not How
-  titleJa: Write What Not How
+  title: Hypercharged
+  titleJa: Hypercharged
   description: >-
-    Declarative UIs are on the rise. React, SwiftUI, Jetpack Compose, Elm, Hyperapp. But  what about declarative state management, side effects, and events? In this session I'll show you what purely functional, declarative apps look like.
-  descriptionJa: React、SwiftUI、Jetpack Composeなどの宣言的UIが増えています。 でもState管理、副作用、イベントについてはどうでしょうか。 このセッションでは、純粋関数型プログラミングの宣言的アプリが、どいうものかを紹介します。
-  spokenLanguage: en/ja
+    Write what, not how: A declarative approach to presentation, side effects,
+    and subscriptions.
+  descriptionJa: 宣言的アプローチで行うプレゼンテーション、サイドエフェクト、そしてサブスクリプション
+  spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
     - jorge-bucaran
@@ -1330,6 +1300,18 @@
   slideLanguage: ""
   speakerIDs:
     - samuel-agnew
+- uuid: sponsor-talk-1
+  date: day1
+  startsAt: "18:15"
+  endsAt: "18:45"
+  room: A
+  title: "Sponsor talk (mediba, Mercari, Cybozu, CureApp)"
+  titleJa: "Sponsor talk (mediba, メルカリ, サイボウズ, CureApp)"
+  description: ""
+  descriptionJa: ""
+  spokenLanguage: ja
+  slideLanguage: ""
+  speakerIDs: []
 - uuid: shirley-wu
   date: day2
   startsAt: "11:00"
@@ -1493,6 +1475,18 @@
   slideLanguage: ""
   speakerIDs:
     - satoshi-ebihara
+- uuid: sponsor-talk-2
+  date: day2
+  startsAt: "18:00"
+  endsAt: "18:30"
+  room: A
+  title: "Sponsor talk Yahoo! Japan, Recruit, Dwango DMM, Twilio"
+  titleJa: "Sponsor talk Yahoo! Japan, リクルート, ドワンゴ, DMM, Twilio"
+  description: ""
+  descriptionJa: ""
+  spokenLanguage: ja
+  slideLanguage: ""
+  speakerIDs: []
 - uuid: takuto-wada
   date: day1
   startsAt: "14:15"
@@ -1672,3 +1666,24 @@
   slideLanguage: ""
   speakerIDs:
     - yoshiki-shibukawa
+- uuid: yosuke-furukawa
+  date: day2
+  startsAt: "14:15"
+  endsAt: "14:45"
+  room: A
+  title: JSConf Panel Talks
+  titleJa: ""
+  description: |-
+    Do you have any suggestions/opinions/requests to JSConf organizers?
+    If you have those requests, feel free to join this session and request us.
+    Guest panelist is Jan Lehnardt aka JSConf EU organizer.
+    JSConf Panel url => https://app.sli.do/event/woeivd3o/live/questions
+  descriptionJa: |-
+    JSConf JP 内でコミュニティのオーガナイザーに求めていることをリクエストできるようにします。
+    ゲストには JSConf EU のオーガナイザーの Jan Lehnardt をお呼びし、JSConf をより良くするためのパネルトークを行います。
+    JSConf Panel url => https://app.sli.do/event/woeivd3o/live/questions
+  spokenLanguage: en
+  slideLanguage: ""
+  speakerIDs:
+    - jan-lehnardt
+    - yosuke-furukawa
