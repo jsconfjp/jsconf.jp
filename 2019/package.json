@@ -9,6 +9,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "gatsby develop",
     "serve": "gatsby serve",
+    "import": "ts-node scripts/import-talks",
     "pretest": "tsc",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },

@@ -6,6 +6,7 @@ import fetch from "node-fetch"
 import imageType from "image-type"
 import chalk from "chalk"
 import changeCase from "change-case"
+import format from "./format"
 
 type PresenterRow = {
   Timestamp: number
@@ -249,3 +250,5 @@ console.log(chalk.dim(`Fetch ${talks.length} sessions`))
 console.log(
   chalk.cyan(`Save sessions to ${path.relative(process.cwd(), DIST_TALKS)}`),
 )
+
+format()
