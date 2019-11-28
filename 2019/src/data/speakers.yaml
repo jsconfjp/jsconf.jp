@@ -100,25 +100,47 @@
   name: Guillermo Rauch
   featured: true
   biography: >-
-    [feel free to abridge] Guillermo Rauch is the founder of ZEIT, co-creator of
-    Now and Next.js, and former CTO and co-founder of LearnBoost and Cloudup,
-    acquired by Wordpress.com in 2013. His background and expertise is in the
-    realtime web. He's the creator of socket.io, one of the most popular
-    JavaScript projects on GitHub, with implementations in many different
-    programming languages and frameworks (currently running the realtime backend
-    of high profile apps like Microsoft Office online). He created the first
-    MongoDB ORM for Node.JS, MongooseJS. Before that he was a core developer of
-    the MooTools JavaScript framework. He's the author of "Smashing Node.JS"
-    published by Wiley in 2012, best-selling book about Node.JS on Amazon in
-    multiple programming categories. He's spoken at dozens of conferences all
-    around the world about JavaScript and the realtime web, such as O'Reilly
-    OSCon, QCon and NDC. Originally from Argentina, he dropped out of highschool
-    and moved to the US to pursue his passions in the San Francisco startup
-    world. He's passionate about open source as an education medium. He's a
-    former mentor of an Open Source Engineering class organized and pioneered by
-    Stanford, with students from Harvard, MIT, Carnegie Mellon, UPenn, Columbia
-    and others.
-  biographyJa: ""
+    Guillermo Rauch is the founder of ZEIT, co-creator of Now and Next.js, and
+    former CTO and co-founder of LearnBoost and Cloudup, acquired by
+    Wordpress.com in 2013. His background and expertise is in the realtime web.
+    He's the creator of socket.io, one of the most popular JavaScript projects
+    on GitHub, with implementations in many different programming languages and
+    frameworks (currently running the realtime backend of high profile apps like
+    Microsoft Office online). He created the first MongoDB ORM for Node.JS,
+    MongooseJS. Before that he was a core developer of the MooTools JavaScript
+    framework. He's the author of "Smashing Node.JS" published by Wiley in 2012,
+    best-selling book about Node.JS on Amazon in multiple programming
+    categories. He's spoken at dozens of conferences all around the world about
+    JavaScript and the realtime web, such as O'Reilly OSCon, QCon and NDC.
+    Originally from Argentina, he dropped out of highschool and moved to the US
+    to pursue his passions in the San Francisco startup world. He's passionate
+    about open source as an education medium. He's a former mentor of an Open
+    Source Engineering class organized and pioneered by Stanford, with students
+    from Harvard, MIT, Carnegie Mellon, UPenn, Columbia and others.
+  biographyJa: >-
+    Guillermo Rauch は Zeit の創始者であり、Now と Next.js の共同製作者 です。
+
+    元は LearnBoost 及び Cloudup の共同創始者かつ CTO であり、どちらも 2013 年に Wordpress
+    に買収されました。彼の専門はリアルタイム Web。
+
+    彼は Github 上で最も人気のある JavaScript のプロジェクトの一つである socket.io
+    の作成者であり、今では多数にわたる言語やフレームワークに組み込まれています。
+
+    Socket.io は今では Microsoft Office Online のような注目度のあるリアルタイムなアプリでも使用されています。
+
+    彼は JavaScript でできた初の MongoDB ORM である MongooseJS も作成しました。
+
+    それ以前は、JavaScript のフレームワークである MooTools の Core Developer として活動していました。
+
+    2012 年に Wiley で出版された「Smashing Node.JS」の著者であり、Amazonno プロミングカテゴリにある Node.JS
+    に関する本で一番売れています。
+
+    彼は O’Reilly OSCon, QCon, NDC 等、世界中の数々の技術カンファレンスにて JavaScript とリアルタイム Web
+    について話しています。
+
+    彼はアルゼンチン出身であり、高校を中退して渡米して、サンフランシスコのスタートアップ界隈に情熱を燃やしていました。 彼は Open Source
+    を教育用途として使うことに情熱を注いでいます。スタンフォード大学で始まった Open Source
+    のコースで、ハーバード、MIT、カーネギーメロン、ペンシルバニア大学、コロンビア大学等数々の名門校の生徒のメンターをしていました。
 - uuid: ginpei-takanashi
   name: 高梨ギンペイ
   featured: false
