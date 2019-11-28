@@ -10,7 +10,7 @@ declare module "pretty-quick" {
   }
   export default function prettyQuick(
     path: string,
-    options: PrettyQuickOptions,
+    options: IPrettyQuickOptions,
   ): {
     success: boolean
     errors: string[]
