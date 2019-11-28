@@ -266,8 +266,8 @@
   startsAt: "14:15"
   endsAt: "14:45"
   room: B
-  title: Building a more secure sign-in experience using WebAuthn
-  titleJa: WebAuthnを使ってより安全なログインを実現する
+  title: Building secure and seamless sign-in experience using WebAuthn
+  titleJa: WebAuthnで実現する安全・快適なログイン
   description: >-
     WebAuthn is a browser API that enables strong authentication using public
     key based cryptography. In this session we will walk through basics of
@@ -276,7 +276,7 @@
     them to a website using biometrics.
   descriptionJa: >-
     WebAuthn は公開鍵暗号をベースとした強固な認証を行えるブラウザの API です。このセッションでは、WebAuthn
-    の基本に加え、二要素認証、または生体情報を使った再認証をウェブサイト上で実現する方法について解説します。
+    の基本に加え、二要素認証、または生体情報などを使った再認証をウェブサイト上で実現する方法について解説します。
   spokenLanguage: ja
   slideLanguage: ""
   speakerIDs:
