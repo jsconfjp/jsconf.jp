@@ -18,9 +18,9 @@
   name: Andy Hall
   featured: false
   biography: >-
-    Andy Hall is a game developer in Tokyo. He’s been making web stuff since the
-    90s, and used to work at Adobe Japan as a creative evangelist. He spends his
-    time wherever code and art overlap.
+    Andy Hall is a developer in Tokyo, currently building a game. He’s been
+    making web stuff since the 90s, and used to work at Adobe Japan as a
+    creative evangelist. He spends his time wherever code and art overlap.
   biographyJa: >-
     自称クリエイティブ・コーダー。1994年頃からWeb開発を始め、その後は東京のインタラクティブエージェンシーやアドビジャパンに勤め、現在はフリーでゲーム作りに挑戦してます。
 - uuid: benitte-raphael
@@ -69,7 +69,7 @@
     ヤフー株式会社にてチャットシステムの開発と運用を担当。Node.js の言語サポートチームにも所属。日々 Node.js
     関係の案件に首を突っ込んでいる。
 - uuid: eiji-kitamura
-  name: Eiji Kitamura
+  name: Eiji Kitamura / えーじ
   featured: false
   biography: >-
     Eiji is a staff developer advocate at Google working on the open web,
@@ -140,7 +140,9 @@
 - uuid: henry-zhu
   name: Henry Zhu
   featured: true
-  biography: ""
+  biography: >-
+    Henry is a full time maintainer of the community funded Babel.js. He also
+    hosts 2 podcasts, Hope in Source and Maintainers Anonymous.
   biographyJa: ""
 - uuid: irina-shestak
   name: Irina Shestak
@@ -165,6 +167,16 @@
   biographyJa: >-
     Web Developer in Japan [blog](https://blog.jxck.io)
     [mozaic.fm](https://mozaic.fm)
+- uuid: jan-lehnardt
+  name: Jan Lehnardt
+  featured: false
+  biography: >-
+    Jan is a developer from Berlin, Germany and works on Greenkeeper, CouchDB,
+    and offline-first web technologies at Neighbourhoodie. He’s also the
+    co-curator of JSConf EU, which ran for the 10th time this year.
+  biographyJa: >-
+    Jan はベルリン在住のエンジニアで、現在 Neighbourhoodie Software にて Greenkeeper, CouchDB,
+    及びオフラインファーストな Web テクノロジーの開発を行っています。彼は今年で 10 年目の開催を行った JSConf EU の管理者でもあります。
 - uuid: jorge-bucaran
   name: Jorge Bucaran
   featured: false
@@ -535,16 +547,8 @@
   name: Yosuke Furukawa
   featured: false
   biography: >-
-    Japan Node.js Association Director / JSConf.JP founder / NodeFest former organizer / Recruit Technologies Inc, Senior Software Engineer and Group Manager
+    Japan Node.js Association Director / JSConf.JP founder / NodeFest former
+    organizer / Recruit Technologies Inc, Senior Software Engineer and Group
+    Manager
   biographyJa: >-
     ㈱リクルートテクノロジーズ所属。Node.js日本ユーザーグループ代表であり、大人気イベント「東京Node学園」の主催者。HTML5expertsにも選ばれている。
-- uuid: jan-lehnardt
-  name: Jan Lehnardt
-  featured: false
-  biography: >-
-    Jan is a developer from Berlin, Germany and works on Greenkeeper, CouchDB,
-    and offline-first web technologies at Neighbourhoodie. He’s also the
-    co-curator of JSConf EU, which ran for the 10th time this year.
-  biographyJa: >-
-    Jan はベルリン在住のエンジニアで、現在 Neighbourhoodie Software にて Greenkeeper, CouchDB,
-    及びオフラインファーストな Web テクノロジーの開発を行っています。彼は今年で 10 年目の開催を行った JSConf EU の管理者でもあります。
