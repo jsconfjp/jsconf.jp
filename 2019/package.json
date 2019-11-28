@@ -60,7 +60,7 @@
     "@types/styled-components": "4.1.8",
     "chalk": "2.4.2",
     "change-case": "3.1.0",
-    "husky": "3.0.0",
+    "husky": "3.1.0",
     "image-type": "4.1.0",
     "js-yaml": "3.13.1",
     "node-fetch": "2.6.0",
