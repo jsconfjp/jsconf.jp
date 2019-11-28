@@ -978,11 +978,11 @@
   startsAt: "18:30"
   endsAt: "19:00"
   room: A
-  title: ""
-  titleJa: ""
-  description: ""
-  descriptionJa: ""
-  spokenLanguage: ja
+  title: points at random
+  titleJa: points at random
+  description: "Musings on art, computing, relationship, and community"
+  descriptionJa: アートとコンピューティング、関わり方とコミュニティ
+  spokenLanguage: en/ja
   slideLanguage: ""
   speakerIDs:
     - mariko-kosaka
