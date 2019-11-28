@@ -349,10 +349,23 @@
   startsAt: "15:30"
   endsAt: "16:00"
   room: A
-  title: ""
-  titleJa: ""
-  description: ""
-  descriptionJa: ""
+  title: Building and Deploying for the Modern Web with JAMstack
+  titleJa: Building and Deploying for the Modern Web with JAMstack
+  description: >-
+    What does it take to build and deploy a cutting-edge website? This talk will
+    discuss the spectrum of complexity of the modern web: from single page apps
+    to multiple pages, from static websites to fully dynamic ones, from the
+    frontend to the backend with serverless lambda functions. We will discuss
+    how to bring your app code alive with preview deployments for every push,
+    how to maximize performance and availability with a global CDN, how to go to
+    production (and revert it) faster than ever before and how to improve QA and
+    testing to build the most reliable and robust experiences.
+  descriptionJa: >-
+    最先端のウェブサイトをビルドしてデプロイするのには何が必要だろうか？ このトークでは、モダンな Web について、SPA から Multi Page
+    のサイト、静的ウェブサイトから動的ウェブサイト、フロントエンドからサーバーレス Lambda
+    を使ったバックエンドまで、様々な角度から見ていきます。Push する毎にデプロイのプレビューが見れる方法や Global CDN
+    を使ったパフォーマンスと可用性の最大化、最速で Production に Push する方法（そして、どうやって Revert するか）について、そして
+    QA とテストの質を上げより強固で信頼できる Web 体験を与える方法について発表します。
   spokenLanguage: en
   slideLanguage: ""
   speakerIDs:
