@@ -578,10 +578,20 @@
   startsAt: "13:00"
   endsAt: "13:30"
   room: A
-  title: ""
-  titleJa: ""
-  description: ""
-  descriptionJa: ""
+  title: Whole volume of Web
+  titleJa: Web の体積
+  description: >-
+    Web continues to be Large. but how ? why ? still continue ? it's really fine
+    ?
+
+    is there any way to handle it ? or not ?
+  descriptionJa: |-
+    Web は非常に「大きく」なった
+    じゃあどのくらい大きくて、なぜそうなったのか
+    このまま大きくなり続けていいのか
+    人類はその大きさについていけるのか
+
+    小さくできるとしたら、方法はあるだろうか？
   spokenLanguage: ja
   slideLanguage: ""
   speakerIDs:
