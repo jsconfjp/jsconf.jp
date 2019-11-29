@@ -375,7 +375,7 @@
   startsAt: "14:45"
   endsAt: "15:15"
   room: B
-  title: Starting TypeScript from JavaScript
+  title: Starting TypeScript Leaving JavaScript as JS
   titleJa: JavaScriptのままでTypeScriptを始める
   description: >-
     When you use `--allowJs` and `--checkJs` option for typescript, you can run
