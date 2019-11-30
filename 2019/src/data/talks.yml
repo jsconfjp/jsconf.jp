@@ -579,7 +579,7 @@
   endsAt: "13:30"
   room: A
   title: Whole volume of Web
-  titleJa: Web の自重
+  titleJa: Web の体積
   description: >-
     Web continues to be Large. but how ? why ? still continue ? it's really fine
     ?
@@ -753,7 +753,8 @@
     「アクセシビリティって何？」という人から、「大事なのはわかっているけどいつも後回しにしてしまう」という人まで、明日からアクセシブルな実装をせずにはいられない、ウェブの本質に迫ります。
   spokenLanguage: ja
   slideLanguage: ""
-  speakerIDs: []
+  speakerIDs:
+    - lena-morita
 - uuid: martin-splitt
   date: day1
   startsAt: "15:30"
@@ -993,7 +994,8 @@
   descriptionJa: アートとコンピューティング、関わり方とコミュニティ
   spokenLanguage: en/ja
   slideLanguage: ""
-  speakerIDs: []
+  speakerIDs:
+    - mariko-kosaka
 - uuid: nadieh-bremer
   date: day1
   startsAt: "14:15"
