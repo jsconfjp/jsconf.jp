@@ -9,7 +9,7 @@ const Box = styled.h1`
   text-align: center;
   margin: 40px 0 60px;
   font-size: 40px;
-  text-transform: uppercase;
+  text-transform: none;
   font-family: ${({ theme }) => theme.fonts.header};
 `
 
