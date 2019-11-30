@@ -196,9 +196,10 @@ const talkRows = XLSX.utils
 const talks = sessions
   .map(session => {
     const talk = talkRows.find(row => row.uuid === session.uuid)
-    const speakers = speakerRows.filter(
-      ({ presentations }) => presentations === session.uuid,
-    )
+    const speakers = speakerRows.filter(({ presentations }) => {
+      const parts = presentations.trim().split(/\s*,\s*/gi)
+      return parts.indexOf(session.uuid) !== -1
+    })
 
     if (notTalkIds.includes(session.uuid)) {
       return {
