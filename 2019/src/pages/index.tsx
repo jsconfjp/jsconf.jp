@@ -85,6 +85,7 @@ export default function IndexPage() {
             name
             biography
             biographyJa
+            presentations
           }
         }
       }

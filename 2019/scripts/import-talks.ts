@@ -81,6 +81,7 @@ const speakers = speakerRows
     uuid: row.uuid,
     name: row.name,
     featured: row.featured,
+    presentations: row.presentations.trim().split(/\s*,\s*/gi),
     biography: todoToEmpty(row["biography-en"]),
     biographyJa: todoToEmpty(row["biography-ja"]),
   }))
@@ -196,10 +197,9 @@ const talkRows = XLSX.utils
 const talks = sessions
   .map(session => {
     const talk = talkRows.find(row => row.uuid === session.uuid)
-    const speakers = speakerRows.filter(({ presentations }) => {
-      const parts = presentations.trim().split(/\s*,\s*/gi)
-      return parts.indexOf(session.uuid) !== -1
-    })
+    const sessionSpeakers = speakers.filter(
+      ({ presentations }) => presentations.indexOf(session.uuid) !== -1,
+    )
 
     if (notTalkIds.includes(session.uuid)) {
       return {
@@ -226,7 +226,7 @@ const talks = sessions
       descriptionJa: todoToEmpty(talk["description-ja"]),
       spokenLanguage: talk["spoken-language"],
       slideLanguage: "",
-      speakerIDs: speakers.map(({ uuid }) => uuid),
+      speakerIDs: sessionSpeakers.map(({ uuid }) => uuid),
     }
   })
   .filter(el => el != null)

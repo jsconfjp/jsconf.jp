@@ -26,6 +26,7 @@ export type SpeakerType = {
   name: string
   biography: string
   biographyJa: string
+  presentations: string[]
   github: string
   twitter: string
 }
@@ -66,6 +67,7 @@ const Name = styled.p`
 `
 
 export function Speaker(props: Props) {
+  console.log(props)
   const { i18n } = useTranslation()
   const { talk, speaker, avatar } = props
   const { uuid, title, titleJa } = talk

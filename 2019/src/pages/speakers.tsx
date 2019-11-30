@@ -19,6 +19,7 @@ export default function SpeakersPage() {
             name
             biography
             biographyJa
+            presentations
           }
         }
       }

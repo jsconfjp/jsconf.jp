@@ -1,6 +1,8 @@
 - uuid: andrew-betts
   name: Andrew Betts
   featured: false
+  presentations:
+    - andrew-betts
   biography: >-
     Andrew is a web developer and developer advocate for Fastly, working with
     developers across the world to help make the web faster, more secure, more
@@ -17,6 +19,8 @@
 - uuid: andy-hall
   name: Andy Hall
   featured: false
+  presentations:
+    - andy-hall
   biography: >-
     Andy Hall is a developer in Tokyo, currently building a game. He’s been
     making web stuff since the 90s, and used to work at Adobe Japan as a
@@ -26,6 +30,8 @@
 - uuid: benitte-raphael
   name: Raphaël Benitte
   featured: false
+  presentations:
+    - s-greif-r-benitte
   biography: >-
     Raphael Benitte is a graphic designer and data visualization expert. He
     created the Nivo.js dataviz library for React.
@@ -35,6 +41,8 @@
 - uuid: benjamin-gruenbaum
   name: Benjamin Gruenbaum
   featured: false
+  presentations:
+    - benjamin-gruenbaum
   biography: >-
     Data Scientist & Developer @ Testim.io. Open source lover, Node.js core
     collaborator, core team at Bluebird, Sinon, MobX and other open source
@@ -43,6 +51,8 @@
 - uuid: claudia-hernandez
   name: Claudia Hernández
   featured: false
+  presentations:
+    - claudia-hernandez
   biography: >-
     Claudia Hernández is a mexican software engineer at npm. She has previously
     worked at Auth0, making the web safer, Dailymotion in Paris and on projects
@@ -54,16 +64,22 @@
 - uuid: dynamis
   name: dynamis
   featured: false
+  presentations:
+    - dynamis
   biography: CTO、WebDINO Japan
   biographyJa: CTO、WebDINO日本
 - uuid: dominic-tarr
   name: Dominic Tarr
   featured: true
+  presentations:
+    - dominic-tarr
   biography: ""
   biographyJa: ""
 - uuid: daiki-kuriyama
   name: 栗山 太希
   featured: false
+  presentations:
+    - sponsor-yahoo
   biography: ""
   biographyJa: >-
     ヤフー株式会社にてチャットシステムの開発と運用を担当。Node.js の言語サポートチームにも所属。日々 Node.js
@@ -71,6 +87,8 @@
 - uuid: eiji-kitamura
   name: Eiji Kitamura / えーじ
   featured: false
+  presentations:
+    - eiji-kitamura
   biography: >-
     Eiji is a staff developer advocate at Google working on the open web,
     currently focusing to make identity and payment on the web as open, seamless
@@ -83,11 +101,15 @@
 - uuid: fuji-goro
   name: FUJI Goro / @__gfx__
   featured: false
+  presentations:
+    - fuji-goro
   biography: "A Software Engineer. Interested in TypeScript, GraphQL, and WebAssembly."
   biographyJa: ソフトウェアエンジニア。 TypeScript や GraphQL、WebAssemblyに興味あり。
 - uuid: fred-schott
   name: Fred K. Schott
   featured: false
+  presentations:
+    - fred-schott
   biography: >-
     Fred Schott is a JavaScript developer in San Francisco, CA. He is currently
     working on Pika - a collection of tools and projects to move the JavaScript
@@ -99,6 +121,8 @@
 - uuid: guillermo-rauch
   name: Guillermo Rauch
   featured: true
+  presentations:
+    - guillermo-rauch
   biography: >-
     Guillermo Rauch is the founder of ZEIT, co-creator of Now and Next.js, and
     former CTO and co-founder of LearnBoost and Cloudup, acquired by
@@ -144,11 +168,15 @@
 - uuid: ginpei-takanashi
   name: 高梨ギンペイ
   featured: false
+  presentations:
+    - ginpei-takanashi
   biography: "A guy who writes JavaScript and makes JapaneseSushi in Vancouver, Canada."
   biographyJa: カナダのバンクーバーでJavaScriptを書いたりJapaneseSushiを握ったりしています。
 - uuid: hidetaka-okamoto
   name: Hidetaka Okamoto
   featured: false
+  presentations:
+    - hidetaka-okamoto
   biography: |-
     Alexa Champions
     ask-sdk core contributor
@@ -162,6 +190,8 @@
 - uuid: henry-zhu
   name: Henry Zhu
   featured: true
+  presentations:
+    - henry-zhu
   biography: >-
     Henry is a full time maintainer of the community funded Babel.js. He also
     hosts 2 podcasts, Hope in Source and Maintainers Anonymous.
@@ -169,6 +199,8 @@
 - uuid: irina-shestak
   name: Irina Shestak
   featured: false
+  presentations:
+    - irina-shestak
   biography: >-
     Irina is a Berlin-via-Londong-via-Vancouver engineer writing JavaScript and
     Rust over at MongoDB. Irina has given talks at conferences around the world
@@ -183,6 +215,8 @@
 - uuid: jxck
   name: Jxck
   featured: false
+  presentations:
+    - jxck
   biography: >-
     Web Developer in Japan [blog](https://blog.jxck.io)
     [mozaic.fm](https://mozaic.fm)
@@ -192,6 +226,8 @@
 - uuid: jan-lehnardt
   name: Jan Lehnardt
   featured: false
+  presentations:
+    - yosuke-furukawa
   biography: >-
     Jan is a developer from Berlin, Germany and works on Greenkeeper, CouchDB,
     and offline-first web technologies at Neighbourhoodie. He’s also the
@@ -202,6 +238,8 @@
 - uuid: jorge-bucaran
   name: Jorge Bucaran
   featured: false
+  presentations:
+    - jorge-bucaran
   biography: |-
     Jorge Bucaran
 
@@ -210,6 +248,8 @@
 - uuid: jonny-kalambay
   name: Jonny Kalambay
   featured: false
+  presentations:
+    - jonny-kalambay
   biography: >-
     Jonny works as developer at Zenhub and an instructor at Lighthouse Labs. He
     also makes programming tutorials on Youtube and Medium. When away from the
@@ -220,6 +260,8 @@
 - uuid: jarrod-overson
   name: Jarrod Overson
   featured: false
+  presentations:
+    - jarrod-overson
   biography: >-
     Jarrod is a Director of Engineering at Shape Security where he led the
     development of Shape's Enterprise Defense. Jarrod is a frequent speaker on
@@ -236,6 +278,8 @@
 - uuid: jennifer-wong
   name: Jennifer Wong
   featured: false
+  presentations:
+    - jennifer-wong
   biography: >-
     Jennifer Wong is a self-taught software engineer at Mode Analytics. She
     spends her days making the web a prettier and more user-friendly place. She
@@ -246,6 +290,8 @@
 - uuid: kitson-kelly
   name: Kitson Kelly
   featured: true
+  presentations:
+    - kitson-kelly
   biography: >-
     Kitson (Kit or Kit-san) has been in technology for almost 25 years.  He
     currently works for ThoughtWorks as a Technical Principal, but his passion
@@ -259,6 +305,8 @@
 - uuid: kohei-kido
   name: 木戸 康平
   featured: false
+  presentations:
+    - kohei-kido
   biography: >-
     Co-Founder of CambrianRobotics, Inc. whose building obniz, an IoT service
     for all developers.
@@ -274,6 +322,9 @@
 - uuid: lena-morita
   name: Lena Morita
   featured: false
+  presentations:
+    - lena-morita
+    - yosuke-furukawa
   biography: >-
     Lena Morita is a software developer who is passionate about the open web. As
     a JavaScript Engineer at [Automattic](https://automattic.com/), she strives
@@ -291,6 +342,8 @@
 - uuid: masashi-ganeko
   name: がねこまさし
   featured: false
+  presentations:
+    - masashi-ganeko
   biography: >-
     I joined node.js community to build server-side program to make use of new
     features of Web Browser. I am studying tools for programing languages such
@@ -308,6 +361,8 @@
 - uuid: masato-ohba
   name: ohbarye
   featured: false
+  presentations:
+    - masato-ohba
   biography: >-
     Masato Ohba (@ohbarye) is currently an engineering manager at Quipper and
     works for StudySapuri, which is one of the most popular education services
@@ -326,6 +381,8 @@
 - uuid: maxi-ferreira
   name: Maxi Ferreira
   featured: false
+  presentations:
+    - maxi-ferreira
   biography: >-
     Maxi is a software developer and data scientist living in Córdoba,
     Argentina. He likes writing code that is fast, clear, and clean, in that
@@ -338,11 +395,16 @@
 - uuid: mariko-kosaka
   name: Mariko Kosaka
   featured: false
+  presentations:
+    - mariko-kosaka
+    - yosuke-furukawa
   biography: ""
   biographyJa: ""
 - uuid: martin-splitt
   name: Martin Splitt
   featured: false
+  presentations:
+    - martin-splitt
   biography: >-
     Martin Splitt is a developer advocate at Google. He is a friendly internet
     fairy and pretty decent at humaning and pretty good at computering,
@@ -356,6 +418,8 @@
 - uuid: masato-nishihara
   name: Masato Nishihara
   featured: false
+  presentations:
+    - masato-nishihara
   biography: ""
   biographyJa: |-
     株式会社ラクス所属。
@@ -364,6 +428,8 @@
 - uuid: maria-clara
   name: Maria Clara
   featured: false
+  presentations:
+    - maria-clara
   biography: >-
     Software Developer and former ML undergraduate researcher, currently
     building amazing digital experiences at Work & Co. Brazilian, dog mom and
@@ -372,6 +438,8 @@
 - uuid: nadieh-bremer
   name: Nadieh Bremer
   featured: true
+  presentations:
+    - nadieh-bremer
   biography: >-
     Nadieh Bremer is a graduated Astronomer, turned data scientist, turned data
     visualization designer, based near Amsterdam. She's working as a freelancer
@@ -393,6 +461,8 @@
 - uuid: nobuhiko-sawai
   name: 澤井宣彦
   featured: false
+  presentations:
+    - nobuhiko-sawai
   biography: ""
   biographyJa: >-
     株式会社FiNC
@@ -400,17 +470,23 @@
 - uuid: nazanin-delam
   name: Nazanin Delam
   featured: false
+  presentations:
+    - nazanin-delam
   biography: "Nazanin Delam is a Senior Software Engineer at Netflix. Nazanin is passionate about UI development, she loves ❤️ JavaScript. At Netflix, she works on UI features on the WEB to enhance user experience across devices. Prior to Netflix, she worked in the Finance industry as a Software Architect for four years. \U0001F469\U0001F3FB‍\U0001F4BB\n\nNazanin is dedicated to advancing the role of women in engineering.\U0001F469\U0001F469\U0001F3FB\U0001F469\U0001F3FC\U0001F469\U0001F3FD\U0001F469\U0001F3FE She volunteers with Hour of Code teaching high school girls how to  code and serves as a member of Women Who Code and Women Tech Makers to mentor engineers.\n\nWhen she’s not working, you’re most likely to find Nazanin building AI applications and robots with ❤️ JS, exploring the world, playing games, or curled up with a good book. \U0001F4DA"
   biographyJa: ""
 - uuid: okuno-kentaro
   name: 奥野 賢太郎
   featured: false
+  presentations:
+    - okuno-kentaro
   biography: "Front-end developer and Node.js back-end developer, Web Audio Engineer"
   biographyJa: >-
     クレスウェア代表、Angular日本ユーザー会オーガナイザ。DDDを用いた大規模アプリケーション設計・開発を得意とし、TypeScriptを用いたクライアントサイド・サーバーサイド開発を手掛ける。
 - uuid: praveen-yedidi
   name: Praveen Yedidi
   featured: false
+  presentations:
+    - praveen-yedidi
   biography: >-
     Praveen is a multi-disciplined engineer with almost a decade of experience
     spanning various client, server and cloud infrastructure technologies. He is
@@ -426,6 +502,8 @@
 - uuid: rowdy-rabouw
   name: Rowdy Rabouw
   featured: false
+  presentations:
+    - rowdy-rabouw
   biography: >-
     Rowdy Rabouw is a web developer with over 20 years’ experience in HTML, CSS,
     JavaScript and PHP. He’s been working as a freelancer since 2004 and has
@@ -440,6 +518,8 @@
 - uuid: shirley-wu
   name: Shirley Wu
   featured: true
+  presentations:
+    - shirley-wu
   biography: >-
     Shirley Wu is an award-winning creative focused on data-driven art and
     visualizations.  She has worked with clients such as Google, The Guardian,
@@ -455,6 +535,8 @@
 - uuid: sho-miyamoto
   name: Sho Miyamoto
   featured: false
+  presentations:
+    - sho-miyamoto
   biography: >-
     Working on {browser, server, edge}-side web development at newspaper
     company. Interested in performance, browser and standards.
@@ -467,6 +549,8 @@
 - uuid: sakakibara
   name: 榊原昌彦
   featured: false
+  presentations:
+    - sakakibara
   biography: ""
   biographyJa: >-
     Ionic Japan User Group 代表、Ionic Framework
@@ -474,6 +558,8 @@
 - uuid: sacha-greif
   name: Sacha Greif
   featured: false
+  presentations:
+    - s-greif-r-benitte
   biography: >-
     Sacha Greif is an independent designer and developer. He runs Sidebar, a
     daily design newsletter, and also created Vulcan.js, a full-stack JavaScript
@@ -484,6 +570,8 @@
 - uuid: satoshi-ebihara
   name: 海老原 圭吾
   featured: false
+  presentations:
+    - satoshi-ebihara
   biography: ""
   biographyJa: |-
     Fringe81株式会社でフロントエンドエンジニアをしています。
@@ -491,6 +579,8 @@
 - uuid: samuel-agnew
   name: Samuel Agnew
   featured: false
+  presentations:
+    - samuel-agnew
   biography: >-
     Sam Agnew is a developer evangelist at Twilio and loves showing developers
     around the world the joys of creative coding. He particularly enjoys being a
@@ -501,6 +591,8 @@
 - uuid: sam-bellen
   name: Sam Bellen
   featured: false
+  presentations:
+    - sam-bellen
   biography: >-
     I'm Google Developer Expert who works as a Developer Advocate Engineer at
     Auth0. At Auth0 we're trying to make authentication and identification as
@@ -518,6 +610,8 @@
 - uuid: satoshi-arai
   name: 新井 智士
   featured: false
+  presentations:
+    - sponsor-recruit
   biography: ""
   biographyJa: >-
     株式会社リクルートテクノロジーズ　フロントエンド テクニカル リード エンジニア
@@ -527,6 +621,8 @@
 - uuid: toru-kobayashi
   name: Toru Kobayashi
   featured: false
+  presentations:
+    - toru-kobayashi
   biography: |-
     Web Application Developer in Tokyo.
     Working at Frontend Expert Team in Cybozu and SmartHR as Frontend Advisor.
@@ -542,6 +638,8 @@
 - uuid: takuto-wada
   name: Takuto Wada
   featured: false
+  presentations:
+    - takuto-wada
   biography: ""
   biographyJa: >-
     学生時代にソフトウェア工学を学び、オブジェクト指向分析/設計に傾倒。執筆活動や講演、ハンズオンイベントなどを通じてテスト駆動開発を広めようと努力している。
@@ -550,17 +648,23 @@
 - uuid: tetsuharu-ohzeki
   name: Tetsuharu OHZEKI
   featured: false
+  presentations:
+    - tetsuharu-ohzeki
   biography: Open Source Software Engineer.
   biographyJa: Open Source Software Engineer.
 - uuid: takeshi-kato
   name: 加藤 健志
   featured: false
+  presentations:
+    - takeshi-kato
   biography: ""
   biographyJa: >-
     株式会社ミツエーリンクスでUI開発者として、主にフロントエンド開発を行っています。その他、フロントエンドブログの執筆や、新規サービスのリリースにも携わっています。サウナが好きです。
 - uuid: yoshiki-shibukawa
   name: Yoshiki Shibukawa
   featured: false
+  presentations:
+    - yoshiki-shibukawa
   biography: >-
     Yoshiki is a 2nd year front-end developer at Future corporation. He is also
     the author of Real World HTTP.
@@ -568,6 +672,8 @@
 - uuid: yosuke-furukawa
   name: Yosuke Furukawa
   featured: false
+  presentations:
+    - yosuke-furukawa
   biography: >-
     Japan Node.js Association Director / JSConf.JP founder / NodeFest former
     organizer / Recruit Technologies Inc, Senior Software Engineer and Group

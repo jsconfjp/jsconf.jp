@@ -23,14 +23,10 @@ const Container = styled.div`
 
 export function SpeakerList(props: Props) {
   const { speakers, avatars, talks } = props
-  const talkMap: { [uuid: string]: TalkType } = talks.reduce(
-    (acc, talk) =>
-      talk.speakerIDs.reduce(
-        (acc, speakerID) => ({ ...acc, [speakerID]: talk }),
-        acc,
-      ),
-    {},
-  )
+  const talkMap: { [uuid: string]: TalkType } = talks.reduce((acc, talk) => {
+    acc[String(talk.uuid)] = talk as TalkType
+    return acc
+  }, {})
   const avatarMap: { [uuid: string]: AvatarType } = avatars.reduce(
     (acc, avatar) => ({ ...acc, [avatar.originalName.split(".")[0]]: avatar }),
     {},
@@ -39,13 +35,16 @@ export function SpeakerList(props: Props) {
   return (
     <Container>
       {speakers
-        .filter(speaker => talkMap[speaker.uuid])
+        .filter(speaker => {
+          return speaker.presentations.length > 0
+        })
         .map(speaker => {
+          console.log({ lookingFor: speaker.presentations, map: talkMap })
           return (
             <Speaker
               key={speaker.name}
               speaker={speaker}
-              talk={talkMap[speaker.uuid]}
+              talk={talkMap[speaker.presentations[0]]}
               avatar={avatarMap[speaker.uuid]}
             />
           )
