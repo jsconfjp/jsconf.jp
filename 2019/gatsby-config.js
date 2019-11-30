@@ -69,15 +69,13 @@ module.exports = {
       options: {
         name: `JSConf JP`,
         short_name: `JSConf JP`,
-        start_url: `/`,
+        start_url: `/2019/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/logo.png`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
