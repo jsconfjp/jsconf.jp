@@ -192,8 +192,13 @@ export default function SchedulePage() {
                   const hasDescription = s.uuid && s.speakers.length
                   return (
                     <Area
-                      // @ts-ignore Type 'undefined' is not assignable to type 'string'
-                      to={hasDescription ? `talk/${s.uuid}` : undefined}
+                      // @ts-ignore
+                      to={hasDescription ? `talk/${s.uuid}` : null}
+                      onClick={e => {
+                        if (!hasDescription) {
+                          e.preventDefault()
+                        }
+                      }}
                       key={s.room + s.uuid}
                       track={s.room}
                       startsAt={s.startsAt}
