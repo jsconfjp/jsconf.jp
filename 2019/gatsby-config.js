@@ -69,7 +69,7 @@ module.exports = {
       options: {
         name: `JSConf JP`,
         short_name: `JSConf JP`,
-        start_url: `/`,
+        start_url: `/2019`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
