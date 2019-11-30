@@ -101,7 +101,7 @@
   date: day2
   startsAt: "13:30"
   endsAt: "14:00"
-  room: B
+  room: C
   title: "npm i -g @next-and-beyond: Building the future of package management"
   titleJa: "npm i -g @next-and-beyond: Building the future of package management"
   description: >-
@@ -882,7 +882,7 @@
   date: day2
   startsAt: "13:00"
   endsAt: "13:30"
-  room: C
+  room: B
   title: ""
   titleJa: 正攻法はあるのか !? 泥臭く戦った Node.js バージョンアップ一部始終
   description: ""
@@ -902,7 +902,7 @@
   date: day2
   startsAt: "13:30"
   endsAt: "14:00"
-  room: C
+  room: B
   title: Migration from React Native to PWA
   titleJa: Migration from React Native to PWA
   description: >-
@@ -1373,7 +1373,7 @@
   date: day2
   startsAt: "13:00"
   endsAt: "13:30"
-  room: B
+  room: C
   title: Passwords are so 1990
   titleJa: パスワードは90年代の代物だ
   description: >-
