@@ -192,7 +192,8 @@ export default function SchedulePage() {
                   const hasDescription = s.uuid && s.speakers.length
                   return (
                     <Area
-                      to={hasDescription ? `talk/${s.uuid}` : "#"}
+                      // @ts-ignore
+                      to={hasDescription ? `talk/${s.uuid}` : null}
                       onClick={e => {
                         if (!hasDescription) {
                           e.preventDefault()
