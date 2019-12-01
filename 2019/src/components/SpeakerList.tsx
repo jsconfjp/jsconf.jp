@@ -23,10 +23,13 @@ const Container = styled.div`
 
 export function SpeakerList(props: Props) {
   const { speakers, avatars, talks } = props
-  const talkMap: { [uuid: string]: TalkType } = talks.reduce((acc, talk) => {
-    acc[String(talk.uuid)] = talk as TalkType
-    return acc
-  }, {})
+  const talkMap = talks.reduce(
+    (acc, talk) => {
+      acc[String(talk.uuid)] = talk as TalkType
+      return acc
+    },
+    {} as { [uuid: string]: TalkType },
+  )
   const avatarMap: { [uuid: string]: AvatarType } = avatars.reduce(
     (acc, avatar) => ({ ...acc, [avatar.originalName.split(".")[0]]: avatar }),
     {},
