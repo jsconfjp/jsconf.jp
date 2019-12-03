@@ -13,7 +13,6 @@ export function SmoothScroll(props: Props) {
       if (!el) {
         throw new Error(`Element not found with selector: ${selector}`)
       }
-
       const { top } = el.getBoundingClientRect()
       e.preventDefault()
       window.scrollTo({ top, behavior: "smooth" })

@@ -52,15 +52,16 @@ const Img = styled.img`
 export type Props = {
   grade: "platinum" | "gold" | "silver" | "bronze"
   logoUrl: string
+  name: string
   url: string
 }
 
 export function Sponsor(props: Props) {
-  const { logoUrl, url, grade } = props
+  const { logoUrl, url, grade, name } = props
 
   return (
     <Box href={url} target="_blank">
-      <Img src={logoUrl} width="100%" className={grade} />
+      <Img src={logoUrl} width="100%" className={grade} alt={name} />
     </Box>
   )
 }

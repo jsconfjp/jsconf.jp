@@ -17,17 +17,17 @@ const buttonStyle = css`
     width: 100%;
     max-width: 440px;
     padding: 1.4em 0;
-    font-size: 24px;
+    font-size: 2.4rem;
   }
   &.normal {
     width: 100%;
     max-width: 440px;
     padding: 0.6em 0;
-    font-size: 24px;
+    font-size: 2.4rem;
   }
   &.inline {
     width: 100%;
-    font-size: 20px;
+    font-size: 2rem;
   }
 
   ${({ theme }) => theme.breakpoints.mobile} {

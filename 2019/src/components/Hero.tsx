@@ -33,17 +33,17 @@ const TextBox = styled.div`
 const Title = styled.h1`
   margin: 0;
   font-family: ${({ theme }) => theme.fonts.header};
-  font-size: 60px;
+  font-size: 6rem;
 `
 const SubTitle = styled.h2`
   margin: 0;
   font-family: ${({ theme }) => theme.fonts.header};
-  font-size: 24px;
+  font-size: 2.4rem;
 `
 const Paragraph = styled.p`
   margin: 28px 0 0;
   font-family: ${({ theme }) => theme.fonts.text};
-  font-size: 20px;
+  font-size: 2rem;
 `
 
 export function Hero(props: Props) {
@@ -51,7 +51,7 @@ export function Hero(props: Props) {
 
   return (
     <Box>
-      <Logo size={270} />
+      <Logo size={270} alt="JSConf JP Logo" />
       <TextBox>
         <Title>{title}</Title>
         <SubTitle>{subTitle}</SubTitle>

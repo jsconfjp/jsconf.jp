@@ -20,7 +20,7 @@ export default function VenuePage() {
         <Breadcrumb path={[t("venue")]} />
 
         <Title>{t("venue")}</Title>
-        <Map width={940} height={500} />
+        <Map width={940} height={500} title={t("venue")} />
         <Address summary={false} />
         <Accessibility />
       </ResponsiveBox>

@@ -9,7 +9,7 @@ type Props = {
 
 const Title = styled.h3`
   margin-bottom: 0;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-family: ${({ theme }) => theme.fonts.text};
   font-weight: bold;
 `
@@ -17,7 +17,7 @@ const SubTitle = styled.h4`
   display: inline-block;
   margin: 40px 0 0;
   padding: 8px 10px;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-family: ${({ theme }) => theme.fonts.text};
   font-weight: bold;
   color: ${({ theme }) => theme.colors.base};
@@ -25,11 +25,11 @@ const SubTitle = styled.h4`
 `
 const Text = styled.p`
   margin: 0.4em 0;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-family: ${({ theme }) => theme.fonts.text};
 `
 const Link = styled(OutboundLink)`
-  font-size: 18px;
+  font-size: 1.8rem;
   font-family: ${({ theme }) => theme.fonts.text};
 `
 const HyphenList = styled.ul`
@@ -39,7 +39,7 @@ const HyphenListItem = styled.li`
   display: flex;
   align-items: center;
   list-style-type: none;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-family: ${({ theme }) => theme.fonts.text};
 
   :before {

@@ -13,7 +13,7 @@ const SubTitle = styled.h4`
   display: inline-block;
   margin: 0 0 1em;
   padding: 8px 10px;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-family: ${({ theme }) => theme.fonts.text};
   font-weight: bold;
   color: ${({ theme }) => theme.colors.base};
@@ -21,7 +21,7 @@ const SubTitle = styled.h4`
 `
 const Text = styled.p`
   margin: 0.4em 0;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-family: ${({ theme }) => theme.fonts.text};
 `
 

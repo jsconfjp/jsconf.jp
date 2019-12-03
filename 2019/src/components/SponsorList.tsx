@@ -38,7 +38,7 @@ const OtherBox = styled.div`
 const SubTitle = styled.h3`
   font-family: ${({ theme }) => theme.fonts.header};
   text-align: center;
-  font-size: 30px;
+  font-size: 3rem;
 `
 
 export function SponsorList(props: Props) {

@@ -10,7 +10,7 @@ type Props = {
 const Lang = styled.a`
   text-decoration: none;
   font-family: ${({ theme }) => theme.fonts.header};
-  font-size: 20px;
+  font-size: 2rem;
   border-bottom: 4px solid ${({ theme }) => theme.colors.primary};
 
   &[href="#"] {
@@ -20,7 +20,7 @@ const Lang = styled.a`
 `
 const Separator = styled.span`
   font-family: ${({ theme }) => theme.fonts.header};
-  font-size: 20px;
+  font-size: 2rem;
   color: ${({ theme }) => theme.colors.disabled};
   margin: 0 0.5em;
 `

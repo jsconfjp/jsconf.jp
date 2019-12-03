@@ -1,10 +1,14 @@
 import React from "react"
 import styled from "styled-components"
 
-const Box = styled.div`
+const Box = styled.button`
+  appearance: none;
+  margin: 0;
+  border: none;
   cursor: pointer;
   display: inline-block;
   font-family: ${({ theme }) => theme.fonts.header};
+  font-size: 1.6rem;
   padding: 10px 24px;
 `
 const PrimaryBox = styled(Box)`

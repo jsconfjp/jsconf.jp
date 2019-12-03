@@ -12,7 +12,7 @@ const Box = styled.div`
 `
 const Text = styled.span`
   margin-right: 0.5em;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: bold;
   text-transform: uppercase;
   font-family: ${({ theme }) => theme.fonts.header};
