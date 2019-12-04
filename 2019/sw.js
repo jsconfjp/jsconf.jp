@@ -71,54 +71,54 @@ self.__precacheManifest = [
     "revision": "4d2cc4705a0ca2dbbef54fe3d47eebb0"
   },
   {
-    "url": "2-1ae78630d1daf0d01f4b.js"
+    "url": "2-bfc7d88c2a33227dec2c.js"
   },
   {
-    "url": "2-1ae78630d1daf0d01f4b.js.br",
-    "revision": "3ffce4ac88907f29405004314123c778"
+    "url": "2-bfc7d88c2a33227dec2c.js.br",
+    "revision": "2b87e53b32c27c4818f5b9a8b2045c43"
   },
   {
-    "url": "2-1ae78630d1daf0d01f4b.js.gz",
-    "revision": "5ea6a53e0d9be56fdad0529901b175cc"
+    "url": "2-bfc7d88c2a33227dec2c.js.gz",
+    "revision": "dbe166b56d9a463741b6be656c51d773"
   },
   {
-    "url": "2-1ae78630d1daf0d01f4b.js.map",
-    "revision": "0cf340a5ebe5c9f859e009977d4da9a7"
+    "url": "2-bfc7d88c2a33227dec2c.js.map",
+    "revision": "2497227ca743f62230cc0108105db425"
   },
   {
     "url": "404.html",
-    "revision": "2904d9ecfb8f2632b7e7b5455d9c93cc"
+    "revision": "3884b981ed0d2bb09ce448ba5084bc24"
   },
   {
     "url": "404/index.html",
-    "revision": "cba825d960514288b40b0ab103f7fe80"
+    "revision": "07f0f612a9da94b05e9178d869f1dacb"
   },
   {
     "url": "about/index.html",
-    "revision": "cad770152e6548002ea8520be6399934"
+    "revision": "68ddb693dccc70a27c8a6a6ed6407ac1"
   },
   {
-    "url": "app-163aa20d723bea2b95ed.js"
+    "url": "app-104fe3163c3b8805a968.js"
   },
   {
-    "url": "app-163aa20d723bea2b95ed.js.br",
-    "revision": "fe837f923c4d9b6af4a75229beffce52"
+    "url": "app-104fe3163c3b8805a968.js.br",
+    "revision": "9f72cb2089d75cc2dc1c96273f6432f8"
   },
   {
-    "url": "app-163aa20d723bea2b95ed.js.gz",
-    "revision": "2e92ccf9c750df23ef49763d6a29a853"
+    "url": "app-104fe3163c3b8805a968.js.gz",
+    "revision": "32e82a9267318d8f8373eb79fe38d07e"
   },
   {
-    "url": "app-163aa20d723bea2b95ed.js.map",
-    "revision": "52f0c176d8635738a88fb81a07859404"
+    "url": "app-104fe3163c3b8805a968.js.map",
+    "revision": "f07e6f2468f678cfbb2c05ac46c37161"
   },
   {
     "url": "chunk-map.json",
-    "revision": "f8e259d5e6c17f020c65801bc4c5968b"
+    "revision": "d62c6885cbca2f5c0709f5642b605c24"
   },
   {
     "url": "code-of-conduct/index.html",
-    "revision": "a9fd44161c23e0f46bf60632f284f5e6"
+    "revision": "41ce64a0d6397632823fd930830260e6"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-a068f64759391d931def.js"
@@ -151,124 +151,124 @@ self.__precacheManifest = [
     "revision": "34c442e0625a106e2a049101e89d847b"
   },
   {
-    "url": "component---src-pages-about-tsx-72cc494b86c639fdd170.js"
+    "url": "component---src-pages-about-tsx-bf7f48e0b1158fe56b17.js"
   },
   {
-    "url": "component---src-pages-about-tsx-72cc494b86c639fdd170.js.br",
-    "revision": "2bba967d7683284511300d3529f71c4b"
+    "url": "component---src-pages-about-tsx-bf7f48e0b1158fe56b17.js.br",
+    "revision": "d53f0ccfdc1f72e810da1f52ee5ccaa5"
   },
   {
-    "url": "component---src-pages-about-tsx-72cc494b86c639fdd170.js.gz",
-    "revision": "1e894a596b12d68fa433d6e10189d0c5"
+    "url": "component---src-pages-about-tsx-bf7f48e0b1158fe56b17.js.gz",
+    "revision": "5dc045307a188715c1e2d6bc8522a876"
   },
   {
-    "url": "component---src-pages-about-tsx-72cc494b86c639fdd170.js.map",
-    "revision": "1a726d5d7649a7854a7301443f5ffb1f"
+    "url": "component---src-pages-about-tsx-bf7f48e0b1158fe56b17.js.map",
+    "revision": "1138b0574036cd2a90c7f3659c92aa8a"
   },
   {
-    "url": "component---src-pages-index-tsx-6a77479c40f35c32e51d.js"
+    "url": "component---src-pages-index-tsx-92bcda991960614190a5.js"
   },
   {
-    "url": "component---src-pages-index-tsx-6a77479c40f35c32e51d.js.br",
-    "revision": "dd09bddae6b564aa20776b4c7531d0ef"
+    "url": "component---src-pages-index-tsx-92bcda991960614190a5.js.br",
+    "revision": "4cdcdba37ee3b43b50acc8f4f66c028e"
   },
   {
-    "url": "component---src-pages-index-tsx-6a77479c40f35c32e51d.js.gz",
-    "revision": "a102ba14ddd6cbe58eb246ca96ab0d73"
+    "url": "component---src-pages-index-tsx-92bcda991960614190a5.js.gz",
+    "revision": "9002a274dbfaa745361830ee5ffb4b25"
   },
   {
-    "url": "component---src-pages-index-tsx-6a77479c40f35c32e51d.js.map",
-    "revision": "ecbdeb838a00365a48dc3287e56f52b9"
+    "url": "component---src-pages-index-tsx-92bcda991960614190a5.js.map",
+    "revision": "088e80144cb773324d24699aeb003ef2"
   },
   {
-    "url": "component---src-pages-schedule-tsx-20e641c735d084a0628b.js"
+    "url": "component---src-pages-schedule-tsx-4fdd2f88098b5553e3d8.js"
   },
   {
-    "url": "component---src-pages-schedule-tsx-20e641c735d084a0628b.js.br",
-    "revision": "fb8e7a2e03c0b3756ea1c3b1338030ef"
+    "url": "component---src-pages-schedule-tsx-4fdd2f88098b5553e3d8.js.br",
+    "revision": "b50244501c7c70945a351e05d3898842"
   },
   {
-    "url": "component---src-pages-schedule-tsx-20e641c735d084a0628b.js.gz",
-    "revision": "ffd422423ae3270148102c366d901e9a"
+    "url": "component---src-pages-schedule-tsx-4fdd2f88098b5553e3d8.js.gz",
+    "revision": "d2be9b3fee9d60a094b0200f16b2bc5d"
   },
   {
-    "url": "component---src-pages-schedule-tsx-20e641c735d084a0628b.js.map",
-    "revision": "096dd5f7e14815d928cc748e0cac5755"
+    "url": "component---src-pages-schedule-tsx-4fdd2f88098b5553e3d8.js.map",
+    "revision": "9c1dc42f9f851170f9b1fca8b63d79e1"
   },
   {
-    "url": "component---src-pages-speakers-tsx-d638e86233848e86cb0b.js"
+    "url": "component---src-pages-speakers-tsx-27038a48c7d7fd32d7e9.js"
   },
   {
-    "url": "component---src-pages-speakers-tsx-d638e86233848e86cb0b.js.br",
-    "revision": "b18e88063be774f82900c614e0f2f8fc"
+    "url": "component---src-pages-speakers-tsx-27038a48c7d7fd32d7e9.js.br",
+    "revision": "58322829f71d29d947729d6d851c9852"
   },
   {
-    "url": "component---src-pages-speakers-tsx-d638e86233848e86cb0b.js.gz",
-    "revision": "9cff9e1415b00be7c3f7c486f642b5fd"
+    "url": "component---src-pages-speakers-tsx-27038a48c7d7fd32d7e9.js.gz",
+    "revision": "4f991f399aa0a8e577328c9f19b6741e"
   },
   {
-    "url": "component---src-pages-speakers-tsx-d638e86233848e86cb0b.js.map",
-    "revision": "9ab7f03448aba693c9137881d17c4889"
+    "url": "component---src-pages-speakers-tsx-27038a48c7d7fd32d7e9.js.map",
+    "revision": "cc0f59f6309a16f04754ea4d35070754"
   },
   {
-    "url": "component---src-pages-sponsors-tsx-90a35dd3d82fd17ac531.js"
+    "url": "component---src-pages-sponsors-tsx-32606382ea14edc5513f.js"
   },
   {
-    "url": "component---src-pages-sponsors-tsx-90a35dd3d82fd17ac531.js.br",
-    "revision": "e5d70ba77f007b65f5cace385c2ca3e3"
+    "url": "component---src-pages-sponsors-tsx-32606382ea14edc5513f.js.br",
+    "revision": "8da4a9a5656768bd0876ece90438430d"
   },
   {
-    "url": "component---src-pages-sponsors-tsx-90a35dd3d82fd17ac531.js.gz",
-    "revision": "668bc5f6be43020e709f306f2e842385"
+    "url": "component---src-pages-sponsors-tsx-32606382ea14edc5513f.js.gz",
+    "revision": "34d03f5fde35972304483507d82e2392"
   },
   {
-    "url": "component---src-pages-sponsors-tsx-90a35dd3d82fd17ac531.js.map",
-    "revision": "552df845fcb0e973f7c8205865ce077f"
+    "url": "component---src-pages-sponsors-tsx-32606382ea14edc5513f.js.map",
+    "revision": "453e8e00dd33ae8275f3ff49c00afdc2"
   },
   {
-    "url": "component---src-pages-venue-tsx-11e85471515466b974d6.js"
+    "url": "component---src-pages-venue-tsx-4ca172cc9672dd12691f.js"
   },
   {
-    "url": "component---src-pages-venue-tsx-11e85471515466b974d6.js.br",
-    "revision": "af0f9a560fa8259f1e2bf24b313e7b58"
+    "url": "component---src-pages-venue-tsx-4ca172cc9672dd12691f.js.br",
+    "revision": "35d543b196c975bbeffd5711e83f0931"
   },
   {
-    "url": "component---src-pages-venue-tsx-11e85471515466b974d6.js.gz",
-    "revision": "eeca564c85e1e73071058348d8a32889"
+    "url": "component---src-pages-venue-tsx-4ca172cc9672dd12691f.js.gz",
+    "revision": "eadd3bd553f4a7f8bdd5a3c64b9ac378"
   },
   {
-    "url": "component---src-pages-venue-tsx-11e85471515466b974d6.js.map",
-    "revision": "34b07c0747070e33e1821560a3cc15a5"
+    "url": "component---src-pages-venue-tsx-4ca172cc9672dd12691f.js.map",
+    "revision": "12ed016cc988f8459d436ab3749516dc"
   },
   {
-    "url": "component---src-templates-markdown-tsx-a554b64680371b7a36d8.js"
+    "url": "component---src-templates-markdown-tsx-888eefed66a40f08a3db.js"
   },
   {
-    "url": "component---src-templates-markdown-tsx-a554b64680371b7a36d8.js.br",
-    "revision": "2f50b072fdf78070e1c18e06352102a0"
+    "url": "component---src-templates-markdown-tsx-888eefed66a40f08a3db.js.br",
+    "revision": "b02afb6d5a346fab21cff1bea6afc09f"
   },
   {
-    "url": "component---src-templates-markdown-tsx-a554b64680371b7a36d8.js.gz",
-    "revision": "5f68da30d7d1da7c72af9d9ab4badf53"
+    "url": "component---src-templates-markdown-tsx-888eefed66a40f08a3db.js.gz",
+    "revision": "a3ae3fdb2cc8831c0c270d7d16c6c347"
   },
   {
-    "url": "component---src-templates-markdown-tsx-a554b64680371b7a36d8.js.map",
-    "revision": "cee31548a0c2525468c6dc7d5286c072"
+    "url": "component---src-templates-markdown-tsx-888eefed66a40f08a3db.js.map",
+    "revision": "bfd3c6e132f3621ed552fa026ca81293"
   },
   {
-    "url": "component---src-templates-speaker-tsx-f94753a2d2f98d427cbb.js"
+    "url": "component---src-templates-speaker-tsx-e5a8ee310ca70289af63.js"
   },
   {
-    "url": "component---src-templates-speaker-tsx-f94753a2d2f98d427cbb.js.br",
-    "revision": "9539e75113d252dcc4642e8530f15add"
+    "url": "component---src-templates-speaker-tsx-e5a8ee310ca70289af63.js.br",
+    "revision": "68030b664b19e5422699a9a0962342c1"
   },
   {
-    "url": "component---src-templates-speaker-tsx-f94753a2d2f98d427cbb.js.gz",
-    "revision": "d2dbd9b06ab69d9db877440d730abe3d"
+    "url": "component---src-templates-speaker-tsx-e5a8ee310ca70289af63.js.gz",
+    "revision": "f258d06c2b4015dbf4f814d65ebb048e"
   },
   {
-    "url": "component---src-templates-speaker-tsx-f94753a2d2f98d427cbb.js.map",
-    "revision": "cc49ca29f33335abdd99e76c1f97c763"
+    "url": "component---src-templates-speaker-tsx-e5a8ee310ca70289af63.js.map",
+    "revision": "9c7b588771a50d18698ae764b52a3d2e"
   },
   {
     "url": "google-fonts/s/lato/v16/S6u9w4BMUTPHh6UVSwiPGQ.woff2",
@@ -327,11 +327,11 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "1f5e7f6fb68d90d64715fbbcb658bab7"
+    "revision": "9e970fddfa246ab3b29b5eb48d706a29"
   },
   {
     "url": "jp-specified-commercial-transactions-act/index.html",
-    "revision": "f10bbcfdf1aff6547270fe0dee7f7b7a"
+    "revision": "eccffaa03565a61bcbbf67f7e77dfb01"
   },
   {
     "url": "manifest.webmanifest",
@@ -339,327 +339,327 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "dba5b9be317616923e430961a4af02a4"
+    "revision": "0e525b51489eafcb3324db6feb2c95e8"
   },
   {
     "url": "page-data/404.html/page-data.json",
-    "revision": "9ce1bfe0d921724f752f581267c37a44"
+    "revision": "e5b72a2ef8f2e7ff6fb4dfaf62cd653e"
   },
   {
     "url": "page-data/404/page-data.json",
-    "revision": "90942e1d4533f3c809388190e2422bbe"
+    "revision": "708f815f8ce85999cd917e35c6a8fa03"
   },
   {
     "url": "page-data/about/page-data.json",
-    "revision": "5631f2f12a4f3c2ae818b0130a4816ce"
+    "revision": "0871346e362a3024be9cf97874b446a4"
   },
   {
     "url": "page-data/code-of-conduct/page-data.json",
-    "revision": "199c32b1f4772ebca96b6e8b524f9748"
+    "revision": "c4366d0267c2f4569990c9ca7ed74f6f"
   },
   {
     "url": "page-data/index/page-data.json",
-    "revision": "288731be26fcf7fb27d5f78e2f25cf12"
+    "revision": "935eaffbd56bb7a361e28933683bf82f"
   },
   {
     "url": "page-data/jp-specified-commercial-transactions-act/page-data.json",
-    "revision": "3cb4cc1315f7ce6383adc890307a9d9b"
+    "revision": "b4e2ddd602a2b987e7ff810c86c9b4e0"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "b8528dc110c61135c08ef1be03d1f1e9"
+    "revision": "836e836f41c1f7f3db2d858b63ef2798"
   },
   {
     "url": "page-data/schedule/page-data.json",
-    "revision": "feca876d44e8e8575e089b01cf0506f9"
+    "revision": "12ef97a85a1c7309f8b9c03c90a82c87"
   },
   {
     "url": "page-data/speakers/page-data.json",
-    "revision": "1611057de9dc0702571f29a1fee36a0b"
+    "revision": "a5e822b0bed56546e5529c3ff40e4b78"
   },
   {
     "url": "page-data/sponsors/page-data.json",
-    "revision": "156309210ae13b2721f30d1dbde7e3ae"
+    "revision": "7ad90e0be6a7e885350dce3fdb81d5ed"
   },
   {
     "url": "page-data/talk/andrew-betts/page-data.json",
-    "revision": "ec918662aa5c448560d3386a63f42dbc"
+    "revision": "f0e0f27831d033c0d382827e892ce14d"
   },
   {
     "url": "page-data/talk/andy-hall/page-data.json",
-    "revision": "b33798043a7cf3ae38abeb2c3a1c8e1f"
+    "revision": "fd6827550e95b54f1388c4602ae44fb2"
   },
   {
     "url": "page-data/talk/benjamin-gruenbaum/page-data.json",
-    "revision": "bb7e85b9a51dd7f668ad4424a9a381ed"
+    "revision": "9336812812f4aff284bc04192fb61d3c"
   },
   {
     "url": "page-data/talk/claudia-hernandez/page-data.json",
-    "revision": "30e687596b45c361bf1be5e8172ae22b"
+    "revision": "f1b23bd9136455efd6b0b98e5aa68bef"
   },
   {
     "url": "page-data/talk/day1-break-A-12%3A00/page-data.json",
-    "revision": "38361067778c4e394f5e15f2999f7a0b"
+    "revision": "45f3c7affd9feb5a68ed5136e0ee4f52"
   },
   {
     "url": "page-data/talk/day1-break-A-13%3A00/page-data.json",
-    "revision": "5c954f15a00469c25bc4ad02b7aa24fd"
+    "revision": "45288e2b3ff19c6644241419ef88f84e"
   },
   {
     "url": "page-data/talk/day1-break-A-14%3A00/page-data.json",
-    "revision": "6ca7d13f66666946d68e002c8c02c9ea"
+    "revision": "3e93aad16878f7a0d7a366240094fbd1"
   },
   {
     "url": "page-data/talk/day1-break-A-15%3A15/page-data.json",
-    "revision": "8c3ced59a2aa6e8e8755cffc77fa07a3"
+    "revision": "2c4e8d295a5e386b7bcecd4dc12c7e17"
   },
   {
     "url": "page-data/talk/day1-break-A-16%3A30/page-data.json",
-    "revision": "6104755043dcc0b045e29221a37a84b0"
+    "revision": "16e1157a83f5c2e2a44e86e6d2ecdfac"
   },
   {
     "url": "page-data/talk/day1-break-A-17%3A45/page-data.json",
-    "revision": "3a7b14e69f01e1bbde6f2bfee1a1a8e8"
+    "revision": "3c935b6cfcb215d3db3d346c8fc45486"
   },
   {
     "url": "page-data/talk/day1-break-A-19%3A35/page-data.json",
-    "revision": "b706d2ede05257eceeee14d1f18df2e7"
+    "revision": "e10ac793e7cc2caf2b490e7f597cd82e"
   },
   {
     "url": "page-data/talk/day2-break-A-10%3A00/page-data.json",
-    "revision": "2e45571775c792860858c6f2fd0ee746"
+    "revision": "555c60b22cc7a2a85f22facaae22992e"
   },
   {
     "url": "page-data/talk/day2-break-A-12%3A00/page-data.json",
-    "revision": "5e189558a2ec649c834d5c0e8486007f"
+    "revision": "f82aa174f9035f45618f5c772b5e1697"
   },
   {
     "url": "page-data/talk/day2-break-A-14%3A00/page-data.json",
-    "revision": "497f420471a7dc84e7840f34bccdda66"
+    "revision": "1cd1f8461d974f72ffb58ffba48b72bf"
   },
   {
     "url": "page-data/talk/day2-break-A-15%3A15/page-data.json",
-    "revision": "de56866d2fc9b255f9fe31e543e3b84a"
+    "revision": "9b1b4067555377ccbf96a7330009450d"
   },
   {
     "url": "page-data/talk/day2-break-A-16%3A30/page-data.json",
-    "revision": "a1bd5b5888edd117b27f4183925e64ee"
+    "revision": "747379c4518796ace5a31a3ad0b347f7"
   },
   {
     "url": "page-data/talk/day2-break-A-17%3A45/page-data.json",
-    "revision": "5ee82ab88e6065a912ab6608722f316c"
+    "revision": "35a481d2f997d4fec57ba7036113b1f1"
   },
   {
     "url": "page-data/talk/day2-break-A-19%3A00/page-data.json",
-    "revision": "d30c9f3f7c69fae0221f83f64cf9b69d"
+    "revision": "48ea0e8a7cab837054ed405887f9760e"
   },
   {
     "url": "page-data/talk/dominic-tarr/page-data.json",
-    "revision": "eb891d2a7dc2c17acc8f08e193911e7e"
+    "revision": "79a986bb3aafbc19b459187eefe6bda7"
   },
   {
     "url": "page-data/talk/dynamis/page-data.json",
-    "revision": "c7aa0d477dfa3a66b367d7a22e83eb90"
+    "revision": "7ad858ef0336e9cdf60803b1cced71e7"
   },
   {
     "url": "page-data/talk/eiji-kitamura/page-data.json",
-    "revision": "35997ff2cb828c78b4c0880a0ab520c8"
+    "revision": "c7a03afb3263ae6528a70a31a6ce1a32"
   },
   {
     "url": "page-data/talk/fred-schott/page-data.json",
-    "revision": "dccc2922fc53432417da1c60729ea1cf"
+    "revision": "39f155027b338104cd62101c6ef5b7b8"
   },
   {
     "url": "page-data/talk/fuji-goro/page-data.json",
-    "revision": "c48c85d0929907d7edafa8b2ad695665"
+    "revision": "8c56166d6fdc106cdb61cd4951de354a"
   },
   {
     "url": "page-data/talk/ginpei-takanashi/page-data.json",
-    "revision": "86e6571f61614da9c226505ab59d7c40"
+    "revision": "376b8959b0894367c7b2c0707ff7a950"
   },
   {
     "url": "page-data/talk/guillermo-rauch/page-data.json",
-    "revision": "57df6c520d509680c877601ad6eba595"
+    "revision": "41b8df8062018a03e6b74738214820b2"
   },
   {
     "url": "page-data/talk/henry-zhu/page-data.json",
-    "revision": "740733a71bd1cb241ec1553008301d0b"
+    "revision": "b95f85da08b0c1f1b69b378881e8e516"
   },
   {
     "url": "page-data/talk/hidetaka-okamoto/page-data.json",
-    "revision": "ff2e82b151eeb4afd0124063f39b25a0"
+    "revision": "7f399eca257e1b6a7bd6ed44b78a20fe"
   },
   {
     "url": "page-data/talk/irina-shestak/page-data.json",
-    "revision": "edfde8a6cdaedd7e9ba341815a6821e5"
+    "revision": "880d4e9b71d02ac30ed6c615fee6eb02"
   },
   {
     "url": "page-data/talk/jarrod-overson/page-data.json",
-    "revision": "0c2b573a158bf29b670ec5a75a74e89c"
+    "revision": "cf21a5e22aadd2ff23ae2025023ce10a"
   },
   {
     "url": "page-data/talk/jennifer-wong/page-data.json",
-    "revision": "46ded7825235045f118123ab163f5503"
+    "revision": "f8ae3234f0d2c99a194da6edd475f8e2"
   },
   {
     "url": "page-data/talk/jonny-kalambay/page-data.json",
-    "revision": "31d7294bc94fc46c7dbfc1b90f8fddda"
+    "revision": "6721236065a98db8b8212530f17d0095"
   },
   {
     "url": "page-data/talk/jorge-bucaran/page-data.json",
-    "revision": "d8d19c8193e2b05198d823883140e9ea"
+    "revision": "a8405b4ca1c7ee85a4b24e39b3a06c55"
   },
   {
     "url": "page-data/talk/jxck/page-data.json",
-    "revision": "42cbdd2ae5c5b59097b4b211bc86caa6"
+    "revision": "8fb31162d6f8b8735ef0c2005cc83a70"
   },
   {
     "url": "page-data/talk/kitson-kelly/page-data.json",
-    "revision": "0cb852fa875d3b1bc2e8f6b7c0baf118"
+    "revision": "ea270496c66931eb2c8f73fea3fbdb9e"
   },
   {
     "url": "page-data/talk/kohei-kido/page-data.json",
-    "revision": "2e5b981ee61cc6571177e9385b20fd34"
+    "revision": "c56ab095a4fe71f5448b323b4c42bdf3"
   },
   {
     "url": "page-data/talk/lena-morita/page-data.json",
-    "revision": "7531b08f713b18ff6785d16b34f39d9c"
+    "revision": "3246e5800a5672d1a069134f33a88404"
   },
   {
     "url": "page-data/talk/maria-clara/page-data.json",
-    "revision": "709c25821758668628f6f5b7d883c7a2"
+    "revision": "298996c4530c5f1d35be14be43dcaa2c"
   },
   {
     "url": "page-data/talk/mariko-kosaka/page-data.json",
-    "revision": "7da7ab1e660f72aeccd009e449a71ee7"
+    "revision": "ee8421afec14c58fdd64280aa062d5ce"
   },
   {
     "url": "page-data/talk/martin-splitt/page-data.json",
-    "revision": "ad760cc744eb0f29447e51eadcb48526"
+    "revision": "cee5e1eeb8df1c81b071a0d723c48a5a"
   },
   {
     "url": "page-data/talk/masashi-ganeko/page-data.json",
-    "revision": "44e1eb68fda0c4b91ae77ce2f75bab3d"
+    "revision": "65a8f8aae24f1556f8cfc60530ab0f37"
   },
   {
     "url": "page-data/talk/masato-nishihara/page-data.json",
-    "revision": "fd9d112fc7b6850ba750c95f9c9f9b81"
+    "revision": "bca2aac05257978b2712e3aa6573b8a9"
   },
   {
     "url": "page-data/talk/masato-ohba/page-data.json",
-    "revision": "c57bd973debf2b01e9c642aa98d247fe"
+    "revision": "a4ae1698976d0fe6a303b37935dea046"
   },
   {
     "url": "page-data/talk/maxi-ferreira/page-data.json",
-    "revision": "b49bd4ae18796724778a6e5686b90728"
+    "revision": "28a0bf0aa9455abf1946be95aee4773a"
   },
   {
     "url": "page-data/talk/nadieh-bremer/page-data.json",
-    "revision": "51dc621089f93c179298fe8c7575288f"
+    "revision": "f1de3f32e3e02a04ce43ffd10913310d"
   },
   {
     "url": "page-data/talk/nazanin-delam/page-data.json",
-    "revision": "071aeffad0865b1c3d9d6ec023785331"
+    "revision": "e3cb04796a93644bec7247588f1dae1d"
   },
   {
     "url": "page-data/talk/nobuhiko-sawai/page-data.json",
-    "revision": "ae5e3be83d0ed3e55bb07cea2c02d7c8"
+    "revision": "5c12919aba295285b33c050196ca60e0"
   },
   {
     "url": "page-data/talk/okuno-kentaro/page-data.json",
-    "revision": "eb29c868dd6cb6ad76559a9b28659089"
+    "revision": "35a341450b8b390041640e60393965d0"
   },
   {
     "url": "page-data/talk/praveen-yedidi/page-data.json",
-    "revision": "b1e6b2644b367a569bd93b726795f66a"
+    "revision": "580aeae276ad7814d6077bf05e14f5c5"
   },
   {
     "url": "page-data/talk/rowdy-rabouw/page-data.json",
-    "revision": "2e51ca59a34291ee53bf1cf456e4fb98"
+    "revision": "5ea47607d0324f7e161197ba4035d392"
   },
   {
     "url": "page-data/talk/s-greif-r-benitte/page-data.json",
-    "revision": "0084018fbb195444730fdcfd43818b46"
+    "revision": "fb19aff7d9a77c04f1f206a8b2e261b2"
   },
   {
     "url": "page-data/talk/sakakibara/page-data.json",
-    "revision": "4d143ba00ec7b0cd2e889fab3699d5bb"
+    "revision": "8ff8e4f3393a36997adc19c72d9c0cf1"
   },
   {
     "url": "page-data/talk/sam-bellen/page-data.json",
-    "revision": "f907c39322b32cc227234b0a35d3b22c"
+    "revision": "04679e2a8a9876e20c90af19309c8ebf"
   },
   {
     "url": "page-data/talk/samuel-agnew/page-data.json",
-    "revision": "a6fe1c84db000d1b3cdbf45dadb8f09c"
+    "revision": "0771113827e9e8cd33961ff18bad3576"
   },
   {
     "url": "page-data/talk/satoshi-ebihara/page-data.json",
-    "revision": "1812de01dbdbaa8315eaafba1e4ee499"
+    "revision": "8f1423198ac9b394a1ee25bf88942ca1"
   },
   {
     "url": "page-data/talk/shirley-wu/page-data.json",
-    "revision": "f87ec6c8a650467ff753b3ba8e75b806"
+    "revision": "f285c84fdcbb620e325d772426f88400"
   },
   {
     "url": "page-data/talk/sho-miyamoto/page-data.json",
-    "revision": "71bcaf6a0dac7a6d14e0f7067678064d"
+    "revision": "608f0902d9fc4f4e5b22c2e90916a465"
   },
   {
     "url": "page-data/talk/sponsor-recruit/page-data.json",
-    "revision": "7e7fec1e28b83f17d6388e72ad3f9f26"
+    "revision": "4a69287c0f34f02507ebd1ca3d0b4bd5"
   },
   {
     "url": "page-data/talk/sponsor-talk-1/page-data.json",
-    "revision": "848356fa704341c7f49410169625a29f"
+    "revision": "d00028e342db2a5beae9014334230c26"
   },
   {
     "url": "page-data/talk/sponsor-talk-2/page-data.json",
-    "revision": "6df32204359234d5ba72b7663874f6f7"
+    "revision": "6d9990caa7a0291172fd9d3befc4231e"
   },
   {
     "url": "page-data/talk/sponsor-yahoo/page-data.json",
-    "revision": "7c3b20af238044235c434655054202da"
+    "revision": "f79bee011bf0615168fad460c1bec285"
   },
   {
     "url": "page-data/talk/takeshi-kato/page-data.json",
-    "revision": "9c2fc974b8f894ccd51c372b4d96df47"
+    "revision": "f7a19bb736c56a69f6b39b813cdb0c46"
   },
   {
     "url": "page-data/talk/takuto-wada/page-data.json",
-    "revision": "d7793a75ceb78e3b0556de38b3999f59"
+    "revision": "bf696ba0e913b17b477191fb9ea8f30d"
   },
   {
     "url": "page-data/talk/tetsuharu-ohzeki/page-data.json",
-    "revision": "8e9297f51e1783e730896c15ef8b87ba"
+    "revision": "a4f77652303982a1703a7b79d5889e7b"
   },
   {
     "url": "page-data/talk/toru-kobayashi/page-data.json",
-    "revision": "4bc9a3ca28d4aa091c75290d5d4c74d1"
+    "revision": "618ad2a9ccf904af7c38145596ce8c48"
   },
   {
     "url": "page-data/talk/yoshiki-shibukawa/page-data.json",
-    "revision": "f804f9e345460517b836563b71e743d9"
+    "revision": "11005792fa1fdd10bec1021d20e3b3be"
   },
   {
     "url": "page-data/talk/yosuke-furukawa/page-data.json",
-    "revision": "04d0809962274e64b669db2751971f85"
+    "revision": "83d2a72b4f9d6f591f7e9668bb78b86e"
   },
   {
     "url": "page-data/venue/page-data.json",
-    "revision": "fdb999ad23a46b3a9121ef1d330cdb42"
+    "revision": "8a1572d90774ccd813d64ae6d23d5bdc"
   },
   {
     "url": "schedule/index.html",
-    "revision": "a63b6da383e236b54d0e889e074de59b"
+    "revision": "fca425ef86a4f4bd2be2374d4215e35b"
   },
   {
     "url": "sitemap.xml",
-    "revision": "c162e451d1d9707895ac980fa51a1c92"
+    "revision": "e87955155b38a7fcc472f3d68ca2170f"
   },
   {
     "url": "speakers/index.html",
-    "revision": "523f79ecabd19608449d1b0e101d1f3a"
+    "revision": "e33099cef0b810c2d27769a88b3b061c"
   },
   {
     "url": "sponsors/auth0.png",
@@ -703,7 +703,7 @@ self.__precacheManifest = [
   },
   {
     "url": "sponsors/index.html",
-    "revision": "7083f60488c44b8a2dce1892c72074cf"
+    "revision": "b891f7ea2d4c5c5536adaf533480350f"
   },
   {
     "url": "sponsors/itsuki.png",
@@ -2427,302 +2427,302 @@ self.__precacheManifest = [
     "revision": "e8b627f34f39b9cd385530a85b0cc9a0"
   },
   {
-    "url": "styles.dc991f3d413c0e17bb41.css"
+    "url": "styles.6e92cd181f40cbf952aa.css"
   },
   {
-    "url": "styles.dc991f3d413c0e17bb41.css.br",
-    "revision": "6c8a33b79f7a97a7e22317db6fb03cfc"
+    "url": "styles.6e92cd181f40cbf952aa.css.br",
+    "revision": "3789d4e127c2726f58ec7eadb51276c9"
   },
   {
-    "url": "styles.dc991f3d413c0e17bb41.css.gz",
-    "revision": "fc4cb9b24a1988de26e366864c95f7b4"
+    "url": "styles.6e92cd181f40cbf952aa.css.gz",
+    "revision": "40a525e254fa448ed8266e06fe9739b3"
   },
   {
     "url": "talk/andrew-betts/index.html",
-    "revision": "168e43591a7693cf34a25cdfe9406235"
+    "revision": "b075158cb75a5d11971d5550b07d05de"
   },
   {
     "url": "talk/andy-hall/index.html",
-    "revision": "f8f857fcd7ef89e74fc68f4448fd147d"
+    "revision": "db977cec16953c4885fc8e8c4bfaa455"
   },
   {
     "url": "talk/benjamin-gruenbaum/index.html",
-    "revision": "79325d357cc38fa2ed5622fcfe5a83a1"
+    "revision": "f35fd3520fd281df0b74acd47e73b9ac"
   },
   {
     "url": "talk/claudia-hernandez/index.html",
-    "revision": "88a8788d77d868b810551927116d21d0"
+    "revision": "18bdef29646e00ea064531f310dd26ec"
   },
   {
     "url": "talk/day1-break-A-12%3A00/index.html",
-    "revision": "eb043cac320fd494f0166361ff7e4610"
+    "revision": "1935bdde1c578b970f3d810d4e73de89"
   },
   {
     "url": "talk/day1-break-A-13%3A00/index.html",
-    "revision": "e474971f8c151c5b708e84cee8b16fb5"
+    "revision": "e919f61af6f0a7cc73e36a59293c468c"
   },
   {
     "url": "talk/day1-break-A-14%3A00/index.html",
-    "revision": "b59f1fcb1126e88683fe7d7db1f9db19"
+    "revision": "83a09b47a6f9034bcdb5764976a9a38f"
   },
   {
     "url": "talk/day1-break-A-15%3A15/index.html",
-    "revision": "5344aa5aa3e968609dad9c7d277291e4"
+    "revision": "4628a5467e669964e6a02d73429a929c"
   },
   {
     "url": "talk/day1-break-A-16%3A30/index.html",
-    "revision": "98c34ae6de9e49f8323a4d0b2c265822"
+    "revision": "2c3b12e08ede747f1c1f4fc419bd1bfc"
   },
   {
     "url": "talk/day1-break-A-17%3A45/index.html",
-    "revision": "1ae3c9670703a29d42a6276776800d40"
+    "revision": "05ced30ab228382b7eef898f9e92e9ba"
   },
   {
     "url": "talk/day1-break-A-19%3A35/index.html",
-    "revision": "c2c50a581bdd3cc7bd51ad9ef1453d85"
+    "revision": "797116ebc36e61e51813a63def59961d"
   },
   {
     "url": "talk/day2-break-A-10%3A00/index.html",
-    "revision": "993b41972bee46d3f0478f73fa9a7fde"
+    "revision": "7fc402ef4533731d70addf2a92c8bb1e"
   },
   {
     "url": "talk/day2-break-A-12%3A00/index.html",
-    "revision": "fcbfe21330ad5663484d6539c27cfa10"
+    "revision": "3cf34953b2b4f7ed82b7c2d410a9d0b4"
   },
   {
     "url": "talk/day2-break-A-14%3A00/index.html",
-    "revision": "f6a776ff216da1f2ded09d5968afc7e3"
+    "revision": "de1eeecc183e10849b76090ca632e5db"
   },
   {
     "url": "talk/day2-break-A-15%3A15/index.html",
-    "revision": "ff1ec2c81ec8420e885129cfd8f5400d"
+    "revision": "250331cbdeda3c5cb9a2fa2d6162e107"
   },
   {
     "url": "talk/day2-break-A-16%3A30/index.html",
-    "revision": "179524e89e240010ad882bb5850d69ac"
+    "revision": "ca24eef055046d236f5174e192c61f71"
   },
   {
     "url": "talk/day2-break-A-17%3A45/index.html",
-    "revision": "a31f1c1f8d946be2024549018cf7ed62"
+    "revision": "bb2111abf4381bd10563210d94164b2a"
   },
   {
     "url": "talk/day2-break-A-19%3A00/index.html",
-    "revision": "0f9a9da41fadf972f89a68498feda43d"
+    "revision": "32db580bd83e98f9f44b01113c09ed02"
   },
   {
     "url": "talk/dominic-tarr/index.html",
-    "revision": "009250bf6fff7a714f49e649cf1b6099"
+    "revision": "f5e03106fa5b1d33c1ac5d9a97f536e7"
   },
   {
     "url": "talk/dynamis/index.html",
-    "revision": "57cd88eb1f3a85274adbd64ddd6b3ba0"
+    "revision": "572181cbd7a70f5eac11bdd0bdfea316"
   },
   {
     "url": "talk/eiji-kitamura/index.html",
-    "revision": "87212d827db143c0f604a5b4418e193d"
+    "revision": "6a6093eb5f67e00e78787ff451c020f4"
   },
   {
     "url": "talk/fred-schott/index.html",
-    "revision": "628e764df45757abbbe799163d4eae19"
+    "revision": "b63b7385ce13f6e438493ebe5eb5b023"
   },
   {
     "url": "talk/fuji-goro/index.html",
-    "revision": "65c9610a94dcd0b278e0e91d411d46eb"
+    "revision": "52b61dc5eb8d07a95a38d0344ccc7fff"
   },
   {
     "url": "talk/ginpei-takanashi/index.html",
-    "revision": "fedb5b5d7303446673829743af673602"
+    "revision": "c2251b248bde3a7369d92ff228ba2ba0"
   },
   {
     "url": "talk/guillermo-rauch/index.html",
-    "revision": "ea323fefb555dba538faa44ce0786485"
+    "revision": "be8b673263043adfaef7e52b4721d7f9"
   },
   {
     "url": "talk/henry-zhu/index.html",
-    "revision": "e1271065c8d7b233a464363fc9b5fb16"
+    "revision": "64a0468a2e4f298051726e680da523ad"
   },
   {
     "url": "talk/hidetaka-okamoto/index.html",
-    "revision": "6e14544ccb474b55a8fa89be5d974083"
+    "revision": "d3ff71bb1b9d9b59ad658c4eb8bd6895"
   },
   {
     "url": "talk/irina-shestak/index.html",
-    "revision": "cfd3278bebc69c0d4b5b1599f3c09777"
+    "revision": "068043d52eb5f1d3cbfd3fd0bb56b223"
   },
   {
     "url": "talk/jarrod-overson/index.html",
-    "revision": "63ff812de18f95d6e6d2233220e69f4c"
+    "revision": "05b55ff7bd63c1e89a88f27a458fb841"
   },
   {
     "url": "talk/jennifer-wong/index.html",
-    "revision": "962c86fc0ecd93731af824ac27d9e193"
+    "revision": "374a816895073524e192facf16aee600"
   },
   {
     "url": "talk/jonny-kalambay/index.html",
-    "revision": "2cbc3eda1364cd0df2afe724a7425954"
+    "revision": "eaa6ecddf44f7713f7be41cd2a5fc306"
   },
   {
     "url": "talk/jorge-bucaran/index.html",
-    "revision": "7dd287403e66e3fc4ec8ec3daf71177e"
+    "revision": "36944b47d365e893c61061f255a6ffe6"
   },
   {
     "url": "talk/jxck/index.html",
-    "revision": "143fa0334956ee45d8ec27d15d605508"
+    "revision": "6565f6e22349639bd17725befb8749bb"
   },
   {
     "url": "talk/kitson-kelly/index.html",
-    "revision": "9d5459796b419bb74f6bee07f60294f8"
+    "revision": "21e382c26e1358bde89b18d250f01af1"
   },
   {
     "url": "talk/kohei-kido/index.html",
-    "revision": "0a3fabf23163ffac616bf425ad1febab"
+    "revision": "e3a5d34668c3f151a75dfae38cbf6067"
   },
   {
     "url": "talk/lena-morita/index.html",
-    "revision": "080a61ee2d507355a7a41fd31bfab0fb"
+    "revision": "9b655f097f5ba65c163e4e41b4b028c2"
   },
   {
     "url": "talk/maria-clara/index.html",
-    "revision": "dca89d1907adcc65c12077530aae37e2"
+    "revision": "0c64894a4b75b9934af374ac9a7b61dd"
   },
   {
     "url": "talk/mariko-kosaka/index.html",
-    "revision": "36bfd7d3004930247859cbbfa219ce78"
+    "revision": "60edccff60301a8b4d4cec6ec1f2d2c0"
   },
   {
     "url": "talk/martin-splitt/index.html",
-    "revision": "add65480cbc1f2a8209658b2f70d7209"
+    "revision": "a01bb3e143746d5a2f910a775fe1e7ca"
   },
   {
     "url": "talk/masashi-ganeko/index.html",
-    "revision": "51c637d87fb051210e20973a8e416885"
+    "revision": "cef7ef0e7a44a7f1af82c98e50233d1a"
   },
   {
     "url": "talk/masato-nishihara/index.html",
-    "revision": "71eedf77a37394b310596f39bec5c13e"
+    "revision": "6c3fa92d588a13f742e04331b9e8225a"
   },
   {
     "url": "talk/masato-ohba/index.html",
-    "revision": "febdebf01cad2910a92448725049960f"
+    "revision": "dc23ddbab014bda039e72b1dba26420e"
   },
   {
     "url": "talk/maxi-ferreira/index.html",
-    "revision": "7201684f31fddfbc7158ebfb24827605"
+    "revision": "a28f42794975bdd8e03cc1e99db232d7"
   },
   {
     "url": "talk/nadieh-bremer/index.html",
-    "revision": "2a592d16f2f3abb93a7f4131c9652645"
+    "revision": "fc88f29357aa65f0cba8d63b9b033995"
   },
   {
     "url": "talk/nazanin-delam/index.html",
-    "revision": "ec59e3fcf72c8f6a752f1edccf8878d1"
+    "revision": "d95615648320ef376a00ca64593d6983"
   },
   {
     "url": "talk/nobuhiko-sawai/index.html",
-    "revision": "ed2d480ed5d2df4b2ab9db5ffdb483b0"
+    "revision": "34b3b93eb3c7df82ff5dce4ae398e68b"
   },
   {
     "url": "talk/okuno-kentaro/index.html",
-    "revision": "2497b16a0d058bbac8b0ea58712b52db"
+    "revision": "8eea4c52eec8e927cf24bd0d59aceb47"
   },
   {
     "url": "talk/praveen-yedidi/index.html",
-    "revision": "e7572bfcfd7757879e02a429bdfa6efe"
+    "revision": "89eebfe190ebf4075450108cd5798fb1"
   },
   {
     "url": "talk/rowdy-rabouw/index.html",
-    "revision": "b01ce10f42eb7341ed8021ff1901dee0"
+    "revision": "0dee054fa4171d5c44ad6d6cb33b4999"
   },
   {
     "url": "talk/s-greif-r-benitte/index.html",
-    "revision": "7a58bb6b3f43d6e56591598d14f49a32"
+    "revision": "a436994772fbb7dce4d7da0df076ebad"
   },
   {
     "url": "talk/sakakibara/index.html",
-    "revision": "204eb242c1ee4a55c0667f6d5f1cf9cc"
+    "revision": "e63f8fc96df75a2f8f0c6429d1a1ad46"
   },
   {
     "url": "talk/sam-bellen/index.html",
-    "revision": "72a641ccd5e8867e0e73808adf0ea3e6"
+    "revision": "e583216efb24db460dd42d9f73b65346"
   },
   {
     "url": "talk/samuel-agnew/index.html",
-    "revision": "ed27a5b682ce1e76b58bc16201714de7"
+    "revision": "95e7c0c80a3bb156c5b0313733a79fed"
   },
   {
     "url": "talk/satoshi-ebihara/index.html",
-    "revision": "943b0c3290f2b07c58d761aac9276f6a"
+    "revision": "b41b31ece4b4470013a136e24eb9860a"
   },
   {
     "url": "talk/shirley-wu/index.html",
-    "revision": "bdd760dc9ca73905cd139cd157c5b45b"
+    "revision": "06f7d2ccebb8c3f0c90d6fcc6b24b0ac"
   },
   {
     "url": "talk/sho-miyamoto/index.html",
-    "revision": "1aca48b09fe1d0d1cfda32af34be0dcb"
+    "revision": "77b465fd7476df13a811a80559ac15fb"
   },
   {
     "url": "talk/sponsor-recruit/index.html",
-    "revision": "dbdc0eb8b40692f07f98559ea62802de"
+    "revision": "820946d8eaf3effb0c1d281384689314"
   },
   {
     "url": "talk/sponsor-talk-1/index.html",
-    "revision": "60d8b75435e58e6ef65514996dcdb3c3"
+    "revision": "314a2a623cb3b50fcc08802d36beeb27"
   },
   {
     "url": "talk/sponsor-talk-2/index.html",
-    "revision": "760d1ff191dd123295ba283294950295"
+    "revision": "1f8d5773761237e66bcc0232d698233b"
   },
   {
     "url": "talk/sponsor-yahoo/index.html",
-    "revision": "9ba84ff713236a17dfb959b62f120112"
+    "revision": "4562bd8bf925769a9c6c04bd970b67d8"
   },
   {
     "url": "talk/takeshi-kato/index.html",
-    "revision": "0dffd92056bcf81d488682b65a122151"
+    "revision": "3efb65f73966873ef0f9e0875bd75f45"
   },
   {
     "url": "talk/takuto-wada/index.html",
-    "revision": "75ee26fc80d63da8159b4d81edcb35e7"
+    "revision": "b3b5fd8945ae57f7d287868f029b2760"
   },
   {
     "url": "talk/tetsuharu-ohzeki/index.html",
-    "revision": "e89e5819df2d374a6c6459565ab8e961"
+    "revision": "417759758e1f7e1461d6b211481e6407"
   },
   {
     "url": "talk/toru-kobayashi/index.html",
-    "revision": "72666456bbc37b92b6205ee4dd133d69"
+    "revision": "f5da577f837b529ca658c872505304c0"
   },
   {
     "url": "talk/yoshiki-shibukawa/index.html",
-    "revision": "116c5665a869a9a392354c52f5b6dd57"
+    "revision": "facbf00dd86f078c29d1ada85e8a1a60"
   },
   {
     "url": "talk/yosuke-furukawa/index.html",
-    "revision": "9377d58e1190923cc25aff9f1ba0d64e"
+    "revision": "29f94e78984519ae1c02de3c06a2eaec"
   },
   {
     "url": "venue/index.html",
-    "revision": "14db3b3f0379206d21f4b500ff36af01"
+    "revision": "c4617c8fafea20f88428c0c06ab1bf1c"
   },
   {
-    "url": "webpack-runtime-4cb22f9ae602f530aa7b.js"
+    "url": "webpack-runtime-765b173b3401afebf5ac.js"
   },
   {
-    "url": "webpack-runtime-4cb22f9ae602f530aa7b.js.br",
-    "revision": "1354aa60d5de96c2e0a94da0944de834"
+    "url": "webpack-runtime-765b173b3401afebf5ac.js.br",
+    "revision": "8ab4d8c2c239a667abfa5d5c82cff10d"
   },
   {
-    "url": "webpack-runtime-4cb22f9ae602f530aa7b.js.gz",
-    "revision": "262836676fd12ec12ef4992bda269818"
+    "url": "webpack-runtime-765b173b3401afebf5ac.js.gz",
+    "revision": "06b2d94a2377308b4033e07d02ae57e6"
   },
   {
-    "url": "webpack-runtime-4cb22f9ae602f530aa7b.js.map",
-    "revision": "97294b124000c80c95ea073b92d7f029"
+    "url": "webpack-runtime-765b173b3401afebf5ac.js.map",
+    "revision": "12e116d6804e0fa82ff46b32e79afb3a"
   },
   {
     "url": "webpack.stats.json",
-    "revision": "0d8d3748e42c8a43c43936e7cc51acae"
+    "revision": "ec2009d013ba4965e09e4c9781d987d8"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
