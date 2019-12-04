@@ -70,5 +70,7 @@ export const en = {
 ・Wheelchair Rental (Please ask at Information Desk)
 ・Admission is free for holders of Disability Certificate and their escorts (up to one per certificate holder). If you are living overseas, please bring relevant proof of status
     `,
+    openMobileMenu: "Open Navigation Menu",
+    closeMobileMenu: "Close Navigation Menu",
   },
 }

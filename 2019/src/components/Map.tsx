@@ -4,6 +4,7 @@ import styled from "styled-components"
 type Props = {
   width: number
   height: number
+  title?: string
 }
 
 const Iframe = styled.iframe`
@@ -12,7 +13,7 @@ const Iframe = styled.iframe`
 `
 
 export function Map(props: Props) {
-  const { width, height } = props
+  const { width, height, title } = props
   return (
     <Iframe
       width={width}
@@ -20,6 +21,7 @@ export function Map(props: Props) {
       src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ6Xx_rh-MGGAR3sDINOeBYw8&key=AIzaSyAhtEqpuBA3ChFU30d4A1bSODO-anJ54Vo"
       frameBorder="0"
       allowFullScreen
+      title={title}
     />
   )
 }

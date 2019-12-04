@@ -56,14 +56,14 @@ const Title = styled.h2`
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.text};
-  font-size: 20px;
+  font-size: 2rem;
   overflow-wrap: break-word;
 `
 const Name = styled.p`
   margin-bottom: 0;
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.text};
-  font-size: 16px;
+  font-size: 1.6rem;
 `
 
 export function Speaker(props: Props) {

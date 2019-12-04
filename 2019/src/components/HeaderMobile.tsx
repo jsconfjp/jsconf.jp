@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react"
+import React, { useState, useCallback, KeyboardEvent } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
@@ -38,7 +38,7 @@ const LogoLink = styled(Link)`
   margin-right: 20px;
   line-height: 0;
 `
-const MenuBox = styled.div`
+const MenuBox = styled.nav`
   width: 100%;
   flex: 1;
   display: flex;
@@ -60,7 +60,7 @@ const MenuItem = styled(Link)`
   color: ${({ theme }) => theme.colors.text};
   font-family: ${({ theme }) => theme.fonts.header};
   font-weight: bold;
-  font-size: 20px;
+  font-size: 2rem;
   text-decoration: none;
   text-transform: uppercase;
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
@@ -90,12 +90,17 @@ export function InnerHeaderMobile(props: Props) {
     setMenuOpen(false)
     onChangeLanguage(language)
   }
+  const handleKeydown = (event: KeyboardEvent<HTMLOrSVGElement>) => {
+    if (event.key !== "Enter" && event.key !== " ") return
+    event.preventDefault()
+    toggleMenu()
+  }
   return (
     <Box>
       <InnerBox>
         <Brand>
           <LogoLink to="/">
-            <Logo size={46} />
+            <Logo alt="JS Conf JP" size={46} />
           </LogoLink>
         </Brand>
 
@@ -110,10 +115,16 @@ export function InnerHeaderMobile(props: Props) {
         </TicketBox>
 
         <svg
+          aria-controls="drawerMenu"
+          aria-expanded={menuOpen}
+          tabIndex={0}
+          role="button"
           width={48}
           height={48}
           viewBox="0,0,100,100"
           onTouchEnd={toggleMenu}
+          onKeyDown={handleKeydown}
+          title={menuOpen ? t("closeMobileMenu") : t("openMobileMenu")}
         >
           {menuOpen ? (
             <Path
@@ -134,7 +145,7 @@ export function InnerHeaderMobile(props: Props) {
         </svg>
       </InnerBox>
       {menuOpen && (
-        <MenuBox>
+        <MenuBox id="drawerMenu" aria-expanded={menuOpen}>
           <LanguageSwitchBox>
             <LanguageSwitch
               languages={{

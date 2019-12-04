@@ -201,7 +201,7 @@ export default function IndexPage() {
           <Card>
             <VenueBox>
               <SubTitle>{t("venue")}</SubTitle>
-              <Map width={940} height={500} />
+              <Map width={940} height={500} title={t("venue")} />
               <Address summary />
               <Centerize>
                 <LinkButton color="primary" to="/venue/">

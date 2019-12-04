@@ -52,7 +52,7 @@ const MenuItem = styled(Link)`
   color: ${({ theme }) => theme.colors.text};
   font-family: ${({ theme }) => theme.fonts.header};
   font-weight: bold;
-  font-size: 20px;
+  font-size: 2rem;
   text-decoration: none;
   text-transform: uppercase;
 
@@ -77,7 +77,7 @@ export function Header(props: Props) {
         <Brand>
           <>
             <LogoLink to="/">
-              <Logo size={46} />
+              <Logo size={46} alt="JSConf JP" />
             </LogoLink>
             <LanguageSwitch
               languages={{

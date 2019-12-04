@@ -36,7 +36,7 @@ const Text = styled.span`
   flex: 1;
   margin-left: 10px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 2rem;
   font-family: ${({ theme }) => theme.fonts.text};
 `
 

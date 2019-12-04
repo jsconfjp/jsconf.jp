@@ -33,7 +33,7 @@ const SpeakerBox = styled.div`
 `
 const Description = styled(Markdown)`
   font-family: ${({ theme }) => theme.fonts.text};
-  font-size: 18px;
+  font-size: 1.8rem;
 `
 const Biography = styled(Description)`
   flex: 1;
@@ -65,7 +65,7 @@ const TalkBox = styled.div`
 const TalkTitle = styled(SubTitle)`
   font-family: ${({ theme }) => theme.fonts.header};
   margin-bottom: 0.5em;
-  font-size: 24px;
+  font-size: 2.4rem;
   text-align: left;
 `
 

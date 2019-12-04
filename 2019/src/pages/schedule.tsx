@@ -97,7 +97,7 @@ const RoomLegendBox = styled.div`
 const Text = styled.span`
   color: ${({ theme }) => theme.colors.text};
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-family: ${({ theme }) => theme.fonts.text};
 `
 
