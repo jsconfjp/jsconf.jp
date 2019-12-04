@@ -124,8 +124,8 @@ export function InnerHeaderMobile(props: Props) {
           viewBox="0,0,100,100"
           onTouchEnd={toggleMenu}
           onKeyDown={handleKeydown}
-          title={menuOpen ? t("closeMobileMenu") : t("openMobileMenu")}
         >
+          <title>{menuOpen ? t("closeMobileMenu") : t("openMobileMenu")}</title>
           {menuOpen ? (
             <Path
               d={[
