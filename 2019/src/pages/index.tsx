@@ -240,9 +240,11 @@ export default function IndexPage() {
           <Centerize>
             <SubTitle>{t("team")}</SubTitle>
             <MembersBox>
-              {allMembersYaml.edges.map(({ node: member }) => (
+              {allMembersYaml.edges.map(({ node: member }: { node: any }) => (
                 <div>
                   <a href={member.url}>
+                    {/*
+                    // @ts-ignore Property 'loading' does not exist */}
                     <img width="100%" loading="lazy" src={member.avatar} />
                     <span>{member.name}</span>
                   </a>
