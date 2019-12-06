@@ -46,15 +46,16 @@ const VenueBox = styled.div`
 const MembersBox = styled.div`
   display: grid;
   margin-bottom: 1em;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, minmax(1em, max-content));
   grid-column-gap: 60px;
   grid-row-gap: 60px;
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.text};
   font-size: 1.6rem;
+  overflow-wrap: break-word;
 
   ${({ theme }) => theme.breakpoints.mobile} {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(1em, max-content));
     grid-column-gap: 20px;
     grid-row-gap: 20px;
   }
@@ -242,7 +243,7 @@ export default function IndexPage() {
             <MembersBox>
               {allMembersYaml.edges.map(({ node: member }: { node: any }) => (
                 <div>
-                  <a href={member.url}>
+                  <a href={member.url} target="_blank" rel="noopener">
                     {/*
                     // @ts-ignore Property 'loading' does not exist */}
                     <img width="100%" loading="lazy" src={member.avatar} />
