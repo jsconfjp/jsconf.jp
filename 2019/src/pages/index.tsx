@@ -46,7 +46,7 @@ const VenueBox = styled.div`
 const MembersBox = styled.div`
   display: grid;
   margin-bottom: 1em;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 60px;
   grid-row-gap: 60px;
   text-align: center;
