@@ -16,6 +16,8 @@ export const en = {
     speakers: "Speakers",
     timetable: "Timetable",
     aboutUs: "About us",
+    team: "Team",
+    joinUs: "Join us",
     guestSpeakers: "Guest speakers",
     goToGuests: "CHECK ALL SPEAKERS",
     schedule: "schedule",

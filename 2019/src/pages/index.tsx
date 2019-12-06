@@ -43,6 +43,22 @@ const VenueBox = styled.div`
   max-width: ${({ theme }) => theme.innerWidth};
   margin: 0 auto;
 `
+const MembersBox = styled.div`
+  display: grid;
+  margin-bottom: 1em;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 60px;
+  grid-row-gap: 60px;
+  text-align: center;
+  font-family: ${({ theme }) => theme.fonts.text};
+  font-size: 1.6rem;
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+`
 const SchedulesBox = styled.div`
   display: flex;
   justify-content: space-between;
@@ -64,6 +80,7 @@ export default function IndexPage() {
   const {
     allSpeakersYaml,
     allSponsorsYaml,
+    allMembersYaml,
     allFile,
     allTalksYaml,
   } = useStaticQuery(graphql`
@@ -100,6 +117,15 @@ export default function IndexPage() {
             spokenLanguage
             slideLanguage
             speakerIDs
+          }
+        }
+      }
+      allMembersYaml {
+        edges {
+          node {
+            name
+            url
+            avatar
           }
         }
       }
@@ -210,6 +236,25 @@ export default function IndexPage() {
               </Centerize>
             </VenueBox>
           </Card>
+
+          <Centerize>
+            <SubTitle>{t("team")}</SubTitle>
+            <MembersBox>
+              {allMembersYaml.edges.map(({ node: member }) => (
+                <div>
+                  <a href={member.url}>
+                    <img width="100%" loading="lazy" src={member.avatar} />
+                    <span>{member.name}</span>
+                  </a>
+                </div>
+              ))}
+            </MembersBox>
+            <Centerize>
+              <LinkButton color="secondary" to="https://nodejs.jp/">
+                {t("joinUs")}
+              </LinkButton>
+            </Centerize>
+          </Centerize>
         </Container>
 
         <SponsorBox>
