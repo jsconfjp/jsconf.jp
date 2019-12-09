@@ -43,10 +43,10 @@ const VenueBox = styled.div`
   max-width: ${({ theme }) => theme.innerWidth};
   margin: 0 auto;
 `
-const MembersBox = styled.div`
+const OrganizersBox = styled.div`
   display: grid;
   margin-bottom: 1em;
-  grid-template-columns: repeat(6, minmax(1em, max-content));
+  grid-template-columns: repeat(auto-fit, minmax(1em, max-content));
   grid-column-gap: 60px;
   grid-row-gap: 60px;
   text-align: center;
@@ -59,6 +59,9 @@ const MembersBox = styled.div`
     grid-column-gap: 20px;
     grid-row-gap: 20px;
   }
+`
+const MembersBox = styled(OrganizersBox)`
+  grid-template-columns: repeat(6, minmax(1em, max-content));
 `
 const SchedulesBox = styled.div`
   display: flex;
@@ -127,6 +130,7 @@ export default function IndexPage() {
             name
             url
             avatar
+            isJNA
           }
         }
       }
@@ -153,6 +157,10 @@ export default function IndexPage() {
   const avatars = allFile.nodes
     .filter((avatar: any) => avatar.childImageSharp)
     .map((avatar: any) => avatar.childImageSharp.fluid)
+  const jnaMembers = allMembersYaml.edges.filter(({ node }: any) => node.isJNA)
+  const notJnaMembers = allMembersYaml.edges.filter(
+    ({ node }: any) => !node.isJNA,
+  )
   const dateTimeFormatter = new Intl.DateTimeFormat(i18n.language, {
     // @ts-ignore dateStyle' does not exist in type 'DateTimeFormatOptions'
     dateStyle: "medium",
@@ -239,9 +247,22 @@ export default function IndexPage() {
           </Card>
 
           <Centerize>
-            <SubTitle>{t("team")}</SubTitle>
+            <SubTitle>{t("organizingTeam")}</SubTitle>
+            <OrganizersBox>
+              {jnaMembers.map(({ node: member }: { node: any }) => (
+                <div>
+                  <a href={member.url} target="_blank" rel="noopener">
+                    {/*
+                    // @ts-ignore Property 'loading' does not exist */}
+                    <img width="100%" loading="lazy" src={member.avatar} />
+                    <span>{member.name}</span>
+                  </a>
+                </div>
+              ))}
+            </OrganizersBox>
+            <SubTitle>{t("volunteerTeam")}</SubTitle>
             <MembersBox>
-              {allMembersYaml.edges.map(({ node: member }: { node: any }) => (
+              {notJnaMembers.map(({ node: member }: { node: any }) => (
                 <div>
                   <a href={member.url} target="_blank" rel="noopener">
                     {/*

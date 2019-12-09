@@ -1,6 +1,7 @@
 - avatar: https://github.com/yosuke-furukawa.png
   name: yosuke_furukawa
   url: https://twitter.com/yosuke_furukawa
+  isJNA: true
 - avatar: https://github.com/watilde.png
   name: watilde
   url: https://twitter.com/watilde
@@ -46,6 +47,11 @@
 - avatar: https://github.com/kysnm.png
   name: kysnm
   url: https://github.com/kysnm
+  isJNA: true
 - avatar: https://avatars1.githubusercontent.com/u/3448502
   name: shimataro
   url: https://shimataro.me/
+- avatar: https://ca.slack-edge.com/T03K7C2MQ-U03KAP05J-5789cd061952-512
+  name: Vanx
+  url: https://twitter.com/vanx2
+  isJNA: true
