@@ -43,6 +43,26 @@ const VenueBox = styled.div`
   max-width: ${({ theme }) => theme.innerWidth};
   margin: 0 auto;
 `
+const OrganizersBox = styled.div`
+  display: grid;
+  margin-bottom: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(1em, max-content));
+  grid-column-gap: 60px;
+  grid-row-gap: 60px;
+  text-align: center;
+  font-family: ${({ theme }) => theme.fonts.text};
+  font-size: 1.6rem;
+  overflow-wrap: break-word;
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    grid-template-columns: repeat(3, minmax(1em, max-content));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+`
+const MembersBox = styled(OrganizersBox)`
+  grid-template-columns: repeat(6, minmax(1em, max-content));
+`
 const SchedulesBox = styled.div`
   display: flex;
   justify-content: space-between;
@@ -64,6 +84,7 @@ export default function IndexPage() {
   const {
     allSpeakersYaml,
     allSponsorsYaml,
+    allMembersYaml,
     allFile,
     allTalksYaml,
   } = useStaticQuery(graphql`
@@ -103,6 +124,16 @@ export default function IndexPage() {
           }
         }
       }
+      allMembersYaml {
+        edges {
+          node {
+            name
+            url
+            avatar
+            isJNA
+          }
+        }
+      }
       allFile(filter: { relativePath: { regex: "/speakers/" } }) {
         nodes {
           childImageSharp {
@@ -126,6 +157,10 @@ export default function IndexPage() {
   const avatars = allFile.nodes
     .filter((avatar: any) => avatar.childImageSharp)
     .map((avatar: any) => avatar.childImageSharp.fluid)
+  const jnaMembers = allMembersYaml.edges.filter(({ node }: any) => node.isJNA)
+  const notJnaMembers = allMembersYaml.edges.filter(
+    ({ node }: any) => !node.isJNA,
+  )
   const dateTimeFormatter = new Intl.DateTimeFormat(i18n.language, {
     // @ts-ignore dateStyle' does not exist in type 'DateTimeFormatOptions'
     dateStyle: "medium",
@@ -210,6 +245,40 @@ export default function IndexPage() {
               </Centerize>
             </VenueBox>
           </Card>
+
+          <Centerize>
+            <SubTitle>{t("organizingTeam")}</SubTitle>
+            <OrganizersBox>
+              {jnaMembers.map(({ node: member }: { node: any }) => (
+                <div>
+                  <a href={member.url} target="_blank" rel="noopener">
+                    {/*
+                    // @ts-ignore Property 'loading' does not exist */}
+                    <img width="100%" loading="lazy" src={member.avatar} />
+                    <span>{member.name}</span>
+                  </a>
+                </div>
+              ))}
+            </OrganizersBox>
+            <SubTitle>{t("volunteerTeam")}</SubTitle>
+            <MembersBox>
+              {notJnaMembers.map(({ node: member }: { node: any }) => (
+                <div>
+                  <a href={member.url} target="_blank" rel="noopener">
+                    {/*
+                    // @ts-ignore Property 'loading' does not exist */}
+                    <img width="100%" loading="lazy" src={member.avatar} />
+                    <span>{member.name}</span>
+                  </a>
+                </div>
+              ))}
+            </MembersBox>
+            <Centerize>
+              <LinkButton color="secondary" to="https://nodejs.jp/">
+                {t("joinUs")}
+              </LinkButton>
+            </Centerize>
+          </Centerize>
         </Container>
 
         <SponsorBox>
