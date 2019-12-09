@@ -74,5 +74,7 @@ export const en = {
     `,
     openMobileMenu: "Open Navigation Menu",
     closeMobileMenu: "Close Navigation Menu",
+    "jna-address":
+      "〒210-0024 27-7-903 Nisshincho Kawasaki-ku Kawasaki-shi Kanagawa",
   },
 }

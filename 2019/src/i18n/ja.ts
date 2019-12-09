@@ -55,5 +55,6 @@ export const ja: {
 `,
     openMobileMenu: "ナビゲーションを開く",
     closeMobileMenu: "ナビゲーションを閉じる",
+    "jna-address": "〒210-0024 神奈川県川崎市川崎区日進町27-7-903",
   },
 }

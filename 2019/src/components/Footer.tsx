@@ -65,6 +65,7 @@ export function Footer(_props: Props) {
         </Link>
       </LinksBox>
       <small>&copy; 2019-{new Date().getFullYear()} JSConf JP</small>
+      <small>Company Address: {t("jna-address")}</small>
     </Box>
   )
 }
