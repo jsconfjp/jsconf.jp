@@ -69,6 +69,6 @@
     "pretty-quick": "1.11.1",
     "ts-node": "8.5.4",
     "typescript": "3.5.3",
-    "xlsx": "0.15.3"
+    "xlsx": "0.15.4"
   }
 }
