@@ -40,7 +40,7 @@
     "gatsby-transformer-yaml": "2.2.1",
     "i18next": "17.0.6",
     "i18next-browser-languagedetector": "3.0.1",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-headroom": "3.0.0",
