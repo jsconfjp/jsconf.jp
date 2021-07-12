@@ -11,7 +11,6 @@ import { Title } from "../components/Title"
 import { SubTitle as _SubTitle } from "../components/SubTitle"
 import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
-import { LinkButton } from "../components/LinkButton"
 import { RoomLegend } from "../components/RoomLegend"
 import { TalkType, SpeakerType } from "../components/Speaker"
 import { generateTimetable } from "../util/generateTimetable"
@@ -23,7 +22,7 @@ const Grid = styled.div<{ startsAt: Date; endsAt: Date }>`
   display: grid;
   grid-column-gap: 1em;
   grid-template-columns: ${rooms
-    .concat("D" as Rooms)
+    .concat("C" as Rooms)
     .map(r => `[${r}]`)
     .join(" 1fr ")};
   grid-template-rows: ${({ startsAt, endsAt }) =>
@@ -46,7 +45,7 @@ const Area = styled(_Link)<{
   padding: 1em;
   text-decoration: none;
   position: relative;
-  grid-column: ${({ track, isBreak }) => (isBreak ? "A / D" : track)};
+  grid-column: ${({ track, isBreak }) => (isBreak ? "A / C" : track)};
   grid-row: ${({ startsAt, endsAt }) =>
     `t-${escapeTime(startsAt)} / t-${escapeTime(endsAt)}`};
   background-color: ${({ track, isBreak, theme }) =>
@@ -76,15 +75,6 @@ const Area = styled(_Link)<{
   }
 `
 
-const DaysButtonBox = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-
-  ${({ theme }) => theme.breakpoints.mobile} {
-    flex-direction: column;
-  }
-`
 const SubTitle = styled(_SubTitle)`
   text-align: left;
   margin-top: 20px;
@@ -165,14 +155,6 @@ export default function SchedulePage() {
       <ResponsiveBox>
         <Breadcrumb path={[t("schedule")]} />
         <Title>{t("schedule")}</Title>
-        <DaysButtonBox>
-          <LinkButton color="secondary" size="large" to="/schedule/#day1">
-            {t("day1")} ({dateTimeFormatter.format(times.day1.startsAt)})
-          </LinkButton>
-          <LinkButton color="secondary" size="large" to="/schedule/#day2">
-            {t("day2")} ({dateTimeFormatter.format(times.day2.startsAt)})
-          </LinkButton>
-        </DaysButtonBox>
 
         {days.map(day => {
           const { startsAt, endsAt } = times[day]
@@ -182,7 +164,7 @@ export default function SchedulePage() {
           return (
             <React.Fragment key={day}>
               <SubTitle id={day}>
-                {t(day)} ({dateTimeFormatter.format(times[day].startsAt)})
+                {dateTimeFormatter.format(times[day].startsAt)}
               </SubTitle>
               <RoomLegendBox>
                 <RoomLegend />

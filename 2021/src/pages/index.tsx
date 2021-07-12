@@ -65,7 +65,7 @@ const MembersBox = styled(OrganizersBox)`
 `
 const SchedulesBox = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: calc(100% - 3em);
   max-width: 910px;
 
@@ -197,11 +197,8 @@ export default function IndexPage() {
           <Centerize>
             <SubTitle>{t("schedule")}</SubTitle>
             <SchedulesBox>
-              <LinkButton color="secondary" size="large" to="/schedule/#day1">
+              <LinkButton color="secondary" size="large" to="/schedule">
                 {t("day1")} ({dateTimeFormatter.format(times.day1.startsAt)})
-              </LinkButton>
-              <LinkButton color="secondary" size="large" to="/schedule/#day2">
-                {t("day2")} ({dateTimeFormatter.format(times.day2.startsAt)})
               </LinkButton>
             </SchedulesBox>
           </Centerize>
