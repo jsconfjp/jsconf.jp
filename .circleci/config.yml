@@ -2,37 +2,13 @@ workflows:
   version: 2
   test_deploy:
     jobs:
-      - 2019_test
       - deploy:
-          requires:
-            - 2019_test
           filters:
             branches:
               only:
                 - master
 version: 2
 jobs:
-  2019_test:
-    docker:
-      - image: circleci/node:lts-browsers
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - run:
-          name: Install NotoSansCJK JP
-          command: |
-            mkdir /tmp/fonts
-            cd /tmp/fonts
-            wget https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip
-            unzip NotoSansCJKjp-hinted.zip
-            mkdir -p ~/.fonts
-            cp *otf ~/.fonts
-            fc-cache -f -v
-            fc-match --all
-            rm -rf /tmp/fonts
-      - run: cd 2019 && ./scripts/take-screenshots
-      - store_artifacts:
-          path: 2019/__screenshots__
   deploy:
     docker:
       - image: circleci/node:lts-browsers
