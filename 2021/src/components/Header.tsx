@@ -9,6 +9,7 @@ import { LinkButton } from "./LinkButton"
 
 type Props = {
   siteTitle: string
+  ticketUrl: string
   onChangeLanguage: (lang: string) => void
 }
 
@@ -68,7 +69,7 @@ const TicketBox = styled.div`
 `
 
 export function Header(props: Props) {
-  const { onChangeLanguage } = props
+  const { onChangeLanguage, ticketUrl } = props
   const { t, i18n } = useTranslation()
 
   return (
@@ -91,18 +92,17 @@ export function Header(props: Props) {
         </Brand>
 
         <MenuBox>
-          <MenuItem to="/speakers/">{t("speakers")}</MenuItem>
-          <MenuItem to="/schedule/">{t("schedule")}</MenuItem>
-          <MenuItem to="/sponsors/">{t("sponsors")}</MenuItem>
-          <TicketBox>
-            <LinkButton
-              color="primary"
-              to="https://pretix.eu/jsconfjp/2019/"
-              size="inline"
-            >
-              {t("tickets")}
-            </LinkButton>
-          </TicketBox>
+          {/* TODO: To be updated */}
+          {/* <MenuItem to="/speakers/">{t("speakers")}</MenuItem> */}
+          {/* <MenuItem to="/schedule/">{t("schedule")}</MenuItem> */}
+          {/* <MenuItem to="/sponsors/">{t("sponsors")}</MenuItem> */}
+          {ticketUrl ? (
+            <TicketBox>
+              <LinkButton color="primary" to={ticketUrl} size="inline">
+                {t("tickets")}
+              </LinkButton>
+            </TicketBox>
+          ) : null}
         </MenuBox>
       </InnerBox>
     </Box>

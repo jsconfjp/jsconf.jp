@@ -10,6 +10,7 @@ import { LinkButton } from "./LinkButton"
 
 type Props = {
   siteTitle: string
+  ticketUrl: string
   onChangeLanguage: (lang: string) => void
 }
 
@@ -80,7 +81,7 @@ const Path = styled.path.attrs(({ theme }) => ({
 }))``
 
 export function InnerHeaderMobile(props: Props) {
-  const { onChangeLanguage } = props
+  const { onChangeLanguage, ticketUrl } = props
   const { t, i18n } = useTranslation()
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
   const toggleMenu = useCallback(() => {
@@ -104,15 +105,13 @@ export function InnerHeaderMobile(props: Props) {
           </LogoLink>
         </Brand>
 
-        <TicketBox>
-          <LinkButton
-            color="primary"
-            to="https://pretix.eu/jsconfjp/2019/"
-            size="inline"
-          >
-            {t("tickets")}
-          </LinkButton>
-        </TicketBox>
+        {ticketUrl ? (
+          <TicketBox>
+            <LinkButton color="primary" to={ticketUrl} size="inline">
+              {t("tickets")}
+            </LinkButton>
+          </TicketBox>
+        ) : null}
 
         <svg
           aria-controls="drawerMenu"
@@ -156,9 +155,10 @@ export function InnerHeaderMobile(props: Props) {
               onChange={changeLanguage}
             />
           </LanguageSwitchBox>
-          <MenuItem to="/speakers/">{t("speakers")}</MenuItem>
-          <MenuItem to="/schedule/">{t("schedule")}</MenuItem>
-          <MenuItem to="/sponsors/">{t("sponsors")}</MenuItem>
+          {/* TODO: To be updated */}
+          {/* <MenuItem to="/speakers/">{t("speakers")}</MenuItem> */}
+          {/* <MenuItem to="/schedule/">{t("schedule")}</MenuItem> */}
+          {/* <MenuItem to="/sponsors/">{t("sponsors")}</MenuItem> */}
         </MenuBox>
       )}
     </Box>

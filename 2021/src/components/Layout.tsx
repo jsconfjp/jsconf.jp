@@ -48,6 +48,7 @@ export function Layout({ children }: Props) {
         siteMetadata {
           title
           twitter
+          ticketUrl
         }
       }
     }
@@ -59,12 +60,14 @@ export function Layout({ children }: Props) {
         <OnlyMobile>
           <HeaderMobile
             siteTitle={data.site.siteMetadata.title}
+            ticketUrl={data.site.siteMetadata.ticketUrl}
             onChangeLanguage={onChangeLanguage}
           />
         </OnlyMobile>
         <NotMobile>
           <Header
             siteTitle={data.site.siteMetadata.title}
+            ticketUrl={data.site.siteMetadata.ticketUrl}
             onChangeLanguage={onChangeLanguage}
           />
         </NotMobile>

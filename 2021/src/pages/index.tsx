@@ -12,16 +12,20 @@ import { SponsorList } from "../components/SponsorList"
 import { LinkButton } from "../components/LinkButton"
 import { Card as _Card } from "../components/Card"
 import { Centerize } from "../components/Centerize"
-import { times } from "../util/misc"
 import bg from "../images/bg.png"
 import bgFlipX from "../images/bg-flip-x.png"
 
 const WavyBox = styled.div`
   margin: 0;
-  background-image: url("${bg}"), url("${bgFlipX}");
-  background-repeat: no-repeat, no-repeat;
-  background-position: top -830px right -300px, center left -450px;
-  background-size: 100%, 120%;
+  padding-bottom: 80px;
+  background-image: url("${bg}");
+  background-repeat: no-repeat;
+  background-position: top -830px right -300px;
+  background-size: 100%;
+  // background-image: url("${bg}"), url("${bgFlipX}");
+  // background-repeat: no-repeat, no-repeat;
+  // background-position: top -830px right -300px, center left -450px;
+  // background-size: 100%, 120%;
 `
 const Container = styled.div`
   padding: 0 1em;
@@ -73,8 +77,9 @@ const SponsorBox = styled.div`
 `
 
 export default function IndexPage() {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const {
+    site,
     allSpeakersYaml,
     allSponsorsYaml,
     allMembersYaml,
@@ -82,6 +87,12 @@ export default function IndexPage() {
     allTalksYaml
   } = useStaticQuery(graphql`
     query {
+      site {
+        siteMetadata {
+          ticketUrl
+          sponsorFormUrl
+        }
+      }
       allSponsorsYaml {
         edges {
           node {
@@ -155,10 +166,6 @@ export default function IndexPage() {
   const notJnaMembers = allMembersYaml.edges.filter(
     ({ node }: any) => !node.isJNA
   )
-  const dateTimeFormatter = new Intl.DateTimeFormat(i18n.language, {
-    // @ts-ignore dateStyle' does not exist in type 'DateTimeFormatOptions'
-    dateStyle: "medium"
-  })
 
   return (
     <Layout>
@@ -180,60 +187,51 @@ export default function IndexPage() {
               avatars={avatars}
               talks={talks}
             />
-            <Centerize>
+            {/* TODO: To be updated */}
+            {/* <Centerize>
               <LinkButton color="primary" to="/speakers/">
                 {t("goToGuests")}
               </LinkButton>
-            </Centerize>
+            </Centerize> */}
           </Card>
 
-          <Centerize>
+          {/* TODO: To be updated */}
+          {/* <Centerize>
             <SubTitle>{t("schedule")}</SubTitle>
             <SchedulesBox>
+              <p>{t('TBA')}</p>
               <LinkButton color="secondary" size="large" to="/schedule">
                 {t("day1")} ({dateTimeFormatter.format(times.day1.startsAt)})
               </LinkButton>
             </SchedulesBox>
-          </Centerize>
-
-          <Card>
-            <Centerize>
-              <SubTitle>{t("tickets")}</SubTitle>
-              <Centerize>
-                <LinkButton
-                  color="primary"
-                  size="large"
-                  to="https://pretix.eu/jsconfjp/2019/"
-                >
-                  {t("buyTickets")}
-                </LinkButton>
-              </Centerize>
-            </Centerize>
-          </Card>
+          </Centerize> */}
 
           <Centerize>
             <SubTitle>{t("callForSponsors")}</SubTitle>
             <Centerize>
-              <LinkButton
-                color="primary"
-                size="large"
-                to="https://docs.google.com/forms/d/e/1FAIpQLSd6373GnVMxTaT7QhKoPk60D8C70QZTCZugKlCuXWcQBq0v4A/viewform"
-              >
-                {t("becomeASponsor")}
-              </LinkButton>
+              {site.siteMetadata.sponsorFormUrl ? (
+                <LinkButton
+                  color="primary"
+                  size="large"
+                  to={site.siteMetadata.sponsorFormUrl}
+                >
+                  {t("becomeASponsor")}
+                </LinkButton>
+              ) : (
+                <LinkButton size="large" disabled to={""}>
+                  {t("comingSoon")}
+                </LinkButton>
+              )}
             </Centerize>
           </Centerize>
 
-          <Card>{/* FIXME */}</Card>
-
-          <Centerize>
+          {/* TODO: To be updated */}
+          {/* <Centerize>
             <SubTitle>{t("organizingTeam")}</SubTitle>
             <OrganizersBox>
               {jnaMembers.map(({ node: member }: { node: any }) => (
                 <div>
                   <a href={member.url} target="_blank" rel="noopener">
-                    {/*
-                    // @ts-ignore Property 'loading' does not exist */}
                     <img width="100%" loading="lazy" src={member.avatar} />
                     <span>{member.name}</span>
                   </a>
@@ -245,8 +243,6 @@ export default function IndexPage() {
               {notJnaMembers.map(({ node: member }: { node: any }) => (
                 <div>
                   <a href={member.url} target="_blank" rel="noopener">
-                    {/*
-                    // @ts-ignore Property 'loading' does not exist */}
                     <img width="100%" loading="lazy" src={member.avatar} />
                     <span>{member.name}</span>
                   </a>
@@ -258,17 +254,18 @@ export default function IndexPage() {
                 {t("joinUs")}
               </LinkButton>
             </Centerize>
-          </Centerize>
+          </Centerize> */}
         </Container>
 
-        <SponsorBox>
+        {/* TODO: To be updated */}
+        {/* <SponsorBox>
           <Centerize>
             <Container>
               <SubTitle>{t("sponsors")}</SubTitle>
               <SponsorList sponsors={sponsors} />
             </Container>
           </Centerize>
-        </SponsorBox>
+        </SponsorBox> */}
       </WavyBox>
     </Layout>
   )

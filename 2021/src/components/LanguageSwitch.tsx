@@ -35,7 +35,7 @@ export function LanguageSwitch(props: Props) {
         return (
           <React.Fragment key={langKey}>
             <Lang
-              href={currentLanguage === langKey ? undefined : "#"}
+              href={currentLanguage?.startsWith(langKey) ? undefined : "#"}
               onClick={e => {
                 e.preventDefault()
                 onChange(langKey)
