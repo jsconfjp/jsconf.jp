@@ -6,8 +6,6 @@ import { useTranslation } from "react-i18next"
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
 import { Hero } from "../components/Hero"
-import { Map } from "../components/Map"
-import { Address } from "../components/Address"
 import { SubTitle } from "../components/SubTitle"
 import { SpeakerList } from "../components/SpeakerList"
 import { SponsorList } from "../components/SponsorList"
@@ -37,11 +35,6 @@ const Card = styled(_Card)`
     margin: 80px 0;
     padding: 1em;
   }
-`
-const VenueBox = styled.div`
-  width: 100%;
-  max-width: ${({ theme }) => theme.innerWidth};
-  margin: 0 auto;
 `
 const OrganizersBox = styled.div`
   display: grid;
@@ -231,18 +224,7 @@ export default function IndexPage() {
             </Centerize>
           </Centerize>
 
-          <Card>
-            <VenueBox>
-              <SubTitle>{t("venue")}</SubTitle>
-              <Map width={940} height={500} title={t("venue")} />
-              <Address summary />
-              <Centerize>
-                <LinkButton color="primary" to="/venue/">
-                  {t("moreDetails")}
-                </LinkButton>
-              </Centerize>
-            </VenueBox>
-          </Card>
+          <Card>{/* FIXME */}</Card>
 
           <Centerize>
             <SubTitle>{t("organizingTeam")}</SubTitle>
