@@ -7,4 +7,5 @@
     cp public/* dist/
 
     mv 2019/public dist/2019
+    cd 2021 && npm i && npm run build -- --prefix-paths && mv public ../dist/2021
     '''
