@@ -1,5 +1,6 @@
 [context.deploy-preview.environment]
   NODE_VERSION = '14.17.3'
+  NODE_ENV = 'development'
 
 [build]
     publish = "dist/"
@@ -10,8 +11,5 @@
     cp public/* dist/
 
     mv 2019/public dist/2019
-    cd 2021 && npm ci
-    pwd && ls node_modules
-    ls node_modules/gatsby-plugin-styled-components
-    npm run build -- --prefix-paths --verbose && mv public ../dist/2021
+    cd 2021 && npm ci && npm run build -- --prefix-paths --verbose && mv public ../dist/2021
     '''
