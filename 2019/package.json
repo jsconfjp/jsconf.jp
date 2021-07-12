@@ -62,7 +62,7 @@
     "@types/react-helmet": "5.0.14",
     "@types/styled-components": "4.1.8",
     "chalk": "2.4.2",
-    "change-case": "3.1.0",
+    "change-case": "4.1.2",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "husky": "3.1.0",
     "image-type": "4.1.0",
