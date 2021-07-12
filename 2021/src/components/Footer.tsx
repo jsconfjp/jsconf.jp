@@ -53,8 +53,8 @@ export function Footer(_props: Props) {
         <ExternalLink href="https://nodejs.org/" target="_blank">
           Node.js
         </ExternalLink>
-        <ExternalLink href="https://nodefest.jp/2018/" target="_blank">
-          Nodefest 2018
+        <ExternalLink href="https://jsconf.jp/2019/" target="_blank">
+          JSConf JP 2019
         </ExternalLink>
         <ExternalLink href="https://nodejs.jp/" target="_blank">
           Japan Node.js Association
