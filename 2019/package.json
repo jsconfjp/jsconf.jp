@@ -4,6 +4,9 @@
   "license": "UNLICENSED",
   "repository": "jsconfjp/jsconf.jp",
   "author": "Leko <leko.noor@gmail.com>",
+  "engines": {
+    "node": "12"
+  },
   "scripts": {
     "build": "gatsby build",
     "format": "prettier --write src/**/*.{js,jsx}",
@@ -25,7 +28,6 @@
     "gatsby-plugin-google-analytics": "2.1.4",
     "gatsby-plugin-manifest": "2.2.1",
     "gatsby-plugin-offline": "2.2.1",
-    "gatsby-plugin-prefetch-google-fonts": "1.4.3",
     "gatsby-plugin-react-helmet": "3.1.0",
     "gatsby-plugin-sharp": "2.2.6",
     "gatsby-plugin-sitemap": "2.2.4",
@@ -61,6 +63,7 @@
     "@types/styled-components": "4.1.8",
     "chalk": "2.4.2",
     "change-case": "3.1.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "husky": "3.1.0",
     "image-type": "4.1.0",
     "js-yaml": "3.13.1",

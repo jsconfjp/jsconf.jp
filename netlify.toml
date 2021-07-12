@@ -6,5 +6,5 @@
     echo 'Disallow: /' >> dist/robots.txt
     cp public/* dist/
 
-    cd 2019 && npm i && npm run build -- --prefix-paths && mv public ../dist/2019
+    mv 2019/public dist/2019
     '''
