@@ -28,21 +28,6 @@ jobs:
           key: v1-dependencies-{{ checksum "2021/package-lock.json" }}
       - run: cd 2021 && npm test
       - run: cd 2021 && npm run build -- --prefix-paths
-      - run:
-          name: Install NotoSansCJK JP
-          command: |
-            mkdir /tmp/fonts
-            cd /tmp/fonts
-            wget https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip
-            unzip NotoSansCJKjp-hinted.zip
-            mkdir -p ~/.fonts
-            cp *otf ~/.fonts
-            fc-cache -f -v
-            fc-match --all
-            rm -rf /tmp/fonts
-      - run: cd 2021 && ./scripts/take-screenshots
-      - store_artifacts:
-          path: 2021/__screenshots__
   deploy:
     docker:
       - image: circleci/node:lts-browsers
