@@ -4,6 +4,9 @@
   "license": "UNLICENSED",
   "repository": "jsconfjp/jsconf.jp",
   "author": "Leko <leko.noor@gmail.com>",
+  "engines": {
+    "node": "12"
+  },
   "scripts": {
     "build": "gatsby build",
     "format": "prettier --write src/**/*.{js,jsx}",
