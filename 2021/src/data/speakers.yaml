@@ -1,0 +1,11 @@
+- uuid: yosuke-furukawa
+  name: Yosuke Furukawa
+  featured: false
+  presentations:
+    - yosuke-furukawa
+  biography: >-
+    Japan Node.js Association Director / JSConf.JP founder / NodeFest former
+    organizer / Recruit Technologies Inc, Senior Software Engineer and Group
+    Manager
+  biographyJa: >-
+    ㈱リクルートテクノロジーズ所属。Node.js日本ユーザーグループ代表であり、大人気イベント「東京Node学園」の主催者。HTML5expertsにも選ばれている。
