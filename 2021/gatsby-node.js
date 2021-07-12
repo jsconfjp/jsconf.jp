@@ -55,17 +55,14 @@ exports.createPages = ({ graphql, actions }) => {
           }
           allFile(filter: { relativePath: { regex: "/speakers/" } }) {
             nodes {
+              name
               childImageSharp {
-                fluid(maxWidth: 262, maxHeight: 262) {
-                  originalName
-                  originalImg
-                  aspectRatio
-                  src
-                  srcSet
-                  srcWebp
-                  srcSetWebp
-                  sizes
-                }
+                gatsbyImageData(
+                  width: 262
+                  height: 262
+                  placeholder: BLURRED
+                  layout: CONSTRAINED
+                )
               }
             }
           }
@@ -96,11 +93,14 @@ exports.createPages = ({ graphql, actions }) => {
         )
         const avatars = result.data.allFile.nodes
           .filter(avatar => avatar.childImageSharp)
-          .map(avatar => avatar.childImageSharp.fluid)
+          .map(avatar => ({
+            uuid: avatar.name,
+            ...avatar.childImageSharp.gatsbyImageData
+          }))
         const avatarMap = avatars.reduce(
           (acc, avatar) => ({
             ...acc,
-            [avatar.originalName.split(".")[0]]: avatar
+            [avatar.uuid]: avatar
           }),
           {}
         )

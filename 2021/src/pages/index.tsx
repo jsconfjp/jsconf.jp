@@ -136,16 +136,14 @@ export default function IndexPage() {
       }
       allFile(filter: { relativePath: { regex: "/speakers/" } }) {
         nodes {
+          name
           childImageSharp {
-            fluid(maxWidth: 262, maxHeight: 262) {
-              originalName
-              aspectRatio
-              src
-              srcSet
-              srcWebp
-              srcSetWebp
-              sizes
-            }
+            gatsbyImageData(
+              width: 262
+              height: 262
+              placeholder: BLURRED
+              layout: CONSTRAINED
+            )
           }
         }
       }
@@ -156,7 +154,10 @@ export default function IndexPage() {
   const talks = allTalksYaml.edges.map(({ node }: any) => node)
   const avatars = allFile.nodes
     .filter((avatar: any) => avatar.childImageSharp)
-    .map((avatar: any) => avatar.childImageSharp.fluid)
+    .map((avatar: any) => ({
+      uuid: avatar.name,
+      ...avatar.childImageSharp.gatsbyImageData
+    }))
   const jnaMembers = allMembersYaml.edges.filter(({ node }: any) => node.isJNA)
   const notJnaMembers = allMembersYaml.edges.filter(
     ({ node }: any) => !node.isJNA

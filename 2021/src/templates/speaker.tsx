@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
-import Image from "gatsby-image"
+import { GatsbyImage as Image } from "gatsby-plugin-image"
 import Markdown from "react-markdown"
 
 import { times } from "../util/misc"
@@ -97,17 +97,18 @@ export default function Speaker(props: Props) {
     <Layout>
       <SEO
         title={`${enOrJa(i18n)(title, titleJa)} - ${speakerNames}`}
-        ogImage={avatars.length ? avatars[0].originalImg : undefined}
+        // @ts-expect-error FIXME
+        ogImage={avatars.length ? avatars[0].images.sources : undefined}
       />
       <ResponsiveBox>
         <Breadcrumb path={[{ label: "speakers", to: "speakers" }, title]} />
         <Title>{speakerNames}</Title>
         {speakers.map((speaker, i) => (
           <SpeakerBox key={speaker.uuid}>
-            <Avatar fluid={avatars[i]} loading="eager" />
-            <Biography
-              source={enOrJa(i18n)(speaker.biography, speaker.biographyJa)}
-            />
+            <Avatar image={avatars[i]} alt={speaker.name} loading="eager" />
+            <Biography>
+              {enOrJa(i18n)(speaker.biography, speaker.biographyJa)}
+            </Biography>
           </SpeakerBox>
         ))}
         <TalkBox>
@@ -126,7 +127,7 @@ export default function Speaker(props: Props) {
             ) : null}
             <br />
           </p>
-          <Description source={enOrJa(i18n)(description, descriptionJa)} />
+          <Description>{enOrJa(i18n)(description, descriptionJa)}</Description>
         </TalkBox>
       </ResponsiveBox>
     </Layout>

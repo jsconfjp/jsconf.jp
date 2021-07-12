@@ -28,7 +28,7 @@ export function SpeakerList(props: Props) {
     return acc
   }, {} as { [uuid: string]: TalkType })
   const avatarMap: { [uuid: string]: AvatarType } = avatars.reduce(
-    (acc, avatar) => ({ ...acc, [avatar.originalName.split(".")[0]]: avatar }),
+    (acc, avatar) => ({ ...acc, [avatar.uuid]: avatar }),
     {}
   )
 
@@ -39,7 +39,6 @@ export function SpeakerList(props: Props) {
           return speaker.presentations.length > 0
         })
         .map(speaker => {
-          console.log({ lookingFor: speaker.presentations, map: talkMap })
           return (
             <Speaker
               key={speaker.name}

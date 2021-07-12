@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
-import Image, { FluidObject } from "gatsby-image"
+import { GatsbyImage as Image, IGatsbyImageData } from "gatsby-plugin-image"
 import { enOrJa } from "../util/languages"
 
 export type TalkType = {
@@ -32,9 +32,8 @@ export type SpeakerType = {
 }
 
 export type AvatarType = {
-  originalName: string
-  originalImg: string
-} & FluidObject
+  uuid: string
+} & IGatsbyImageData
 
 export type Props = {
   speaker: SpeakerType
@@ -67,7 +66,6 @@ const Name = styled.p`
 `
 
 export function Speaker(props: Props) {
-  console.log(props)
   const { i18n } = useTranslation()
   const { talk, speaker, avatar } = props
   const { uuid, title, titleJa } = talk
@@ -76,7 +74,7 @@ export function Speaker(props: Props) {
   if (!uuid || title === "TBA") {
     return (
       <div>
-        <Avatar fluid={avatar} loading="lazy" />
+        <Avatar image={avatar} alt={name} loading="lazy" />
         <Title lang="en">{enOrJa(i18n)(title, titleJa)}</Title>
         <Name>{name}</Name>
       </div>
@@ -85,7 +83,7 @@ export function Speaker(props: Props) {
 
   return (
     <LinkContainer to={`talk/${uuid}`}>
-      <Avatar fluid={avatar} loading="lazy" />
+      <Avatar image={avatar} alt={name} loading="lazy" />
       <Title>{enOrJa(i18n)(title, titleJa)}</Title>
       <Name>{name}</Name>
     </LinkContainer>
