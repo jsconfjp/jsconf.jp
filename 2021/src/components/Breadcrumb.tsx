@@ -32,7 +32,7 @@ export function Breadcrumb(props: Props) {
         const path = typeof label === "string" ? { label, to: null } : label
         return (
           <React.Fragment key={path.label}>
-            <Text>></Text>
+            <Text>&gt;</Text>
             {path.to ? (
               <Link to={path.to}>
                 <Text>{path.label}</Text>

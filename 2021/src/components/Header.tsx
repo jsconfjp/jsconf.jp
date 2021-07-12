@@ -45,6 +45,7 @@ const MenuBox = styled.div`
   display: flex;
   justify-content: flex-end;
 `
+// @ts-expect-error To be updated
 const MenuItem = styled(Link)`
   flex: 1;
   display: flex;

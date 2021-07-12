@@ -11,7 +11,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "pretest": "tsc --noEmit",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "husky": {
     "hooks": {
@@ -39,6 +40,8 @@
     "react-markdown": "^6.0.2"
   },
   "devDependencies": {
+    "@types/react-headroom": "^2.2.2",
+    "@types/react-helmet": "^6.1.2",
     "@types/styled-components": "^5.1.11",
     "babel-plugin-styled-components": "^1.13.2",
     "gatsby-plugin-brotli": "^2.0.0",
@@ -56,6 +59,7 @@
     "husky": "^7.0.1",
     "prettier": "2.3.2",
     "pretty-quick": "^3.1.1",
-    "styled-components": "^5.3.0"
+    "styled-components": "^5.3.0",
+    "typescript": "^4.3.5"
   }
 }

@@ -74,7 +74,7 @@ export type Props = {
 }
 
 export function LinkButton(props: Props) {
-  const { color, to, size, onClick, children, disabled } = props
+  const { color, to, size, onClick, children } = props
 
   if (!to.startsWith("http")) {
     if (color === "primary") {

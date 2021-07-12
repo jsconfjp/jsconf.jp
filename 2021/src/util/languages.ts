@@ -1,6 +1,6 @@
-import i18next from "i18next"
+import { i18n } from "i18next"
 
-export function enOrJa(i18n: i18next.i18n) {
+export function enOrJa(i18n: i18n) {
   return (enStr: string, jaStr: string) =>
     isJapanese(i18n.language) && jaStr ? jaStr : enStr || jaStr
 }
