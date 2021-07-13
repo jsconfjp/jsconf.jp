@@ -59,7 +59,7 @@
     "@types/react": "16.9.17",
     "@types/react-dom": "16.9.4",
     "@types/react-headroom": "2.2.1",
-    "@types/react-helmet": "5.0.14",
+    "@types/react-helmet": "5.0.17",
     "@types/styled-components": "4.1.8",
     "chalk": "2.4.2",
     "change-case": "3.1.0",
