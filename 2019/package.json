@@ -52,7 +52,7 @@
     "styled-components": "4.3.2"
   },
   "devDependencies": {
-    "@types/js-yaml": "3.12.1",
+    "@types/js-yaml": "3.12.7",
     "@types/lodash": "4.14.149",
     "@types/node": "12.12.21",
     "@types/node-fetch": "2.5.4",
@@ -66,7 +66,7 @@
     "gatsby-plugin-google-fonts": "^1.0.1",
     "husky": "3.1.0",
     "image-type": "4.1.0",
-    "js-yaml": "3.13.1",
+    "js-yaml": "3.14.1",
     "node-fetch": "2.6.0",
     "prettier": "1.19.1",
     "pretty-quick": "2.0.1",
