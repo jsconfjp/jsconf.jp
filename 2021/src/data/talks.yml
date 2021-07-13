@@ -1,0 +1,51 @@
+- uuid: example
+  date: day1
+  startsAt: "00:00"
+  endsAt: "01:00"
+  room: A
+  title: What is Lorem Ipsum?
+  titleJa: Lorem Ipsumとは？
+  description: >-
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  descriptionJa: >-
+    Lorem Ipsumは、印刷・組版業界のダミーテキストです。Lorem Ipsumは、1500年代に無名の印刷業者が活字見本帳を作るために、活字の入ったギャレーをスクランブルして以来、業界の標準的なダミーテキストとなっています。このダミーテキストは、5世紀の時を経ただけでなく、電子活字への移行にも耐え、基本的に変化していません。1960年代には、Lorem Ipsumの文章を収録したLetrasetシートが発売されて人気を博し、最近ではAldus PageMakerなどのDTPソフトにLorem Ipsumのバージョンが収録されるようになりました。
+  spokenLanguage: ja
+  slideLanguage: ""
+  speakerIDs:
+    - example
+- uuid: example3
+  date: day1
+  startsAt: "01:10"
+  endsAt: "01:40"
+  room: B
+  title: What is Lorem Ipsum?
+  titleJa: Lorem Ipsumとは？
+  description: >-
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  descriptionJa: >-
+    Lorem Ipsumは、印刷・組版業界のダミーテキストです。Lorem Ipsumは、1500年代に無名の印刷業者が活字見本帳を作るために、活字の入ったギャレーをスクランブルして以来、業界の標準的なダミーテキストとなっています。このダミーテキストは、5世紀の時を経ただけでなく、電子活字への移行にも耐え、基本的に変化していません。1960年代には、Lorem Ipsumの文章を収録したLetrasetシートが発売されて人気を博し、最近ではAldus PageMakerなどのDTPソフトにLorem Ipsumのバージョンが収録されるようになりました。
+  spokenLanguage: ja
+  slideLanguage: ""
+  speakerIDs:
+    - example
+- uuid: example4
+  date: day1
+  startsAt: "01:10"
+  endsAt: "01:40"
+  room: A
+  title: What is Lorem Ipsum?
+  titleJa: Lorem Ipsumとは？
+  description: >-
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  descriptionJa: >-
+    Lorem Ipsumは、印刷・組版業界のダミーテキストです。Lorem Ipsumは、1500年代に無名の印刷業者が活字見本帳を作るために、活字の入ったギャレーをスクランブルして以来、業界の標準的なダミーテキストとなっています。このダミーテキストは、5世紀の時を経ただけでなく、電子活字への移行にも耐え、基本的に変化していません。1960年代には、Lorem Ipsumの文章を収録したLetrasetシートが発売されて人気を博し、最近ではAldus PageMakerなどのDTPソフトにLorem Ipsumのバージョンが収録されるようになりました。
+  spokenLanguage: ja
+  slideLanguage: ""
+  speakerIDs:
+    - example
+- uuid: "day1-break-01:00"
+  startsAt: "01:00"
+  endsAt: "01:10"
+  date: day1
+  title: Break
+  speakerIDs: []

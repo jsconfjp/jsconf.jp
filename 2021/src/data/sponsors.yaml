@@ -1,0 +1,8 @@
+# - name: Name
+#   url: https://example.com
+#   logoUrl: https://via.placeholder.com/740x160
+#   grade: bronze | gold | platinum | silver
+- name: A sponsor
+  url: https://example.com
+  logoUrl: https://via.placeholder.com/740x160
+  grade: platinum
