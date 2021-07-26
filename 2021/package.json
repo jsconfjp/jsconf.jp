@@ -36,7 +36,7 @@
     "react-dom": "^17.0.1",
     "react-headroom": "^3.1.1",
     "react-helmet": "^6.1.0",
-    "react-i18next": "^11.11.1",
+    "react-i18next": "11.11.4",
     "react-markdown": "^6.0.2"
   },
   "devDependencies": {
