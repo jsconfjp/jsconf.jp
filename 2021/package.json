@@ -35,7 +35,7 @@
     "react-headroom": "3.1.1",
     "react-helmet": "6.1.0",
     "react-i18next": "11.11.1",
-    "react-markdown": "6.0.2"
+    "react-markdown": "7.0.1"
   },
   "devDependencies": {
     "@types/react-headroom": "2.2.2",
