@@ -58,7 +58,6 @@ const OrganizersBox = styled.div`
     grid-row-gap: 20px;
   }
 `
-// @ts-expect-error To be updated
 const MembersBox = styled(OrganizersBox)`
   grid-template-columns: repeat(6, minmax(1em, max-content));
 `
@@ -168,9 +167,7 @@ export default function IndexPage() {
       uuid: avatar.name,
       ...avatar.childImageSharp.gatsbyImageData
     }))
-  // @ts-expect-error To be updated
   const jnaMembers = allMembersYaml.edges.filter(({ node }: any) => node.isJNA)
-  // @ts-expect-error To be updated
   const notJnaMembers = allMembersYaml.edges.filter(
     ({ node }: any) => !node.isJNA
   )
