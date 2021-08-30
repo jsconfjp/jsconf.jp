@@ -260,28 +260,36 @@ export default function IndexPage() {
           </Card>
 
           <Centerize>
-            <SubTitle>{t("organizingTeam")}</SubTitle>
-            <OrganizersBox>
-              {jnaMembers.map(({ node: member }: { node: any }) => (
-                <div>
-                  <a href={member.url} target="_blank" rel="noopener">
-                    <img width="100%" loading="lazy" src={member.avatar} />
-                    <span>{member.name}</span>
-                  </a>
-                </div>
-              ))}
-            </OrganizersBox>
-            <SubTitle>{t("volunteerTeam")}</SubTitle>
-            <MembersBox>
-              {notJnaMembers.map(({ node: member }: { node: any }) => (
-                <div>
-                  <a href={member.url} target="_blank" rel="noopener">
-                    <img width="100%" loading="lazy" src={member.avatar} />
-                    <span>{member.name}</span>
-                  </a>
-                </div>
-              ))}
-            </MembersBox>
+            {jnaMembers.length > 0 ? (
+              <>
+                <SubTitle>{t("organizingTeam")}</SubTitle>
+                <OrganizersBox>
+                  {jnaMembers.map(({ node: member }: { node: any }) => (
+                    <div>
+                      <a href={member.url} target="_blank" rel="noopener">
+                        <img width="100%" loading="lazy" src={member.avatar} />
+                        <span>{member.name}</span>
+                      </a>
+                    </div>
+                  ))}
+                </OrganizersBox>
+              </>
+            ) : null}
+            {notJnaMembers.length > 0 ? (
+              <>
+                <SubTitle>{t("volunteerTeam")}</SubTitle>
+                <MembersBox>
+                  {notJnaMembers.map(({ node: member }: { node: any }) => (
+                    <div>
+                      <a href={member.url} target="_blank" rel="noopener">
+                        <img width="100%" loading="lazy" src={member.avatar} />
+                        <span>{member.name}</span>
+                      </a>
+                    </div>
+                  ))}
+                </MembersBox>
+              </>
+            ) : null}
             <Centerize>
               <LinkButton color="secondary" to="https://nodejs.jp/">
                 {t("joinUs")}
