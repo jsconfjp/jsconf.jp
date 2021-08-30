@@ -14,7 +14,7 @@ export const ja: {
     goToGuests: "スピーカー一覧へ",
     tickets: "チケット",
     buyTickets: "チケットを購入する",
-    callForSpeakers: "トークの募集",
+    callForSpeakers: "トーク募集",
     submitTalk: "トーク申込みフォームへ",
     callForSponsors: "スポンサー募集",
     becomeASponsor: "スポンサー申込みフォームへ",
