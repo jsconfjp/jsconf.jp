@@ -203,7 +203,7 @@ export default function IndexPage() {
               </Centerize>
             ) : (
               <Centerize>
-                <LinkButton to={null} disabled>
+                <LinkButton size="large" disabled to={""}>
                   {t("comingSoon")}
                 </LinkButton>
               </Centerize>
