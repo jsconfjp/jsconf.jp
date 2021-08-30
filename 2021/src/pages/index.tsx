@@ -58,7 +58,6 @@ const OrganizersBox = styled.div`
     grid-row-gap: 20px;
   }
 `
-// @ts-expect-error To be updated
 const MembersBox = styled(OrganizersBox)`
   grid-template-columns: repeat(6, minmax(1em, max-content));
 `
@@ -95,6 +94,7 @@ export default function IndexPage() {
         siteMetadata {
           ticketUrl
           sponsorFormUrl
+          cfpFormUrl
         }
       }
       allSponsorsYaml {
@@ -167,9 +167,7 @@ export default function IndexPage() {
       uuid: avatar.name,
       ...avatar.childImageSharp.gatsbyImageData
     }))
-  // @ts-expect-error To be updated
   const jnaMembers = allMembersYaml.edges.filter(({ node }: any) => node.isJNA)
-  // @ts-expect-error To be updated
   const notJnaMembers = allMembersYaml.edges.filter(
     ({ node }: any) => !node.isJNA
   )
@@ -194,12 +192,19 @@ export default function IndexPage() {
               avatars={avatars}
               talks={talks}
             />
-            {/* TODO: To be updated */}
-            {/* <Centerize>
-              <LinkButton color="primary" to="/speakers/">
-                {t("goToGuests")}
-              </LinkButton>
-            </Centerize> */}
+            {guestSpeakers.length > 0 ? (
+              <Centerize>
+                <LinkButton color="primary" to="/speakers/">
+                  {t("goToGuests")}
+                </LinkButton>
+              </Centerize>
+            ) : (
+              <Centerize>
+                <LinkButton size="large" disabled to={""}>
+                  {t("comingSoon")}
+                </LinkButton>
+              </Centerize>
+            )}
           </Card>
 
           {/* TODO: To be updated */}
@@ -214,6 +219,25 @@ export default function IndexPage() {
           </Centerize> */}
 
           <Centerize>
+            <SubTitle>{t("callForSpeakers")}</SubTitle>
+            <Centerize>
+              {site.siteMetadata.cfpFormUrl ? (
+                <LinkButton
+                  color="primary"
+                  size="large"
+                  to={site.siteMetadata.cfpFormUrl}
+                >
+                  {t("submitTalk")}
+                </LinkButton>
+              ) : (
+                <LinkButton size="large" disabled to={""}>
+                  {t("comingSoon")}
+                </LinkButton>
+              )}
+            </Centerize>
+          </Centerize>
+
+          <Card>
             <SubTitle>{t("callForSponsors")}</SubTitle>
             <Centerize>
               {site.siteMetadata.sponsorFormUrl ? (
@@ -230,38 +254,45 @@ export default function IndexPage() {
                 </LinkButton>
               )}
             </Centerize>
-          </Centerize>
+          </Card>
 
-          {/* TODO: To be updated */}
-          {/* <Centerize>
-            <SubTitle>{t("organizingTeam")}</SubTitle>
-            <OrganizersBox>
-              {jnaMembers.map(({ node: member }: { node: any }) => (
-                <div>
-                  <a href={member.url} target="_blank" rel="noopener">
-                    <img width="100%" loading="lazy" src={member.avatar} />
-                    <span>{member.name}</span>
-                  </a>
-                </div>
-              ))}
-            </OrganizersBox>
-            <SubTitle>{t("volunteerTeam")}</SubTitle>
-            <MembersBox>
-              {notJnaMembers.map(({ node: member }: { node: any }) => (
-                <div>
-                  <a href={member.url} target="_blank" rel="noopener">
-                    <img width="100%" loading="lazy" src={member.avatar} />
-                    <span>{member.name}</span>
-                  </a>
-                </div>
-              ))}
-            </MembersBox>
+          <Centerize>
+            {jnaMembers.length > 0 ? (
+              <>
+                <SubTitle>{t("organizingTeam")}</SubTitle>
+                <OrganizersBox>
+                  {jnaMembers.map(({ node: member }: { node: any }) => (
+                    <div>
+                      <a href={member.url} target="_blank" rel="noopener">
+                        <img width="100%" loading="lazy" src={member.avatar} />
+                        <span>{member.name}</span>
+                      </a>
+                    </div>
+                  ))}
+                </OrganizersBox>
+              </>
+            ) : null}
+            {notJnaMembers.length > 0 ? (
+              <>
+                <SubTitle>{t("volunteerTeam")}</SubTitle>
+                <MembersBox>
+                  {notJnaMembers.map(({ node: member }: { node: any }) => (
+                    <div>
+                      <a href={member.url} target="_blank" rel="noopener">
+                        <img width="100%" loading="lazy" src={member.avatar} />
+                        <span>{member.name}</span>
+                      </a>
+                    </div>
+                  ))}
+                </MembersBox>
+              </>
+            ) : null}
             <Centerize>
               <LinkButton color="secondary" to="https://nodejs.jp/">
                 {t("joinUs")}
               </LinkButton>
             </Centerize>
-          </Centerize> */}
+          </Centerize>
         </Container>
 
         {/* TODO: To be updated */}

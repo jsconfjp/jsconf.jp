@@ -7,7 +7,8 @@ module.exports = {
     twitter: `jsconfjp`,
     siteUrl: `https://jsconf.jp`,
     ticketUrl: ``,
-    sponsorFormUrl: ``
+    sponsorFormUrl: `https://docs.google.com/forms/d/e/1FAIpQLSeGwPvfFFiodywybwRZ5EU-dSU37SR_L0vj9aLX7MnYNgeiFg/viewform?usp=sf_link`,
+    cfpFormUrl: `https://docs.google.com/forms/d/e/1FAIpQLScJN0ManJjQ33QYqqSFIgCYLLxVqwygGw0WfNYy0V4d-VILyw/viewform?usp=sf_link`
   },
   plugins: [
     `gatsby-plugin-typescript`,
@@ -76,7 +77,7 @@ module.exports = {
       options: {
         name: `JSConf JP`,
         short_name: `JSConf JP`,
-        start_url: `/2019/`,
+        start_url: `/2021/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,

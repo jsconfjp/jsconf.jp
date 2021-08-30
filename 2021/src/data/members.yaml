@@ -2,6 +2,11 @@
   name: yosuke_furukawa
   url: https://twitter.com/yosuke_furukawa
   isJNA: true
-- avatar: https://github.com/Leko.png
-  name: Leko
-  url: https://twitter.com/L_e_k_o
+- avatar: https://github.com/kysnm.png
+  name: kysnm
+  url: https://github.com/kysnm
+  isJNA: true
+- avatar: https://ca.slack-edge.com/T03K7C2MQ-U03KAP05J-5789cd061952-512
+  name: Vanx
+  url: https://twitter.com/vanx2
+  isJNA: true
