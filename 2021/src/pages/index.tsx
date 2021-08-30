@@ -259,8 +259,7 @@ export default function IndexPage() {
             </Centerize>
           </Card>
 
-          {/* TODO: To be updated */}
-          {/* <Centerize>
+          <Centerize>
             <SubTitle>{t("organizingTeam")}</SubTitle>
             <OrganizersBox>
               {jnaMembers.map(({ node: member }: { node: any }) => (
@@ -288,7 +287,7 @@ export default function IndexPage() {
                 {t("joinUs")}
               </LinkButton>
             </Centerize>
-          </Centerize> */}
+          </Centerize>
         </Container>
 
         {/* TODO: To be updated */}
