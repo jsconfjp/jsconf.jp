@@ -95,6 +95,7 @@ export default function IndexPage() {
         siteMetadata {
           ticketUrl
           sponsorFormUrl
+          cfpFormUrl
         }
       }
       allSponsorsYaml {
@@ -194,12 +195,19 @@ export default function IndexPage() {
               avatars={avatars}
               talks={talks}
             />
-            {/* TODO: To be updated */}
-            {/* <Centerize>
-              <LinkButton color="primary" to="/speakers/">
-                {t("goToGuests")}
-              </LinkButton>
-            </Centerize> */}
+            {guestSpeakers.length > 0 ? (
+              <Centerize>
+                <LinkButton color="primary" to="/speakers/">
+                  {t("goToGuests")}
+                </LinkButton>
+              </Centerize>
+            ) : (
+              <Centerize>
+                <LinkButton to={null} disabled>
+                  {t("comingSoon")}
+                </LinkButton>
+              </Centerize>
+            )}
           </Card>
 
           {/* TODO: To be updated */}
@@ -214,6 +222,25 @@ export default function IndexPage() {
           </Centerize> */}
 
           <Centerize>
+            <SubTitle>{t("callForSpeakers")}</SubTitle>
+            <Centerize>
+              {site.siteMetadata.cfpFormUrl ? (
+                <LinkButton
+                  color="primary"
+                  size="large"
+                  to={site.siteMetadata.cfpFormUrl}
+                >
+                  {t("submitTalk")}
+                </LinkButton>
+              ) : (
+                <LinkButton size="large" disabled to={""}>
+                  {t("comingSoon")}
+                </LinkButton>
+              )}
+            </Centerize>
+          </Centerize>
+
+          <Card>
             <SubTitle>{t("callForSponsors")}</SubTitle>
             <Centerize>
               {site.siteMetadata.sponsorFormUrl ? (
@@ -230,7 +257,7 @@ export default function IndexPage() {
                 </LinkButton>
               )}
             </Centerize>
-          </Centerize>
+          </Card>
 
           {/* TODO: To be updated */}
           {/* <Centerize>

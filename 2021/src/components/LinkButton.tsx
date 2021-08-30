@@ -5,13 +5,16 @@ import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const buttonStyle = css`
   display: flex;
-  cursor: pointer;
   background-color: ${({ theme }) => theme.colors.disabled};
   color: ${({ theme }) => theme.colors.disabledText};
   font-family: ${({ theme }) => theme.fonts.header};
   font-weight: bold;
   align-items: center;
   justify-content: center;
+
+  &[href] {
+    cursor: pointer;
+  }
 
   &.large {
     width: 100%;
@@ -76,7 +79,7 @@ export type Props = {
 export function LinkButton(props: Props) {
   const { color, to, size, onClick, children } = props
 
-  if (!to.startsWith("http")) {
+  if (!to?.startsWith("http")) {
     if (color === "primary") {
       return (
         <InternalPrimaryBox onClick={onClick} className={size} to={to}>
