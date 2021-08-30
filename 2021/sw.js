@@ -27,20 +27,20 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-37f64ea4447551b27897.js"
+    "url": "webpack-runtime-b45178065228ea166136.js"
   },
   {
-    "url": "framework-0215ede8cb61e13deccd.js"
+    "url": "framework-c4d097170909825a693e.js"
   },
   {
-    "url": "app-4e1dea8181dfbb95b053.js"
+    "url": "app-236ad5532e6e78e1b339.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "d83f441d80361d88e8456fd92e5e4cfa"
+    "revision": "0fefc7d8ae9965a0ee59d8f3b1e88988"
   },
   {
-    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-5f77715baca032827c8d.js"
+    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-62183c16c2d4e069b4e6.js"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
@@ -48,19 +48,19 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "c3abeaa677ea1e17c72099c0cd0c9824"
+    "revision": "2f3d91f05f198fb3ada331452c3df976"
   },
   {
-    "url": "polyfill-310351d7bdb576f82f72.js"
+    "url": "polyfill-82faf8a71e76227ac16b.js"
   },
   {
     "url": "styles.5915ecf2483fd49b14e2.css"
   },
   {
-    "url": "7f5bd21a022950e50ca211ae2f5765d6f61633ff-38403a5bdd27564be99c.js"
+    "url": "7f5bd21a022950e50ca211ae2f5765d6f61633ff-b9c794702f149d25ccb3.js"
   },
   {
-    "url": "component---src-templates-markdown-tsx-0a2fb19ec20d635bcda6.js"
+    "url": "component---src-templates-markdown-tsx-36e09ba2465022cc0ef6.js"
   },
   {
     "url": "page-data/code-of-conduct/page-data.json",
@@ -75,22 +75,22 @@ self.__precacheManifest = [
     "revision": "f57fc9b4341500c4e058312599218de5"
   },
   {
-    "url": "component---src-pages-index-tsx-c9b002c7df0b30ae6908.js"
+    "url": "component---src-pages-index-tsx-92a5c891be895a9b0201.js"
   },
   {
     "url": "page-data/index/page-data.json",
-    "revision": "0605cc5e7a348b4307f47d214d6852f5"
+    "revision": "2e26668082af36adc4b5a247dd2acaa0"
   },
   {
-    "url": "page-data/sq/d/3452789684.json",
-    "revision": "98a07a5a56aebd5ce3178a57a27108b0"
+    "url": "page-data/sq/d/4219329968.json",
+    "revision": "f0fe79974d33b64dcb1669352c736687"
   },
   {
     "url": "page-data/jp-specified-commercial-transactions-act/page-data.json",
     "revision": "e21260c3e323149e83fea6d7f3e6809a"
   },
   {
-    "url": "component---src-pages-schedule-tsx-dd1c4da3175ee71fa63f.js"
+    "url": "component---src-pages-schedule-tsx-0483cfcab0fb4cef47a8.js"
   },
   {
     "url": "page-data/schedule/page-data.json",
@@ -101,7 +101,7 @@ self.__precacheManifest = [
     "revision": "645c47f180a328f8f1bdc4af4bcac098"
   },
   {
-    "url": "component---src-pages-speakers-tsx-03015df287fc99c99e01.js"
+    "url": "component---src-pages-speakers-tsx-17b1e14fcac8da29db1a.js"
   },
   {
     "url": "page-data/speakers/page-data.json",
@@ -109,10 +109,10 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3320513770.json",
-    "revision": "fd86cb64105536502a9f55ee5ec4abfd"
+    "revision": "0ab9cf0ffa611c04388a4da3cce58f52"
   },
   {
-    "url": "component---src-pages-sponsors-tsx-a8bddefde34b58106ddc.js"
+    "url": "component---src-pages-sponsors-tsx-c02b66b8b122265703f0.js"
   },
   {
     "url": "page-data/sponsors/page-data.json",
@@ -124,7 +124,7 @@ self.__precacheManifest = [
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "d33c91fc372e35973a83740acc685f4f"
+    "revision": "d3d9515955221e6ee98d14f88a09a3bb"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -216,7 +216,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/2021/app-4e1dea8181dfbb95b053.js`))) {
+  if (!resources || !(await caches.match(`/2021/app-236ad5532e6e78e1b339.js`))) {
     return await fetch(event.request)
   }
 
