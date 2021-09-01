@@ -27,31 +27,31 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-cce119fa4ee460b737f2.js"
+    "url": "webpack-runtime-f42be1f901991d506aeb.js"
   },
   {
-    "url": "framework-c4d097170909825a693e.js"
+    "url": "framework-ac828c628c543a13a889.js"
   },
   {
-    "url": "app-83729d87d02daf863df5.js"
+    "url": "app-0aefbbf3a02f644cfda0.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "5014e7ef66b4db488cafad7be85591a1"
+    "revision": "bc3079fb7f74327e787272adcd0fb457"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-62183c16c2d4e069b4e6.js"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "f6081b83111aea4128c98944b7fafccc"
+    "revision": "f2c002077289a7e1ac538802bc7f5314"
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "c6a00a742dfedc547f289bf3a3a2e428"
+    "revision": "b01ced0dc5efa89025e150b81a432988"
   },
   {
-    "url": "polyfill-82faf8a71e76227ac16b.js"
+    "url": "polyfill-e2b099239cf855a9c750.js"
   },
   {
     "url": "styles.5915ecf2483fd49b14e2.css"
@@ -64,7 +64,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/code-of-conduct/page-data.json",
-    "revision": "f600bec9a0042074734efedd619ba5b3"
+    "revision": "fd7becfc34eff51e34a9f51b4f593555"
   },
   {
     "url": "page-data/sq/d/1861792574.json",
@@ -75,48 +75,48 @@ self.__precacheManifest = [
     "revision": "f57fc9b4341500c4e058312599218de5"
   },
   {
-    "url": "component---src-pages-index-tsx-92a5c891be895a9b0201.js"
+    "url": "component---src-pages-index-tsx-425f75a08f6012aeec33.js"
   },
   {
     "url": "page-data/index/page-data.json",
-    "revision": "2e26668082af36adc4b5a247dd2acaa0"
+    "revision": "4e42c3803b95f0f7879fbaef65ba26a7"
   },
   {
     "url": "page-data/sq/d/4219329968.json",
-    "revision": "150748106013b182814256fba5727809"
+    "revision": "c9a3d8c6e8729030330c12d4d647b183"
   },
   {
     "url": "page-data/jp-specified-commercial-transactions-act/page-data.json",
-    "revision": "e21260c3e323149e83fea6d7f3e6809a"
+    "revision": "a7c6781277e604464904c4709e87dd59"
   },
   {
-    "url": "component---src-pages-schedule-tsx-0483cfcab0fb4cef47a8.js"
+    "url": "component---src-pages-schedule-tsx-ad0998e7a73132959122.js"
   },
   {
     "url": "page-data/schedule/page-data.json",
-    "revision": "8dbd1826832d420fa2c268ce3d6b08f8"
+    "revision": "6feb448ebef776be78959bd11bd53104"
   },
   {
     "url": "page-data/sq/d/1480216084.json",
     "revision": "645c47f180a328f8f1bdc4af4bcac098"
   },
   {
-    "url": "component---src-pages-speakers-tsx-17b1e14fcac8da29db1a.js"
+    "url": "component---src-pages-speakers-tsx-2c28989b79bc55d49a89.js"
   },
   {
     "url": "page-data/speakers/page-data.json",
-    "revision": "e2ec9627165860732290e8026f7e9bf1"
+    "revision": "605a20024be9bce229ac62f7dcba68de"
   },
   {
     "url": "page-data/sq/d/3320513770.json",
-    "revision": "0ab9cf0ffa611c04388a4da3cce58f52"
+    "revision": "4dabc73efd7fb6aa16cdca01c60290b4"
   },
   {
     "url": "component---src-pages-sponsors-tsx-c02b66b8b122265703f0.js"
   },
   {
     "url": "page-data/sponsors/page-data.json",
-    "revision": "00cafb4cace6cf8a913cda1b2177fa24"
+    "revision": "85fde34874347748f3833dce8607aae9"
   },
   {
     "url": "page-data/sq/d/422937091.json",
@@ -216,7 +216,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/2021/app-83729d87d02daf863df5.js`))) {
+  if (!resources || !(await caches.match(`/2021/app-0aefbbf3a02f644cfda0.js`))) {
     return await fetch(event.request)
   }
 
