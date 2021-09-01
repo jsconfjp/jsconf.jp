@@ -5,10 +5,10 @@ import { useStaticQuery, graphql } from "gatsby"
 type MetaProps = JSX.IntrinsicElements["meta"]
 
 type Props = {
-  description: string
+  description?: string
   lang: "en" | "ja"
   meta: MetaProps[]
-  title: string
+  title?: string
   ogImage?: string
 }
 
@@ -38,6 +38,7 @@ export function SEO({ description, ogImage, lang, meta, title }: Props) {
       htmlAttributes={{
         lang
       }}
+      defaultTitle={site.siteMetadata.title}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={([
