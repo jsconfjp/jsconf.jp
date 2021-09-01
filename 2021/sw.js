@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-f42be1f901991d506aeb.js"
+    "url": "webpack-runtime-93f5d905b08575925abd.js"
   },
   {
     "url": "framework-ac828c628c543a13a889.js"
@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "bc3079fb7f74327e787272adcd0fb457"
+    "revision": "68be62dd690fb26353f31dbdd92f2f8e"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-62183c16c2d4e069b4e6.js"
@@ -48,7 +48,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "b01ced0dc5efa89025e150b81a432988"
+    "revision": "25cacae0698e2ddccdc0a7ebe1dc5675"
   },
   {
     "url": "polyfill-e2b099239cf855a9c750.js"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
     "url": "styles.5915ecf2483fd49b14e2.css"
   },
   {
-    "url": "7f5bd21a022950e50ca211ae2f5765d6f61633ff-a92dd6370494b64cae30.js"
+    "url": "7f5bd21a022950e50ca211ae2f5765d6f61633ff-4ca6b07fc9f518fa4363.js"
   },
   {
     "url": "component---src-templates-markdown-tsx-36e09ba2465022cc0ef6.js"
@@ -75,7 +75,7 @@ self.__precacheManifest = [
     "revision": "f57fc9b4341500c4e058312599218de5"
   },
   {
-    "url": "component---src-pages-index-tsx-425f75a08f6012aeec33.js"
+    "url": "component---src-pages-index-tsx-9b2dfb39d6a27aaf2d28.js"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -83,7 +83,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/4219329968.json",
-    "revision": "c9a3d8c6e8729030330c12d4d647b183"
+    "revision": "ab32979d3f2fd2543811582e52ada666"
   },
   {
     "url": "page-data/jp-specified-commercial-transactions-act/page-data.json",
@@ -109,7 +109,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3320513770.json",
-    "revision": "4dabc73efd7fb6aa16cdca01c60290b4"
+    "revision": "6c1924847d7978744ae55b6b82c2ca5c"
   },
   {
     "url": "component---src-pages-sponsors-tsx-c02b66b8b122265703f0.js"
