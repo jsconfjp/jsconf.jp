@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-391ee31a63fac84d4158.js"
+    "url": "webpack-runtime-2a6552aea793d6d93e30.js"
   },
   {
     "url": "framework-ac828c628c543a13a889.js"
@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "d40d859f4774b623bb2cfcee5542bf1c"
+    "revision": "c8e8060f219449ced3cddbcf8c1725c9"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-62183c16c2d4e069b4e6.js"
@@ -48,7 +48,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "0308fcab139dbf327de3c96127d938e5"
+    "revision": "9f2433588d553bd5e36890ede519649f"
   },
   {
     "url": "polyfill-e2b099239cf855a9c750.js"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
     "url": "styles.5915ecf2483fd49b14e2.css"
   },
   {
-    "url": "7f5bd21a022950e50ca211ae2f5765d6f61633ff-f0ad6c49aa70360a58ad.js"
+    "url": "7f5bd21a022950e50ca211ae2f5765d6f61633ff-d0b6b6a3b94080db6ca8.js"
   },
   {
     "url": "component---src-templates-markdown-tsx-36e09ba2465022cc0ef6.js"
@@ -75,7 +75,7 @@ self.__precacheManifest = [
     "revision": "f57fc9b4341500c4e058312599218de5"
   },
   {
-    "url": "component---src-pages-index-tsx-9b2dfb39d6a27aaf2d28.js"
+    "url": "component---src-pages-index-tsx-d0ead39ac7dc2ed5106b.js"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -83,7 +83,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/4219329968.json",
-    "revision": "cdb6d1cd98de6be02f1cf17712a6ec3e"
+    "revision": "150748106013b182814256fba5727809"
   },
   {
     "url": "page-data/jp-specified-commercial-transactions-act/page-data.json",
@@ -101,7 +101,7 @@ self.__precacheManifest = [
     "revision": "645c47f180a328f8f1bdc4af4bcac098"
   },
   {
-    "url": "component---src-pages-speakers-tsx-2c28989b79bc55d49a89.js"
+    "url": "component---src-pages-speakers-tsx-3081a993a625bc2c1e48.js"
   },
   {
     "url": "page-data/speakers/page-data.json",
@@ -109,7 +109,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3320513770.json",
-    "revision": "99949f08105d582b85342103098b1b10"
+    "revision": "0ab9cf0ffa611c04388a4da3cce58f52"
   },
   {
     "url": "component---src-pages-sponsors-tsx-c02b66b8b122265703f0.js"
