@@ -31,8 +31,8 @@ export function SEO({ description, ogImage, lang, meta, title }: Props) {
     `
   )
   const defaultOgImage = `${site.siteMetadata.siteUrl}${logo.publicURL}`
+  const metaTitle = title || site.siteMetadata.title
   const metaDescription = description || site.siteMetadata.description
-
   return (
     <Helmet
       htmlAttributes={{
@@ -52,7 +52,7 @@ export function SEO({ description, ogImage, lang, meta, title }: Props) {
         },
         {
           property: `og:title`,
-          content: title
+          content: metaTitle
         },
         {
           property: `og:description`,
