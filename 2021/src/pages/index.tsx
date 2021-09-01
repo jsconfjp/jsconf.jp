@@ -264,7 +264,11 @@ export default function IndexPage() {
                   {jnaMembers.map(({ node: member }: { node: any }) => (
                     <div>
                       <a href={member.url} target="_blank" rel="noopener">
-                        <img width="100%" loading="lazy" src={member.avatar} />
+                        <img
+                          width="100%"
+                          loading="lazy"
+                          src={`${member.avatar}?size=160`}
+                        />
                         <span>{member.name}</span>
                       </a>
                     </div>
@@ -279,7 +283,11 @@ export default function IndexPage() {
                   {notJnaMembers.map(({ node: member }: { node: any }) => (
                     <div>
                       <a href={member.url} target="_blank" rel="noopener">
-                        <img width="100%" loading="lazy" src={member.avatar} />
+                        <img
+                          width="100%"
+                          loading="lazy"
+                          src={`${member.avatar}?size=160`}
+                        />
                         <span>{member.name}</span>
                       </a>
                     </div>
