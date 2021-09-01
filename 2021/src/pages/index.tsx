@@ -60,6 +60,10 @@ const OrganizersBox = styled.div`
 `
 const MembersBox = styled(OrganizersBox)`
   grid-template-columns: repeat(6, minmax(1em, max-content));
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    grid-template-columns: repeat(4, minmax(1em, max-content));
+  }
 `
 // @ts-expect-error To be updated
 const SchedulesBox = styled.div`
