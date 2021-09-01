@@ -64,7 +64,7 @@ export default function SpeakersPage() {
 
   return (
     <Layout>
-      <SEO title={t("guestSpeakers")} description={t("speakers.description")} />
+      <SEO title={t("speakers")} description={t("speakers.description")} />
       <ResponsiveBox>
         <Breadcrumb path={[t("speakers")]} />
         <Title>{t("speakers")}</Title>

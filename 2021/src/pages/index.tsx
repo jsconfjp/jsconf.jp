@@ -60,6 +60,10 @@ const OrganizersBox = styled.div`
 `
 const MembersBox = styled(OrganizersBox)`
   grid-template-columns: repeat(6, minmax(1em, max-content));
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    grid-template-columns: repeat(4, minmax(1em, max-content));
+  }
 `
 // @ts-expect-error To be updated
 const SchedulesBox = styled.div`
@@ -264,7 +268,11 @@ export default function IndexPage() {
                   {jnaMembers.map(({ node: member }: { node: any }) => (
                     <div>
                       <a href={member.url} target="_blank" rel="noopener">
-                        <img width="100%" loading="lazy" src={member.avatar} />
+                        <img
+                          width="100%"
+                          loading="lazy"
+                          src={`${member.avatar}?size=160`}
+                        />
                         <span>{member.name}</span>
                       </a>
                     </div>
@@ -279,7 +287,11 @@ export default function IndexPage() {
                   {notJnaMembers.map(({ node: member }: { node: any }) => (
                     <div>
                       <a href={member.url} target="_blank" rel="noopener">
-                        <img width="100%" loading="lazy" src={member.avatar} />
+                        <img
+                          width="100%"
+                          loading="lazy"
+                          src={`${member.avatar}?size=160`}
+                        />
                         <span>{member.name}</span>
                       </a>
                     </div>

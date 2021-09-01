@@ -26,8 +26,8 @@ const InnerBox = styled.div`
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  height: 90px;
-  padding: 20px;
+  height: 72px;
+  padding: 8px 20px;
 `
 const Brand = styled.h1`
   flex: 1;
@@ -45,6 +45,7 @@ const MenuBox = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin-bottom: 16px;
 `
 const LanguageSwitchBox = styled.div`
   display: flex;
@@ -119,8 +120,8 @@ export function InnerHeaderMobile(props: Props) {
           aria-expanded={menuOpen}
           tabIndex={0}
           role="button"
-          width={48}
-          height={48}
+          width={32}
+          height={32}
           viewBox="0,0,100,100"
           onTouchEnd={toggleMenu}
           onKeyDown={handleKeydown}
@@ -129,16 +130,16 @@ export function InnerHeaderMobile(props: Props) {
           {menuOpen ? (
             <Path
               d={[
-                `M0,5 L5,0 L100,95 L95,100 L0,5`,
-                `M95,0 L100,5 L5,100 L0,95 L95,0`
+                `M0,10 L10,0 L100,90 L90,100 L0,10`,
+                `M90,0 L100,10 L10,100 L0,90 L90,0`
               ].join(" ")}
             />
           ) : (
             <Path
               d={[
-                `M0,0 L100,0 L100,10 L0,10 L0,0`,
-                `M0,45 L100,45 L100,55 L0,55 L0,0`,
-                `M0,90 L100,90 L100,100 L0,100 L0,0`
+                `M0,0 L100,0 L100,12 L0,12 L0,0`,
+                `M0,44 L100,44 L100,56 L0,56 L0,0`,
+                `M0,88 L100,88 L100,100 L0,100 L0,0`
               ].join(" ")}
             />
           )}
