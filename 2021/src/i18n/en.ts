@@ -10,7 +10,7 @@ export const en = {
 
     backToTop: "TOP",
     siteName: "JSConf JP",
-    festivalPeriod: "17 Novemver 2021",
+    festivalPeriod: "27 Novemver 2021",
     description:
       "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the first event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
     speakers: "Speakers",
