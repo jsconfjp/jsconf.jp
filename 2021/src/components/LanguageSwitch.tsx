@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 type Props = {
-  languages: Record<string, string>
+  languages: Record<Languages, string>
   currentLanguage: string
   onChange: (lang: string) => void
 }
@@ -27,7 +27,7 @@ const Separator = styled.span`
 
 export function LanguageSwitch(props: Props) {
   const { onChange, currentLanguage, languages } = props
-  const langKeys = Object.keys(languages)
+  const langKeys = Object.keys(languages) as Languages[]
 
   return (
     <>

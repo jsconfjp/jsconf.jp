@@ -53,9 +53,9 @@ export function Hero(props: Props) {
     <Box>
       <Logo size={270} alt="JSConf JP Logo" />
       <TextBox>
-        <Title>{title}</Title>
+        <Title lang="en">{title}</Title>
         <SubTitle>{subTitle}</SubTitle>
-        <Paragraph>{description}</Paragraph>
+        <Paragraph lang="en">{description}</Paragraph>
       </TextBox>
     </Box>
   )

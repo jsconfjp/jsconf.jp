@@ -6,7 +6,7 @@ type MetaProps = JSX.IntrinsicElements["meta"]
 
 type Props = {
   description?: string
-  lang: "en" | "ja"
+  lang: Languages
   meta: MetaProps[]
   title?: string
   ogImage?: string
