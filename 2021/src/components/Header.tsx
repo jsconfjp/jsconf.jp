@@ -84,7 +84,7 @@ export function Header(props: Props) {
             <LanguageSwitch
               languages={{
                 ja: "日本語",
-                en: "EN"
+                en: "EN",
               }}
               currentLanguage={i18n.language}
               onChange={onChangeLanguage}

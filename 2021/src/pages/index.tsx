@@ -84,7 +84,7 @@ const SponsorBox = styled.div`
 `
 
 export default function IndexPage() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const {
     site,
     allSpeakersYaml,
@@ -179,7 +179,7 @@ export default function IndexPage() {
   return (
     <Layout>
       <WavyBox>
-        <SEO />
+        <SEO lang={i18n.language as Languages} />
         <Container>
           <Centerize>
             <Hero
