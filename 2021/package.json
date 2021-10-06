@@ -55,7 +55,7 @@
     "gatsby-transformer-remark": "4.10.0",
     "gatsby-transformer-yaml": "3.13.0",
     "husky": "7.0.2",
-    "prettier": "2.3.2",
+    "prettier": "2.4.1",
     "pretty-quick": "3.1.1",
     "styled-components": "5.3.0",
     "typescript": "4.4.3"
