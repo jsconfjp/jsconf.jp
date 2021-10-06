@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-66e0bd764b105bd7feb8.js"
+    "url": "webpack-runtime-cdb1b4d0ee4e180b1e25.js"
   },
   {
     "url": "framework-ac828c628c543a13a889.js"
@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "8faa85ede383665020df6f39365aa06e"
+    "revision": "b4713cd4dc2db373ad9b8ce36b700635"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-62183c16c2d4e069b4e6.js"
@@ -48,7 +48,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "24bfceeeb07e059bb0f2b6ec7d4bf207"
+    "revision": "d572c4db9d6591c3b8fac800dffb92cf"
   },
   {
     "url": "polyfill-e2b099239cf855a9c750.js"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
     "url": "styles.5915ecf2483fd49b14e2.css"
   },
   {
-    "url": "7f5bd21a022950e50ca211ae2f5765d6f61633ff-79b2a68bbf25099c5b1d.js"
+    "url": "7f5bd21a022950e50ca211ae2f5765d6f61633ff-d0b6b6a3b94080db6ca8.js"
   },
   {
     "url": "component---src-templates-markdown-tsx-36e09ba2465022cc0ef6.js"
@@ -83,7 +83,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/4219329968.json",
-    "revision": "d0c4664d56c6ce62f480eee9f4b40def"
+    "revision": "e699590b8e082fb72090d40bb43ff44f"
   },
   {
     "url": "page-data/jp-specified-commercial-transactions-act/page-data.json",
@@ -109,7 +109,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3320513770.json",
-    "revision": "0ab9cf0ffa611c04388a4da3cce58f52"
+    "revision": "cb4f72a1a523c781e0c894507e88676e"
   },
   {
     "url": "component---src-pages-sponsors-tsx-c02b66b8b122265703f0.js"
