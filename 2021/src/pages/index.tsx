@@ -18,15 +18,14 @@ import bgFlipX from "../images/bg-flip-x.png"
 
 const WavyBox = styled.div`
   margin: 0;
-  padding-bottom: 80px;
   background-image: url("${bg}");
   background-repeat: no-repeat;
   background-position: top -830px right -300px;
   background-size: 100%;
-  // background-image: url("${bg}"), url("${bgFlipX}");
-  // background-repeat: no-repeat, no-repeat;
-  // background-position: top -830px right -300px, center left -450px;
-  // background-size: 100%, 120%;
+  background-image: url("${bg}"), url("${bgFlipX}");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top -830px right -300px, center left -450px;
+  background-size: 100%, 120%;
 `
 const Container = styled.div`
   padding: 0 1em;
@@ -108,6 +107,7 @@ export default function IndexPage() {
             grade
             url
             logoUrl
+            prText
           }
         }
       }
@@ -307,15 +307,11 @@ export default function IndexPage() {
           </Centerize>
         </Container>
 
-        {/* TODO: To be updated */}
-        {/* <SponsorBox>
+        <SponsorBox>
           <Centerize>
-            <Container>
-              <SubTitle>{t("sponsors")}</SubTitle>
-              <SponsorList sponsors={sponsors} />
-            </Container>
+            <SponsorList sponsors={sponsors} />
           </Centerize>
-        </SponsorBox> */}
+        </SponsorBox>
       </WavyBox>
     </Layout>
   )
