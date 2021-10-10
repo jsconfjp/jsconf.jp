@@ -13,6 +13,7 @@ import { SponsorList } from "../components/SponsorList"
 import { LinkButton } from "../components/LinkButton"
 import { Card as _Card } from "../components/Card"
 import { Centerize } from "../components/Centerize"
+import { Member } from "../components/Member"
 import bg from "../images/bg.png"
 import bgFlipX from "../images/bg-flip-x.png"
 
@@ -43,13 +44,16 @@ const Card = styled(_Card)`
 const OrganizersBox = styled.div`
   display: grid;
   margin-bottom: 1em;
-  grid-template-columns: repeat(auto-fit, minmax(1em, max-content));
   grid-column-gap: 60px;
   grid-row-gap: 60px;
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.text};
   font-size: 1.6rem;
   overflow-wrap: break-word;
+
+  ${({ theme }) => theme.breakpoints.largerThanMobile} {
+    grid-template-columns: repeat(3, minmax(1em, 200px));
+  }
 
   ${({ theme }) => theme.breakpoints.mobile} {
     grid-template-columns: repeat(3, minmax(1em, max-content));
@@ -266,16 +270,7 @@ export default function IndexPage() {
                 <SubTitle>{t("organizingTeam")}</SubTitle>
                 <OrganizersBox>
                   {jnaMembers.map(({ node: member }: { node: any }) => (
-                    <div>
-                      <a href={member.url} target="_blank" rel="noopener">
-                        <img
-                          width="100%"
-                          loading="lazy"
-                          src={`${member.avatar}?size=160`}
-                        />
-                        <span>{member.name}</span>
-                      </a>
-                    </div>
+                    <Member {...member} />
                   ))}
                 </OrganizersBox>
               </>
@@ -285,16 +280,7 @@ export default function IndexPage() {
                 <SubTitle>{t("volunteerTeam")}</SubTitle>
                 <MembersBox>
                   {notJnaMembers.map(({ node: member }: { node: any }) => (
-                    <div>
-                      <a href={member.url} target="_blank" rel="noopener">
-                        <img
-                          width="100%"
-                          loading="lazy"
-                          src={`${member.avatar}?size=160`}
-                        />
-                        <span>{member.name}</span>
-                      </a>
-                    </div>
+                    <Member {...member} />
                   ))}
                 </MembersBox>
               </>
