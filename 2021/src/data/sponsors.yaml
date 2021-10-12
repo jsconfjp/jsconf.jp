@@ -4,20 +4,20 @@
 #   grade: sponsor | platinum
 - name: ウォンテッドリー株式会社
   url: https://docs.wantedly.dev/
-  logoUrl: https://via.placeholder.com/740x160
+  logoUrl: /2021/sponsors/wantedly.png
   prText: |
     ウォンテッドリーは『シゴトでココロオドルひとをふやす』ためにはたらくすべての人が共感を通じて「であい」「つながり」「つながりを深める」ためのビジネスSNS Wantedly を提供しています。 シゴトでココロオドルとは、仕事に没頭し成果を上げ、継続的に成長を実感する状態と私たちは定義しております。没頭に必要な3要素、自律・共感・挑戦を実現するプロダクトを開発運営しミッションの実現を目指して参ります
   grade: premium
 - name: 株式会社カオナビ
   url: https://corp.kaonavi.jp/recruit/
-  logoUrl: https://via.placeholder.com/740x160
+  logoUrl: /2021/sponsors/kaonavi.png
   prText: |
     社員の個性・才能を発掘し、戦略人事を加速させるタレントマネジメントシステム「カオナビ」を提供しています。企業の人材情報をクラウド上で一元管理し、社員の顔や名前、経験、評価、スキル、才能などの人材情報を可視化することで、最適な人材配置や抜擢といった戦略的なタレントマネジメントの実現を支援しています。今後も、人材マネジメントのプラットフォームとして、日本の「働き方」を変えていきたいと考えています。
     フロントエンドはReact/TypeScriptで開発しています。積極採用中ですので、ご興味ある方はぜひカジュアル面談からでも可能なのでエントリーお待ちしております。（エンジニア採用資料はこちら：https://corp.kaonavi.jp/recruit/recruitment/）
   grade: premium
 - name: Classi株式会社
   url: https://corp.classi.jp/careers/
-  logoUrl: https://via.placeholder.com/740x160
+  logoUrl: /2021/sponsors/classi.png
   prText: |
     教育プラットフォーム「Classi（クラッシー）」の開発・運営を通して、新たな学びの形を支援しています。提供開始から6年で、全国の高校の"2校に1校"、高校生の"2人に1人"に利用されるサービスに成長しました。スマートフォン・タブレット・PC などのデバイスを問わずに利用でき、授業や面談、学校と保護者のコミュニケーションなど、学校現場の多様なシーンで活用されています。
   grade: sponsor
@@ -31,6 +31,6 @@
   grade: sponsor
 - name: 株式会社ドワンゴ
   url: https://dwango.co.jp/
-  logoUrl: https://via.placeholder.com/740x160
+  logoUrl: /2021/sponsors/dwango.png
   prText: ""
   grade: sponsor

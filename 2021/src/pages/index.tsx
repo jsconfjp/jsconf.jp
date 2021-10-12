@@ -8,7 +8,6 @@ import { SEO } from "../components/Seo"
 import { Hero } from "../components/Hero"
 import { SubTitle } from "../components/SubTitle"
 import { SpeakerList } from "../components/SpeakerList"
-// @ts-expect-error To be updated
 import { SponsorList } from "../components/SponsorList"
 import { LinkButton } from "../components/LinkButton"
 import { Card as _Card } from "../components/Card"
@@ -79,7 +78,6 @@ const SchedulesBox = styled.div`
     flex-direction: column;
   }
 `
-// @ts-expect-error To be updated
 const SponsorBox = styled.div`
   margin-top: 80px;
   padding: 100px 0;
@@ -166,7 +164,6 @@ export default function IndexPage() {
     }
   `)
   const guestSpeakers = allSpeakersYaml.edges.map(({ node }: any) => node)
-  // @ts-expect-error To be updated
   const sponsors = allSponsorsYaml.edges.map(({ node }: any) => node)
   const talks = allTalksYaml.edges.map(({ node }: any) => node)
   const avatars = allFile.nodes
@@ -269,9 +266,11 @@ export default function IndexPage() {
               <>
                 <SubTitle>{t("organizingTeam")}</SubTitle>
                 <OrganizersBox>
-                  {jnaMembers.map(({ node: member }: { node: any }) => (
-                    <Member {...member} />
-                  ))}
+                  {jnaMembers.map(
+                    ({ node: member }: { node: any }, i: number) => (
+                      <Member key={i} {...member} />
+                    )
+                  )}
                 </OrganizersBox>
               </>
             ) : null}
@@ -279,9 +278,11 @@ export default function IndexPage() {
               <>
                 <SubTitle>{t("volunteerTeam")}</SubTitle>
                 <MembersBox>
-                  {notJnaMembers.map(({ node: member }: { node: any }) => (
-                    <Member {...member} />
-                  ))}
+                  {notJnaMembers.map(
+                    ({ node: member }: { node: any }, i: number) => (
+                      <Member key={i} {...member} />
+                    )
+                  )}
                 </MembersBox>
               </>
             ) : null}
