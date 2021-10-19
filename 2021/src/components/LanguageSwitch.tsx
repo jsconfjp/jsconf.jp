@@ -27,26 +27,31 @@ const Separator = styled.span`
 
 export function LanguageSwitch(props: Props) {
   const { onChange, currentLanguage, languages } = props
+  const [hasMounted, setHasMounted] = React.useState(false)
   const langKeys = Object.keys(languages) as Languages[]
 
+  React.useEffect(() => {setHasMounted(true)}, [])
+
   return (
-    <>
-      {langKeys.map((langKey, i) => {
-        return (
-          <React.Fragment key={langKey}>
-            <Lang
-              href={currentLanguage?.startsWith(langKey) ? undefined : "#"}
-              onClick={e => {
-                e.preventDefault()
-                onChange(langKey)
-              }}
-            >
-              {languages[langKey]}
-            </Lang>
-            {i + 1 === langKeys.length ? null : <Separator>/</Separator>}
-          </React.Fragment>
-        )
-      })}
-    </>
+    hasMounted
+      ? <>
+        {langKeys.map((langKey, i) => {
+          return (
+            <React.Fragment key={langKey}>
+              <Lang
+                href={currentLanguage?.startsWith(langKey) ? undefined : "#"}
+                onClick={e => {
+                  e.preventDefault()
+                  onChange(langKey)
+                }}
+              >
+                {languages[langKey]}
+              </Lang>
+              {i + 1 === langKeys.length ? null : <Separator>/</Separator>}
+            </React.Fragment>
+          )
+        })}
+      </>
+    : null
   )
 }
