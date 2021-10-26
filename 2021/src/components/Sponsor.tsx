@@ -16,7 +16,7 @@ const Img = styled.img`
   box-sizing: border-box;
   width: 100%;
 
-  &.platinum {
+  &.premium {
     width: 780px;
     height: 200px;
 
@@ -26,16 +26,10 @@ const Img = styled.img`
       max-height: 160px;
     }
   }
-  &.gold {
+  &.sponsor {
     width: 100%;
     max-width: 440px;
     max-height: 125px;
-  }
-  &.silver,
-  &.bronze {
-    width: 100%;
-    max-width: 273px;
-    max-height: 97px;
   }
 
   ${({ theme }) => theme.breakpoints.mobile} {
@@ -50,18 +44,25 @@ const Img = styled.img`
 `
 
 export type Props = {
-  grade: "platinum" | "gold" | "silver" | "bronze"
+  grade: "premium" | "sponsor"
   logoUrl: string
   name: string
   url: string
+  prText: string
 }
 
 export function Sponsor(props: Props) {
-  const { logoUrl, url, grade, name } = props
+  const { logoUrl, url, grade, name, prText } = props
 
   return (
     <Box href={url} target="_blank">
-      <Img src={logoUrl} width="100%" className={grade} alt={name} />
+      <Img
+        src={logoUrl}
+        width="100%"
+        className={grade}
+        alt={name}
+        title={prText}
+      />
     </Box>
   )
 }

@@ -25,14 +25,9 @@ const PlatinumBox = styled.div`
   margin: 0 auto;
   ${baseGridStyle}
 `
-const GoldBox = styled.div`
+const SponsorBox = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  ${baseGridStyle}
-`
-const OtherBox = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   ${baseGridStyle}
 `
 const SubTitle = styled.h3`
@@ -50,42 +45,26 @@ export function SponsorList(props: Props) {
       [sponsor.grade]: acc[sponsor.grade].concat([sponsor])
     }),
     {
-      platinum: [],
-      gold: [],
-      silver: [],
-      bronze: []
+      premium: [],
+      sponsor: []
     } as { [K in SponsorType["grade"]]: SponsorType[] }
   )
 
   return (
     <>
-      <SubTitle>{t("sponsor.platinum")}</SubTitle>
+      <SubTitle>{t("sponsor.premium")}</SubTitle>
       <PlatinumBox>
-        {grades.platinum.map(platinumSponsor => (
+        {grades.premium.map(platinumSponsor => (
           <Sponsor key={platinumSponsor.url} {...platinumSponsor} />
         ))}
       </PlatinumBox>
 
-      <SubTitle>{t("sponsor.gold")}</SubTitle>
-      <GoldBox>
-        {grades.gold.map(goldSponsor => (
-          <Sponsor key={goldSponsor.url} {...goldSponsor} />
+      <SubTitle>{t("sponsor.sponsor")}</SubTitle>
+      <SponsorBox>
+        {grades.sponsor.map(sponsor => (
+          <Sponsor key={sponsor.url} {...sponsor} />
         ))}
-      </GoldBox>
-
-      <SubTitle>{t("sponsor.silver")}</SubTitle>
-      <OtherBox>
-        {grades.silver.map(silverSponsor => (
-          <Sponsor key={silverSponsor.url} {...silverSponsor} />
-        ))}
-      </OtherBox>
-
-      <SubTitle>{t("sponsor.bronze")}</SubTitle>
-      <OtherBox>
-        {grades.bronze.map(bronzeSponsor => (
-          <Sponsor key={bronzeSponsor.url} {...bronzeSponsor} />
-        ))}
-      </OtherBox>
+      </SponsorBox>
     </>
   )
 }

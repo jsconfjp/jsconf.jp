@@ -36,10 +36,8 @@ export const en = {
     callForSponsors: "Call For Sponsors",
     becomeASponsor: "Become a sponsor",
     sponsors: "Sponsors",
-    "sponsor.platinum": "Platinum",
-    "sponsor.gold": "Gold",
-    "sponsor.silver": "Silver",
-    "sponsor.bronze": "Bronze",
+    "sponsor.premium": "Premium Sponsor",
+    "sponsor.sponsor": "Sponsor",
     openMobileMenu: "Open Navigation Menu",
     closeMobileMenu: "Close Navigation Menu",
     "jna-address":

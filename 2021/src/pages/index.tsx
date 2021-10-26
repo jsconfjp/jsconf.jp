@@ -8,25 +8,24 @@ import { SEO } from "../components/Seo"
 import { Hero } from "../components/Hero"
 import { SubTitle } from "../components/SubTitle"
 import { SpeakerList } from "../components/SpeakerList"
-// @ts-expect-error To be updated
 import { SponsorList } from "../components/SponsorList"
 import { LinkButton } from "../components/LinkButton"
 import { Card as _Card } from "../components/Card"
 import { Centerize } from "../components/Centerize"
+import { Member } from "../components/Member"
 import bg from "../images/bg.png"
 import bgFlipX from "../images/bg-flip-x.png"
 
 const WavyBox = styled.div`
   margin: 0;
-  padding-bottom: 80px;
   background-image: url("${bg}");
   background-repeat: no-repeat;
   background-position: top -830px right -300px;
   background-size: 100%;
-  // background-image: url("${bg}"), url("${bgFlipX}");
-  // background-repeat: no-repeat, no-repeat;
-  // background-position: top -830px right -300px, center left -450px;
-  // background-size: 100%, 120%;
+  background-image: url("${bg}"), url("${bgFlipX}");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top -830px right -300px, center left -450px;
+  background-size: 100%, 120%;
 `
 const Container = styled.div`
   padding: 0 1em;
@@ -44,13 +43,16 @@ const Card = styled(_Card)`
 const OrganizersBox = styled.div`
   display: grid;
   margin-bottom: 1em;
-  grid-template-columns: repeat(auto-fit, minmax(1em, max-content));
   grid-column-gap: 60px;
   grid-row-gap: 60px;
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.text};
   font-size: 1.6rem;
   overflow-wrap: break-word;
+
+  ${({ theme }) => theme.breakpoints.largerThanMobile} {
+    grid-template-columns: repeat(3, minmax(1em, 200px));
+  }
 
   ${({ theme }) => theme.breakpoints.mobile} {
     grid-template-columns: repeat(3, minmax(1em, max-content));
@@ -76,7 +78,6 @@ const SchedulesBox = styled.div`
     flex-direction: column;
   }
 `
-// @ts-expect-error To be updated
 const SponsorBox = styled.div`
   margin-top: 80px;
   padding: 100px 0;
@@ -108,6 +109,7 @@ export default function IndexPage() {
             grade
             url
             logoUrl
+            prText
           }
         }
       }
@@ -162,7 +164,6 @@ export default function IndexPage() {
     }
   `)
   const guestSpeakers = allSpeakersYaml.edges.map(({ node }: any) => node)
-  // @ts-expect-error To be updated
   const sponsors = allSponsorsYaml.edges.map(({ node }: any) => node)
   const talks = allTalksYaml.edges.map(({ node }: any) => node)
   const avatars = allFile.nodes
@@ -265,18 +266,11 @@ export default function IndexPage() {
               <>
                 <SubTitle>{t("organizingTeam")}</SubTitle>
                 <OrganizersBox>
-                  {jnaMembers.map(({ node: member }: { node: any }) => (
-                    <div>
-                      <a href={member.url} target="_blank" rel="noopener">
-                        <img
-                          width="100%"
-                          loading="lazy"
-                          src={`${member.avatar}?size=160`}
-                        />
-                        <span>{member.name}</span>
-                      </a>
-                    </div>
-                  ))}
+                  {jnaMembers.map(
+                    ({ node: member }: { node: any }, i: number) => (
+                      <Member key={i} {...member} />
+                    )
+                  )}
                 </OrganizersBox>
               </>
             ) : null}
@@ -284,18 +278,11 @@ export default function IndexPage() {
               <>
                 <SubTitle>{t("volunteerTeam")}</SubTitle>
                 <MembersBox>
-                  {notJnaMembers.map(({ node: member }: { node: any }) => (
-                    <div>
-                      <a href={member.url} target="_blank" rel="noopener">
-                        <img
-                          width="100%"
-                          loading="lazy"
-                          src={`${member.avatar}?size=160`}
-                        />
-                        <span>{member.name}</span>
-                      </a>
-                    </div>
-                  ))}
+                  {notJnaMembers.map(
+                    ({ node: member }: { node: any }, i: number) => (
+                      <Member key={i} {...member} />
+                    )
+                  )}
                 </MembersBox>
               </>
             ) : null}
@@ -307,15 +294,11 @@ export default function IndexPage() {
           </Centerize>
         </Container>
 
-        {/* TODO: To be updated */}
-        {/* <SponsorBox>
+        <SponsorBox>
           <Centerize>
-            <Container>
-              <SubTitle>{t("sponsors")}</SubTitle>
-              <SponsorList sponsors={sponsors} />
-            </Container>
+            <SponsorList sponsors={sponsors} />
           </Centerize>
-        </SponsorBox> */}
+        </SponsorBox>
       </WavyBox>
     </Layout>
   )
