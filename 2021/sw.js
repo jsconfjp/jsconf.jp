@@ -83,7 +83,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3498615268.json",
-    "revision": "873cbc951ea7b7e49f8fb1e72f63d790"
+    "revision": "ae4899f68e763552cf4d8ea3ff902af4"
   },
   {
     "url": "page-data/jp-specified-commercial-transactions-act/page-data.json",
@@ -109,7 +109,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3320513770.json",
-    "revision": "8057ad33acb72442af25459d1bdda0c2"
+    "revision": "adeb28c44950330f90351d944998418c"
   },
   {
     "url": "component---src-pages-sponsors-tsx-1c9d98741bf179cb347a.js"
@@ -120,7 +120,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/422937091.json",
-    "revision": "249d681d8a8c53a1cbf7d8589b39f770"
+    "revision": "e87a4853feecae4b062c73eaf1debd85"
   },
   {
     "url": "manifest.webmanifest",
