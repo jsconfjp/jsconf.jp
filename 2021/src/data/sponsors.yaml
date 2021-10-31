@@ -34,11 +34,12 @@
   logoUrl: /2021/sponsors/dwango.png
   prText: ""
   grade: sponsor
-# - name: Ubie 株式会社
-#   grade: premium
-#   url: https://ubie.life/
-#   logoUrl: /2021/sponsors/xxx.xxx
-#   prText: ""
+- name: Ubie 株式会社
+  grade: premium
+  url: https://ubie.life/
+  logoUrl: /2021/sponsors/ubie.png
+  prText: |
+    「テクノロジーで人々を適切な医療に案内する」をミッションに掲げ、医師とエンジニアが2017年5月に創業したヘルステックスタートアップです。AIをコア技術とし、症状から適切な医療へと案内する「ユビーAI受診相談」と、医療現場の業務効率化を図る「ユビーAI問診」を開発・提供。誰もが自分にあった医療にアクセスできる社会づくりを進めています。
 - name: 株式会社リクルート
   grade: premium
   url: https://recruit-saiyo.jp/
