@@ -82,7 +82,7 @@ export function Speaker(props: Props) {
   }
 
   return (
-    <LinkContainer to={`${withPrefix("/")}talk/${uuid}`}>
+    <LinkContainer to={`/${withPrefix("")}talk/${uuid}`}>
       <Avatar image={avatar} alt={name} loading="lazy" />
       <Title>{enOrJa(i18n)(title, titleJa)}</Title>
       <Name>{name}</Name>
