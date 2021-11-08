@@ -1,51 +1,668 @@
-- uuid: example
+- uuid: javascripttypescriptだけでメディアサイトをインフラから構築する方法
   date: day1
   startsAt: "00:00"
-  endsAt: "01:00"
-  room: A
-  title: What is Lorem Ipsum?
-  titleJa: Lorem Ipsumとは？
+  endsAt: "00:00"
+  room: TODO
+  title: JavaScript(TypeScript)だけでメディアサイトをインフラから構築する方法
+  titleJa: JavaScript(TypeScript)だけでメディアサイトをインフラから構築する方法
   description: >-
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    (Untranslated)
+    近年、APIベースでwebサーバーなどのインフラ部分を構築できるサービスが増加してきました。中でも一部のサードパーティやベンダーでは、インフラ構成の定義についてもJavaScriptなどのスクリプト言語を利用できるツールやライブラリの公開がはじまっています。
+
+    本セッションでは、AWS CDKやServerless
+    Frameworkを例に、JavaScriptまたはTypeScriptでwebサーバーやAPIバックエンドの構成定義とデプロイを行う方法を紹介します。
+
+    また、Next.jsを利用したサイト構築の事例を元に、実際に運用する上で注意すべき点やハマりどころ、技術選定のポイントなどについても紹介します。
+
+    # Topic
+
+    - スクリプト言語で行うIaC
+
+    - Serverless Framework / AWS CDKでのインフラ定義のポイント
+
+    - serverless-nextjsの紹介
+
+    - Next.jsをAWS CDKでAWSに公開する際のハマりどころや注意点
   descriptionJa: >-
-    Lorem Ipsumは、印刷・組版業界のダミーテキストです。Lorem Ipsumは、1500年代に無名の印刷業者が活字見本帳を作るために、活字の入ったギャレーをスクランブルして以来、業界の標準的なダミーテキストとなっています。このダミーテキストは、5世紀の時を経ただけでなく、電子活字への移行にも耐え、基本的に変化していません。1960年代には、Lorem Ipsumの文章を収録したLetrasetシートが発売されて人気を博し、最近ではAldus PageMakerなどのDTPソフトにLorem Ipsumのバージョンが収録されるようになりました。
+    近年、APIベースでwebサーバーなどのインフラ部分を構築できるサービスが増加してきました。中でも一部のサードパーティやベンダーでは、インフラ構成の定義についてもJavaScriptなどのスクリプト言語を利用できるツールやライブラリの公開がはじまっています。
+
+    本セッションでは、AWS CDKやServerless
+    Frameworkを例に、JavaScriptまたはTypeScriptでwebサーバーやAPIバックエンドの構成定義とデプロイを行う方法を紹介します。
+
+    また、Next.jsを利用したサイト構築の事例を元に、実際に運用する上で注意すべき点やハマりどころ、技術選定のポイントなどについても紹介します。
+
+    # Topic
+
+    - スクリプト言語で行うIaC
+
+    - Serverless Framework / AWS CDKでのインフラ定義のポイント
+
+    - serverless-nextjsの紹介
+
+    - Next.jsをAWS CDKでAWSに公開する際のハマりどころや注意点
   spokenLanguage: ja
-  slideLanguage: ""
+  slideLanguage: ja
   speakerIDs:
-    - example
-- uuid: example3
+    - hidetaka-okamoto
+- uuid: the-2021-edition-of-dealing-with-files-on-the-web
   date: day1
-  startsAt: "01:10"
-  endsAt: "01:40"
-  room: B
-  title: What is Lorem Ipsum?
-  titleJa: Lorem Ipsumとは？
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: The 2021 edition of dealing with files on the Web
+  titleJa: The 2021 edition of dealing with files on the Web
   description: >-
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    The file input element and the download attribute on anchor elements used to
+    be the primary way for working with files on the Web. Not anymore! In this
+    presentation, I will show modern ways of dealing with files in the browser
+    and how they integrate with the clipboard, drag and drop, and your operating
+    system's file explorer. You will also learn that not all files are created
+    equal! This will be a pre-recorded "live"-coding session, so expect no
+    slides, no coding glitches; just pure edutainment!
   descriptionJa: >-
-    Lorem Ipsumは、印刷・組版業界のダミーテキストです。Lorem Ipsumは、1500年代に無名の印刷業者が活字見本帳を作るために、活字の入ったギャレーをスクランブルして以来、業界の標準的なダミーテキストとなっています。このダミーテキストは、5世紀の時を経ただけでなく、電子活字への移行にも耐え、基本的に変化していません。1960年代には、Lorem Ipsumの文章を収録したLetrasetシートが発売されて人気を博し、最近ではAldus PageMakerなどのDTPソフトにLorem Ipsumのバージョンが収録されるようになりました。
-  spokenLanguage: ja
-  slideLanguage: ""
+    （未翻訳）The file input element and the download attribute on anchor elements
+    used to be the primary way for working with files on the Web. Not anymore!
+    In this presentation, I will show modern ways of dealing with files in the
+    browser and how they integrate with the clipboard, drag and drop, and your
+    operating system's file explorer. You will also learn that not all files are
+    created equal! This will be a pre-recorded "live"-coding session, so expect
+    no slides, no coding glitches; just pure edutainment!
+  spokenLanguage: en
+  slideLanguage: en
   speakerIDs:
-    - example
-- uuid: example4
+    - thomas-steiner
+- uuid: アクセシブルなフロントエンド開発のこれまでとこれから
   date: day1
-  startsAt: "01:10"
-  endsAt: "01:40"
-  room: A
-  title: What is Lorem Ipsum?
-  titleJa: Lorem Ipsumとは？
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: アクセシブルなフロントエンド開発のこれまでとこれから
+  titleJa: アクセシブルなフロントエンド開発のこれまでとこれから
   description: >-
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    (Untranslated)
+    昨今アクセシビリティに関する興味関心が増えてきた中で、SPAといったWebアプリケーションにおけるアクセシビリティを考慮した実装についてはまだ認識が広まっていないように感じます。
+
+    フロントエンドフレームワークを使ってより良いアクセシビリティ実装をするにはどうすればいいかの方法、その結果どういう形で伝わっているかを紹介しようと思います。
+
+    またWebアプリケーションでHTMLを使ってUI実装することに限界を感じており、それを解消するためのReactGUIやHeadless
+    UIといった新たなアプローチにおける期待についても紹介したいと思っております。
   descriptionJa: >-
-    Lorem Ipsumは、印刷・組版業界のダミーテキストです。Lorem Ipsumは、1500年代に無名の印刷業者が活字見本帳を作るために、活字の入ったギャレーをスクランブルして以来、業界の標準的なダミーテキストとなっています。このダミーテキストは、5世紀の時を経ただけでなく、電子活字への移行にも耐え、基本的に変化していません。1960年代には、Lorem Ipsumの文章を収録したLetrasetシートが発売されて人気を博し、最近ではAldus PageMakerなどのDTPソフトにLorem Ipsumのバージョンが収録されるようになりました。
+    昨今アクセシビリティに関する興味関心が増えてきた中で、SPAといったWebアプリケーションにおけるアクセシビリティを考慮した実装についてはまだ認識が広まっていないように感じます。
+
+    フロントエンドフレームワークを使ってより良いアクセシビリティ実装をするにはどうすればいいかの方法、その結果どういう形で伝わっているかを紹介しようと思います。
+
+    またWebアプリケーションでHTMLを使ってUI実装することに限界を感じており、それを解消するためのReactGUIやHeadless
+    UIといった新たなアプローチにおける期待についても紹介したいと思っております。
   spokenLanguage: ja
-  slideLanguage: ""
+  slideLanguage: ja
   speakerIDs:
-    - example
-- uuid: "day1-break-01:00"
-  startsAt: "01:00"
-  endsAt: "01:10"
+    - okuto-oyama
+- uuid: amp-キャッシュを超えるシステムを自社ドメインで実現する方法
   date: day1
-  title: Break
-  speakerIDs: []
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: AMP キャッシュを超えるシステムを自社ドメインで実現する方法
+  titleJa: AMP キャッシュを超えるシステムを自社ドメインで実現する方法
+  description: >-
+    (Untranslated) ・AMP は、Web Components を用いるためのライブラリとしての側面と Google
+    独自のキャッシュ配信基盤としての側面を持っている。
+
+    ・AMP の提供している Web Components は高速で UX も問題ない。
+
+    ・AMP キャッシュは検索結果の時点で HTML をプリフェッチできる利点がある。
+
+    ・しかし AMP キャッシュはドメインが Google になるという欠点がある。
+
+    ・各種アナリティクスツールの計測観点ではドメインが変わることで必要なマーケティングが行えない。
+
+    ・そこで、AMP をライブラリとしてのみ活用し、AMP キャッシュに替わるキャッシュシステムを自分たちで実装して実現した。
+
+    ・fastly の CDN を配置し AMP キャッシュと同様の SWR キャッシュを採用した。
+
+    ・そして Google Bot が AMP ページをあらかじめキャッシュするように、キャッシュを温めるための自サイト向けクローラを用意した。
+
+    ・AMP はライブラリとして使いつつ AMP valid にはさせないよう Next.js や AMP のバリデータに独自の使い方を適用させた。
+
+    ・開発体験を充実させるために Next.js x TypeScript x AMP の組み合わせを実現した。
+
+    ・さらに SXG キャッシュで検索結果からのプリフェッチも実現した。
+  descriptionJa: |-
+    ・AMP は、Web Components を用いるためのライブラリとしての側面と Google 独自のキャッシュ配信基盤としての側面を持っている。
+    ・AMP の提供している Web Components は高速で UX も問題ない。
+    ・AMP キャッシュは検索結果の時点で HTML をプリフェッチできる利点がある。
+    ・しかし AMP キャッシュはドメインが Google になるという欠点がある。
+    ・各種アナリティクスツールの計測観点ではドメインが変わることで必要なマーケティングが行えない。
+    ・そこで、AMP をライブラリとしてのみ活用し、AMP キャッシュに替わるキャッシュシステムを自分たちで実装して実現した。
+    ・fastly の CDN を配置し AMP キャッシュと同様の SWR キャッシュを採用した。
+    ・そして Google Bot が AMP ページをあらかじめキャッシュするように、キャッシュを温めるための自サイト向けクローラを用意した。
+    ・AMP はライブラリとして使いつつ AMP valid にはさせないよう Next.js や AMP のバリデータに独自の使い方を適用させた。
+    ・開発体験を充実させるために Next.js x TypeScript x AMP の組み合わせを実現した。
+    ・さらに SXG キャッシュで検索結果からのプリフェッチも実現した。
+  spokenLanguage: ja
+  slideLanguage: ja
+  speakerIDs:
+    - junya-kaji
+- uuid: web-ベースのカジュアルゲーム「block-pong」の実装とビジネス
+  date: day1
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: Web ベースのカジュアルゲーム「Block Pong」の実装とビジネス
+  titleJa: Web ベースのカジュアルゲーム「Block Pong」の実装とビジネス
+  description: >-
+    (Untranslated) Block Pong という Web 技術をメインに使っているカジュアルゲームの技術詳細
+    (浮動小数点演算の誤差の吸収のための wasm と、Canvas の globalCompositeOperation の話を予定しております)
+    の紹介を中心に、Web 技術を使うことによって可能になったビジネスモデルの紹介も少しして、今後の Web におけるゲーム開発の課題や方向性を示します。
+  descriptionJa: >-
+    Block Pong という Web 技術をメインに使っているカジュアルゲームの技術詳細 (浮動小数点演算の誤差の吸収のための wasm
+    と、Canvas の globalCompositeOperation の話を予定しております) の紹介を中心に、Web
+    技術を使うことによって可能になったビジネスモデルの紹介も少しして、今後の Web におけるゲーム開発の課題や方向性を示します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  speakerIDs:
+    - takuo-kihira
+- uuid: webフロントエンドのリプレースを支えるテストの考え方
+  date: day1
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: Webフロントエンドのリプレースを支えるテストの考え方
+  titleJa: Webフロントエンドのリプレースを支えるテストの考え方
+  description: >-
+    (Untranslated) Webフロントエンド実装のリプレースや根本的なリファクタリングは、各所で需要が高まっていることと思います。
+
+    画面単位やコンポーネント単位で頑張るといった方針は多く事例が挙がっていますが、その過程をどのようにテストするかについては、個別の事情がより大きく影響することでしょう。
+
+    株式会社ドワンゴが提供するオンライン学習サービスN予備校にて自ら活用したアプローチを中心にして、リプレースやそれに相当するリファクタリングにおけるテストの考え方・パターンを紹介します。
+  descriptionJa: >-
+    Webフロントエンド実装のリプレースや根本的なリファクタリングは、各所で需要が高まっていることと思います。
+
+    画面単位やコンポーネント単位で頑張るといった方針は多く事例が挙がっていますが、その過程をどのようにテストするかについては、個別の事情がより大きく影響することでしょう。
+
+    株式会社ドワンゴが提供するオンライン学習サービスN予備校にて自ら活用したアプローチを中心にして、リプレースやそれに相当するリファクタリングにおけるテストの考え方・パターンを紹介します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  speakerIDs:
+    - berlysia
+- uuid: deno-の-これまで-と-これから
+  date: day1
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: Deno の これまで と これから
+  titleJa: Deno の これまで と これから
+  description: >-
+    (Untranslated) 2018年5月に最初の Deno のプロトタイプが発表されました。2020年5月には Deno 1.0
+    がリリースされ、その後も様々な機能の開発が進められています。当セッションでは、これまでの Deno の3年間の歩みを振り返りつつ、2022年Q2
+    に予定されている Deno 2.0 に向けてのロードマップの話をします。
+  descriptionJa: >-
+    2018年5月に最初の Deno のプロトタイプが発表されました。2020年5月には Deno 1.0
+    がリリースされ、その後も様々な機能の開発が進められています。当セッションでは、これまでの Deno の3年間の歩みを振り返りつつ、2022年Q2
+    に予定されている Deno 2.0 に向けてのロードマップの話をします。
+  spokenLanguage: ja
+  slideLanguage: ja
+  speakerIDs:
+    - yoshiya-hinosawa
+- uuid: 状態管理ライブラリについて
+  date: day1
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: 状態管理ライブラリについて
+  titleJa: 状態管理ライブラリについて
+  description: |
+    (Untranslated) パート1: 導入
+    状態管理ライブラリとは？ReactステートやContextとの違いは？など基本的なことについて
+    パート2: 状態管理ライブラリ三部作について
+    Jotai、Valitio、Zustandの特徴や違いなどについて
+    パート3: React 18と状態管理
+    コンカレントレンダリングと状態管理、ティアリングやブランチングなどについて
+  descriptionJa: |
+    パート1: 導入
+    状態管理ライブラリとは？ReactステートやContextとの違いは？など基本的なことについて
+    パート2: 状態管理ライブラリ三部作について
+    Jotai、Valitio、Zustandの特徴や違いなどについて
+    パート3: React 18と状態管理
+    コンカレントレンダリングと状態管理、ティアリングやブランチングなどについて
+  spokenLanguage: ja
+  slideLanguage: ja
+  speakerIDs:
+    - daishi-kato
+- uuid: static-site-generator-is-a-compiler
+  date: day1
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: Static Site Generator is a Compiler
+  titleJa: Static Site Generator is a Compiler
+  description: >-
+    (Untranslated)
+    静的サイトジェネレーターはコンテンツを受け取り、静的サイトを出力します。さらに近頃はただ静的サイトを出力するだけではなく、パフォーマンスの最適化や職人芸を適用した上でサイトを出力するツールも登場しています。
+
+    では、どのようなサイトに対しても静的サイトジェネレーターを適用することが相応しいのでしょうか。私はそう言い切れるとは思いません。なぜなら最適化が施されたコードを埋めたサイトより、何も埋め込んでいないサイトの方が
+    "軽い" からです。しかし要件やデザインを満たすべく様々なコードを埋め込んでいくと、静的サイトジェネレータを使った方が "速い"
+    と言い切れる分岐点に出会います。
+
+    そこでこのトークでは一般的な静的サイトジェネレータが行っている最適化手法と、様々な状況下においての手書き HTML
+    とのパフォーマンス比較結果を紹介し、どのような状況下であれば静的サイトジェネレータを使うことによる恩恵が高まるかを報告します。
+
+    そして最後に静的サイトジェネレータの最適化手段を知ることで、既存のツールに囚われることなく product を better product
+    に変換するツールは内製できるという事例を紹介します。
+  descriptionJa: >-
+    静的サイトジェネレーターはコンテンツを受け取り、静的サイトを出力します。さらに近頃はただ静的サイトを出力するだけではなく、パフォーマンスの最適化や職人芸を適用した上でサイトを出力するツールも登場しています。
+
+    では、どのようなサイトに対しても静的サイトジェネレーターを適用することが相応しいのでしょうか。私はそう言い切れるとは思いません。なぜなら最適化が施されたコードを埋めたサイトより、何も埋め込んでいないサイトの方が
+    "軽い" からです。しかし要件やデザインを満たすべく様々なコードを埋め込んでいくと、静的サイトジェネレータを使った方が "速い"
+    と言い切れる分岐点に出会います。
+
+    そこでこのトークでは一般的な静的サイトジェネレータが行っている最適化手法と、様々な状況下においての手書き HTML
+    とのパフォーマンス比較結果を紹介し、どのような状況下であれば静的サイトジェネレータを使うことによる恩恵が高まるかを報告します。
+
+    そして最後に静的サイトジェネレータの最適化手段を知ることで、既存のツールに囚われることなく product を better product
+    に変換するツールは内製できるという事例を紹介します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  speakerIDs:
+    - yuta-ide
+- uuid: cookie等によるトラッキング規制と代替apiの最新情報まとめ
+  date: day1
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: Cookie等によるトラッキング規制と代替APIの最新情報まとめ
+  titleJa: Cookie等によるトラッキング規制と代替APIの最新情報まとめ
+  description: >-
+    (Untranslated)
+    インターネット広告技術（アドテック）業界では、これまで主にcookieを使って、データを自由に取得しサービスを提供していました。一方で、ユーザーのプライバシーに不利益を与えるリスクが課題になっています。
+
+    この課題に対して、法律（GDPRや個人情報保護法）、OS・ブラウザ（WebKitのITP、ChromeのPrivacy
+    Sandbox）の観点から様々な規制強化と、各種用途（ターゲティング、計測、ボット判定、デバイス判定、ログイン）に限定した代替技術の開発が進められています。
+
+    本Talkではそのような過去～現在における動向と、OS・ブラウザにおける規制、開発中の代替技術(API)の仕組みと議論について解説します。
+  descriptionJa: >-
+    インターネット広告技術（アドテック）業界では、これまで主にcookieを使って、データを自由に取得しサービスを提供していました。一方で、ユーザーのプライバシーに不利益を与えるリスクが課題になっています。
+
+    この課題に対して、法律（GDPRや個人情報保護法）、OS・ブラウザ（WebKitのITP、ChromeのPrivacy
+    Sandbox）の観点から様々な規制強化と、各種用途（ターゲティング、計測、ボット判定、デバイス判定、ログイン）に限定した代替技術の開発が進められています。
+
+    本Talkではそのような過去～現在における動向と、OS・ブラウザにおける規制、開発中の代替技術(API)の仕組みと議論について解説します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  speakerIDs:
+    - antoine-bourlon
+- uuid: graphql-と-prisma-から考える次のn年を見据えた技術選定
+  date: day1
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: GraphQL と Prisma から考える次のN年を見据えた技術選定
+  titleJa: GraphQL と Prisma から考える次のN年を見据えた技術選定
+  description: >-
+    (Untranslated) これは、 yasaichi さんによる素晴らしいトーク [Active
+    Recordから考える次の10年を見据えた技術選定](https://speakerdeck.com/yasaichi/architecture-decision-for-the-next-10-years-at-pixta)
+    へのアンサートークです。
+
+    私たちのチームでは新規サービスの開発を行っており、開発初期段階でいくつか技術的な判断を行いました。まず、API (public / internal)
+    のプロトコルを GraphQL に統一しました。そして、内部の主要なサービスのうち一つに Ruby on Rails (ActiveRecord),
+    もう一つに Node.js + Prisma という技術選定を行いました。
+
+    社内で広く使われていた Rails という選択肢を取ったことは自然でしたが、もう一つのサービスに Node.js を選択したこと、また、ORM
+    ライブラリとして ActiveRecord に思想が近い TypeORM ではなく、Prisma
+    を選択したという決断の理由について、主にアーキテクチャ的背景から理由を説明します。
+
+    また、開発期間が2年弱経ち、見えてきた課題も取り上げます。特に、yasaichi
+    さんの資料でも取り上げられている「トランザクションスクリプトを多く用いることになる」という課題について(実際に起きています)、それがどの程度深刻なのかの分析や、今後対処していく道筋について話します。
+
+    最後に、TypeScript における class
+    を利用したオブジェクト指向プログラミングについて、なぜそれが他の言語ほどには一般的に使われていないのか、について考察します。
+  descriptionJa: >-
+    これは、 yasaichi さんによる素晴らしいトーク [Active
+    Recordから考える次の10年を見据えた技術選定](https://speakerdeck.com/yasaichi/architecture-decision-for-the-next-10-years-at-pixta)
+    へのアンサートークです。
+
+    私たちのチームでは新規サービスの開発を行っており、開発初期段階でいくつか技術的な判断を行いました。まず、API (public / internal)
+    のプロトコルを GraphQL に統一しました。そして、内部の主要なサービスのうち一つに Ruby on Rails (ActiveRecord),
+    もう一つに Node.js + Prisma という技術選定を行いました。
+
+    社内で広く使われていた Rails という選択肢を取ったことは自然でしたが、もう一つのサービスに Node.js を選択したこと、また、ORM
+    ライブラリとして ActiveRecord に思想が近い TypeORM ではなく、Prisma
+    を選択したという決断の理由について、主にアーキテクチャ的背景から理由を説明します。
+
+    また、開発期間が2年弱経ち、見えてきた課題も取り上げます。特に、yasaichi
+    さんの資料でも取り上げられている「トランザクションスクリプトを多く用いることになる」という課題について(実際に起きています)、それがどの程度深刻なのかの分析や、今後対処していく道筋について話します。
+
+    最後に、TypeScript における class
+    を利用したオブジェクト指向プログラミングについて、なぜそれが他の言語ほどには一般的に使われていないのか、について考察します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  speakerIDs:
+    - qsona
+- uuid: javascript-エコシステムを維持する-oss-の努力と課題
+  date: day1
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: JavaScript エコシステムを維持する OSS の努力と課題
+  titleJa: JavaScript エコシステムを維持する OSS の努力と課題
+  description: >-
+    (Untranslated)
+    現在、JavaScriptでの開発を行うには、実行環境であるブラウザやNode.jsだけでなく、様々なツールを使う必要があります。
+
+    たとえば、TypeScript や Babel などのトランスパイラ、ESLintのようなリンターやそのプラグイン群、webpack や Rollup
+    などのモジュールバンドラー、Prettier のようなコードフォーマッターなどがあります。
+
+    それらのツールの多くはコミュニティによる OSS として開発・維持が行われています。
+
+    現代の Web の進化は速く、JavaScript も例外ではありません。ECMAScript 2015 以降、JavaScript
+    はより良い言語になるよう成長を続けています。JavaScript の成長に伴って、周辺ツールも成長する必要があります。
+
+    そして、その成長は各々のコミュニティの努力によって支えられています。
+
+    我々が当たり前のように使っているツールの裏側で、その当たり前を実現するために行われている努力、そして抱えている課題についてお話します。
+  descriptionJa: >-
+    現在、JavaScriptでの開発を行うには、実行環境であるブラウザやNode.jsだけでなく、様々なツールを使う必要があります。
+
+    たとえば、TypeScript や Babel などのトランスパイラ、ESLintのようなリンターやそのプラグイン群、webpack や Rollup
+    などのモジュールバンドラー、Prettier のようなコードフォーマッターなどがあります。
+
+    それらのツールの多くはコミュニティによる OSS として開発・維持が行われています。
+
+    現代の Web の進化は速く、JavaScript も例外ではありません。ECMAScript 2015 以降、JavaScript
+    はより良い言語になるよう成長を続けています。JavaScript の成長に伴って、周辺ツールも成長する必要があります。
+
+    そして、その成長は各々のコミュニティの努力によって支えられています。
+
+    我々が当たり前のように使っているツールの裏側で、その当たり前を実現するために行われている努力、そして抱えている課題についてお話します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  speakerIDs:
+    - sosuke-suzuki
+- uuid: モバイルブラウザにおけるclient-side-mlアプリケーションのプロダクション開発事例
+  date: day1
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: モバイルブラウザにおけるClient-side MLアプリケーションのプロダクション開発事例
+  titleJa: モバイルブラウザにおけるClient-side MLアプリケーションのプロダクション開発事例
+  description: >-
+    (Untranslated) 本発表では、client-side ML*
+    アプリケーションをプロダクション開発する上での事例やプラクティスについて紹介します。
+
+    (*client-side ML: ここでは機械学習を中心とした処理を特にモバイルブラウザ上で動かすことを指す)
+
+    私たちはメルカリというCtoCのマーケットプレイスを運営しています。私たちのチームでは、スマートフォンのカメラで商品を写すだけで、瞬時にメルカリで取引されている類似商品のカテゴリや価格情報が得られるWebアプリケーションを開発し、ユーザーテストを行っています。
+
+    このアプリケーションは、カメラをかざすだけで情報を表示するために、物体検出や物体追跡といった機械学習モデルの推論や画像処理を行っています。
+
+    さらに、レスポンスを速くしてスムーズでわかりやすいUXを提供するために、私たちはそれらの処理をサーバーサイドではなくブラウザ上で実行しています。このとき、WebAssemblyやWebGLといった技術を用いて、モバイルブラウザでも高速に動作するように実装しています。
+
+    一般に、機械学習モデルや画像処理はコストの高い処理です。実際、同じ処理をネイティブアプリケーションで実現することと比べて、モバイルブラウザではパフォーマンスが低下したり、技術的な制約で同じアルゴリズムの実現が難しかったりしました。そのため、プロダクトとしてリリースするために、私たちは適切な技術選択を行ったり、ローエンドデバイスでも満足に動くようなチューニングをしたりする必要がありました。
+
+    本発表では、以上のようなプロダクション開発中の試行錯誤で得られた、次のようなトピックを紹介する予定です。
+
+    - client-side MLの技術動向、ライブラリの比較
+
+    - ソフトウェアアーキテクチャや利用している技術スタック
+
+    - モバイルブラウザ向けのパフォーマンスチューニングの方法
+
+    - ユーザーからのフィードバックとそれに関する改善の事例
+  descriptionJa: >-
+    本発表では、client-side ML* アプリケーションをプロダクション開発する上での事例やプラクティスについて紹介します。
+
+    (*client-side ML: ここでは機械学習を中心とした処理を特にモバイルブラウザ上で動かすことを指す)
+
+    私たちはメルカリというCtoCのマーケットプレイスを運営しています。私たちのチームでは、スマートフォンのカメラで商品を写すだけで、瞬時にメルカリで取引されている類似商品のカテゴリや価格情報が得られるWebアプリケーションを開発し、ユーザーテストを行っています。
+
+    このアプリケーションは、カメラをかざすだけで情報を表示するために、物体検出や物体追跡といった機械学習モデルの推論や画像処理を行っています。
+
+    さらに、レスポンスを速くしてスムーズでわかりやすいUXを提供するために、私たちはそれらの処理をサーバーサイドではなくブラウザ上で実行しています。このとき、WebAssemblyやWebGLといった技術を用いて、モバイルブラウザでも高速に動作するように実装しています。
+
+    一般に、機械学習モデルや画像処理はコストの高い処理です。実際、同じ処理をネイティブアプリケーションで実現することと比べて、モバイルブラウザではパフォーマンスが低下したり、技術的な制約で同じアルゴリズムの実現が難しかったりしました。そのため、プロダクトとしてリリースするために、私たちは適切な技術選択を行ったり、ローエンドデバイスでも満足に動くようなチューニングをしたりする必要がありました。
+
+    本発表では、以上のようなプロダクション開発中の試行錯誤で得られた、次のようなトピックを紹介する予定です。
+
+    - client-side MLの技術動向、ライブラリの比較
+
+    - ソフトウェアアーキテクチャや利用している技術スタック
+
+    - モバイルブラウザ向けのパフォーマンスチューニングの方法
+
+    - ユーザーからのフィードバックとそれに関する改善の事例
+  spokenLanguage: ja
+  slideLanguage: ja
+  speakerIDs:
+    - tomohiro-kato
+- uuid: universal-devtools-for-all-environments
+  date: day1
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: Universal DevTools for all environments
+  titleJa: Universal DevTools for all environments
+  description: >-
+    (Untranslated)
+    モバイル端末の普及に伴い、WebView上のWebアプリ、PWA、LIFF、Miniアプリなど、Webブラウザにから独立したWebアプリケーションの需要が高まっています。しかし、これらモバイル端末向けWebアプリケーションにはブラウザ固有のDevToolが存在せず、デバッグが難しく開発体験が損なわれるという課題があります。
+
+    本セッションでは、Chrome DevTools Protocolを利用した、任意の環境で動作するWebアプリケーションをChrome
+    DevToolsでデバッグ可能にする新しいDevToolsを紹介します。
+  descriptionJa: >-
+    モバイル端末の普及に伴い、WebView上のWebアプリ、PWA、LIFF、Miniアプリなど、Webブラウザにから独立したWebアプリケーションの需要が高まっています。しかし、これらモバイル端末向けWebアプリケーションにはブラウザ固有のDevToolが存在せず、デバッグが難しく開発体験が損なわれるという課題があります。
+
+    本セッションでは、Chrome DevTools Protocolを利用した、任意の環境で動作するWebアプリケーションをChrome
+    DevToolsでデバッグ可能にする新しいDevToolsを紹介します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  speakerIDs:
+    - kohei-ueno
+- uuid: machine-learning-with-js
+  date: day1
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: Machine Learning with JS
+  titleJa: Machine Learning with JS
+  description: >-
+    This talk is dedicated to showing how the Machine Learning can be used with
+    on web with JavaScript using Tensorflow.js and React.js
+  descriptionJa: >-
+    （未翻訳）This talk is dedicated to showing how the Machine Learning can be used
+    with on web with JavaScript using Tensorflow.js and React.js
+  spokenLanguage: en
+  slideLanguage: en
+  speakerIDs:
+    - asiya
+- uuid: 関数型プログラミングのデザインパターンひとめぐり-with-ramdajs
+  date: day1
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: 関数型プログラミングのデザインパターンひとめぐり with Ramda.js
+  titleJa: 関数型プログラミングのデザインパターンひとめぐり with Ramda.js
+  description: >-
+    (Untranslated) クライアントサイドにおいては、React や Elm の台頭により "関数型プログラミング"
+    の手法が注目を浴びるようになったかと思います。この LT では、頻出するデザインパターンを Ramda.js というライブラリを用いて解説します。
+
+    高階関数や型を単独で紹介するのではなく、それらを複合的に利用したユースケースをご紹介します。
+  descriptionJa: >-
+    クライアントサイドにおいては、React や Elm の台頭により "関数型プログラミング" の手法が注目を浴びるようになったかと思います。この LT
+    では、頻出するデザインパターンを Ramda.js というライブラリを用いて解説します。
+
+    高階関数や型を単独で紹介するのではなく、それらを複合的に利用したユースケースをご紹介します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  speakerIDs:
+    - kazuyuki-takase-
+- uuid: 組織フェーズを見据えたwebフロントエンドのアーキテクチャと変遷
+  date: day1
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: 組織フェーズを見据えたWebフロントエンドのアーキテクチャと変遷
+  titleJa: 組織フェーズを見据えたWebフロントエンドのアーキテクチャと変遷
+  description: >-
+    (Untranslated) 10年間で約15万行のコードを抱え、jQuery -> React + DDD ->  React + Redux
+    とアーキテクチャの変遷を辿ってきたChatworkを事例として、
+
+    組織フェーズの変化によって発生する課題と、それらをアーキテクチャの観点からどのように乗り越えるか紐解きたいと思います。
+  descriptionJa: >-
+    10年間で約15万行のコードを抱え、jQuery -> React + DDD ->  React + Redux
+    とアーキテクチャの変遷を辿ってきたChatworkを事例として、
+
+    組織フェーズの変化によって発生する課題と、それらをアーキテクチャの観点からどのように乗り越えるか紐解きたいと思います。
+  spokenLanguage: ja
+  slideLanguage: ja
+  speakerIDs:
+    - tetsuya-shibutani
+- uuid: bundle-size-optimization-in-future-javascript
+  date: day1
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: Bundle Size Optimization in Future JavaScript
+  titleJa: Bundle Size Optimization in Future JavaScript
+  description: >-
+    (Untranslated) Core Web Vitals
+    の登場などにより、フロントエンド開発におけるパフォーマンスチューニングの重要性が増しています。
+
+    その中でも、バンドルサイズの削減については Tree-Shaking や Dead Code Elimination が普及していますが、未だ一般的な
+    Class-based OOP 等のプログラミングパターンとは相性が悪く、アプリケーション開発者が設計レベルから意識する必要があります。
+
+    この LT では、現在の JavaScript でバンドルサイズが膨らんでしまうパターンを紹介し、それらが将来的に解決される可能性を、TC39
+    で議論中の仕様やエコシステムの進化などから考察します。
+  descriptionJa: >-
+    Core Web Vitals の登場などにより、フロントエンド開発におけるパフォーマンスチューニングの重要性が増しています。
+
+    その中でも、バンドルサイズの削減については Tree-Shaking や Dead Code Elimination が普及していますが、未だ一般的な
+    Class-based OOP 等のプログラミングパターンとは相性が悪く、アプリケーション開発者が設計レベルから意識する必要があります。
+
+    この LT では、現在の JavaScript でバンドルサイズが膨らんでしまうパターンを紹介し、それらが将来的に解決される可能性を、TC39
+    で議論中の仕様やエコシステムの進化などから考察します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  speakerIDs:
+    - yuku-kotani
+- uuid: 加速するedge-computing-
+  date: day1
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: "加速するEdge Computing "
+  titleJa: "加速するEdge Computing "
+  description: >-
+    (Untranslated) Cloudflare Worker, Vercel Edge Function, Compute@Edge, Deno
+    deploy, AWS Lambda@Edgeなど, Edge でコードを実行するランタイムはどんどん増えています.
+
+    Edgeランタイムでコードを実行することは, URL Rewritesによるorigin serverの振り分け, HTTP Headerの加工,
+    Edgeでの認証などに有用で, それらの処理をHTTP
+    Request元のclientに地理的に近い環境で実行可能になりパフォーマンスの向上が見込めます.
+
+    これらのユースケースの整理をし, さらに Compute@Edge で触れられているEdge
+    Nativeなアプリケーションの構築といったEdgeの可能性についても触れて, Edgeで何をできるのか, 何をすべきでないのかしゃべります.
+  descriptionJa: >-
+    Cloudflare Worker, Vercel Edge Function, Compute@Edge, Deno deploy, AWS
+    Lambda@Edgeなど, Edge でコードを実行するランタイムはどんどん増えています.
+
+    Edgeランタイムでコードを実行することは, URL Rewritesによるorigin serverの振り分け, HTTP Headerの加工,
+    Edgeでの認証などに有用で, それらの処理をHTTP
+    Request元のclientに地理的に近い環境で実行可能になりパフォーマンスの向上が見込めます.
+
+    これらのユースケースの整理をし, さらに Compute@Edge で触れられているEdge
+    Nativeなアプリケーションの構築といったEdgeの可能性についても触れて, Edgeで何をできるのか, 何をすべきでないのかしゃべります.
+  spokenLanguage: ja
+  slideLanguage: ja
+  speakerIDs:
+    - shinyaigeek
+- uuid: building-markdown-editor-using-rust's-parser
+  date: day1
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: Building markdown editor using Rust's parser
+  titleJa: Building markdown editor using Rust's parser
+  description: >-
+    (Untranslated) このトークでは、wasmとRustのパーサーを使用したマークダウンエディタを作った時の話をします。
+
+    wasm採用のモチベーションやユースケース、Rustのコードをwasm pkg化する方法、wasm pkgをReact
+    Hookでロードする方法について紹介します。
+
+    このトークが終わる頃には、wasmのユースケースの一部を把握し、具体的な実装方法が身に付いていることを願っています。
+
+    https://blog.yagipy.me/md-editor-with-rust-parser-on-the-web
+  descriptionJa: >-
+    このトークでは、wasmとRustのパーサーを使用したマークダウンエディタを作った時の話をします。
+
+    wasm採用のモチベーションやユースケース、Rustのコードをwasm pkg化する方法、wasm pkgをReact
+    Hookでロードする方法について紹介します。
+
+    このトークが終わる頃には、wasmのユースケースの一部を把握し、具体的な実装方法が身に付いていることを願っています。
+
+    https://blog.yagipy.me/md-editor-with-rust-parser-on-the-web
+  spokenLanguage: ja
+  slideLanguage: ja
+  speakerIDs:
+    - hiroyuki-yagihashi
+- uuid: >-
+    asynchronicity-the-right-way:-understanding-the-basics-of-asynchronous-javascript-when-to-and-when-not-to-use-it-
+  date: day1
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: >-
+    Asynchronicity, the right way: Understanding the basics of asynchronous
+    JavaScript, when to and when not to use it.
+  titleJa: >-
+    Asynchronicity, the right way: Understanding the basics of asynchronous
+    JavaScript, when to and when not to use it.
+  description: >-
+    Asynchronicity, the right way: Understanding the basics of asynchronous
+    JavaScript, when to and when not to use it. 
+
+    1. Introduction to the concept of asynchronous vs synchronous.
+
+    2. Introduction to myself, and how I use JS in my everyday work.
+
+    3. Why the need for asynchronous behaviour
+
+    4. When to not use asynchronous JS
+
+    5. Understanding Promises, and how to use them correctly.
+
+    6. Use cases
+
+    7. Conclusion
+  descriptionJa: >-
+    （未翻訳）Asynchronicity, the right way: Understanding the basics of asynchronous
+    JavaScript, when to and when not to use it. 
+
+    1. Introduction to the concept of asynchronous vs synchronous.
+
+    2. Introduction to myself, and how I use JS in my everyday work.
+
+    3. Why the need for asynchronous behaviour
+
+    4. When to not use asynchronous JS
+
+    5. Understanding Promises, and how to use them correctly.
+
+    6. Use cases
+
+    7. Conclusion
+  spokenLanguage: en
+  slideLanguage: en
+  speakerIDs:
+    - julien-hora
+- uuid: state-of-css-2021-survey-results
+  date: day1
+  startsAt: "00:00"
+  endsAt: "00:00"
+  room: TODO
+  title: State of CSS 2021 Survey Results
+  titleJa: State of CSS 2021 Survey Results
+  description: A brief overview of the results for the 2021 State of CSS survey
+  descriptionJa: （未翻訳）A brief overview of the results for the 2021 State of CSS survey
+  spokenLanguage: en
+  slideLanguage: en
+  speakerIDs:
+    - sacha-greif
