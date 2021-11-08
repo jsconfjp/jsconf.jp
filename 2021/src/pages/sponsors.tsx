@@ -19,6 +19,7 @@ export default function SponsorsPage() {
             grade
             url
             logoUrl
+            prText
           }
         }
       }
@@ -33,7 +34,7 @@ export default function SponsorsPage() {
       <ResponsiveBox>
         <Breadcrumb path={[t("sponsors")]} />
         <Title>{t("sponsors")}</Title>
-        <SponsorList sponsors={sponsors} />
+        <SponsorList sponsors={sponsors} showPrText />
       </ResponsiveBox>
     </Layout>
   )

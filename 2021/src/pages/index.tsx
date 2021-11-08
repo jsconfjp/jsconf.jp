@@ -322,7 +322,7 @@ export default function IndexPage() {
 
         <SponsorBox>
           <Centerize>
-            <SponsorList sponsors={sponsors} />
+            <SponsorList sponsors={sponsors} showPrText={false} />
           </Centerize>
         </SponsorBox>
       </WavyBox>

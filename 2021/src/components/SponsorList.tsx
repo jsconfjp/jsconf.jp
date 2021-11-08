@@ -5,6 +5,7 @@ import { Sponsor, Props as SponsorType } from "./Sponsor"
 
 export type Props = {
   sponsors: SponsorType[]
+  showPrText: boolean
 }
 
 const baseGridStyle = css`
@@ -37,7 +38,7 @@ const SubTitle = styled.h3`
 `
 
 export function SponsorList(props: Props) {
-  const { sponsors } = props
+  const { sponsors, showPrText } = props
   const { t } = useTranslation()
   const grades = sponsors.reduce(
     (acc, sponsor) => ({
@@ -55,14 +56,18 @@ export function SponsorList(props: Props) {
       <SubTitle>{t("sponsor.premium")}</SubTitle>
       <PlatinumBox>
         {grades.premium.map(platinumSponsor => (
-          <Sponsor key={platinumSponsor.url} {...platinumSponsor} />
+          <Sponsor
+            key={platinumSponsor.url}
+            showPrText={showPrText}
+            {...platinumSponsor}
+          />
         ))}
       </PlatinumBox>
 
       <SubTitle>{t("sponsor.sponsor")}</SubTitle>
       <SponsorBox>
         {grades.sponsor.map(sponsor => (
-          <Sponsor key={sponsor.url} {...sponsor} />
+          <Sponsor key={sponsor.url} showPrText={showPrText} {...sponsor} />
         ))}
       </SponsorBox>
     </>
