@@ -157,10 +157,9 @@ export function InnerHeaderMobile(props: Props) {
               onChange={changeLanguage}
             />
           </LanguageSwitchBox>
-          {/* TODO: To be updated */}
-          {/* <MenuItem to="/speakers/">{t("speakers")}</MenuItem> */}
-          {/* <MenuItem to="/schedule/">{t("schedule")}</MenuItem> */}
-          {/* <MenuItem to="/sponsors/">{t("sponsors")}</MenuItem> */}
+          <MenuItem to="/speakers/">{t("speakers")}</MenuItem>
+          <MenuItem to="/schedule/">{t("schedule")}</MenuItem>
+          <MenuItem to="/sponsors/">{t("sponsors")}</MenuItem>
         </MenuBox>
       )}
     </Box>
