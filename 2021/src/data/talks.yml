@@ -679,10 +679,9 @@
   startsAt: "12:00"
   endsAt: "12:10"
   room: A
-  title: Opening
-  titleJa: オープニング
-  speakerIDs:
-    - yosuke-furukawa
+  title: Opening by Yosuke Furukawa
+  titleJa: オープニング by Yosuke Furukawa
+  speakerIDs: []
 - uuid: "day1-break-1240-1250"
   date: day1
   startsAt: "12:40"

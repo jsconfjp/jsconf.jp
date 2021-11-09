@@ -121,7 +121,7 @@ export default function Speaker(props: Props) {
           <p>
             {dateFormatter.format(times[date].startsAt)}, {startsAt} - {endsAt}
             <br />
-            Room: {room}
+            {t(`room${room}`)}
             <br />
             Spoken language: {t(spokenLanguage)}
             {slideLanguage ? (

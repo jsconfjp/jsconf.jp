@@ -57,6 +57,8 @@ const Title = styled.h2`
   font-family: ${({ theme }) => theme.fonts.text};
   font-size: 2rem;
   overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 `
 const Name = styled.p`
   margin-bottom: 0;
