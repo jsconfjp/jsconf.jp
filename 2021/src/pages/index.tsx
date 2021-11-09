@@ -200,7 +200,7 @@ export default function IndexPage() {
           </Centerize>
 
           <Card>
-            <SubTitle>{t("guestSpeakers")}</SubTitle>
+            <SubTitle>{t("speakers")}</SubTitle>
             <SpeakerList
               speakers={guestSpeakers}
               avatars={avatars}

@@ -21,7 +21,7 @@
     Alexa Champions
 - uuid: thomas-steiner
   name: Thomas Steiner
-  featured: false
+  featured: true
   presentations:
     - the-2021-edition-of-dealing-with-files-on-the-web
   biography: >-
@@ -36,7 +36,7 @@
     and tweets as @tomayac.
 - uuid: okuto-oyama
   name: Okuto Oyama
-  featured: false
+  featured: true
   presentations:
     - アクセシブルなフロントエンド開発のこれまでとこれから
   biography: |-
@@ -71,7 +71,7 @@
     社の起業を経験しています。最近はネイティブアプリ内に組み込む Web の開発に興味を持っています。
 - uuid: berlysia
   name: berlysia
-  featured: false
+  featured: true
   presentations:
     - webフロントエンドのリプレースを支えるテストの考え方
   biography: 妄想を現実にする活動をしています。ブラウザの周りのことが好きです。株式会社ドワンゴの教育事業でWebフロントエンド開発をしています。
@@ -103,7 +103,7 @@
   biographyJa: メディア系の会社で Web Engineer をしています。情報を素早く正確に伝えることが私の使命です。
 - uuid: antoine-bourlon
   name: Antoine Bourlon
-  featured: false
+  featured: true
   presentations:
     - cookie等によるトラッキング規制と代替apiの最新情報まとめ
   biography: >-
@@ -125,14 +125,14 @@
     Rails
 - uuid: sosuke-suzuki
   name: Sosuke Suzuki
-  featured: false
+  featured: true
   presentations:
     - javascript-エコシステムを維持する-oss-の努力と課題
   biography: 筑波大学情報学群情報科学類、Prettier メンテナー、Babel コミッター
   biographyJa: 筑波大学情報学群情報科学類、Prettier メンテナー、Babel コミッター
 - uuid: tomohiro-kato
   name: 加藤 倫弘 / Tomohiro Kato
-  featured: false
+  featured: true
   presentations:
     - モバイルブラウザにおけるclient-side-mlアプリケーションのプロダクション開発事例
   biography: Software Engineer / Client-side Machine Learning
