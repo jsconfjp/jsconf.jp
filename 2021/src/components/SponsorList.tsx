@@ -58,8 +58,8 @@ export function SponsorList(props: Props) {
         {grades.premium.map(platinumSponsor => (
           <Sponsor
             key={platinumSponsor.url}
-            showPrText={showPrText}
             {...platinumSponsor}
+            showPrText={showPrText}
           />
         ))}
       </PlatinumBox>
@@ -67,7 +67,7 @@ export function SponsorList(props: Props) {
       <SubTitle>{t("sponsor.sponsor")}</SubTitle>
       <SponsorBox>
         {grades.sponsor.map(sponsor => (
-          <Sponsor key={sponsor.url} showPrText={showPrText} {...sponsor} />
+          <Sponsor key={sponsor.url} {...sponsor} showPrText={showPrText} />
         ))}
       </SponsorBox>
     </>

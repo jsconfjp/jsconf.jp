@@ -53,7 +53,6 @@ const LanguageSwitchBox = styled.div`
   justify-content: center;
   font-weight: bold;
 `
-// @ts-expect-error To be updated
 const MenuItem = styled(Link)`
   margin: 0 40px;
   padding: 32px 0;
