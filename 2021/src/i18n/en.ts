@@ -25,6 +25,7 @@ export const en = {
     day1: "Day 1",
     roomA: "Track A",
     roomB: "Track B",
+    roomC: "Track C",
     tickets: "Tickets",
     buyTickets: "Buy Tickets",
     comingSoon: "Coming soon",

@@ -19,8 +19,9 @@ export const ja: {
     callForSponsors: "スポンサー募集",
     becomeASponsor: "スポンサー申込みフォームへ",
     schedule: "開催スケジュール",
-    roomA: "Room A",
-    roomB: "Room B",
+    roomA: "トラックA",
+    roomB: "トラックB",
+    roomC: "トラックC",
     "jp-specified-commercial-transactions-act": "特定商取引法に基づく表示",
     "code-of-conduct": "行動規範",
     // @ts-ignore It's not defined in en.ts

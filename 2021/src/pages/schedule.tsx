@@ -18,11 +18,14 @@ import { rangeTimeBoxes, escapeTime } from "../util/rangeTimeBoxes"
 import { Dates, times, Rooms, rooms } from "../util/misc"
 import { enOrJa } from "../util/languages"
 
+const dummyTrack = String.fromCharCode(
+  rooms[rooms.length - 1].charCodeAt(0) + 1
+) as Rooms
 const Grid = styled.div<{ startsAt: Date; endsAt: Date }>`
   display: grid;
   grid-column-gap: 1em;
   grid-template-columns: ${rooms
-    .concat("C" as Rooms)
+    .concat(dummyTrack)
     .map(r => `[${r}]`)
     .join(" 1fr ")};
   grid-template-rows: ${({ startsAt, endsAt }) =>
@@ -45,7 +48,8 @@ const Area = styled(_Link)<{
   padding: 1em;
   text-decoration: none;
   position: relative;
-  grid-column: ${({ track, isBreak }) => (isBreak ? "A / C" : track)};
+  grid-column: ${({ track, isBreak }) =>
+    isBreak ? `A / ${dummyTrack}` : track};
   grid-row: ${({ startsAt, endsAt }) =>
     `t-${escapeTime(startsAt)} / t-${escapeTime(endsAt)}`};
   background-color: ${({ track, isBreak, theme }) =>
