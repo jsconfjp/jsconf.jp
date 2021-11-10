@@ -653,13 +653,13 @@
   slideLanguage: en
   speakerIDs:
     - sacha-greif
-- uuid: special-talk-kinuko-yasuda
+- uuid: special-talk
   date: day1
   startsAt: "18:50"
   endsAt: "19:20"
   room: A
-  title: Special Talk by Kinuko Yasuda
-  titleJa: スペシャルトーク by Kinuko Yasuda
+  title: Special Talk
+  titleJa: スペシャルトーク
   speakerIDs: []
 - uuid: opening
   date: day1
