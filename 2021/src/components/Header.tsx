@@ -45,7 +45,6 @@ const MenuBox = styled.div`
   display: flex;
   justify-content: flex-end;
 `
-// @ts-expect-error To be updated
 const MenuItem = styled(Link)`
   flex: 1;
   display: flex;
@@ -84,7 +83,7 @@ export function Header(props: Props) {
             <LanguageSwitch
               languages={{
                 ja: "日本語",
-                en: "EN",
+                en: "EN"
               }}
               currentLanguage={i18n.language}
               onChange={onChangeLanguage}
@@ -93,10 +92,9 @@ export function Header(props: Props) {
         </Brand>
 
         <MenuBox>
-          {/* TODO: To be updated */}
-          {/* <MenuItem to="/speakers/">{t("speakers")}</MenuItem> */}
-          {/* <MenuItem to="/schedule/">{t("schedule")}</MenuItem> */}
-          {/* <MenuItem to="/sponsors/">{t("sponsors")}</MenuItem> */}
+          <MenuItem to="/speakers/">{t("speakers")}</MenuItem>
+          <MenuItem to="/schedule/">{t("schedule")}</MenuItem>
+          <MenuItem to="/sponsors/">{t("sponsors")}</MenuItem>
           {ticketUrl ? (
             <TicketBox>
               <LinkButton color="primary" to={ticketUrl} size="inline">

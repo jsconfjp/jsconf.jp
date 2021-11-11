@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, withPrefix } from "gatsby"
 import _Link from "gatsby-link"
 import flatten from "lodash/flatten"
 
@@ -18,11 +18,14 @@ import { rangeTimeBoxes, escapeTime } from "../util/rangeTimeBoxes"
 import { Dates, times, Rooms, rooms } from "../util/misc"
 import { enOrJa } from "../util/languages"
 
+const dummyTrack = String.fromCharCode(
+  rooms[rooms.length - 1].charCodeAt(0) + 1
+) as Rooms
 const Grid = styled.div<{ startsAt: Date; endsAt: Date }>`
   display: grid;
   grid-column-gap: 1em;
   grid-template-columns: ${rooms
-    .concat("C" as Rooms)
+    .concat(dummyTrack)
     .map(r => `[${r}]`)
     .join(" 1fr ")};
   grid-template-rows: ${({ startsAt, endsAt }) =>
@@ -45,7 +48,8 @@ const Area = styled(_Link)<{
   padding: 1em;
   text-decoration: none;
   position: relative;
-  grid-column: ${({ track, isBreak }) => (isBreak ? "A / C" : track)};
+  grid-column: ${({ track, isBreak }) =>
+    isBreak ? `A / ${dummyTrack}` : track};
   grid-row: ${({ startsAt, endsAt }) =>
     `t-${escapeTime(startsAt)} / t-${escapeTime(endsAt)}`};
   background-color: ${({ track, isBreak, theme }) =>
@@ -175,7 +179,11 @@ export default function SchedulePage() {
                   return (
                     <Area
                       // @ts-ignore
-                      to={hasDescription ? `talk/${s.uuid}` : null}
+                      to={
+                        hasDescription
+                          ? `/${withPrefix("")}talk/${s.uuid}`
+                          : null
+                      }
                       onClick={e => {
                         if (!hasDescription) {
                           e.preventDefault()

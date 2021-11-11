@@ -4,11 +4,16 @@ import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const Box = styled(OutboundLink)`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 1px solid ${({ theme }) => theme.colors.border};
   background-color: ${({ theme }) => theme.colors.base};
   font-size: 0;
+`
+const Text = styled.p`
+  font-family: ${({ theme }) => theme.fonts.text};
+  font-size: 1.4rem;
 `
 const Img = styled.img`
   padding: 20px;
@@ -49,20 +54,24 @@ export type Props = {
   name: string
   url: string
   prText: string
+  showPrText: boolean
 }
 
 export function Sponsor(props: Props) {
-  const { logoUrl, url, grade, name, prText } = props
+  const { logoUrl, url, grade, name, prText, showPrText } = props
 
   return (
-    <Box href={url} target="_blank">
-      <Img
-        src={logoUrl}
-        width="100%"
-        className={grade}
-        alt={name}
-        title={prText}
-      />
-    </Box>
+    <div>
+      <Box href={url} target="_blank">
+        <Img
+          src={logoUrl}
+          width="100%"
+          className={grade}
+          alt={name}
+          title={prText}
+        />
+      </Box>
+      {showPrText ? <Text>{prText}</Text> : null}
+    </div>
   )
 }

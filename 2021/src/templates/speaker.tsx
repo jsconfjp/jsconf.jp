@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
+import { withPrefix } from "gatsby"
 import { GatsbyImage as Image } from "gatsby-plugin-image"
 import Markdown from "react-markdown"
-
 import { times } from "../util/misc"
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
@@ -101,7 +101,12 @@ export default function Speaker(props: Props) {
         ogImage={avatars.length ? avatars[0].images.sources : undefined}
       />
       <ResponsiveBox>
-        <Breadcrumb path={[{ label: "speakers", to: "speakers" }, title]} />
+        <Breadcrumb
+          path={[
+            { label: "speakers", to: `/${withPrefix("")}speakers` },
+            title
+          ]}
+        />
         <Title>{speakerNames}</Title>
         {speakers.map((speaker, i) => (
           <SpeakerBox key={speaker.uuid}>
@@ -116,7 +121,7 @@ export default function Speaker(props: Props) {
           <p>
             {dateFormatter.format(times[date].startsAt)}, {startsAt} - {endsAt}
             <br />
-            Room: {room}
+            {t(`room${room}`)}
             <br />
             Spoken language: {t(spokenLanguage)}
             {slideLanguage ? (

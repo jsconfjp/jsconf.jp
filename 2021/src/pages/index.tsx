@@ -11,8 +11,9 @@ import { SpeakerList } from "../components/SpeakerList"
 import { SponsorList } from "../components/SponsorList"
 import { LinkButton } from "../components/LinkButton"
 import { Card as _Card } from "../components/Card"
-import { Centerize } from "../components/Centerize"
+import { Centerize as _Centerize } from "../components/Centerize"
 import { Member } from "../components/Member"
+import { times } from "../util/misc"
 import bg from "../images/bg.png"
 import bgFlipX from "../images/bg-flip-x.png"
 
@@ -29,6 +30,11 @@ const WavyBox = styled.div`
 `
 const Container = styled.div`
   padding: 0 1em;
+`
+const Centerize = styled(_Centerize)`
+  & + & {
+    margin-top: 80px;
+  }
 `
 const Card = styled(_Card)`
   max-width: 1080px;
@@ -67,7 +73,6 @@ const MembersBox = styled(OrganizersBox)`
     grid-template-columns: repeat(4, minmax(1em, max-content));
   }
 `
-// @ts-expect-error To be updated
 const SchedulesBox = styled.div`
   display: flex;
   justify-content: center;
@@ -176,6 +181,10 @@ export default function IndexPage() {
   const notJnaMembers = allMembersYaml.edges.filter(
     ({ node }: any) => !node.isJNA
   )
+  const dateTimeFormatter = new Intl.DateTimeFormat(i18n.language, {
+    // @ts-ignore dateStyle' does not exist in type 'DateTimeFormatOptions'
+    dateStyle: "medium"
+  })
 
   return (
     <Layout>
@@ -191,7 +200,7 @@ export default function IndexPage() {
           </Centerize>
 
           <Card>
-            <SubTitle>{t("guestSpeakers")}</SubTitle>
+            <SubTitle>{t("speakers")}</SubTitle>
             <SpeakerList
               speakers={guestSpeakers}
               avatars={avatars}
@@ -212,18 +221,35 @@ export default function IndexPage() {
             )}
           </Card>
 
-          {/* TODO: To be updated */}
-          {/* <Centerize>
+          <Centerize>
             <SubTitle>{t("schedule")}</SubTitle>
             <SchedulesBox>
-              <p>{t('TBA')}</p>
               <LinkButton color="secondary" size="large" to="/schedule">
                 {t("day1")} ({dateTimeFormatter.format(times.day1.startsAt)})
               </LinkButton>
             </SchedulesBox>
-          </Centerize> */}
+          </Centerize>
 
-          <Centerize>
+          <Card>
+            <SubTitle>{t("tickets")}</SubTitle>
+            <Centerize>
+              {site.siteMetadata.ticketUrl ? (
+                <LinkButton
+                  color="primary"
+                  size="large"
+                  to={site.siteMetadata.ticketUrl}
+                >
+                  {t("buyTickets")}
+                </LinkButton>
+              ) : (
+                <LinkButton size="large" disabled to={""}>
+                  {t("comingSoon")}
+                </LinkButton>
+              )}
+            </Centerize>
+          </Card>
+
+          {/* <Centerize>
             <SubTitle>{t("callForSpeakers")}</SubTitle>
             <Centerize>
               {site.siteMetadata.cfpFormUrl ? (
@@ -240,9 +266,9 @@ export default function IndexPage() {
                 </LinkButton>
               )}
             </Centerize>
-          </Centerize>
+          </Centerize> */}
 
-          <Card>
+          <Centerize>
             <SubTitle>{t("callForSponsors")}</SubTitle>
             <Centerize>
               {site.siteMetadata.sponsorFormUrl ? (
@@ -259,7 +285,7 @@ export default function IndexPage() {
                 </LinkButton>
               )}
             </Centerize>
-          </Card>
+          </Centerize>
 
           <Centerize>
             {jnaMembers.length > 0 ? (
@@ -296,7 +322,7 @@ export default function IndexPage() {
 
         <SponsorBox>
           <Centerize>
-            <SponsorList sponsors={sponsors} />
+            <SponsorList sponsors={sponsors} showPrText={false} />
           </Centerize>
         </SponsorBox>
       </WavyBox>

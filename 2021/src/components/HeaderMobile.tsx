@@ -53,7 +53,6 @@ const LanguageSwitchBox = styled.div`
   justify-content: center;
   font-weight: bold;
 `
-// @ts-expect-error To be updated
 const MenuItem = styled(Link)`
   margin: 0 40px;
   padding: 32px 0;
@@ -157,10 +156,9 @@ export function InnerHeaderMobile(props: Props) {
               onChange={changeLanguage}
             />
           </LanguageSwitchBox>
-          {/* TODO: To be updated */}
-          {/* <MenuItem to="/speakers/">{t("speakers")}</MenuItem> */}
-          {/* <MenuItem to="/schedule/">{t("schedule")}</MenuItem> */}
-          {/* <MenuItem to="/sponsors/">{t("sponsors")}</MenuItem> */}
+          <MenuItem to="/speakers/">{t("speakers")}</MenuItem>
+          <MenuItem to="/schedule/">{t("schedule")}</MenuItem>
+          <MenuItem to="/sponsors/">{t("sponsors")}</MenuItem>
         </MenuBox>
       )}
     </Box>

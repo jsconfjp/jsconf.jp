@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { Link, withPrefix } from "gatsby"
 import { useTranslation } from "react-i18next"
 import { GatsbyImage as Image, IGatsbyImageData } from "gatsby-plugin-image"
 import { enOrJa } from "../util/languages"
@@ -57,6 +57,8 @@ const Title = styled.h2`
   font-family: ${({ theme }) => theme.fonts.text};
   font-size: 2rem;
   overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 `
 const Name = styled.p`
   margin-bottom: 0;
@@ -82,7 +84,7 @@ export function Speaker(props: Props) {
   }
 
   return (
-    <LinkContainer to={`talk/${uuid}`}>
+    <LinkContainer to={`/${withPrefix("")}talk/${uuid}`}>
       <Avatar image={avatar} alt={name} loading="lazy" />
       <Title>{enOrJa(i18n)(title, titleJa)}</Title>
       <Name>{name}</Name>

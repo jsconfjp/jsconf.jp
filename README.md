@@ -2,15 +2,9 @@
 
 JSConf Japan Website
 
-URL: https://jsconf.jp
+To edit your CFP, please make a pull request refer to [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## Development
-
-### Continuous integration
-
-We use [CircleCI](https://circleci.com) as continuous integration(CI) service for this project.
-If you want to write access to CircleCI, you need to have write privilege on this GitHub repo.
-The build configuration file is located in `.circleci/config.yml`.
 
 ### Create a new website for next year
 
