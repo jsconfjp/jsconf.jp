@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-speaker-tsx",
-    "path": "/talk/day1-break-01%3A00",
-    "result": {"pageContext":{"speakers":[],"avatars":[],"talk":{"uuid":"day1-break-01:00","title":"Break","titleJa":null,"description":null,"descriptionJa":null,"spokenLanguage":null,"slideLanguage":null,"speakerIDs":[],"date":"day1","startsAt":"01:00","endsAt":"01:10","room":null}}},
-    "staticQueryHashes": ["1861792574","2627735464"]}

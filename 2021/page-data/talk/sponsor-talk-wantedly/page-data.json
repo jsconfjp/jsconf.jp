@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-speaker-tsx",
+    "path": "/talk/sponsor-talk-wantedly",
+    "result": {"pageContext":{"speakers":[],"avatars":[],"talk":{"uuid":"sponsor-talk-wantedly","title":"Sponsor talk","titleJa":"スポンサートーク","description":null,"descriptionJa":null,"spokenLanguage":null,"slideLanguage":null,"speakerIDs":[],"date":"day1","startsAt":"12:50","endsAt":"13:20","room":"C"}}},
+    "staticQueryHashes": ["1861792574","2627735464"]}

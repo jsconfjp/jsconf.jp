@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-speaker-tsx",
+    "path": "/talk/special-talk",
+    "result": {"pageContext":{"speakers":[],"avatars":[],"talk":{"uuid":"special-talk","title":"Special Talk","titleJa":"スペシャルトーク","description":null,"descriptionJa":null,"spokenLanguage":null,"slideLanguage":null,"speakerIDs":[],"date":"day1","startsAt":"18:50","endsAt":"19:20","room":"A"}}},
+    "staticQueryHashes": ["1861792574","2627735464"]}
