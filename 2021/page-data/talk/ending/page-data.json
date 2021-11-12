@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-speaker-tsx",
     "path": "/talk/ending",
     "result": {"pageContext":{"speakers":[],"avatars":[],"talk":{"uuid":"ending","title":"Ending","titleJa":"エンディング","description":null,"descriptionJa":null,"spokenLanguage":null,"slideLanguage":null,"speakerIDs":[],"date":"day1","startsAt":"19:20","endsAt":"19:30","room":"A"}}},
-    "staticQueryHashes": ["1861792574","2627735464"]}
+    "staticQueryHashes": ["1715751809","1861792574","2737205312"]}

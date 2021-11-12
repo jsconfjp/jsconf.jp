@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-speaker-tsx",
     "path": "/talk/sponsor-talk-nota",
     "result": {"pageContext":{"speakers":[],"avatars":[],"talk":{"uuid":"sponsor-talk-nota","title":"Sponsor talk","titleJa":"スポンサートーク","description":null,"descriptionJa":null,"spokenLanguage":null,"slideLanguage":null,"speakerIDs":[],"date":"day1","startsAt":"15:40","endsAt":"16:10","room":"C"}}},
-    "staticQueryHashes": ["1861792574","2627735464"]}
+    "staticQueryHashes": ["1715751809","1861792574","2737205312"]}
