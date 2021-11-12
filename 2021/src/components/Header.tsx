@@ -10,6 +10,9 @@ import { LinkButton } from "./LinkButton"
 type Props = {
   siteTitle: string
   ticketUrl: string
+  enableSpeakers: boolean
+  enableSchedule: boolean
+  enableSponsors: boolean
   onChangeLanguage: (lang: string) => void
 }
 
@@ -69,7 +72,13 @@ const TicketBox = styled.div`
 `
 
 export function Header(props: Props) {
-  const { onChangeLanguage, ticketUrl } = props
+  const {
+    onChangeLanguage,
+    ticketUrl,
+    enableSpeakers,
+    enableSchedule,
+    enableSponsors
+  } = props
   const { t, i18n } = useTranslation()
 
   return (
@@ -92,9 +101,15 @@ export function Header(props: Props) {
         </Brand>
 
         <MenuBox>
-          <MenuItem to="/speakers/">{t("speakers")}</MenuItem>
-          <MenuItem to="/schedule/">{t("schedule")}</MenuItem>
-          <MenuItem to="/sponsors/">{t("sponsors")}</MenuItem>
+          {enableSpeakers ? (
+            <MenuItem to="/speakers/">{t("speakers")}</MenuItem>
+          ) : null}
+          {enableSchedule ? (
+            <MenuItem to="/schedule/">{t("schedule")}</MenuItem>
+          ) : null}
+          {enableSponsors ? (
+            <MenuItem to="/sponsors/">{t("sponsors")}</MenuItem>
+          ) : null}
           {ticketUrl ? (
             <TicketBox>
               <LinkButton color="primary" to={ticketUrl} size="inline">

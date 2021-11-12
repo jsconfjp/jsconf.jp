@@ -42,14 +42,30 @@ export function Layout({ children }: Props) {
     },
     [i18n]
   )
-  const data = useStaticQuery(graphql`
+  const {
+    site,
+    allSponsorsYaml,
+    allTalksYaml,
+    allSpeakersYaml
+  } = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
           title
           twitter
           ticketUrl
+          sponsorFormUrl
+          cfpFormUrl
         }
+      }
+      allSponsorsYaml {
+        totalCount
+      }
+      allTalksYaml {
+        totalCount
+      }
+      allSpeakersYaml {
+        totalCount
       }
     }
   `)
@@ -59,15 +75,21 @@ export function Layout({ children }: Props) {
       <>
         <OnlyMobile>
           <HeaderMobile
-            siteTitle={data.site.siteMetadata.title}
-            ticketUrl={data.site.siteMetadata.ticketUrl}
+            siteTitle={site.siteMetadata.title}
+            ticketUrl={site.siteMetadata.ticketUrl}
+            enableSpeakers={allSpeakersYaml.totalCount > 0}
+            enableSchedule={allTalksYaml.totalCount > 0}
+            enableSponsors={allSponsorsYaml.totalCount > 0}
             onChangeLanguage={onChangeLanguage}
           />
         </OnlyMobile>
         <NotMobile>
           <Header
-            siteTitle={data.site.siteMetadata.title}
-            ticketUrl={data.site.siteMetadata.ticketUrl}
+            siteTitle={site.siteMetadata.title}
+            ticketUrl={site.siteMetadata.ticketUrl}
+            enableSpeakers={allSpeakersYaml.totalCount > 0}
+            enableSchedule={allTalksYaml.totalCount > 0}
+            enableSponsors={allSponsorsYaml.totalCount > 0}
             onChangeLanguage={onChangeLanguage}
           />
         </NotMobile>

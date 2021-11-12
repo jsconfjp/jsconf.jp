@@ -1,4 +1,4 @@
-import React, { useState, useCallback, KeyboardEvent } from "react"
+import React, { useState, useCallback } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
@@ -7,10 +7,14 @@ import Headroom from "react-headroom"
 import { Logo } from "./Logo"
 import { LanguageSwitch } from "./LanguageSwitch"
 import { LinkButton } from "./LinkButton"
+import { HamburgerMenu } from "./HamburgerMenu"
 
 type Props = {
   siteTitle: string
   ticketUrl: string
+  enableSpeakers: boolean
+  enableSchedule: boolean
+  enableSponsors: boolean
   onChangeLanguage: (lang: string) => void
 }
 
@@ -77,12 +81,15 @@ const TicketBox = styled.div`
   height: 48px;
   margin-right: 20px;
 `
-const Path = styled.path.attrs(({ theme }) => ({
-  fill: theme.colors.primary
-}))``
 
 export function InnerHeaderMobile(props: Props) {
-  const { onChangeLanguage, ticketUrl } = props
+  const {
+    onChangeLanguage,
+    ticketUrl,
+    enableSpeakers,
+    enableSchedule,
+    enableSponsors
+  } = props
   const { t, i18n } = useTranslation()
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
   const toggleMenu = useCallback(() => {
@@ -92,11 +99,12 @@ export function InnerHeaderMobile(props: Props) {
     setMenuOpen(false)
     onChangeLanguage(language)
   }
-  const handleKeydown = (event: KeyboardEvent<HTMLOrSVGElement>) => {
+  const handleKeydown: React.KeyboardEventHandler = event => {
     if (event.key !== "Enter" && event.key !== " ") return
     event.preventDefault()
     toggleMenu()
   }
+
   return (
     <Box>
       <InnerBox>
@@ -114,35 +122,11 @@ export function InnerHeaderMobile(props: Props) {
           </TicketBox>
         ) : null}
 
-        <svg
-          aria-controls="drawerMenu"
-          aria-expanded={menuOpen}
-          tabIndex={0}
-          role="button"
-          width={32}
-          height={32}
-          viewBox="0,0,100,100"
+        <HamburgerMenu
+          open={menuOpen}
           onTouchEnd={toggleMenu}
           onKeyDown={handleKeydown}
-        >
-          <title>{menuOpen ? t("closeMobileMenu") : t("openMobileMenu")}</title>
-          {menuOpen ? (
-            <Path
-              d={[
-                `M0,10 L10,0 L100,90 L90,100 L0,10`,
-                `M90,0 L100,10 L10,100 L0,90 L90,0`
-              ].join(" ")}
-            />
-          ) : (
-            <Path
-              d={[
-                `M0,0 L100,0 L100,12 L0,12 L0,0`,
-                `M0,44 L100,44 L100,56 L0,56 L0,0`,
-                `M0,88 L100,88 L100,100 L0,100 L0,0`
-              ].join(" ")}
-            />
-          )}
-        </svg>
+        />
       </InnerBox>
       {menuOpen && (
         <MenuBox id="drawerMenu" aria-expanded={menuOpen}>
@@ -156,9 +140,15 @@ export function InnerHeaderMobile(props: Props) {
               onChange={changeLanguage}
             />
           </LanguageSwitchBox>
-          <MenuItem to="/speakers/">{t("speakers")}</MenuItem>
-          <MenuItem to="/schedule/">{t("schedule")}</MenuItem>
-          <MenuItem to="/sponsors/">{t("sponsors")}</MenuItem>
+          {enableSpeakers ? (
+            <MenuItem to="/speakers/">{t("speakers")}</MenuItem>
+          ) : null}
+          {enableSchedule ? (
+            <MenuItem to="/schedule/">{t("schedule")}</MenuItem>
+          ) : null}
+          {enableSponsors ? (
+            <MenuItem to="/sponsors/">{t("sponsors")}</MenuItem>
+          ) : null}
         </MenuBox>
       )}
     </Box>
