@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
-import { Link as _Link } from "gatsby"
+import { graphql, Link as _Link, useStaticQuery } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 type Props = {}
@@ -47,14 +47,27 @@ const ExternalLink = styled(OutboundLink)`
 
 export function Footer(_props: Props) {
   const { t } = useTranslation()
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          previousFiscalYear
+        }
+      }
+    }
+  `)
+
   return (
     <Box>
       <LinksBox>
         <ExternalLink href="https://nodejs.org/" target="_blank">
           Node.js
         </ExternalLink>
-        <ExternalLink href="https://jsconf.jp/2019/" target="_blank">
-          JSConf JP 2019
+        <ExternalLink
+          href={`https://jsconf.jp/${site.siteMetadata.previousFiscalYear}/`}
+          target="_blank"
+        >
+          JSConf JP {site.siteMetadata.previousFiscalYear}
         </ExternalLink>
         <ExternalLink href="https://nodejs.jp/" target="_blank">
           Japan Node.js Association
