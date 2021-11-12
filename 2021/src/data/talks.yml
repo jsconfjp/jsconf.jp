@@ -1,4 +1,4 @@
-- uuid: javascripttypescriptだけでメディアサイトをインフラから構築する方法
+- uuid: how-to-build-a-media-site-from-the-infrastructure-up-using-only-java-script-type-script
   date: day1
   startsAt: "14:00"
   endsAt: "14:30"
@@ -71,7 +71,7 @@
   slideLanguage: en
   speakerIDs:
     - thomas-steiner
-- uuid: アクセシブルなフロントエンド開発のこれまでとこれから
+- uuid: the-past-and-future-of-accessible-front-end-development
   date: day1
   startsAt: "14:30"
   endsAt: "15:00"
@@ -97,7 +97,7 @@
   slideLanguage: ja
   speakerIDs:
     - okuto-oyama
-- uuid: amp-キャッシュを超えるシステムを自社ドメインで実現する方法
+- uuid: how-to-implement-a-system-that-goes-beyond-amp-caching-on-your-domain
   date: day1
   startsAt: "16:20"
   endsAt: "16:50"
@@ -143,7 +143,7 @@
   slideLanguage: ja
   speakerIDs:
     - junya-kani
-- uuid: web-ベースのカジュアルゲーム「block-pong」の実装とビジネス
+- uuid: implementation-and-business-of-block-pong-a-web-based-casual-game
   date: day1
   startsAt: "14:00"
   endsAt: "14:30"
@@ -162,7 +162,7 @@
   slideLanguage: ja
   speakerIDs:
     - takuo-kihira
-- uuid: webフロントエンドのリプレースを支えるテストの考え方
+- uuid: testing-approach-to-support-web-front-end-replacement
   date: day1
   startsAt: "12:50"
   endsAt: "13:20"
@@ -185,7 +185,7 @@
   slideLanguage: ja
   speakerIDs:
     - berlysia
-- uuid: deno-の-これまで-と-これから
+- uuid: the-past-and-future-of-deno
   date: day1
   startsAt: "14:30"
   endsAt: "15:00"
@@ -204,7 +204,7 @@
   slideLanguage: ja
   speakerIDs:
     - yoshiya-hinosawa
-- uuid: 状態管理ライブラリについて
+- uuid: about-the-state-management-library
   date: day1
   startsAt: "15:10"
   endsAt: "15:40"
@@ -265,7 +265,7 @@
   slideLanguage: ja
   speakerIDs:
     - yuta-ide
-- uuid: cookie等によるトラッキング規制と代替apiの最新情報まとめ
+- uuid: summary-of-the-latest-information-on-tracking-restrictions-and-alternative-api-by-cookies-etc
   date: day1
   startsAt: "15:40"
   endsAt: "16:10"
@@ -291,7 +291,7 @@
   slideLanguage: ja
   speakerIDs:
     - antoine-bourlon
-- uuid: graphql-と-prisma-から考える次のn年を見据えた技術選定
+- uuid: technology-selection-for-the-next-n-years-based-on-graphql-and-prisma
   date: day1
   startsAt: "15:40"
   endsAt: "16:10"
@@ -338,7 +338,7 @@
   slideLanguage: ja
   speakerIDs:
     - qsona
-- uuid: javascript-エコシステムを維持する-oss-の努力と課題
+- uuid: javascript-maintaining-ecosystem-oss-struggles-and-challenges
   date: day1
   startsAt: "12:10"
   endsAt: "12:40"
@@ -378,7 +378,7 @@
   slideLanguage: ja
   speakerIDs:
     - sosuke-suzuki
-- uuid: モバイルブラウザにおけるclient-side-mlアプリケーションのプロダクション開発事例
+- uuid: case-study-of-production-development-of-a-client-side-ml-application-in-a-mobile-browser
   date: day1
   startsAt: "16:20"
   endsAt: "16:50"
@@ -460,7 +460,7 @@
   slideLanguage: en
   speakerIDs:
     - asiya
-- uuid: 関数型プログラミングのデザインパターンひとめぐり-with-ramdajs
+- uuid: a-tour-of-design-patterns-for-functional-programming-with-ramdajs
   date: day1
   startsAt: "17:10"
   endsAt: "17:20"
@@ -481,7 +481,7 @@
   slideLanguage: ja
   speakerIDs:
     - kazuyuki-takase-
-- uuid: 組織フェーズを見据えたwebフロントエンドのアーキテクチャと変遷
+- uuid: web-front-end-architecture-and-transition-with-an-eye-on-organizational-phases
   date: day1
   startsAt: "17:20"
   endsAt: "17:30"
@@ -530,7 +530,7 @@
   slideLanguage: ja
   speakerIDs:
     - yuku-kotani
-- uuid: 加速するedge-computing-
+- uuid: accelerating-edge-computing
   date: day1
   startsAt: "17:40"
   endsAt: "17:50"
@@ -561,7 +561,7 @@
   slideLanguage: ja
   speakerIDs:
     - shinyaigeek
-- uuid: building-markdown-editor-using-rust's-parser
+- uuid: building-markdown-editor-using-rusts-parser
   date: day1
   startsAt: "17:50"
   endsAt: "18:00"
@@ -591,7 +591,7 @@
   speakerIDs:
     - hiroyuki-yagihashi
 - uuid: >-
-    asynchronicity-the-right-way:-understanding-the-basics-of-asynchronous-javascript-when-to-and-when-not-to-use-it-
+    asynchronicity-the-right-way-understanding-the-basics-of-asynchronous-javascript-when-to-and-when-not-to-use-it
   date: day1
   startsAt: "12:50"
   endsAt: "13:20"

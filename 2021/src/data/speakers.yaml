@@ -2,7 +2,7 @@
   name: Hidetaka Okamoto
   featured: false
   presentations:
-    - javascripttypescriptだけでメディアサイトをインフラから構築する方法
+    - how-to-build-a-media-site-from-the-infrastructure-up-using-only-java-script-type-script
   biography: >-
     React / TypeScript developer. ASK SDK / WordPress / amplify-js core
     contributor.
@@ -38,7 +38,7 @@
   name: Okuto Oyama
   featured: true
   presentations:
-    - アクセシブルなフロントエンド開発のこれまでとこれから
+    - the-past-and-future-of-accessible-front-end-development
   biography: |-
     株式会社クラウドワークスでフロントエンド開発をしています。開発者ですが自称フロントエンドデザイナーです。
     業務やプライベートでアクセシビリティ啓蒙やOSSへのコントリビュート活動なども行っています。一児の父もやっています。
@@ -51,7 +51,7 @@
   name: 可児 潤也
   featured: false
   presentations:
-    - amp-キャッシュを超えるシステムを自社ドメインで実現する方法
+    - how-to-implement-a-system-that-goes-beyond-amp-caching-on-your-domain
   biography: |-
     株式会社リクルートにてフロントエンドエンジニアに従事。　Web 開発リードを担当。
   biographyJa: |-
@@ -60,7 +60,7 @@
   name: 紀平 拓男 (Takuo Kihira)
   featured: false
   presentations:
-    - web-ベースのカジュアルゲーム「block-pong」の実装とビジネス
+    - implementation-and-business-of-block-pong-a-web-based-casual-game
   biography: >-
     20 年くらい JavaScript の世界で働いており、またサンフランシスコでの起業を含めて過去に 3
     社の起業を経験しています。最近はネイティブアプリ内に組み込む Web の開発に興味を持っています。
@@ -71,14 +71,14 @@
   name: berlysia
   featured: true
   presentations:
-    - webフロントエンドのリプレースを支えるテストの考え方
+    - testing-approach-to-support-web-front-end-replacement
   biography: 妄想を現実にする活動をしています。ブラウザの周りのことが好きです。株式会社ドワンゴの教育事業でWebフロントエンド開発をしています。
   biographyJa: 妄想を現実にする活動をしています。ブラウザの周りのことが好きです。株式会社ドワンゴの教育事業でWebフロントエンド開発をしています。
 - uuid: yoshiya-hinosawa
   name: 日野澤歓也
   featured: false
   presentations:
-    - deno-の-これまで-と-これから
+    - the-past-and-future-of-deno
   biography: >-
     フリーランスの Web Engineer。2018年から OSS 活動として Deno にコントリビュートを開始し、2021年1月より Deno
     の開発会社である Deno Land Inc. で勤務。
@@ -89,7 +89,7 @@
   name: Daishi Kato
   featured: false
   presentations:
-    - 状態管理ライブラリについて
+    - about-the-state-management-library
   biography: "https://twitter.com/dai_shi"
   biographyJa: "https://twitter.com/dai_shi"
 - uuid: yuta-ide
@@ -103,7 +103,7 @@
   name: Antoine Bourlon
   featured: true
   presentations:
-    - cookie等によるトラッキング規制と代替apiの最新情報まとめ
+    - summary-of-the-latest-information-on-tracking-restrictions-and-alternative-api-by-cookies-etc
   biography: >-
     株式会社イルグルム（旧：株式会社ロックオン）メジャメント研究室のR&Dエンジニア/AD EBiS
     マーテック研究会主宰。インターネット経済を支えるアドテックに憧れ、2016年に入社。ITPの発表をきっかけに計測技術とトラッキング防止技術の動向、プライバシー関連の規制、ブラウザの最新仕様を研究し、自社製品に反映する提案と開発をメインに取り組んでいるフランス人。
@@ -114,7 +114,7 @@
   name: 森 久太郎 / qsona
   featured: false
   presentations:
-    - graphql-と-prisma-から考える次のn年を見据えた技術選定
+    - technology-selection-for-the-next-n-years-based-on-graphql-and-prisma
   biography: >-
     ソフトウェアエンジニア。株式会社リクルート所属。スタディサプリを開発しています。GraphQL / Microservices / Node.js /
     Rails
@@ -125,14 +125,14 @@
   name: Sosuke Suzuki
   featured: true
   presentations:
-    - javascript-エコシステムを維持する-oss-の努力と課題
+    - javascript-maintaining-ecosystem-oss-struggles-and-challenges
   biography: 筑波大学情報学群情報科学類、Prettier メンテナー、Babel コミッター
   biographyJa: 筑波大学情報学群情報科学類、Prettier メンテナー、Babel コミッター
 - uuid: tomohiro-kato
   name: 加藤 倫弘 / Tomohiro Kato
   featured: true
   presentations:
-    - モバイルブラウザにおけるclient-side-mlアプリケーションのプロダクション開発事例
+    - case-study-of-production-development-of-a-client-side-ml-application-in-a-mobile-browser
   biography: Software Engineer / Client-side Machine Learning
   biographyJa: Software Engineer / Client-side Machine Learning
 - uuid: kohei-ueno
@@ -163,7 +163,7 @@
   name: Kazuyuki TAKASE (@Guvalif)
   featured: false
   presentations:
-    - 関数型プログラミングのデザインパターンひとめぐり-with-ramdajs
+    - a-tour-of-design-patterns-for-functional-programming-with-ramdajs
   biography: >-
     2019 年に Chatwork 株式会社へフロントエンド・エンジニアとしてジョインし、
     現在はエンジニア採用広報としてインターンシップ・プログラムや勉強会運営を行っている。
@@ -184,7 +184,7 @@
   name: Tetsuya Shibutani
   featured: false
   presentations:
-    - 組織フェーズを見据えたwebフロントエンドのアーキテクチャと変遷
+    - web-front-end-architecture-and-transition-with-an-eye-on-organizational-phases
   biography: |-
     Chatwork株式会社　フロントエンド開発部　マネージャー。
     受託開発のフロントエンドエンジニアを経て、2019年よりChatworkにジョイン。
@@ -208,7 +208,7 @@
   name: しにゃい/Shinyaigeek
   featured: false
   presentations:
-    - 加速するedge-computing-
+    - accelerating-edge-computing
   biography: >-
     a student of University of Tokyo/A Engineer at Newspaper company/Web
     Frontend Engineer/Interested in Browser, standards, performance, frontend
@@ -221,7 +221,7 @@
   name: Hiroyuki Yagihashi
   featured: false
   presentations:
-    - building-markdown-editor-using-rust's-parser
+    - building-markdown-editor-using-rusts-parser
   biography: Engineer@Caraquri
   biographyJa: Engineer@Caraquri
 - uuid: julien-hora
@@ -229,7 +229,7 @@
   featured: false
   presentations:
     - >-
-      asynchronicity-the-right-way:-understanding-the-basics-of-asynchronous-javascript-when-to-and-when-not-to-use-it-
+      asynchronicity-the-right-way-understanding-the-basics-of-asynchronous-javascript-when-to-and-when-not-to-use-it
   biography: >-
     CEO, Founder @ Factorize, Julien has been a full-stack engineer for the past
     8 years working on front-end, back-end, cloud and mobile implementations for
