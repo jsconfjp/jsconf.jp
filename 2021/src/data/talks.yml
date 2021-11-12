@@ -653,14 +653,6 @@
   slideLanguage: en
   speakerIDs:
     - sacha-greif
-- uuid: special-talk
-  date: day1
-  startsAt: "18:50"
-  endsAt: "19:20"
-  room: A
-  title: Special Talk
-  titleJa: スペシャルトーク
-  speakerIDs: []
 - uuid: opening
   date: day1
   startsAt: "12:00"
@@ -797,3 +789,24 @@
   title: Sponsors LT
   titleJa: スポンサーLT
   speakerIDs: []
+- uuid: how-projects-are-born-and-run-in-a-web-browser-engine
+  date: day1
+  startsAt: "18:50"
+  endsAt: "19:20"
+  room: A
+  title: How projects are born and run in a web browser engine
+  titleJa: How projects are born and run in a web browser engine
+  description: >-
+    In this talk I will talk about a few examples and thoughts about how a
+    project might be born and worked in a large-scale browser engine like
+    Chromium. It's partially about scoping, designing, planning and executing,
+    but also largely about collaboration, communication, and a lot of struggles.
+  descriptionJa: >-
+    （未翻訳）In this talk I will talk about a few examples and thoughts about how a
+    project might be born and worked in a large-scale browser engine like
+    Chromium. It's partially about scoping, designing, planning and executing,
+    but also largely about collaboration, communication, and a lot of struggles.
+  spokenLanguage: en
+  slideLanguage: en
+  speakerIDs:
+    - kinuko-yasuda

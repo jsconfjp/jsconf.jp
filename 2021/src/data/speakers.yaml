@@ -1,3 +1,16 @@
+- uuid: kinuko-yasuda
+  name: Kinuko Yasuda
+  featured: true
+  presentations:
+    - how-projects-are-born-and-run-in-a-web-browser-engine
+  biography: >-
+    Kinuko used to be a heavy contributor in an open source browser engine,
+    where she led many projects and spent non-trivial amount of time thinking
+    about how the web can become faster.
+  biographyJa: >-
+    Kinuko used to be a heavy contributor in an open source browser engine,
+    where she led many projects and spent non-trivial amount of time thinking
+    about how the web can become faster.
 - uuid: hidetaka-okamoto
   name: Hidetaka Okamoto
   featured: false

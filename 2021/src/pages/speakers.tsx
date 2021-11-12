@@ -42,8 +42,8 @@ export default function SpeakersPage() {
           name
           childImageSharp {
             gatsbyImageData(
-              width: 262
-              height: 262
+              width: 524
+              height: 524
               placeholder: BLURRED
               layout: CONSTRAINED
             )
