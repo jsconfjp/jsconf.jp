@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
-const Box = styled(OutboundLink)`
+const Link = styled(OutboundLink)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,7 +62,7 @@ export function Sponsor(props: Props) {
 
   return (
     <div>
-      <Box href={url} target="_blank">
+      <Link href={url} target="_blank">
         <Img
           src={logoUrl}
           width="100%"
@@ -70,7 +70,7 @@ export function Sponsor(props: Props) {
           alt={name}
           title={prText}
         />
-      </Box>
+      </Link>
       {showPrText ? <Text>{prText}</Text> : null}
     </div>
   )

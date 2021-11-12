@@ -8,7 +8,9 @@ module.exports = {
     siteUrl: `https://jsconf.jp`,
     ticketUrl: `https://nodejs.connpass.com/event/231019/`,
     sponsorFormUrl: `https://docs.google.com/forms/d/e/1FAIpQLSeGwPvfFFiodywybwRZ5EU-dSU37SR_L0vj9aLX7MnYNgeiFg/viewform?usp=sf_link`,
-    cfpFormUrl: `https://docs.google.com/forms/d/e/1FAIpQLScJN0ManJjQ33QYqqSFIgCYLLxVqwygGw0WfNYy0V4d-VILyw/viewform?usp=sf_link`
+    cfpFormUrl: `https://docs.google.com/forms/d/e/1FAIpQLScJN0ManJjQ33QYqqSFIgCYLLxVqwygGw0WfNYy0V4d-VILyw/viewform?usp=sf_link`,
+    cfpDeadline: new Date(2021, 9, 30, 23, 59, 999),
+    previousFiscalYear: `2019`
   },
   plugins: [
     `gatsby-plugin-typescript`,
