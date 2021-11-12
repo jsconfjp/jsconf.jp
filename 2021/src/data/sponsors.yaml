@@ -96,3 +96,9 @@
   logoUrl: /2021/sponsors/nota.svg
   prText: |
     2007年にシリコンバレーにて設立。スクリーンショット共有ツール「Gyazo」やリアルタイムに情報を共有できる画期的な共有ノート「Scrapbox」を開発。2019年にはどんな質問にも答えるFAQ SaaS「Helpfeel」をリリースし、事業拡大のため2021年3月に5億円の資金調達を実施。現在は京都と東京に拠点を構えながらフルリモートワーク、フルフレックスを実施。すべてのプロダクトでReactとTypeScriptを利用している。
+- name: メダップ株式会社
+  grade: sponsor
+  url: https://medup.jp/
+  logoUrl: /2021/sponsors/logo_RGB.png
+  prText: |
+    「経営から、病院を変える。病院から、医療変える」というVisionのもと、病院特化型のCRMサービスである"foroCRM"を提供しているスタートアップです。
