@@ -18,7 +18,7 @@ const baseGridStyle = css`
   }
 `
 
-const PlatinumBox = styled.div`
+const LargeBox = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   width: 100%;
@@ -26,7 +26,7 @@ const PlatinumBox = styled.div`
   margin: 0 auto;
   ${baseGridStyle}
 `
-const SponsorBox = styled.div`
+const SmallBox = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   ${baseGridStyle}
@@ -43,18 +43,15 @@ export function SponsorList(props: Props) {
   const grades = sponsors.reduce(
     (acc, sponsor) => ({
       ...acc,
-      [sponsor.grade]: acc[sponsor.grade].concat([sponsor])
+      [sponsor.grade]: (acc[sponsor.grade] ?? []).concat([sponsor])
     }),
-    {
-      premium: [],
-      sponsor: []
-    } as { [K in SponsorType["grade"]]: SponsorType[] }
+    {} as { [K in SponsorType["grade"]]: SponsorType[] }
   )
 
   return (
     <>
       <SubTitle>{t("sponsor.premium")}</SubTitle>
-      <PlatinumBox>
+      <LargeBox>
         {grades.premium.map(platinumSponsor => (
           <Sponsor
             key={platinumSponsor.url}
@@ -62,14 +59,14 @@ export function SponsorList(props: Props) {
             showPrText={showPrText}
           />
         ))}
-      </PlatinumBox>
+      </LargeBox>
 
       <SubTitle>{t("sponsor.sponsor")}</SubTitle>
-      <SponsorBox>
+      <SmallBox>
         {grades.sponsor.map(sponsor => (
           <Sponsor key={sponsor.url} {...sponsor} showPrText={showPrText} />
         ))}
-      </SponsorBox>
+      </SmallBox>
     </>
   )
 }

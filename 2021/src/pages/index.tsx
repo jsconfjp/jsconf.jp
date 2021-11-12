@@ -105,6 +105,7 @@ export default function IndexPage() {
           ticketUrl
           sponsorFormUrl
           cfpFormUrl
+          cfpDeadline
         }
       }
       allSponsorsYaml {
@@ -130,6 +131,7 @@ export default function IndexPage() {
         }
       }
       allTalksYaml {
+        totalCount
         edges {
           node {
             uuid
@@ -168,7 +170,7 @@ export default function IndexPage() {
       }
     }
   `)
-  const guestSpeakers = allSpeakersYaml.edges.map(({ node }: any) => node)
+  const featuredSpeakers = allSpeakersYaml.edges.map(({ node }: any) => node)
   const sponsors = allSponsorsYaml.edges.map(({ node }: any) => node)
   const talks = allTalksYaml.edges.map(({ node }: any) => node)
   const avatars = allFile.nodes
@@ -185,6 +187,84 @@ export default function IndexPage() {
     // @ts-ignore dateStyle' does not exist in type 'DateTimeFormatOptions'
     dateStyle: "medium"
   })
+  const cfpOverDue =
+    Date.now() > new Date(site.siteMetadata.cfpDeadline).getTime()
+
+  const parts = [
+    {
+      subTitle: t("speakers"),
+      available: featuredSpeakers.length,
+      render: () => (
+        <>
+          <SpeakerList
+            speakers={featuredSpeakers}
+            avatars={avatars}
+            talks={talks}
+          />
+          <Centerize>
+            <LinkButton color="primary" to="/speakers/">
+              {t("goToGuests")}
+            </LinkButton>
+          </Centerize>
+        </>
+      )
+    },
+    {
+      subTitle: t("schedule"),
+      available: allTalksYaml.totalCount > 0,
+      render: () => (
+        <SchedulesBox>
+          <LinkButton color="secondary" size="large" to="/schedule">
+            {t("day1")} ({dateTimeFormatter.format(times.day1.startsAt)})
+          </LinkButton>
+        </SchedulesBox>
+      )
+    },
+    {
+      subTitle: t("tickets"),
+      available: site.siteMetadata.ticketUrl,
+      render: () => (
+        <LinkButton
+          color="primary"
+          size="large"
+          to={site.siteMetadata.ticketUrl}
+        >
+          {t("buyTickets")}
+        </LinkButton>
+      )
+    },
+    {
+      subTitle: t("callForSpeakers"),
+      available: site.siteMetadata.cfpFormUrl && !cfpOverDue,
+      render: () => (
+        <LinkButton
+          color="primary"
+          size="large"
+          to={site.siteMetadata.cfpFormUrl}
+        >
+          {t("submitTalk")}
+        </LinkButton>
+      )
+    },
+    {
+      subTitle: t("callForSponsors"),
+      available: site.siteMetadata.sponsorFormUrl,
+      render: () =>
+        site.siteMetadata.sponsorFormUrl ? (
+          <LinkButton
+            color="primary"
+            size="large"
+            to={site.siteMetadata.sponsorFormUrl}
+          >
+            {t("becomeASponsor")}
+          </LinkButton>
+        ) : (
+          <LinkButton size="large" disabled to={""}>
+            {t("comingSoon")}
+          </LinkButton>
+        )
+    }
+  ]
 
   return (
     <Layout>
@@ -199,93 +279,24 @@ export default function IndexPage() {
             />
           </Centerize>
 
-          <Card>
-            <SubTitle>{t("speakers")}</SubTitle>
-            <SpeakerList
-              speakers={guestSpeakers}
-              avatars={avatars}
-              talks={talks}
-            />
-            {guestSpeakers.length > 0 ? (
-              <Centerize>
-                <LinkButton color="primary" to="/speakers/">
-                  {t("goToGuests")}
-                </LinkButton>
-              </Centerize>
-            ) : (
-              <Centerize>
-                <LinkButton size="large" disabled to={""}>
-                  {t("comingSoon")}
-                </LinkButton>
-              </Centerize>
-            )}
-          </Card>
-
-          <Centerize>
-            <SubTitle>{t("schedule")}</SubTitle>
-            <SchedulesBox>
-              <LinkButton color="secondary" size="large" to="/schedule">
-                {t("day1")} ({dateTimeFormatter.format(times.day1.startsAt)})
-              </LinkButton>
-            </SchedulesBox>
-          </Centerize>
-
-          <Card>
-            <SubTitle>{t("tickets")}</SubTitle>
-            <Centerize>
-              {site.siteMetadata.ticketUrl ? (
-                <LinkButton
-                  color="primary"
-                  size="large"
-                  to={site.siteMetadata.ticketUrl}
-                >
-                  {t("buyTickets")}
-                </LinkButton>
-              ) : (
-                <LinkButton size="large" disabled to={""}>
-                  {t("comingSoon")}
-                </LinkButton>
-              )}
-            </Centerize>
-          </Card>
-
-          {/* <Centerize>
-            <SubTitle>{t("callForSpeakers")}</SubTitle>
-            <Centerize>
-              {site.siteMetadata.cfpFormUrl ? (
-                <LinkButton
-                  color="primary"
-                  size="large"
-                  to={site.siteMetadata.cfpFormUrl}
-                >
-                  {t("submitTalk")}
-                </LinkButton>
-              ) : (
-                <LinkButton size="large" disabled to={""}>
-                  {t("comingSoon")}
-                </LinkButton>
-              )}
-            </Centerize>
-          </Centerize> */}
-
-          <Centerize>
-            <SubTitle>{t("callForSponsors")}</SubTitle>
-            <Centerize>
-              {site.siteMetadata.sponsorFormUrl ? (
-                <LinkButton
-                  color="primary"
-                  size="large"
-                  to={site.siteMetadata.sponsorFormUrl}
-                >
-                  {t("becomeASponsor")}
-                </LinkButton>
-              ) : (
-                <LinkButton size="large" disabled to={""}>
-                  {t("comingSoon")}
-                </LinkButton>
-              )}
-            </Centerize>
-          </Centerize>
+          {parts
+            .filter(({ available }) => available)
+            .map(({ subTitle, render }, i) => {
+              if (i % 2 === 0) {
+                return (
+                  <Card key={i}>
+                    <SubTitle>{subTitle}</SubTitle>
+                    <Centerize>{render()}</Centerize>
+                  </Card>
+                )
+              }
+              return (
+                <Centerize key={i}>
+                  <SubTitle>{subTitle}</SubTitle>
+                  {render()}
+                </Centerize>
+              )
+            })}
 
           <Centerize>
             {jnaMembers.length > 0 ? (
@@ -320,11 +331,13 @@ export default function IndexPage() {
           </Centerize>
         </Container>
 
-        <SponsorBox>
-          <Centerize>
-            <SponsorList sponsors={sponsors} showPrText={false} />
-          </Centerize>
-        </SponsorBox>
+        {sponsors.length > 0 ? (
+          <SponsorBox>
+            <Centerize>
+              <SponsorList sponsors={sponsors} showPrText={false} />
+            </Centerize>
+          </SponsorBox>
+        ) : null}
       </WavyBox>
     </Layout>
   )
