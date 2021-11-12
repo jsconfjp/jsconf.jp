@@ -102,3 +102,10 @@
   logoUrl: /2021/sponsors/medup.png
   prText: |
     「経営から、病院を変える。病院から、医療変える」というVisionのもと、病院特化型のCRMサービスである"foroCRM"を提供しているスタートアップです。
+- name: Twilio
+  grade: premium
+  url: https://www.twilio.com/ja/
+  logoUrl: /2021/sponsors/twilio.png
+  prText: |
+    音声通話、メッセージング（SMS）、ビデオ、チャット、二要素認証などを簡単にアプリケーションへ組み込めるクラウドコミュニケーションAPIを提供しています。開発者向けにNode.js、PHP、Python、Ruby、C#, Java, Goに対応するサーバーサイドSDKや、Web、iOS、Android向けのクライアントSDKを提供しています。また、Twilioの使い方を楽しみにながら学習できるゲームチュートリアル、TwilioQuestを提供しています。
+    Twilio provides cloud communications APIs that allow you to easily integrate voice calls, messaging (SMS), video, chat, and two-factor authentication into your applications. For developers, we provide server-side SDKs for Node.js, PHP, Python, Ruby, C#, Java, and Go, as well as client SDKs for Web, iOS, and Android. We also provide TwilioQuest, a game tutorial where you can learn how to use Twilio in a fun way.
