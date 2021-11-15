@@ -73,9 +73,9 @@
     - thomas-steiner
 - uuid: the-past-and-future-of-accessible-front-end-development
   date: day1
-  startsAt: "14:30"
-  endsAt: "15:00"
-  room: B
+  startsAt: "16:20"
+  endsAt: "16:50"
+  room: A
   title: アクセシブルなフロントエンド開発のこれまでとこれから
   titleJa: アクセシブルなフロントエンド開発のこれまでとこれから
   description: >-
@@ -99,9 +99,9 @@
     - okuto-oyama
 - uuid: how-to-implement-a-system-that-goes-beyond-amp-caching-on-your-domain
   date: day1
-  startsAt: "16:20"
-  endsAt: "16:50"
-  room: A
+  startsAt: "14:30"
+  endsAt: "15:00"
+  room: B
   title: AMP キャッシュを超えるシステムを自社ドメインで実現する方法
   titleJa: AMP キャッシュを超えるシステムを自社ドメインで実現する方法
   description: >-
