@@ -32,7 +32,8 @@
 - name: 株式会社ドワンゴ
   url: https://dwango.co.jp/
   logoUrl: /2021/sponsors/dwango.png
-  prText: ""
+  prText: |
+    ドワンゴは "ネットの向こうの、リアルを動かす。人間らしさと、つながるデジタルを。" をコーポレートメッセージとして、学校法人角川ドワンゴ学園が運営するネットに特化した通信制高校「N高等学校・S高等学校」とオンライン学習アプリ「N予備校」、ネットの双方向性を最大限に動画や生放送に取り込んだ「ニコニコ」、ネットとリアルの融合をテーマにした巨大イベント「ニコニコ超会議」など、新しい価値を創り出し、それを事業として成立させていくことに挑戦しつづける企業です。
   grade: sponsor
 - name: Ubie 株式会社
   grade: premium
@@ -109,3 +110,18 @@
   prText: |
     音声通話、メッセージング（SMS）、ビデオ、チャット、二要素認証などを簡単にアプリケーションへ組み込めるクラウドコミュニケーションAPIを提供しています。開発者向けにNode.js、PHP、Python、Ruby、C#, Java, Goに対応するサーバーサイドSDKや、Web、iOS、Android向けのクライアントSDKを提供しています。また、Twilioの使い方を楽しみにながら学習できるゲームチュートリアル、TwilioQuestを提供しています。
     Twilio provides cloud communications APIs that allow you to easily integrate voice calls, messaging (SMS), video, chat, and two-factor authentication into your applications. For developers, we provide server-side SDKs for Node.js, PHP, Python, Ruby, C#, Java, and Go, as well as client SDKs for Web, iOS, and Android. We also provide TwilioQuest, a game tutorial where you can learn how to use Twilio in a fun way.
+- name: 207株式会社
+  grade: sponsor
+  url: https://207-inc.com/
+  logoUrl: /2021/sponsors/207.png
+  prText: |
+    物流のラストワンマイル「配送」部分にフォーカスした事業を展開しています。
+    アナログで非効率な配送業務を解決するアプリ「TODOCU（トドク）サポーター」の開発を中心に事業展開を行っている物流SaaS企業です。
+    プロダクトはリリースから1年半で1万5千人程の配送員に利用されています。
+    「働く時間と場所は会社が画一的に定義するよりも、各自で決めたほうが生産的になれるはず」という信念の元でフルリモート＆フルフレックスを実施中。
+- name: LINE株式会社
+  grade: sponsor
+  url: https://linecorp.com/ja/
+  logoUrl: /2021/sponsors/line.png
+  prText: |
+    コミュニケーションアプリ「LINE」を機軸として、コミュニケーション・コンテンツ・エンターテイメントなどモバイルに特化した各種サービスの開発・運営と広告事業に加え、Fintech事業、AI事業などを展開しています。ミッションに「CLOSING THE DISTANCE」を掲げ、世界中の人と人、人と情報・サービスとの距離を縮めることを目指しています。
