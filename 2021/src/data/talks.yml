@@ -727,11 +727,11 @@
   speakerIDs: []
 - uuid: sponsor-talk-wantedly
   date: day1
-  startsAt: "12:50"
-  endsAt: "13:20"
+  startsAt: "14:00"
+  endsAt: "14:30"
   room: C
-  title: Sponsor talk
-  titleJa: スポンサートーク
+  title: 5分でできる生産性改善 〜ESLint Custom Rule を作ろう〜 by Wantedly (原剛士、小林直樹)
+  titleJa: 5分でできる生産性改善 〜ESLint Custom Rule を作ろう〜 by Wantedly (原剛士、小林直樹)
   speakerIDs: []
 - uuid: sponsor-talk-kaonavi
   date: day1
@@ -743,27 +743,27 @@
   speakerIDs: []
 - uuid: sponsor-talk-ubie
   date: day1
-  startsAt: "14:00"
-  endsAt: "14:30"
+  startsAt: "12:50"
+  endsAt: "13:20"
   room: C
   title: Sponsor talk
   titleJa: スポンサートーク
   speakerIDs: []
 - uuid: sponsor-talk-recruit
   date: day1
-  startsAt: "14:30"
-  endsAt: "15:00"
+  startsAt: "16:20"
+  endsAt: "16:50"
   room: C
-  title: Sponsor talk
-  titleJa: スポンサートーク
+  title: Next.js でリアーキテクトした話 by リクルート (吉井武文)
+  titleJa: Next.js でリアーキテクトした話 by リクルート (吉井武文)
   speakerIDs: []
 - uuid: sponsor-talk-hey
   date: day1
   startsAt: "15:10"
   endsAt: "15:40"
   room: C
-  title: Sponsor talk
-  titleJa: スポンサートーク
+  title: STORES 予約を支えるフロントエンドの技術 by Hey (岩本 卓朗)
+  titleJa: STORES 予約を支えるフロントエンドの技術 by Hey (岩本 卓朗)
   speakerIDs: []
 - uuid: sponsor-talk-nota
   date: day1
@@ -775,11 +775,11 @@
   speakerIDs: []
 - uuid: sponsor-talk-twilio
   date: day1
-  startsAt: "16:20"
-  endsAt: "16:50"
+  startsAt: "14:30"
+  endsAt: "15:00"
   room: C
-  title: Sponsor talk
-  titleJa: スポンサートーク
+  title: Open API Specificationを使ったTwilio APIテスト用モッキングサーバーの構築 by Twillio (Daizen Ikehara)
+  titleJa: Open API Specificationを使ったTwilio APIテスト用モッキングサーバーの構築 by Twillio (Daizen Ikehara)
   speakerIDs: []
 - uuid: sponsors-lt
   date: day1
