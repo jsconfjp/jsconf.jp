@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-speaker-tsx",
     "path": "/talk/sponsor-talk-hey",
-    "result": {"pageContext":{"speakers":[],"avatars":[],"talk":{"uuid":"sponsor-talk-hey","title":"Sponsor talk","titleJa":"スポンサートーク","description":null,"descriptionJa":null,"spokenLanguage":null,"slideLanguage":null,"speakerIDs":[],"date":"day1","startsAt":"15:10","endsAt":"15:40","room":"C"}}},
+    "result": {"pageContext":{"speakers":[],"avatars":[],"talk":{"uuid":"sponsor-talk-hey","title":"STORES 予約を支えるフロントエンドの技術 by Hey (岩本 卓朗)","titleJa":"STORES 予約を支えるフロントエンドの技術 by Hey (岩本 卓朗)","description":null,"descriptionJa":null,"spokenLanguage":null,"slideLanguage":null,"speakerIDs":[],"date":"day1","startsAt":"15:10","endsAt":"15:40","room":"C"}}},
     "staticQueryHashes": ["1715751809","1861792574","2737205312"]}

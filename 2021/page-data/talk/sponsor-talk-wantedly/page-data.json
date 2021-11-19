@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-speaker-tsx",
     "path": "/talk/sponsor-talk-wantedly",
-    "result": {"pageContext":{"speakers":[],"avatars":[],"talk":{"uuid":"sponsor-talk-wantedly","title":"Sponsor talk","titleJa":"スポンサートーク","description":null,"descriptionJa":null,"spokenLanguage":null,"slideLanguage":null,"speakerIDs":[],"date":"day1","startsAt":"12:50","endsAt":"13:20","room":"C"}}},
+    "result": {"pageContext":{"speakers":[],"avatars":[],"talk":{"uuid":"sponsor-talk-wantedly","title":"5分でできる生産性改善 〜ESLint Custom Rule を作ろう〜 by Wantedly (原剛士、小林直樹)","titleJa":"5分でできる生産性改善 〜ESLint Custom Rule を作ろう〜 by Wantedly (原剛士、小林直樹)","description":null,"descriptionJa":null,"spokenLanguage":null,"slideLanguage":null,"speakerIDs":[],"date":"day1","startsAt":"14:00","endsAt":"14:30","room":"C"}}},
     "staticQueryHashes": ["1715751809","1861792574","2737205312"]}
