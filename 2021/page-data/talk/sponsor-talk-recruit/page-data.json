@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-speaker-tsx",
     "path": "/talk/sponsor-talk-recruit",
-    "result": {"pageContext":{"speakers":[],"avatars":[],"talk":{"uuid":"sponsor-talk-recruit","title":"Next.js でリアーキテクトした話 by リクルート (吉井武文)","titleJa":"Next.js でリアーキテクトした話 by リクルート (吉井武文)","description":null,"descriptionJa":null,"spokenLanguage":null,"slideLanguage":null,"speakerIDs":[],"date":"day1","startsAt":"16:20","endsAt":"16:50","room":"C"}}},
+    "result": {"pageContext":{"speakers":[],"avatars":[],"talk":{"uuid":"sponsor-talk-recruit","title":"Next.js でリアーキテクトした話 by リクルート (吉井健文)","titleJa":"Next.js でリアーキテクトした話 by リクルート (吉井健文)","description":null,"descriptionJa":null,"spokenLanguage":null,"slideLanguage":null,"speakerIDs":[],"date":"day1","startsAt":"16:20","endsAt":"16:50","room":"C"}}},
     "staticQueryHashes": ["1715751809","1861792574","2737205312"]}
