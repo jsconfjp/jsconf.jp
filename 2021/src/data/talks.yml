@@ -738,8 +738,8 @@
   startsAt: "13:20"
   endsAt: "13:50"
   room: C
-  title: Sponsor talk
-  titleJa: スポンサートーク
+  title: 6年間成長し続けてきたモノリシックサービスにおけるフロントエンド開発 by カオナビ
+  titleJa: 6年間成長し続けてきたモノリシックサービスにおけるフロントエンド開発 by カオナビ
   speakerIDs: []
 - uuid: sponsor-talk-ubie
   date: day1
@@ -770,8 +770,8 @@
   startsAt: "15:40"
   endsAt: "16:10"
   room: C
-  title: Sponsor talk
-  titleJa: スポンサートーク
+  title: Helpfeel小咄2選 Web WorkerとMutationObserver by Nota
+  titleJa: Helpfeel小咄2選 Web WorkerとMutationObserver by Nota
   speakerIDs: []
 - uuid: sponsor-talk-twilio
   date: day1
