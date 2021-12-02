@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-speaker-tsx",
     "path": "/talk/sponsor-talk-twilio",
-    "result": {"pageContext":{"speakers":[],"avatars":[],"talk":{"uuid":"sponsor-talk-twilio","title":"Open API Specificationを使ったTwilio APIテスト用モッキングサーバーの構築 by Twillio (Daizen Ikehara)","titleJa":"Open API Specificationを使ったTwilio APIテスト用モッキングサーバーの構築 by Twillio (Daizen Ikehara)","description":null,"descriptionJa":null,"spokenLanguage":null,"slideLanguage":null,"speakerIDs":[],"date":"day1","startsAt":"14:30","endsAt":"15:00","room":"C"}}},
+    "result": {"pageContext":{"speakers":[],"avatars":[],"talk":{"uuid":"sponsor-talk-twilio","title":"Open API Specificationを使ったTwilio APIテスト用モッキングサーバーの構築 by Twilio (Daizen Ikehara)","titleJa":"Open API Specificationを使ったTwilio APIテスト用モッキングサーバーの構築 by Twilio (Daizen Ikehara)","description":null,"descriptionJa":null,"spokenLanguage":null,"slideLanguage":null,"speakerIDs":[],"date":"day1","startsAt":"14:30","endsAt":"15:00","room":"C"}}},
     "staticQueryHashes": ["1715751809","1861792574","2737205312"]}
