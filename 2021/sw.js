@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-c9fd4f5191664e2d40db.js"
+    "url": "webpack-runtime-10ca70864f45f6c5f20e.js"
   },
   {
     "url": "framework-ac828c628c543a13a889.js"
   },
   {
-    "url": "app-8129f21ba6a04dbf8d4d.js"
+    "url": "app-5bd918f6ce764ab14286.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "4fbaf3fe84991bdc247ce4227b2b84f6"
+    "revision": "3f700c49cbdf40982ed55ae9a35cea88"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-62183c16c2d4e069b4e6.js"
@@ -48,7 +48,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "2901d781705d349acf6c64a49bfcbf29"
+    "revision": "e40f9da9156e854ed71cf9466457e0f6"
   },
   {
     "url": "polyfill-a777b7d62ccbfb1011a8.js"
@@ -79,7 +79,7 @@ self.__precacheManifest = [
     "revision": "617d841d866ec4e52b55622c79b14248"
   },
   {
-    "url": "component---src-pages-index-tsx-e2fdd476b681eb0bbb3b.js"
+    "url": "component---src-pages-index-tsx-07018e304351cf8fcd77.js"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -87,7 +87,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3027076902.json",
-    "revision": "c0201390cdf8c65c56679f6f23906d53"
+    "revision": "29ecf48a084073c1bc776070e04fafff"
   },
   {
     "url": "page-data/jp-specified-commercial-transactions-act/page-data.json",
@@ -105,7 +105,7 @@ self.__precacheManifest = [
     "revision": "06e3d836b58ccb63b02a72de2c54cd29"
   },
   {
-    "url": "component---src-pages-speakers-tsx-19ec8ff7be2b659a7375.js"
+    "url": "component---src-pages-speakers-tsx-c15121cf34b0352d249f.js"
   },
   {
     "url": "page-data/speakers/page-data.json",
@@ -113,7 +113,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/1393509171.json",
-    "revision": "35981640e2ddbe96759f779aa5338673"
+    "revision": "f426560608e70c11c567b331c88d32e6"
   },
   {
     "url": "component---src-pages-sponsors-tsx-373a428f6faf0294578e.js"
@@ -220,7 +220,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/2021/app-8129f21ba6a04dbf8d4d.js`))) {
+  if (!resources || !(await caches.match(`/2021/app-5bd918f6ce764ab14286.js`))) {
     return await fetch(event.request)
   }
 
