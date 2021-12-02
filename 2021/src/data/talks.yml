@@ -778,8 +778,8 @@
   startsAt: "14:30"
   endsAt: "15:00"
   room: C
-  title: Open API Specificationを使ったTwilio APIテスト用モッキングサーバーの構築 by Twillio (Daizen Ikehara)
-  titleJa: Open API Specificationを使ったTwilio APIテスト用モッキングサーバーの構築 by Twillio (Daizen Ikehara)
+  title: Open API Specificationを使ったTwilio APIテスト用モッキングサーバーの構築 by Twilio (Daizen Ikehara)
+  titleJa: Open API Specificationを使ったTwilio APIテスト用モッキングサーバーの構築 by Twilio (Daizen Ikehara)
   speakerIDs: []
 - uuid: sponsors-lt
   date: day1
