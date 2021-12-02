@@ -3,6 +3,7 @@
   startsAt: "14:00"
   endsAt: "14:30"
   room: B
+  recordingUrl: https://www.youtube-nocookie.com/embed/ieoCQ2708YI
   title: JavaScript(TypeScript)だけでメディアサイトをインフラから構築する方法
   titleJa: JavaScript(TypeScript)だけでメディアサイトをインフラから構築する方法
   description: >-

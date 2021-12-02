@@ -50,6 +50,7 @@ exports.createPages = ({ graphql, actions }) => {
                 startsAt
                 endsAt
                 room
+                recordingUrl
               }
             }
           }
