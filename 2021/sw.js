@@ -33,11 +33,11 @@ self.__precacheManifest = [
     "url": "framework-ac828c628c543a13a889.js"
   },
   {
-    "url": "app-5bd918f6ce764ab14286.js"
+    "url": "app-21946bb891df16e4fba9.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "3f700c49cbdf40982ed55ae9a35cea88"
+    "revision": "30868c7be6d49cb420718cd452a1cbcf"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-62183c16c2d4e069b4e6.js"
@@ -48,7 +48,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "e40f9da9156e854ed71cf9466457e0f6"
+    "revision": "2e1f0b3db28845db051d639eca561d76"
   },
   {
     "url": "polyfill-a777b7d62ccbfb1011a8.js"
@@ -87,7 +87,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3027076902.json",
-    "revision": "f1980b245de5dd728bc49b3a2b3cdc6b"
+    "revision": "4a10b158e147bb805cfa0cd3cc6ce475"
   },
   {
     "url": "page-data/jp-specified-commercial-transactions-act/page-data.json",
@@ -113,7 +113,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/1393509171.json",
-    "revision": "f01d0e7097af41a60d17496352cd2da2"
+    "revision": "a3c6a07bb282e2b5f761de26a7121aa8"
   },
   {
     "url": "component---src-pages-sponsors-tsx-373a428f6faf0294578e.js"
@@ -220,7 +220,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/2021/app-5bd918f6ce764ab14286.js`))) {
+  if (!resources || !(await caches.match(`/2021/app-21946bb891df16e4fba9.js`))) {
     return await fetch(event.request)
   }
 
