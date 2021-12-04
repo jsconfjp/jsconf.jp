@@ -7,7 +7,7 @@ import { OutboundLink } from "gatsby-plugin-google-analytics"
 type Props = {}
 
 const Box = styled.footer`
-  padding: 40px 0;
+  padding: 40px 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
