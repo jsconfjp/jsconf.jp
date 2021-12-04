@@ -21,9 +21,11 @@ type Timetable = {
 
 export function generateTimetable({
   speakers,
+  sponsors,
   talks
 }: {
   speakers: SpeakerType[]
+  sponsors: SpeakerType[]
   talks: TalkType[]
 }): Timetable {
   const lookup: Record<string, SpeakerType> = speakers.reduce(
@@ -36,15 +38,26 @@ export function generateTimetable({
     const sessions = sortBy(talks, talk => talk.room).map(talk => ({
       ...talk,
       break: talk.title === "Break",
-      speakers: talk.speakerIDs.map(speakerID => {
-        const speaker = lookup[speakerID]
-        if (!speaker) {
-          throw new Error(
-            `Speaker ${speakerID} not found in "${talk.title}" (${talk.uuid})`
-          )
-        }
-        return speaker
-      })
+      speakers:
+        talk.speakerIDs?.map(speakerID => {
+          const speaker = lookup[speakerID]
+          if (!speaker) {
+            throw new Error(
+              `Speaker ${speakerID} not found in "${talk.title}" (${talk.uuid})`
+            )
+          }
+          return speaker
+        }) ?? [],
+      sponsors:
+        talk.sponsorIDs?.map(sponsorID => {
+          const sponsor = sponsors.find(s => s.uuid === sponsorID)
+          if (!sponsor) {
+            throw new Error(
+              `Sponsor ${sponsorID} not found in "${talk.title}" (${talk.uuid})`
+            )
+          }
+          return sponsor
+        }) ?? []
     }))
     const timeboxes = groupBy(
       sessions,

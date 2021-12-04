@@ -97,13 +97,29 @@ const Text = styled.span`
 
 export default function SchedulePage() {
   const { t, i18n } = useTranslation()
-  const { allSpeakersYaml, allTalksYaml } = useStaticQuery(graphql`
+  const {
+    allSpeakersYaml,
+    allSponsorsYaml,
+    allTalksYaml
+  } = useStaticQuery(graphql`
     query {
       allSpeakersYaml {
         edges {
           node {
             uuid
             name
+          }
+        }
+      }
+      allSponsorsYaml {
+        edges {
+          node {
+            uuid
+            name
+            grade
+            url
+            logoUrl
+            prText
           }
         }
       }
@@ -118,6 +134,7 @@ export default function SchedulePage() {
             spokenLanguage
             slideLanguage
             speakerIDs
+            sponsorIDs
             startsAt
             endsAt
             room
@@ -130,8 +147,9 @@ export default function SchedulePage() {
   const speakers: SpeakerType[] = allSpeakersYaml.edges.map(
     ({ node }: any) => node
   )
+  const sponsors: any[] = allSponsorsYaml.edges.map(({ node }: any) => node)
   const talks: TalkType[] = allTalksYaml.edges.map(({ node }: any) => node)
-  const timetable = generateTimetable({ speakers, talks })
+  const timetable = generateTimetable({ speakers, sponsors, talks })
   const days = Object.keys(times).sort() as Dates[]
   const dateTimeFormatter = new Intl.DateTimeFormat(i18n.language, {
     // @ts-ignore dateStyle' does not exist in type 'DateTimeFormatOptions'
@@ -175,7 +193,8 @@ export default function SchedulePage() {
               </RoomLegendBox>
               <Grid startsAt={startsAt} endsAt={endsAt}>
                 {sessions.map(s => {
-                  const hasDescription = s.uuid && s.speakers.length
+                  const hasDescription =
+                    s.uuid && (s.speakers.length || s.sponsors.length)
                   return (
                     <Area
                       // @ts-ignore

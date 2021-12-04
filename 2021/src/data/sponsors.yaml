@@ -1,27 +1,27 @@
-# - name: Name
-#   url: https://example.com
-#   logoUrl: https://via.placeholder.com/740x160
-#   grade: sponsor | platinum
-- name: ウォンテッドリー株式会社
+- uuid: wantedly
+  name: ウォンテッドリー株式会社
   url: https://docs.wantedly.dev/
   logoUrl: /2021/sponsors/wantedly.png
   prText: |
     ウォンテッドリーは『シゴトでココロオドルひとをふやす』ためにはたらくすべての人が共感を通じて「であい」「つながり」「つながりを深める」ためのビジネスSNS Wantedly を提供しています。 シゴトでココロオドルとは、仕事に没頭し成果を上げ、継続的に成長を実感する状態と私たちは定義しております。没頭に必要な3要素、自律・共感・挑戦を実現するプロダクトを開発運営しミッションの実現を目指して参ります
   grade: premium
-- name: 株式会社カオナビ
+- uuid: kaonavi
+  name: 株式会社カオナビ
   url: https://corp.kaonavi.jp/recruit/
-  logoUrl: /2021/sponsors/kaonavi.png
+  logoUrl: /sponsors/kaonavi.png
   prText: |
     社員の個性・才能を発掘し、戦略人事を加速させるタレントマネジメントシステム「カオナビ」を提供しています。企業の人材情報をクラウド上で一元管理し、社員の顔や名前、経験、評価、スキル、才能などの人材情報を可視化することで、最適な人材配置や抜擢といった戦略的なタレントマネジメントの実現を支援しています。今後も、人材マネジメントのプラットフォームとして、日本の「働き方」を変えていきたいと考えています。
     フロントエンドはReact/TypeScriptで開発しています。積極採用中ですので、ご興味ある方はぜひカジュアル面談からでも可能なのでエントリーお待ちしております。（エンジニア採用資料はこちら：https://corp.kaonavi.jp/recruit/recruitment/）
   grade: premium
-- name: Classi株式会社
+- uuid: classi
+  name: Classi株式会社
   url: https://corp.classi.jp/careers/
   logoUrl: /2021/sponsors/classi.png
   prText: |
     教育プラットフォーム「Classi（クラッシー）」の開発・運営を通して、新たな学びの形を支援しています。提供開始から6年で、全国の高校の"2校に1校"、高校生の"2人に1人"に利用されるサービスに成長しました。スマートフォン・タブレット・PC などのデバイスを問わずに利用でき、授業や面談、学校と保護者のコミュニケーションなど、学校現場の多様なシーンで活用されています。
   grade: sponsor
-- name: 株式会社マネーフォワード
+- uuid: moneyforward
+  name: 株式会社マネーフォワード
   url: https://corp.moneyforward.com/
   logoUrl: /2021/sponsors/money-forward.png
   prText: |
@@ -29,19 +29,22 @@
     2012年の創業以来、オープンでフェアな金融プラットフォームを構築し、必要なサービスを提供することで、すべての個人や企業のお金の課題を解決することを目指しています。
     サービス提供開始以来、恩恵を受けてきたオープンソースの力に報いるため、マネーフォワードではテックコミュニティに対するコントリビューションを応援しています。
   grade: sponsor
-- name: 株式会社ドワンゴ
+- uuid: dwango
+  name: 株式会社ドワンゴ
   url: https://dwango.co.jp/
   logoUrl: /2021/sponsors/dwango.png
   prText: |
     ドワンゴは "ネットの向こうの、リアルを動かす。人間らしさと、つながるデジタルを。" をコーポレートメッセージとして、学校法人角川ドワンゴ学園が運営するネットに特化した通信制高校「N高等学校・S高等学校」とオンライン学習アプリ「N予備校」、ネットの双方向性を最大限に動画や生放送に取り込んだ「ニコニコ」、ネットとリアルの融合をテーマにした巨大イベント「ニコニコ超会議」など、新しい価値を創り出し、それを事業として成立させていくことに挑戦しつづける企業です。
   grade: sponsor
-- name: Ubie 株式会社
+- uuid: ubie
+  name: Ubie 株式会社
   grade: premium
   url: https://ubie.life/
   logoUrl: /2021/sponsors/ubie.png
   prText: |
     「テクノロジーで人々を適切な医療に案内する」をミッションに掲げ、医師とエンジニアが2017年5月に創業したヘルステックスタートアップです。AIをコア技術とし、症状から適切な医療へと案内する「ユビーAI受診相談」と、医療現場の業務効率化を図る「ユビーAI問診」を開発・提供。誰もが自分にあった医療にアクセスできる社会づくりを進めています。
-- name: 株式会社リクルート
+- uuid: recruit
+  name: 株式会社リクルート
   grade: premium
   url: https://recruit-saiyo.jp/
   logoUrl: /2021/sponsors/recruit.jpg
@@ -50,7 +53,8 @@
     新しい価値の創造を通じ、社会からの期待に応え、一人ひとりが輝く豊かな世界の実現を目指しています。
     現在リクルートでは多くのプロダクトで一緒に働くメンバーを募集しています。
     リクルートのエンジニアは、技術でビジネスを支えるだけではなく、ビジネスを創り出していくこと、サービスの提供価値を向上させることに、主体的に関わることができます。多様なドメイン、異なるフェーズの事業を持つリクルートだからこそ、多様な成長、多様な楽しみ方ができます。ご興味ある方は会長まで連絡お願いします。
-- name: hey, Inc. / ヘイ株式会社
+- uuid: hey
+  name: hey, Inc. / ヘイ株式会社
   grade: premium
   url: https://hey.jp/
   logoUrl: /2021/sponsors/hey.png
@@ -60,14 +64,16 @@
 
     heyは、「Just for Fun」をミッションに、こだわりや情熱、たのしみによって駆動される経済の発展を支援しています。ネットショップ開設、POSレジ、キャッシュレス決済、オンライン予約システムなど、お商売のデジタル化を支援する「STORES プラットフォーム」の展開を通じて、誰もがこだわりをもっと自由に発揮できる社会を目指します。
     https://hey.jp/
-- name: 株式会社CureApp
+- uuid: cureapp
+  name: 株式会社CureApp
   grade: sponsor
   url: https://cureapp.co.jp/
   logoUrl: /2021/sponsors/cureapp.svg
   prText: |
     CureAppでは、医学的エビデンスに基づいた医療機器プログラム『治療アプリ®︎』の開発をしています。デジタル療法という新たな治療を普及させ、多くの患者様に届けることを目指しています。
     エンジニアは全員がTypeScriptエンジニアであり、バックエンド/フロントエンド/モバイルアプリという分業をしていません。みんながReact/React Native/Node.jsを扱っています。
-- name: Chatwork 株式会社
+- uuid: chatwork
+  name: Chatwork 株式会社
   grade: sponsor
   url: https://recruit.chatwork.com/
   logoUrl: /2021/sponsors/chatwork.png
@@ -75,13 +81,15 @@
     「働くをもっと楽しく、創造的に」
 
     会議、電話、メール、訪問。誰もが当たり前と思っていたコミュニケーションを見直せば、より楽しく創造的な働き方にできる。社会が必要としていることを自分の得意分野で実現し、報酬が得られるような働き方をもっと増やしていきたい。私たちが目指す世界のビジョン「すべての人に、一歩先の働き方を」実現するために、チャレンジし続けています。
-- name: 株式会社メドレー
+- uuid: medley
+  name: 株式会社メドレー
   grade: sponsor
   url: https://www.medley.jp/
   logoUrl: /2021/sponsors/medley.png
   prText: |
     メドレーは、「医療ヘルスケア分野の未来をつくる」というミッションのもと、テクノロジーを活用してこの分野における課題解決を目指す会社です。 現在はクラウド診療支援システム「CLINICS」や、かかりつけ薬局支援システム「Pharms」、オンライン医療事典の「MEDLEY」などを展開しています。
-- name: 株式会社LegalForce
+- uuid: legalforce
+  name: 株式会社LegalForce
   grade: premium
   url: https://legalforce-corp.com/
   logoUrl: /2021/sponsors/legalforce.png
@@ -91,26 +99,31 @@
     我々が目指しているプロダクトは、エンジニアが仕事道具として使うGitHubやVSCodeと同じように、契約書業務に従事する担当者にとって普段遣いしやすく手に馴染むツールです。
     そのためにプロダクトマネジャーやデザイナー、エンジニアが一体となった職能横断組織を組成することでUXにこだわった開発を行っています。
     React × TypeScriptでB2Bプロダクトの開発に携わってみたい方を絶賛募集中です！
-- name: Nota 株式会社
+- uuid: nota
+  name: Nota 株式会社
   grade: premium
   url: https://notainc.com/
   logoUrl: /2021/sponsors/nota.svg
   prText: |
     2007年にシリコンバレーにて設立。スクリーンショット共有ツール「Gyazo」やリアルタイムに情報を共有できる画期的な共有ノート「Scrapbox」を開発。2019年にはどんな質問にも答えるFAQ SaaS「Helpfeel」をリリースし、事業拡大のため2021年3月に5億円の資金調達を実施。現在は京都と東京に拠点を構えながらフルリモートワーク、フルフレックスを実施。すべてのプロダクトでReactとTypeScriptを利用している。
-- name: メダップ株式会社
+- uuid: medup
+  name: メダップ株式会社
   grade: sponsor
   url: https://medup.jp/
   logoUrl: /2021/sponsors/medup.png
   prText: |
     「経営から、病院を変える。病院から、医療変える」というVisionのもと、病院特化型のCRMサービスである"foroCRM"を提供しているスタートアップです。
-- name: Twilio
+- uuid: twilio
+  name: Twilio
   grade: premium
   url: https://www.twilio.com/ja/
   logoUrl: /2021/sponsors/twilio.png
   prText: |
     音声通話、メッセージング（SMS）、ビデオ、チャット、二要素認証などを簡単にアプリケーションへ組み込めるクラウドコミュニケーションAPIを提供しています。開発者向けにNode.js、PHP、Python、Ruby、C#, Java, Goに対応するサーバーサイドSDKや、Web、iOS、Android向けのクライアントSDKを提供しています。また、Twilioの使い方を楽しみにながら学習できるゲームチュートリアル、TwilioQuestを提供しています。
+
     Twilio provides cloud communications APIs that allow you to easily integrate voice calls, messaging (SMS), video, chat, and two-factor authentication into your applications. For developers, we provide server-side SDKs for Node.js, PHP, Python, Ruby, C#, Java, and Go, as well as client SDKs for Web, iOS, and Android. We also provide TwilioQuest, a game tutorial where you can learn how to use Twilio in a fun way.
-- name: 207株式会社
+- uuid: "207"
+  name: 207株式会社
   grade: sponsor
   url: https://207-inc.com/
   logoUrl: /2021/sponsors/207.png
@@ -119,13 +132,15 @@
     アナログで非効率な配送業務を解決するアプリ「TODOCU（トドク）サポーター」の開発を中心に事業展開を行っている物流SaaS企業です。
     プロダクトはリリースから1年半で1万5千人程の配送員に利用されています。
     「働く時間と場所は会社が画一的に定義するよりも、各自で決めたほうが生産的になれるはず」という信念の元でフルリモート＆フルフレックスを実施中。
-- name: LINE株式会社
+- uuid: line
+  name: LINE株式会社
   grade: sponsor
   url: https://linecorp.com/ja/
   logoUrl: /2021/sponsors/line.png
   prText: |
     コミュニケーションアプリ「LINE」を機軸として、コミュニケーション・コンテンツ・エンターテイメントなどモバイルに特化した各種サービスの開発・運営と広告事業に加え、Fintech事業、AI事業などを展開しています。ミッションに「CLOSING THE DISTANCE」を掲げ、世界中の人と人、人と情報・サービスとの距離を縮めることを目指しています。
-- name: メドピア株式会社
+- uuid: medpeer
+  name: メドピア株式会社
   grade: sponsor
   url: https://medpeer.co.jp/
   logoUrl: /2021/sponsors/medpeer.jpg

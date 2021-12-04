@@ -3,7 +3,7 @@
   startsAt: "14:00"
   endsAt: "14:30"
   room: B
-  recordingUrl: https://www.youtube-nocookie.com/embed/ieoCQ2708YI
+  recordingUrl: https://www.youtube-nocookie.com/embed/4DgZFw74M9c
   title: JavaScript(TypeScript)だけでメディアサイトをインフラから構築する方法
   titleJa: JavaScript(TypeScript)だけでメディアサイトをインフラから構築する方法
   description: >-
@@ -50,6 +50,7 @@
   startsAt: "13:20"
   endsAt: "13:50"
   room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/vdYN41jLXLA
   title: The 2021 edition of dealing with files on the Web
   titleJa: The 2021 edition of dealing with files on the Web
   description: >-
@@ -77,6 +78,7 @@
   startsAt: "16:20"
   endsAt: "16:50"
   room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/58TkWIsH20E
   title: アクセシブルなフロントエンド開発のこれまでとこれから
   titleJa: アクセシブルなフロントエンド開発のこれまでとこれから
   description: >-
@@ -103,6 +105,7 @@
   startsAt: "14:30"
   endsAt: "15:00"
   room: B
+  recordingUrl: https://www.youtube-nocookie.com/embed/QEd_7FzzGa4
   title: AMP キャッシュを超えるシステムを自社ドメインで実現する方法
   titleJa: AMP キャッシュを超えるシステムを自社ドメインで実現する方法
   description: >-
@@ -149,6 +152,7 @@
   startsAt: "14:00"
   endsAt: "14:30"
   room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/iP8bjAzCwPo
   title: Web ベースのカジュアルゲーム「Block Pong」の実装とビジネス
   titleJa: Web ベースのカジュアルゲーム「Block Pong」の実装とビジネス
   description: >-
@@ -168,6 +172,7 @@
   startsAt: "12:50"
   endsAt: "13:20"
   room: B
+  recordingUrl: https://www.youtube-nocookie.com/embed/16ux8nTqJ7k
   title: Webフロントエンドのリプレースを支えるテストの考え方
   titleJa: Webフロントエンドのリプレースを支えるテストの考え方
   description: >-
@@ -191,6 +196,7 @@
   startsAt: "14:30"
   endsAt: "15:00"
   room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/hIEbOUbdLNs
   title: Deno の これまで と これから
   titleJa: Deno の これまで と これから
   description: >-
@@ -210,6 +216,7 @@
   startsAt: "15:10"
   endsAt: "15:40"
   room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/u26b4YcgUeI
   title: 状態管理ライブラリについて
   titleJa: 状態管理ライブラリについて
   description: |
@@ -235,6 +242,7 @@
   startsAt: "15:10"
   endsAt: "15:40"
   room: B
+  recordingUrl: https://www.youtube-nocookie.com/embed/9xe0Qzgf58o
   title: Static Site Generator is a Compiler
   titleJa: Static Site Generator is a Compiler
   description: >-
@@ -271,6 +279,7 @@
   startsAt: "15:40"
   endsAt: "16:10"
   room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/DvJaObZEEvA
   title: Cookie等によるトラッキング規制と代替APIの最新情報まとめ
   titleJa: Cookie等によるトラッキング規制と代替APIの最新情報まとめ
   description: >-
@@ -297,6 +306,7 @@
   startsAt: "15:40"
   endsAt: "16:10"
   room: B
+  recordingUrl: https://www.youtube-nocookie.com/embed/AZEov86vKXM
   title: GraphQL と Prisma から考える次のN年を見据えた技術選定
   titleJa: GraphQL と Prisma から考える次のN年を見据えた技術選定
   description: >-
@@ -344,6 +354,7 @@
   startsAt: "12:10"
   endsAt: "12:40"
   room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/yhieejm0we4
   title: JavaScript エコシステムを維持する OSS の努力と課題
   titleJa: JavaScript エコシステムを維持する OSS の努力と課題
   description: >-
@@ -384,6 +395,7 @@
   startsAt: "16:20"
   endsAt: "16:50"
   room: B
+  recordingUrl: https://www.youtube-nocookie.com/embed/GVgKncxbMsE
   title: モバイルブラウザにおけるClient-side MLアプリケーションのプロダクション開発事例
   titleJa: モバイルブラウザにおけるClient-side MLアプリケーションのプロダクション開発事例
   description: >-
@@ -427,6 +439,7 @@
   startsAt: "13:20"
   endsAt: "13:50"
   room: B
+  recordingUrl: https://www.youtube-nocookie.com/embed/Ha0fk8VwZqQ
   title: Universal DevTools for all environments
   titleJa: Universal DevTools for all environments
   description: >-
@@ -449,6 +462,7 @@
   startsAt: "17:00"
   endsAt: "17:10"
   room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/8tMdpQHUsI8
   title: Machine Learning with JS
   titleJa: Machine Learning with JS
   description: >-
@@ -466,6 +480,7 @@
   startsAt: "17:10"
   endsAt: "17:20"
   room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/F-zVwqhleMc
   title: 関数型プログラミングのデザインパターンひとめぐり with Ramda.js
   titleJa: 関数型プログラミングのデザインパターンひとめぐり with Ramda.js
   description: >-
@@ -487,6 +502,7 @@
   startsAt: "17:20"
   endsAt: "17:30"
   room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/LGi8v-a3kU4
   title: 組織フェーズを見据えたWebフロントエンドのアーキテクチャと変遷
   titleJa: 組織フェーズを見据えたWebフロントエンドのアーキテクチャと変遷
   description: >-
@@ -508,6 +524,7 @@
   startsAt: "17:30"
   endsAt: "17:40"
   room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/u-f3licytbI
   title: Bundle Size Optimization in Future JavaScript
   titleJa: Bundle Size Optimization in Future JavaScript
   description: >-
@@ -536,8 +553,9 @@
   startsAt: "17:40"
   endsAt: "17:50"
   room: A
-  title: "加速するEdge Computing "
-  titleJa: "加速するEdge Computing "
+  recordingUrl: https://www.youtube-nocookie.com/embed/gBu2Fd8LuFg
+  title: "加速するEdge Computing"
+  titleJa: "加速するEdge Computing"
   description: >-
     (Untranslated) Cloudflare Worker, Vercel Edge Function, Compute@Edge, Deno
     deploy, AWS Lambda@Edgeなど, Edge でコードを実行するランタイムはどんどん増えています.
@@ -567,6 +585,7 @@
   startsAt: "17:50"
   endsAt: "18:00"
   room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/VZKK3p-pHnw
   title: Building markdown editor using Rust's parser
   titleJa: Building markdown editor using Rust's parser
   description: >-
@@ -597,6 +616,7 @@
   startsAt: "12:50"
   endsAt: "13:20"
   room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/4ut32ryNL_Y
   title: >-
     Asynchronicity, the right way: Understanding the basics of asynchronous
     JavaScript, when to and when not to use it.
@@ -646,6 +666,7 @@
   startsAt: "18:00"
   endsAt: "18:10"
   room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/m2IuTFyB-QI
   title: State of CSS 2021 Survey Results
   titleJa: State of CSS 2021 Survey Results
   description: A brief overview of the results for the 2021 State of CSS survey
@@ -661,7 +682,6 @@
   room: A
   title: Opening by Yosuke Furukawa
   titleJa: オープニング by Yosuke Furukawa
-  speakerIDs: []
 - uuid: "day1-break-1240-1250"
   date: day1
   startsAt: "12:40"
@@ -669,7 +689,6 @@
   room: A
   title: Break
   titleJa: 休憩
-  speakerIDs: []
 - uuid: "day1-break-1350-1400"
   date: day1
   startsAt: "13:50"
@@ -677,7 +696,6 @@
   room: A
   title: Break
   titleJa: 休憩
-  speakerIDs: []
 - uuid: "day1-break-1500-1510"
   date: day1
   startsAt: "15:00"
@@ -685,7 +703,6 @@
   room: A
   title: Break
   titleJa: 休憩
-  speakerIDs: []
 - uuid: "day1-break-1610-1520"
   date: day1
   startsAt: "16:10"
@@ -693,7 +710,6 @@
   room: A
   title: Break
   titleJa: 休憩
-  speakerIDs: []
 - uuid: "day1-break-1650-1700"
   date: day1
   startsAt: "16:50"
@@ -701,15 +717,6 @@
   room: A
   title: Break
   titleJa: 休憩
-  speakerIDs: []
-- uuid: "day1-break-1840-1850"
-  date: day1
-  startsAt: "18:40"
-  endsAt: "18:50"
-  room: A
-  title: Break
-  titleJa: 休憩
-  speakerIDs: []
 - uuid: ending
   date: day1
   startsAt: "19:20"
@@ -717,7 +724,6 @@
   room: A
   title: Ending
   titleJa: エンディング
-  speakerIDs: []
 - uuid: drink-party
   date: day1
   startsAt: "19:30"
@@ -725,76 +731,138 @@
   room: A
   title: Drink Party
   titleJa: 懇親会
-  speakerIDs: []
 - uuid: sponsor-talk-wantedly
   date: day1
   startsAt: "14:00"
   endsAt: "14:30"
   room: C
+  recordingUrl: https://www.youtube-nocookie.com/embed/Xc2yz5maSUQ
   title: 5分でできる生産性改善 〜ESLint Custom Rule を作ろう〜 by Wantedly (原剛士、小林直樹)
   titleJa: 5分でできる生産性改善 〜ESLint Custom Rule を作ろう〜 by Wantedly (原剛士、小林直樹)
-  speakerIDs: []
+  sponsorIDs: [wantedly]
 - uuid: sponsor-talk-kaonavi
   date: day1
   startsAt: "13:20"
   endsAt: "13:50"
   room: C
+  recordingUrl: https://www.youtube-nocookie.com/embed/cxF-n75gIPo
   title: 6年間成長し続けてきたモノリシックサービスにおけるフロントエンド開発 by カオナビ
   titleJa: 6年間成長し続けてきたモノリシックサービスにおけるフロントエンド開発 by カオナビ
-  speakerIDs: []
-- uuid: sponsor-talk-ubie
-  date: day1
-  startsAt: "12:50"
-  endsAt: "13:20"
-  room: C
-  title: Sponsor talk
-  titleJa: スポンサートーク
-  speakerIDs: []
+  sponsorIDs: [kaonavi]
 - uuid: sponsor-talk-recruit
   date: day1
   startsAt: "16:20"
   endsAt: "16:50"
   room: C
+  recordingUrl: https://www.youtube-nocookie.com/embed/O8mHPJu1I2A
   title: Next.js でリアーキテクトした話 by リクルート (吉井健文)
   titleJa: Next.js でリアーキテクトした話 by リクルート (吉井健文)
-  speakerIDs: []
+  sponsorIDs: [recruit]
 - uuid: sponsor-talk-hey
   date: day1
   startsAt: "15:10"
   endsAt: "15:40"
   room: C
+  recordingUrl: https://www.youtube-nocookie.com/embed/5t8PM9c9KnY
   title: STORES 予約を支えるフロントエンドの技術 by Hey (岩本 卓朗)
   titleJa: STORES 予約を支えるフロントエンドの技術 by Hey (岩本 卓朗)
-  speakerIDs: []
+  sponsorIDs: [hey]
 - uuid: sponsor-talk-nota
   date: day1
   startsAt: "15:40"
   endsAt: "16:10"
   room: C
+  recordingUrl: https://www.youtube-nocookie.com/embed/k7Lv8BVJvI0
   title: Helpfeel小咄2選 Web WorkerとMutationObserver by Nota
   titleJa: Helpfeel小咄2選 Web WorkerとMutationObserver by Nota
-  speakerIDs: []
+  sponsorIDs: [nota]
 - uuid: sponsor-talk-twilio
   date: day1
   startsAt: "14:30"
   endsAt: "15:00"
   room: C
+  recordingUrl: https://www.youtube-nocookie.com/embed/jeElYzm-Bzk
   title: Open API Specificationを使ったTwilio APIテスト用モッキングサーバーの構築 by Twilio (Daizen Ikehara)
   titleJa: Open API Specificationを使ったTwilio APIテスト用モッキングサーバーの構築 by Twilio (Daizen Ikehara)
-  speakerIDs: []
-- uuid: sponsors-lt
+  sponsorIDs: [twilio]
+- uuid: reflections-on-the-introduction-of-graph-ql-and-a-new-challenge
   date: day1
   startsAt: "18:10"
+  endsAt: "18:15"
+  room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/Avm6CrouiCE
+  title: GraphQL 導入の反省と再挑戦
+  titleJa: GraphQL 導入の反省と再挑戦
+  sponsorIDs: [wantedly]
+- uuid: kaonavi-js-conf-jp-2021-sponsor-lt
+  date: day1
+  startsAt: "18:15"
+  endsAt: "18:20"
+  room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/0zWa0sMNXKI
+  title: カオナビ JSConf JP 2021 Sponsor LT
+  titleJa: カオナビ JSConf JP 2021 Sponsor LT
+  sponsorIDs: [kaonavi]
+- uuid: frontend-development-for-ubie-discovery-creating-value-simultaneously-and-multiply
+  date: day1
+  startsAt: "18:20"
+  endsAt: "18:25"
+  room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/D5J6UbY3QWQ
+  title: 同時多発的に価値創出していくUbie Discoveryのフロントエンド開発
+  titleJa: 同時多発的に価値創出していくUbie Discoveryのフロントエンド開発
+  sponsorIDs: [ubie]
+- uuid: how-to-use-type-script-in-study-supplement-and-its-future-prospects
+  date: day1
+  startsAt: "18:25"
+  endsAt: "18:30"
+  room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/6wwOlcoR5Hk
+  title: スタディサプリにおける TypeScript 活用事例と今後の展望
+  titleJa: スタディサプリにおける TypeScript 活用事例と今後の展望
+  sponsorIDs: [recruit]
+- uuid: front-end-technology-supporting-stores-reservation
+  date: day1
+  startsAt: "18:30"
+  endsAt: "18:35"
+  room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/8FDqyC4wR_4
+  title: STORES 予約を支えるフロントエンドの技術
+  titleJa: STORES 予約を支えるフロントエンドの技術
+  sponsorIDs: [hey]
+- uuid: legal-force-s-front-end-development-past-and-future
+  date: day1
+  startsAt: "18:35"
   endsAt: "18:40"
   room: A
-  title: Sponsors LT
-  titleJa: スポンサーLT
-  speakerIDs: []
+  recordingUrl: https://www.youtube-nocookie.com/embed/qP1Y62qXrik
+  title: LegalForceのフロント開発これまでとこれから
+  titleJa: LegalForceのフロント開発これまでとこれから
+  sponsorIDs: [legalforce]
+- uuid: js-conf-jp-2021-sponsor-lt-nota
+  date: day1
+  startsAt: "18:40"
+  endsAt: "18:45"
+  room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/gX70sNu-2RA
+  title: JSConf JP 2021 Sponsor LT Nota
+  titleJa: JSConf JP 2021 Sponsor LT Nota
+  sponsorIDs: [nota]
+- uuid: js-conf-jp-2021-sponsor-lt-twilio
+  date: day1
+  startsAt: "18:45"
+  endsAt: "18:50"
+  room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/xKSmX8BgmGs
+  title: JSConf JP 2021 Sponsor LT twilio
+  titleJa: JSConf JP 2021 Sponsor LT twilio
+  sponsorIDs: [twilio]
 - uuid: how-projects-are-born-and-run-in-a-web-browser-engine
   date: day1
   startsAt: "18:50"
   endsAt: "19:20"
   room: A
+  recordingUrl: https://www.youtube-nocookie.com/embed/nzHSYARtzCc
   title: How projects are born and run in a web browser engine
   titleJa: How projects are born and run in a web browser engine
   description: >-

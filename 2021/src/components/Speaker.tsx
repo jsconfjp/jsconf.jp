@@ -14,6 +14,7 @@ export type TalkType = {
   spokenLanguage: string
   slideLanguage: string
   speakerIDs: string[]
+  sponsorIDs: string[]
   date: "day1"
   startsAt: string
   endsAt: string

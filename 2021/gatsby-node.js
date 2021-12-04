@@ -46,11 +46,24 @@ exports.createPages = ({ graphql, actions }) => {
                 spokenLanguage
                 slideLanguage
                 speakerIDs
+                sponsorIDs
                 date
                 startsAt
                 endsAt
                 room
                 recordingUrl
+              }
+            }
+          }
+          allSponsorsYaml {
+            edges {
+              node {
+                uuid
+                name
+                grade
+                url
+                logoUrl
+                prText
               }
             }
           }
@@ -92,6 +105,13 @@ exports.createPages = ({ graphql, actions }) => {
           (acc, speaker) => ({ ...acc, [speaker.uuid]: speaker }),
           {}
         )
+        const sponsors = result.data.allSponsorsYaml.edges.map(
+          ({ node }) => node
+        )
+        const sponsorMap = sponsors.reduce(
+          (acc, sponsor) => ({ ...acc, [sponsor.uuid]: sponsor }),
+          {}
+        )
         const avatars = result.data.allFile.nodes
           .filter(avatar => avatar.childImageSharp)
           .map(avatar => ({
@@ -107,15 +127,26 @@ exports.createPages = ({ graphql, actions }) => {
         )
         const talks = result.data.allTalksYaml.edges.map(({ node }) => node)
         talks.forEach(talk => {
-          const talkSpeakers = talk.speakerIDs.map(speakerID => {
-            const speaker = speakerMap[speakerID]
-            if (!speaker) {
-              throw new Error(
-                `Speaker not found: speakerID=${speakerID}, talk=${talk.uuid}`
-              )
-            }
-            return speaker
-          })
+          const talkSpeakers =
+            talk.speakerIDs?.map(speakerID => {
+              const speaker = speakerMap[speakerID]
+              if (!speaker) {
+                throw new Error(
+                  `Speaker not found: speakerID=${speakerID}, talk=${talk.uuid}`
+                )
+              }
+              return speaker
+            }) ?? []
+          const talkSponsors =
+            talk.sponsorIDs?.map(sponsorID => {
+              const sponsor = sponsorMap[sponsorID]
+              if (!sponsor) {
+                throw new Error(
+                  `sponsor not found: sponsorID=${sponsorID}, talk=${talk.uuid}`
+                )
+              }
+              return sponsor
+            }) ?? []
           const speakerAvatars = talkSpeakers.map(speaker => {
             const avatar = avatarMap[speaker.uuid]
             if (!avatar) {
@@ -132,6 +163,7 @@ exports.createPages = ({ graphql, actions }) => {
             context: {
               speakers: talkSpeakers,
               avatars: speakerAvatars,
+              sponsors: talkSponsors,
               talk
             }
           })

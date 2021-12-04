@@ -18,6 +18,7 @@ type Props = {
   pageContext: {
     speakers: SpeakerType[]
     avatars: AvatarType[]
+    sponsors: { uuid: string; name: string; prText: string; logoUrl: string }[]
     talk: TalkType
   }
 }
@@ -47,6 +48,15 @@ const Biography = styled(Description)`
 `
 const Avatar = styled(Image)`
   width: 100%;
+  max-width: 273px;
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    max-width: 100%;
+  }
+`
+const SponsorLogo = styled.img`
+  width: 100%;
+  object-fit: contain;
   max-width: 273px;
 
   ${({ theme }) => theme.breakpoints.mobile} {
@@ -86,7 +96,7 @@ const TalkRecording = styled.iframe`
 export default function Speaker(props: Props) {
   const { t, i18n } = useTranslation()
   const {
-    pageContext: { speakers, avatars, talk }
+    pageContext: { speakers, avatars, sponsors, talk }
   } = props
   const {
     title,
@@ -106,7 +116,10 @@ export default function Speaker(props: Props) {
     month: "2-digit",
     day: "2-digit"
   })
-  const speakerNames = speakers.map(speaker => speaker.name).join(" and ")
+  console.log(talk, speakers, sponsors)
+  const speakerNames = speakers.length
+    ? speakers.map(speaker => speaker.name).join(" and ")
+    : sponsors[0].name
 
   return (
     <Layout>
@@ -129,6 +142,16 @@ export default function Speaker(props: Props) {
             <Biography>
               {enOrJa(i18n)(speaker.biography, speaker.biographyJa)}
             </Biography>
+          </SpeakerBox>
+        ))}
+        {sponsors.map(sponsor => (
+          <SpeakerBox key={sponsor.uuid}>
+            <SponsorLogo
+              src={sponsor.logoUrl}
+              alt={sponsor.name}
+              loading="eager"
+            />
+            <Biography>{sponsor.prText}</Biography>
           </SpeakerBox>
         ))}
         <TalkBox>
