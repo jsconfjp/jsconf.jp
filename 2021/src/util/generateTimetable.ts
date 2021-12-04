@@ -9,6 +9,7 @@ import { SpeakerType, TalkType } from "../components/Speaker"
 type Session = TalkType & {
   break: boolean
   speakers: SpeakerType[]
+  sponsors: SpeakerType[]
 }
 
 type Timebox = {
