@@ -116,7 +116,6 @@ export default function Speaker(props: Props) {
     month: "2-digit",
     day: "2-digit"
   })
-  console.log(talk, speakers, sponsors)
   const speakerNames = speakers.length
     ? speakers.map(speaker => speaker.name).join(" and ")
     : sponsors[0].name

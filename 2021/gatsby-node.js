@@ -125,7 +125,11 @@ exports.createPages = ({ graphql, actions }) => {
           }),
           {}
         )
-        const talks = result.data.allTalksYaml.edges.map(({ node }) => node)
+        const talks = result.data.allTalksYaml.edges
+          .map(({ node }) => node)
+          .filter(
+            node => node.speakerIDs?.length > 0 || node.sponsorIDs?.length > 0
+          )
         talks.forEach(talk => {
           const talkSpeakers =
             talk.speakerIDs?.map(speakerID => {
