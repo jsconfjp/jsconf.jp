@@ -89,8 +89,8 @@ const SponsorBox = styled.div`
   background-color: ${({ theme }) => theme.colors.baseDimmed};
 
   ${({ theme }) => theme.breakpoints.mobile} {
-    margin-left: 1em;
-    margin-right: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 `
 

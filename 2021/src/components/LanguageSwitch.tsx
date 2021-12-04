@@ -30,28 +30,28 @@ export function LanguageSwitch(props: Props) {
   const [hasMounted, setHasMounted] = React.useState(false)
   const langKeys = Object.keys(languages) as Languages[]
 
-  React.useEffect(() => {setHasMounted(true)}, [])
+  React.useEffect(() => {
+    setHasMounted(true)
+  }, [])
 
-  return (
-    hasMounted
-      ? <>
-        {langKeys.map((langKey, i) => {
-          return (
-            <React.Fragment key={langKey}>
-              <Lang
-                href={currentLanguage?.startsWith(langKey) ? undefined : "#"}
-                onClick={e => {
-                  e.preventDefault()
-                  onChange(langKey)
-                }}
-              >
-                {languages[langKey]}
-              </Lang>
-              {i + 1 === langKeys.length ? null : <Separator>/</Separator>}
-            </React.Fragment>
-          )
-        })}
-      </>
-    : null
-  )
+  return hasMounted ? (
+    <>
+      {langKeys.map((langKey, i) => {
+        return (
+          <React.Fragment key={langKey}>
+            <Lang
+              href={currentLanguage?.startsWith(langKey) ? undefined : "#"}
+              onClick={e => {
+                e.preventDefault()
+                onChange(langKey)
+              }}
+            >
+              {languages[langKey]}
+            </Lang>
+            {i + 1 === langKeys.length ? null : <Separator>/</Separator>}
+          </React.Fragment>
+        )
+      })}
+    </>
+  ) : null
 }

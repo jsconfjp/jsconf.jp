@@ -33,17 +33,16 @@ const Img = styled.img`
   }
   &.sponsor {
     width: 100%;
+    height: 125px;
     max-width: 440px;
-    max-height: 125px;
   }
 
   ${({ theme }) => theme.breakpoints.mobile} {
     padding: 10px;
 
-    &.bronze {
+    &.sponsor {
       width: 100%;
-      max-width: 273px;
-      max-height: 40px;
+      max-height: 64px;
     }
   }
 `
