@@ -8,7 +8,7 @@
 - uuid: kaonavi
   name: 株式会社カオナビ
   url: https://corp.kaonavi.jp/recruit/
-  logoUrl: /sponsors/kaonavi.png
+  logoUrl: /2021/sponsors/kaonavi.png
   prText: |
     社員の個性・才能を発掘し、戦略人事を加速させるタレントマネジメントシステム「カオナビ」を提供しています。企業の人材情報をクラウド上で一元管理し、社員の顔や名前、経験、評価、スキル、才能などの人材情報を可視化することで、最適な人材配置や抜擢といった戦略的なタレントマネジメントの実現を支援しています。今後も、人材マネジメントのプラットフォームとして、日本の「働き方」を変えていきたいと考えています。
     フロントエンドはReact/TypeScriptで開発しています。積極採用中ですので、ご興味ある方はぜひカジュアル面談からでも可能なのでエントリーお待ちしております。（エンジニア採用資料はこちら：https://corp.kaonavi.jp/recruit/recruitment/）
