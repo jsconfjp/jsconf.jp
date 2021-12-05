@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-speaker-tsx",
-    "path": "/talk/opening",
-    "result": {"pageContext":{"speakers":[],"avatars":[],"talk":{"uuid":"opening","title":"Opening by Yosuke Furukawa","titleJa":"オープニング by Yosuke Furukawa","description":null,"descriptionJa":null,"spokenLanguage":null,"slideLanguage":null,"speakerIDs":[],"date":"day1","startsAt":"12:00","endsAt":"12:10","room":"A"}}},
-    "staticQueryHashes": ["1715751809","1861792574","2737205312"]}
