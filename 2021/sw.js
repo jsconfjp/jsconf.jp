@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-ceaca0cb23a311a410a4.js"
+    "url": "webpack-runtime-403c32b63015c0eaf587.js"
   },
   {
     "url": "framework-d5e16072699c81cc8c67.js"
@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "9db0f8365e974b4b9e82d465b11c63ae"
+    "revision": "6b217ae508b464fdc001e9688f3f8a0e"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-044073fc530cbf0d0528.js"
@@ -48,7 +48,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "41a3e6e6585365508eb8f880d13b08de"
+    "revision": "b04cd2c81708b4f1fbbd6fe546f1b01c"
   },
   {
     "url": "polyfill-7ff28b9382f7fa8c1c66.js"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
     "url": "styles.5915ecf2483fd49b14e2.css"
   },
   {
-    "url": "7f5bd21a022950e50ca211ae2f5765d6f61633ff-fa7e797232de5f17e829.js"
+    "url": "7f5bd21a022950e50ca211ae2f5765d6f61633ff-531d60810846a5db2d8b.js"
   },
   {
     "url": "component---src-templates-markdown-tsx-3b72870102d95e9713f9.js"
@@ -79,7 +79,7 @@ self.__precacheManifest = [
     "revision": "617d841d866ec4e52b55622c79b14248"
   },
   {
-    "url": "component---src-pages-index-tsx-1085b2fb4b29137d0dfe.js"
+    "url": "component---src-pages-index-tsx-324b619fd03f112d97af.js"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -87,7 +87,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3027076902.json",
-    "revision": "256494129623da81a4f882452f0e8c6f"
+    "revision": "ac0e47293562d492fe1fdfae94008a1a"
   },
   {
     "url": "page-data/jp-specified-commercial-transactions-act/page-data.json",
@@ -113,10 +113,10 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/1393509171.json",
-    "revision": "5f3777f13df52bc30edf194101d1c900"
+    "revision": "0ecc32c5382e7eab6ee1d701d5f8f0af"
   },
   {
-    "url": "component---src-pages-sponsors-tsx-f8a654444c090d70d4be.js"
+    "url": "component---src-pages-sponsors-tsx-0c7f04b5a71ea3f9705e.js"
   },
   {
     "url": "page-data/sponsors/page-data.json",
