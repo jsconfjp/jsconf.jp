@@ -1,0 +1,264 @@
+- uuid: kinuko-yasuda
+  name: Kinuko Yasuda
+  featured: true
+  presentations:
+    - how-projects-are-born-and-run-in-a-web-browser-engine
+  biography: >-
+    Kinuko used to be a heavy contributor in an open source browser engine,
+    where she led many projects and spent non-trivial amount of time thinking
+    about how the web can become faster.
+  biographyJa: >-
+    Kinuko used to be a heavy contributor in an open source browser engine,
+    where she led many projects and spent non-trivial amount of time thinking
+    about how the web can become faster.
+- uuid: hidetaka-okamoto
+  name: Hidetaka Okamoto
+  featured: false
+  presentations:
+    - how-to-build-a-media-site-from-the-infrastructure-up-using-only-java-script-type-script
+  biography: >-
+    React / TypeScript developer. ASK SDK / WordPress / amplify-js core
+    contributor.
+
+
+    AWS Samurai 2017
+
+    Alexa Champions
+  biographyJa: >-
+    React / TypeScript developer. ASK SDK / WordPress / amplify-js core
+    contributor.
+
+
+    AWS Samurai 2017
+
+    Alexa Champions
+- uuid: thomas-steiner
+  name: Thomas Steiner
+  featured: true
+  presentations:
+    - the-2021-edition-of-dealing-with-files-on-the-web
+  biography: >-
+    Developer Relations Engineer at Google, focused on the Web and Project Fugu.
+    Dad-of-3. Alum of University of Lyon (Postdoc), Polytechnic University of
+    Barcelona (PhD), and University of Karlsruhe (MA). Blogs at blog.tomayac.com
+    and tweets as @tomayac.
+  biographyJa: >-
+    Developer Relations Engineer at Google, focused on the Web and Project Fugu.
+    Dad-of-3. Alum of University of Lyon (Postdoc), Polytechnic University of
+    Barcelona (PhD), and University of Karlsruhe (MA). Blogs at blog.tomayac.com
+    and tweets as @tomayac.
+- uuid: okuto-oyama
+  name: Okuto Oyama
+  featured: true
+  presentations:
+    - the-past-and-future-of-accessible-front-end-development
+  biography: |-
+    株式会社クラウドワークスでフロントエンド開発をしています。開発者ですが自称フロントエンドデザイナーです。
+    業務やプライベートでアクセシビリティ啓蒙やOSSへのコントリビュート活動なども行っています。一児の父もやっています。
+    https://yamanoku.net
+  biographyJa: |-
+    株式会社クラウドワークスでフロントエンド開発をしています。開発者ですが自称フロントエンドデザイナーです。
+    業務やプライベートでアクセシビリティ啓蒙やOSSへのコントリビュート活動なども行っています。一児の父もやっています。
+    https://yamanoku.net
+- uuid: junya-kani
+  name: 可児 潤也
+  featured: false
+  presentations:
+    - how-to-implement-a-system-that-goes-beyond-amp-caching-on-your-domain
+  biography: |-
+    株式会社リクルートにてフロントエンドエンジニアに従事。　Web 開発リードを担当。
+  biographyJa: |-
+    株式会社リクルートにてフロントエンドエンジニアに従事。　Web 開発リードを担当。
+- uuid: takuo-kihira
+  name: 紀平 拓男 (Takuo Kihira)
+  featured: false
+  presentations:
+    - implementation-and-business-of-block-pong-a-web-based-casual-game
+  biography: >-
+    20 年くらい JavaScript の世界で働いており、またサンフランシスコでの起業を含めて過去に 3
+    社の起業を経験しています。最近はネイティブアプリ内に組み込む Web の開発に興味を持っています。
+  biographyJa: >-
+    20 年くらい JavaScript の世界で働いており、またサンフランシスコでの起業を含めて過去に 3
+    社の起業を経験しています。最近はネイティブアプリ内に組み込む Web の開発に興味を持っています。
+- uuid: berlysia
+  name: berlysia
+  featured: true
+  presentations:
+    - testing-approach-to-support-web-front-end-replacement
+  biography: 妄想を現実にする活動をしています。ブラウザの周りのことが好きです。株式会社ドワンゴの教育事業でWebフロントエンド開発をしています。
+  biographyJa: 妄想を現実にする活動をしています。ブラウザの周りのことが好きです。株式会社ドワンゴの教育事業でWebフロントエンド開発をしています。
+- uuid: yoshiya-hinosawa
+  name: 日野澤歓也
+  featured: false
+  presentations:
+    - the-past-and-future-of-deno
+  biography: >-
+    フリーランスの Web Engineer。2018年から OSS 活動として Deno にコントリビュートを開始し、2021年1月より Deno
+    の開発会社である Deno Land Inc. で勤務。
+  biographyJa: >-
+    フリーランスの Web Engineer。2018年から OSS 活動として Deno にコントリビュートを開始し、2021年1月より Deno
+    の開発会社である Deno Land Inc. で勤務。
+- uuid: daishi-kato
+  name: Daishi Kato
+  featured: false
+  presentations:
+    - about-the-state-management-library
+  biography: "https://twitter.com/dai_shi"
+  biographyJa: "https://twitter.com/dai_shi"
+- uuid: yuta-ide
+  name: Yuta Ide
+  featured: false
+  presentations:
+    - static-site-generator-is-a-compiler
+  biography: メディア系の会社で Web Engineer をしています。情報を素早く正確に伝えることが私の使命です。
+  biographyJa: メディア系の会社で Web Engineer をしています。情報を素早く正確に伝えることが私の使命です。
+- uuid: antoine-bourlon
+  name: Antoine Bourlon
+  featured: true
+  presentations:
+    - summary-of-the-latest-information-on-tracking-restrictions-and-alternative-api-by-cookies-etc
+  biography: >-
+    株式会社イルグルム（旧：株式会社ロックオン）メジャメント研究室のR&Dエンジニア/AD EBiS
+    マーテック研究会主宰。インターネット経済を支えるアドテックに憧れ、2016年に入社。ITPの発表をきっかけに計測技術とトラッキング防止技術の動向、プライバシー関連の規制、ブラウザの最新仕様を研究し、自社製品に反映する提案と開発をメインに取り組んでいるフランス人。
+  biographyJa: >-
+    株式会社イルグルム（旧：株式会社ロックオン）メジャメント研究室のR&Dエンジニア/AD EBiS
+    マーテック研究会主宰。インターネット経済を支えるアドテックに憧れ、2016年に入社。ITPの発表をきっかけに計測技術とトラッキング防止技術の動向、プライバシー関連の規制、ブラウザの最新仕様を研究し、自社製品に反映する提案と開発をメインに取り組んでいるフランス人。
+- uuid: qsona
+  name: 森 久太郎 / qsona
+  featured: false
+  presentations:
+    - technology-selection-for-the-next-n-years-based-on-graphql-and-prisma
+  biography: >-
+    ソフトウェアエンジニア。株式会社リクルート所属。スタディサプリを開発しています。GraphQL / Microservices / Node.js /
+    Rails
+  biographyJa: >-
+    ソフトウェアエンジニア。株式会社リクルート所属。スタディサプリを開発しています。GraphQL / Microservices / Node.js /
+    Rails
+- uuid: sosuke-suzuki
+  name: Sosuke Suzuki
+  featured: true
+  presentations:
+    - javascript-maintaining-ecosystem-oss-struggles-and-challenges
+  biography: 筑波大学情報学群情報科学類、Prettier メンテナー、Babel コミッター
+  biographyJa: 筑波大学情報学群情報科学類、Prettier メンテナー、Babel コミッター
+- uuid: tomohiro-kato
+  name: 加藤 倫弘 / Tomohiro Kato
+  featured: true
+  presentations:
+    - case-study-of-production-development-of-a-client-side-ml-application-in-a-mobile-browser
+  biography: Software Engineer / Client-side Machine Learning
+  biographyJa: Software Engineer / Client-side Machine Learning
+- uuid: kohei-ueno
+  name: Kohei Ueno
+  featured: false
+  presentations:
+    - universal-devtools-for-all-environments
+  biography: >-
+    LINE株式会社のフロントエンドエンジニア。LIFF（LINE Front-end Framework）JS
+    SDKやその開発体験向上のためのツールの開発に従事しています。
+  biographyJa: >-
+    LINE株式会社のフロントエンドエンジニア。LIFF（LINE Front-end Framework）JS
+    SDKやその開発体験向上のためのツールの開発に従事しています。
+- uuid: asiya
+  name: Asiya
+  featured: false
+  presentations:
+    - machine-learning-with-js
+  biography: >-
+    I'm a Full Stack developer with a background in interactive media and
+    masters in interactive intelligence. Interested in intersection of AI and
+    Web technologies.
+  biographyJa: >-
+    I'm a Full Stack developer with a background in interactive media and
+    masters in interactive intelligence. Interested in intersection of AI and
+    Web technologies.
+- uuid: kazuyuki-takase-
+  name: Kazuyuki TAKASE (@Guvalif)
+  featured: false
+  presentations:
+    - a-tour-of-design-patterns-for-functional-programming-with-ramdajs
+  biography: >-
+    2019 年に Chatwork 株式会社へフロントエンド・エンジニアとしてジョインし、
+    現在はエンジニア採用広報としてインターンシップ・プログラムや勉強会運営を行っている。
+
+
+    個人でも、技術と教育をつなげることに興味があり、大人から子どもまで、技術を広める活動に従事している。 直近の代表作は『<a
+    href="https://www2.slideshare.net/100005930379759/scala-scala">Scala
+    初心者が米田の補題を Scala で考えてみた</a>』など。
+  biographyJa: >-
+    2019 年に Chatwork 株式会社へフロントエンド・エンジニアとしてジョインし、
+    現在はエンジニア採用広報としてインターンシップ・プログラムや勉強会運営を行っている。
+
+
+    個人でも、技術と教育をつなげることに興味があり、大人から子どもまで、技術を広める活動に従事している。 直近の代表作は『<a
+    href="https://www2.slideshare.net/100005930379759/scala-scala">Scala
+    初心者が米田の補題を Scala で考えてみた</a>』など。
+- uuid: tetsuya-shibutani
+  name: Tetsuya Shibutani
+  featured: false
+  presentations:
+    - web-front-end-architecture-and-transition-with-an-eye-on-organizational-phases
+  biography: |-
+    Chatwork株式会社　フロントエンド開発部　マネージャー。
+    受託開発のフロントエンドエンジニアを経て、2019年よりChatworkにジョイン。
+    トライアル & エラーを地道に行うことと、こぼれそうなボールを拾うことを得意とする生粋のマネージャー気質。
+  biographyJa: |-
+    Chatwork株式会社　フロントエンド開発部　マネージャー。
+    受託開発のフロントエンドエンジニアを経て、2019年よりChatworkにジョイン。
+    トライアル & エラーを地道に行うことと、こぼれそうなボールを拾うことを得意とする生粋のマネージャー気質。
+- uuid: yuku-kotani
+  name: Yuku Kotani
+  featured: false
+  presentations:
+    - bundle-size-optimization-in-future-javascript
+  biography: |-
+    Ubie株式会社で「AI受診相談ユビー」を開発するソフトウェアエンジニアです。筑波大学の情報科学類で勉強もしています。
+    https://yuku.dev
+  biographyJa: |-
+    Ubie株式会社で「AI受診相談ユビー」を開発するソフトウェアエンジニアです。筑波大学の情報科学類で勉強もしています。
+    https://yuku.dev
+- uuid: shinyaigeek
+  name: しにゃい/Shinyaigeek
+  featured: false
+  presentations:
+    - accelerating-edge-computing
+  biography: >-
+    a student of University of Tokyo/A Engineer at Newspaper company/Web
+    Frontend Engineer/Interested in Browser, standards, performance, frontend
+    ecosystem.
+  biographyJa: >-
+    a student of University of Tokyo/A Engineer at Newspaper company/Web
+    Frontend Engineer/Interested in Browser, standards, performance, frontend
+    ecosystem.
+- uuid: hiroyuki-yagihashi
+  name: Hiroyuki Yagihashi
+  featured: false
+  presentations:
+    - building-markdown-editor-using-rusts-parser
+  biography: Engineer@Caraquri
+  biographyJa: Engineer@Caraquri
+- uuid: julien-hora
+  name: Julien Hora
+  featured: false
+  presentations:
+    - >-
+      asynchronicity-the-right-way-understanding-the-basics-of-asynchronous-javascript-when-to-and-when-not-to-use-it
+  biography: >-
+    CEO, Founder @ Factorize, Julien has been a full-stack engineer for the past
+    8 years working on front-end, back-end, cloud and mobile implementations for
+    small to enterprise-grade projects. Working daily with JS and its different
+    environments, he has helped teams optimize their use of the JS/TS
+    capabilities, and helped adopt the right technologies for the right purpose.
+  biographyJa: >-
+    CEO, Founder @ Factorize, Julien has been a full-stack engineer for the past
+    8 years working on front-end, back-end, cloud and mobile implementations for
+    small to enterprise-grade projects. Working daily with JS and its different
+    environments, he has helped teams optimize their use of the JS/TS
+    capabilities, and helped adopt the right technologies for the right purpose.
+- uuid: sacha-greif
+  name: Sacha Greif
+  featured: false
+  presentations:
+    - state-of-css-2021-survey-results
+  biography: Creator of the State of JS and State of CSS surveys
+  biographyJa: Creator of the State of JS and State of CSS surveys
