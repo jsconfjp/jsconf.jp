@@ -1,6 +1,6 @@
 - uuid: xxx
   name: TBA
-  featured: true
+  featured: false
   presentations:
     - xxx
   biography: >-

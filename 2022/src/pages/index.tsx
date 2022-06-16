@@ -2,13 +2,12 @@ import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import { useTranslation } from "react-i18next"
-
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
 import { Hero } from "../components/Hero"
 import { SubTitle } from "../components/SubTitle"
 import { SpeakerList } from "../components/SpeakerList"
-import { SponsorList } from "../components/SponsorList"
+// import { SponsorList } from "../components/SponsorList"
 import { LinkButton } from "../components/LinkButton"
 import { Card as _Card } from "../components/Card"
 import { Centerize as _Centerize } from "../components/Centerize"
@@ -176,7 +175,6 @@ export default function IndexPage() {
     }
   `)
   const featuredSpeakers = allSpeakersYaml.edges.map(({ node }: any) => node)
-  const sponsors = allSponsorsYaml.edges.map(({ node }: any) => node)
   const talks = allTalksYaml.edges.map(({ node }: any) => node)
   const avatars = allFile.nodes
     .filter((avatar: any) => avatar.childImageSharp)
@@ -216,7 +214,7 @@ export default function IndexPage() {
     },
     {
       subTitle: t("schedule"),
-      available: allTalksYaml.totalCount > 0,
+      available: site.siteMetadata.enableSchedule > 0,
       render: () => (
         <SchedulesBox>
           <LinkButton color="secondary" size="large" to="/schedule">
@@ -336,13 +334,13 @@ export default function IndexPage() {
           </Centerize>
         </Container>
 
-        {sponsors.length > 0 ? (
+        {/* {sponsors.length > 0 ? (
           <SponsorBox>
             <Centerize>
               <SponsorList sponsors={sponsors} showPrText={false} />
             </Centerize>
           </SponsorBox>
-        ) : null}
+        ) : null} */}
       </WavyBox>
     </Layout>
   )

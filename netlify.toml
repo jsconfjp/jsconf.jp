@@ -11,5 +11,6 @@
     cp public/* dist/
 
     mv 2019/public dist/2019
-    cd 2021 && npm ci && npm run build -- --prefix-paths --verbose && mv public ../dist/2021
+    mv 2021/public dist/2021
+    cd 2022 && npm ci && npm run build -- --prefix-paths --verbose && mv public ../dist/2022
     '''

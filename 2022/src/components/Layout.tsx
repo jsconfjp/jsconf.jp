@@ -42,12 +42,7 @@ export function Layout({ children }: Props) {
     },
     [i18n]
   )
-  const {
-    site,
-    allSponsorsYaml,
-    allTalksYaml,
-    allSpeakersYaml
-  } = useStaticQuery(graphql`
+  const { site } = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -56,16 +51,10 @@ export function Layout({ children }: Props) {
           ticketUrl
           sponsorFormUrl
           cfpFormUrl
+          enableSpeakers
+          enableSchedule
+          enableSponsors
         }
-      }
-      allSponsorsYaml {
-        totalCount
-      }
-      allTalksYaml {
-        totalCount
-      }
-      allSpeakersYaml {
-        totalCount
       }
     }
   `)
@@ -77,9 +66,9 @@ export function Layout({ children }: Props) {
           <HeaderMobile
             siteTitle={site.siteMetadata.title}
             ticketUrl={site.siteMetadata.ticketUrl}
-            enableSpeakers={allSpeakersYaml.totalCount > 0}
-            enableSchedule={allTalksYaml.totalCount > 0}
-            enableSponsors={allSponsorsYaml.totalCount > 0}
+            enableSpeakers={site.siteMetadata.enableSpeakers}
+            enableSchedule={site.siteMetadata.enableSchedule}
+            enableSponsors={site.siteMetadata.enableSponsors}
             onChangeLanguage={onChangeLanguage}
           />
         </OnlyMobile>
@@ -87,9 +76,9 @@ export function Layout({ children }: Props) {
           <Header
             siteTitle={site.siteMetadata.title}
             ticketUrl={site.siteMetadata.ticketUrl}
-            enableSpeakers={allSpeakersYaml.totalCount > 0}
-            enableSchedule={allTalksYaml.totalCount > 0}
-            enableSponsors={allSponsorsYaml.totalCount > 0}
+            enableSpeakers={site.siteMetadata.enableSpeakers}
+            enableSchedule={site.siteMetadata.enableSchedule}
+            enableSponsors={site.siteMetadata.enableSponsors}
             onChangeLanguage={onChangeLanguage}
           />
         </NotMobile>
