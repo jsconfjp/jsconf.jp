@@ -1,0 +1,17 @@
+- uuid: xxx
+  date: day1
+  startsAt: "10:00"
+  endsAt: "10:30"
+  room: A
+  recordingUrl: xxx
+  title: TBA
+  titleJa: TBA
+  description: >-
+    (Untranslated)
+    xxx
+  descriptionJa: >-
+    xxx
+  spokenLanguage: ja
+  slideLanguage: ja
+  sponsorIDs: [xxx]
+  speakerIDs: [xxx]
