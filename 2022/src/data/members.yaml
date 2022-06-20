@@ -10,6 +10,24 @@
   name: Vanx
   url: https://twitter.com/vanx2
   isJNA: true
-# - avatar: https://github.com/Leko.png
-#   name: Leko
-#   url: https://twitter.com/L_e_k_o
+- avatar: https://github.com/Leko.png
+  name: Leko
+  url: https://twitter.com/L_e_k_o
+- avatar: https://github.com/shisama.png
+  name: shisama
+  url: https://twitter.com/shisama_
+- avatar: https://avatars1.githubusercontent.com/u/3448502
+  name: shimataro
+  url: https://shimataro.me/
+- avatar: https://github.com/kamiyam.png
+  name: kamiyam
+  url: https://twitter.com/kamiyam
+- avatar: https://github.com/watilde.png
+  name: watilde
+  url: https://twitter.com/watilde
+- avatar: https://www.github.com/Naturalclar.png
+  name: Nautralclar
+  url: https://twitter.com/natural_clar
+- avatar: https://github.com/yu1k.png
+  name: yuik
+  url: https://twitter.com/yu1k_
