@@ -82,6 +82,7 @@ const SchedulesBox = styled.div`
     flex-direction: column;
   }
 `
+// @ts-expect-error to be updated
 const SponsorBox = styled.div`
   margin-top: 80px;
   padding: 100px 0;
@@ -98,6 +99,7 @@ export default function IndexPage() {
   const {
     site,
     allSpeakersYaml,
+    // @ts-expect-error to be updated
     allSponsorsYaml,
     allMembersYaml,
     allFile,

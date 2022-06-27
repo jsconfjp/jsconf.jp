@@ -34,7 +34,7 @@ export default function SponsorsPage() {
       <ResponsiveBox>
         <Breadcrumb path={[t("sponsors")]} />
         <Title>{t("sponsors")}</Title>
-        <SponsorList sponsors={sponsors} showPrText />
+        {/* <SponsorList sponsors={sponsors} showPrText /> */}
       </ResponsiveBox>
     </Layout>
   )
