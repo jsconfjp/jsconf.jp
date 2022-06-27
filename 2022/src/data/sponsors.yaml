@@ -1,0 +1,7 @@
+- uuid: xxx
+  name: XXX
+  url: https://example.com
+  logoUrl: /2021/sponsors/xxx.png
+  prText: |
+    xxx
+  grade: premium

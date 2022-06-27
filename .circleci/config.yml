@@ -2,17 +2,17 @@ workflows:
   version: 2
   test_deploy:
     jobs:
-      - 2021_test
+      - 2022_test
       - deploy:
           requires:
-            - 2021_test
+            - 2022_test
           filters:
             branches:
               only:
                 - master
 version: 2
 jobs:
-  2021_test:
+  2022_test:
     docker:
       - image: circleci/node:lts-browsers
     working_directory: ~/repo
@@ -20,14 +20,14 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "2021/package-lock.json" }}
-      - run: cd 2021 && npm ci
+            - v1-dependencies-{{ checksum "2022/package-lock.json" }}
+      - run: cd 2022 && npm ci
       - save_cache:
           paths:
-            - 2021/node_modules
-          key: v1-dependencies-{{ checksum "2021/package-lock.json" }}
-      - run: cd 2021 && npm test
-      - run: cd 2021 && npm run build -- --prefix-paths
+            - 2022/node_modules
+          key: v1-dependencies-{{ checksum "2022/package-lock.json" }}
+      - run: cd 2022 && npm test
+      - run: cd 2022 && npm run build -- --prefix-paths
   deploy:
     docker:
       - image: circleci/node:lts-browsers
@@ -36,11 +36,12 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "2021/package-lock.json" }}
+            - v1-dependencies-{{ checksum "2022/package-lock.json" }}
       - run: mkdir dist
       - run: cp public/* dist/
       - run: mv 2019/public dist/2019
-      - run: cd 2021 && npm run build -- --prefix-paths && mv public ../dist/2021
+      - run: mv 2021/public dist/2021
+      - run: cd 2022 && npm run build -- --prefix-paths && mv public ../dist/2022
       - run: git config --global user.name "CircleCI deploy"
       - run: git config --global user.email "circleci@example.com"
       - run: npx gh-pages --dist dist --message "[skip ci] Updates"
