@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@types/react-headroom": "2.2.2",
-    "@types/react-helmet": "6.1.4",
+    "@types/react-helmet": "6.1.5",
     "@types/styled-components": "5.1.16",
     "babel-plugin-styled-components": "2.0.2",
     "gatsby-plugin-brotli": "2.1.0",
