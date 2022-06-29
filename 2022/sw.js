@@ -87,7 +87,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3027076902.json",
-    "revision": "2e144451a85e843ed13426ffb8fbc164"
+    "revision": "92fe7fcec3849c4b6b2bb35fd16a87a5"
   },
   {
     "url": "page-data/jp-specified-commercial-transactions-act/page-data.json",
