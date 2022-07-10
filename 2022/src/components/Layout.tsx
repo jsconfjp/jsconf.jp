@@ -22,6 +22,12 @@ const BackToTopBox = styled.div`
   position: absolute;
   bottom: 0;
   right: 40px;
+  @media (max-width: 768px) {
+    position: relative;
+    right: 0px;
+    text-align: center;
+    margin-top: 10px;
+  }
 `
 const OnlyMobile = styled.div`
   ${({ theme }) => theme.breakpoints.largerThanMobile} {
