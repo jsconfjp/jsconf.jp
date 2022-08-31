@@ -7,7 +7,7 @@ module.exports = {
     twitter: `jsconfjp`,
     siteUrl: `https://jsconf.jp`,
     ticketUrl: ``,
-    sponsorFormUrl: ``,
+    sponsorFormUrl: `https://docs.google.com/forms/d/1DKtW-N3m8tprHOdt2PZnaUDnQ552dDH1km8IBmkkzfs/viewform`,
     cfpFormUrl: `https://forms.gle/ThFPKSt85aYomTHQ8`,
     cfpDeadline: new Date(2022, 9, 30, 23, 59, 999),
     previousFiscalYear: `2021`,
