@@ -27,6 +27,7 @@ jobs:
       - run: mv 2021/public dist/2021
       - run: cd 2022 && npm ci && npm run build -- --prefix-paths && mv public ../dist/2022
       - uses: actions/upload-pages-artifact@v1
-        path: dist
+        with:
+          path: dist
       - uses: actions/deploy-pages@v1
         id: deployment
