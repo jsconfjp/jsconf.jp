@@ -1,0 +1,31 @@
+name: CD
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  2022_deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: npm
+      - run: mkdir dist
+      - run: cp public/* dist/
+      - run: mv 2019/public dist/2019
+      - run: mv 2021/public dist/2021
+      - run: cd 2022 && npm ci && npm run build -- --prefix-paths && mv public ../dist/2022
+      - uses: actions/upload-pages-artifact@v1
+        path: dist
+      - uses: actions/deploy-pages@v1
+        id: deployment
