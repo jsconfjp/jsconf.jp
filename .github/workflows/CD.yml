@@ -20,6 +20,7 @@ jobs:
         with:
           node-version: 16
           cache: npm
+          cache-dependency-path: 2022/package-lock.json
       - run: mkdir dist
       - run: cp public/* dist/
       - run: mv 2019/public dist/2019
