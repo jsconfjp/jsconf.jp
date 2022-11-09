@@ -1,7 +1,7 @@
 export const times = {
   day1: {
-    startsAt: new Date(2021, 10, 27, 12),
-    endsAt: new Date(2021, 10, 27, 21)
+    startsAt: new Date(2022, 10, 26, 10),
+    endsAt: new Date(2022, 10, 26, 21)
   }
 }
 export type Dates = keyof typeof times
