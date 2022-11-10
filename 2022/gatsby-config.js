@@ -6,7 +6,7 @@ module.exports = {
     author: `JSConf JP`,
     twitter: `jsconfjp`,
     siteUrl: `https://jsconf.jp`,
-    ticketUrl: ``,
+    ticketUrl: `https://connpass.com/event/265614/`,
     sponsorFormUrl: `https://docs.google.com/forms/d/1DKtW-N3m8tprHOdt2PZnaUDnQ552dDH1km8IBmkkzfs/viewform`,
     cfpFormUrl: `https://forms.gle/ThFPKSt85aYomTHQ8`,
     cfpDeadline: new Date(2022, 9, 30, 23, 59, 999),
