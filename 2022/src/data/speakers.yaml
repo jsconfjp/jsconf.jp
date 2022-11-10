@@ -1,7 +1,7 @@
 # 1
 - uuid: catnose
   name: Catnose
-  featured: false
+  featured: true
   presentations:
     - tips-for-developing-a-blogging-platform
   biography: >-
@@ -34,7 +34,7 @@
 # 4
 - uuid: ross-kirsling
   name: Ross Kirsling
-  featured: false
+  featured: true
   presentations:
     - optional-chaining-from-specification-to-implementation
   biography: >-
@@ -60,7 +60,7 @@
 # 6
 - uuid: yusuke-wada
   name: Yusuke Wada
-  featured: false
+  featured: true
   presentations:
     - hono-ultrafast-web-framework-for-cloudflare-workers-deno-bun-and-nodejs
   biography: >-
@@ -194,7 +194,7 @@
 # 16
 - uuid: james-m-snell
   name: James M Snell
-  featured: false
+  featured: true
   presentations:
     - what-is-a-web-interoperable-runtime
   biography: >-
@@ -205,7 +205,7 @@
 # 17
 - uuid: jeremy-wagner
   name: Jeremy Wagner
-  featured: false
+  featured: true
   presentations:
     - optimizing-interaction-to-next-paint-imp
   biography:
@@ -277,7 +277,7 @@
     普段はTypeScriptとGoを書いて暮らしています。
 - uuid: dynamis
   name: dynamis (ASAI Tomoya)
-  featured: false
+  featured: true
   presentations:
     - web-runtime
   biography: >-
