@@ -11,9 +11,9 @@ module.exports = {
     cfpFormUrl: `https://forms.gle/ThFPKSt85aYomTHQ8`,
     cfpDeadline: new Date(2022, 9, 30, 23, 59, 999),
     previousFiscalYear: `2021`,
-    enableSpeakers: false,
-    enableSchedule: false,
-    enableSponsors: false,
+    enableSpeakers: true,
+    enableSchedule: true,
+    enableSponsors: true,
   },
   plugins: [
     `gatsby-plugin-typescript`,
