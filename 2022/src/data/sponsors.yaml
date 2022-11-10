@@ -123,10 +123,10 @@
 
     We create a health tech platform. MedPeer, inc. is a health tech company run by an active physician. We aim to reinvent healthcare by realizing collective intelligence through the power of IT. Led by "MedPeer," a dedicated community in which more than 40% of physicians in Japan participate, the company has built a collective intelligence platform that accumulates the knowledge of medical professionals. In addition, we are also developing services related to preventive medicine and healthcare.
   grade: sponsor
-# - uuid: timee
-#   name: 株式会社タイミー
-#   url: https://corp.timee.co.jp/
-#   logoUrl: /2022/sponsors/xxx.png
-#   prText: |
-#     「『働く』を通じて人生の可能性を広げるインフラをつくる」をミッションに掲げ、働きたい人と働いてほしい事業者をマッチングさせるプラットフォームを提供しています。
-#   grade: sponsor
+- uuid: timee
+  name: 株式会社タイミー
+  url: https://corp.timee.co.jp/
+  logoUrl: /2022/sponsors/timee.jpg
+  prText: |
+    「『働く』を通じて人生の可能性を広げるインフラをつくる」をミッションに掲げ、働きたい人と働いてほしい事業者をマッチングさせるプラットフォームを提供しています。
+  grade: sponsor
