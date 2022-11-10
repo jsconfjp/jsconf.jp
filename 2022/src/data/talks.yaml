@@ -236,27 +236,39 @@
     - shyam-swaroop
 
 # 9
-- uuid: svelte-runtime-101
+- uuid: names-and-other-lies
   date: day1
   startsAt: "13:30"
   endsAt: "14:00"
   room: B
-  title: Svelte Runtime 101
-  titleJa: Svelte Runtime 101
+  title: Names, and other lies
+  titleJa: Names, and other lies
   description: >-
-    (Untranslated)
-    これは、仮想DOMを使用しない宣言的UIフレームワークであるSvelteに関するセッションです。
+    First names don't exist. Timezones are imaginary. Addresses are a *nightmare.*
 
-    今回は、Svelteコンポーネントがどのようなランタイムになるのかを解説します。このセッションを聞くことで、なぜSvelteランタイムが小さく高速なのかを理解できます。
+    Every day our systems gather and process information about our customers: Demographic data. Every day, we screw up. These screwups can result in anything from irritating data-entry quirks to full-on system meltdowns. Let alone how it makes our users feel! How would you like a computer telling you, ""*your name makes my processor hurt; choose something 'better'*""?
+
+    I'm going to run you through some of the *many* ways in which testers, developers and systems designers get demographic data wrong. We'll burn down our assumptions about what's ""Correct"" in names, timezones, addresses and more, one after another, leaving us with a smoking heap of despair. Our test data will be rent asunder. Our schemas will weep.
+
+    But what kind of Engineer would I be if I only left you there?! We can rebuild: We have the technology! We'll see some practical suggestions for building flexible data schemas and learn how to craft clever tests that force system designers to account for reality.
+
+    We're Engineers. We apply Science and Math to the improvement of Humanity. So let's make sure we *include* humanity when we do it. Enough with the lies!
   descriptionJa: >-
-    これは、仮想DOMを使用しない宣言的UIフレームワークであるSvelteに関するセッションです。
+    (Untranslated)
+    First names don't exist. Timezones are imaginary. Addresses are a *nightmare.*
 
-    今回は、Svelteコンポーネントがどのようなランタイムになるのかを解説します。このセッションを聞くことで、なぜSvelteランタイムが小さく高速なのかを理解できます。
+    Every day our systems gather and process information about our customers: Demographic data. Every day, we screw up. These screwups can result in anything from irritating data-entry quirks to full-on system meltdowns. Let alone how it makes our users feel! How would you like a computer telling you, ""*your name makes my processor hurt; choose something 'better'*""?
+
+    I'm going to run you through some of the *many* ways in which testers, developers and systems designers get demographic data wrong. We'll burn down our assumptions about what's ""Correct"" in names, timezones, addresses and more, one after another, leaving us with a smoking heap of despair. Our test data will be rent asunder. Our schemas will weep.
+
+    But what kind of Engineer would I be if I only left you there?! We can rebuild: We have the technology! We'll see some practical suggestions for building flexible data schemas and learn how to craft clever tests that force system designers to account for reality.
+
+    We're Engineers. We apply Science and Math to the improvement of Humanity. So let's make sure we *include* humanity when we do it. Enough with the lies!
   spokenLanguage: ja
   slideLanguage: ja
   # sponsorIDs: [xxx]
   speakerIDs:
-    - baseballyama
+    - dylan-lacey
 
 # 10
 - uuid: current-state-of-npm-support-in-deno
@@ -332,39 +344,27 @@
     - nikola-mitrovic
 
 # 13
-- uuid: names-and-other-lies
+- uuid: svelte-runtime-101
   date: day1
   startsAt: "14:45"
   endsAt: "15:15"
   room: B
-  title: Names, and other lies
-  titleJa: Names, and other lies
+  title: Svelte Runtime 101
+  titleJa: Svelte Runtime 101
   description: >-
-    First names don't exist. Timezones are imaginary. Addresses are a *nightmare.*
-
-    Every day our systems gather and process information about our customers: Demographic data. Every day, we screw up. These screwups can result in anything from irritating data-entry quirks to full-on system meltdowns. Let alone how it makes our users feel! How would you like a computer telling you, ""*your name makes my processor hurt; choose something 'better'*""?
-
-    I'm going to run you through some of the *many* ways in which testers, developers and systems designers get demographic data wrong. We'll burn down our assumptions about what's ""Correct"" in names, timezones, addresses and more, one after another, leaving us with a smoking heap of despair. Our test data will be rent asunder. Our schemas will weep.
-
-    But what kind of Engineer would I be if I only left you there?! We can rebuild: We have the technology! We'll see some practical suggestions for building flexible data schemas and learn how to craft clever tests that force system designers to account for reality.
-
-    We're Engineers. We apply Science and Math to the improvement of Humanity. So let's make sure we *include* humanity when we do it. Enough with the lies!
-  descriptionJa: >-
     (Untranslated)
-    First names don't exist. Timezones are imaginary. Addresses are a *nightmare.*
+    これは、仮想DOMを使用しない宣言的UIフレームワークであるSvelteに関するセッションです。
 
-    Every day our systems gather and process information about our customers: Demographic data. Every day, we screw up. These screwups can result in anything from irritating data-entry quirks to full-on system meltdowns. Let alone how it makes our users feel! How would you like a computer telling you, ""*your name makes my processor hurt; choose something 'better'*""?
+    今回は、Svelteコンポーネントがどのようなランタイムになるのかを解説します。このセッションを聞くことで、なぜSvelteランタイムが小さく高速なのかを理解できます。
+  descriptionJa: >-
+    これは、仮想DOMを使用しない宣言的UIフレームワークであるSvelteに関するセッションです。
 
-    I'm going to run you through some of the *many* ways in which testers, developers and systems designers get demographic data wrong. We'll burn down our assumptions about what's ""Correct"" in names, timezones, addresses and more, one after another, leaving us with a smoking heap of despair. Our test data will be rent asunder. Our schemas will weep.
-
-    But what kind of Engineer would I be if I only left you there?! We can rebuild: We have the technology! We'll see some practical suggestions for building flexible data schemas and learn how to craft clever tests that force system designers to account for reality.
-
-    We're Engineers. We apply Science and Math to the improvement of Humanity. So let's make sure we *include* humanity when we do it. Enough with the lies!
+    今回は、Svelteコンポーネントがどのようなランタイムになるのかを解説します。このセッションを聞くことで、なぜSvelteランタイムが小さく高速なのかを理解できます。
   spokenLanguage: ja
   slideLanguage: ja
   # sponsorIDs: [xxx]
   speakerIDs:
-    - dylan-lacey
+    - baseballyama
 
 # 14
 - uuid: bbc-our-experiences-of-js-and-cloud
@@ -429,44 +429,54 @@
     - atila-fassina
 
 # 16
-- uuid: tbd-01
+- uuid: what-is-a-web-interoperable-runtime
   date: day1
   startsAt: "16:00"
   endsAt: "16:30"
   room: A
-  recordingUrl: TBD
-  title: TBD
-  titleJa: TBD
+  title: What is a Web-interoperable Runtime?
+  titleJa: What is a Web-interoperable Runtime?
   description: >-
-    (Untranslated)
-    TBD
+    For the longest time, Node.js was the only choice developers had for running JavaScript outside of a Web Browser.
+    Today, however, we have additional runtimes like Deno, Bun, and Cloudflare's workerd that provide new options.
+    How do we ensure that these new runtimes remain interoperable and that JavaScript code can remain portable across all environments?
   descriptionJa: >-
-    TBD
-  spokenLanguage: ja
-  slideLanguage: ja
+    (Untranslated)
+    For the longest time, Node.js was the only choice developers had for running JavaScript outside of a Web Browser.
+    Today, however, we have additional runtimes like Deno, Bun, and Cloudflare's workerd that provide new options.
+    How do we ensure that these new runtimes remain interoperable and that JavaScript code can remain portable across all environments?
+  spokenLanguage: en
+  slideLanguage: en
   # sponsorIDs: [xxx]
   speakerIDs:
-    - tbd-01
+    - james-m-snell
 
 # 17
-- uuid: tbd-02
+- uuid: optimizing-interaction-to-next-paint-imp
   date: day1
   startsAt: "16:00"
   endsAt: "16:30"
   room: B
-  recordingUrl: TBD
-  title: TBD
-  titleJa: TBD
+  title: Optimizing Interaction to Next Paint (INP)
+  titleJa: Optimizing Interaction to Next Paint (INP)
   description: >-
-    (Untranslated)
-    TBD
+    Did you know that 90% of time spent on most web pages is after page load? In this span of time, users are interacting with your website through a series of interactions such as clicks, taps, and keyboard inputs—and the slower your website is to respond to those interactions, the more likely your users will have a negative user experience with your website.
+
+    At Google, we've invested significant time in creating new metrics to assess page responsiveness. One of these metrics is First Input Delay (FID), which is a load responsiveness metric that captures the input delay of the first interaction. However, we discovered that we needed a new responsiveness metric that samples more than just the first interaction—and more than simply that interaction's input delay.
+
+    In order to comprehensively assess overall page responsiveness, we've created the new Interaction to Next Paint (INP) metric. INP samples all page interactions, and goes beyond measuring just the input delay. In this talk, you'll find out all about INP, how it works, why it matters, how you can measure it, and how you can improve it.
   descriptionJa: >-
-    TBD
-  spokenLanguage: ja
-  slideLanguage: ja
+    (Untranslated)
+    Did you know that 90% of time spent on most web pages is after page load? In this span of time, users are interacting with your website through a series of interactions such as clicks, taps, and keyboard inputs—and the slower your website is to respond to those interactions, the more likely your users will have a negative user experience with your website.
+
+    At Google, we've invested significant time in creating new metrics to assess page responsiveness. One of these metrics is First Input Delay (FID), which is a load responsiveness metric that captures the input delay of the first interaction. However, we discovered that we needed a new responsiveness metric that samples more than just the first interaction—and more than simply that interaction's input delay.
+
+    In order to comprehensively assess overall page responsiveness, we've created the new Interaction to Next Paint (INP) metric. INP samples all page interactions, and goes beyond measuring just the input delay. In this talk, you'll find out all about INP, how it works, why it matters, how you can measure it, and how you can improve it.
+  spokenLanguage: en
+  slideLanguage: en
   # sponsorIDs: [xxx]
   speakerIDs:
-    - tbd-02
+    - jeremy-wagner
 
 #
 # スポンサートーク

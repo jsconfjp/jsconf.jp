@@ -105,15 +105,15 @@
     He studied Engineering from IIT, India and dropped out from graduate program in computer science at Columbia University, USA to work on his startup full-time.
 
 # 9
-- uuid: baseballyama
-  name: baseballyama
+- uuid: dylan-lacey
+  name: Dylan Lacey
   featured: false
   presentations:
-    - svelte-runtime-101
+    - names-and-other-lies
   biography: >-
-    [株式会社フライル](https://flyle.io/jp) のソフトウェアエンジニア。フロントエンドフレームワーク Svelte のメンテナ。Flyleは、プロダクトマネジメント業務における労働集約的業務を効率化し、創造的な業務に集中するためのプラットフォームです。
+    Dylan has worked for Sauce Labs for nine years, helping customers learn & solving problems. His passion is sharing knowledge and making people's lives easier through technology, which he's been doing for 14 years. He's been involved in Evangelism, QE & Development, as well as Product Design and Marketing across Fintech, Transportation, Data Warehousing and Health. He promises he's not as boring as he sounds; Follow him on Twitter, @dylanlacey, and he'll prove it!
   biographyJa: >-
-    [株式会社フライル](https://flyle.io/jp) のソフトウェアエンジニア。フロントエンドフレームワーク Svelte のメンテナ。Flyleは、プロダクトマネジメント業務における労働集約的業務を効率化し、創造的な業務に集中するためのプラットフォームです。
+    Dylan has worked for Sauce Labs for nine years, helping customers learn & solving problems. His passion is sharing knowledge and making people's lives easier through technology, which he's been doing for 14 years. He's been involved in Evangelism, QE & Development, as well as Product Design and Marketing across Fintech, Transportation, Data Warehousing and Health. He promises he's not as boring as he sounds; Follow him on Twitter, @dylanlacey, and he'll prove it!
 
 # 10
 - uuid: kt3k
@@ -155,15 +155,15 @@
     LinkedIn profile: https://www.linkedin.com/in/nikola-mitrovic-916763119/
 
 # 13
-- uuid: dylan-lacey
-  name: Dylan Lacey
+- uuid: baseballyama
+  name: baseballyama
   featured: false
   presentations:
-    - names-and-other-lies
+    - svelte-runtime-101
   biography: >-
-    Dylan has worked for Sauce Labs for nine years, helping customers learn & solving problems. His passion is sharing knowledge and making people's lives easier through technology, which he's been doing for 14 years. He's been involved in Evangelism, QE & Development, as well as Product Design and Marketing across Fintech, Transportation, Data Warehousing and Health. He promises he's not as boring as he sounds; Follow him on Twitter, @dylanlacey, and he'll prove it!
+    [株式会社フライル](https://flyle.io/jp) のソフトウェアエンジニア。フロントエンドフレームワーク Svelte のメンテナ。Flyleは、プロダクトマネジメント業務における労働集約的業務を効率化し、創造的な業務に集中するためのプラットフォームです。
   biographyJa: >-
-    Dylan has worked for Sauce Labs for nine years, helping customers learn & solving problems. His passion is sharing knowledge and making people's lives easier through technology, which he's been doing for 14 years. He's been involved in Evangelism, QE & Development, as well as Product Design and Marketing across Fintech, Transportation, Data Warehousing and Health. He promises he's not as boring as he sounds; Follow him on Twitter, @dylanlacey, and he'll prove it!
+    [株式会社フライル](https://flyle.io/jp) のソフトウェアエンジニア。フロントエンドフレームワーク Svelte のメンテナ。Flyleは、プロダクトマネジメント業務における労働集約的業務を効率化し、創造的な業務に集中するためのプラットフォームです。
 
 # 14
 - uuid: craig-jones
@@ -192,26 +192,30 @@
     Atila Fassina is on a mission to make code simpler and improving user experience through developer experience. When not recording screencasts or courses, you may find him either writing or talking.
 
 # 16
-- uuid: tbd-01
-  name: TBD
+- uuid: james-m-snell
+  name: James M Snell
   featured: false
   presentations:
-    - tbd-01
+    - what-is-a-web-interoperable-runtime
   biography: >-
-    TBD
+    James is a core contributor to Node.js, a member of the Node.js Technical Steering Committee, and a Systems Engineer on the Cloudflare Workers runtime team.
   biographyJa: >-
-    TBD
+    James is a core contributor to Node.js, a member of the Node.js Technical Steering Committee, and a Systems Engineer on the Cloudflare Workers runtime team.
 
 # 17
-- uuid: tbd-02
-  name: TBD
+- uuid: jeremy-wagner
+  name: Jeremy Wagner
   featured: false
   presentations:
-    - tbd-02
-  biography: >-
-    TBD
-  biographyJa: >-
-    TBD
+    - optimizing-interaction-to-next-paint-imp
+  biography:
+    Jeremy Wagner is more of a writer than a web developer, but he does both anyway.
+    On top of making websites for longer than he thought probable, he has written for A List Apart, CSS-Tricks, and Smashing Magazine.
+    Jeremy will someday relocate to the remote wilderness where sand has not yet been taught to think. Until then, he continues to reside in Minnesota's Twin Cities with his wife and stepdaughters, bemoaning the existence of strip malls.
+  biographyJa:
+    Jeremy Wagner is more of a writer than a web developer, but he does both anyway.
+    On top of making websites for longer than he thought probable, he has written for A List Apart, CSS-Tricks, and Smashing Magazine.
+    Jeremy will someday relocate to the remote wilderness where sand has not yet been taught to think. Until then, he continues to reside in Minnesota's Twin Cities with his wife and stepdaughters, bemoaning the existence of strip malls.
 
 #
 # LT
