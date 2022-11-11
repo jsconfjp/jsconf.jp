@@ -1,7 +1,132 @@
-- uuid: xxx
-  name: XXX
-  url: https://example.com
-  logoUrl: /2021/sponsors/xxx.png
+- uuid: miidas
+  name: ミイダス株式会社
+  url: https://careers.miidas.co.jp/tech/
+  logoUrl: /2022/sponsors/miidas.svg
   prText: |
-    xxx
+    ミイダスは、マッチングをゴールとした従来の人材サービスとは一線を画し、データとテクノロジーを駆使して、人と仕事、人と組織のフィッティングを科学しています。
+    ミイダスが提唱する客観的・数値的な評価に基づいた採用「アセスメントリクルーティング」が日本の採用・転職の常識を変え、適材適所を見い出します。
   grade: premium
+- uuid: nota
+  name: Nota株式会社
+  url: https://notainc.com/ja/home/
+  logoUrl: /2022/sponsors/nota.svg
+  prText: |
+    Nota Inc. was founded in Silicon Valley in 2007. In 2019 Nota released Helpfeel, an enterprise search SaaS that provides FAQ search and knowledge discovery for end users and internal teams. In March 2021, Nota raised 500 million yen to expand Helpfeel. Nota has offices in Kyoto and Tokyo while also offering full remote work and flexible hours.
+  grade: premium
+- uuid: dwango
+  name: 株式会社ドワンゴ
+  url: https://dwango.co.jp/
+  logoUrl: /2022/sponsors/dwango.png
+  prText: |
+    ドワンゴは "ネットの向こうの、リアルを動かす。人間らしさと、つながるデジタルを。" をコーポレートメッセージとして、学校法人角川ドワンゴ学園が運営するネットに特化した通信制高校「N高等学校・S高等学校」とオンライン学習アプリ「N予備校」、ネットの双方向性を最大限に動画や生放送に取り込んだ「ニコニコ」、ネットとリアルの融合をテーマにした巨大イベント「ニコニコ超会議」など、新しい価値を創り出し、それを事業として成立させていくことに挑戦しつづける企業です。
+  grade: premium
+- uuid: kaonavi
+  name: 株式会社カオナビ
+  url: https://corp.kaonavi.jp/recruit/recruitment/
+  logoUrl: /2022/sponsors/kaonavi.png
+  prText: |
+    社員の個性・才能を発掘し、戦略人事を加速させるタレントマネジメントシステム「カオナビ」を提供しています。企業の人材情報をクラウド上で一元管理し、社員の顔や名前、経験、評価、スキル、才能などの人材情報を可視化することで、最適な人材配置や抜擢といった戦略的なタレントマネジメントの実現を支援しています。今後も、人材マネジメントのプラットフォームとして、日本の「働き方」を変えていきたいと考えています。
+  grade: premium
+- uuid: hatena
+  name: 株式会社はてな
+  url: https://hatena.co.jp/
+  logoUrl: /2022/sponsors/hatena.png
+  prText: |
+    はてなは「はてなブログ」や「はてなブックマーク」などの個人ユーザー向けサービスに加え、企業向けサービスとしてコンテンツマーケティング支援サービス、サーバー監視サービス「Mackerel」などを提供するWebサービス企業です。
+    15社以上の出版社様に導入いただいているマンガサービス向けビューワ「GigaViewer」（Web版/アプリ版）の提供や、Webサービスおよびアプリの共同開発も多く手掛けています。
+  grade: sponsor
+- uuid: torana
+  name: 株式会社トラーナ
+  url: https://torana.co.jp/
+  logoUrl: /2022/sponsors/torana.png
+  prText: |
+    弊社は乳幼児向けおもちゃサブスクリプションサービス「トイサブ！」を運営する株式会社トラーナです。私たちが"おもちゃサービス事業者"として社会を変えていくために、
+    「幸せな親子時間を増やそうぜ」というビジョンを大切にしています。
+  grade: sponsor
+- uuid: legalforce
+  name: 株式会社LegalForce
+  url: https://legalforce-corp.com/
+  logoUrl: /2022/sponsors/legalforce.png
+  prText: |
+    LegalForceは「全ての契約リスクを制御可能にする」をミッションとして掲げる、リーガルテック領域のスタートアップです。
+    リーガルテックとは、テクノロジーによる法律関連業務の効率化や、より洗練されたプロセスを支援する分野で、その中でも弊社は契約書レビューサービスを軸に企業の契約業務を包括的にサポートするSaaSを開発・提供しています。
+    法務の世界はまだまだDX化が進んでいないのが現状です。私たちは、伝統を体現する「法」を最先端の「テクノロジー」と結びつけることで、法務分野の業務効率を高め、あるべき権利が適切に守られるより豊かで信頼に満ちた経済社会の実現を目指しています。
+  grade: sponsor
+- uuid: twilio
+  name: Twilio Inc
+  url: https://www.twilio.com/
+  logoUrl: /2022/sponsors/twilio.png
+  prText: |
+    https://www.twilio.com/press
+  grade: premium
+- uuid: cybozu
+  name: サイボウズ株式会社
+  url: https://cybozu.co.jp/
+  logoUrl: /2022/sponsors/cybozu.png
+  prText: |
+    サイボウズのフロントエンドを最高にするメンバーを募集しています！ https://cybozu.co.jp/recruit/entry/
+  grade: premium
+- uuid: euphoria
+  name: 株式会社ユーフォリア
+  url: https://eu-phoria.jp/
+  logoUrl: /2022/sponsors/eu-phoria.png
+  prText: |
+    株式会社ユーフォリアは「人とスポーツの出合いを幸福にする」をミッションに、スポーツの課題をテクノロジーで解決するスポーツテック企業です。
+    アスリートのコンディション管理システム「ONE TAP SPORTS」の開発やスポーツ科学メディア「TORCH」の運営をしております。また、スポーツ界で培ってきたスポーツ科学の知見とテクノロジーを一般社会に広げられるようにサービス開発やマーケティング支援も行っております。
+  grade: sponsor
+- uuid: wantedly
+  name: ウォンテッドリー株式会社
+  url: https://docs.wantedly.dev/
+  logoUrl: /2022/sponsors/wantedly.png
+  prText: |
+    ウォンテッドリーは『シゴトでココロオドルひとをふやす』ためにはたらくすべての人が共感を通じて「であい」「つながり」「つながりを深める」ためのビジネスSNS Wantedly を提供しています。
+    シゴトでココロオドルとは、仕事に没頭し成果を上げ、継続的に成長を実感する状態と私たちは定義しております。ミッション実現に向け、没頭に必要な3要素、自律・共感・挑戦を実現するプロダクトを開発運営しています
+  grade: premium
+- uuid: chatwork
+  name: Chatwork株式会社
+  url: https://recruit.chatwork.com/jobs/
+  logoUrl: /2022/sponsors/chatwork.png
+  prText: |
+    日本のビジネスチャットの普及率は、まだ24.6％。中小企業を中心に普及していない状況です。 残りの白地は、グローバルなテックジャイアントとの争奪戦です。マーケットを巡って競い合い、シェアをさらに伸ばしていく。そこに本気で挑んでいます。
+  grade: sponsor
+- uuid: studyplus
+  name: スタディプラス株式会社
+  url: https://info.studyplus.co.jp/
+  logoUrl: /2022/sponsors/studyplus.png
+  prText: |
+    スタディプラスは「学ぶ喜びをすべての人へ」をミッションに新しい教育の仕組みをつくる会社です。
+
+    「Studyplus」は、中高生を中心に700万人以上の学習者をサポートしてきました。
+    「Studyplus for School」は学習塾・予備校1,000校以上に導入され、先生と生徒をつなぐ学習管理ツールとして利用されています。
+  grade: sponsor
+- uuid: nikkei
+  name: 日本経済新聞社
+  url: https://hack.nikkei.com/
+  logoUrl: /2022/sponsors/nikkei.jpeg
+  prText: |
+    日経といえば「爆速」のイメージが強いですが、昨今では「爆速」な上に生産性の爆上げにも注力しています。これまではテンプレートエンジンを用いてのHTML生成とWeb標準技術に振り切った技術選定でしたが、最近では React, Next.js, Rust といった新しいものを取り入れて基盤を置き換えつつ、次世代基盤を開拓しています。その過程で様々なフロントエンドエコシステムに還元したいものも多く、フロントエンド技術コミュニティを応援したいと考えています。
+  grade: sponsor
+- uuid: fastdoctor
+  name: ファストドクター株式会社
+  url: https://fastdoctor.jp/
+  logoUrl: /2022/sponsors/fastdoctor.png
+  prText: |
+    私達が目指すのは「負荷なき夜間休日の医療」。実現困難だった「初診の時間外往診」をプラットフォーム化によって可能にし、創業後6年で日本の総人口の50％をカバーするまでに。医師2名の構想に始まり、エンジニアらDX人材の活躍で急成長を続けています。患者体験や診療業務をデジタルによって効率化し、スマートな医療体験を提供。
+    ※2022年「グッドデザイン賞 金賞」および「グッドデザイン・ベスト100」をW受賞
+  grade: sponsor
+- uuid: medpeer
+  name: メドピア株式会社
+  url: https://medpeer.co.jp/
+  logoUrl: /2022/sponsors/medpeer.jpg
+  prText: |
+    【つくるのは、ヘルステックのプラットフォーム。】メドピア株式会社は、現役医師が経営するヘルステックカンパニーとして、ITの力で集合知を実現し、「医療を再発明」することを目指しています。国内医師の4割以上が参加する専用コミュニティ「MedPeer」を筆頭に、医療従事者同士の知見を集積させた集合知プラットフォームを構築。そのほか、予防医療やヘルスケアに関わるサービスなども展開しています。
+
+    We create a health tech platform. MedPeer, inc. is a health tech company run by an active physician. We aim to reinvent healthcare by realizing collective intelligence through the power of IT. Led by "MedPeer," a dedicated community in which more than 40% of physicians in Japan participate, the company has built a collective intelligence platform that accumulates the knowledge of medical professionals. In addition, we are also developing services related to preventive medicine and healthcare.
+  grade: sponsor
+- uuid: timee
+  name: 株式会社タイミー
+  url: https://corp.timee.co.jp/
+  logoUrl: /2022/sponsors/timee.jpg
+  prText: |
+    「『働く』を通じて人生の可能性を広げるインフラをつくる」をミッションに掲げ、働きたい人と働いてほしい事業者をマッチングさせるプラットフォームを提供しています。
+  grade: sponsor

@@ -1,9 +1,288 @@
-- uuid: xxx
-  name: TBA
+# 1
+- uuid: catnose
+  name: Catnose
+  featured: true
+  presentations:
+    - tips-for-developing-a-blogging-platform
+  biography: >-
+    個人開発が好きなソフトウェアエンジニア兼デザイナーです。最近作ったWebサービスはzenn.devです。
+  biographyJa: >-
+    個人開発が好きなソフトウェアエンジニア兼デザイナーです。最近作ったWebサービスはzenn.devです。
+
+# 2
+- uuid: dora
+  name: DORA (Dora Makszy)
   featured: false
   presentations:
-    - xxx
+    - flawless-flows-the-psychology-of-harmonious-teamwork
   biography: >-
-    xxx
+    Dora is a senior product designer with over 17 years of professional experience in design, development and management. In all roles, her goal is to ensure that the processes run smoothly and that her colleagues receive all possible support.
   biographyJa: >-
-    xxx
+    Dora is a senior product designer with over 17 years of professional experience in design, development and management. In all roles, her goal is to ensure that the processes run smoothly and that her colleagues receive all possible support.
+
+# 3
+- uuid: okmttdhr
+  name: okmttdhr
+  featured: false
+  presentations:
+    - organizational-development-streamlined-by-the-front-end-ecosystem
+  biography: >-
+    DMMプラットフォーム事業本部エンジニア
+  biographyJa: >-
+    DMMプラットフォーム事業本部エンジニア
+
+# 4
+- uuid: ross-kirsling
+  name: Ross Kirsling
+  featured: true
+  presentations:
+    - optional-chaining-from-specification-to-implementation
+  biography: >-
+    Ross Kirsling is a Staff Software Engineer at PlayStation. He is a WebKit reviewer, a TC39 delegate, a Japanese speaker, and a karaoke lover.
+  biographyJa: >-
+    Ross Kirsling is a Staff Software Engineer at PlayStation. He is a WebKit reviewer, a TC39 delegate, a Japanese speaker, and a karaoke lover.
+
+# 5
+- uuid: guvalif
+  name: Kazuyuki TAKASE (@Guvalif)
+  featured: false
+  presentations:
+    - client-side-ddd-in-the-age-of-declarative-ui-grand-considerations
+  biography: >-
+    2019 年に Chatwork 株式会社へフロントエンド・エンジニアとしてジョインし、リリース基盤の刷新やビデオ通話アプリケーションの開発を行う。2020 年から技術広報・技術採用担当としてインターンシップ・プログラムや勉強会の企画・運営を行っている。2022 年から全社的な組織開発戦略の策定・運用にも挑戦中。
+
+    個人では、技術と教育をつなげることに興味があり、大人から子どもまで、技術を広める活動に従事している。
+  biographyJa: >-
+    2019 年に Chatwork 株式会社へフロントエンド・エンジニアとしてジョインし、リリース基盤の刷新やビデオ通話アプリケーションの開発を行う。2020 年から技術広報・技術採用担当としてインターンシップ・プログラムや勉強会の企画・運営を行っている。2022 年から全社的な組織開発戦略の策定・運用にも挑戦中。
+
+    個人では、技術と教育をつなげることに興味があり、大人から子どもまで、技術を広める活動に従事している。
+
+# 6
+- uuid: yusuke-wada
+  name: Yusuke Wada
+  featured: true
+  presentations:
+    - hono-ultrafast-web-framework-for-cloudflare-workers-deno-bun-and-nodejs
+  biography: >-
+    Web framework developer
+  biographyJa: >-
+    Web framework developer
+
+# 7
+- uuid: eiji-kitamura
+  name: えーじ (Eiji Kitamura)
+  featured: false
+  presentations:
+    - passkey-and-how-it-works-on-google-ecosystem
+  biography: >-
+    Eiji is a developer advocate at Google Chrome team working for trust and safety.
+
+    He's trying to make security, privacy, identity and payments on the web more open, seamless and frictionless.
+  biographyJa: >-
+    Eiji is a developer advocate at Google Chrome team working for trust and safety.
+
+    He's trying to make security, privacy, identity and payments on the web more open, seamless and frictionless.
+
+# 8
+- uuid: shyam-swaroop
+  name: Shyam Swaroop
+  featured: false
+  presentations:
+    - reducing-bugs-in-a-react-codebase
+  biography: >-
+    Shyam Swaroop is the Co-Founder & CTO of Atri Labs where he is developing a new full-stack framework for web development.
+
+    He has five years of experience in Machine Learning and Software Engineering in academia and industry.
+    His most recent engagement in academia was working with DARPA under the US Department of Defense as Graduate Research Assistant at Columbia University (USA).
+    Previously, he has created software products that have yielded multi million dollars of revenue for his organization, EXL Services, a US-headquartered technology consulting firm.
+    He studied Engineering from IIT, India and dropped out from graduate program in computer science at Columbia University, USA to work on his startup full-time.
+  biographyJa: >-
+    Shyam Swaroop is the Co-Founder & CTO of Atri Labs where he is developing a new full-stack framework for web development.
+
+    He has five years of experience in Machine Learning and Software Engineering in academia and industry.
+    His most recent engagement in academia was working with DARPA under the US Department of Defense as Graduate Research Assistant at Columbia University (USA).
+    Previously, he has created software products that have yielded multi million dollars of revenue for his organization, EXL Services, a US-headquartered technology consulting firm.
+    He studied Engineering from IIT, India and dropped out from graduate program in computer science at Columbia University, USA to work on his startup full-time.
+
+# 9
+- uuid: dylan-lacey
+  name: Dylan Lacey
+  featured: false
+  presentations:
+    - names-and-other-lies
+  biography: >-
+    Dylan has worked for Sauce Labs for nine years, helping customers learn & solving problems. His passion is sharing knowledge and making people's lives easier through technology, which he's been doing for 14 years. He's been involved in Evangelism, QE & Development, as well as Product Design and Marketing across Fintech, Transportation, Data Warehousing and Health. He promises he's not as boring as he sounds; Follow him on Twitter, @dylanlacey, and he'll prove it!
+  biographyJa: >-
+    Dylan has worked for Sauce Labs for nine years, helping customers learn & solving problems. His passion is sharing knowledge and making people's lives easier through technology, which he's been doing for 14 years. He's been involved in Evangelism, QE & Development, as well as Product Design and Marketing across Fintech, Transportation, Data Warehousing and Health. He promises he's not as boring as he sounds; Follow him on Twitter, @dylanlacey, and he'll prove it!
+
+# 10
+- uuid: kt3k
+  name: 日野澤 歓也
+  featured: false
+  presentations:
+    - current-state-of-npm-support-in-deno
+  biography: >-
+    フリーランス Web エンジニア。2020年から Deno 社の一員として Deno と Deno Deploy の開発に参加。最近は主に Deno の標準モジュール周りを担当しています。
+  biographyJa: >-
+    フリーランス Web エンジニア。2020年から Deno 社の一員として Deno と Deno Deploy の開発に参加。最近は主に Deno の標準モジュール周りを担当しています。
+
+# 11
+- uuid: bhuvana-meenakshi-koteeswaran
+  name: Bhuvana Meenakshi Koteeswaran
+  featured: false
+  presentations:
+    - creating-accessibility-environments-to-help-diverse-participation-in-tech
+  biography: >-
+    Bhuvana Meenakshi Koteeswaran is a Socio-tech Researcher and founder of Women In Tech collectives, India, she is also Internationally recognised as a Mozillian, Wikimedian, and VRAR/ multidimensional space enthusiast. She is one of the recipients of the ShuttleWorth Flash Grant awards 2021. Bhuvana initiated the Women In Tech community in India to enable more voices of women who are interested in pursuing a career in tech or want to learn tech and to give opportunities for those who lost their careers in tech due to the pandemic. As part of this initiative, she has joined hands with Coko Foundation where the organisation has collaborated to support the members of the community in furthering their careers and interest in advance technologies. She is the cofounder of EmergeAbility, an initiative to make the digital world inclusive and accessible. She has also facilitated global events like MozFest, and Hack4OpenGLAM. She had been a mentor at Creep-a-thon hosted by Codam college, Amsterdam. She was one among the International Jury panel for the Wikipedia Pages wanting Photos campaign 2021.
+    Bhuvana being curious to reach the global technologies and communities so she collaborated with the CityJS London team and initiated its first ever World series version in the steel city of India, Salem. She is the founder and lead the team of CityJS India 2022 with an intention connect developers and technology enthusiasts from India and all around the world. She also balances her life by pursuing performing arts, she has received Merit certificates from Annamalai University and Imperial Society of Teachers of Dancing, London for her notable participation in Bharatnatyam and Kathak dance forms.
+  biographyJa: >-
+    Bhuvana Meenakshi Koteeswaran is a Socio-tech Researcher and founder of Women In Tech collectives, India, she is also Internationally recognised as a Mozillian, Wikimedian, and VRAR/ multidimensional space enthusiast. She is one of the recipients of the ShuttleWorth Flash Grant awards 2021. Bhuvana initiated the Women In Tech community in India to enable more voices of women who are interested in pursuing a career in tech or want to learn tech and to give opportunities for those who lost their careers in tech due to the pandemic. As part of this initiative, she has joined hands with Coko Foundation where the organisation has collaborated to support the members of the community in furthering their careers and interest in advance technologies. She is the cofounder of EmergeAbility, an initiative to make the digital world inclusive and accessible. She has also facilitated global events like MozFest, and Hack4OpenGLAM. She had been a mentor at Creep-a-thon hosted by Codam college, Amsterdam. She was one among the International Jury panel for the Wikipedia Pages wanting Photos campaign 2021.
+    Bhuvana being curious to reach the global technologies and communities so she collaborated with the CityJS London team and initiated its first ever World series version in the steel city of India, Salem. She is the founder and lead the team of CityJS India 2022 with an intention connect developers and technology enthusiasts from India and all around the world. She also balances her life by pursuing performing arts, she has received Merit certificates from Annamalai University and Imperial Society of Teachers of Dancing, London for her notable participation in Bharatnatyam and Kathak dance forms.
+
+# 12
+- uuid: nikola-mitrovic
+  name: Nikola Mitrovic
+  featured: false
+  presentations:
+    - secret-shortcuts-of-loading-web-performance
+  biography: >-
+    Experienced JavaScript Software Engineer with 6 years in the industry. More skilled in Front-end Development, with high level of experience in working with Micro Front-end architecture, designing projects as a set of standalone components that include their own interfaces, logic, and storage, developing mini-applications independently, and composing them all together in the browser with different integration techniques.
+    Passionate about web performance and ensuring the best possible User Experience of web applications.
+    LinkedIn profile: https://www.linkedin.com/in/nikola-mitrovic-916763119/
+  biographyJa: >-
+    Experienced JavaScript Software Engineer with 6 years in the industry. More skilled in Front-end Development, with high level of experience in working with Micro Front-end architecture, designing projects as a set of standalone components that include their own interfaces, logic, and storage, developing mini-applications independently, and composing them all together in the browser with different integration techniques.
+    Passionate about web performance and ensuring the best possible User Experience of web applications.
+    LinkedIn profile: https://www.linkedin.com/in/nikola-mitrovic-916763119/
+
+# 13
+- uuid: baseballyama
+  name: baseballyama
+  featured: false
+  presentations:
+    - svelte-runtime-101
+  biography: >-
+    [株式会社フライル](https://flyle.io/jp) のソフトウェアエンジニア。フロントエンドフレームワーク Svelte のメンテナ。Flyleは、プロダクトマネジメント業務における労働集約的業務を効率化し、創造的な業務に集中するためのプラットフォームです。
+  biographyJa: >-
+    [株式会社フライル](https://flyle.io/jp) のソフトウェアエンジニア。フロントエンドフレームワーク Svelte のメンテナ。Flyleは、プロダクトマネジメント業務における労働集約的業務を効率化し、創造的な業務に集中するためのプラットフォームです。
+
+# 14
+- uuid: craig-jones
+  name: Craig Jones
+  featured: false
+  presentations:
+    - bbc-our-experiences-of-js-and-cloud
+  biography: >-
+    I am the Lead Architect for the Core Services department of BBC Digital Products, and has worked in software engineering for 15 years, and solely in JS/TS for the last 7 or 8 of those.
+
+    I'm a big fan of building evolutionary software systems, and love working with people to do great things.
+  biographyJa: >-
+    I am the Lead Architect for the Core Services department of BBC Digital Products, and has worked in software engineering for 15 years, and solely in JS/TS for the last 7 or 8 of those.
+
+    I'm a big fan of building evolutionary software systems, and love working with people to do great things.
+
+# 15
+- uuid: atila-fassina
+  name: Atila Fassina
+  featured: false
+  presentations:
+    - remixing-usability-with-performance
+  biography: >-
+    Atila Fassina is on a mission to make code simpler and improving user experience through developer experience. When not recording screencasts or courses, you may find him either writing or talking.
+  biographyJa: >-
+    Atila Fassina is on a mission to make code simpler and improving user experience through developer experience. When not recording screencasts or courses, you may find him either writing or talking.
+
+# 16
+- uuid: james-m-snell
+  name: James M Snell
+  featured: true
+  presentations:
+    - what-is-a-web-interoperable-runtime
+  biography: >-
+    James is a core contributor to Node.js, a member of the Node.js Technical Steering Committee, and a Systems Engineer on the Cloudflare Workers runtime team.
+  biographyJa: >-
+    James is a core contributor to Node.js, a member of the Node.js Technical Steering Committee, and a Systems Engineer on the Cloudflare Workers runtime team.
+
+# 17
+- uuid: jeremy-wagner
+  name: Jeremy Wagner
+  featured: true
+  presentations:
+    - optimizing-interaction-to-next-paint-imp
+  biography:
+    Jeremy Wagner is more of a writer than a web developer, but he does both anyway.
+    On top of making websites for longer than he thought probable, he has written for A List Apart, CSS-Tricks, and Smashing Magazine.
+    Jeremy will someday relocate to the remote wilderness where sand has not yet been taught to think. Until then, he continues to reside in Minnesota's Twin Cities with his wife and stepdaughters, bemoaning the existence of strip malls.
+  biographyJa:
+    Jeremy Wagner is more of a writer than a web developer, but he does both anyway.
+    On top of making websites for longer than he thought probable, he has written for A List Apart, CSS-Tricks, and Smashing Magazine.
+    Jeremy will someday relocate to the remote wilderness where sand has not yet been taught to think. Until then, he continues to reside in Minnesota's Twin Cities with his wife and stepdaughters, bemoaning the existence of strip malls.
+
+#
+# LT
+#
+- uuid: togami2864
+  name: 戸上 義章 / Yoshiaki Togami
+  featured: false
+  presentations:
+    - javascript-testing-framework-under-the-hood
+  biography: >-
+    B4 student major in electronic engineering at University of Chuo
+  biographyJa: >-
+    B4 student major in electronic engineering at University of Chuo
+- uuid: masashi-ganeko
+  name: Masashi GANEKO / がねこまさし
+  featured: false
+  presentations:
+    - small-tips-to-use-bun-with-websocket-server-and-webassembly-modules
+  biography: >-
+    I joined the Node.js community to use WebSocket/Socket.io for server-side programs to make use of new features of Web Browsers such as WebRTC. I am also interested in WebAssembly.
+    I am one of the staff of WebRTC Meetup Tokyo.
+  biographyJa: >-
+    WebSocket/Socket.ioが使いたくてNode.jの世界に足を踏み入れました。WebRTCのような映像/音声を扱う仕組みや、WebAssemblyのような言語寄りの仕組みにも興味があります。
+    （最近活動できていませんが）WebRTC Meetup Tokyo のスタッフです。
+    インフォコム株式会社所属
+- uuid: sakito-mukai
+  name: sakito mukai
+  featured: false
+  presentations:
+    - pack-front-end-practices-into-the-design-system-and-redistribute
+  biography: >-
+    2019年にサイボウズ株式会社へ入社。2021年に会社横断のフロントエンド専門チームからデザインチームへ異動し、Design Systemの構築のプロジェクトオーナーとして、組織を含めたデザイン基盤構築を行っています。
+    肩書きもDesign Technologistに変更し、デザインと開発の狭間を彷徨っています。
+  biographyJa: >-
+    2019年にサイボウズ株式会社へ入社。2021年に会社横断のフロントエンド専門チームからデザインチームへ異動し、Design Systemの構築のプロジェクトオーナーとして、組織を含めたデザイン基盤構築を行っています。
+    肩書きもDesign Technologistに変更し、デザインと開発の狭間を彷徨っています。
+- uuid: noyan
+  name: noyan
+  featured: false
+  presentations:
+    - internal-implementation-of-react
+  biography: >-
+    DMM.comのプラットフォームをよくするお仕事をしています。
+
+    余暇の時間にReactの内部を読んだりします。
+  biographyJa: >-
+    DMM.comのプラットフォームをよくするお仕事をしています。
+
+
+    余暇の時間にReactの内部を読んだりします。
+- uuid: yebis0942
+  name: yebis0942
+  featured: false
+  presentations:
+    - seeking-technology-to-make-ecmascript-specifications-readable-to-everyone
+  biography: >-
+    普段はTypeScriptとGoを書いて暮らしています。
+  biographyJa: >-
+    普段はTypeScriptとGoを書いて暮らしています。
+- uuid: dynamis
+  name: dynamis (ASAI Tomoya)
+  featured: true
+  presentations:
+    - web-runtime
+  biography: >-
+    Web 系のれっさーぱんだ。
+    Firefox 日本語版のリリース担当から Mozilla の技術広報などを経て、WebDINO Japan (元 Mozilla Japan) の CTO をしています。
+  biographyJa: >-
+    Web 系のれっさーぱんだ。
+    Firefox 日本語版のリリース担当から Mozilla の技術広報などを経て、WebDINO Japan (元 Mozilla Japan) の CTO をしています。

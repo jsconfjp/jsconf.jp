@@ -21,7 +21,7 @@ export const en = {
     joinUs: "Join us",
     guestSpeakers: "Guest speakers",
     goToGuests: "CHECK ALL SPEAKERS",
-    schedule: "schedule",
+    schedule: "Schedule (tentative)",
     day1: "Day 1",
     roomA: "Track A",
     roomB: "Track B",
