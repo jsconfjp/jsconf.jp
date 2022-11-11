@@ -105,8 +105,8 @@
   startsAt: "11:30"
   endsAt: "12:00"
   room: A
-  title: Optional Chaining":" From Specification to Implementation
-  titleJa: Optional Chaining":" From Specification to Implementation
+  title: Optional Chaining\: From Specification to Implementation
+  titleJa: Optional Chaining\: From Specification to Implementation
   description: >-
     Ross Kirsling is a Staff Software Engineer at PlayStation. He is a WebKit reviewer, a TC39 delegate, a Japanese speaker, and a karaoke lover.
   descriptionJa: >-
