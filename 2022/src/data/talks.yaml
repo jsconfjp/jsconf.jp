@@ -27,12 +27,6 @@
   titleJa: Flawless flows - the psychology of harmonious teamwork
   description: >-
     Overview: We all want to be better developers. But it's not just about writing fantastic code. We can also improve by bringing the best of our skills to every moment of product development. It means being able to get the information we need to do our job from everyone involved in the process, even when it seems impossible. This presentation will explore how to pull the strings in the background so that in the end we actually DEVELOP the product.
-
-    Additional information:
-
-    My earlier article serves as a basis of my talk: https://dev.to/heydorka/flawless-flows-the-psychology-of-harmonious-teamwork-1d3m
-
-    Relevance: as far as I can see, product teams struggle with managing time, handling personal relationships and these factors have a strong effect on their daily routine. I didn't even mention the effects of remote work... So, what I want to point out is how an individual can contribute. The aim is to have a strong, independent but collaborative team. The members can rely on the others' expertise and transparency. My talk helps those who're working in a toxic or mismanaged environment, but want to do something to change it.
   descriptionJa: >-
     (Untranslated)
     Overview: We all want to be better developers. But it's not just about writing fantastic code. We can also improve by bringing the best of our skills to every moment of product development. It means being able to get the information we need to do our job from everyone involved in the process, even when it seems impossible. This presentation will explore how to pull the strings in the background so that in the end we actually DEVELOP the product.
@@ -111,8 +105,8 @@
   startsAt: "11:30"
   endsAt: "12:00"
   room: A
-  title: Optional Chaining From Specification to Implementation
-  titleJa: Optional Chaining From Specification to Implementation
+  title: Optional Chaining":" From Specification to Implementation
+  titleJa: Optional Chaining":" From Specification to Implementation
   description: >-
     Ross Kirsling is a Staff Software Engineer at PlayStation. He is a WebKit reviewer, a TC39 delegate, a Japanese speaker, and a karaoke lover.
   descriptionJa: >-
@@ -138,7 +132,7 @@
 
     構造を薄く保つことは開発体験の向上にも繋がりますし、状態管理ライブラリのある種の複雑さに対する揺り戻しも相まってか、クライアントサイドで設計を作り込むことに対する疑心も、さまざまな場面で言及されているように感じます。
 
-    さて、設計の戦略・戦術は多くのものが存在しますが、中でも DDD: Domain Drive Design は、しばしばエンジニアの関心を引くと同時に、頭を悩ませているものの1つでしょう。
+    さて、設計の戦略・戦術は多くのものが存在しますが、中でも DDD: Domain Driven Design は、しばしばエンジニアの関心を引くと同時に、頭を悩ませているものの1つでしょう。
 
     このセッションでは、クライアントサイドの構造を薄く保ちながら、いかに DDD のような手法の恩恵を得るかを、考察してみたいと思います。
   descriptionJa: >-
@@ -146,7 +140,7 @@
 
     構造を薄く保つことは開発体験の向上にも繋がりますし、状態管理ライブラリのある種の複雑さに対する揺り戻しも相まってか、クライアントサイドで設計を作り込むことに対する疑心も、さまざまな場面で言及されているように感じます。
 
-    さて、設計の戦略・戦術は多くのものが存在しますが、中でも DDD: Domain Drive Design は、しばしばエンジニアの関心を引くと同時に、頭を悩ませているものの1つでしょう。
+    さて、設計の戦略・戦術は多くのものが存在しますが、中でも DDD: Domain Driven Design は、しばしばエンジニアの関心を引くと同時に、頭を悩ませているものの1つでしょう。
 
     このセッションでは、クライアントサイドの構造を薄く保ちながら、いかに DDD のような手法の恩恵を得るかを、考察してみたいと思います。
   spokenLanguage: ja
@@ -567,8 +561,8 @@
   startsAt: "17:50"
   endsAt: "18:00"
   room: A
-  title: Small Tips to use Bun with WebSocket Server and  WebAssembly Modules. / Bun と WebSocket Server とオマケのWebAssembl
-  titleJa: Small Tips to use Bun with WebSocket Server and  WebAssembly Modules. / Bun と WebSocket Server とオマケのWebAssembl
+  title: Small Tips to use Bun with WebSocket Server and  WebAssembly Modules. / Bun と WebSocket Server とオマケのWebAssembly
+  titleJa: Small Tips to use Bun with WebSocket Server and  WebAssembly Modules. / Bun と WebSocket Server とオマケのWebAssembly
   description: >-
     Bun is a new JavaScript runtime. I would like to share some small tips to use WebSocket Server and WebAssembly modules.
   descriptionJa: >-
