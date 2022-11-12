@@ -13,7 +13,7 @@ export const ja: {
     guestSpeakers: "ゲストスピーカー",
     goToGuests: "スピーカー一覧へ",
     tickets: "チケット",
-    buyTickets: "チケットを購入する",
+    buyTickets: "参加登録",
     callForSpeakers: "トーク募集",
     submitTalk: "トーク申込みフォームへ",
     callForSponsors: "スポンサー募集",

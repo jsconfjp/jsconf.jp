@@ -27,7 +27,7 @@ export const en = {
     roomB: "Track B",
     roomC: "Track C",
     tickets: "Tickets",
-    buyTickets: "Buy Tickets",
+    buyTickets: "Registration",
     comingSoon: "Coming soon",
     "jp-specified-commercial-transactions-act": "特定商取引法に基づく表示",
     "code-of-conduct": "Code of Conduct",
