@@ -106,12 +106,12 @@
   endsAt: "12:00"
   room: A
   title: "Optional Chaining: From Specification to Implementation"
-  titleJa: "Optional Chaining: From Specification to Implementation"
+  titleJa: "オプショナルチェーンができるまで　〜仕様と実装〜"
   description: >-
-    Ross Kirsling is a Staff Software Engineer at PlayStation. He is a WebKit reviewer, a TC39 delegate, a Japanese speaker, and a karaoke lover.
+    How does a JavaScript language feature travel all the way from being an idea in somebody's head to being available in your favorite engine? In this talk, we'll learn about optional chaining's journey through TC39 and the details of its implementation in JavaScriptCore. Be there or be `undefined`!
   descriptionJa: >-
-    (Untranslated)
-    Ross Kirsling is a Staff Software Engineer at PlayStation. He is a WebKit reviewer, a TC39 delegate, a Japanese speaker, and a karaoke lover.
+    誰かの頭の中のアイデアが、どうやって世界の誰でも使えるJavaScript機能になるのだろうか。オプショナルチェーンを事例にして学びましょう！
+TC39でどう標準化されたか、JavaScriptCoreでどう実装されたか、皆さんに愛される演算子が旅してきた道のりについて語ります。お見逃しなく！
   spokenLanguage: en
   slideLanguage: en
   # sponsorIDs: [xxx]
@@ -775,3 +775,27 @@
   title:  ウォンテッドリー JSConf JP 2022 Sponsor LT
   titleJa: ウォンテッドリー JSConf JP 2022 Sponsor LT
   sponsorIDs: [wantedly]
+- uuid: building-offline-and-real-time-applications-the-magic-of-crdts
+  date: day1
+  startsAt: "16:00"
+  endsAt: "16:30"
+  room: C
+  title: Building Offline and Real-Time Applications – The Magic of CRDTs
+  titleJa: Building Offline and Real-Time Applications – The Magic of CRDTs
+  description: >-
+    Real-time and offline applications have opened the door to premium, native-like experiences on the web. These features have set sites apart from their competition, allowing Google Docs to dethrone Microsoft Word, Figma to overtake Sketch, and Slack to nearly replace email.
+    "The underlying magic powering many of these sites is CRDTs: Conflict-free replicated data types — a type of data structure used in distributed applications. Despite the daunting-sounding jargon, CRDTs as tool in your toolkit can be understood and used pretty simply."
+    By walking through an example of a to-do list application, we'll see how a traditional approach to managing a todo list state may begin to break when using it while offline. Having users edit the same to-do list items simultaneously can lead to an incorrect or corrupt state.
+    We'll then gradually convert the application state to use the three CRDT principles: commutativity, associativity, and idempotency, to make it resilient to changes being made concurrently or offline.
+    Finally, we'll briefly demonstrate examples of real-world applications using CRDTs in production and what their underlying design might look like. In the end, attendees should know enough of the basics of CRDTs to put them into practice in apps they're developing today.
+  descriptionJa: >-
+    Real-time and offline applications have opened the door to premium, native-like experiences on the web. These features have set sites apart from their competition, allowing Google Docs to dethrone Microsoft Word, Figma to overtake Sketch, and Slack to nearly replace email.
+    "The underlying magic powering many of these sites is CRDTs: Conflict-free replicated data types — a type of data structure used in distributed applications. Despite the daunting-sounding jargon, CRDTs as tool in your toolkit can be understood and used pretty simply."
+    By walking through an example of a to-do list application, we'll see how a traditional approach to managing a todo list state may begin to break when using it while offline. Having users edit the same to-do list items simultaneously can lead to an incorrect or corrupt state.
+    We'll then gradually convert the application state to use the three CRDT principles: commutativity, associativity, and idempotency, to make it resilient to changes being made concurrently or offline.
+    Finally, we'll briefly demonstrate examples of real-world applications using CRDTs in production and what their underlying design might look like. In the end, attendees should know enough of the basics of CRDTs to put them into practice in apps they're developing today.
+  spokenLanguage: en
+  slideLanguage: en
+  # sponsorIDs: [xxx]
+  speakerIDs:
+    - matan-kushner

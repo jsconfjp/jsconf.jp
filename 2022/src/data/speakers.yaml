@@ -286,3 +286,12 @@
   biographyJa: >-
     Web 系のれっさーぱんだ。
     Firefox 日本語版のリリース担当から Mozilla の技術広報などを経て、WebDINO Japan (元 Mozilla Japan) の CTO をしています。
+- uuid: matan-kushner
+  name: Matan Kushner
+  featured: false
+  presentations:
+    - building-offline-and-real-time-applications-the-magic-of-crdts
+  biography: >-
+    Matan is a full-stack developer, open-source maintainer, and digital nomad, passionate about making development delightful, easy, and accessible. Prior to leading the development team at Tenkai, Matan was responsible for building real-time collaborative features at CodeSandbox. In his free time, Matan builds open-source JavaScript and Rust libraries and tools.
+  biographyJa: >-
+    Matan is a full-stack developer, open-source maintainer, and digital nomad, passionate about making development delightful, easy, and accessible. Prior to leading the development team at Tenkai, Matan was responsible for building real-time collaborative features at CodeSandbox. In his free time, Matan builds open-source JavaScript and Rust libraries and tools.
