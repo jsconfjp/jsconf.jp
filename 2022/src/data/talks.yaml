@@ -110,8 +110,7 @@
   description: >-
     How does a JavaScript language feature travel all the way from being an idea in somebody's head to being available in your favorite engine? In this talk, we'll learn about optional chaining's journey through TC39 and the details of its implementation in JavaScriptCore. Be there or be `undefined`!
   descriptionJa: >-
-    誰かの頭の中のアイデアが、どうやって世界の誰でも使えるJavaScript機能になるのだろうか。オプショナルチェーンを事例にして学びましょう！
-TC39でどう標準化されたか、JavaScriptCoreでどう実装されたか、皆さんに愛される演算子が旅してきた道のりについて語ります。お見逃しなく！
+    誰かの頭の中のアイデアが、どうやって世界の誰でも使えるJavaScript機能になるのだろうか。オプショナルチェーンを事例にして学びましょう！TC39でどう標準化されたか、JavaScriptCoreでどう実装されたか、皆さんに愛される演算子が旅してきた道のりについて語ります。お見逃しなく！
   spokenLanguage: en
   slideLanguage: en
   # sponsorIDs: [xxx]
