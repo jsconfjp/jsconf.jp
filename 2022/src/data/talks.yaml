@@ -731,8 +731,8 @@
   startsAt: "16:50"
   endsAt: "16:55"
   room: A
-  title: NOTA JSConf JP 2022 Sponsor LT
-  titleJa: NOTA JSConf JP 2022 Sponsor LT
+  title: Helpfeel JSConf JP 2022 Sponsor LT
+  titleJa: Helpfeel JSConf JP 2022 Sponsor LT
   sponsorIDs: [nota]
 - uuid: dwango-js-conf-jp-2022-sponsor-lt
   date: day1
