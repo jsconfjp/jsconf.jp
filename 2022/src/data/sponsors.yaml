@@ -7,8 +7,8 @@
     ミイダスが提唱する客観的・数値的な評価に基づいた採用「アセスメントリクルーティング」が日本の採用・転職の常識を変え、適材適所を見い出します。
   grade: premium
 - uuid: nota
-  name: Nota株式会社
-  url: https://notainc.com/ja/home/
+  name: 株式会社Helpfeel
+  url: https://helpfeel.com/
   logoUrl: /2022/sponsors/helpfeel.png
   prText: |
     Helpfeel Inc. was founded in Silicon Valley in 2007. In 2019 We released Helpfeel, an enterprise search SaaS that provides FAQ search and knowledge discovery for end users and internal teams. In March 2021, We raised 500 million yen to expand Helpfeel. We has offices in Kyoto and Tokyo while also offering full remote work and flexible hours.
@@ -127,4 +127,12 @@
   logoUrl: /2022/sponsors/timee.jpg
   prText: |
     「『働く』を通じて人生の可能性を広げるインフラをつくる」をミッションに掲げ、働きたい人と働いてほしい事業者をマッチングさせるプラットフォームを提供しています。
+  grade: sponsor
+- uuid: typebase
+  name: 株式会社Typebase
+  url: https://typebase.dev/
+  logoUrl: /2022/sponsors/typebase.webp
+  prText: |
+    私たちTypebaseはWeb系のシステム開発を支援するエンジニア集団です。
+    実務経験が豊富なエンジニアが、まるで自社に開発メンバーがいるかのように開発を推進していきます。
   grade: sponsor
