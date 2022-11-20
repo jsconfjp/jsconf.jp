@@ -32,13 +32,13 @@
     "i18next-browser-languagedetector": "6.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-headroom": "3.2.0",
+    "react-headroom": "3.2.1",
     "react-helmet": "6.1.0",
     "react-i18next": "11.14.3",
     "react-markdown": "7.1.1"
   },
   "devDependencies": {
-    "@types/react-headroom": "2.2.2",
+    "@types/react-headroom": "3.2.0",
     "@types/react-helmet": "6.1.4",
     "@types/styled-components": "5.1.16",
     "babel-plugin-styled-components": "2.0.2",
