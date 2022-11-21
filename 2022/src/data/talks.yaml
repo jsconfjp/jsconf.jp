@@ -524,8 +524,8 @@
   startsAt: "15:30"
   endsAt: "16:00"
   room: C
-  title: ハンズオンNative ESM
-  titleJa: ハンズオンNative ESM
+  title: ハンズオンNative ESM by ウォンテッドリー株式会社
+  titleJa: ハンズオンNative ESM by ウォンテッドリー株式会社
   description: >-
     (Untranslated)
     Node.jsエコシステムは徐々にES Modulesに移行しつつありますが、その前途は多難です。
