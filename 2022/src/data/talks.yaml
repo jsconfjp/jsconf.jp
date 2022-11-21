@@ -524,8 +524,17 @@
   startsAt: "15:30"
   endsAt: "16:00"
   room: C
-  title: by ウォンテッドリー株式会社
-  titleJa: by ウォンテッドリー株式会社
+  title: ハンズオンNative ESM
+  titleJa: ハンズオンNative ESM
+  description: >-
+    (Untranslated)
+    Node.jsエコシステムは徐々にES Modulesに移行しつつありますが、その前途は多難です。
+    本ハンズオンでは、Node.jsのESMサポートの特徴と困難を実際に手を動かして理解することを目指します。
+  descriptionJa: >-
+    Node.jsエコシステムは徐々にES Modulesに移行しつつありますが、その前途は多難です。
+    本ハンズオンでは、Node.jsのESMサポートの特徴と困難を実際に手を動かして理解することを目指します。
+  spokenLanguage: ja
+  slideLanguage: ja
   sponsorIDs: [wantedly]
 
 #
