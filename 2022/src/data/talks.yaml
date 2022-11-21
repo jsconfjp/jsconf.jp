@@ -176,13 +176,10 @@
   title: Passkey and how it works on Google ecosystem
   titleJa: Passkey and how it works on Google ecosystem
   description: >-
-    (Untranslated)
     This talk goes through the basics of passkeys, why what and how.
     Then introduces how Google approaches passkeys in Android and Chrome.
   descriptionJa: >-
-    (Untranslated)
-    This talk goes through the basics of passkeys, why what and how.
-    Then introduces how Google approaches passkeys in Android and Chrome.
+    パスワードを置き換えるパスキーのご紹介と、それがなぜ重要なのか、どのように実装するのかをお話します。また、Android および Chrome における実装の特徴についてもご紹介します。
   spokenLanguage: ja
   slideLanguage: ja
   # sponsorIDs: [xxx]
