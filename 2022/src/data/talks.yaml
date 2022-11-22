@@ -484,8 +484,8 @@
   startsAt: "11:30"
   endsAt: "12:00"
   room: C
-  title: by Nota株式会社
-  titleJa: by Nota株式会社
+  title: by Helpfeel株式会社
+  titleJa: by Helpfeel株式会社
   sponsorIDs: [nota]
 - uuid: sponsor-talk-dwango
   date: day1
