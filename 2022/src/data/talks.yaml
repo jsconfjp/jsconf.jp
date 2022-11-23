@@ -484,8 +484,8 @@
   startsAt: "11:30"
   endsAt: "12:00"
   room: C
-  title: by Helpfeel株式会社
-  titleJa: by Helpfeel株式会社
+  title: Wasm活用によるポータブルなライブラリの実現に向けたHelpfeel社の取り組み by Helpfeel株式会社
+  titleJa: Wasm活用によるポータブルなライブラリの実現に向けたHelpfeel社の取り組み by Helpfeel株式会社
   sponsorIDs: [nota]
 - uuid: sponsor-talk-dwango
   date: day1
@@ -737,8 +737,8 @@
   startsAt: "16:50"
   endsAt: "16:55"
   room: A
-  title: Helpfeel JSConf JP 2022 Sponsor LT
-  titleJa: Helpfeel JSConf JP 2022 Sponsor LT
+  title: 実装の引き出しを増やすためのDOM Eventテクニック by Helpfeel JSConf JP 2022 Sponsor LT
+  titleJa: 実装の引き出しを増やすためのDOM Eventテクニック by Helpfeel JSConf JP 2022 Sponsor LT
   sponsorIDs: [nota]
 - uuid: dwango-js-conf-jp-2022-sponsor-lt
   date: day1
