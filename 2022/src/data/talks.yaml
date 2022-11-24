@@ -508,8 +508,12 @@
   startsAt: "14:15"
   endsAt: "14:45"
   room: C
-  title: by Twilio Inc
-  titleJa: by Twilio Inc
+  title: 30分で挑戦! Twilioを使ったWebRTCベースのビデオアプリケーション開発者体験とは？ by Twilio Inc
+  titleJa: 30分で挑戦! Twilioを使ったWebRTCベースのビデオアプリケーション開発者体験とは？ by Twilio Inc
+  description: >-
+    Twilioは音声（電話）やSMS以外にもさまざまなAPIを提供しています。本セッションではTwilioのビデオAPIを使ってHTML+JS構成のWebビデオチャットを構築していく様子をお届けします。
+  descriptionJa: >-
+    Twilioは音声（電話）やSMS以外にもさまざまなAPIを提供しています。本セッションではTwilioのビデオAPIを使ってHTML+JS構成のWebビデオチャットを構築していく様子をお届けします。
   sponsorIDs: [twilio]
 - uuid: sponsor-talk-cybozu
   date: day1
