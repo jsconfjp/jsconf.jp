@@ -18,29 +18,31 @@
     - catnose
 
 # 2
-- uuid: flawless-flows-the-psychology-of-harmonious-teamwork
+- uuid: optimizing-interaction-to-next-paint-imp
   date: day1
-  startsAt: "11:00"
-  endsAt: "11:30"
-  room: A
-  title: Flawless flows - the psychology of harmonious teamwork
-  titleJa: Flawless flows - the psychology of harmonious teamwork
+  startsAt: "16:00"
+  endsAt: "16:30"
+  room: B
+  title: Optimizing Interaction to Next Paint (INP)
+  titleJa: Optimizing Interaction to Next Paint (INP)
   description: >-
-    Overview: We all want to be better developers. But it's not just about writing fantastic code. We can also improve by bringing the best of our skills to every moment of product development. It means being able to get the information we need to do our job from everyone involved in the process, even when it seems impossible. This presentation will explore how to pull the strings in the background so that in the end we actually DEVELOP the product.
+    Did you know that 90% of time spent on most web pages is after page load? In this span of time, users are interacting with your website through a series of interactions such as clicks, taps, and keyboard inputs—and the slower your website is to respond to those interactions, the more likely your users will have a negative user experience with your website.
+
+    At Google, we've invested significant time in creating new metrics to assess page responsiveness. One of these metrics is First Input Delay (FID), which is a load responsiveness metric that captures the input delay of the first interaction. However, we discovered that we needed a new responsiveness metric that samples more than just the first interaction—and more than simply that interaction's input delay.
+
+    In order to comprehensively assess overall page responsiveness, we've created the new Interaction to Next Paint (INP) metric. INP samples all page interactions, and goes beyond measuring just the input delay. In this talk, you'll find out all about INP, how it works, why it matters, how you can measure it, and how you can improve it.
   descriptionJa: >-
     (Untranslated)
-    Overview: We all want to be better developers. But it's not just about writing fantastic code. We can also improve by bringing the best of our skills to every moment of product development. It means being able to get the information we need to do our job from everyone involved in the process, even when it seems impossible. This presentation will explore how to pull the strings in the background so that in the end we actually DEVELOP the product.
+    Did you know that 90% of time spent on most web pages is after page load? In this span of time, users are interacting with your website through a series of interactions such as clicks, taps, and keyboard inputs—and the slower your website is to respond to those interactions, the more likely your users will have a negative user experience with your website.
 
-    Additional information:
+    At Google, we've invested significant time in creating new metrics to assess page responsiveness. One of these metrics is First Input Delay (FID), which is a load responsiveness metric that captures the input delay of the first interaction. However, we discovered that we needed a new responsiveness metric that samples more than just the first interaction—and more than simply that interaction's input delay.
 
-    My earlier article serves as a basis of my talk: https://dev.to/heydorka/flawless-flows-the-psychology-of-harmonious-teamwork-1d3m
-
-    Relevance: as far as I can see, product teams struggle with managing time, handling personal relationships and these factors have a strong effect on their daily routine. I didn't even mention the effects of remote work... So, what I want to point out is how an individual can contribute. The aim is to have a strong, independent but collaborative team. The members can rely on the others' expertise and transparency. My talk helps those who're working in a toxic or mismanaged environment, but want to do something to change it.
+    In order to comprehensively assess overall page responsiveness, we've created the new Interaction to Next Paint (INP) metric. INP samples all page interactions, and goes beyond measuring just the input delay. In this talk, you'll find out all about INP, how it works, why it matters, how you can measure it, and how you can improve it.
   spokenLanguage: en
   slideLanguage: en
   # sponsorIDs: [xxx]
   speakerIDs:
-    - dora
+    - jeremy-wagner
 
 # 3
 - uuid: organizational-development-streamlined-by-the-front-end-ecosystem
@@ -442,31 +444,29 @@
     - james-m-snell
 
 # 17
-- uuid: optimizing-interaction-to-next-paint-imp
+- uuid: flawless-flows-the-psychology-of-harmonious-teamwork
   date: day1
   startsAt: "16:00"
   endsAt: "16:30"
   room: B
-  title: Optimizing Interaction to Next Paint (INP)
-  titleJa: Optimizing Interaction to Next Paint (INP)
+  title: Flawless flows - the psychology of harmonious teamwork
+  titleJa: Flawless flows - the psychology of harmonious teamwork
   description: >-
-    Did you know that 90% of time spent on most web pages is after page load? In this span of time, users are interacting with your website through a series of interactions such as clicks, taps, and keyboard inputs—and the slower your website is to respond to those interactions, the more likely your users will have a negative user experience with your website.
-
-    At Google, we've invested significant time in creating new metrics to assess page responsiveness. One of these metrics is First Input Delay (FID), which is a load responsiveness metric that captures the input delay of the first interaction. However, we discovered that we needed a new responsiveness metric that samples more than just the first interaction—and more than simply that interaction's input delay.
-
-    In order to comprehensively assess overall page responsiveness, we've created the new Interaction to Next Paint (INP) metric. INP samples all page interactions, and goes beyond measuring just the input delay. In this talk, you'll find out all about INP, how it works, why it matters, how you can measure it, and how you can improve it.
+    Overview: We all want to be better developers. But it's not just about writing fantastic code. We can also improve by bringing the best of our skills to every moment of product development. It means being able to get the information we need to do our job from everyone involved in the process, even when it seems impossible. This presentation will explore how to pull the strings in the background so that in the end we actually DEVELOP the product.
   descriptionJa: >-
     (Untranslated)
-    Did you know that 90% of time spent on most web pages is after page load? In this span of time, users are interacting with your website through a series of interactions such as clicks, taps, and keyboard inputs—and the slower your website is to respond to those interactions, the more likely your users will have a negative user experience with your website.
+    Overview: We all want to be better developers. But it's not just about writing fantastic code. We can also improve by bringing the best of our skills to every moment of product development. It means being able to get the information we need to do our job from everyone involved in the process, even when it seems impossible. This presentation will explore how to pull the strings in the background so that in the end we actually DEVELOP the product.
 
-    At Google, we've invested significant time in creating new metrics to assess page responsiveness. One of these metrics is First Input Delay (FID), which is a load responsiveness metric that captures the input delay of the first interaction. However, we discovered that we needed a new responsiveness metric that samples more than just the first interaction—and more than simply that interaction's input delay.
+    Additional information:
 
-    In order to comprehensively assess overall page responsiveness, we've created the new Interaction to Next Paint (INP) metric. INP samples all page interactions, and goes beyond measuring just the input delay. In this talk, you'll find out all about INP, how it works, why it matters, how you can measure it, and how you can improve it.
+    My earlier article serves as a basis of my talk: https://dev.to/heydorka/flawless-flows-the-psychology-of-harmonious-teamwork-1d3m
+
+    Relevance: as far as I can see, product teams struggle with managing time, handling personal relationships and these factors have a strong effect on their daily routine. I didn't even mention the effects of remote work... So, what I want to point out is how an individual can contribute. The aim is to have a strong, independent but collaborative team. The members can rely on the others' expertise and transparency. My talk helps those who're working in a toxic or mismanaged environment, but want to do something to change it.
   spokenLanguage: en
   slideLanguage: en
   # sponsorIDs: [xxx]
   speakerIDs:
-    - jeremy-wagner
+    - dora
 
 #
 # スポンサートーク
