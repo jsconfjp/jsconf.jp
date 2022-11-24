@@ -500,8 +500,8 @@
   startsAt: "13:30"
   endsAt: "14:00"
   room: C
-  title: by 株式会社カオナビ
-  titleJa: by 株式会社カオナビ
+  title: React Query 導入と実装ルールについて考える by 株式会社カオナビ
+  titleJa: React Query 導入と実装ルールについて考える by 株式会社カオナビ
   sponsorIDs: [kaonavi]
 - uuid: sponsor-talk-twillio
   date: day1
@@ -753,8 +753,8 @@
   startsAt: "17:00"
   endsAt: "17:05"
   room: A
-  title: カオナビ JSConf JP 2022 Sponsor LT
-  titleJa: カオナビ JSConf JP 2022 Sponsor LT
+  title: Safariのinputでつまづいた話 by カオナビ
+  titleJa: Safariのinputでつまづいた話 by カオナビ
   sponsorIDs: [kaonavi]
 - uuid: twilio-js-conf-jp-2022-sponsor-lt
   date: day1
