@@ -266,8 +266,8 @@
   startsAt: "14:15"
   endsAt: "14:45"
   room: A
-  title: Current state of Npm support in Deno
-  titleJa: Current state of Npm support in Deno
+  title: About `npm:` support of Deno
+  titleJa: About `npm:` support of Deno
   description: >-
     (Untranslated)
     Deno の npm 互換性への取り組みを紹介します。npm 互換性を入れることになった動機や意図を紐解きつつ、npm 互換性の目指している事・目指していない事や、現状出来ている事・出来ていない事、今後のロードマップなどを紹介します。
