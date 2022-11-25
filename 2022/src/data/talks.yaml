@@ -476,8 +476,8 @@
   startsAt: "11:00"
   endsAt: "11:30"
   room: C
-  title: by ミイダス株式会社
-  titleJa: by ミイダス株式会社
+  title: フロントエンド開発環境とNext.jsへの移行計画「ミイダス2.0」のご紹介 by ミイダス株式会社
+  titleJa: フロントエンド開発環境とNext.jsへの移行計画「ミイダス2.0」のご紹介 by ミイダス株式会社
   sponsorIDs: [miidas]
 - uuid: sponsor-talk-nota
   date: day1
@@ -733,8 +733,8 @@
   startsAt: "16:45"
   endsAt: "16:50"
   room: A
-  title: miidas JSConf JP 2022 Sponsor LT
-  titleJa: miidas JSConf JP 2022 Sponsor LT
+  title: コロナ収束後もフルリモート運営を継続するミイダスの働き方 by miidas
+  titleJa: コロナ収束後もフルリモート運営を継続するミイダスの働き方 by miidas
   sponsorIDs: [miidas]
 - uuid: nota-js-conf-jp-2022-sponsor-lt
   date: day1
