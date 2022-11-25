@@ -538,7 +538,7 @@
     Node.jsエコシステムは徐々にES Modulesに移行しつつありますが、その前途は多難です。
     本ハンズオンでは、Node.jsのESMサポートの特徴と困難を実際に手を動かして理解することを目指します。
   spokenLanguage: ja
-  slideLanguage: ja
+  slideLanguage: en
   sponsorIDs: [wantedly]
 
 #
