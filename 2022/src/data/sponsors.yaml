@@ -57,7 +57,9 @@
   url: https://www.twilio.com/
   logoUrl: /2022/sponsors/twilio.png
   prText: |
-    https://www.twilio.com/press
+    Twilioは音声通話（Voice）、メッセージング（SMS）、Email、ビデオ、チャット、二要素認証などを簡単にアプリケーションへ組み込めるクラウドコミュニケーションAPIを提供しています。
+    開発者向けにNode.js、PHP、Python、Ruby、C#, Java, Goに対応するサーバーサイドSDK や、Web、iOS、Android向けのクライアントSDKを提供しています。
+    また、ノーコード/ローコードでコールフローをデザインできるTwilio Studioや、Twilioの使い方を楽しみにながら学習できるゲームチュートリアルTwilioQuestを提供しています。
   grade: premium
 - uuid: cybozu
   name: サイボウズ株式会社
