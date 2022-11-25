@@ -359,43 +359,19 @@
     - baseballyama
 
 # 14
-- uuid: bbc-our-experiences-of-js-and-cloud
+- uuid: js-panel-talk
   date: day1
   startsAt: "15:30"
   endsAt: "16:00"
   room: A
-  title: BBC - Our experiences of JS and Cloud
-  titleJa: BBC - Our experiences of JS and Cloud
+  title: JSConf.jp Panel Talk
+  titleJa: JSConf.jp Panel Talk
   description: >-
-    Over the last decade the BBC has moved all its only products to the cloud, and the primary programming language in use is JS (Node for APIs, and serverside logic) and predominantly ReactJS for web user experiences. In this talk I cover:
-
-    - How we did it
-    - Why we did it
-    - What strategies we applied
-    - What we learned
-    - What went wrong (the really important part!)
-
-    The change had three parts: the technical change, the people/team change, and the organisational change, and each brought their own challenges.
-
-    Our stack is now almost entirely JS, and its serving billions of requests from tens of millions of UK users (bbc.co.uk, bbc.co.uk/news etc), and hundreds of millions of user across the world (bbc.com, bbc.com/news, etc)
+    JSConf.jp の Discussion Room で貼られてる JavaScript wishlist についての雑談
   descriptionJa: >-
-    (Untranslated)
-    Over the last decade the BBC has moved all its only products to the cloud, and the primary programming language in use is JS (Node for APIs, and serverside logic) and predominantly ReactJS for web user experiences. In this talk I cover:
-
-    - How we did it
-    - Why we did it
-    - What strategies we applied
-    - What we learned
-    - What went wrong (the really important part!)
-
-    The change had three parts: the technical change, the people/team change, and the organisational change, and each brought their own challenges.
-
-    Our stack is now almost entirely JS, and its serving billions of requests from tens of millions of UK users (bbc.co.uk, bbc.co.uk/news etc), and hundreds of millions of user across the world (bbc.com, bbc.com/news, etc)
-  spokenLanguage: en
-  slideLanguage: en
-  # sponsorIDs: [xxx]
-  speakerIDs:
-    - craig-jones
+  　　　　JSConf.jp の Discussion Room で貼られてる JavaScript wishlist についての雑談
+  spokenLanguage: ja
+  slideLanguage: ja
 
 # 15
 - uuid: remixing-usability-with-performance
