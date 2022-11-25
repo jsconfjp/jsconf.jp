@@ -18,7 +18,7 @@ export const ja: {
     submitTalk: "トーク申込みフォームへ",
     callForSponsors: "スポンサー募集",
     becomeASponsor: "スポンサー申込みフォームへ",
-    schedule: "開催スケジュール (予定)",
+    schedule: "開催スケジュール",
     roomA: "トラックA",
     roomB: "トラックB",
     roomC: "トラックC",
