@@ -293,3 +293,12 @@
     Matan is a full-stack developer, open-source maintainer, and digital nomad, passionate about making development delightful, easy, and accessible. Prior to leading the development team at Tenkai, Matan was responsible for building real-time collaborative features at CodeSandbox. In his free time, Matan builds open-source JavaScript and Rust libraries and tools.
   biographyJa: >-
     Matan is a full-stack developer, open-source maintainer, and digital nomad, passionate about making development delightful, easy, and accessible. Prior to leading the development team at Tenkai, Matan was responsible for building real-time collaborative features at CodeSandbox. In his free time, Matan builds open-source JavaScript and Rust libraries and tools.
+- uuid: js-experts
+  name: JSConf.jp Experts
+  featured: false
+  presentations:
+    - js-panel-talk
+  biography: >-
+    N/A
+  biographyJa: >-
+    N/A

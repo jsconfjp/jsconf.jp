@@ -372,6 +372,8 @@
   　　　　JSConf.jp の Discussion Room で貼られてる JavaScript wishlist についての雑談
   spokenLanguage: ja
   slideLanguage: ja
+  speakerIDs:
+    - js-experts
 
 # 15
 - uuid: remixing-usability-with-performance
