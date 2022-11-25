@@ -27,20 +27,28 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-590fafa06359692865c9.js"
+    "url": "webpack-runtime-2c0cd7f76ef1b5c6a844.js"
   },
   {
     "url": "framework-d5e16072699c81cc8c67.js"
   },
   {
-    "url": "app-da9664e67123292f4d36.js"
+    "url": "app-fdc0180b5cf7277bd6ac.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "a9f9585096b1bfeb08d79bc35023a985"
+    "revision": "8eb7068dc05af5c01927e3f73e0555b4"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-044073fc530cbf0d0528.js"
+  },
+  {
+    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
+    "revision": "f2c002077289a7e1ac538802bc7f5314"
+  },
+  {
+    "url": "page-data/app-data.json",
+    "revision": "488be1b9263d89cedb019bfeb0c199a7"
   },
   {
     "url": "polyfill-7ff28b9382f7fa8c1c66.js"
@@ -64,15 +72,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/1861792574.json",
-    "revision": "e5f3e777a0a468f9ca1be149173fd378"
+    "revision": "40af1e9d931994a81d229f56319b2446"
   },
   {
     "url": "page-data/sq/d/2737205312.json",
     "revision": "617d841d866ec4e52b55622c79b14248"
-  },
-  {
-    "url": "page-data/app-data.json",
-    "revision": "155edcaf05b754bd5c5b01754eda134e"
   },
   {
     "url": "component---src-pages-index-tsx-324b619fd03f112d97af.js"
@@ -83,7 +87,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3027076902.json",
-    "revision": "0228a5144600a9071aa8b218f9bdc869"
+    "revision": "848403fb3c5041775e176823316ed394"
   },
   {
     "url": "page-data/jp-specified-commercial-transactions-act/page-data.json",
@@ -109,7 +113,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/1393509171.json",
-    "revision": "eecbfb406620611a9f5ce1ded323c141"
+    "revision": "281af7891f61d215029713907606fb9c"
   },
   {
     "url": "component---src-pages-sponsors-tsx-0c7f04b5a71ea3f9705e.js"
@@ -124,7 +128,7 @@ self.__precacheManifest = [
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "ded04aefded2021115e2d966fe4778d8"
+    "revision": "20e41ccb5ca941e10e104f2c71e19e30"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -211,12 +215,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/2021`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-da9664e67123292f4d36.js`))) {
+  if (!resources || !(await caches.match(`/2021/app-fdc0180b5cf7277bd6ac.js`))) {
     return await fetch(event.request)
   }
 
@@ -229,7 +233,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/2021/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
