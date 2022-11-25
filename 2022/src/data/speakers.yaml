@@ -164,19 +164,19 @@
     [株式会社フライル](https://flyle.io/jp) のソフトウェアエンジニア。フロントエンドフレームワーク Svelte のメンテナ。Flyleは、プロダクトマネジメント業務における労働集約的業務を効率化し、創造的な業務に集中するためのプラットフォームです。
 
 # 14
-- uuid: craig-jones
-  name: Craig Jones
-  featured: false
-  presentations:
-    - bbc-our-experiences-of-js-and-cloud
-  biography: >-
-    I am the Lead Architect for the Core Services department of BBC Digital Products, and has worked in software engineering for 15 years, and solely in JS/TS for the last 7 or 8 of those.
-
-    I'm a big fan of building evolutionary software systems, and love working with people to do great things.
-  biographyJa: >-
-    I am the Lead Architect for the Core Services department of BBC Digital Products, and has worked in software engineering for 15 years, and solely in JS/TS for the last 7 or 8 of those.
-
-    I'm a big fan of building evolutionary software systems, and love working with people to do great things.
+#- uuid: craig-jones
+#  name: Craig Jones
+#  featured: false
+#  presentations:
+#    - bbc-our-experiences-of-js-and-cloud
+#  biography: >-
+#    I am the Lead Architect for the Core Services department of BBC Digital Products, and has worked in software engineering for 15 years, and solely in JS/TS for the last 7 or 8 of those.
+#
+#    I'm a big fan of building evolutionary software systems, and love working with people to do great things.
+#  biographyJa: >-
+#    I am the Lead Architect for the Core Services department of BBC Digital Products, and has worked in software engineering for 15 years, and solely in JS/TS for the last 7 or 8 of those.
+#
+#    I'm a big fan of building evolutionary software systems, and love working with people to do great things.
 
 # 15
 - uuid: atila-fassina
@@ -293,3 +293,12 @@
     Matan is a full-stack developer, open-source maintainer, and digital nomad, passionate about making development delightful, easy, and accessible. Prior to leading the development team at Tenkai, Matan was responsible for building real-time collaborative features at CodeSandbox. In his free time, Matan builds open-source JavaScript and Rust libraries and tools.
   biographyJa: >-
     Matan is a full-stack developer, open-source maintainer, and digital nomad, passionate about making development delightful, easy, and accessible. Prior to leading the development team at Tenkai, Matan was responsible for building real-time collaborative features at CodeSandbox. In his free time, Matan builds open-source JavaScript and Rust libraries and tools.
+- uuid: js-experts
+  name: JSConf.jp Experts
+  featured: false
+  presentations:
+    - js-panel-talk
+  biography: >-
+    N/A
+  biographyJa: >-
+    N/A
