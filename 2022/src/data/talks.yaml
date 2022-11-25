@@ -364,14 +364,15 @@
   startsAt: "15:30"
   endsAt: "16:00"
   room: A
-  title: JSConf.jp Panel Talk
-  titleJa: JSConf.jp Panel Talk
+  title: JSConfJP Panel Talk
+  titleJa: JSConfJP Panel Talk
   description: >-
-    JSConf.jp の Discussion Room で貼られてる JavaScript wishlist についての雑談
+    JSConf の Discussion Room で貼られてる JavaScript wishlist についての雑談
   descriptionJa: >-
-  　　　　JSConf.jp の Discussion Room で貼られてる JavaScript wishlist についての雑談
+  　　　　JSConf の Discussion Room で貼られてる JavaScript wishlist についての雑談
   spokenLanguage: ja
   slideLanguage: ja
+  # sponsorIDs: [xxx]
   speakerIDs:
     - js-experts
 
