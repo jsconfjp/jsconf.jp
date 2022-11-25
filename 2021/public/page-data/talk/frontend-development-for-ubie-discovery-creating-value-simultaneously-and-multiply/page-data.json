@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-speaker-tsx",
+    "path": "/talk/frontend-development-for-ubie-discovery-creating-value-simultaneously-and-multiply",
+    "result": {"pageContext":{"speakers":[],"avatars":[],"sponsors":[{"uuid":"ubie","name":"Ubie 株式会社","grade":"premium","url":"https://ubie.life/","logoUrl":"/2021/sponsors/ubie.png","prText":"「テクノロジーで人々を適切な医療に案内する」をミッションに掲げ、医師とエンジニアが2017年5月に創業したヘルステックスタートアップです。AIをコア技術とし、症状から適切な医療へと案内する「ユビーAI受診相談」と、医療現場の業務効率化を図る「ユビーAI問診」を開発・提供。誰もが自分にあった医療にアクセスできる社会づくりを進めています。\n"}],"talk":{"uuid":"frontend-development-for-ubie-discovery-creating-value-simultaneously-and-multiply","title":"同時多発的に価値創出していくUbie Discoveryのフロントエンド開発","titleJa":"同時多発的に価値創出していくUbie Discoveryのフロントエンド開発","description":null,"descriptionJa":null,"spokenLanguage":null,"slideLanguage":null,"speakerIDs":null,"sponsorIDs":["ubie"],"date":"day1","startsAt":"18:20","endsAt":"18:25","room":"A","recordingUrl":"https://www.youtube-nocookie.com/embed/D5J6UbY3QWQ"}}},
+    "staticQueryHashes": ["1715751809","1861792574","2737205312"]}
