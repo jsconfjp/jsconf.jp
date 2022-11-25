@@ -492,8 +492,8 @@
   startsAt: "13:00"
   endsAt: "13:30"
   room: C
-  title: by dwango
-  titleJa: by dwango
+  title: 自然発生した実装パターンに、マイクロフロントエンドと名がつきました（仮） by dwango
+  titleJa: 自然発生した実装パターンに、マイクロフロントエンドと名がつきました（仮） by dwango
   sponsorIDs: [dwango]
 - uuid: sponsor-talk-kaonavi
   date: day1
