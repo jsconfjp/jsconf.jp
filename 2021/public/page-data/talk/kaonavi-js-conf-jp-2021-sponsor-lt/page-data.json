@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-speaker-tsx",
-    "path": "/talk/kaonavi-js-conf-jp-2021-sponsor-lt",
-    "result": {"pageContext":{"speakers":[],"avatars":[],"sponsors":[{"uuid":"kaonavi","name":"株式会社カオナビ","grade":"premium","url":"https://corp.kaonavi.jp/recruit/","logoUrl":"/2021/sponsors/kaonavi.png","prText":"社員の個性・才能を発掘し、戦略人事を加速させるタレントマネジメントシステム「カオナビ」を提供しています。企業の人材情報をクラウド上で一元管理し、社員の顔や名前、経験、評価、スキル、才能などの人材情報を可視化することで、最適な人材配置や抜擢といった戦略的なタレントマネジメントの実現を支援しています。今後も、人材マネジメントのプラットフォームとして、日本の「働き方」を変えていきたいと考えています。\nフロントエンドはReact/TypeScriptで開発しています。積極採用中ですので、ご興味ある方はぜひカジュアル面談からでも可能なのでエントリーお待ちしております。（エンジニア採用資料はこちら：https://corp.kaonavi.jp/recruit/recruitment/）\n"}],"talk":{"uuid":"kaonavi-js-conf-jp-2021-sponsor-lt","title":"カオナビ JSConf JP 2021 Sponsor LT","titleJa":"カオナビ JSConf JP 2021 Sponsor LT","description":null,"descriptionJa":null,"spokenLanguage":null,"slideLanguage":null,"speakerIDs":null,"sponsorIDs":["kaonavi"],"date":"day1","startsAt":"18:15","endsAt":"18:20","room":"A","recordingUrl":"https://www.youtube-nocookie.com/embed/0zWa0sMNXKI"}}},
-    "staticQueryHashes": ["1715751809","1861792574","2737205312"]}

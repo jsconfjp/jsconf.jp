@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-speaker-tsx",
-    "path": "/talk/how-to-use-type-script-in-study-supplement-and-its-future-prospects",
-    "result": {"pageContext":{"speakers":[],"avatars":[],"sponsors":[{"uuid":"recruit","name":"株式会社リクルート","grade":"premium","url":"https://recruit-saiyo.jp/","logoUrl":"/2021/sponsors/recruit.jpg","prText":"株式会社リクルートは日本国内のHR・販促事業及びグローバル斡旋・販促事業をおこなう事業会社です。\n新しい価値の創造を通じ、社会からの期待に応え、一人ひとりが輝く豊かな世界の実現を目指しています。\n現在リクルートでは多くのプロダクトで一緒に働くメンバーを募集しています。\nリクルートのエンジニアは、技術でビジネスを支えるだけではなく、ビジネスを創り出していくこと、サービスの提供価値を向上させることに、主体的に関わることができます。多様なドメイン、異なるフェーズの事業を持つリクルートだからこそ、多様な成長、多様な楽しみ方ができます。ご興味ある方は会長まで連絡お願いします。\n"}],"talk":{"uuid":"how-to-use-type-script-in-study-supplement-and-its-future-prospects","title":"スタディサプリにおける TypeScript 活用事例と今後の展望","titleJa":"スタディサプリにおける TypeScript 活用事例と今後の展望","description":null,"descriptionJa":null,"spokenLanguage":null,"slideLanguage":null,"speakerIDs":null,"sponsorIDs":["recruit"],"date":"day1","startsAt":"18:25","endsAt":"18:30","room":"A","recordingUrl":"https://www.youtube-nocookie.com/embed/6wwOlcoR5Hk"}}},
-    "staticQueryHashes": ["1715751809","1861792574","2737205312"]}

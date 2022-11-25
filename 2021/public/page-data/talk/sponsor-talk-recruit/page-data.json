@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-speaker-tsx",
-    "path": "/talk/sponsor-talk-recruit",
-    "result": {"pageContext":{"speakers":[],"avatars":[],"sponsors":[{"uuid":"recruit","name":"株式会社リクルート","grade":"premium","url":"https://recruit-saiyo.jp/","logoUrl":"/2021/sponsors/recruit.jpg","prText":"株式会社リクルートは日本国内のHR・販促事業及びグローバル斡旋・販促事業をおこなう事業会社です。\n新しい価値の創造を通じ、社会からの期待に応え、一人ひとりが輝く豊かな世界の実現を目指しています。\n現在リクルートでは多くのプロダクトで一緒に働くメンバーを募集しています。\nリクルートのエンジニアは、技術でビジネスを支えるだけではなく、ビジネスを創り出していくこと、サービスの提供価値を向上させることに、主体的に関わることができます。多様なドメイン、異なるフェーズの事業を持つリクルートだからこそ、多様な成長、多様な楽しみ方ができます。ご興味ある方は会長まで連絡お願いします。\n"}],"talk":{"uuid":"sponsor-talk-recruit","title":"Next.js でリアーキテクトした話 by リクルート (吉井健文)","titleJa":"Next.js でリアーキテクトした話 by リクルート (吉井健文)","description":null,"descriptionJa":null,"spokenLanguage":null,"slideLanguage":null,"speakerIDs":null,"sponsorIDs":["recruit"],"date":"day1","startsAt":"16:20","endsAt":"16:50","room":"C","recordingUrl":"https://www.youtube-nocookie.com/embed/O8mHPJu1I2A"}}},
-    "staticQueryHashes": ["1715751809","1861792574","2737205312"]}
