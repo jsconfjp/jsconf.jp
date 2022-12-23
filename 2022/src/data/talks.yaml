@@ -4,6 +4,7 @@
   startsAt: "10:30"
   endsAt: "11:00"
   room: A
+  recordingUrl: https://www.youtube.com/embed/Gz-wi83yh2A
   title: ブログ系プラットフォームを開発するときのTips
   titleJa: ブログ系プラットフォームを開発するときのTips
   description: >-
@@ -23,6 +24,7 @@
   startsAt: "11:00"
   endsAt: "11:30"
   room: A
+  # recordingUrl: xxx
   title: Optimizing Interaction to Next Paint (INP)
   titleJa: Optimizing Interaction to Next Paint (INP)
   description: >-
@@ -50,6 +52,7 @@
   startsAt: "11:00"
   endsAt: "11:30"
   room: B
+  recordingUrl: https://www.youtube.com/embed/JNAE0i6sYjg
   title: フロントエンドエコシステムで効率化する組織開発
   titleJa: フロントエンドエコシステムで効率化する組織開発
   description: >-
@@ -107,6 +110,7 @@
   startsAt: "11:30"
   endsAt: "12:00"
   room: A
+  recordingUrl: https://www.youtube.com/embed/bFlzeI8VGnU
   title: "Optional Chaining: From Specification to Implementation"
   titleJa: "オプショナルチェーンができるまで　〜仕様と実装〜"
   description: >-
@@ -125,6 +129,7 @@
   startsAt: "11:30"
   endsAt: "12:00"
   room: B
+  recordingUrl: https://www.youtube.com/embed/Fj5mK3ODhRw
   title: 宣言的 UI 時代のクライアントサイド DDD 大考察
   titleJa: 宣言的 UI 時代のクライアントサイド DDD 大考察
   description: >-
@@ -156,6 +161,7 @@
   startsAt: "13:00"
   endsAt: "13:30"
   room: A
+  recordingUrl: https://www.youtube.com/embed/Ws0E0ShHHEk
   title: Hono - Ultrafast web framework for Cloudflare Workers, Deno, Bun, and Node.js
   titleJa: Hono - Ultrafast web framework for Cloudflare Workers, Deno, Bun, and Node.js
   description: >-
@@ -175,6 +181,7 @@
   startsAt: "13:00"
   endsAt: "13:30"
   room: B
+  recordingUrl: https://www.youtube.com/embed/K0eg0jkbxYQ
   title: Passkey and how it works on Google ecosystem
   titleJa: Passkey and how it works on Google ecosystem
   description: >-
@@ -194,6 +201,7 @@
   startsAt: "13:30"
   endsAt: "14:00"
   room: A
+  # recordingUrl: xxx
   title: Reducing bugs in a React codebase
   titleJa: Reducing bugs in a React codebase
   description: >-
@@ -228,11 +236,13 @@
     - shyam-swaroop
 
 # 9
+# セッションなし
 - uuid: names-and-other-lies
   date: day1
   startsAt: "13:30"
   endsAt: "14:00"
   room: B
+  # recordingUrl: xxx
   title: Names, and other lies
   titleJa: Names, and other lies
   description: >-
@@ -268,6 +278,7 @@
   startsAt: "14:15"
   endsAt: "14:45"
   room: A
+  # recordingUrl: xxx
   title: About `npm:` support of Deno
   titleJa: About `npm:` support of Deno
   description: >-
@@ -287,6 +298,7 @@
   startsAt: "14:15"
   endsAt: "14:45"
   room: B
+  recordingUrl: https://www.youtube.com/embed/OsaJK0I6d9A
   title: Creating accessibility environments to help diverse participation in tech
   titleJa: Creating accessibility environments to help diverse participation in tech
   description: >-
@@ -306,6 +318,7 @@
   startsAt: "14:45"
   endsAt: "15:15"
   room: A
+  recordingUrl: https://www.youtube.com/embed/SOCdb8SufhU
   title: Secret Shortcuts of Loading Web Performance
   titleJa: Secret Shortcuts of Loading Web Performance
   description: >-
@@ -341,6 +354,7 @@
   startsAt: "14:45"
   endsAt: "15:15"
   room: B
+  recordingUrl: https://www.youtube.com/embed/QytTIMwGAOw
   title: Svelte Runtime 101
   titleJa: Svelte Runtime 101
   description: >-
@@ -364,6 +378,7 @@
   startsAt: "15:30"
   endsAt: "16:00"
   room: A
+  recordingUrl: https://www.youtube.com/embed/yxId3ghim-w
   title: JSConfJP Panel Talk
   titleJa: JSConfJP Panel Talk
   description: >-
@@ -373,7 +388,7 @@
   descriptionJa: >-
     JSConf の Discussion Room で貼られてる JavaScript wishlist についての雑談
 
-    元々予定されていたトークは発表者の体調不良により、なくなりました。代わりに雑談します  
+    元々予定されていたトークは発表者の体調不良により、なくなりました。代わりに雑談します
   spokenLanguage: ja
   slideLanguage: ja
   # sponsorIDs: [xxx]
@@ -386,6 +401,7 @@
   startsAt: "15:30"
   endsAt: "16:00"
   room: B
+  recordingUrl: https://www.youtube.com/embed/xicuWsVcbnU
   title: Remixing Usability with Performance
   titleJa: Remixing Usability with Performance
   description: >-
@@ -409,6 +425,7 @@
   startsAt: "16:00"
   endsAt: "16:30"
   room: A
+  recordingUrl: https://www.youtube.com/embed/zZGg8lzaPVg
   title: What is a Web-interoperable Runtime?
   titleJa: What is a Web-interoperable Runtime?
   description: >-
@@ -432,6 +449,7 @@
   startsAt: "16:00"
   endsAt: "16:30"
   room: B
+  recordingUrl: https://www.youtube.com/embed/wik_8JOuYdU
   title: Flawless flows - the psychology of harmonious teamwork
   titleJa: Flawless flows - the psychology of harmonious teamwork
   description: >-
@@ -453,6 +471,7 @@
   startsAt: "11:00"
   endsAt: "11:30"
   room: C
+  recordingUrl: https://www.youtube.com/embed/Ef4-mffa1p4
   title: フロントエンド開発環境とNext.jsへの移行計画「ミイダス2.0」のご紹介 by ミイダス株式会社
   titleJa: フロントエンド開発環境とNext.jsへの移行計画「ミイダス2.0」のご紹介 by ミイダス株式会社
   sponsorIDs: [miidas]
@@ -461,6 +480,7 @@
   startsAt: "11:30"
   endsAt: "12:00"
   room: C
+  recordingUrl: https://www.youtube.com/embed/t-I0ts4TTok
   title: Wasm活用によるポータブルなライブラリの実現に向けたHelpfeel社の取り組み by Helpfeel株式会社
   titleJa: Wasm活用によるポータブルなライブラリの実現に向けたHelpfeel社の取り組み by Helpfeel株式会社
   sponsorIDs: [nota]
@@ -469,6 +489,7 @@
   startsAt: "13:00"
   endsAt: "13:30"
   room: C
+  recordingUrl: https://www.youtube.com/embed/IhPGvFal15E
   title: 自然発生した実装パターンに、マイクロフロントエンドと名がつきました（仮） by dwango
   titleJa: 自然発生した実装パターンに、マイクロフロントエンドと名がつきました（仮） by dwango
   sponsorIDs: [dwango]
@@ -477,6 +498,7 @@
   startsAt: "13:30"
   endsAt: "14:00"
   room: C
+  recordingUrl: https://www.youtube.com/embed/yXN7L_yj3NY
   title: React Query 導入と実装ルールについて考える by 株式会社カオナビ
   titleJa: React Query 導入と実装ルールについて考える by 株式会社カオナビ
   sponsorIDs: [kaonavi]
@@ -485,6 +507,7 @@
   startsAt: "14:15"
   endsAt: "14:45"
   room: C
+  recordingUrl: https://www.youtube.com/embed/QelFcTqZH1s
   title: 30分で挑戦! Twilioを使ったWebRTCベースのビデオアプリケーション開発者体験とは？ by Twilio Inc
   titleJa: 30分で挑戦! Twilioを使ったWebRTCベースのビデオアプリケーション開発者体験とは？ by Twilio Inc
   description: >-
@@ -497,6 +520,7 @@
   startsAt: "14:45"
   endsAt: "15:15"
   room: C
+  recordingUrl: https://www.youtube.com/embed/Zmf4-wOIpSg
   title: サイボウズフロントエンドマンスリー JSConf.jp 特別編 by サイボウズ株式会社
   titleJa: サイボウズフロントエンドマンスリー JSConf.jp 特別編 by サイボウズ株式会社
   sponsorIDs: [cybozu]
@@ -505,6 +529,7 @@
   startsAt: "15:30"
   endsAt: "16:00"
   room: C
+  recordingUrl: https://www.youtube.com/embed/j5mrp2Z6PQg
   title: ハンズオンNative ESM by ウォンテッドリー株式会社
   titleJa: ハンズオンNative ESM by ウォンテッドリー株式会社
   description: >-
@@ -526,6 +551,7 @@
   startsAt: "17:40"
   endsAt: "17:50"
   room: A
+  # recordingUrl: xxx
   title: >-
     JavaScript Testing Framework: Under the Hood
   titleJa: >-
@@ -547,6 +573,7 @@
   startsAt: "17:50"
   endsAt: "18:00"
   room: A
+  recordingUrl: https://www.youtube.com/embed/LBb5CgMoJ3w
   title: Small Tips to use Bun with WebSocket Server and  WebAssembly Modules. / Bun と WebSocket Server とオマケのWebAssembly
   titleJa: Small Tips to use Bun with WebSocket Server and  WebAssembly Modules. / Bun と WebSocket Server とオマケのWebAssembly
   description: >-
@@ -562,6 +589,7 @@
   startsAt: "18:00"
   endsAt: "18:10"
   room: A
+  recordingUrl: https://www.youtube.com/embed/zBrHQKD6NXE
   title: デザインシステムにフロントエンドのプラクティスを詰め込んで再配布する
   titleJa: デザインシステムにフロントエンドのプラクティスを詰め込んで再配布する
   description: >-
@@ -580,6 +608,7 @@
   startsAt: "18:10"
   endsAt: "18:20"
   room: A
+  recordingUrl: https://www.youtube.com/embed/Q5Qd02vsxDk
   title: Reactの内部実装
   titleJa: Reactの内部実装
   description: >-
@@ -600,6 +629,7 @@
   startsAt: "18:20"
   endsAt: "18:30"
   room: A
+  recordingUrl: https://www.youtube.com/embed/V9ikneHSDTw
   title: ECMAScript仕様書を誰でも読めるようにする技術を求めて
   titleJa: ECMAScript仕様書を誰でも読めるようにする技術を求めて
   description: >-
@@ -618,6 +648,7 @@
   startsAt: "18:30"
   endsAt: "19:00"
   room: A
+  recordingUrl: https://www.youtube.com/embed/qpRiqdVPRlQ
   title: Web Runtime
   titleJa: Web Runtime
   description: >-
@@ -642,6 +673,7 @@
   startsAt: "10:00"
   endsAt: "10:30"
   room: A
+  # recordingUrl: xxx
   title: Start talk by Yosuke Furukawa
   titleJa: オープニング by Yosuke Furukawa
 
@@ -692,6 +724,7 @@
   startsAt: "19:00"
   endsAt: "19:05"
   room: A
+  # recordingUrl: xxx
   title: Ending
   titleJa: エンディング
 
@@ -710,6 +743,7 @@
   startsAt: "16:45"
   endsAt: "16:50"
   room: A
+  recordingUrl: https://www.youtube.com/embed/JsLOBm-voi4
   title: コロナ収束後もフルリモート運営を継続するミイダスの働き方 by miidas
   titleJa: コロナ収束後もフルリモート運営を継続するミイダスの働き方 by miidas
   sponsorIDs: [miidas]
@@ -718,6 +752,7 @@
   startsAt: "16:50"
   endsAt: "16:55"
   room: A
+  recordingUrl: https://www.youtube.com/embed/_zd4vZAyCXk
   title: 実装の引き出しを増やすためのDOM Eventテクニック by Helpfeel
   titleJa: 実装の引き出しを増やすためのDOM Eventテクニック by Helpfeel
   sponsorIDs: [nota]
@@ -726,6 +761,7 @@
   startsAt: "16:55"
   endsAt: "17:00"
   room: A
+  recordingUrl: https://www.youtube.com/embed/iDGghrRMWzA
   title: dwango JSConf JP 2022 Sponsor LT
   titleJa: dwango JSConf JP 2022 Sponsor LT
   sponsorIDs: [dwango]
@@ -734,6 +770,7 @@
   startsAt: "17:00"
   endsAt: "17:05"
   room: A
+  recordingUrl: https://www.youtube.com/embed/EDzU7fLZjfg
   title: Safariのinputでつまづいた話 by カオナビ
   titleJa: Safariのinputでつまづいた話 by カオナビ
   sponsorIDs: [kaonavi]
@@ -742,6 +779,7 @@
   startsAt: "17:05"
   endsAt: "17:10"
   room: A
+  recordingUrl: https://www.youtube.com/embed/Su_fTCnfKwc
   title: Twilio JSConf JP 2022 Sponsor LT
   titleJa: Twilio JSConf JP 2022 Sponsor LT
   sponsorIDs: [twilio]
@@ -750,6 +788,7 @@
   startsAt: "17:15"
   endsAt: "17:20"
   room: A
+  # recordingUrl: xxx
   title: フロントエンド刷新活動の紹介 by サイボウズ
   titleJa: フロントエンド刷新活動の紹介 by サイボウズ
   sponsorIDs: [cybozu]
@@ -758,6 +797,7 @@
   startsAt: "17:20"
   endsAt: "17:25"
   room: A
+  recordingUrl: https://www.youtube.com/embed/zq-zp9j2jKk
   title:  ウォンテッドリー JSConf JP 2022 Sponsor LT
   titleJa: ウォンテッドリー JSConf JP 2022 Sponsor LT
   sponsorIDs: [wantedly]
@@ -766,6 +806,7 @@
   startsAt: "16:00"
   endsAt: "16:30"
   room: C
+  recordingUrl: https://www.youtube.com/embed/LQ51CbfD1GM
   title: Building Offline and Real-Time Applications – The Magic of CRDTs
   titleJa: Building Offline and Real-Time Applications – The Magic of CRDTs
   description: >-
