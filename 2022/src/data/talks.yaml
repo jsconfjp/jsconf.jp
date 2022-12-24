@@ -24,7 +24,7 @@
   startsAt: "11:00"
   endsAt: "11:30"
   room: A
-  # recordingUrl: xxx
+  recordingUrl: https://www.youtube.com/embed/xoWAJ17UK1A
   title: Optimizing Interaction to Next Paint (INP)
   titleJa: Optimizing Interaction to Next Paint (INP)
   description: >-
