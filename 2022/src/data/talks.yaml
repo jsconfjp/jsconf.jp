@@ -551,7 +551,7 @@
   startsAt: "17:40"
   endsAt: "17:50"
   room: A
-  # recordingUrl: xxx
+  recordingUrl: https://www.youtube.com/embed/qBcucQqUYS4
   title: >-
     JavaScript Testing Framework: Under the Hood
   titleJa: >-
