@@ -278,7 +278,7 @@
   startsAt: "14:15"
   endsAt: "14:45"
   room: A
-  # recordingUrl: xxx
+  recordingUrl: https://www.youtube.com/embed/qskcjFcuzJY
   title: About `npm:` support of Deno
   titleJa: About `npm:` support of Deno
   description: >-
