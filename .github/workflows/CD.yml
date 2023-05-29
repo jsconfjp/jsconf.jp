@@ -25,7 +25,7 @@ jobs:
       - run: cp public/* dist/
       - run: mv 2019/public dist/2019
       - run: mv 2021/public dist/2021
-      - run: cd 2022 && npm ci && npm run build -- --prefix-paths && mv public ../dist/2022
+      - run: cd 2022 && npm ci --legacy-peer-deps && npm run build -- --prefix-paths && mv public ../dist/2022
       - uses: actions/upload-pages-artifact@v1
         with:
           path: dist
