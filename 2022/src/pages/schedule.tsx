@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, withPrefix } from "gatsby"
 import { Link as _Link } from "gatsby-link"
 import flatten from "lodash/flatten"
 
@@ -195,7 +195,11 @@ export default function SchedulePage() {
                   return (
                     <Area
                       // @ts-ignore
-                      to={hasDescription ? `talk/${s.uuid}` : null}
+                      to={
+                        hasDescription
+                          ? `${withPrefix("")}talk/${s.uuid}`
+                          : null
+                      }
                       onClick={e => {
                         if (!hasDescription) {
                           e.preventDefault()
