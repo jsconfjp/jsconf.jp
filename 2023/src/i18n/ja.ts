@@ -9,7 +9,7 @@ export const ja: {
     speakers: "スピーカー",
     sponsors: "スポンサー",
     backToTop: "TOPへ戻る",
-    festivalPeriod: "2022年11月26日開催",
+    festivalPeriod: "2023年11月26日開催",
     guestSpeakers: "ゲストスピーカー",
     goToGuests: "スピーカー一覧へ",
     tickets: "チケット",
