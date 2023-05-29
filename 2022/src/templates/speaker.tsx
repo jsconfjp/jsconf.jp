@@ -131,7 +131,7 @@ export default function Speaker(props: Props) {
       <ResponsiveBox>
         <Breadcrumb
           path={[
-            { label: "speakers", to: `/${withPrefix("")}speakers` },
+            { label: "speakers", to: `${withPrefix("")}speakers` },
             title
           ]}
         />
