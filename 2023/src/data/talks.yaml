@@ -1,0 +1,16 @@
+- uuid: xxx
+  date: day1
+  startsAt: "XX:XX"
+  endsAt: "XX:XX"
+  room: X
+  recordingUrl: ""
+  title: TBA
+  titleJa: YYY
+  description: ""
+  descriptionJa: ""
+  spokenLanguage: ja
+  slideLanguage: ja
+  sponsorIDs:
+    - xxx
+  speakerIDs:
+    - xxx

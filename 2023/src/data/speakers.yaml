@@ -1,0 +1,8 @@
+# 1
+- uuid: xxx
+  name: YYY
+  featured: false
+  presentations:
+    - xxx
+  biography: ""
+  biographyJa: ""
