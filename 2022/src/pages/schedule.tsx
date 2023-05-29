@@ -195,11 +195,7 @@ export default function SchedulePage() {
                   return (
                     <Area
                       // @ts-ignore
-                      to={
-                        hasDescription
-                          ? `${withPrefix("")}talk/${s.uuid}`
-                          : null
-                      }
+                      to={hasDescription ? withPrefix(`/talk/${s.uuid}`) : null}
                       onClick={e => {
                         if (!hasDescription) {
                           e.preventDefault()
