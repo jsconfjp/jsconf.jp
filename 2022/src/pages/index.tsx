@@ -103,7 +103,7 @@ export default function IndexPage() {
     allSponsorsYaml,
     allMembersYaml,
     allFile,
-    allTalksYaml
+    allTalksYaml,
   } = useStaticQuery(graphql`
     query {
       site {
@@ -182,15 +182,14 @@ export default function IndexPage() {
     .filter((avatar: any) => avatar.childImageSharp)
     .map((avatar: any) => ({
       uuid: avatar.name,
-      ...avatar.childImageSharp.gatsbyImageData
+      ...avatar.childImageSharp.gatsbyImageData,
     }))
   const jnaMembers = allMembersYaml.edges.filter(({ node }: any) => node.isJNA)
   const notJnaMembers = allMembersYaml.edges.filter(
     ({ node }: any) => !node.isJNA
   )
   const dateTimeFormatter = new Intl.DateTimeFormat(i18n.language, {
-    // @ts-ignore dateStyle' does not exist in type 'DateTimeFormatOptions'
-    dateStyle: "medium"
+    dateStyle: "medium",
   })
   const cfpOverDue =
     Date.now() > new Date(site.siteMetadata.cfpDeadline).getTime()
@@ -212,7 +211,7 @@ export default function IndexPage() {
             </LinkButton>
           </Centerize>
         </>
-      )
+      ),
     },
     {
       subTitle: t("schedule"),
@@ -223,7 +222,7 @@ export default function IndexPage() {
             {t("day1")} ({dateTimeFormatter.format(times.day1.startsAt)})
           </LinkButton>
         </SchedulesBox>
-      )
+      ),
     },
     {
       subTitle: t("tickets"),
@@ -236,7 +235,7 @@ export default function IndexPage() {
         >
           {t("buyTickets")}
         </LinkButton>
-      )
+      ),
     },
     {
       subTitle: t("callForSpeakers"),
@@ -249,7 +248,7 @@ export default function IndexPage() {
         >
           {t("submitTalk")}
         </LinkButton>
-      )
+      ),
     },
     {
       subTitle: t("callForSponsors"),
@@ -267,8 +266,8 @@ export default function IndexPage() {
           <LinkButton size="large" disabled to={""}>
             {t("comingSoon")}
           </LinkButton>
-        )
-    }
+        ),
+    },
   ]
 
   return (

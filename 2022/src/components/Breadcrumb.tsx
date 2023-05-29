@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import { Link } from "gatsby"
 
 export type Props = {
-  path: (string | { label: string; to: string })[]
+  path: (string | null | { label: string; to: string })[]
 }
 
 const Box = styled.div`
@@ -28,21 +28,25 @@ export function Breadcrumb(props: Props) {
       <Link to="/">
         <Text>{t("top")}</Text>
       </Link>
-      {path.filter(Boolean).map(label => {
-        const path = typeof label === "string" ? { label, to: null } : label
-        return (
-          <React.Fragment key={path.label}>
-            <Text>&gt;</Text>
-            {path.to ? (
-              <Link to={path.to}>
-                <Text>{path.label}</Text>
-              </Link>
-            ) : (
-              <Text>{path.label}</Text>
-            )}
-          </React.Fragment>
+      {path
+        .filter(
+          (label): label is string | { label: string; to: string } => !!label
         )
-      })}
+        .map(label => {
+          const path = typeof label === "string" ? { label, to: null } : label
+          return (
+            <React.Fragment key={path.label}>
+              <Text>&gt;</Text>
+              {path.to ? (
+                <Link to={path.to}>
+                  <Text>{path.label}</Text>
+                </Link>
+              ) : (
+                <Text>{path.label}</Text>
+              )}
+            </React.Fragment>
+          )
+        })}
     </Box>
   )
 }

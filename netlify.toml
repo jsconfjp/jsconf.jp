@@ -1,5 +1,5 @@
 [context.deploy-preview.environment]
-  NODE_VERSION = '14.17.3'
+  NODE_VERSION = '18.14.0'
   NODE_ENV = 'development'
 
 [build]
@@ -12,5 +12,5 @@
 
     mv 2019/public dist/2019
     mv 2021/public dist/2021
-    cd 2022 && npm ci && npm run build -- --prefix-paths --verbose && mv public ../dist/2022
+    cd 2022 && npm ci --legacy-peer-deps && npm run build -- --prefix-paths --verbose && mv public ../dist/2022
     '''

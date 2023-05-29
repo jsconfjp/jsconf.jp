@@ -1,8 +1,8 @@
 import React, { useLayoutEffect } from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
-import { useStaticQuery, graphql, withPrefix } from "gatsby"
-import _Link from "gatsby-link"
+import { useStaticQuery, graphql } from "gatsby"
+import { Link as _Link } from "gatsby-link"
 import flatten from "lodash/flatten"
 
 import { Layout } from "../components/Layout"
@@ -53,11 +53,9 @@ const Area = styled(_Link)<{
   grid-row: ${({ startsAt, endsAt }) =>
     `t-${escapeTime(startsAt)} / t-${escapeTime(endsAt)}`};
   background-color: ${({ track, isBreak, theme }) =>
-    // @ts-ignore Dynamic access
     isBreak ? theme.colors.disabled + "cc" : theme.colors[`room${track}`]};
   border-left: 5px solid;
   border-color: ${({ track, isBreak, theme }) =>
-    // @ts-ignore Dynamic access
     isBreak ? theme.colors.disabledText : theme.colors[`room${track}Border`]};
 
   ::before {
@@ -70,7 +68,6 @@ const Area = styled(_Link)<{
     height: 16px;
     border-radius: 100%;
     background-color: ${({ track, isBreak, theme }) =>
-      // @ts-ignore Dynamic access
       isBreak ? theme.colors.disabledText : theme.colors[`room${track}Border`]};
   }
 
@@ -97,53 +94,50 @@ const Text = styled.span`
 
 export default function SchedulePage() {
   const { t, i18n } = useTranslation()
-  const {
-    allSpeakersYaml,
-    allSponsorsYaml,
-    allTalksYaml
-  } = useStaticQuery(graphql`
-    query {
-      allSpeakersYaml {
-        edges {
-          node {
-            uuid
-            name
+  const { allSpeakersYaml, allSponsorsYaml, allTalksYaml } =
+    useStaticQuery(graphql`
+      query {
+        allSpeakersYaml {
+          edges {
+            node {
+              uuid
+              name
+            }
+          }
+        }
+        allSponsorsYaml {
+          edges {
+            node {
+              uuid
+              name
+              grade
+              url
+              logoUrl
+              prText
+            }
+          }
+        }
+        allTalksYaml {
+          edges {
+            node {
+              uuid
+              title
+              titleJa
+              description
+              descriptionJa
+              spokenLanguage
+              slideLanguage
+              speakerIDs
+              sponsorIDs
+              startsAt
+              endsAt
+              room
+              date
+            }
           }
         }
       }
-      allSponsorsYaml {
-        edges {
-          node {
-            uuid
-            name
-            grade
-            url
-            logoUrl
-            prText
-          }
-        }
-      }
-      allTalksYaml {
-        edges {
-          node {
-            uuid
-            title
-            titleJa
-            description
-            descriptionJa
-            spokenLanguage
-            slideLanguage
-            speakerIDs
-            sponsorIDs
-            startsAt
-            endsAt
-            room
-            date
-          }
-        }
-      }
-    }
-  `)
+    `)
   const speakers: SpeakerType[] = allSpeakersYaml.edges.map(
     ({ node }: any) => node
   )
@@ -152,8 +146,7 @@ export default function SchedulePage() {
   const timetable = generateTimetable({ speakers, sponsors, talks })
   const days = Object.keys(times).sort() as Dates[]
   const dateTimeFormatter = new Intl.DateTimeFormat(i18n.language, {
-    // @ts-ignore dateStyle' does not exist in type 'DateTimeFormatOptions'
-    dateStyle: "medium"
+    dateStyle: "medium",
   })
 
   // Open page with hash (ex. direct access, reload)
@@ -173,7 +166,7 @@ export default function SchedulePage() {
 
   return (
     <Layout>
-      <SEO title={t("schedule")} description={t("schedule.description")} />{" "}
+      <SEO title={t("schedule")} description={t("schedule.description")} />
       <ResponsiveBox>
         <Breadcrumb path={[t("schedule")]} />
         <Title>{t("schedule")}</Title>
@@ -197,12 +190,8 @@ export default function SchedulePage() {
                     s.uuid && (s.speakers.length || s.sponsors.length)
                   return (
                     <Area
-                      // @ts-ignore
-                      to={
-                        hasDescription
-                          ? `/${withPrefix("")}talk/${s.uuid}`
-                          : null
-                      }
+                      // @ts-expect-error
+                      to={hasDescription ? `/talk/${s.uuid}` : null}
                       onClick={e => {
                         if (!hasDescription) {
                           e.preventDefault()

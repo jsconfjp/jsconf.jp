@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Link, withPrefix } from "gatsby"
+import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
 import { GatsbyImage as Image, IGatsbyImageData } from "gatsby-plugin-image"
 import { enOrJa } from "../util/languages"
@@ -86,7 +86,7 @@ export function Speaker(props: Props) {
   }
 
   return (
-    <LinkContainer to={`/${withPrefix("")}talk/${uuid}`}>
+    <LinkContainer to={`/talk/${uuid}`}>
       <Avatar image={avatar} alt={name} loading="lazy" />
       <Title>{enOrJa(i18n)(title, titleJa)}</Title>
       <Name>{name}</Name>
