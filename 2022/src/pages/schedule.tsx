@@ -97,53 +97,50 @@ const Text = styled.span`
 
 export default function SchedulePage() {
   const { t, i18n } = useTranslation()
-  const {
-    allSpeakersYaml,
-    allSponsorsYaml,
-    allTalksYaml
-  } = useStaticQuery(graphql`
-    query {
-      allSpeakersYaml {
-        edges {
-          node {
-            uuid
-            name
+  const { allSpeakersYaml, allSponsorsYaml, allTalksYaml } =
+    useStaticQuery(graphql`
+      query {
+        allSpeakersYaml {
+          edges {
+            node {
+              uuid
+              name
+            }
+          }
+        }
+        allSponsorsYaml {
+          edges {
+            node {
+              uuid
+              name
+              grade
+              url
+              logoUrl
+              prText
+            }
+          }
+        }
+        allTalksYaml {
+          edges {
+            node {
+              uuid
+              title
+              titleJa
+              description
+              descriptionJa
+              spokenLanguage
+              slideLanguage
+              speakerIDs
+              sponsorIDs
+              startsAt
+              endsAt
+              room
+              date
+            }
           }
         }
       }
-      allSponsorsYaml {
-        edges {
-          node {
-            uuid
-            name
-            grade
-            url
-            logoUrl
-            prText
-          }
-        }
-      }
-      allTalksYaml {
-        edges {
-          node {
-            uuid
-            title
-            titleJa
-            description
-            descriptionJa
-            spokenLanguage
-            slideLanguage
-            speakerIDs
-            sponsorIDs
-            startsAt
-            endsAt
-            room
-            date
-          }
-        }
-      }
-    }
-  `)
+    `)
   const speakers: SpeakerType[] = allSpeakersYaml.edges.map(
     ({ node }: any) => node
   )
@@ -153,7 +150,7 @@ export default function SchedulePage() {
   const days = Object.keys(times).sort() as Dates[]
   const dateTimeFormatter = new Intl.DateTimeFormat(i18n.language, {
     // @ts-ignore dateStyle' does not exist in type 'DateTimeFormatOptions'
-    dateStyle: "medium"
+    dateStyle: "medium",
   })
 
   // Open page with hash (ex. direct access, reload)
@@ -173,7 +170,7 @@ export default function SchedulePage() {
 
   return (
     <Layout>
-      <SEO title={t("schedule")} description={t("schedule.description")} />{" "}
+      <SEO title={t("schedule")} description={t("schedule.description")} />
       <ResponsiveBox>
         <Breadcrumb path={[t("schedule")]} />
         <Title>{t("schedule")}</Title>
