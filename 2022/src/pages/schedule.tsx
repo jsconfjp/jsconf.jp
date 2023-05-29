@@ -53,11 +53,9 @@ const Area = styled(_Link)<{
   grid-row: ${({ startsAt, endsAt }) =>
     `t-${escapeTime(startsAt)} / t-${escapeTime(endsAt)}`};
   background-color: ${({ track, isBreak, theme }) =>
-    // @ts-ignore Dynamic access
     isBreak ? theme.colors.disabled + "cc" : theme.colors[`room${track}`]};
   border-left: 5px solid;
   border-color: ${({ track, isBreak, theme }) =>
-    // @ts-ignore Dynamic access
     isBreak ? theme.colors.disabledText : theme.colors[`room${track}Border`]};
 
   ::before {
@@ -70,7 +68,6 @@ const Area = styled(_Link)<{
     height: 16px;
     border-radius: 100%;
     background-color: ${({ track, isBreak, theme }) =>
-      // @ts-ignore Dynamic access
       isBreak ? theme.colors.disabledText : theme.colors[`room${track}Border`]};
   }
 
@@ -149,7 +146,6 @@ export default function SchedulePage() {
   const timetable = generateTimetable({ speakers, sponsors, talks })
   const days = Object.keys(times).sort() as Dates[]
   const dateTimeFormatter = new Intl.DateTimeFormat(i18n.language, {
-    // @ts-ignore dateStyle' does not exist in type 'DateTimeFormatOptions'
     dateStyle: "medium",
   })
 
@@ -194,7 +190,7 @@ export default function SchedulePage() {
                     s.uuid && (s.speakers.length || s.sponsors.length)
                   return (
                     <Area
-                      // @ts-ignore
+                      // @ts-expect-error
                       to={hasDescription ? withPrefix(`/talk/${s.uuid}`) : null}
                       onClick={e => {
                         if (!hasDescription) {
