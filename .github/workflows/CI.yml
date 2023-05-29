@@ -3,7 +3,7 @@ name: CI
 on: [pull_request]
 
 jobs:
-  build_2022:
+  build_2023:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -14,7 +14,7 @@ jobs:
           cache-dependency-path: 2023/package-lock.json
       - run: cd 2023 && npm ci --legacy-peer-deps
       - run: cd 2023 && npm run build -- --prefix-paths
-  test_2022:
+  test_2023:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  deploy_2022:
+  deploy_2023:
     runs-on: ubuntu-latest
     permissions:
       pages: write
