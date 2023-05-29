@@ -23,5 +23,5 @@ jobs:
           node-version: 18
           cache: npm
           cache-dependency-path: 2022/package-lock.json
-      - run: cd 2022 && npm ci
+      - run: cd 2022 && npm ci --legacy-peer-deps
       - run: cd 2022 && npm test
