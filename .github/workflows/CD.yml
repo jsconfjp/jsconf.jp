@@ -20,12 +20,13 @@ jobs:
         with:
           node-version: 18
           cache: npm
-          cache-dependency-path: 2022/package-lock.json
+          cache-dependency-path: 2023/package-lock.json
       - run: mkdir dist
       - run: cp public/* dist/
       - run: mv 2019/public dist/2019
       - run: mv 2021/public dist/2021
-      - run: cd 2022 && npm ci --legacy-peer-deps && npm run build -- --prefix-paths && mv public ../dist/2022
+      - run: mv 2022/public dist/2022
+      - run: cd 2023 && npm ci --legacy-peer-deps && npm run build -- --prefix-paths && mv public ../dist/2023
       - uses: actions/upload-pages-artifact@v1
         with:
           path: dist
