@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
-import { withPrefix } from "gatsby"
 import { GatsbyImage as Image } from "gatsby-plugin-image"
 import Markdown from "react-markdown"
 import { times } from "../util/misc"
@@ -97,7 +96,7 @@ const TalkRecording = styled.iframe`
 export default function Speaker(props: Props) {
   const { t, i18n } = useTranslation()
   const {
-    pageContext: { speakers, avatars, sponsors, talk }
+    pageContext: { speakers, avatars, sponsors, talk },
   } = props
   const {
     title,
@@ -110,12 +109,12 @@ export default function Speaker(props: Props) {
     startsAt,
     endsAt,
     room,
-    recordingUrl
+    recordingUrl,
   } = talk
   const dateFormatter = Intl.DateTimeFormat(i18n.language, {
     year: "numeric",
     month: "2-digit",
-    day: "2-digit"
+    day: "2-digit",
   })
   const speakerNames = speakers.length
     ? speakers.map(speaker => speaker.name).join(" and ")
@@ -129,12 +128,7 @@ export default function Speaker(props: Props) {
         ogImage={avatars.length ? avatars[0].images.sources : undefined}
       />
       <ResponsiveBox>
-        <Breadcrumb
-          path={[
-            { label: "speakers", to: `${withPrefix("")}speakers` },
-            title
-          ]}
-        />
+        <Breadcrumb path={[{ label: "speakers", to: `speakers` }, title]} />
         <Title>{speakerNames}</Title>
         {speakers.map((speaker, i) => (
           <SpeakerBox key={speaker.uuid}>
