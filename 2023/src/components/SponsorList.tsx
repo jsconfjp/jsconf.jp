@@ -45,14 +45,14 @@ export function SponsorList(props: Props) {
       ...acc,
       [sponsor.grade]: (acc[sponsor.grade] ?? []).concat([sponsor]),
     }),
-    {} as { [K in SponsorType["grade"]]: SponsorType[] }
+    {} as { [K in SponsorType["grade"]]?: SponsorType[] }
   )
 
   return (
     <>
       <SubTitle>{t("sponsor.premium")}</SubTitle>
       <LargeBox>
-        {grades.premium.map(platinumSponsor => (
+        {grades.premium?.map(platinumSponsor => (
           <Sponsor
             key={platinumSponsor.url}
             {...platinumSponsor}
@@ -63,7 +63,7 @@ export function SponsorList(props: Props) {
 
       <SubTitle>{t("sponsor.sponsor")}</SubTitle>
       <SmallBox>
-        {grades.sponsor.map(sponsor => (
+        {grades.sponsor?.map(sponsor => (
           <Sponsor key={sponsor.url} {...sponsor} showPrText={showPrText} />
         ))}
       </SmallBox>
