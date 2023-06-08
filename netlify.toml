@@ -12,5 +12,6 @@
 
     mv 2019/public dist/2019
     mv 2021/public dist/2021
-    cd 2022 && npm ci --legacy-peer-deps && npm run build -- --prefix-paths --verbose && mv public ../dist/2022
+    mv 2022/public dist/2022
+    cd 2023 && npm ci --legacy-peer-deps && npm run build -- --prefix-paths --verbose && mv public ../dist/2023
     '''
