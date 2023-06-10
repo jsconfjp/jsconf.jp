@@ -15,6 +15,8 @@ import { Member } from "../components/Member"
 import { times } from "../util/misc"
 import bg from "../images/bg.png"
 import bgFlipX from "../images/bg-flip-x.png"
+import { Address } from "../components/Address"
+import { Map } from "../components/Map"
 
 const WavyBox = styled.div`
   margin: 0;
@@ -268,6 +270,21 @@ export default function IndexPage() {
           </LinkButton>
         ),
     },
+    {
+      subTitle: t("venue"),
+      available: true,
+      render: () => (
+        <>
+          <Map width={940} height={500} title={t("venue")} />
+          <Address summary />
+          <Centerize>
+            <LinkButton color="primary" to="/venue/">
+              {t("moreDetails")}
+            </LinkButton>
+          </Centerize>
+        </>
+      ),
+    },
   ]
 
   return (
@@ -286,7 +303,7 @@ export default function IndexPage() {
           {parts
             .filter(({ available }) => available)
             .map(({ subTitle, render }, i) => {
-              if (i % 2 === 0) {
+              if (i % 2 !== 0) {
                 return (
                   <Card key={i}>
                     <SubTitle>{subTitle}</SubTitle>
