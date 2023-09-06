@@ -6,7 +6,7 @@ module.exports = {
     author: `JSConf JP`,
     twitter: `jsconfjp`,
     siteUrl: `https://jsconf.jp`,
-    ticketUrl: "https://nodejs.connpass.com/event/295212/",
+    ticketUrl: "https://pretix.eu/jsconfjp/2023/",
     sponsorFormUrl: `https://forms.gle/GHFbBciA22xP7Jd49`,
     cfpFormUrl: `https://docs.google.com/forms/d/e/1FAIpQLSfkgAaCLVDWDXBgnFJt-J1H0dVU_A88Fg_tn4XVdUJyMkCvMA/viewform`,
     cfpDeadline: new Date("2023-09-30T23:59:59.999+0900"),
