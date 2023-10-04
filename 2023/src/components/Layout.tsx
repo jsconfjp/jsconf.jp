@@ -7,7 +7,6 @@ import { theme } from "../theme"
 import { Header } from "./Header"
 import { HeaderMobile } from "./HeaderMobile"
 import { Footer } from "./Footer"
-import { Button } from "./Button"
 import { SmoothScroll } from "./SmoothScroll"
 import "./layout.css"
 
@@ -39,6 +38,18 @@ const NotMobile = styled.div`
     display: none;
   }
 `
+const BackToTopButton = styled.button`
+  appearance: none;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ${({ theme }) => theme.fonts.header};
+  font-size: 1.6rem;
+  padding: 10px 24px;
+  color: white;
+  background-color: ${({ theme }) => theme.colors.primary};
+`
 
 export function Layout({ children }: Props) {
   const { t, i18n } = useTranslation()
@@ -58,6 +69,7 @@ export function Layout({ children }: Props) {
           sponsorFormUrl
           cfpFormUrl
           enableSpeakers
+          enableVenue
           enableSchedule
           enableSponsors
         }
@@ -73,6 +85,7 @@ export function Layout({ children }: Props) {
             siteTitle={site.siteMetadata.title}
             ticketUrl={site.siteMetadata.ticketUrl}
             enableSpeakers={site.siteMetadata.enableSpeakers}
+            enableVenue={site.siteMetadata.enableVenue}
             enableSchedule={site.siteMetadata.enableSchedule}
             enableSponsors={site.siteMetadata.enableSponsors}
             onChangeLanguage={onChangeLanguage}
@@ -83,6 +96,7 @@ export function Layout({ children }: Props) {
             siteTitle={site.siteMetadata.title}
             ticketUrl={site.siteMetadata.ticketUrl}
             enableSpeakers={site.siteMetadata.enableSpeakers}
+            enableVenue={site.siteMetadata.enableVenue}
             enableSchedule={site.siteMetadata.enableSchedule}
             enableSponsors={site.siteMetadata.enableSponsors}
             onChangeLanguage={onChangeLanguage}
@@ -92,7 +106,7 @@ export function Layout({ children }: Props) {
           <main>{children}</main>
           <BackToTopBox>
             <SmoothScroll selector="body">
-              <Button color="primary">{t("backToTop")}</Button>
+              <BackToTopButton>{t("backToTop")}</BackToTopButton>
             </SmoothScroll>
           </BackToTopBox>
         </MainBox>

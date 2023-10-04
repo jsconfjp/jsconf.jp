@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next"
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
 import { Hero } from "../components/Hero"
-import { SubTitle } from "../components/SubTitle"
+import { Title } from "../components/Title"
 import { SpeakerList } from "../components/SpeakerList"
 import { SponsorList } from "../components/SponsorList"
 import { LinkButton } from "../components/LinkButton"
@@ -305,14 +305,14 @@ export default function IndexPage() {
               if (i % 2 !== 0) {
                 return (
                   <Card key={i}>
-                    <SubTitle>{subTitle}</SubTitle>
+                    <Title>{subTitle}</Title>
                     <Centerize>{render()}</Centerize>
                   </Card>
                 )
               }
               return (
                 <Centerize key={i}>
-                  <SubTitle>{subTitle}</SubTitle>
+                  <Title>{subTitle}</Title>
                   {render()}
                 </Centerize>
               )
@@ -321,7 +321,7 @@ export default function IndexPage() {
           <Centerize>
             {jnaMembers.length > 0 ? (
               <>
-                <SubTitle>{t("organizingTeam")}</SubTitle>
+                <Title>{t("organizingTeam")}</Title>
                 <OrganizersBox>
                   {jnaMembers.map(
                     ({ node: member }: { node: any }, i: number) => (
@@ -333,7 +333,7 @@ export default function IndexPage() {
             ) : null}
             {notJnaMembers.length > 0 ? (
               <>
-                <SubTitle>{t("volunteerTeam")}</SubTitle>
+                <Title>{t("volunteerTeam")}</Title>
                 <MembersBox>
                   {notJnaMembers.map(
                     ({ node: member }: { node: any }, i: number) => (

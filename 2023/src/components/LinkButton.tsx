@@ -20,13 +20,13 @@ const buttonStyle = css`
     width: 100%;
     max-width: 440px;
     padding: 1.4em 0;
-    font-size: 2.4rem;
+    font-size: ${({ theme }) => theme.fontSizes.subTitle};
   }
   &.normal {
     width: 100%;
     max-width: 440px;
     padding: 0.6em 0;
-    font-size: 2.4rem;
+    font-size: ${({ theme }) => theme.fontSizes.subTitle};
   }
   &.inline {
     width: 100%;
