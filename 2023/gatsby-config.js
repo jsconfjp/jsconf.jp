@@ -13,7 +13,7 @@ module.exports = {
     previousFiscalYear: `2022`,
     enableSpeakers: false,
     enableSchedule: false,
-    enableSponsors: false,
+    enableSponsors: true,
   },
   plugins: [
     `gatsby-plugin-typescript`,
