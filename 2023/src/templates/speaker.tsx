@@ -78,25 +78,10 @@ const TalkTitle = styled(SubTitle)`
   text-align: left;
 `
 
-const TalkRecordingBox = styled.div`
-  position: relative;
-  padding-bottom: 56.25%;
-  /* 16:9 */
-  padding-top: 25px;
-  height: 0;
-`
-const TalkRecording = styled.iframe`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-`
-
 export default function Speaker(props: Props) {
   const { t, i18n } = useTranslation()
   const {
-    pageContext: { speakers, avatars, sponsors, talk },
+    pageContext: { speakers, avatars, sponsors, talk }
   } = props
   const {
     title,
@@ -108,13 +93,12 @@ export default function Speaker(props: Props) {
     date,
     startsAt,
     endsAt,
-    room,
-    recordingUrl,
+    room
   } = talk
   const dateFormatter = Intl.DateTimeFormat(i18n.language, {
     year: "numeric",
     month: "2-digit",
-    day: "2-digit",
+    day: "2-digit"
   })
   const speakerNames = speakers.length
     ? speakers.map(speaker => speaker.name).join(" and ")
@@ -150,15 +134,6 @@ export default function Speaker(props: Props) {
         ))}
         <TalkBox>
           <TalkTitle>{enOrJa(i18n)(title, titleJa)}</TalkTitle>
-          <TalkRecordingBox>
-            <TalkRecording
-              src={recordingUrl}
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </TalkRecordingBox>
           <p>
             {dateFormatter.format(times[date].startsAt)}, {startsAt} - {endsAt}
             <br />

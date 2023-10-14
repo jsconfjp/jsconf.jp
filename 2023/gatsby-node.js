@@ -51,7 +51,6 @@ exports.createPages = ({ graphql, actions }) => {
                 startsAt
                 endsAt
                 room
-                recordingUrl
               }
             }
           }
@@ -93,8 +92,8 @@ exports.createPages = ({ graphql, actions }) => {
             component: mdTemplate,
             context: {
               post: post,
-              slug: post.fields.slug,
-            },
+              slug: post.fields.slug
+            }
           })
         })
 
@@ -116,12 +115,12 @@ exports.createPages = ({ graphql, actions }) => {
           .filter(avatar => avatar.childImageSharp)
           .map(avatar => ({
             uuid: avatar.name,
-            ...avatar.childImageSharp.gatsbyImageData,
+            ...avatar.childImageSharp.gatsbyImageData
           }))
         const avatarMap = avatars.reduce(
           (acc, avatar) => ({
             ...acc,
-            [avatar.uuid]: avatar,
+            [avatar.uuid]: avatar
           }),
           {}
         )
@@ -168,8 +167,8 @@ exports.createPages = ({ graphql, actions }) => {
               speakers: talkSpeakers,
               avatars: speakerAvatars,
               sponsors: talkSponsors,
-              talk,
-            },
+              talk
+            }
           })
         })
       })
@@ -185,7 +184,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value
     })
   }
 }

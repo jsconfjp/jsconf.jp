@@ -11,9 +11,9 @@ module.exports = {
     cfpFormUrl: `https://docs.google.com/forms/d/e/1FAIpQLSfkgAaCLVDWDXBgnFJt-J1H0dVU_A88Fg_tn4XVdUJyMkCvMA/viewform`,
     cfpDeadline: new Date("2023-09-30T23:59:59.999+0900"),
     previousFiscalYear: `2022`,
-    enableSpeakers: false,
+    enableSpeakers: true,
     enableSchedule: false,
-    enableSponsors: false,
+    enableSponsors: false
   },
   plugins: [
     `gatsby-plugin-typescript`,
@@ -29,53 +29,53 @@ module.exports = {
         anonymize: true,
         respectDNT: true,
         defer: true,
-        enableWebVitalsTracking: true,
-      },
+        enableWebVitalsTracking: true
+      }
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`Lato:400,700`],
-        display: "swap",
-      },
+        display: "swap"
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `articles`,
-        path: `${__dirname}/src/data`,
-      },
+        path: `${__dirname}/src/data`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/data`,
-      },
+        path: `${__dirname}/src/data`
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           `gatsby-remark-autolink-headers`,
-          `gatsby-remark-external-links`,
-        ],
-      },
+          `gatsby-remark-external-links`
+        ]
+      }
     },
     `gatsby-transformer-yaml`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-sharp`,
       options: {
-        checkSupportedExtensions: false,
-      },
+        checkSupportedExtensions: false
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -86,15 +86,15 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/logo.png`,
-      },
+        icon: `src/images/logo.png`
+      }
     },
     {
       resolve: `gatsby-plugin-offline`,
       options: {
-        precachePages: ["**/*"],
-      },
+        precachePages: ["**/*"]
+      }
     },
-    `gatsby-plugin-image`,
-  ],
+    `gatsby-plugin-image`
+  ]
 }

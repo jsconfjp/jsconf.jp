@@ -20,7 +20,6 @@ export type TalkType = {
   endsAt: string
   hiddenTimeBoxes: string[] | null
   room: "A" | "B"
-  recordingUrl: string
 }
 
 export type SpeakerType = {
