@@ -87,7 +87,7 @@ const speakers = speakerRows
   }))
   .sort((a, b) => a.uuid[0].localeCompare(b.uuid[0]))
 
-fs.writeFileSync(DIST_SPEAKERS, YAML.safeDump(speakers))
+fs.writeFileSync(DIST_SPEAKERS, YAML.dump(speakers))
 console.log(chalk.dim(`Fetch ${speakers.length} speakers`))
 console.log(
   chalk.cyan(`Save speakers to ${path.relative(process.cwd(), DIST_SPEAKERS)}`)
@@ -246,7 +246,7 @@ for (let talk of talks) {
   }
 }
 
-fs.writeFileSync(DIST_TALKS, YAML.safeDump(talks))
+fs.writeFileSync(DIST_TALKS, YAML.dump(talks))
 console.log(chalk.dim(`Fetch ${talks.length} sessions`))
 console.log(
   chalk.cyan(`Save sessions to ${path.relative(process.cwd(), DIST_TALKS)}`)
