@@ -1,16 +1,482 @@
-- uuid: xxx
+# 1
+- uuid: mizchi-1
   date: day1
-  startsAt: "XX:XX"
-  endsAt: "XX:XX"
-  room: X
-  recordingUrl: ""
-  title: TBA
-  titleJa: YYY
-  description: ""
-  descriptionJa: ""
+  startsAt: "13:00"
+  endsAt: "13:30"
+  room: B
+  # # recordingUrl: ""
+  title: TODO
+  titleJa: TODO
+  description: >-
+    "TODO"
+  descriptionJa: >-
+    "TODO"
   spokenLanguage: ja
   slideLanguage: ja
-  sponsorIDs:
-    - xxx
+  # sponsorIDs: [ xxx ]
   speakerIDs:
-    - xxx
+    - mizchi
+# 2
+- uuid: anirudh-sharma-1
+  date: day1
+  startsAt: "14:40"
+  endsAt: "15:20"
+  room: A
+  # recordingUrl: ""
+  title: "Web Internals: Mastering the JavaScript Engine"
+  titleJa: "Web Internals: Mastering the JavaScript Engine"
+  description: >-
+    For every developer, it's really essential to understand the internals in order to be aware and write optimized code. With a whole existing and upcoming ecosystem of libraries and frameworks around JavaScript, the need for thorough understanding of code execution on the web becomes more relevant. This knowledge also helps you to better understand and distinguish technologies like WebAssembly from JavaScript.
+
+    Attend this talk to get an in-depth overview of the JavaScript engine and learn how it can help you as a developer to write more optimized JavaScript code. You will learn how exactly your high-level code is converted to bytecode and then to the optimized machine code with the magic of the V8 engine.
+
+    The key session highlights include:
+    1. Intro to JS engines and the V8 engine evolution
+    2. Abstract Syntax Tree (AST)
+    3. Ignition, Bytecode and Turbofan
+    4. Hidden classes and Inline caching
+    5. Garbage collection
+    6. Writing optimized code
+  descriptionJa: >-
+    For every developer, it's really essential to understand the internals in order to be aware and write optimized code. With a whole existing and upcoming ecosystem of libraries and frameworks around JavaScript, the need for thorough understanding of code execution on the web becomes more relevant. This knowledge also helps you to better understand and distinguish technologies like WebAssembly from JavaScript.
+
+    Attend this talk to get an in-depth overview of the JavaScript engine and learn how it can help you as a developer to write more optimized JavaScript code. You will learn how exactly your high-level code is converted to bytecode and then to the optimized machine code with the magic of the V8 engine.
+
+    The key session highlights include:
+    1. Intro to JS engines and the V8 engine evolution
+    2. Abstract Syntax Tree (AST)
+    3. Ignition, Bytecode and Turbofan
+    4. Hidden classes and Inline caching
+    5. Garbage collection
+    6. Writing optimized code
+  spokenLanguage: en
+  slideLanguage: en
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - anirudh-sharma
+# 3
+- uuid: aakansha-1
+  date: day1
+  startsAt: "14:10"
+  endsAt: "14:40"
+  room: C
+  # recordingUrl: ""
+  title: Text Containers under the hood in Canvas
+  titleJa: Text Containers under the hood in Canvas
+  description: >-
+    In this talk I will be diving into how text containers work under the hood in canvas and also share insights on how its built in (excalidraw.com⁠ - A virtual free Open-Source collaborative end-to-end encrypted canvas based editor for sketching hand-drawn like diagrams.
+    When it comes to canvas, building text containers gets tricky as compared to svg where you could take advantage of CSS for making sure text doesn’t go out of the container.
+
+    In canvas it works differently
+
+    1. Little bit about architecture of an Element - how elements are structured, how text is tied to shape
+    2. Cover about Hit box testing
+    3. When typing a text area is rendered and with CSS we can make sure that text doesn’t overflow
+    4. Once typed, when rendering in canvas, we need a word wrap algorithm to render the text correctly inside container
+    5. Since we are running the algo to wrap the text correctly, on resizing it could be very expensive hence caching is needed.
+    6. Calculating dimensions of word by rendering it on DOM vs using canvas.measureText -> huge impact on performance
+    7. Perf tricks which can be applied
+    8. Aligning the canvas with text editor
+    9. Takeaways - audience will understand how text containers work internally in canvas and get a glimpse of how its implemented in Excalidraw
+  descriptionJa: >-
+    In this talk I will be diving into how text containers work under the hood in canvas and also share insights on how its built in (excalidraw.com⁠ - A virtual free Open-Source collaborative end-to-end encrypted canvas based editor for sketching hand-drawn like diagrams.
+    When it comes to canvas, building text containers gets tricky as compared to svg where you could take advantage of CSS for making sure text doesn’t go out of the container.
+
+    In canvas it works differently
+
+    1. Little bit about architecture of an Element - how elements are structured, how text is tied to shape
+    2. Cover about Hit box testing
+    3. When typing a text area is rendered and with CSS we can make sure that text doesn’t overflow
+    4. Once typed, when rendering in canvas, we need a word wrap algorithm to render the text correctly inside container
+    5. Since we are running the algo to wrap the text correctly, on resizing it could be very expensive hence caching is needed.
+    6. Calculating dimensions of word by rendering it on DOM vs using canvas.measureText -> huge impact on performance
+    7. Perf tricks which can be applied
+    8. Aligning the canvas with text editor
+    9. Takeaways - audience will understand how text containers work internally in canvas and get a glimpse of how its implemented in Excalidraw
+  spokenLanguage: en
+  slideLanguage: en
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - aakansha
+# 4
+- uuid: kenneth-rohde-christiansen-1
+  date: day1
+  startsAt: "14:10"
+  endsAt: "14:40"
+  room: A
+  # recordingUrl: ""
+  title: Beyond the Web of Today
+  titleJa: Beyond the Web of Today
+  description: >-
+    At Intel we work on the forefront of innovation as our hardware roadmaps are defined years ahead of release. This means that we need to make sure that the web platform takes advantage of new hardware capabilities as they are released or shortly after. This ranges from enabling new form factors to taking advantage of hardware accelerators.
+
+    In this talk we will discuss some of the new innovations that Intel is bringing to the web, such as WebNN, which enables access to fast neural network and machine learning capabilities; Web GPU and Compute Pressure, a new API enabling better user experience and bringing adaptive compute capabilities to the client, just like adaptive streaming has improved streaming use-cases by adapting to live network conditions.
+  descriptionJa: >-
+    At Intel we work on the forefront of innovation as our hardware roadmaps are defined years ahead of release. This means that we need to make sure that the web platform takes advantage of new hardware capabilities as they are released or shortly after. This ranges from enabling new form factors to taking advantage of hardware accelerators.
+
+    In this talk we will discuss some of the new innovations that Intel is bringing to the web, such as WebNN, which enables access to fast neural network and machine learning capabilities; Web GPU and Compute Pressure, a new API enabling better user experience and bringing adaptive compute capabilities to the client, just like adaptive streaming has improved streaming use-cases by adapting to live network conditions.
+  spokenLanguage: en
+  slideLanguage: en
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - kenneth-rohde-christiansen
+# 5
+- uuid: akfm-sato-1
+  date: day1
+  startsAt: "14:10"
+  endsAt: "14:40"
+  room: B
+  # recordingUrl: ""
+  title: Next.js App Router クライアントキャッシュの仕組み
+  titleJa: Next.js App Router クライアントキャッシュの仕組み
+  description: >-
+    Next.js App Routerのクライアントキャッシュの仕組み・実装・課題について発表します。
+  descriptionJa: >-
+    Next.js App Routerのクライアントキャッシュの仕組み・実装・課題について発表します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - akfm-sato
+# 6
+- uuid: daiki-nishikawa-1
+  date: day1
+  startsAt: "11:25"
+  endsAt: "11:55"
+  room: B
+  # recordingUrl: ""
+  title: Deep dive into Biome
+  titleJa: Deep dive into Biome
+  description: >-
+    Biome は、Rome を fork して始まった Web 開発に必要なツールチェーンを開発するプロジェクトです。現在は、JavaScript、TypeScript、JSON の formatter や linter を提供しており、Vercel の新規プロダクトにも利用されています。
+
+    今回のトークでは、Biome の直近の開発体制やリリースを紹介しつつ、Rust で実装されている Biome の内部について詳しく解説します。コアコントリビューターの一人として、Rust でJavaScript に関するツールを作る面白さやコントリビュートを歓迎している雰囲気などを伝えられるトークをしたいと考えています。
+
+    現時点で具体的に考えている発表内容は次の通りです。
+
+    - Biome の直近の開発体制やリリースの紹介
+        プロジェクトの governace をベースに開発体制について紹介します。直近のリリースの紹介に加えて、コアチーム内で進行中の実装 (CSSのサポートなど) の近況についても紹介します。
+    - Biome の内部アーキテクチャの解説
+        内部で利用されている CST (Concrete Syntax Tree) の特徴などについて紹介します。構文木は Rust の LSP (rust-analyzer) の実装で利用されている rowan をベースとしたものになっており、この点にも触れながら紹介するつもりです。
+    - Biome での linter の実装例の紹介
+        linter の実装方法について、簡単なルールを例に具体的なコードを紹介しながら解説します。
+
+    <hr/>
+
+    参考リンク
+
+    - Biome: https://biomejs.dev/
+    - Vercel のプロダクトで Biome が利用されているポスト：https://twitter.com/rauchg/status/1703177160943628660
+    - Governance: https://github.com/biomejs/biome/blob/main/GOVERNANCE.md
+  descriptionJa: >-
+    Biome は、Rome を fork して始まった Web 開発に必要なツールチェーンを開発するプロジェクトです。現在は、JavaScript、TypeScript、JSON の formatter や linter を提供しており、Vercel の新規プロダクトにも利用されています。
+
+    今回のトークでは、Biome の直近の開発体制やリリースを紹介しつつ、Rust で実装されている Biome の内部について詳しく解説します。コアコントリビューターの一人として、Rust でJavaScript に関するツールを作る面白さやコントリビュートを歓迎している雰囲気などを伝えられるトークをしたいと考えています。
+
+    現時点で具体的に考えている発表内容は次の通りです。
+
+    - Biome の直近の開発体制やリリースの紹介
+        プロジェクトの governace をベースに開発体制について紹介します。直近のリリースの紹介に加えて、コアチーム内で進行中の実装 (CSSのサポートなど) の近況についても紹介します。
+    - Biome の内部アーキテクチャの解説
+        内部で利用されている CST (Concrete Syntax Tree) の特徴などについて紹介します。構文木は Rust の LSP (rust-analyzer) の実装で利用されている rowan をベースとしたものになっており、この点にも触れながら紹介するつもりです。
+    - Biome での linter の実装例の紹介
+        linter の実装方法について、簡単なルールを例に具体的なコードを紹介しながら解説します。
+
+    <hr/>
+
+    参考リンク
+
+    - Biome: https://biomejs.dev/
+    - Vercel のプロダクトで Biome が利用されているポスト：https://twitter.com/rauchg/status/1703177160943628660
+    - Governance: https://github.com/biomejs/biome/blob/main/GOVERNANCE.md
+  spokenLanguage: ja
+  slideLanguage: ja
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - daiki-nishikawa
+# 7
+- uuid: jon-zhang-1
+  date: day1
+  startsAt: "16:00"
+  endsAt: "16:30"
+  room: A
+  # recordingUrl: ""
+  title: "Unleash Your Product's Potential: A Beginner's Guide to Growth Engineering"
+  titleJa: "Unleash Your Product's Potential: A Beginner's Guide to Growth Engineering"
+  description: >-
+    Join us on an exhilarating journey as we unravel the mysteries of growth engineering and answer burning questions like: "Why does Meta have a whole team dedicated to working on their sign-up flow?" "Does it really matter what color I make this button on my app?" and "What even is growth engineering?"
+
+    Prepare to be captivated as we demystify the world of growth engineering and reveal the strategies behind attracting hordes of users to tech giants like Meta, Google, and Twitter. We'll dive deep into the realm of data-driven decision-making and show you how to fuel your product's growth using the power of analytics. From spotting growth opportunities and optimizing funnels to measuring success with the right metrics, we'll equip you with the tools to attract users, improve retention, and boost conversions.
+
+    With enthralling real-world examples and captivating case studies, you'll discover how to run experiments, A/B tests, and data loops for continuous improvement. By the end of this talk, you'll walk away with a crystal-clear understanding of growth engineering, armed with practical tips and insights to ignite your journey towards sustainable product growth.
+
+    Whether you're a beginner seeking to unlock the secrets of growth engineering or a seasoned pro aiming to level up your growth game, this session will empower you to unleash your product's full potential and achieve measurable, impactful growth. Get ready to embark on a thrilling adventure and propel your product to new heights!
+  descriptionJa: >-
+    Join us on an exhilarating journey as we unravel the mysteries of growth engineering and answer burning questions like: "Why does Meta have a whole team dedicated to working on their sign-up flow?" "Does it really matter what color I make this button on my app?" and "What even is growth engineering?"
+
+    Prepare to be captivated as we demystify the world of growth engineering and reveal the strategies behind attracting hordes of users to tech giants like Meta, Google, and Twitter. We'll dive deep into the realm of data-driven decision-making and show you how to fuel your product's growth using the power of analytics. From spotting growth opportunities and optimizing funnels to measuring success with the right metrics, we'll equip you with the tools to attract users, improve retention, and boost conversions.
+
+    With enthralling real-world examples and captivating case studies, you'll discover how to run experiments, A/B tests, and data loops for continuous improvement. By the end of this talk, you'll walk away with a crystal-clear understanding of growth engineering, armed with practical tips and insights to ignite your journey towards sustainable product growth.
+
+    Whether you're a beginner seeking to unlock the secrets of growth engineering or a seasoned pro aiming to level up your growth game, this session will empower you to unleash your product's full potential and achieve measurable, impactful growth. Get ready to embark on a thrilling adventure and propel your product to new heights!
+  spokenLanguage: en
+  slideLanguage: en
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - jon-zhang
+# 8
+- uuid: peter-eijgermans-1
+  date: day1
+  startsAt: "13:00"
+  endsAt: "13:30"
+  room: C
+  # recordingUrl: ""
+  title: "Micro frontends in Action!"
+  titleJa: "Micro frontends in Action!"
+  description: >-
+    Microservices have gained significant popularity in recent years as organizations seek to overcome the limitations of monolithic backends.
+
+    However, the challenges of 'monolithic frontends' persist for many companies.
+
+    In this session, Peter Eijgermans delves into a growing trend that aims to break down front-end monoliths into smaller, more manageable pieces. This architectural approach not only enhances team effectiveness and efficiency but also unlocks new possibilities.
+
+    Peter begins by sharing an engaging anecdote of his adventure with a rhinoceros in Nepal, drawing parallels with the concept of monoliths that need to be overcome before embracing micro frontends. The presentation then focuses on establishing a robust Micro Frontends architecture, providing attendees with valuable insights into best practices, determining when and why to utilize micro frontends, and taking the initial steps towards implementation.
+
+    Moreover, Peter showcases strategies for converting a monolith into a micro frontend application, offering practical guidance and demonstrating real-world scenarios.
+
+    One of the key aspects covered is establishing seamless communication between Micro Frontends, ensuring smooth collaboration and integration within the architecture.
+  descriptionJa: >-
+    Microservices have gained significant popularity in recent years as organizations seek to overcome the limitations of monolithic backends.
+
+    However, the challenges of 'monolithic frontends' persist for many companies.
+
+    In this session, Peter Eijgermans delves into a growing trend that aims to break down front-end monoliths into smaller, more manageable pieces. This architectural approach not only enhances team effectiveness and efficiency but also unlocks new possibilities.
+
+    Peter begins by sharing an engaging anecdote of his adventure with a rhinoceros in Nepal, drawing parallels with the concept of monoliths that need to be overcome before embracing micro frontends. The presentation then focuses on establishing a robust Micro Frontends architecture, providing attendees with valuable insights into best practices, determining when and why to utilize micro frontends, and taking the initial steps towards implementation.
+
+    Moreover, Peter showcases strategies for converting a monolith into a micro frontend application, offering practical guidance and demonstrating real-world scenarios.
+
+    One of the key aspects covered is establishing seamless communication between Micro Frontends, ensuring smooth collaboration and integration within the architecture.
+  spokenLanguage: en
+  slideLanguage: en
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - peter-eijgermans
+# 9
+- uuid: kian-jamali-1
+  date: day1
+  startsAt: "11:25"
+  endsAt: "11:55"
+  room: A
+  # recordingUrl: ""
+  title: "Trusted Types: DOM XSS Proteciton at Scale"
+  titleJa: "Trusted Types: DOM XSS Proteciton at Scale"
+  description: >-
+    DOM XSS continues to be the most critical threat to web security. Our current best defense against DOM XSS is Trusted Types, a browser-based runtime feature to limit the uses of DOM APIs (and limit the possibility of DOM injection). We will discuss our approach to using Trusted Types at Google to protect billions of our users, the challenges of backporting Trusted Types compatibility to hundreds of webapps, and our approach to making the entire JS ecosystem safer with Trusted Types.
+  descriptionJa: >-
+    DOM XSS continues to be the most critical threat to web security. Our current best defense against DOM XSS is Trusted Types, a browser-based runtime feature to limit the uses of DOM APIs (and limit the possibility of DOM injection). We will discuss our approach to using Trusted Types at Google to protect billions of our users, the challenges of backporting Trusted Types compatibility to hundreds of webapps, and our approach to making the entire JS ecosystem safer with Trusted Types.
+  spokenLanguage: en
+  slideLanguage: en
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - kian-jamali
+# 10
+- uuid: aileen-villanueva-lecuona-1
+  date: day1
+  startsAt: "13:00"
+  endsAt: "13:30"
+  room: A
+  # recordingUrl: ""
+  title: Machine learning with Javascript using Tensorflow.JS
+  titleJa: Machine learning with Javascript using Tensorflow.JS
+  description: >-
+    Machine Learning helps give new ways of solving problems that are not possible with traditional computational approaches. However most of the available libraries are with R, Python or C++. According to Stackoverflow: 2022 marks JavaScript’s tenth year in a row as the most commonly used programming language. Tensorflow helps bring high-performance ML and attention to this vast community to continue the journey of solving problems with Javascript and Machine Learning.
+
+    Participants will learn basics of AI and machine learning, how to train and deploy machine learning models and all machine learning capabilities available on a web browser and Node.js for server-side and back-end development with Tensorflow.js .
+  descriptionJa: >-
+    Machine Learning helps give new ways of solving problems that are not possible with traditional computational approaches. However most of the available libraries are with R, Python or C++. According to Stackoverflow: 2022 marks JavaScript’s tenth year in a row as the most commonly used programming language. Tensorflow helps bring high-performance ML and attention to this vast community to continue the journey of solving problems with Javascript and Machine Learning.
+
+    Participants will learn basics of AI and machine learning, how to train and deploy machine learning models and all machine learning capabilities available on a web browser and Node.js for server-side and back-end development with Tensorflow.js .
+  spokenLanguage: en
+  slideLanguage: en
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - aileen-villanueva-lecuona
+# 11
+- uuid: yamanoku-1
+  date: day1
+  startsAt: "19:10"
+  endsAt: "19:20"
+  room: A
+  # recordingUrl: ""
+  title: 画面遷移のアクセシビリティ課題を解決しうる Navigation API への期待
+  titleJa: 画面遷移のアクセシビリティ課題を解決しうる Navigation API への期待
+  description: >-
+    クライアントサイドルーティングにおける画面遷移したことを支援技術に伝えるために JS と WAI-ARIA を使用した Route Announcer という手法があります。これにより画面が変わったことを通知できますがそれ以外にも画面遷移で考慮しなければならないアクセシビリティの課題があります。それらの課題の紹介と Navigation API によってそれらが解消できそうな期待を仕様に沿って紹介します。
+  descriptionJa: >-
+    クライアントサイドルーティングにおける画面遷移したことを支援技術に伝えるために JS と WAI-ARIA を使用した Route Announcer という手法があります。これにより画面が変わったことを通知できますがそれ以外にも画面遷移で考慮しなければならないアクセシビリティの課題があります。それらの課題の紹介と Navigation API によってそれらが解消できそうな期待を仕様に沿って紹介します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - yamanoku
+# 12
+- uuid: himeno-kosei-1
+  date: day1
+  startsAt: "13:30"
+  endsAt: "14:00"
+  room: C
+  # recordingUrl: ""
+  title: TypeScriptで型定義を信頼しすぎず「信頼境界線」を設置した話
+  titleJa: TypeScriptで型定義を信頼しすぎず「信頼境界線」を設置した話
+  description: >-
+    TypeScript は静的型付けを持つ言語なので、外部からの入力について CやC++、Goなどと同じぐらいの安全性があると思いがちです。その結果、「ユーザーからの入力」や「APIによるデータの送受信」「UI側での情報更新」などで型定義を信頼しすぎて、入力値の確認を怠っていませんか？
+
+    HireRoo では型定義を信頼しすぎた結果、失敗してしまった事例がありました。その失敗事例では型定義だけでは防げない事象があり、サーバサイドはもちろん、クライアントサイドでもバリデーションを行う必要がありました。
+
+    本登壇では、型安全な処理を実現するために必要な値の信頼できる区間「信頼境界線」を設置し、信頼できない区間からやってくるデータを入念にテスト出来るようにしたり、境界を明確化することで意思疎通が早くなった話など、実際に改善をおこなった事例を話します。
+  descriptionJa: >-
+    TypeScript は静的型付けを持つ言語なので、外部からの入力について CやC++、Goなどと同じぐらいの安全性があると思いがちです。その結果、「ユーザーからの入力」や「APIによるデータの送受信」「UI側での情報更新」などで型定義を信頼しすぎて、入力値の確認を怠っていませんか？
+
+    HireRoo では型定義を信頼しすぎた結果、失敗してしまった事例がありました。その失敗事例では型定義だけでは防げない事象があり、サーバサイドはもちろん、クライアントサイドでもバリデーションを行う必要がありました。
+
+    本登壇では、型安全な処理を実現するために必要な値の信頼できる区間「信頼境界線」を設置し、信頼できない区間からやってくるデータを入念にテスト出来るようにしたり、境界を明確化することで意思疎通が早くなった話など、実際に改善をおこなった事例を話します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - himeno-kosei
+# 13
+- uuid: takuto-wada-1
+  date: day1
+  startsAt: "19:00"
+  endsAt: "19:10"
+  room: A
+  # recordingUrl: ""
+  title: Second System Syndrome - the tale of power-assert
+  titleJa: Second System Syndrome - the tale of power-assert
+  description: >-
+    自作 OSS プロダクト、特に power-assert の開発において典型的な「セカンドシステムシンドローム」に罹患しました。「セカンドシステムシンドローム」とは何か、どうやってそこからリカバリーするか、自分の体験をベースに説明します。あわせて、当日新しいバージョンをリリースする予定です。
+  descriptionJa: >-
+    自作 OSS プロダクト、特に power-assert の開発において典型的な「セカンドシステムシンドローム」に罹患しました。「セカンドシステムシンドローム」とは何か、どうやってそこからリカバリーするか、自分の体験をベースに説明します。あわせて、当日新しいバージョンをリリースする予定です。
+  spokenLanguage: ja
+  slideLanguage: ja
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - takuto-wada
+# 14
+- uuid: luca-mugnaini-1
+  date: day1
+  startsAt: "19:20"
+  endsAt: "19:30"
+  room: A
+  # recordingUrl: ""
+  title: Hope is postponed disappointment
+  titleJa: Hope is postponed disappointment
+  description: >-
+    The solution for the exception problem is not having exceptions. Throwing exceptions and hoping that someone will take care of them may lead to disappointment. A sound type system can help us build resilient web applications. In Rakuten, we use Elm to prevent runtime exceptions in the authentication system used by millions of users every day. A similar technique can be implemented in TypeScript too.
+  descriptionJa: >-
+    The solution for the exception problem is not having exceptions. Throwing exceptions and hoping that someone will take care of them may lead to disappointment. A sound type system can help us build resilient web applications. In Rakuten, we use Elm to prevent runtime exceptions in the authentication system used by millions of users every day. A similar technique can be implemented in TypeScript too.
+  spokenLanguage: en
+  slideLanguage: en
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - luca-mugnaini
+
+#
+# 開場
+#
+- uuid: open
+  date: day1
+  startsAt: "10:00"
+  endsAt: "10:30"
+  room: A
+  # recordingUrl: xxx
+  title: open
+  titleJa: open
+
+# オープニング
+- uuid: opening-talk
+  date: day1
+  startsAt: "10:30"
+  endsAt: "10:45"
+  room: A
+  # recordingUrl: xxx
+  title: Opening talk by Yosuke Furukawa
+  titleJa: オープニング by Yosuke Furukawa
+
+# 休憩1
+- uuid: "day1-break-1115-1125"
+  date: day1
+  startsAt: "11:15"
+  endsAt: "11:25"
+  room: A
+  title: Break
+  titleJa: 休憩
+# 休憩2
+- uuid: "day1-break-1155-1300"
+  date: day1
+  startsAt: "11:55"
+  endsAt: "13:00"
+  room: A
+  title: Break
+  titleJa: 休憩
+# 休憩3
+- uuid: "day1-break-1400-1410"
+  date: day1
+  startsAt: "14:00"
+  endsAt: "14:10"
+  room: A
+  title: Break
+  titleJa: 休憩
+# 休憩4
+- uuid: "day1-break-1520-1530"
+  date: day1
+  startsAt: "15:20"
+  endsAt: "15:30"
+  room: A
+  title: Break
+  titleJa: 休憩
+# 休憩5
+- uuid: "day1-break-1630-1640"
+  date: day1
+  startsAt: "16:30"
+  endsAt: "16:40"
+  room: A
+  title: Break
+  titleJa: 休憩
+# 休憩6
+- uuid: "day1-break-1740-1750"
+  date: day1
+  startsAt: "17:40"
+  endsAt: "17:50"
+  room: A
+  title: Break
+  titleJa: 休憩
+# 休憩7
+- uuid: "day1-break-1850-1900"
+  date: day1
+  startsAt: "18:50"
+  endsAt: "19:00"
+  room: A
+  title: Break
+  titleJa: 休憩
+
+# クロージング
+- uuid: closing-talk
+  date: day1
+  startsAt: "19:50"
+  endsAt: "20:00"
+  room: A
+  # recordingUrl: xxx
+  title: Closing
+  titleJa: クロージング
+
+# 懇親会
+- uuid: drink-party
+  date: day1
+  startsAt: "20:00"
+  endsAt: "22:00"
+  room: A
+  title: Drink Party
+  titleJa: 懇親会

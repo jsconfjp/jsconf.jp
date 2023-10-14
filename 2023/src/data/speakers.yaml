@@ -1,8 +1,156 @@
 # 1
-- uuid: xxx
-  name: YYY
+- uuid: mizchi
+  name: mizchi
   featured: false
   presentations:
-    - xxx
-  biography: ""
-  biographyJa: ""
+    - mizchi-1
+  biography: >-
+    TODO
+  biographyJa: >-
+    TODO
+# 2
+- uuid: anirudh-sharma
+  name: Anirudh Sharma
+  featured: false
+  presentations:
+    - anirudh-sharma-1
+  biography: >-
+    Anirudh Sharma is an engineering undergrad with more than three years of experience in full stack development and JavaScript ecosystem. He is a Major League Hacking Fellow, Postman Student Leader and a part of TensorFlow.js Working Group. He loves to share his knowledge and experiences through blogs, developer conferences and is interested about everything around Web and DevOps.
+  biographyJa: >-
+    Anirudh Sharma is an engineering undergrad with more than three years of experience in full stack development and JavaScript ecosystem. He is a Major League Hacking Fellow, Postman Student Leader and a part of TensorFlow.js Working Group. He loves to share his knowledge and experiences through blogs, developer conferences and is interested about everything around Web and DevOps.
+# 3
+- uuid: aakansha
+  name: Aakansha
+  featured: false
+  presentations:
+    - aakansha-1
+  biography: >-
+    Aakansha is FOSS enthusiast, Javascript, and React fan. She is one of the core maintainers of Excalidraw. She leads the FOSS United meetups in Bangalore. She is a big foodie, and loves traveling and spending time with her family.
+
+    Fun Fact: She broke GitHub with her first PR of ~5k lines of code
+  biographyJa: >-
+    Aakansha is FOSS enthusiast, Javascript, and React fan. She is one of the core maintainers of Excalidraw. She leads the FOSS United meetups in Bangalore. She is a big foodie, and loves traveling and spending time with her family.
+
+    Fun Fact: She broke GitHub with her first PR of ~5k lines of code
+# 4
+- uuid: kenneth-rohde-christiansen
+  name: Kenneth Rohde Christiansen
+  featured: false
+  presentations:
+    - kenneth-rohde-christiansen-1
+  biography: >-
+    Web Platform Architect and Principal Engineer at Intel Corporation, W3C Technical Architecture Group alumni
+
+    Kenneth Rohde Christiansen is a Danish software engineer and architect, specialized in mobile and web technology. Working at Intel out of Copenhagen, Kenneth helps define Intel’s strategy and plans regarding the Web Platform, as well as puts it into action.
+
+    Before joining Intel, Kenneth was employed by Nokia (Denmark and Brazil) where he worked on the Nokia N9 web browser, Qt, WebKit, as well as many other mobile projects. Kenneth is an elected member of the W3C Technical Architect Group (TAG).
+
+    Currently working on extending Progressive Web Apps with more native capabilities as part of Project Fugu
+  biographyJa: >-
+    Web Platform Architect and Principal Engineer at Intel Corporation, W3C Technical Architecture Group alumni
+
+    Kenneth Rohde Christiansen is a Danish software engineer and architect, specialized in mobile and web technology. Working at Intel out of Copenhagen, Kenneth helps define Intel’s strategy and plans regarding the Web Platform, as well as puts it into action.
+
+    Before joining Intel, Kenneth was employed by Nokia (Denmark and Brazil) where he worked on the Nokia N9 web browser, Qt, WebKit, as well as many other mobile projects. Kenneth is an elected member of the W3C Technical Architect Group (TAG).
+
+    Currently working on extending Progressive Web Apps with more native capabilities as part of Project Fugu
+# 5
+- uuid: akfm-sato
+  name: akfm.sato
+  featured: false
+  presentations:
+    - akfm-sato-1
+  biography: >-
+    TODO
+  biographyJa: >-
+    TODO
+# 6
+- uuid: daiki-nishikawa
+  name: Daiki Nishikawa
+  featured: false
+  presentations:
+    - daiki-nishikawa-1
+  biography: >-
+    TODO
+  biographyJa: >-
+    TODO
+# 7
+- uuid: jon-zhang
+  name: Jon Zhang
+  featured: false
+  presentations:
+    - jon-zhang-1
+  biography: >-
+    Jon has been a software engineer at Meta for 5 years, working in Growth teams to grow experiences and products across both Instagram and Facebook before stepping into his current role as TL of the growth team. He is based in NYC, but originally grew up in New Jersey and finds joy in board games and well-crafted cocktails.
+  biographyJa: >-
+    Jon has been a software engineer at Meta for 5 years, working in Growth teams to grow experiences and products across both Instagram and Facebook before stepping into his current role as TL of the growth team. He is based in NYC, but originally grew up in New Jersey and finds joy in board games and well-crafted cocktails.
+# 8
+- uuid: peter-eijgermans
+  name: Peter Eijgermans
+  featured: false
+  presentations:
+    - peter-eijgermans-1
+  biography: >-
+    Peter Eijgermans is a long-time software developer and an adventurous and passionate CodeSmith Frontend at Ordina Netherlands. He likes to travel around the world with his bike. Always seeking for the unexpected and unknown. For his job he tries out the latest techniques and frameworks. He loves to share his experience by speaking at conferences all over the World and writing for the Dutch Java magazine and DZone. He believes that you as the front-end developer are the spider in the web to bring the user, the team and the product together.
+  biographyJa: >-
+    Peter Eijgermans is a long-time software developer and an adventurous and passionate CodeSmith Frontend at Ordina Netherlands. He likes to travel around the world with his bike. Always seeking for the unexpected and unknown. For his job he tries out the latest techniques and frameworks. He loves to share his experience by speaking at conferences all over the World and writing for the Dutch Java magazine and DZone. He believes that you as the front-end developer are the spider in the web to bring the user, the team and the product together.
+# 9
+- uuid: kian-jamali
+  name: Kian Jamali
+  featured: false
+  presentations:
+    - kian-jamali-1
+  biography: >-
+    Application security engineer working for Google in the Information Security team. I am mostly interested in web, crypto, and fuzzing. I enjoy CTFs and contributing to various open source projects (OWASP).
+  biographyJa: >-
+    Application security engineer working for Google in the Information Security team. I am mostly interested in web, crypto, and fuzzing. I enjoy CTFs and contributing to various open source projects (OWASP).
+# 10
+- uuid: aileen-villanueva-lecuona
+  name: Aileen Villanueva Lecuona
+  featured: false
+  presentations:
+    - aileen-villanueva-lecuona-1
+  biography: >-
+    My background includes 8 years experience in Web development and currently venturing into Machine Learning, I am deeply passionate about empowering and inspiring others, which is why I proudly serve as a Women Techmaker Ambassador, dedicated to sharing my knowledge and experiences with the community and fostering diversity in the tech industry.
+  biographyJa: >-
+    My background includes 8 years experience in Web development and currently venturing into Machine Learning, I am deeply passionate about empowering and inspiring others, which is why I proudly serve as a Women Techmaker Ambassador, dedicated to sharing my knowledge and experiences with the community and fostering diversity in the tech industry.
+# 11
+- uuid: yamanoku
+  name: yamanoku
+  featured: false
+  presentations:
+    - yamanoku-1
+  biography: >-
+    TODO
+  biographyJa: >-
+    TODO
+# 12
+- uuid: himeno-kosei
+  name: 姫野 滉盛
+  featured: false
+  presentations:
+    - himeno-kosei-1
+  biography: >-
+    TODO
+  biographyJa: >-
+    TODO
+# 13
+- uuid: takuto-wada
+  name: 和田卓人
+  featured: false
+  presentations:
+    - takuto-wada-1
+  biography: >-
+    TODO
+  biographyJa: >-
+    TODO
+# 14
+- uuid: luca-mugnaini
+  name: luca-mugnaini
+  featured: false
+  presentations:
+    - luca-mugnaini-1
+  biography: >-
+    Luca is a software engineer at Rakuten. He is a passionate Functional Programming advocate. Originally from Italy, now living in Tokyo for several years.
+  biographyJa: >-
+    Luca is a software engineer at Rakuten. He is a passionate Functional Programming advocate. Originally from Italy, now living in Tokyo for several years.
