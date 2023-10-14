@@ -94,50 +94,52 @@ const Text = styled.span`
 
 export default function SchedulePage() {
   const { t, i18n } = useTranslation()
-  const { allSpeakersYaml, allSponsorsYaml, allTalksYaml } =
-    useStaticQuery(graphql`
-      query {
-        allSpeakersYaml {
-          edges {
-            node {
-              uuid
-              name
-            }
-          }
-        }
-        allSponsorsYaml {
-          edges {
-            node {
-              uuid
-              name
-              grade
-              url
-              logoUrl
-              prText
-            }
-          }
-        }
-        allTalksYaml {
-          edges {
-            node {
-              uuid
-              title
-              titleJa
-              description
-              descriptionJa
-              spokenLanguage
-              slideLanguage
-              speakerIDs
-              sponsorIDs
-              startsAt
-              endsAt
-              room
-              date
-            }
+  const {
+    allSpeakersYaml,
+    allSponsorsYaml,
+    allTalksYaml
+  } = useStaticQuery(graphql`
+    query {
+      allSpeakersYaml {
+        edges {
+          node {
+            uuid
+            name
           }
         }
       }
-    `)
+      allSponsorsYaml {
+        edges {
+          node {
+            uuid
+            name
+            grade
+            url
+            logoUrl
+            prText
+          }
+        }
+      }
+      allTalksYaml {
+        edges {
+          node {
+            uuid
+            title
+            titleJa
+            description
+            descriptionJa
+            spokenLanguage
+            slideLanguage
+            speakerIDs
+            startsAt
+            endsAt
+            room
+            date
+          }
+        }
+      }
+    }
+  `)
   const speakers: SpeakerType[] = allSpeakersYaml.edges.map(
     ({ node }: any) => node
   )
@@ -146,7 +148,7 @@ export default function SchedulePage() {
   const timetable = generateTimetable({ speakers, sponsors, talks })
   const days = Object.keys(times).sort() as Dates[]
   const dateTimeFormatter = new Intl.DateTimeFormat(i18n.language, {
-    dateStyle: "medium",
+    dateStyle: "medium"
   })
 
   // Open page with hash (ex. direct access, reload)
