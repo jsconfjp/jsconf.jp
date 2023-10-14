@@ -179,16 +179,12 @@ const notTalkIds = [
   "panel-discussion",
   "sponsor-talk"
 ]
-const { presentations, 20191130: day1, 20191201: day2 } = workBook.Sheets
+const { presentations, 20231119: day1 } = workBook.Sheets
 const sessions = [
   ...XLSX.utils
     .sheet_to_json<TimetableRow>(day1)
     .reduce(mapTalks, [])
-    .map(addDate("day1")),
-  ...XLSX.utils
-    .sheet_to_json<TimetableRow>(day2)
-    .reduce(mapTalks, [])
-    .map(addDate("day2"))
+    .map(addDate("day1"))
 ]
 const talkRows = XLSX.utils
   .sheet_to_json<PresentationRow>(presentations)
