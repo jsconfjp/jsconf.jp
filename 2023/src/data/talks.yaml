@@ -858,6 +858,18 @@
 
 
 #
+# スポンサートーク
+#
+- uuid: sponsor
+  date: day1
+  startsAt: "17:50"
+  endsAt: "18:50"
+  room: A
+  # recordingUrl: xxx
+  title: sponsor
+  titleJa: sponsor
+
+#
 # 開場
 #
 - uuid: open
