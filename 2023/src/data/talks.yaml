@@ -382,6 +382,480 @@
   # sponsorIDs: [ xxx ]
   speakerIDs:
     - luca-mugnaini
+# 15
+- uuid: baseballyama-1
+  date: day1
+  startsAt: "11:25"
+  endsAt: "11:55"
+  room: C
+  # recordingUrl: ""
+  title: TODO
+  titleJa: LLM全盛時代の開発プラクティス
+  description: >-
+    TODO
+  descriptionJa: >-
+    2022年11月30日にOpenAI社からChatGPTが発表されて以降、LLM全盛時代に入ろうとしています。
+    私は、LLMはソフトウェア開発に大きな変化をもたらすと考えています。
+
+    私は株式会社Flyleでソフトウェアエンジニアをしています。私は直近半年以上、業務としてLLMに専念してきました。
+    そして、既に自社製品にLLM (や機械学習) を組み込んだ機能をいくつもリリースしました。(今後も継続的にリリースします)
+
+    その一方で、私はLLMを使用した開発チームの生産性向上にも注目しています。
+    優秀な少人数のエンジニアチームが、LLMによってその能力を10倍エンハンスすることができたら、その企業の競争力が大きく高まることは想像に難くないと思います。
+
+    このセッションでは実際にLLMを使用して生産性を向上するための技術を発表します。
+    具体的なコンテンツは以下です。(最新の調査内容をお届けしたいのでコンテンツは更新される場合があります)
+
+    1: LLMは "新人" だと考えるとわかりやすい
+      (1) なぜ LLM は "新人" なのか
+      (2) "コードレビュー" といった曖昧で複雑なタスクをLLMに依頼するのは現実的ではない
+      (3) 「人間Aが実装 -> 人間Bがレビュー」という構造から「LLMが実装 -> 人間Aがレビュー」という構造をいかに作り出せるかがキーポイント
+    2: LLMのサジェストを最大化するためには とにかく "統一感" が重要である
+      (1) なぜ統一感が重要なのか
+      (2) 統一感をもたらすための技術 (Prettier / ESLint / Stylelint / カスタムルールの実装)
+    3: LLMによって技術選定に変化はあるか
+      (1) LLMが学習済みの2021年9月以前に存在した技術を優先して使うべきか? (No)
+    4: コーディングガイドを常に開いておこう
+      (1) GitHub Copilot の仕組み
+      (2) LLMでの使用を前提としたコーディングガイドの書き方
+      (3) コーディングガイドを開いた時と開いていない時でサジェストにどのような違いがあるか
+    5: (番外編) (経験を元に感じた) 製品にLLMを組み込む際のポイント
+  spokenLanguage: ja
+  slideLanguage: ja
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - baseballyama
+# 16
+- uuid: poteboy-1
+  date: day1
+  startsAt: "19:30"
+  endsAt: "19:40"
+  room: A
+  # recordingUrl: ""
+  title: The Past and Future of Kuma UI
+  titleJa: TODO
+  description: >-
+    I'm the creator of Kuma UI, a Japanese OSS that gained attention as one of the few CSS-in-JS libraries compatible with React Server Components. Discover the journey of how someone with no prior OSS experience built this zero-runtime UI component library, the story behind its creation, its evolution, and the future vision for Kuma UI.
+  descriptionJa: >-
+    TODO
+  spokenLanguage: ja
+  slideLanguage: ja
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - poteboy
+# 17
+- uuid: yonatan-mevorach-1
+  date: day1
+  startsAt: "14:40"
+  endsAt: "15:20"
+  room: C
+  # recordingUrl: ""
+  title: Mastering Cryptography Fundamentals with Node's crypto module
+  titleJa: TODO
+  description: >-
+    Do you know that meme of Homer Simpson trying to hide in the bushes? That's how I would feel when my coworkers would discuss asymmetric encryption, certificate signing, salting, and crazy-sounding acronyms like PBKDF2.
+    After years of trying to ignore this problem, I finally decided to do something about it. But rather than digging into the subject via textbooks and pseudo-code, I decided to research the massive amount of functionality that is offered by Node.js' built-in `crypto` module. Then I worked my way backwards to understand what each function does, what underling security best-practice it's based on, and when it's appropriate to use it.
+    So if you're like me then step out of the bushes, and join me in this talk to learn the fundamentals of protecting information in a practical way with Node.js
+  descriptionJa: >-
+    TODO
+  spokenLanguage: en
+  slideLanguage: en
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - yonatan-mevorach
+# 18
+- uuid: ankur-datta-1
+  date: day1
+  startsAt: "17:10"
+  endsAt: "17:40"
+  room: A
+  # recordingUrl: ""
+  title: "React Server Components: The Back-end Killer?"
+  titleJa: TODO
+  description: >-
+    React Server Components have emerged as a game-changing technology, revolutionizing how we build data-driven apps and challenging the traditional role of backend applications. This talk will explore how React Server Components are transforming the landscape by enabling front-end apps with persistent database connections. We will dive into the power of React Server Components, their seamless integration with back-ends, and the utilization of Prisma to streamline data access. Join me to discover how this combination of technologies can eliminate the need for traditional back-end architectures, paving the way for a new era of efficient and scalable web development.
+
+    Table of Contents:
+
+    1. Introduction
+        - Brief overview of React Server Components and their impact on frontend development.
+    2. Understanding Data-Driven Apps
+        - Exploring the concept of data-driven apps and their requirements for persistent database connections.
+    3. React Server Components: The New Paradigm
+        - Deep dive into React Server Components and their ability to handle data-fetching, rendering, and state management on the front-end.
+    4. The Back-end Killer: Implications for Backend Applications
+        - Examining the impact of React Server Components on traditional backend architectures.
+        - Demonstrating advantages such as reduced latency and simplified development workflows.
+    5. Streamlining Data Access with Prisma
+        - Introducing Prisma as a powerful tool for efficient data access and manipulation.
+        - Exploring its integration with React Server Components for seamless database connections.
+    6. Real-World Examples and Case Studies
+        - Showcasing organizations that have embraced React Server Components and Prisma, highlighting their benefits and success stories.
+    7. Challenges and Considerations
+        - Discussing potential challenges and considerations when adopting React Server Components and Prisma.
+    8. Future of Web Development: Efficient and Scalable
+        - Reflecting on the potential of React Server Components and the elimination of traditional backend architectures.
+    9. Conclusion
+        - Recap of key points and takeaways from the talk.
+  descriptionJa: >-
+    TODO
+  spokenLanguage: en
+  slideLanguage: en
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - ankur-datta
+# 19
+- uuid: vasilika-klimova-1
+  date: day1
+  startsAt: "16:40"
+  endsAt: "16:40"
+  room: A
+  # recordingUrl: ""
+  title: Let’s expand reality
+  titleJa: TODO
+  description: >-
+    How long have we been watching movies about reality and how exciting it looks! You may not have noticed, but virtual reality is already in our lives, even our browsers. There are more and more ways to apply these technologies. Let's look at VR and AR and see how they look in real life. (This talk includes a lot of examples of using 3D in our life and an explanation of how it works using JavaScript)
+  descriptionJa: >-
+    TODO
+  spokenLanguage: en
+  slideLanguage: en
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - vasilika-klimova
+# 20
+- uuid: yulia-startsev-1
+  date: day1
+  startsAt: "10:45"
+  endsAt: "11:15"
+  room:A
+  # recordingUrl: ""
+  title: "There and back again: A Journey of a JavaScript feature."
+  titleJa: TODO
+  description: >-
+    How does an idea became part of the JavaScript language? Let’s follow a JavaScript feature from its initial specification to a complete implementation in the SpiderMonkey engine. You will learn about the standardization process, how to read the specification, and how to implement the feature yourself.
+
+    Let’s live code the feature together!
+  descriptionJa: >-
+    TODO
+  spokenLanguage: en
+  slideLanguage: en
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - yulia-startsev
+# 21
+- uuid: christoph-nakazawa-1
+  date: day1
+  startsAt: "13:30"
+  endsAt: "14:00"
+  room: A
+  # recordingUrl: ""
+  title: Game Development with JavaScript
+  titleJa: TODO
+  description: >-
+    Let's dive into how to build video games with JavaScript! This talk will guide beginners through some of the options for building video games with JavaScript and discuss the tradeoffs between traditional game engines and brand new JavaScript engines.
+  descriptionJa: >-
+    TODO
+  spokenLanguage: en
+  slideLanguage: en
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - christoph-nakazawa
+#
+# TODO: 重複しているので確認する
+#
+# 22
+#- uuid: daiki-nishikawa-1
+#  date: day1
+#  startsAt: "11:25"
+#  endsAt: "11:55"
+#  room: B
+#  # recordingUrl: ""
+#  title: Deep dive into Biome
+#  titleJa: TODO
+#  description: >-
+#    TODO
+#  descriptionJa: >-
+#    Biome は、Rome を fork して始まった Web 開発に必要なツールチェーンを開発するプロジェクトです。現在は、JavaScript、TypeScript、JSON の formatter や linter を提供しており、Vercel の新規プロダクトにも利用されています。
+#
+#    今回のトークでは、Biome の直近の開発体制やリリースを紹介しつつ、Rust で実装されている Biome の内部について詳しく解説します。コアコントリビューターの一人として、Rust でJavaScript に関するツールを作る面白さやコントリビュートを歓迎している雰囲気などを伝えられるトークをしたいと考えています。
+#
+#    現時点で具体的に考えている発表内容は次の通りです。
+#
+#    - Biome の直近の開発体制やリリースの紹介
+#        プロジェクトの governace をベースに開発体制について紹介します。直近のリリースの紹介に加えて、コアチーム内で進行中の実装 (CSSのサポートなど) の近況についても紹介します。
+#    - Biome の内部アーキテクチャの解説
+#        内部で利用されている CST (Concrete Syntax Tree) の特徴などについて紹介します。構文木は Rust の LSP (rust-analyzer) の実装で利用されている rowan をベースとしたものになっており、この点にも触れながら紹介するつもりです。
+#    - Biome での linter の実装例の紹介
+#        linter の実装方法について、簡単なルールを例に具体的なコードを紹介しながら解説します。
+#
+#    ---
+#
+#    参考リンク
+#
+#    - Biome: https://biomejs.dev/
+#    - Vercel のプロダクトで Biome が利用されているポスト：https://twitter.com/rauchg/status/1703177160943628660
+#    - Governance: https://github.com/biomejs/biome/blob/main/GOVERNANCE.md
+#    - Rowan: https://github.com/rust-analyzer/rowan
+#  spokenLanguage: ja
+#  slideLanguage: ja
+#  # sponsorIDs: [ xxx ]
+#  speakerIDs:
+#    - daiki-nishikawa
+
+# 23
+- uuid: wakamsha-1
+  date: day1
+  startsAt: "13:30"
+  endsAt: "14:00"
+  room: B
+  # recordingUrl: ""
+  title: TODO
+  titleJa: フロントエンドリアーキテクトとプロダクト開始チームのスキルトランスファーにおける9ヶ月間の奮闘記
+  description: >-
+    TODO
+  descriptionJa: >-
+    2023.1 から 2023.9 にかけて某 toB web アプリのリアーキテクトプロジェクトにフロントエンドのシステムアーキテクトとして参画し、技術選定から開発メンバーの育成、果ては包括的な開発プロセスの改善までと幅広く支援してきました（2023.6 現在も進行中）。そこでの奮闘で得られた学びと新たに浮き彫りとなった課題についてご紹介します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - wakamsha
+# 24
+- uuid: hajime-mugishima-1
+  date: day1
+  startsAt: "14:40"
+  endsAt: "15:20"
+  room: B
+  # recordingUrl: ""
+  title: TODO
+  titleJa: Next.js App Router でのMPAフロントエンド刷新
+  description: >-
+    TODO
+  descriptionJa: >-
+    現在フロントエンド領域では React Server Components とそれを利用する Next.js App Router が登場し、根底となるアプリケーション設計にも大きく影響を与えています。技術選定やマイグレーションの面でも悩みの多い過渡期を迎えていると思います。
+
+    そんな中、サイボウズで提供するプロダクト「サイボウズOffice」では、Next.js App Router を採用したフロントエンドの基盤刷新に取り組んでおり、すでに数画面のリリースを完了しています。
+
+    Next.js App Routerによって大きく変わったキャッシュ・テスト・エラーハンドリング・Server Actionsなどについて実際に現場で採用して得られた知見や課題に加え、認証を伴うMPAからの刷新の視点でNext.js App Routerがどのように扱えるかなどをご紹介します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - hajime-mugishima
+# 25
+- uuid: sosuke-suzuki-1
+  date: day1
+  startsAt: "15:30"
+  endsAt: "16:00"
+  room: B
+  # recordingUrl: ""
+  title: TODO
+  titleJa: 書いたJavaScriptがそのままブラウザで動く未来へ
+  escription: >-
+    TODO
+  descriptionJa: >-
+    リッチな体験を提供するフロントエンドアプリケーションを構築するとき、どのような技術を使いますか？今日では、Next.js や Nuxt.js や SvelteKit などの数多くの選択肢があります。これらの技術は、開発者体験の向上や、プロダクトのデリバリーの加速、ユーザー体験の改善など、多くのメリットをもたらしてくれます。
+
+    このような、いわゆるモダンなフレームワークたちの裏側には、TypeScriptやJSXや独自のテンプレート記法からJavaScriptへと変換を行う機能が隠れています。これらの機能によって、静的型に守られたプログラミングや、直感的なUIの記述が実現されています。
+
+    でも、思い出してください。実はJavaScriptは高級なプログラミング言語です。明らかに、人間のための機能がたくさんありますよね？しかし、それでは十分でないから、私たちはJavaScriptをコンパイルターゲットとして扱っているわけです。
+  spokenLanguage: ja
+  slideLanguage: ja
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - sosuke-suzuki
+# 26
+- uuid: yusuke-wada-1
+  date: day1
+  startsAt: "15:30"
+  endsAt: "16:00"
+  room: C
+  # recordingUrl: ""
+  title: Hono v3 and v4
+  titleJa: TODO
+  description: >-
+    TODO
+  descriptionJa: >-
+    Webフレームワーク「Hono」の v3は今年2月にリリースされ、現在までに新しい機能が導入されています。
+
+    型にこだわったValidator、革新的なRPCモード、新しいルーターの追加とプリセット、ホスト名によるルーティングの対応、Server-Timingミドルウェア、Secure Headersミドルウェア、Zodでスキーマを書くOpenAPI拡張、SSRをよりしやすくするc.render()、そして、ストリーミングのためのc.stream()。また、Node.jsアダプタもメジャーリリースとなり、サポートするプラットフォームはAWSも含め10種類以上となりました。
+
+    本トークではこれまであまり語られることのなかったHonoの最近のアップデートについて話します。また、次に予定されているv4への展望についても紹介します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - yusuke-wada
+# 27
+- uuid: masaki-suzuki-1
+  date: day1
+  startsAt: "16:00"
+  endsAt: "16:30"
+  room: B
+  # recordingUrl: ""
+  title: TODO
+  titleJa: Bunがメジャーリリースされたけど、本当にBunはNode.jsに取って代るほどすごいのか？をAWS Lambdaで検証してみた
+  description: >-
+    TODO
+  descriptionJa: >-
+    概要：
+    今年の9月上旬に、Bunが正式にメジャーリリースされました。
+    Bunは今までTypeScriptの開発で難解だった点をすべてこれ一つで解決でき、そして何よりNode.jsに比べてとにかく高速であることが売りであり、一部のブログやYouTubeでは「Node.jsの終焉」「Node.jsはオワコン」とまで言われています。
+
+    しかし、本当にそうなのでしょうか？
+
+    そこで、今回はAWS Lambdaを使用して、実際にWeb APIとしてBunとNode.jsを使用した際の結果を比較し、本当にNode.jsはBunによって終わってしまうのか、BunはNode.jsの代替になるのかをAWS Lambdaの観点で説明したいと思います。
+
+    その他、AWS LambdaでBunを使用する方法、およびその際の注意点、そして実際の開発でのユースケースなどを自分が使ってみた経験から説明したいと思います。
+  spokenLanguage: ja
+  slideLanguage: ja
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - masaki-suzuki
+# 28
+- uuid: canalun-1
+  date: day1
+  startsAt: "16:00"
+  endsAt: "16:30"
+  room: C
+  # recordingUrl: ""
+  title: TODO
+  titleJa: ゲーム「webページ崩し」の仕組み〜あなたの知らないDOMスクリプティングの世界〜
+  description: >-
+
+  descriptionJa: >-
+    一昔前の技術だと思われがちなDOMスクリプティング(DOMをブラウザのAPIで直接操作するプログラミング)は、PlaywrightやReactといったモダンなフロントエンドスタックを支える現役の重要な技術です。
+
+    本セッションでは、まさにブロック崩しのように、webページ上の要素にボールを当てて消していくゲーム「webページ崩し」(実際の動画: https://x.com/i_am_canalun/status/1707700748610629911) の実装に関する説明を通じて、実践的かつ高度なDOMスクリプティングについて取り扱います。
+
+    特に、下記の技術的詳細にスポットライトを当てながら、Playwrightが採用する要素探索の手法や、去年から一部のブラウザでサポートされた比較的最新のAPIなどなど、奥深くて興味深いDOMスクリプティングの世界にご案内いたします。
+
+    - Shadow DOMやiframeの中にある要素への当たり判定の実装
+    - visibilityやopacityだけでは実現できない、「要素がユーザーにとって見えているか」の判定
+    - ページレイアウトを極力保ちつつ外側の要素(DOMツリーの親要素)から順に消していく方法
+
+    そして何より「DOMってこんなに面白いんだ！」と思って頂ければ、これ以上のことはありません。
+  spokenLanguage: ja
+  slideLanguage: ja
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - canalun
+# 29
+- uuid: koji-ota-1
+  date: day1
+  startsAt: "16:40"
+  endsAt: "17:10"
+  room: B
+  # recordingUrl: ""
+  title: TODO
+  titleJa: PrivacySandboxAPIを使ったブラウザ上での広告オークションについて
+  description: >-
+    TODO
+  descriptionJa: >-
+    多くのブラウザで廃止されつつある3rd party cookieが担っていたユースケースを実現するためにPrivacySandboxというAPI群が実装されています。中でもweb広告のユースケースを実現するために、webブラウザ上で広告オーディションを実行するProtectedAudienceAPIという仕様があります。ブラウザ上での広告オークションの実行はユーザーのPrivacy情報を漏らさないようにauction workletという特殊な環境で実行されますが、auction workletの制約に加えてユーザーのWeb閲覧を妨げない高速なオークションロジックの実行も求められます。
+
+    本発表ではauction workletが持つ制約のポイントや、auction worklet環境下で開発/テストを行い、高速にオークションを実行するための方法について説明いたします。
+  spokenLanguage: ja
+  slideLanguage: ja
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - koji-ota
+# 30
+- uuid: kkeeth-1
+  date: day1
+  startsAt: "16:40"
+  endsAt: "17:10"
+  room: C
+  # recordingUrl: ""
+  title: Visually experience the beauty of mathematics with p5.js
+  titleJa: TODO
+  description: >-
+    There are also many books and videos out there that talk about the fun and beauty of mathematics, but have you ever felt its beauty? In this talk, I would like to approach this beauty visually in the context of art!
+  descriptionJa: >-
+    TODO
+  spokenLanguage: ja
+  slideLanguage: ja
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - kkeeth
+# 31
+- uuid: kateryna-porshnieva-1
+  date: day1
+  startsAt: "17:10"
+  endsAt: "17:40"
+  room: C
+  # recordingUrl: ""
+  title: Practical guide to building accessible forms in React
+  titleJa: TODO
+  description: >-
+    Web forms are crucial for user interaction on the web, and to ensure our products provide an inclusive experience for all, we need to build them with accessibility in mind. In this talk, we'll dive into best practices and practical tips for crafting accessible forms that won't leave anyone behind
+
+    We’ll start by diving into what accessibility is and how assistive technology works on the web. With this foundation, we’ll go through common patterns in forms and how to implement them accessibly. We’ll talk about: labelling, providing instructions, errors and validation, testing, managing focus, and more – all backed by practical examples.
+
+    ---------------
+
+    I added more info on this page about the outline and links to other talks I have given in the past:
+
+    https://krambertech.notion.site/Kateryna-s-Talk-for-JSConf-JP-3c5215aa64b84efd8e33e52dc9bea147?pvs=4
+  descriptionJa: >-
+    TODO
+  spokenLanguage: en
+  slideLanguage: en
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - kateryna-porshnieva
+# 32
+- uuid: azukiazusa-1
+  date: day1
+  startsAt: "19:40"
+  endsAt: "19:50"
+  room: A
+  # recordingUrl: ""
+  title: TODO
+  titleJa: JavaScript なしで動作するモダンなコードの書き方
+  description: >-
+    TODO
+  descriptionJa: >-
+    Next.js、Remix、SvelteKit といった近年のフレームワークは、JavaScript がなくても動作することを一つの価値として提供しています。
+
+    例えばSvelteKit のフォームではプログレッシブエンハンスメントとして、JavaScript が利用できる環境ではリッチなユーザー体験を提供しつつ、JavaScript が使えない環境においては HTML のフォームとして振る舞うことでアプリケーションの機能を変わらず提供できます。
+    React Server Component はサーバー側で HTML に変換されるため、クライアントに JavaScript のコードが配信されることはありません。React Server Component では `useState()` を使用できないといった制約がありますので、我々開発者は React Server Component の利点を十分に発揮するために、JavaScript を用いた状態管理を行う範囲を狭めることが求められています。
+
+    このトークでは、CSS の :has() セレクターや、Popover API といった、従来は JavaScript を用いなければ提供できなかった機能を代替する方法を紹介します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - azukiazusa
+# 33
+- uuid: josh-goldberg-1
+  date: day1
+  startsAt: "15:30"
+  endsAt: "16:00"
+  room: A
+  # recordingUrl: ""
+  title: "Static Analysis: Shockingly Awesome! ⚡️"
+  titleJa: TODO
+  description: >-
+    Wouldn’t you love to automatically zap code bugs before releasing to production? How about before your code even gets run? Static analysis tools scrutinize your code as you write it - giving you blazing fast feedback at development time. We’re going to go into how that works, why it’s useful, and -best of all- how to enable the best configurations for ESLint, TypeScript, and their associated tooling in your app.
+
+    In particular, we'll cover:
+    * The tooling differences between formatters, linters, and type checkers
+    * How to appropriately set up each of those tools for local development and CI/builds
+    * A brief overview of using recommended rulesets from ESLint and TypeScript-ESLint -- and why you'd want to
+    * The kinds of development-time issues each of those tools catch
+    * Using ESLint and TypeScript as documentation sources and to educate developers on best practices
+    * Demos of the -often surprisingly intricate- well-crafted static analysis tools can catch in your code
+
+    A primary goal of the talk is to get the audience excited about the tooling they can run on their code. This talk will have you detecting bugs, bad practices, and code smells in your web apps at lightning speed! ⚡️
+  descriptionJa: >-
+    TODO
+  spokenLanguage: ja
+  slideLanguage: ja
+  # sponsorIDs: [ xxx ]
+  speakerIDs:
+    - josh-goldberg
+
 
 #
 # 開場
