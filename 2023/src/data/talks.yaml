@@ -527,7 +527,7 @@
   date: day1
   startsAt: "10:45"
   endsAt: "11:15"
-  room:A
+  room: A
   # recordingUrl: ""
   title: "There and back again: A Journey of a JavaScript feature."
   titleJa: TODO
