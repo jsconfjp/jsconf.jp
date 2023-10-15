@@ -146,7 +146,7 @@
     TODO
 # 14
 - uuid: luca-mugnaini
-  name: luca-mugnaini
+  name: Luca Mugnaini
   featured: false
   presentations:
     - luca-mugnaini-1
@@ -154,3 +154,215 @@
     Luca is a software engineer at Rakuten. He is a passionate Functional Programming advocate. Originally from Italy, now living in Tokyo for several years.
   biographyJa: >-
     Luca is a software engineer at Rakuten. He is a passionate Functional Programming advocate. Originally from Italy, now living in Tokyo for several years.
+# 15
+- uuid: baseballyama
+  name: 山下 裕一朗 (baseballyama)
+  featured: false
+  presentations:
+    - baseballyama-1
+  biography: >-
+    TODO
+  biographyJa: >-
+    株式会社フライル のソフトウェアエンジニア。フロントエンドフレームワーク Svelte のメンテナ。Flyleは、製品開発・CXのためのニーズ分析からアイデア管理までを大きく効率化するVOC管理・製品企画クラウドです。
+# 16
+- uuid: poteboy
+  name: poteboy
+  featured: false
+  presentations:
+    - poteboy-1
+  biography: >-
+    The creator of [Kuma UI](https://kuma-ui.com). Frontend Tech Lead at THECOO, Inc.
+  biographyJa: >-
+    [Kuma UI](kuma-ui.com)の作者。普段はTHECOO株式会社でフロントエンドのテックリードしてます。
+# 17
+- uuid: yonatan-mevorach
+  name: Yonatan Mevorach
+  featured: false
+  presentations:
+    - yonatan-mevorach-1
+  biography: >-
+    Yonatan is a Team Lead at the Infrastructure group at Wix.com, where he is able to make his love for creating developer tools a part of his daily work. He also enjoys working on open-source developer tools, and blogs about them at blog.yonatan.dev.
+  biographyJa: >-
+    TODO
+# 18
+- uuid: ankur-datta
+  name: Ankur Datta
+  featured: false
+  presentations:
+    - ankur-datta-1
+  biography: >-
+    Ankur works as a developer advocate at Prisma. He has a background in full-stack development and enjoys tackling unconventional challenges. Ankur is passionate about learning and is always eager to explore new technologies. Besides tech, he enjoys outdoor activities such as playing football and traveling to new places.
+  biographyJa: >-
+    TODO
+# 19
+- uuid: vasilika-klimova
+  name: Vasilika Klimova
+  featured: false
+  presentations:
+    - vasilika-klimova-1
+  biography: >-
+    I have been a Web Developer for over 13 years (Frontend mostly, but also Fullstack). I had experience working as a single web developer, as a member of big teams in FinTech, and as a Team Lead of a small team.
+    I enjoyed working on web 3D projects, awesome animations, visualizations, and good infographics. I am a speaker & organizer of tech meetups and conferences. I helped many students at different schools with learning web development.  I like tech communities and modern technologies.
+    Last 6 years, I have been living in Luxembourg and holding a Luxembourg JavaScript meetup.  This year I started to work as a Developer Relations Engineer at Kadena.
+    My passion is 🎮 video/board games, 🏞️ traveling, 🤿 diving, animals (I have a red cat 🐈), and cinema 🎥. I collect children's books from different countries and Christmas tree decorations.
+  biographyJa: >-
+    TODO
+# 20
+- uuid: yulia-startsev
+  name: Yulia Startsev
+  featured: false
+  presentations:
+    - yulia-startsev-1
+  biography: >-
+    Yulia Startsev is the JavaScript language lead for the SpiderMonkey compiler at Mozilla. She served as a chair and is currently a facilitator for Ecma's TC39, the committee responsible the for design and development of the JavaScript language. She initiated and runs the TC39 research group, which applies HCI research techniques to JavaScript language features. She considers education and diversity fundamental to language design, and hopes that this talk will help people become part of the the discussion which defines the tools they use everyday.
+  biographyJa: >-
+    TODO
+# 21
+- uuid: christoph-nakazawa
+  name: Christoph Nakazawa
+  featured: false
+  presentations:
+    - christoph-nakazawa-1
+  biography: >-
+    Christoph is the CEO of Nakazawa Tech, an indie game studio and open source company that is currently building Athena Crisis.
+
+    Christoph is based in Tokyo. Originally from Austria, he's been creating video games and social networks since 2002, spent the 2010s at Facebook in Menlo Park and London managing JavaScript Infrastructure and the React Native team and he built Jest, Metro, Yarn, and MooTools.
+  biographyJa: >-
+    TODO
+
+# 22
+#- uuid: daiki-nishikawa
+#  name: Daiki Nishikawa
+#  featured: false
+#  presentations:
+#    - daiki-nishikawa-1
+#  biography: >-
+#    TODO
+#  biographyJa: >-
+#    Cybozu 株式会社のフロントエンドエンジニア。 入社してからは、kintone や Office のフロントエンド刷新プロジェクトに参加しています。学生時代から OSS コントリビューションが好きで、現在は Biome のコアコントリビューターとしても活動しています。
+
+# 23
+- uuid: wakamsha
+  name: wakamsha
+  featured: false
+  presentations:
+    - wakamsha-1
+  biography: >-
+    Hi, I'm a Programmer / web frontend engineer.
+
+    In particular, my areas of focus are: user interfaces, Single Page Applications, and JavaScript.
+  biographyJa: >-
+    TODO
+# 24
+- uuid: hajime-mugishima
+  name: Hajime Mugishima
+  featured: false
+  presentations:
+    - hajime-mugishima-1
+  biography: >-
+    TODO
+  biographyJa: >-
+    サイボウズ フロントエンドエキスパートチーム所属。プロダクト横断でフロントエンドの脱レガシーや技術啓発をしながら、探求活動の外部発信などを行っています。
+# 25
+- uuid: sosuke-suzuki
+  name: Sosuke Suzuki
+  featured: false
+  presentations:
+    - sosuke-suzuki-1
+  biography: >-
+    TODO
+  biographyJa: >-
+    筑波大学情報学群の学生で、Ubie株式会社のソフトウェアエンジニア。「テクノロジーで人々を適切な医療に案内する」ことを目指して、症状検索エンジン「ユビー」の開発に尽力している。JavaScriptのコードフォーマッタであるPrettierのメンテナとしても活動中。
+# 26
+- uuid: yusuke-wada
+  name: Yusuke Wada
+  featured: false
+  presentations:
+    - yusuke-wada-1
+  biography: >-
+    Developer Advocate@Cloudflare, Creator of Hono, Web framework developer
+  biographyJa: >-
+    TODO
+# 27
+- uuid: masaki-suzuki
+  name: 鈴木 正樹
+  featured: false
+  presentations:
+    - masaki-suzuki-1
+  biography: >-
+    TODO
+  biographyJa: >-
+    株式会社DeNAでクラウドアーキテクトをやってます。元々バックエンドエンジニアですが、最近は主にAWSのInfrastructure as CodeやCI/CDに携わっており、主にAWS CDK、その他Serverless Frameworkをよく使います。
+    開発言語&好きな言語はTypeScriptやNode.jsで、気が付けばもう5年近くこれらに携わっており、今でもAWS関連はすべてTypeScriptやNode.jsで開発しています。
+    AWS Community Builder(Serverless)
+# 28
+- uuid: canalun
+  name: canalun (Kanaru Sato)
+  featured: false
+  presentations:
+    - canalun-1
+  biography: >-
+    TODO
+  biographyJa: >-
+    ブラウザとDOMが大好きなソフトウェアエンジニアです！
+    仕事ではwebページ上の要素の探索や埋め込み、それにまつわるブラウザ/HTML/CSS/JSの仕様や挙動の深掘りをしています。
+# 29
+- uuid: koji-ota
+  name: Koji Ota
+  featured: false
+  presentations:
+    - koji-ota-1
+  biography: >-
+    TODO
+  biographyJa: >-
+    2022年から株式会社サイバーエージェントにてProtectedAudienceAPIを含めたPrivacySandboxの検証を行なっており、PrivacySandboxAPIの議論を行なっているWICGへフィードバックやIssueを提出したり、tech blogにてPrivacySandboxの記事を執筆したりしています。Webブラウザが大好きなソフトウェアエンジニアです。
+# 30
+- uuid: kkeeth
+  name: kkeeth
+  featured: false
+  presentations:
+    - kkeeth-1
+  biography: >-
+    Executive Officer/Technical Evangelist of Yumemi, Inc. He is working on strengthening technical branding, accelerating the hiring of engineers, and improving development productivity.
+  biographyJa: >-
+    TODO
+# 31
+- uuid: kateryna-porshnieva
+  name: Kateryna Porshnieva
+  featured: false
+  presentations:
+    - kateryna-porshnieva-1
+  biography: >-
+    Kateryna is an engineer from Ukraine with 10+ years of experience in UI development and design. She is passionate about accessible web, design systems and making complex things simple. Apart from work, she is active in tech community, organises board game nights and is known as a coffee snob.
+  biographyJa: >-
+    TODO
+# 32
+- uuid: azukiazusa
+  name: azukiazusa
+  featured: false
+  presentations:
+    - azukiazusa-1
+  biography: >-
+    TODO
+  biographyJa: >-
+    フロントエンドが好きな Web アプリケーションエンジニア
+# 33
+- uuid: josh-goldberg
+  name: Josh Goldberg
+  featured: false
+  presentations:
+    - josh-goldberg-1
+  biography: >-
+    Hi, I’m Josh! I’m an independent full time open source developer. I work on projects in the TypeScript ecosystem, most notably typescript-eslint: the tooling that enables ESLint and Prettier to run on TypeScript code. I’m also the author of the O’Reilly Learning TypeScript book, a Microsoft MVP for developer technologies, and an active conference speaker. My personal projects range from static analysis to meta-languages to recreating retro games in the browser. Also cats.
+  biographyJa: >-
+    TODO
+# 33
+- uuid: ryusei-sajiki
+  name: Ryusei Sajiki
+  featured: false
+  presentations:
+    - josh-goldberg-1
+  biography: >-
+    TODO
+  biographyJa: >-
+    サイボウズのフロントエンジニア。 業務では製品のフロントエンド刷新と製品チームへのフロントエンド技術支援を行っている。フロントエンド領域でも特にJavaScriptの仕様自体や構文解析などに興味がある。
