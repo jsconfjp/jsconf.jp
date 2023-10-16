@@ -27,6 +27,11 @@ export const theme: DefaultTheme = {
     header: "Lato",
     text: "Arial",
   },
+  fontSizes: {
+    hero: "6rem",
+    title: "4rem",
+    subTitle: "2.6rem",
+  },
   breakpoints: {
     mobile: "@media (max-width: 576px)",
     largerThanMobile: "@media (min-width: 577px)",

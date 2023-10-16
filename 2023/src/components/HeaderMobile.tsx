@@ -13,6 +13,7 @@ type Props = {
   siteTitle: string
   ticketUrl: string
   enableSpeakers: boolean
+  enableVenue: boolean
   enableSchedule: boolean
   enableSponsors: boolean
   onChangeLanguage: (lang: string) => void
@@ -87,6 +88,7 @@ export function InnerHeaderMobile(props: Props) {
     onChangeLanguage,
     ticketUrl,
     enableSpeakers,
+    enableVenue,
     enableSchedule,
     enableSponsors,
   } = props
@@ -143,6 +145,7 @@ export function InnerHeaderMobile(props: Props) {
           {enableSpeakers ? (
             <MenuItem to="/speakers/">{t("speakers")}</MenuItem>
           ) : null}
+          {enableVenue ? <MenuItem to="/venue/">{t("venue")}</MenuItem> : null}
           {enableSchedule ? (
             <MenuItem to="/schedule/">{t("schedule")}</MenuItem>
           ) : null}

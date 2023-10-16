@@ -5,9 +5,9 @@ import { useTranslation } from "react-i18next"
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
 import { Hero } from "../components/Hero"
-import { SubTitle } from "../components/SubTitle"
+import { Title } from "../components/Title"
 import { SpeakerList } from "../components/SpeakerList"
-// import { SponsorList } from "../components/SponsorList"
+import { SponsorList } from "../components/SponsorList"
 import { LinkButton } from "../components/LinkButton"
 import { Card as _Card } from "../components/Card"
 import { Centerize as _Centerize } from "../components/Centerize"
@@ -84,7 +84,6 @@ const SchedulesBox = styled.div`
     flex-direction: column;
   }
 `
-// @ts-expect-error to be updated
 const SponsorBox = styled.div`
   margin-top: 80px;
   padding: 100px 0;
@@ -101,7 +100,6 @@ export default function IndexPage() {
   const {
     site,
     allSpeakersYaml,
-    // @ts-expect-error to be updated
     allSponsorsYaml,
     allMembersYaml,
     allFile,
@@ -116,7 +114,7 @@ export default function IndexPage() {
           cfpDeadline
         }
       }
-      allSponsorsYaml {
+      allSponsorsYaml(filter: { ready: { eq: true } }) {
         edges {
           node {
             name
@@ -179,6 +177,7 @@ export default function IndexPage() {
     }
   `)
   const featuredSpeakers = allSpeakersYaml.edges.map(({ node }: any) => node)
+  const sponsors = allSponsorsYaml.edges.map(({ node }: any) => node)
   const talks = allTalksYaml.edges.map(({ node }: any) => node)
   const avatars = allFile.nodes
     .filter((avatar: any) => avatar.childImageSharp)
@@ -306,14 +305,14 @@ export default function IndexPage() {
               if (i % 2 !== 0) {
                 return (
                   <Card key={i}>
-                    <SubTitle>{subTitle}</SubTitle>
+                    <Title>{subTitle}</Title>
                     <Centerize>{render()}</Centerize>
                   </Card>
                 )
               }
               return (
                 <Centerize key={i}>
-                  <SubTitle>{subTitle}</SubTitle>
+                  <Title>{subTitle}</Title>
                   {render()}
                 </Centerize>
               )
@@ -322,7 +321,7 @@ export default function IndexPage() {
           <Centerize>
             {jnaMembers.length > 0 ? (
               <>
-                <SubTitle>{t("organizingTeam")}</SubTitle>
+                <Title>{t("organizingTeam")}</Title>
                 <OrganizersBox>
                   {jnaMembers.map(
                     ({ node: member }: { node: any }, i: number) => (
@@ -334,7 +333,7 @@ export default function IndexPage() {
             ) : null}
             {notJnaMembers.length > 0 ? (
               <>
-                <SubTitle>{t("volunteerTeam")}</SubTitle>
+                <Title>{t("volunteerTeam")}</Title>
                 <MembersBox>
                   {notJnaMembers.map(
                     ({ node: member }: { node: any }, i: number) => (
@@ -352,13 +351,13 @@ export default function IndexPage() {
           </Centerize>
         </Container>
 
-        {/* {sponsors.length > 0 ? (
+        {sponsors.length > 0 ? (
           <SponsorBox>
             <Centerize>
               <SponsorList sponsors={sponsors} showPrText={false} />
             </Centerize>
           </SponsorBox>
-        ) : null} */}
+        ) : null}
       </WavyBox>
     </Layout>
   )

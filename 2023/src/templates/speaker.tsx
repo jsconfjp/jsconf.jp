@@ -10,7 +10,6 @@ import { Title } from "../components/Title"
 import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
 import { SpeakerType, TalkType, AvatarType } from "../components/Speaker"
-import { SubTitle } from "../components/SubTitle"
 import { enOrJa } from "../util/languages"
 
 type Props = {
@@ -71,10 +70,11 @@ const TalkBox = styled.div`
     padding: 2em 1em;
   }
 `
-const TalkTitle = styled(SubTitle)`
+const TalkTitle = styled.h2`
+  text-transform: uppercase;
   font-family: ${({ theme }) => theme.fonts.header};
-  margin-bottom: 0.5em;
-  font-size: 2.4rem;
+  margin: 0 0 0.5em;
+  font-size: ${({ theme }) => theme.fontSizes.subTitle};
   text-align: left;
 `
 
