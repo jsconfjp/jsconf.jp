@@ -2,8 +2,8 @@ import fs from "fs"
 import path from "path"
 import * as XLSX from "xlsx"
 import * as YAML from "js-yaml"
-import fetch from "node-fetch"
-import imageType from "image-type"
+// import fetch from "node-fetch"
+// import imageType from "image-type"
 import chalk from "chalk"
 import changeCase from "change-case"
 import format from "./format"
@@ -57,7 +57,7 @@ const DIST_SPEAKERS = path.resolve(
   "data",
   "speakers.yaml"
 )
-const DIST_TALKS = path.resolve(__dirname, "..", "src", "data", "talks.yml")
+const DIST_TALKS = path.resolve(__dirname, "..", "src", "data", "talks.yaml")
 
 const [file] = process.argv.slice(2)
 if (!file) {
@@ -93,6 +93,7 @@ console.log(
   chalk.cyan(`Save speakers to ${path.relative(process.cwd(), DIST_SPEAKERS)}`)
 )
 
+/*
 const toPath = (uuid: string, ext: string) => {
   return path.join(
     __dirname,
@@ -139,6 +140,7 @@ Promise.all(
       )
     })
 )
+*/
 
 // Talks
 const mapTalks = (acc: Omit<Session, "date">[], row: TimetableRow) => {
@@ -168,7 +170,7 @@ const mapTalks = (acc: Omit<Session, "date">[], row: TimetableRow) => {
 }
 const addDate = (date: string) => (row: Omit<Session, "date">): Session => ({
   ...row,
-  date
+  date,
 })
 const notTalkIds = [
   "open",
