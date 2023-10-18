@@ -1,21 +1,3 @@
-# 1
-- uuid: mizchi-1
-  date: day1
-  startsAt: "13:00"
-  endsAt: "13:30"
-  room: B
-  # # recordingUrl: ""
-  title: TODO
-  titleJa: TODO
-  description: >-
-    "TODO"
-  descriptionJa: >-
-    "TODO"
-  spokenLanguage: ja
-  slideLanguage: ja
-  # sponsorIDs: [ xxx ]
-  speakerIDs:
-    - mizchi
 # 2
 - uuid: anirudh-sharma-1
   date: day1
