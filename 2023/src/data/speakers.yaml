@@ -1,16 +1,3 @@
-- uuid: anirudh-sharma
-  name: Anirudh Sharma
-  featured: false
-  presentations:
-    - anirudh-sharma-1
-  biography: >-
-    Anirudh Sharma is an engineering undergrad with more than three years of
-    experience in full stack development and JavaScript ecosystem. He is a Major
-    League Hacking Fellow, Postman Student Leader and a part of TensorFlow.js
-    Working Group. He loves to share his knowledge and experiences through
-    blogs, developer conferences and is interested about everything around Web
-    and DevOps.
-  location: on-site
 - uuid: aakansha
   name: Aakansha
   featured: false
@@ -28,17 +15,6 @@
   github: ad1992
   homepage: https://aakansha.dev
   location: on-site
-- uuid: akfm-sato
-  name: akfm_sato
-  featured: false
-  presentations:
-    - akfm-sato-1
-  biography: Web application developer interested in Rust / Typescript.
-  biographyJa: フリーランスを経て現在は株式会社リクルート在籍。RustとTypescriptが好きで、最近はNext.jsのApp Routerに熱中してる。
-  twitter: akfm_sato
-  github: akifumisato
-  homepage: https://akfm.dev
-  location: on-site
 - uuid: aileen-villanueva-lecuona
   name: Aileen Villanueva Lecuona
   featured: false
@@ -52,6 +28,30 @@
     community and fostering diversity in the tech industry.
   twitter: aileenvl
   github: aileenvl
+  location: on-site
+- uuid: akfm-sato
+  name: akfm_sato
+  featured: false
+  presentations:
+    - akfm-sato-1
+  biography: Web application developer interested in Rust / Typescript.
+  biographyJa: フリーランスを経て現在は株式会社リクルート在籍。RustとTypescriptが好きで、最近はNext.jsのApp Routerに熱中してる。
+  twitter: akfm_sato
+  github: akifumisato
+  homepage: https://akfm.dev
+  location: on-site
+- uuid: anirudh-sharma
+  name: Anirudh Sharma
+  featured: false
+  presentations:
+    - anirudh-sharma-1
+  biography: >-
+    Anirudh Sharma is an engineering undergrad with more than three years of
+    experience in full stack development and JavaScript ecosystem. He is a Major
+    League Hacking Fellow, Postman Student Leader and a part of TensorFlow.js
+    Working Group. He loves to share his knowledge and experiences through
+    blogs, developer conferences and is interested about everything around Web
+    and DevOps.
   location: on-site
 - uuid: ankur-datta
   name: Ankur Datta
@@ -86,6 +86,15 @@
 
     大きく効率化するVOC管理・製品企画クラウドです。
   location: on-site
+- uuid: canalun
+  name: canalun (Kanaru Sato)
+  featured: false
+  presentations:
+    - canalun-1
+  biographyJa: |-
+    ブラウザとDOMが大好きなソフトウェアエンジニアです！
+    仕事ではwebページ上の要素の探索や埋め込み、それにまつわるブラウザ/HTML/CSS/JSの仕様や挙動の深掘りをしています。
+  location: on-site
 - uuid: christoph-nakazawa
   name: Christoph Nakazawa
   featured: false
@@ -104,15 +113,6 @@
   github: cpojer
   homepage: https://nakazawa.dev
   location: on-site
-- uuid: canalun
-  name: canalun (Kanaru Sato)
-  featured: false
-  presentations:
-    - canalun-1
-  biographyJa: |-
-    ブラウザとDOMが大好きなソフトウェアエンジニアです！
-    仕事ではwebページ上の要素の探索や埋め込み、それにまつわるブラウザ/HTML/CSS/JSの仕様や挙動の深掘りをしています。
-  location: on-site
 - uuid: daiki-nishikawa
   name: Daiki Nishikawa
   featured: false
@@ -125,6 +125,15 @@
   twitter: nissy_dev
   github: nissy-dev
   location: on-site
+- uuid: hajime-mugishima
+  name: Hajime Mugishima
+  featured: false
+  presentations:
+    - hajime-mugishima-1
+  biographyJa: サイボウズ フロントエンドエキスパートチーム所属。プロダクト横断でフロントエンドの脱レガシーや技術啓発をしながら、探求活動の外部発信などを行っています。
+  twitter: mugi_uno
+  github: mugi-uno
+  location: on-site
 - uuid: himeno-kosei
   name: Himenon
   featured: false
@@ -135,13 +144,6 @@
   twitter: himenoglyph
   github: Himenon
   homepage: https://himenon.github.io
-  location: on-site
-- uuid: hajime-mugishima
-  name: Hajime Mugishima
-  featured: false
-  presentations:
-    - hajime-mugishima-1
-  biographyJa: サイボウズ フロントエンドエキスパートチーム所属。プロダクト横断でフロントエンドの脱レガシーや技術啓発をしながら、探求活動の外部発信などを行っています。
   location: on-site
 - uuid: jon-zhang
   name: Jon Zhang
@@ -172,6 +174,17 @@
   github: JoshuaKGoldberg
   homepage: https://www.joshuakgoldberg.com
   location: remote
+- uuid: kateryna-porshnieva
+  name: Kateryna Porshnieva
+  featured: false
+  presentations:
+    - kateryna-porshnieva-1
+  biography: >-
+    Kateryna is an engineer from Ukraine with 10+ years of experience in UI
+    development and design. She is passionate about accessible web, design
+    systems and making complex things simple. Apart from work, she is active in
+    tech community, organises board game nights and is known as a coffee snob.
+  location: on-site
 - uuid: kenneth-rohde-christiansen
   name: Kenneth Rohde Christiansen
   featured: false
@@ -210,16 +223,6 @@
     contributing to various open source projects (OWASP).
   twitter: KianJamali
   location: on-site
-- uuid: koji-ota
-  name: Koji Ota
-  featured: false
-  presentations:
-    - koji-ota-1
-  biographyJa: >-
-    2022年から株式会社サイバーエージェントにてProtectedAudienceAPIを含めたPrivacySandboxの検証を行なっており、PrivacySandboxAPIの議論を行なっているWICGへフィードバックやIssueを提出したり、tech
-    blogにてPrivacySandboxの記事を執筆したりしています。Webブラウザが大好きなソフトウェアエンジニアです。
-  github: k-o-ta
-  location: on-site
 - uuid: kkeeth
   name: kkeeth
   featured: false
@@ -230,16 +233,15 @@
     strengthening technical branding, accelerating the hiring of engineers, and
     improving development productivity.
   location: on-site
-- uuid: kateryna-porshnieva
-  name: Kateryna Porshnieva
+- uuid: koji-ota
+  name: Koji Ota
   featured: false
   presentations:
-    - kateryna-porshnieva-1
-  biography: >-
-    Kateryna is an engineer from Ukraine with 10+ years of experience in UI
-    development and design. She is passionate about accessible web, design
-    systems and making complex things simple. Apart from work, she is active in
-    tech community, organises board game nights and is known as a coffee snob.
+    - koji-ota-1
+  biographyJa: >-
+    2022年から株式会社サイバーエージェントにてProtectedAudienceAPIを含めたPrivacySandboxの検証を行なっており、PrivacySandboxAPIの議論を行なっているWICGへフィードバックやIssueを提出したり、tech
+    blogにてPrivacySandboxの記事を執筆したりしています。Webブラウザが大好きなソフトウェアエンジニアです。
+  github: k-o-ta
   location: on-site
 - uuid: luca-mugnaini
   name: Luca Mugnaini

@@ -128,14 +128,19 @@
   description: >-
     React Server Components have emerged as a game-changing technology,
     revolutionizing how we build data-driven apps and challenging the
-    traditional role of backend applications. This talk will explore how React
-    Server Components are transforming the landscape by enabling front-end apps
-    with persistent database connections. We will dive into the power of React
-    Server Components, their seamless integration with back-ends, and the
-    utilization of Prisma to streamline data access. Join me to discover how
-    this combination of technologies can eliminate the need for traditional
-    back-end architectures, paving the way for a new era of efficient and
-    scalable web development.
+    traditional role of backend applications. 
+
+
+    This talk will explore how React Server Components are transforming the
+    landscape by enabling front-end apps with persistent database connections.
+    We will dive into the power of React Server Components, their seamless
+    integration with back-ends, and the utilization of Prisma ORM to streamline
+    data access. 
+
+
+    Join me to discover how this combination of technologies can eliminate the
+    need for traditional back-end architectures, paving the way for a new era of
+    efficient and scalable web development.
 
 
     Table of Contents:
@@ -143,22 +148,25 @@
 
     1. Introduction
         - Brief overview of React Server Components and their impact on frontend development.
-    2. Understanding Data-Driven Apps
-        - Exploring the concept of data-driven apps and their requirements for persistent database connections.
-    3. React Server Components: The New Paradigm
+    2. React Server Components: The New Paradigm
         - Deep dive into React Server Components and their ability to handle data-fetching, rendering, and state management on the front-end.
-    4. The Back-end Killer: Implications for Backend Applications
+    3. The Back-end Killer: Implications for Backend Applications
         - Examining the impact of React Server Components on traditional backend architectures.
         - Demonstrating advantages such as reduced latency and simplified development workflows.
-    5. Streamlining Data Access with Prisma
-        - Introducing Prisma as a powerful tool for efficient data access and manipulation.
+    4. Understanding Data-Driven Apps as a Frontend Developer
+        - Exploring the concept of data-driven apps and their requirements for persistent database connections.
+        - Challenges for frontend devs in the data layer
+            - Relational vs object-oriented
+            - Persistence
+            - Data modeling
+    5. Streamlining Data Access with Prisma ORM
+        - Introducing Prisma ORM as a powerful tool for efficient data access and manipulation.
         - Exploring its integration with React Server Components for seamless database connections.
-    6. Real-World Examples and Case Studies
-        - Showcasing organizations that have embraced React Server Components and Prisma, highlighting their benefits and success stories.
-    7. Challenges and Considerations
-        - Discussing potential challenges and considerations when adopting React Server Components and Prisma.
-    8. Future of Web Development: Efficient and Scalable
-        - Reflecting on the potential of React Server Components and the elimination of traditional backend architectures.
+    6. Real-World Examples and Case Studies -> talk about personal experience
+    (RSCs, Next.js API routes / SSR / SSG are in the same bucket)
+        - Showcasing organizations that have embraced React Server Components and Prisma ORM, highlighting their benefits and success stories.
+    7. Further Considerations
+        - Discussing potential challenges and considerations when adopting React Server Components; use cases not being covered by RSCs
     9. Conclusion
         - Recap of key points and takeaways from the talk.
   spokenLanguage: en
