@@ -28,7 +28,7 @@
     "gatsby-plugin-sharp": "5.10.0",
     "gatsby-source-filesystem": "5.10.0",
     "gatsby-transformer-sharp": "5.10.0",
-    "i18next": "22.5.0",
+    "i18next": "22.5.1",
     "i18next-browser-languagedetector": "7.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
