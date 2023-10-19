@@ -18,7 +18,7 @@ import { Dates, times, Rooms, rooms } from "../util/misc"
 import { enOrJa } from "../util/languages"
 
 const dummyTrack = String.fromCharCode(
-  rooms[rooms.length - 1].charCodeAt(0) + 1
+  rooms[rooms.length - 1].charCodeAt(0) + 1,
 ) as Rooms
 const Grid = styled.div<{ startsAt: Date; endsAt: Date }>`
   display: grid;
@@ -95,8 +95,8 @@ const Text = styled.span`
 
 export default function SchedulePage() {
   const { t, i18n } = useTranslation()
-  const { allSpeakersYaml, allSponsorsYaml, allTalksYaml } =
-    useStaticQuery(graphql`
+  const { allSpeakersYaml, allSponsorsYaml, allTalksYaml } = useStaticQuery(
+    graphql`
       query {
         allSpeakersYaml {
           edges {
@@ -129,7 +129,6 @@ export default function SchedulePage() {
               spokenLanguage
               slideLanguage
               speakerIDs
-              sponsorIDs
               startsAt
               endsAt
               room
@@ -138,9 +137,10 @@ export default function SchedulePage() {
           }
         }
       }
-    `)
+    `,
+  )
   const speakers: SpeakerType[] = allSpeakersYaml.edges.map(
-    ({ node }: any) => node
+    ({ node }: any) => node,
   )
   const sponsors: any[] = allSponsorsYaml.edges.map(({ node }: any) => node)
   const talks: TalkType[] = allTalksYaml.edges.map(({ node }: any) => node)
@@ -175,7 +175,7 @@ export default function SchedulePage() {
         {days.map(day => {
           const { startsAt, endsAt } = times[day]
           const sessions = flatten(
-            timetable[day].map(({ sessions }) => sessions)
+            timetable[day].map(({ sessions }) => sessions),
           )
           return (
             <React.Fragment key={day}>

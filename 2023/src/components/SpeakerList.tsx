@@ -28,11 +28,11 @@ export function SpeakerList(props: Props) {
       ...acc,
       [talk.uuid]: talk as TalkType,
     }),
-    {}
+    {},
   )
   const avatarMap: { [uuid: string]: AvatarType } = avatars.reduce(
     (acc, avatar) => ({ ...acc, [avatar.uuid]: avatar }),
-    {}
+    {},
   )
   const items = speakers
     .filter(speaker => {

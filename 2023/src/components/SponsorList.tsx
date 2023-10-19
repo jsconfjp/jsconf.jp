@@ -45,7 +45,7 @@ export function SponsorList(props: Props) {
       ...acc,
       [sponsor.grade]: (acc[sponsor.grade] ?? []).concat([sponsor]),
     }),
-    {} as { [K in SponsorType["grade"]]?: SponsorType[] }
+    {} as { [K in SponsorType["grade"]]?: SponsorType[] },
   )
 
   return (

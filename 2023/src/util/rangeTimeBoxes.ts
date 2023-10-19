@@ -7,7 +7,7 @@ const zeroFill = (num: number, digits: number) =>
 export const rangeTimeBoxes = (
   everyMinutes: number,
   startHours: number,
-  endHours: number
+  endHours: number,
 ) => {
   const timeboxes = []
   for (

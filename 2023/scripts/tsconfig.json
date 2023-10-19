@@ -1,9 +1,8 @@
 {
-  "exclude": ["scripts"],
   "compilerOptions": {
     "incremental": true,
-    "target": "es5",
-    "module": "commonjs",
+    "target": "ESNext",
+    "module": "ESNext",
     "jsx": "react",
     "removeComments": false,
     "downlevelIteration": true,

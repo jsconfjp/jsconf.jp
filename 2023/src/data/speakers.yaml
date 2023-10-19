@@ -1,8 +1,402 @@
-# 1
-- uuid: xxx
-  name: YYY
+- uuid: anirudh-sharma
+  name: Anirudh Sharma
   featured: false
   presentations:
-    - xxx
-  biography: ""
-  biographyJa: ""
+    - anirudh-sharma-1
+  biography: >-
+    Anirudh Sharma is an engineering undergrad with more than three years of
+    experience in full stack development and JavaScript ecosystem. He is a Major
+    League Hacking Fellow, Postman Student Leader and a part of TensorFlow.js
+    Working Group. He loves to share his knowledge and experiences through
+    blogs, developer conferences and is interested about everything around Web
+    and DevOps.
+  location: on-site
+- uuid: aakansha
+  name: Aakansha
+  featured: false
+  presentations:
+    - aakansha-1
+  biography: >-
+    Aakansha is FOSS enthusiast, Javascript, and React fan. She is one of the
+    core maintainers of Excalidraw. She leads the FOSS United meetups in
+    Bangalore. She is a big foodie, and loves traveling and spending time with
+    her family.
+
+
+    Fun Fact: She broke GitHub with her first PR of ~5k lines of code
+  twitter: aakansha1216
+  github: ad1992
+  homepage: https://aakansha.dev
+  location: on-site
+- uuid: akfm-sato
+  name: akfm_sato
+  featured: false
+  presentations:
+    - akfm-sato-1
+  biography: Web application developer interested in Rust / Typescript.
+  biographyJa: フリーランスを経て現在は株式会社リクルート在籍。RustとTypescriptが好きで、最近はNext.jsのApp Routerに熱中してる。
+  twitter: akfm_sato
+  github: akifumisato
+  homepage: https://akfm.dev
+  location: on-site
+- uuid: aileen-villanueva-lecuona
+  name: Aileen Villanueva Lecuona
+  featured: false
+  presentations:
+    - aileen-villanueva-lecuona-1
+  biography: >-
+    My background includes 8 years experience in Web development and currently
+    venturing into Machine Learning, I am deeply passionate about empowering and
+    inspiring others, which is why I proudly serve as a Women Techmaker
+    Ambassador, dedicated to sharing my knowledge and experiences with the
+    community and fostering diversity in the tech industry.
+  twitter: aileenvl
+  github: aileenvl
+  location: on-site
+- uuid: ankur-datta
+  name: Ankur Datta
+  featured: false
+  presentations:
+    - ankur-datta-1
+  biography: >-
+    Ankur works as a developer advocate at Prisma. He has a background in
+    full-stack development and enjoys tackling unconventional challenges. Ankur
+    is passionate about learning and is always eager to explore new
+    technologies. Besides tech, he enjoys outdoor activities such as playing
+    football and traveling to new places.
+  location: remote
+- uuid: azukiazusa
+  name: azukiazusa
+  featured: false
+  presentations:
+    - azukiazusa-1
+  biographyJa: フロントエンドが好きな Web アプリケーションエンジニア
+  twitter: azukiazusa9
+  github: azukiazusa1
+  homepage: https://azukiazusa.dev
+  location: on-site
+- uuid: baseballyama
+  name: 山下 裕一朗 (baseballyama)
+  featured: false
+  presentations:
+    - baseballyama-1
+  biographyJa: >-
+    株式会社フライル のソフトウェアエンジニア。フロントエンドフレームワーク Svelte
+    のメンテナ。Flyleは、製品開発・CXのためのニーズ分析からアイデア管理までを
+
+    大きく効率化するVOC管理・製品企画クラウドです。
+  location: on-site
+- uuid: christoph-nakazawa
+  name: Christoph Nakazawa
+  featured: false
+  presentations:
+    - christoph-nakazawa-1
+  biography: >-
+    Christoph is the CEO of Nakazawa Tech, an indie game studio and open source
+    company that is currently building Athena Crisis.
+
+
+    Christoph is based in Tokyo. Originally from Austria, he's been creating
+    video games and social networks since 2002, spent the 2010s at Facebook in
+    Menlo Park and London managing JavaScript Infrastructure and the React
+    Native team and he built Jest, Metro, Yarn, and MooTools.
+  twitter: cpojer
+  github: cpojer
+  homepage: https://nakazawa.dev
+  location: on-site
+- uuid: canalun
+  name: canalun (Kanaru Sato)
+  featured: false
+  presentations:
+    - canalun-1
+  biographyJa: |-
+    ブラウザとDOMが大好きなソフトウェアエンジニアです！
+    仕事ではwebページ上の要素の探索や埋め込み、それにまつわるブラウザ/HTML/CSS/JSの仕様や挙動の深掘りをしています。
+  location: on-site
+- uuid: daiki-nishikawa
+  name: Daiki Nishikawa
+  featured: false
+  presentations:
+    - daiki-nishikawa-1
+  biographyJa: >-
+    サイボウズ株式会社のフロントエンドエンジニア。 入社してからは、kintone や Office
+    のフロントエンド刷新プロジェクトに参加しています。学生時代から OSS コントリビューションが好きで、現在は Biome
+    のコアコントリビューターとしても活動しています。
+  twitter: nissy_dev
+  github: nissy-dev
+  location: on-site
+- uuid: himeno-kosei
+  name: Himenon
+  featured: false
+  presentations:
+    - himeno-kosei-1
+  biographyJa: >-
+    Webフロントエンドの周辺に生息しているソフトウェアエンジニア。常に「画面からでろ」と自分言い聞かせて早数年。株式会社ハイヤールーでコードを書いています。
+  twitter: himenoglyph
+  github: Himenon
+  homepage: https://himenon.github.io
+  location: on-site
+- uuid: hajime-mugishima
+  name: Hajime Mugishima
+  featured: false
+  presentations:
+    - hajime-mugishima-1
+  biographyJa: サイボウズ フロントエンドエキスパートチーム所属。プロダクト横断でフロントエンドの脱レガシーや技術啓発をしながら、探求活動の外部発信などを行っています。
+  location: on-site
+- uuid: jon-zhang
+  name: Jon Zhang
+  featured: false
+  presentations:
+    - jon-zhang-1
+  biography: >-
+    Jon has been a software engineer at Meta for 5 years, working in Growth
+    teams to grow experiences and products across both Instagram and Facebook
+    before stepping into his current role as TL of the growth team. He is based
+    in NYC, but originally grew up in New Jersey and finds joy in board games
+    and well-crafted cocktails.
+  location: remote
+- uuid: josh-goldberg
+  name: Josh Goldberg
+  featured: false
+  presentations:
+    - josh-goldberg-1
+  biography: >-
+    Hi, I’m Josh! I’m an independent full time open source developer. I work on
+    projects in the TypeScript ecosystem, most notably typescript-eslint: the
+    tooling that enables ESLint and Prettier to run on TypeScript code. I’m also
+    the author of the O’Reilly Learning TypeScript book, a Microsoft MVP for
+    developer technologies, and an active conference speaker. My personal
+    projects range from static analysis to meta-languages to recreating retro
+    games in the browser. Also cats.
+  twitter: JoshuaKGoldberg
+  github: JoshuaKGoldberg
+  homepage: https://www.joshuakgoldberg.com
+  location: remote
+- uuid: kenneth-rohde-christiansen
+  name: Kenneth Rohde Christiansen
+  featured: false
+  presentations:
+    - kenneth-rohde-christiansen-1
+  biography: >-
+    Web Platform Architect and Principal Engineer at Intel Corporation, W3C
+    Technical Architecture Group alumni
+
+
+    Kenneth Rohde Christiansen is a Danish software engineer and architect,
+    specialized in mobile and web technology. Working at Intel out of
+    Copenhagen, Kenneth helps define Intel’s strategy and plans regarding the
+    Web Platform, as well as puts it into action.
+
+
+    Before joining Intel, Kenneth was employed by Nokia (Denmark and Brazil)
+    where he worked on the Nokia N9 web browser, Qt, WebKit, as well as many
+    other mobile projects. Kenneth is an elected member of the W3C Technical
+    Architect Group (TAG).
+
+
+    Currently working on extending Progressive Web Apps with more native
+    capabilities as part of Project Fugu
+  twitter: kennethrohde
+  github: kenchris
+  location: on-site
+- uuid: kian-jamali
+  name: Kian Jamali
+  featured: false
+  presentations:
+    - kian-jamali-1
+  biography: >-
+    Application security engineer working for Google in the Information Security
+    team. I am mostly interested in web, crypto, and fuzzing. I enjoy CTFs and
+    contributing to various open source projects (OWASP).
+  twitter: KianJamali
+  location: on-site
+- uuid: koji-ota
+  name: Koji Ota
+  featured: false
+  presentations:
+    - koji-ota-1
+  biographyJa: >-
+    2022年から株式会社サイバーエージェントにてProtectedAudienceAPIを含めたPrivacySandboxの検証を行なっており、PrivacySandboxAPIの議論を行なっているWICGへフィードバックやIssueを提出したり、tech
+    blogにてPrivacySandboxの記事を執筆したりしています。Webブラウザが大好きなソフトウェアエンジニアです。
+  github: k-o-ta
+  location: on-site
+- uuid: kkeeth
+  name: kkeeth
+  featured: false
+  presentations:
+    - kkeeth-1
+  biography: >-
+    Executive Officer/Technical Evangelist of Yumemi, Inc. He is working on
+    strengthening technical branding, accelerating the hiring of engineers, and
+    improving development productivity.
+  location: on-site
+- uuid: kateryna-porshnieva
+  name: Kateryna Porshnieva
+  featured: false
+  presentations:
+    - kateryna-porshnieva-1
+  biography: >-
+    Kateryna is an engineer from Ukraine with 10+ years of experience in UI
+    development and design. She is passionate about accessible web, design
+    systems and making complex things simple. Apart from work, she is active in
+    tech community, organises board game nights and is known as a coffee snob.
+  location: on-site
+- uuid: luca-mugnaini
+  name: Luca Mugnaini
+  featured: false
+  presentations:
+    - luca-mugnaini-1
+  biography: >-
+    Luca is a software engineer at Rakuten. He is a passionate Functional
+    Programming advocate. Originally from Italy, now living in Tokyo for several
+    years.
+  twitter: luca_mug
+  github: lucamug
+  homepage: https://lucamug.guupa.com
+  location: on-site
+- uuid: masaki-suzuki
+  name: 鈴木 正樹
+  featured: false
+  presentations:
+    - masaki-suzuki-1
+  biographyJa: >-
+    株式会社DeNAでクラウドアーキテクトをやってます。元々バックエンドエンジニアですが、最近は主にAWSのInfrastructure as
+    CodeやCI/CDに携わっており、主にAWS CDK、その他Serverless Frameworkをよく使います。
+
+    開発言語＆好きな言語はTypeScriptやNode.jsで、気が付けばもう5年近くこれらに携わっており、今でもAWS関連はすべてTypeScriptやNode.jsで開発しています。
+
+    AWS Community Builder(Serverless)
+  location: on-site
+- uuid: peter-eijgermans
+  name: Peter Eijgermans
+  featured: false
+  presentations:
+    - peter-eijgermans-1
+  biography: >-
+    Peter Eijgermans is a long-time software developer and an adventurous and
+    passionate CodeSmith Frontend at Ordina Netherlands. He likes to travel
+    around the world with his bike. Always seeking for the unexpected and
+    unknown. For his job he tries out the latest techniques and frameworks. He
+    loves to share his experience by speaking at conferences all over the World
+    and writing for the Dutch Java magazine and DZone. He believes that you as
+    the front-end developer are the spider in the web to bring the user, the
+    team and the product together.
+  twitter: EijgermansPeter
+  github: petereijgermans11
+  homepage: https://petereijgermans11.github.io/portfolio
+  location: on-site
+- uuid: poteboy
+  name: poteboy
+  featured: false
+  presentations:
+    - poteboy-1
+  biography: >-
+    The creator of [Kuma UI](https://kuma-ui.com). Frontend Tech Lead at THECOO,
+    Inc.
+  biographyJa: "[Kuma UI](kuma-ui.com)の作者。普段はTHECOO株式会社でフロントエンドのテックリードしてます。"
+  twitter: _poteboy_
+  github: poteboy
+  location: on-site
+- uuid: ryusei-sajiki
+  name: Ryusei Sajiki
+  featured: false
+  presentations:
+    - ryusei-sajiki-1
+  biographyJa: >-
+    サイボウズのフロントエンジニア。
+
+    業務では製品のフロントエンド刷新と製品チームへのフロントエンド技術支援を行っている。フロントエンド領域でも特にJavaScriptの仕様自体や構文解析などに興味がある。
+  twitter: sajikix
+  github: sajikix
+  homepage: https://sajiki.dev
+  location: on-site
+- uuid: sosuke-suzuki
+  name: Sosuke Suzuki
+  featured: false
+  presentations:
+    - sosuke-suzuki-1
+  biographyJa: >-
+    筑波大学情報学群の学生で、Ubie株式会社のソフトウェアエンジニア。「テクノロジーで人々を適切な医療に案内する」ことを目指して、症状検索エンジン「ユビー」の開発に尽力している。JavaScriptのコードフォーマッタであるPrettierのメンテナとしても活動中。
+  location: on-site
+- uuid: takuto-wada
+  name: 和田卓人
+  featured: false
+  presentations:
+    - takuto-wada-1
+  biographyJa: >-
+    和田卓人 （わだ たくと） プログラマ、テスト駆動開発者
+
+
+    学生時代にソフトウェア工学を学び、オブジェクト指向分析/設計に傾倒。執筆活動や講演、ハンズオンイベントなどを通じてテスト駆動開発を広めようと努力している。
+    『プログラマが知るべき97のこと』（オライリージャパン、2010）監修。『SQLアンチパターン』（オライリージャパン、2013）監訳。『テスト駆動開発』（オーム社、2017）翻訳。『事業をエンジニアリングする技術者たち』（ラムダノート、2022）編者。テストライブラリ
+    power-assert-js 作者。
+  twitter: t_wada
+  github: twada
+  location: on-site
+- uuid: vasilika-klimova
+  name: Vasilika Klimova
+  featured: false
+  presentations:
+    - vasilika-klimova-1
+  biography: "I have been a Web Developer for over 13 years (Frontend mostly, but also Fullstack).\LI had experience working as a single web developer, as a member of big teams in FinTech, and as a Team Lead of a small team.\nI enjoyed working on web 3D projects, awesome animations, visualizations, and good infographics. I am a speaker & organizer of tech meetups and conferences. I helped many students at different schools with learning web development. \LI like tech communities and modern technologies.\nLast 6 years, I have been living in Luxembourg and holding a Luxembourg JavaScript meetup.\L This year I started to work as a Developer Relations Engineer at Kadena.\nMy passion is 🎮 video/board games, 🏞️ traveling, 🤿 diving, animals (I have a red cat 🐈), and cinema 🎥. I collect children's books from different countries and Christmas tree decorations."
+  location: on-site
+- uuid: wakamsha
+  name: wakamsha
+  featured: false
+  presentations:
+    - wakamsha-1
+  biographyJa: web フロントエンド・ディベロッパー。SPA 開発から車輪の再発明まで。最近は開発プロセスの改善に取り組むことが多い。
+  twitter: wakamsha
+  github: wakamsha
+  homepage: https://wakamsha.net
+  location: on-site
+- uuid: yamanoku
+  name: やまのく
+  featured: false
+  presentations:
+    - yamanoku-1
+  biographyJa: 一児の父です。ゴールデンレトリバーと3匹の猫を飼ってます。
+  twitter: yamanoku
+  github: yamanoku
+  homepage: https://yamanoku.net
+  location: on-site
+- uuid: yonatan-mevorach
+  name: Yonatan Mevorach
+  featured: false
+  presentations:
+    - yonatan-mevorach-1
+  biography: >-
+    Yonatan is a Team Lead at the Infrastructure group at Wix.com, where he is
+    able to make his love for creating developer tools a part of his daily work.
+    He also enjoys working on open-source developer tools, and blogs about them
+    at blog.yonatan.dev.
+  location: on-site
+- uuid: yulia-startsev
+  name: Yulia Startsev
+  featured: false
+  presentations:
+    - yulia-startsev-1
+  biography: >-
+    Yulia Startsev is the JavaScript language lead for the SpiderMonkey compiler
+    at Mozilla. She served as a chair and is currently a facilitator for Ecma's
+    TC39, the committee responsible the for design and development of the
+    JavaScript language. She initiated and runs the TC39 research group, which
+    applies HCI research techniques to JavaScript language features. She
+    considers education and diversity fundamental to language design, and hopes
+    that this talk will help people become part of the the discussion which
+    defines the tools they use everyday.
+  github: codehag
+  mastodon: https://mozilla.social/@codehag
+  homepage: https://hag.codes
+  location: on-site
+- uuid: yusuke-wada
+  name: Yusuke Wada
+  featured: false
+  presentations:
+    - yusuke-wada-1
+  biography: Developer Advocate@Cloudflare, Creator of Hono, Web framework developer
+  biographyJa: Developer Advocate@Cloudflare, Creator of Hono, Web framework developer
+  twitter: yusukebe
+  github: yusukebe
+  homepage: https://yusu.ke
+  location: on-site
