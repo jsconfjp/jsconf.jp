@@ -26,7 +26,9 @@ const WavyBox = styled.div`
   background-size: 100%;
   background-image: url("${bg}"), url("${bgFlipX}");
   background-repeat: no-repeat, no-repeat;
-  background-position: top -830px right -300px, center left -450px;
+  background-position:
+    top -830px right -300px,
+    center left -450px;
   background-size: 100%, 120%;
 `
 const Container = styled.div`
@@ -188,7 +190,7 @@ export default function IndexPage() {
     }))
   const jnaMembers = allMembersYaml.edges.filter(({ node }: any) => node.isJNA)
   const notJnaMembers = allMembersYaml.edges.filter(
-    ({ node }: any) => !node.isJNA
+    ({ node }: any) => !node.isJNA,
   )
   const dateTimeFormatter = new Intl.DateTimeFormat(i18n.language, {
     dateStyle: "medium",
@@ -327,7 +329,7 @@ export default function IndexPage() {
                   {jnaMembers.map(
                     ({ node: member }: { node: any }, i: number) => (
                       <Member key={i} {...member} />
-                    )
+                    ),
                   )}
                 </OrganizersBox>
               </>
@@ -339,7 +341,7 @@ export default function IndexPage() {
                   {notJnaMembers.map(
                     ({ node: member }: { node: any }, i: number) => (
                       <Member key={i} {...member} />
-                    )
+                    ),
                   )}
                 </MembersBox>
               </>

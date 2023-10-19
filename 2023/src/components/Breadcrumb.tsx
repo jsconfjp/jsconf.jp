@@ -30,7 +30,7 @@ export function Breadcrumb(props: Props) {
       </Link>
       {path
         .filter(
-          (label): label is string | { label: string; to: string } => !!label
+          (label): label is string | { label: string; to: string } => !!label,
         )
         .map(label => {
           const path = typeof label === "string" ? { label, to: null } : label

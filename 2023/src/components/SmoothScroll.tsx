@@ -1,4 +1,4 @@
-import React, { cloneElement, useCallback } from "react"
+import React, { cloneElement, useCallback, MouseEvent } from "react"
 
 type Props = {
   selector: string
@@ -8,7 +8,7 @@ type Props = {
 export function SmoothScroll(props: Props) {
   const { selector, children } = props
   const handleClick = useCallback(
-    e => {
+    (e: MouseEvent) => {
       const el = document.querySelector(selector)
       if (!el) {
         throw new Error(`Element not found with selector: ${selector}`)
@@ -17,7 +17,7 @@ export function SmoothScroll(props: Props) {
       e.preventDefault()
       window.scrollTo({ top, behavior: "smooth" })
     },
-    [selector]
+    [selector],
   )
 
   return cloneElement(children, {

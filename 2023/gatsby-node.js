@@ -91,42 +91,42 @@ exports.createPages = ({ graphql, actions }) => {
             component: mdTemplate,
             context: {
               post: post,
-              slug: post.fields.slug
-            }
+              slug: post.fields.slug,
+            },
           })
         })
 
         const speakers = result.data.allSpeakersYaml.edges.map(
-          ({ node }) => node
+          ({ node }) => node,
         )
         const speakerMap = speakers.reduce(
           (acc, speaker) => ({ ...acc, [speaker.uuid]: speaker }),
-          {}
+          {},
         )
         const sponsors = result.data.allSponsorsYaml.edges.map(
-          ({ node }) => node
+          ({ node }) => node,
         )
         const sponsorMap = sponsors.reduce(
           (acc, sponsor) => ({ ...acc, [sponsor.uuid]: sponsor }),
-          {}
+          {},
         )
         const avatars = result.data.allFile.nodes
           .filter(avatar => avatar.childImageSharp)
           .map(avatar => ({
             uuid: avatar.name,
-            ...avatar.childImageSharp.gatsbyImageData
+            ...avatar.childImageSharp.gatsbyImageData,
           }))
         const avatarMap = avatars.reduce(
           (acc, avatar) => ({
             ...acc,
-            [avatar.uuid]: avatar
+            [avatar.uuid]: avatar,
           }),
-          {}
+          {},
         )
         const talks = result.data.allTalksYaml.edges
           .map(({ node }) => node)
           .filter(
-            node => node.speakerIDs?.length > 0 || node.sponsorIDs?.length > 0
+            node => node.speakerIDs?.length > 0 || node.sponsorIDs?.length > 0,
           )
         talks.forEach(talk => {
           const talkSpeakers =
@@ -134,7 +134,7 @@ exports.createPages = ({ graphql, actions }) => {
               const speaker = speakerMap[speakerID]
               if (!speaker) {
                 throw new Error(
-                  `Speaker not found: speakerID=${speakerID}, talk=${talk.uuid}`
+                  `Speaker not found: speakerID=${speakerID}, talk=${talk.uuid}`,
                 )
               }
               return speaker
@@ -144,7 +144,7 @@ exports.createPages = ({ graphql, actions }) => {
               const sponsor = sponsorMap[sponsorID]
               if (!sponsor) {
                 throw new Error(
-                  `sponsor not found: sponsorID=${sponsorID}, talk=${talk.uuid}`
+                  `sponsor not found: sponsorID=${sponsorID}, talk=${talk.uuid}`,
                 )
               }
               return sponsor
@@ -153,7 +153,7 @@ exports.createPages = ({ graphql, actions }) => {
             const avatar = avatarMap[speaker.uuid]
             if (!avatar) {
               throw new Error(
-                `Avatar not found: speakerID=${speaker.uuid}, talk=${talk.uuid}`
+                `Avatar not found: speakerID=${speaker.uuid}, talk=${talk.uuid}`,
               )
             }
             return avatar
@@ -166,11 +166,11 @@ exports.createPages = ({ graphql, actions }) => {
               speakers: talkSpeakers,
               avatars: speakerAvatars,
               sponsors: talkSponsors,
-              talk
-            }
+              talk,
+            },
           })
         })
-      })
+      }),
     )
   })
 }
@@ -183,7 +183,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value
+      value,
     })
   }
 }

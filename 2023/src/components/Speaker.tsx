@@ -71,6 +71,9 @@ const Name = styled.p`
 export function Speaker(props: Props) {
   const { i18n } = useTranslation()
   const { talk, speaker, avatar } = props
+  if (!talk) {
+    return <>???</>
+  }
   const { uuid, title, titleJa } = talk
   const { name } = speaker
 

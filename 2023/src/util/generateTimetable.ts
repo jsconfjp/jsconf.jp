@@ -31,7 +31,7 @@ export function generateTimetable({
 }): Timetable {
   const lookup: Record<string, SpeakerType> = speakers.reduce(
     (acc, speaker) => ({ ...acc, [speaker.uuid]: speaker }),
-    {}
+    {},
   )
 
   const talksByDay = groupBy(talks, talk => talk.date)
@@ -44,7 +44,7 @@ export function generateTimetable({
           const speaker = lookup[speakerID]
           if (!speaker) {
             throw new Error(
-              `Speaker ${speakerID} not found in "${talk.title}" (${talk.uuid})`
+              `Speaker ${speakerID} not found in "${talk.title}" (${talk.uuid})`,
             )
           }
           return speaker
@@ -54,7 +54,7 @@ export function generateTimetable({
           const sponsor = sponsors.find(s => s.uuid === sponsorID)
           if (!sponsor) {
             throw new Error(
-              `Sponsor ${sponsorID} not found in "${talk.title}" (${talk.uuid})`
+              `Sponsor ${sponsorID} not found in "${talk.title}" (${talk.uuid})`,
             )
           }
           return sponsor
@@ -62,7 +62,7 @@ export function generateTimetable({
     }))
     const timeboxes = groupBy(
       sessions,
-      session => `${session.startsAt}-${session.endsAt}`
+      session => `${session.startsAt}-${session.endsAt}`,
     )
     delete timeboxes["null-null"]
 
