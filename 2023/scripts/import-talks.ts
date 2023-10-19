@@ -215,7 +215,7 @@ async function loadImage(speaker: string, imageUrl: string): Promise<string> {
           ? "on-site"
           : "remote",
     }))
-    .sort((a, b) => a.uuid[0].localeCompare(b.uuid[0]))
+    .sort((a, b) => a.uuid.localeCompare(b.uuid))
   console.log(chalk.dim(`Fetch ${speakers.length} speakers`))
 
   console.log(
