@@ -12,7 +12,7 @@ import { Breadcrumb } from "../components/Breadcrumb"
 export default function SponsorsPage() {
   const data = useStaticQuery(graphql`
     query Sponsors {
-      allSponsorsYaml {
+      allSponsorsYaml(filter: { ready: { eq: true } }) {
         edges {
           node {
             name

@@ -8,7 +8,6 @@ import flatten from "lodash/flatten"
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
 import { Title } from "../components/Title"
-import { SubTitle as _SubTitle } from "../components/SubTitle"
 import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
 import { RoomLegend } from "../components/RoomLegend"
@@ -76,9 +75,11 @@ const Area = styled(_Link)<{
   }
 `
 
-const SubTitle = styled(_SubTitle)`
-  text-align: left;
-  margin-top: 20px;
+const SubTitle = styled.h2`
+  text-transform: uppercase;
+  font-family: ${({ theme }) => theme.fonts.header};
+  font-size: ${({ theme }) => theme.fonts.text};
+  margin: 20px 0 1em;
   padding: 0.2em 1em;
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 `

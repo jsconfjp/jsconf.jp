@@ -1,6 +1,200 @@
 - uuid: xxx
-  name: yyy
-  url: https://example.com
-  logoUrl: /2023/sponsors/xxx.svg
-  prText: ""
+  ready: false
+  name: Example
+  url: https://example.com/
   grade: premium
+  logoUrl: /2023/sponsors/wantedly.png
+  prText: |
+    ウォンテッドリーは『シゴトでココロオドルひとをふやす』ためにはたらくすべての人が共感を通じて「であい」「つながり」「つながりを深める」ためのビジネスSNS Wantedly を提供しています。
+    シゴトでココロオドルとは、仕事に没頭し成果を上げ、継続的に成長を実感する状態と私たちは定義しております。没頭に必要な3要素、自律・共感・挑戦を実現するプロダクトを開発運営し、ミッションの実現を目指して参ります。
+- uuid: wantedly
+  ready: false
+  name: ウォンテッドリー株式会社
+  url: https://docs.wantedly.dev/
+  grade: premium
+  logoUrl: /2023/sponsors/wantedly.png
+  prText: |
+    ウォンテッドリーは『シゴトでココロオドルひとをふやす』ためにはたらくすべての人が共感を通じて「であい」「つながり」「つながりを深める」ためのビジネスSNS Wantedly を提供しています。
+    シゴトでココロオドルとは、仕事に没頭し成果を上げ、継続的に成長を実感する状態と私たちは定義しております。没頭に必要な3要素、自律・共感・挑戦を実現するプロダクトを開発運営し、ミッションの実現を目指して参ります。
+- uuid: hamee
+  ready: true
+  name: Hamee株式会社
+  url: https://hamee.co.jp/
+  grade: sponsor
+  logoUrl: /2023/sponsors/hamee.png
+  prText: |
+    私たちHameeは、人の持つ創造力を発揮することこそが、世界をよりよくすると信じて、
+    “クリエイティブ魂に火をつける”プロダクトやサービスを創造しています。
+- uuid: chatwork
+  ready: true
+  name: Chatwork株式会社
+  url: https://recruit.chatwork.com/
+  grade: premium
+  logoUrl: /2023/sponsors/chatwork.png
+  prText: |
+    日本のビジネスチャットの普及率は、まだ24.6％。中小企業を中心に普及していない状況です。 残りの白地は、グローバルなテックジャイアントとの争奪戦です。マーケットを巡って競い合い、シェアをさらに伸ばしていく。そこに本気で挑んでいます。
+- uuid: miidas
+  ready: true
+  name: ミイダス株式会社
+  url: https://miidas.jp/
+  grade: premium
+  logoUrl: /2023/sponsors/miidas.png
+  prText: |
+    独自の見極め、診断ツールで採用のミスマッチを減らす中途採用サービスである
+    「ミイダス」の企画開発運営を行っております。
+
+    「コンピテンシー診断」や「バイアス診断ゲーム」といった診断ツールにより、
+    転職ユーザー様向けにはより自分にフィットしたオファーを、
+    企業様向けには診断結果をもとにしたフィッティング人材分析により
+    自社で活躍しやすいハイパフォーマーの採用を可能にするツールとしてご提供しております。
+
+    サービスローンチからは7年となり、
+    現在会社全体は550名、開発組織は95名ほどの規模感となっております。
+
+    サービスのユーザーは100万人、
+    企業様に関しては42万社にご利用いただいております。
+
+
+    採用マッチングの機能を主軸としておりますが、
+    組織サーベイ機能やタレントマネジメント機能など、
+    採用以外の機能開発も積極的に行っております。
+- uuid: ubie
+  ready: true
+  name: ユビー株式会社
+  url: https://ubie.life/
+  grade: premium
+  logoUrl: /2023/sponsors/ubie.png
+  prText: |
+    「テクノロジーで人々を適切な医療に案内する」をミッションに掲げ、医師とエンジニアが2017年5月に創業したヘルステックスタートアップです。AIをコア技術とし、症状から適切な医療へと案内する「ユビー」と、診療の質向上を支援する医療機関向けサービスパッケージ「ユビ―メディカルナビ」等を開発・提供。誰もが自分にあった医療にアクセスできる社会づくりを進めています。
+- uuid: plaid
+  ready: false
+  name: 株式会社プレイド
+  url: https://plaid.co.jp/
+  grade: premium
+  logoUrl: /2023/sponsors/plaid.png
+  prText: |
+    プレイドでは「データによって人の価値を最大化する」をミッションとし、KARTE というサービスを開発しています。KARTE は Web サイトやアプリ上でのユーザー行動をリアルタイムに解析し、それぞれのエンドユーザーにとって最適な体験を提供するための「CX（顧客体験）プラットフォーム」です。
+- uuid: kaonavi
+  ready: true
+  name: 株式会社カオナビ
+  url: https://corp.kaonavi.jp/
+  grade: premium
+  logoUrl: /2023/sponsors/kaonavi.png
+  prText: |
+    社員の個性・才能を発掘し、戦略人事を加速させるタレントマネジメントシステム「カオナビ」を提供しています。企業の人材情報をクラウド上で一元管理し、社員の顔や名前、経験、評価、スキル、才能などの人材情報を可視化することで、最適な人材配置や抜擢といった戦略的なタレントマネジメントの実現を支援しています。今後も、人材マネジメントのプラットフォームとして、日本の「働き方」を変えていきたいと考えています。
+- uuid: forkwell
+  ready: true
+  name: 株式会社grooves
+  url: https://forkwell.com/
+  grade: premium
+  logoUrl: /2023/sponsors/forkwell.png
+  prText: |
+    「つくり手と、未来を拓く。」というビジョンの元、「自分を知り、成長する」きっかけを提供する無料ポートフォリオサービスをはじめ、ITエンジニアに特化した求人・転職支援サービス、役立つ情報や場の提供などを通じて、ITエンジニアのキャリアに新しい選択肢を提示することで、人生の可能性を拡げるお手伝いをしています。
+- uuid: nikkei
+  ready: true
+  name: 日本経済新聞社
+  url: https://hack.nikkei.com/
+  grade: sponsor
+  logoUrl: /2023/sponsors/nikkei.jpg
+  prText: |
+    日本経済新聞社では「考え、伝える。より自由で豊かな世界のために。」というPurposeを掲げ、世界中の誰でもどこからでもアクセス可能なニュースサイトを目指して開発に取り組んでいます。日経電子版という社会的な影響が大きいメディアで、Web標準・JavaScriptのエコシステム・CDN・Edge Computing等の技術を全て使い、理想を現実にするエンジニアを募集しています( https://hack.nikkei.com/jobs/web/ )。
+- uuid: medley
+  ready: true
+  name: 株式会社メドレー
+  url: https://www.medley.jp/
+  grade: sponsor
+  logoUrl: /2023/sponsors/medley.png
+  prText: |
+    「医療ヘルスケア分野の未来をつくる」ミッションのもと、医療課題解決を目指します。 オンライン診療・服薬指導アプリ「CLINICS」、かかりつけ薬局支援システム「Pharms」、クラウド歯科業務支援システム「Dentis」など運営しています。
+- uuid: dmm-corp
+  ready: true
+  name: 合同会社DMM.com
+  url: https://dmm-corp.com/
+  grade: sponsor
+  logoUrl: /2023/sponsors/dmm-corp.png
+  prText: |
+    DMMでは、会員数3,914万人*を誇る総合サービスサイト「DMM .com」を運営しています。現在、動画配信・電子書籍・3Dプリント・web3・AIなど60以上の事業を幅広く展開し、コーポレートメッセージ「誰もが見たくなる未来。」とともに、新しい技術・サービスを追及しながら、領域を問わず挑戦を続けています。*2022年2月時点
+- uuid: wealthnavi
+  ready: true
+  name: ウェルスナビ株式会社
+  url: https://corp.wealthnavi.com/
+  grade: sponsor
+  logoUrl: /2023/sponsors/wealthnavi.jpg
+  prText: |
+    ウェルスナビ株式会社ではオンライン資産運用ロボアドバイザー「WealthNavi」を提供しています。預かり資産は9,000億円を超え、「2023年 オリコン顧客満足度®️調査」の「ロボアドバイザー」ランキングで3年連続1位を獲得しました。
+- uuid: medpeer
+  ready: true
+  name: メドピア株式会社
+  url: https://medpeer.co.jp/
+  grade: sponsor
+  logoUrl: /2023/sponsors/medpeer.png
+  prText: |
+    【つくるのは、ヘルステックのプラットフォーム。】メドピア株式会社は、現役医師が経営するヘルステックカンパニーとして、ITの力で集合知を実現し、「医療を再発明」することを目指しています。国内医師の4割以上が参加する専用コミュニティ「MedPeer」を筆頭に、医療従事者同士の知見を集積させた集合知プラットフォームを構築。そのほか、予防医療やヘルスケアに関わるサービスなども展開しています。
+- uuid: tokyodev
+  ready: false
+  name: TokyoDev Inc / TokyoDev株式会社
+  url: https://www.tokyodev.com
+  grade: premium
+  logoUrl: /2023/sponsors/tokyodev.png
+  prText: |
+    TokyoDev’s job board is filled with software developer positions at Japanese companies whose engineer team’s primary language is English. From the big companies you’ve already heard of, to smaller up-and-coming startups, our positions offer you the chance to live in Japan but work in an international environment.
+
+    TokyoDevでは、英語でのコミュニケーションを主とするエンジニアチームを有する日本企業のソフトウェアエンジニア求人を掲載しています。誰もが知っている大企業から注目のスタートアップまで、日本に住みながら国際色豊かな環境で働ける機会を提供しています。
+- uuid: hireroo
+  ready: true
+  name: 株式会社ハイヤールー
+  url: https://hireroo.io/
+  grade: premium
+  logoUrl: /2023/sponsors/hireroo.png
+  prText: |
+    HireRoo はエンジニア採用におけるミスマッチを削減する、オンライン完結型のコーディング試験サービスです。「すべてのエンジニアが正当に評価され、個々の力が最大限に発揮できる世界を実現する。」という我々の Mission を達成すべく、JSConf JP にも協賛という形で貢献し、 Web Developer の方々の力を発揮することをサポートできれば幸いです。
+- uuid: interfirm
+  ready: false
+  name: 株式会社インターファーム
+  url: https://www.interfirm.jp
+  grade: sponsor
+  logoUrl: /2023/sponsors/interfirm.png
+  prText: |
+    ネット完結　バイク売買サイトKATIXを運営しております。
+- uuid: dwango
+  ready: false
+  name: 株式会社ドワンゴ
+  url: https://dwango.co.jp/
+  grade: premium
+  logoUrl: /2023/sponsors/dwango.png
+  prText: |
+    ドワンゴは "ネットの向こうの、リアルを動かす。人間らしさと、つながるデジタルを。" をコーポレートメッセージとして、学校法人角川ドワンゴ学園が運営するネットに特化した通信制高校「N高等学校・S高等学校」とオンライン学習アプリ「N予備校」、ネットの双方向性を最大限に動画や生放送に取り込んだ「ニコニコ」、ネットとリアルの融合をテーマにした巨大イベント「ニコニコ超会議」など、新しい価値を創り出し、それを事業として成立させていくことに挑戦しつづける企業です。
+- uuid: helpfeel
+  ready: true
+  name: 株式会社Helpfeel
+  url: https://corp.helpfeel.com/ja/home
+  grade: premium
+  logoUrl: /2023/sponsors/helpfeel.png
+  prText: |
+    株式会社Helpfeelは2007年シリコンバレーにて設立されました。知識を届けるエンタープライズサーチ「Helpfeel」知識を磨き上げるアイディエーションツール「Scrapbox」情報を知識にするメディアキャプチャー「Gyazo」の3プロダクトを開発、運営しています。フルリモート、フルフレックスの働き方を推進しており、全国に従業員がいることが特徴です。開発メンバー積極採用中です！
+- uuid: chot-inc
+  ready: true
+  name: ちょっと株式会社
+  url: https://chot-inc.com/
+  grade: sponsor
+  logoUrl: /2023/sponsors/chot-inc.png
+  prText: |
+    ちょっと株式会社はWebフロントエンド開発に強みを持つクラウドインテグレーターです。モダンな言語やフレームワーク（Next.js / TypeScript）と最新のクラウド製品（ヘッドレスCMS・BaaS・ホスティングサービス・AWSなど）を活用し、スピーディに高品質なWebアプリケーションを構築します。Web開発を通じて、沢山の人がより便利で快適なシステムの恩恵を受けることができる社会づくりに貢献してまいります。
+- uuid: hatena
+  ready: true
+  name: 株式会社はてな
+  url: https://hatena.co.jp
+  grade: sponsor
+  logoUrl: /2023/sponsors/hatena.png
+  prText: |
+    はてなは「はてなブログ」や「はてなブックマーク」などの個人ユーザー向けサービスに加え、企業向けサービスとしてコンテンツマーケティング支援サービス、サーバー監視サービス「Mackerel」などを提供するWebサービス企業です。 15社以上の出版社様に導入いただいているマンガサービス向けビューワ「GigaViewer」（Web版/アプリ版）の提供や、Webサービスおよびアプリの共同開発も多く手掛けています。
+- uuid: earthbrain
+  ready: false
+  name: 株式会社EARTHBRAIN
+  url: https://www.earthbrain.com/
+  grade: sponsor
+  logoUrl: /2023/sponsors/earthbrain.png
+  prText: |
+    EARTHBRAINは土木業界をDXするスタートアップ企業です。
+    土木業界は日本だけでも24兆円/年、世界では200兆円超/年の巨大な市場です。ただ、デジタル技術を用いた施工は普及しておらず”黎明期”と言えるフェーズです。
+    創業2年目ですが、日本だけではなく既に世界20カ国以上で使われているプロダクトを提供しているグローバルな企業です。日本から世界を変える挑戦を一緒に行いましょう！

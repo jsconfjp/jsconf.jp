@@ -12,8 +12,9 @@ module.exports = {
     cfpDeadline: new Date("2023-09-30T23:59:59.999+0900"),
     previousFiscalYear: `2022`,
     enableSpeakers: true,
+    enableVenue: true,
     enableSchedule: true,
-    enableSponsors: false,
+    enableSponsors: true,
   },
   plugins: [
     `gatsby-plugin-typescript`,

@@ -34,7 +34,7 @@ const SmallBox = styled.div`
 const SubTitle = styled.h3`
   font-family: ${({ theme }) => theme.fonts.header};
   text-align: center;
-  font-size: 3rem;
+  font-size: ${({ theme }) => theme.fontSizes.subTitle};
 `
 
 export function SponsorList(props: Props) {

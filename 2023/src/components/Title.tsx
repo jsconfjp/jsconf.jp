@@ -8,7 +8,7 @@ export type Props = {
 const Box = styled.h1`
   text-align: center;
   margin: 40px 0 60px;
-  font-size: 4rem;
+  font-size: ${({ theme }) => theme.fontSizes.title};
   text-transform: none;
   font-family: ${({ theme }) => theme.fonts.header};
 `

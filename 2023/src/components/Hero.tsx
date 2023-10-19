@@ -33,12 +33,12 @@ const TextBox = styled.div`
 const Title = styled.h1`
   margin: 0;
   font-family: ${({ theme }) => theme.fonts.header};
-  font-size: 6rem;
+  font-size: ${({ theme }) => theme.fontSizes.hero};
 `
 const SubTitle = styled.h2`
   margin: 0;
   font-family: ${({ theme }) => theme.fonts.header};
-  font-size: 2.4rem;
+  font-size: ${({ theme }) => theme.fontSizes.subTitle};
 `
 const Paragraph = styled.p`
   margin: 28px 0 0;

@@ -8,7 +8,7 @@ type Props = {
 
 const Title = styled.h3`
   margin-bottom: 0;
-  font-size: 2.4rem;
+  font-size: ${({ theme }) => theme.fontSizes.subTitle};
   font-family: ${({ theme }) => theme.fonts.text};
   font-weight: bold;
 `
