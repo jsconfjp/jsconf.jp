@@ -347,13 +347,6 @@
   date: day1
   title: break
   speakerIDs: []
-- uuid: day1-break-B-13:00
-  startsAt: "13:00"
-  endsAt: "13:30"
-  room: B
-  date: day1
-  title: TBA
-  speakerIDs: []
 - uuid: day1-break-A-14:00
   startsAt: "14:00"
   endsAt: "14:10"
@@ -657,6 +650,20 @@
   slideLanguage: en
   speakerIDs:
     - luca-mugnaini
+- uuid: mizchi-1
+  date: day1
+  startsAt: "13:00"
+  endsAt: "13:30"
+  room: B
+  titleJa: Build and Publish in 2023
+  descriptionJa: >-
+    JS のビルドと配布は、commonjs と webpack
+    以降、複雑化しつつ洗練されてきました。現代の開発者は複雑なツールチェインを駆使して開発体験を充実させつつ、ビルド速度とランタイムパフォーマンスを両立しないといけません。このセッションでは素朴なファイル結合の時代から現代の静的解析によるバンドルと最適化を振り返りつつ、
+    現代の vite, turbo, deno, RSC 等が何をやっているかを解説します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  speakerIDs:
+    - mizchi
 - uuid: masaki-suzuki-1
   date: day1
   startsAt: "16:00"
@@ -833,8 +840,8 @@
   room: B
   titleJa: フロントエンドリアーキテクトと開始チームのスキルトランスファーにおける9ヶ月間の奮闘記
   descriptionJa: >-
-    2023.1 から 2023.9 にかけて某 toB web
-    アプリのリアーキテクトプロジェクトにフロントエンドのシステムアーキテクトとして参画し、技術選定から開発メンバーのスキルトランスファー（育成）、果ては包括的な開発プロセスの改善までと幅広く支援してきました（2023年11月現在も進行中）。そこでの奮闘で得られた学びと新たに浮き彫りとなった課題についてご紹介します。
+    2023年1月から9月にかけて某 toB web
+    アプリケーションのリアーキテクトプロジェクトにフロントエンドのシステムアーキテクトとして参画し、技術選定から開発メンバーのスキルトランスファー（育成）、果ては包括的な開発プロセスの改善までと幅広く支援してきました（2023年11月現在も進行中）。そこでの奮闘で得た学びと新たに浮き彫りとなった課題についてご紹介します。
   spokenLanguage: ja
   slideLanguage: ja
   speakerIDs:

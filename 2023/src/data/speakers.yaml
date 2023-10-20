@@ -52,6 +52,7 @@
     Working Group. He loves to share his knowledge and experiences through
     blogs, developer conferences and is interested about everything around Web
     and DevOps.
+  twitter: bot_Anirudh
   location: on-site
 - uuid: ankur-datta
   name: Ankur Datta
@@ -269,6 +270,16 @@
 
     AWS Community Builder(Serverless)
   location: on-site
+- uuid: mizchi
+  name: mizchi
+  featured: false
+  presentations:
+    - mizchi-1
+  biographyJa: >-
+    株式会社プレイドで
+    Node.js/フロントエンドエンジニア。サードパーティスクリプトのアーキテクチャやビルドツールチェインの設計、大規模リポジトリ環境のビルド高速化を担当。コードの静的解析が好き。
+  twitter: mizchi
+  location: on-site
 - uuid: peter-eijgermans
   name: Peter Eijgermans
   featured: false
@@ -341,6 +352,10 @@
   presentations:
     - vasilika-klimova-1
   biography: "I have been a Web Developer for over 13 years (Frontend mostly, but also Fullstack).\LI had experience working as a single web developer, as a member of big teams in FinTech, and as a Team Lead of a small team.\nI enjoyed working on web 3D projects, awesome animations, visualizations, and good infographics. I am a speaker & organizer of tech meetups and conferences. I helped many students at different schools with learning web development. \LI like tech communities and modern technologies.\nLast 6 years, I have been living in Luxembourg and holding a Luxembourg JavaScript meetup.\L This year I started to work as a Developer Relations Engineer at Kadena.\nMy passion is 🎮 video/board games, 🏞️ traveling, 🤿 diving, animals (I have a red cat 🐈), and cinema 🎥. I collect children's books from different countries and Christmas tree decorations."
+  twitter: Lik04ka
+  github: Likita
+  mastodon: https://mastodon.social/@vasilika
+  homepage: https://www.vasilika.dev
   location: on-site
 - uuid: wakamsha
   name: wakamsha
