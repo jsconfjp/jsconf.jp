@@ -264,18 +264,51 @@
   startsAt: "16:00"
   endsAt: "16:30"
   room: C
+  title: >-
+    Tearing down the game 'Brick-Break-Anywhere': Journey into the Uncharted
+    Territories of DOM Scripting
   titleJa: ゲーム「webページ崩し」の仕組み〜あなたの知らないDOMスクリプティングの世界〜
+  description: >-
+    Although often perceived as a technology in good old days, DOM scripting
+    (directly manipulating the DOM using browser APIs) is an active and vital
+    technology that underpins modern front-end stacks such as Playwright and
+    React.  
+
+
+    In this session, we will dive into practical and advanced DOM scripting
+    through an explanation of the implementation of the game
+    'Brick-Break-Anywhere'
+    ([demo](https://x.com/i_am_canalun/status/1707700748610629911)), in which
+    elements on a web page are eliminated by hitting them with a ball, much like
+    a game of brick-breaker.  
+
+
+    In particular, we will shine a spotlight on technical details such as the
+    method of element exploration adopted by Playwright, relatively recent APIs,
+    and more.  
+
+
+    Also the followings will be highlighted!  
+
+    - Implementation of collision detection for elements in Shadow DOM and
+    iframes
+
+    - Determining whether an element is visible to the user, a task that cannot
+    be accomplished only with visibility or opacity
+
+    - A method to eliminate elements from the outermost layer while keep the
+    page layout as much as possible
+
+
+    Let's embark on a journey into the vast world of DOM!
   descriptionJa: >-
-    一昔前の技術だと思われがちなDOMスクリプティング(DOMをブラウザのAPIで直接操作するプログラミング)は、PlaywrightやReactといったモダンなフロントエンドスタックを支える現役の重要な技術です。
+    一昔前の技術だと思われがちなDOMスクリプティング(DOMをブラウザのAPIで直接操作するプログラミング)は、PlaywrightやReactといったモダンなフロントエンドスタックを支える現役の重要な技術です。  
 
 
-    本セッションでは、まさにブロック崩しのように、webページ上の要素にボールを当てて消していくゲーム「webページ崩し」(実際の動画:
-    https://x.com/i_am_canalun/status/1707700748610629911)
-    の実装に関する説明を通じて、実践的かつ高度なDOMスクリプティングについて取り扱います。
+    本セッションでは、まさにブロック崩しのように、webページ上の要素にボールを当てて消していくゲーム「webページ崩し」([デモ動画](https://x.com/i_am_canalun/status/1707700748610629911))の実装に関する説明を通じて、実践的かつ高度なDOMスクリプティングについて取り扱います。  
 
 
-    特に、下記の技術的詳細にスポットライトを当てながら、Playwrightが採用する要素探索の手法や、去年から一部のブラウザでサポートされた比較的最新のAPIなどなど、奥深くて興味深いDOMスクリプティングの世界にご案内いたします。
-
+    特に、下記の技術的詳細にスポットライトを当てながら、Playwrightが採用する要素探索の手法や比較的最新のAPIなどなど、奥深くて興味深いDOMスクリプティングの世界にご案内いたします。  
 
     - Shadow DOMやiframeの中にある要素への当たり判定の実装
 
@@ -284,7 +317,7 @@
     - ページレイアウトを極力保ちつつ外側の要素(DOMツリーの親要素)から順に消していく方法
 
 
-    そして何より「DOMってこんなに面白いんだ！」と思って頂ければ、これ以上のことはありません。
+    そして何より「DOMってこんなに面白いんだ！」と思って頂ければ、これ以上のことはありません！！
   spokenLanguage: ja
   slideLanguage: ja
   speakerIDs:
@@ -618,16 +651,6 @@
     patterns in forms and how to implement them accessibly. We’ll talk about:
     labelling, providing instructions, errors and validation, testing, managing
     focus, and more – all backed by practical examples.
-
-
-    ---------------
-
-
-    I added more info on this page about the outline and links to other talks I
-    have given in the past:
-
-
-    https://krambertech.notion.site/Kateryna-s-Talk-for-JSConf-JP-3c5215aa64b84efd8e33e52dc9bea147?pvs=4
   descriptionJa: TOD
   spokenLanguage: en
   slideLanguage: en
@@ -840,7 +863,7 @@
   room: B
   titleJa: フロントエンドリアーキテクトと開始チームのスキルトランスファーにおける9ヶ月間の奮闘記
   descriptionJa: >-
-    2023年1月から9月にかけて某 toB web
+    2023年1月から9月にかけて弊社の BtoB web
     アプリケーションのリアーキテクトプロジェクトにフロントエンドのシステムアーキテクトとして参画し、技術選定から開発メンバーのスキルトランスファー（育成）、果ては包括的な開発プロセスの改善までと幅広く支援してきました（2023年11月現在も進行中）。そこでの奮闘で得た学びと新たに浮き彫りとなった課題についてご紹介します。
   spokenLanguage: ja
   slideLanguage: ja

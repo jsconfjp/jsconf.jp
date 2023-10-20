@@ -92,9 +92,17 @@
   featured: false
   presentations:
     - canalun-1
+  biography: >-
+    Canalun is a software engineer with a deep love for browsers and DOM!  
+
+    At Techtouch, Inc., he focuses on exploring and embedding elements on web
+    pages, while diving deeper into the fascinating details of browsers, HTML,
+    CSS, and JS😊
   biographyJa: |-
-    ブラウザとDOMが大好きなソフトウェアエンジニアです！
-    仕事ではwebページ上の要素の探索や埋め込み、それにまつわるブラウザ/HTML/CSS/JSの仕様や挙動の深掘りをしています。
+    ブラウザとDOMが大好きなソフトウェアエンジニアです！  
+    テックタッチ株式会社にてwebページ上の要素の探索や埋め込み、それにまつわるブラウザ/HTML/CSS/JSの仕様や挙動の深掘りをしています😊
+  twitter: i_am_canalun
+  github: canalun
   location: on-site
 - uuid: christoph-nakazawa
   name: Christoph Nakazawa
@@ -387,6 +395,8 @@
     able to make his love for creating developer tools a part of his daily work.
     He also enjoys working on open-source developer tools, and blogs about them
     at blog.yonatan.dev.
+  twitter: cowchimp
+  homepage: https://yonatan.dev
   location: on-site
 - uuid: yulia-startsev
   name: Yulia Startsev
