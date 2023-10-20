@@ -33,6 +33,7 @@ type PresentationRow = {
   "slides-en": string
   "slides-ja": string
   "description-ja": string
+  "slides-language": string
 }
 type TimetableRow = {
   start: string
@@ -292,7 +293,7 @@ async function loadImage(speaker: string, imageUrl: string): Promise<string> {
         description: todoToEmpty(talk["description-en"]),
         descriptionJa: todoToEmpty(talk["description-ja"]),
         spokenLanguage: talk["spoken-language"],
-        slideLanguage: talk["spoken-language"],
+        slideLanguage: talk["slides-language"] || talk["spoken-language"],
         speakerIDs: sessionSpeakers.map(({ uuid }) => uuid),
       }
     })
