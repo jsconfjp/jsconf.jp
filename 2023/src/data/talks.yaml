@@ -38,44 +38,18 @@
   startsAt: "14:10"
   endsAt: "14:40"
   room: C
-  title: Text Containers under the hood in Canvas
+  title: Building Text Containers in Canvas :)
   description: >-
-    In this talk I will be diving into how text containers work under the hood
-    in canvas and also share insights on how its built in (excalidraw.com⁠ - A
-    virtual free Open-Source collaborative end-to-end encrypted canvas based
-    editor for sketching hand-drawn like diagrams.
+    Text Containers are one of the most widely used features when it comes to
+    whiteboard, isn't it?
 
-    When it comes to canvas, building text containers gets tricky as compared to
-    svg where you could take advantage of CSS for making sure text doesn’t go
-    out of the container.
+    In my talk, we will be diving into how these text containers work under the
+    hood in Canvas and I will also be sharing my experience building text
+    containers
 
-
-    In canvas it works differently
-
-
-    1. Little bit about architecture of an Element - how elements are
-    structured, how text is tied to shape
-
-    2. Cover about Hit box testing
-
-    3. When typing a text area is rendered and with CSS we can make sure that
-    text doesn’t overflow
-
-    4. Once typed, when rendering in canvas, we need a word wrap algorithm to
-    render the text correctly inside container
-
-    5. Since we are running the algo to wrap the text correctly, on resizing it
-    could be very expensive hence caching is needed.
-
-    6. Calculating dimensions of word by rendering it on DOM vs using
-    canvas.measureText -> huge impact on performance
-
-    7. Perf tricks which can be applied
-
-    8. Aligning the canvas with text editor
-
-    9. Takeaways - audience will understand how text containers work internally
-    in canvas and get a glimpse of how its implemented in Excalidraw
+    in [Excalidraw](https://excalidraw.com/) - A virtual free Open-Source
+    collaborative end-to-end encrypted canvas based editor for sketching
+    hand-drawn diagrams.
   spokenLanguage: en
   slideLanguage: en
   speakerIDs:
@@ -651,7 +625,6 @@
     patterns in forms and how to implement them accessibly. We’ll talk about:
     labelling, providing instructions, errors and validation, testing, managing
     focus, and more – all backed by practical examples.
-  descriptionJa: TOD
   spokenLanguage: en
   slideLanguage: en
   speakerIDs:
