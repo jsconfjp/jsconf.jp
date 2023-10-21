@@ -162,10 +162,10 @@
   biography: >-
     Jon has been a software engineer at Meta for 5 years, working in Growth
     teams to grow experiences and products across both Instagram and Facebook
-    before stepping into his current role as TL of the growth team. He is based
-    in NYC, but originally grew up in New Jersey and finds joy in board games
-    and well-crafted cocktails.
-  location: remote
+    before stepping into his current role as TL of the growth team. He spent a
+    few years in San Francisco, but is now based in NYC and finds joy in board
+    games and well-crafted cocktails.
+  location: on-site
 - uuid: josh-goldberg
   name: Josh Goldberg
   featured: false
