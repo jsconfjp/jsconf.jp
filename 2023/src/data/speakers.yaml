@@ -247,10 +247,20 @@
   featured: false
   presentations:
     - koji-ota-1
+  biography: >-
+    I have been testing PrivacySandbox, including ProtectedAudienceAPI, at
+    CyberAgent, Inc. since 2022.
+
+    I submit feedback and issues to WICG, which is discussing PrivacySandboxAPI,
+    and write articles on PrivacySandbox for our company's tech blog.
+
+    I love web browsers!
   biographyJa: >-
     2022年から株式会社サイバーエージェントにてProtectedAudienceAPIを含めたPrivacySandboxの検証を行なっており、PrivacySandboxAPIの議論を行なっているWICGへフィードバックやIssueを提出したり、tech
     blogにてPrivacySandboxの記事を執筆したりしています。Webブラウザが大好きなソフトウェアエンジニアです。
+  twitter: k_ota_1990
   github: k-o-ta
+  homepage: https://k-ota.dev
   location: on-site
 - uuid: luca-mugnaini
   name: Luca Mugnaini
@@ -338,6 +348,8 @@
     - sosuke-suzuki-1
   biographyJa: >-
     筑波大学情報学群の学生で、Ubie株式会社のソフトウェアエンジニア。「テクノロジーで人々を適切な医療に案内する」ことを目指して、症状検索エンジン「ユビー」の開発に尽力している。JavaScriptのコードフォーマッタであるPrettierのメンテナとしても活動中。
+  twitter: __sosukesuzuki
+  github: sosukesuzuki
   location: on-site
 - uuid: takuto-wada
   name: 和田卓人

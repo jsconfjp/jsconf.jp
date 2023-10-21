@@ -579,6 +579,7 @@
   startsAt: "16:40"
   endsAt: "17:10"
   room: B
+  title: On-browser advertisement auctions using PrivacySandboxAPI
   titleJa: PrivacySandboxAPIを使ったブラウザ上での広告オークションについて
   descriptionJa: >-
     多くのブラウザで廃止されつつある3rd party
@@ -590,7 +591,7 @@
     本発表ではauction workletが持つ制約のポイントや、auction
     worklet環境下で開発/テストを行い、高速にオークションを実行するための方法について説明いたします。
   spokenLanguage: ja
-  slideLanguage: ja
+  slideLanguage: en/ja
   speakerIDs:
     - koji-ota
 - uuid: kkeeth-1
