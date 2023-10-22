@@ -104,11 +104,11 @@
   prText: |
     【つくるのは、ヘルステックのプラットフォーム。】メドピア株式会社は、現役医師が経営するヘルステックカンパニーとして、ITの力で集合知を実現し、「医療を再発明」することを目指しています。国内医師の4割以上が参加する専用コミュニティ「MedPeer」を筆頭に、医療従事者同士の知見を集積させた集合知プラットフォームを構築。そのほか、予防医療やヘルスケアに関わるサービスなども展開しています。
 - uuid: tokyodev
-  ready: false
+  ready: true
   name: TokyoDev Inc / TokyoDev株式会社
   url: https://www.tokyodev.com
   grade: premium
-  logoUrl: /2023/sponsors/tokyodev.png
+  logoUrl: /2023/sponsors/tokyodev.svg
   prText: |
     TokyoDev’s job board is filled with software developer positions at Japanese companies whose engineer team’s primary language is English. From the big companies you’ve already heard of, to smaller up-and-coming startups, our positions offer you the chance to live in Japan but work in an international environment.
 
