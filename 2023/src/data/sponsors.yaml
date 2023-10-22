@@ -3,12 +3,10 @@
   name: Example
   url: https://example.com/
   grade: premium
-  logoUrl: /2023/sponsors/wantedly.png
-  prText: |
-    ウォンテッドリーは『シゴトでココロオドルひとをふやす』ためにはたらくすべての人が共感を通じて「であい」「つながり」「つながりを深める」ためのビジネスSNS Wantedly を提供しています。
-    シゴトでココロオドルとは、仕事に没頭し成果を上げ、継続的に成長を実感する状態と私たちは定義しております。没頭に必要な3要素、自律・共感・挑戦を実現するプロダクトを開発運営し、ミッションの実現を目指して参ります。
+  logoUrl: /2023/sponsors/xxx.png
+  prText: ""
 - uuid: wantedly
-  ready: false
+  ready: true
   name: ウォンテッドリー株式会社
   url: https://docs.wantedly.dev/
   grade: premium
