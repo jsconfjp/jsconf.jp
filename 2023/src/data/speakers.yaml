@@ -1,5 +1,7 @@
 - uuid: aakansha
   name: Aakansha Doshi
+  nameReading: アーカンシャ
+  pronoun: she
   featured: false
   presentations:
     - aakansha-1
@@ -17,6 +19,8 @@
   location: on-site
 - uuid: aileen-villanueva-lecuona
   name: Aileen Villanueva Lecuona
+  nameReading: アイリーン・ビッラヌエバ・レクオナ
+  pronoun: she
   featured: false
   presentations:
     - aileen-villanueva-lecuona-1
@@ -31,6 +35,8 @@
   location: on-site
 - uuid: akfm-sato
   name: akfm_sato
+  nameReading: Akifumi Sato
+  pronoun: he
   featured: false
   presentations:
     - akfm-sato-1
@@ -42,6 +48,8 @@
   location: on-site
 - uuid: anirudh-sharma
   name: Anirudh Sharma
+  nameReading: アニルッデュ シャルマ
+  pronoun: he
   featured: false
   presentations:
     - anirudh-sharma-1
@@ -56,6 +64,8 @@
   location: on-site
 - uuid: ankur-datta
   name: Ankur Datta
+  nameReading: アンクル・ダッタ
+  pronoun: ""
   featured: false
   presentations:
     - ankur-datta-1
@@ -68,6 +78,8 @@
   location: remote
 - uuid: azukiazusa
   name: azukiazusa
+  nameReading: ""
+  pronoun: he
   featured: false
   presentations:
     - azukiazusa-1
@@ -78,6 +90,8 @@
   location: on-site
 - uuid: baseballyama
   name: 山下 裕一朗 (baseballyama)
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - baseballyama-1
@@ -89,6 +103,8 @@
   location: on-site
 - uuid: canalun
   name: canalun (Kanaru Sato)
+  nameReading: kanarun
+  pronoun: he
   featured: false
   presentations:
     - canalun-1
@@ -106,6 +122,8 @@
   location: on-site
 - uuid: christoph-nakazawa
   name: Christoph Nakazawa
+  nameReading: ナカザワ・クリストフ
+  pronoun: he
   featured: false
   presentations:
     - christoph-nakazawa-1
@@ -124,6 +142,8 @@
   location: on-site
 - uuid: daiki-nishikawa
   name: Daiki Nishikawa
+  nameReading: ""
+  pronoun: he
   featured: false
   presentations:
     - daiki-nishikawa-1
@@ -136,6 +156,8 @@
   location: on-site
 - uuid: hajime-mugishima
   name: Hajime Mugishima
+  nameReading: ""
+  pronoun: he
   featured: false
   presentations:
     - hajime-mugishima-1
@@ -145,6 +167,8 @@
   location: on-site
 - uuid: himeno-kosei
   name: Himenon
+  nameReading: HIMENON
+  pronoun: he
   featured: false
   presentations:
     - himeno-kosei-1
@@ -156,6 +180,8 @@
   location: on-site
 - uuid: jon-zhang
   name: Jon Zhang
+  nameReading: ジョン・ザング
+  pronoun: he
   featured: false
   presentations:
     - jon-zhang-1
@@ -168,6 +194,8 @@
   location: on-site
 - uuid: josh-goldberg
   name: Josh Goldberg
+  nameReading: ジョッシュ・ゴルドベルグ
+  pronoun: he
   featured: false
   presentations:
     - josh-goldberg-1
@@ -185,6 +213,8 @@
   location: remote
 - uuid: kateryna-porshnieva
   name: Kateryna Porshnieva
+  nameReading: カテリナ・ポルテュニエヴァ
+  pronoun: ""
   featured: false
   presentations:
     - kateryna-porshnieva-1
@@ -196,6 +226,8 @@
   location: on-site
 - uuid: kenneth-rohde-christiansen
   name: Kenneth Rohde Christiansen
+  nameReading: ケンエス・ローデ・クリスティアンセン
+  pronoun: he
   featured: false
   presentations:
     - kenneth-rohde-christiansen-1
@@ -223,6 +255,8 @@
   location: on-site
 - uuid: kian-jamali
   name: Kian Jamali
+  nameReading: キアン・ジャマリ
+  pronoun: he
   featured: false
   presentations:
     - kian-jamali-1
@@ -234,6 +268,8 @@
   location: on-site
 - uuid: kkeeth
   name: kkeeth
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - kkeeth-1
@@ -244,6 +280,8 @@
   location: on-site
 - uuid: koji-ota
   name: Koji Ota
+  nameReading: "pronounce: Kohji Ohta"
+  pronoun: he
   featured: false
   presentations:
     - koji-ota-1
@@ -264,6 +302,8 @@
   location: on-site
 - uuid: luca-mugnaini
   name: Luca Mugnaini
+  nameReading: ルカ・ムニャイーニ
+  pronoun: he
   featured: false
   presentations:
     - luca-mugnaini-1
@@ -277,6 +317,8 @@
   location: on-site
 - uuid: masaki-suzuki
   name: 鈴木 正樹(Masaki Suzuki)
+  nameReading: Masaki Suzuki
+  pronoun: he
   featured: false
   presentations:
     - masaki-suzuki-1
@@ -292,6 +334,8 @@
   location: on-site
 - uuid: mizchi
   name: mizchi
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - mizchi-1
@@ -302,6 +346,8 @@
   location: on-site
 - uuid: peter-eijgermans
   name: Peter Eijgermans
+  nameReading: ペーター・エイゲルマンス
+  pronoun: he
   featured: false
   presentations:
     - peter-eijgermans-1
@@ -320,6 +366,8 @@
   location: on-site
 - uuid: poteboy
   name: poteboy
+  nameReading: ""
+  pronoun: he
   featured: false
   presentations:
     - poteboy-1
@@ -332,6 +380,8 @@
   location: on-site
 - uuid: ryusei-sajiki
   name: Ryusei Sajiki
+  nameReading: ""
+  pronoun: he
   featured: false
   presentations:
     - ryusei-sajiki-1
@@ -345,6 +395,8 @@
   location: on-site
 - uuid: sosuke-suzuki
   name: Sosuke Suzuki
+  nameReading: Sosuke Suzuki
+  pronoun: he
   featured: false
   presentations:
     - sosuke-suzuki-1
@@ -355,6 +407,8 @@
   location: on-site
 - uuid: takuto-wada
   name: 和田卓人
+  nameReading: Takuto WADA
+  pronoun: ""
   featured: false
   presentations:
     - takuto-wada-1
@@ -370,6 +424,8 @@
   location: on-site
 - uuid: vasilika-klimova
   name: Vasilika Klimova
+  nameReading: バシリキカ・クリモバ
+  pronoun: she
   featured: false
   presentations:
     - vasilika-klimova-1
@@ -381,6 +437,8 @@
   location: on-site
 - uuid: wakamsha
   name: wakamsha
+  nameReading: waka musha
+  pronoun: he
   featured: false
   presentations:
     - wakamsha-1
@@ -391,6 +449,8 @@
   location: on-site
 - uuid: yamanoku
   name: やまのく
+  nameReading: yamanoku
+  pronoun: he
   featured: false
   presentations:
     - yamanoku-1
@@ -401,6 +461,8 @@
   location: on-site
 - uuid: yonatan-mevorach
   name: Yonatan Mevorach
+  nameReading: ヨナタン・メヴォラフ
+  pronoun: ""
   featured: false
   presentations:
     - yonatan-mevorach-1
@@ -414,6 +476,8 @@
   location: on-site
 - uuid: yulia-startsev
   name: Yulia Startsev
+  nameReading: ユリア・スタルツエフ
+  pronoun: she
   featured: false
   presentations:
     - yulia-startsev-1
@@ -432,6 +496,8 @@
   location: on-site
 - uuid: yusuke-wada
   name: Yusuke Wada
+  nameReading: ""
+  pronoun: he
   featured: false
   presentations:
     - yusuke-wada-1

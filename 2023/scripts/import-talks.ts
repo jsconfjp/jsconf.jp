@@ -12,6 +12,7 @@ type PresenterRow = {
   presentations: string
   "presentation-title-en": string
   name: string
+  "name-reading": string
   pronoun: string
   mastodon: string
   github: string
@@ -200,6 +201,8 @@ async function loadImage(speaker: string, imageUrl: string): Promise<string> {
     .map(row => ({
       uuid: row.uuid,
       name: row.name,
+      nameReading: row["name-reading"],
+      pronoun: row.pronoun,
       featured: /^TRUE$/.test(row.featured),
       image: row.image,
       presentations: talkRows
