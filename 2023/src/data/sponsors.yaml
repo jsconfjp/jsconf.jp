@@ -162,7 +162,7 @@
   prText: |
     はてなは「はてなブログ」や「はてなブックマーク」などの個人ユーザー向けサービスに加え、企業向けサービスとしてコンテンツマーケティング支援サービス、サーバー監視サービス「Mackerel」などを提供するWebサービス企業です。 15社以上の出版社様に導入いただいているマンガサービス向けビューワ「GigaViewer」（Web版/アプリ版）の提供や、Webサービスおよびアプリの共同開発も多く手掛けています。
 - uuid: earthbrain
-  ready: false
+  ready: true
   name: 株式会社EARTHBRAIN
   url: https://www.earthbrain.com/
   grade: sponsor
