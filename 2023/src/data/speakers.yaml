@@ -276,7 +276,7 @@
   homepage: https://lucamug.guupa.com
   location: on-site
 - uuid: masaki-suzuki
-  name: 鈴木 正樹
+  name: 鈴木 正樹(Masaki Suzuki)
   featured: false
   presentations:
     - masaki-suzuki-1
@@ -287,6 +287,8 @@
     開発言語＆好きな言語はTypeScriptやNode.jsで、気が付けばもう5年近くこれらに携わっており、今でもAWS関連はすべてTypeScriptやNode.jsで開発しています。
 
     AWS Community Builder(Serverless)
+  twitter: makky12
+  github: smt7174
   location: on-site
 - uuid: mizchi
   name: mizchi
