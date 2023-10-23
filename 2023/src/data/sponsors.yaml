@@ -3,12 +3,10 @@
   name: Example
   url: https://example.com/
   grade: premium
-  logoUrl: /2023/sponsors/wantedly.png
-  prText: |
-    ウォンテッドリーは『シゴトでココロオドルひとをふやす』ためにはたらくすべての人が共感を通じて「であい」「つながり」「つながりを深める」ためのビジネスSNS Wantedly を提供しています。
-    シゴトでココロオドルとは、仕事に没頭し成果を上げ、継続的に成長を実感する状態と私たちは定義しております。没頭に必要な3要素、自律・共感・挑戦を実現するプロダクトを開発運営し、ミッションの実現を目指して参ります。
+  logoUrl: /2023/sponsors/xxx.png
+  prText: ""
 - uuid: wantedly
-  ready: false
+  ready: true
   name: ウォンテッドリー株式会社
   url: https://docs.wantedly.dev/
   grade: premium
@@ -33,31 +31,6 @@
   logoUrl: /2023/sponsors/chatwork.png
   prText: |
     日本のビジネスチャットの普及率は、まだ24.6％。中小企業を中心に普及していない状況です。 残りの白地は、グローバルなテックジャイアントとの争奪戦です。マーケットを巡って競い合い、シェアをさらに伸ばしていく。そこに本気で挑んでいます。
-- uuid: miidas
-  ready: true
-  name: ミイダス株式会社
-  url: https://miidas.jp/
-  grade: premium
-  logoUrl: /2023/sponsors/miidas.png
-  prText: |
-    独自の見極め、診断ツールで採用のミスマッチを減らす中途採用サービスである
-    「ミイダス」の企画開発運営を行っております。
-
-    「コンピテンシー診断」や「バイアス診断ゲーム」といった診断ツールにより、
-    転職ユーザー様向けにはより自分にフィットしたオファーを、
-    企業様向けには診断結果をもとにしたフィッティング人材分析により
-    自社で活躍しやすいハイパフォーマーの採用を可能にするツールとしてご提供しております。
-
-    サービスローンチからは7年となり、
-    現在会社全体は550名、開発組織は95名ほどの規模感となっております。
-
-    サービスのユーザーは100万人、
-    企業様に関しては42万社にご利用いただいております。
-
-
-    採用マッチングの機能を主軸としておりますが、
-    組織サーベイ機能やタレントマネジメント機能など、
-    採用以外の機能開発も積極的に行っております。
 - uuid: ubie
   ready: true
   name: ユビー株式会社
@@ -67,7 +40,7 @@
   prText: |
     「テクノロジーで人々を適切な医療に案内する」をミッションに掲げ、医師とエンジニアが2017年5月に創業したヘルステックスタートアップです。AIをコア技術とし、症状から適切な医療へと案内する「ユビー」と、診療の質向上を支援する医療機関向けサービスパッケージ「ユビ―メディカルナビ」等を開発・提供。誰もが自分にあった医療にアクセスできる社会づくりを進めています。
 - uuid: plaid
-  ready: false
+  ready: true
   name: 株式会社プレイド
   url: https://plaid.co.jp/
   grade: premium
@@ -131,11 +104,11 @@
   prText: |
     【つくるのは、ヘルステックのプラットフォーム。】メドピア株式会社は、現役医師が経営するヘルステックカンパニーとして、ITの力で集合知を実現し、「医療を再発明」することを目指しています。国内医師の4割以上が参加する専用コミュニティ「MedPeer」を筆頭に、医療従事者同士の知見を集積させた集合知プラットフォームを構築。そのほか、予防医療やヘルスケアに関わるサービスなども展開しています。
 - uuid: tokyodev
-  ready: false
+  ready: true
   name: TokyoDev Inc / TokyoDev株式会社
   url: https://www.tokyodev.com
   grade: premium
-  logoUrl: /2023/sponsors/tokyodev.png
+  logoUrl: /2023/sponsors/tokyodev.svg
   prText: |
     TokyoDev’s job board is filled with software developer positions at Japanese companies whose engineer team’s primary language is English. From the big companies you’ve already heard of, to smaller up-and-coming startups, our positions offer you the chance to live in Japan but work in an international environment.
 
@@ -189,7 +162,7 @@
   prText: |
     はてなは「はてなブログ」や「はてなブックマーク」などの個人ユーザー向けサービスに加え、企業向けサービスとしてコンテンツマーケティング支援サービス、サーバー監視サービス「Mackerel」などを提供するWebサービス企業です。 15社以上の出版社様に導入いただいているマンガサービス向けビューワ「GigaViewer」（Web版/アプリ版）の提供や、Webサービスおよびアプリの共同開発も多く手掛けています。
 - uuid: earthbrain
-  ready: false
+  ready: true
   name: 株式会社EARTHBRAIN
   url: https://www.earthbrain.com/
   grade: sponsor
