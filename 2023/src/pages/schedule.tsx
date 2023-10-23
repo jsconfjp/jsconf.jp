@@ -93,6 +93,33 @@ const Text = styled.span`
   font-family: ${({ theme }) => theme.fonts.text};
 `
 
+const AreaTitle = styled.div`
+  color: ${({ theme }) => theme.colors.text};
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 0;
+    margin: 0;
+  }
+  li#talkTime {
+    list-style: none;
+  }
+  li#spokenLangage {
+    background-color: #f0ffff;
+    font-size: 1.2rem;
+    list-style: none;
+
+    padding: 0.1em 0.5em 0.1em;
+
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+  }
+`
+
 export default function SchedulePage() {
   const { t, i18n } = useTranslation()
   const { allSpeakersYaml, allSponsorsYaml, allTalksYaml } = useStaticQuery(
@@ -204,9 +231,21 @@ export default function SchedulePage() {
                       endsAt={s.endsAt}
                       isBreak={s.break}
                     >
-                      <Text>
-                        {s.startsAt}-{s.endsAt}
-                      </Text>
+                      <AreaTitle>
+                        <ul>
+                          <li id="talkTime">
+                            {s.startsAt}-{s.endsAt}
+                          </li>
+
+                          { s.spokenLanguage != null ?
+                            <li id="spokenLangage">
+                              { "SpokenLang: " + s.spokenLanguage || "" }
+                            </li> : ""
+                          }
+                        </ul>
+                      </AreaTitle>
+
+
                       <Text>{enOrJa(i18n)(s.title, s.titleJa) || "TBA"}</Text>
                       {s.speakers.length ? (
                         <Text>
