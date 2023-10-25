@@ -273,10 +273,11 @@ export default function SchedulePage() {
                             )).split(" ")[0] !== "about" ? (
                               <li id="lengthOfSpokenTime">
                                 {
+                                  "(" +
                                   (formatDistance(
                                     new Date(2023, 10, 19, parseInt(s.endsAt.split(":")[0]), parseInt(s.endsAt.split(":")[1])),
                                     new Date(2023, 10, 19, parseInt(s.startsAt.split(":")[0]), parseInt(s.startsAt.split(":")[1]))
-                                  )).split(" ")[0] + "min"
+                                  )).split(" ")[0] + "min" + ")"
                                 }
                               </li>
                             ) : (
