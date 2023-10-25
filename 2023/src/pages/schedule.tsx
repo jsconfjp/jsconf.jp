@@ -133,6 +133,20 @@ const AreaFooter = styled.div`
     border-left: 1px solid #000000;
     border-right: 1px solid #000000;
   }
+  li#speakerLocation {
+    background-color: #f0ffff;
+    font-size: 1.2rem;
+    list-style: none;
+
+    padding: 0.25em 0.5em 0.25em;
+    margin: 0 0 0 0.25em;
+
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+  }
 `
 
 export default function SchedulePage() {
@@ -145,6 +159,7 @@ export default function SchedulePage() {
             node {
               uuid
               name
+              location
             }
           }
         }
@@ -288,6 +303,14 @@ export default function SchedulePage() {
                             </li>
                           ) : (
                             ""
+                          )}
+                          {s.speakers.map(speaker => (speaker.location != "") ? (
+                            <li id="speakerLocation">
+                              {"Location: " + speaker.location}
+                            </li>
+                            ) : (
+                              ""
+                            )
                           )}
                         </ul>
                       </AreaFooter>

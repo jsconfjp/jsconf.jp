@@ -30,6 +30,7 @@ export type SpeakerType = {
   presentations: string[]
   github: string
   twitter: string
+  location: string
 }
 
 export type AvatarType = {
