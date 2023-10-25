@@ -98,12 +98,11 @@ const AreaTitle = styled.div`
   color: ${({ theme }) => theme.colors.text};
   ul {
     display: flex;
-    justify-content: space-between;
-
     padding-left: 0;
     margin: 0;
   }
   li#talkTime {
+    margin: 0 0.25em 0 0;
     list-style: none;
   }
   li#lengthOfSpokenTime {
@@ -111,6 +110,7 @@ const AreaTitle = styled.div`
     list-style: none;
 
     padding: 0.1em 0.1em 0.1em;
+    margin: 0 0 0 0.25em;
   }
 `
 const AreaFooter = styled.div`
