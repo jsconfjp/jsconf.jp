@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link as _Link } from "gatsby-link"
 import flatten from "lodash/flatten"
+import { compareAsc, format, parse, formatDistance, differenceInCalendarDays } from "date-fns"
 
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
@@ -104,6 +105,12 @@ const AreaTitle = styled.div`
   }
   li#talkTime {
     list-style: none;
+  }
+  li#lengthOfSpokenTime {
+    font-size: 1.5rem;
+    list-style: none;
+
+    padding: 0.1em 0.1em 0.1em;
   }
 `
 const AreaFooter = styled.div`
@@ -244,6 +251,22 @@ export default function SchedulePage() {
                           <li id="talkTime">
                             {s.startsAt}-{s.endsAt}
                           </li>
+                          {
+                            (formatDistance(
+                              new Date(2023, 10, 19, parseInt(s.endsAt.split(":")[0]), parseInt(s.endsAt.split(":")[1])),
+                              new Date(2023, 10, 19, parseInt(s.startsAt.split(":")[0]), parseInt(s.startsAt.split(":")[1]))
+                            )).split(" ")[0] !== "about" ? (
+                              <li id="lengthOfSpokenTime">
+                                {
+                                  (formatDistance(
+                                    new Date(2023, 10, 19, parseInt(s.endsAt.split(":")[0]), parseInt(s.endsAt.split(":")[1])),
+                                    new Date(2023, 10, 19, parseInt(s.startsAt.split(":")[0]), parseInt(s.startsAt.split(":")[1]))
+                                  )).split(" ")[0] + "min"
+                                }
+                              </li>
+                            ) : (
+                              ""
+                          )}
                         </ul>
                       </AreaTitle>
 
