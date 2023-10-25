@@ -301,14 +301,14 @@ export default function SchedulePage() {
                         <ul>
                           {s.spokenLanguage != null ? (
                             <li id="spokenLangage">
-                              {"SpokenLang: " + s.spokenLanguage || ""}
+                              { t("SpokenLang") + s.spokenLanguage || ""}
                             </li>
                           ) : (
                             ""
                           )}
                           {s.speakers.map(speaker => (speaker.location != "") ? (
                             <li id="speakerLocation">
-                              {"Location: " + speaker.location}
+                              {t("Location") + speaker.location}
                             </li>
                             ) : (
                               ""
