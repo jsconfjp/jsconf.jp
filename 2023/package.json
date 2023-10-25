@@ -25,6 +25,7 @@
     "*.{yml,yaml,ts,json}": "prettier"
   },
   "dependencies": {
+    "date-fns": "^2.30.0",
     "gatsby": "^5.12.7",
     "gatsby-image": "3.11.0",
     "gatsby-plugin-image": "^3.12.1",
