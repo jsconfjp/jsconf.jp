@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link as _Link } from "gatsby-link"
 import flatten from "lodash/flatten"
-import { compareAsc, format, parse, formatDistance, differenceInCalendarDays } from "date-fns"
+import { formatDistance } from "date-fns"
 
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
