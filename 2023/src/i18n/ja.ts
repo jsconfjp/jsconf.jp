@@ -23,7 +23,7 @@ export const ja: {
     roomB: "トラックB",
     roomC: "トラックC",
     "SpokenLang": "発表言語: ",
-    "Location": "登壇場所: ",
+    "Location": "発表場所: ",
     venue: "会場アクセス",
     "venue.name": "九段坂上KSビル",
     "venue.address": "〒102-0073 東京都千代田区九段北1-14-6",
