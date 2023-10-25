@@ -102,6 +102,7 @@ const AreaTitle = styled.div`
     margin: 0;
   }
   li#talkTime {
+    font-size: 2rem;
     margin: 0 0.25em 0 0;
     list-style: none;
   }
@@ -109,7 +110,7 @@ const AreaTitle = styled.div`
     font-size: 1.5rem;
     list-style: none;
 
-    padding: 0.1em 0.1em 0.1em;
+    padding: 0.25em 0.1em 0.1em;
     margin: 0 0 0 0.25em;
   }
 `
