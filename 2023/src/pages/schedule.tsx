@@ -105,12 +105,20 @@ const AreaTitle = styled.div`
   li#talkTime {
     list-style: none;
   }
+`
+const AreaFooter = styled.div`
+  color: ${({ theme }) => theme.colors.text};
+  ul {
+    display: flex;
+    padding-left: 0;
+  }
   li#spokenLangage {
     background-color: #f0ffff;
     font-size: 1.2rem;
     list-style: none;
 
-    padding: 0.1em 0.5em 0.1em;
+    padding: 0.25em 0.5em 0.25em;
+    margin: 0;
 
     border-radius: 0.5em 0.5em 0.5em 0.5em;
     border-top: 1px solid #000000;
@@ -236,14 +244,6 @@ export default function SchedulePage() {
                           <li id="talkTime">
                             {s.startsAt}-{s.endsAt}
                           </li>
-
-                          {s.spokenLanguage != null ? (
-                            <li id="spokenLangage">
-                              {"SpokenLang: " + s.spokenLanguage || ""}
-                            </li>
-                          ) : (
-                            ""
-                          )}
                         </ul>
                       </AreaTitle>
 
@@ -256,6 +256,18 @@ export default function SchedulePage() {
                             .join(" and ")}
                         </Text>
                       ) : null}
+
+                      <AreaFooter>
+                        <ul>
+                          {s.spokenLanguage != null ? (
+                            <li id="spokenLangage">
+                              {"SpokenLang: " + s.spokenLanguage || ""}
+                            </li>
+                          ) : (
+                            ""
+                          )}
+                        </ul>
+                      </AreaFooter>
                     </Area>
                   )
                 })}
