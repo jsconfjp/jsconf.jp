@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link as _Link } from "gatsby-link"
 import flatten from "lodash/flatten"
-import { formatDistance } from "date-fns"
+import { differenceInMinutes } from "date-fns"
 
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
@@ -268,17 +268,17 @@ export default function SchedulePage() {
                             {s.startsAt}-{s.endsAt}
                           </li>
                           {
-                            (formatDistance(
-                              new Date(2023, 10, 19, parseInt(s.endsAt.split(":")[0]), parseInt(s.endsAt.split(":")[1])),
-                              new Date(2023, 10, 19, parseInt(s.startsAt.split(":")[0]), parseInt(s.startsAt.split(":")[1]))
-                            )).split(" ")[0] !== "about" ? (
+                            (differenceInMinutes(
+                                new Date(2023, 10, 19, parseInt(s.endsAt.split(":")[0]), parseInt(s.endsAt.split(":")[1])),
+                                new Date(2023, 10, 19, parseInt(s.startsAt.split(":")[0]), parseInt(s.startsAt.split(":")[1]))
+                            )) !== 0 ? (
                               <li id="lengthOfSpokenTime">
                                 {
                                   "(" +
-                                  (formatDistance(
+                                  (differenceInMinutes(
                                     new Date(2023, 10, 19, parseInt(s.endsAt.split(":")[0]), parseInt(s.endsAt.split(":")[1])),
                                     new Date(2023, 10, 19, parseInt(s.startsAt.split(":")[0]), parseInt(s.startsAt.split(":")[1]))
-                                  )).split(" ")[0] + "min" + ")"
+                                  )) + "min" + ")"
                                 }
                               </li>
                             ) : (
