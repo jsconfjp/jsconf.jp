@@ -10,11 +10,11 @@ To edit your CFP, please make a pull request refer to [CONTRIBUTING.md](./CONTRI
 
 Please update `{YEAR}/src/data/members.yaml`
 
-### Editting a talk or speaker
+### Editing a talk or speaker
 
 Please update `{YEAR}/src/data/talks.yaml` or `{YEAR}/src/data/speakers.yaml`
 
-### Editting a sponsor
+### Editing a sponsor
 
 Please update `{YEAR}/src/data/sponsors.yaml`
 
