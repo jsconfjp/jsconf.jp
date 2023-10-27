@@ -90,16 +90,23 @@
   location: on-site
 - uuid: baseballyama
   name: 山下 裕一朗 (baseballyama)
-  nameReading: ""
-  pronoun: ""
+  nameReading: Yuichiro
+  pronoun: he
   featured: false
   presentations:
     - baseballyama-1
+  biography: >-
+    Software Engineer at Flyle Inc. and maintainer of the front-end framework
+    Svelte. Flyle is a VOC management and product planning cloud that greatly
+    streamlines everything from needs analysis to solution management for
+    product development and CX.
   biographyJa: >-
     株式会社フライル のソフトウェアエンジニア。フロントエンドフレームワーク Svelte
     のメンテナ。Flyleは、製品開発・CXのためのニーズ分析からアイデア管理までを
 
     大きく効率化するVOC管理・製品企画クラウドです。
+  twitter: baseballyama_
+  github: baseballyama
   location: on-site
 - uuid: canalun
   name: canalun (Kanaru Sato)
