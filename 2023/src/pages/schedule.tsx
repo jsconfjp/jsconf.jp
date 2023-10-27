@@ -237,14 +237,15 @@ export default function SchedulePage() {
                             {s.startsAt}-{s.endsAt}
                           </li>
 
-                          { s.spokenLanguage != null ?
+                          {s.spokenLanguage != null ? (
                             <li id="spokenLangage">
-                              { "SpokenLang: " + s.spokenLanguage || "" }
-                            </li> : ""
-                          }
+                              {"SpokenLang: " + s.spokenLanguage || ""}
+                            </li>
+                          ) : (
+                            ""
+                          )}
                         </ul>
                       </AreaTitle>
-
 
                       <Text>{enOrJa(i18n)(s.title, s.titleJa) || "TBA"}</Text>
                       {s.speakers.length ? (
