@@ -130,7 +130,7 @@
   prText: |
     ネット完結　バイク売買サイトKATIXを運営しております。
 - uuid: dwango
-  ready: false
+  ready: true
   name: 株式会社ドワンゴ
   url: https://dwango.co.jp/
   grade: premium
