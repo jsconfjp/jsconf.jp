@@ -138,6 +138,7 @@ const notTalkIds = [
   "open",
   "opening-talk",
   "break",
+  "Break",
   "party",
   "closing-talk",
   "TBA",

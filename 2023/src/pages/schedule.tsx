@@ -295,18 +295,19 @@ export default function SchedulePage() {
                         <ul>
                           {s.spokenLanguage != null ? (
                             <li id="spokenLangage">
-                              { t("SpokenLang") + s.spokenLanguage || ""}
+                              {t("SpokenLang") + s.spokenLanguage || ""}
                             </li>
                           ) : (
                             ""
                           )}
-                          {s.speakers.map(speaker => (speaker.location != "") ? (
-                            <li id="speakerLocation">
-                              {t("Location") + speaker.location}
-                            </li>
+                          {s.speakers.map(speaker =>
+                            speaker.location != "" ? (
+                              <li id="speakerLocation">
+                                {t("Location") + speaker.location}
+                              </li>
                             ) : (
                               ""
-                            )
+                            ),
                           )}
                         </ul>
                       </AreaFooter>
