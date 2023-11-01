@@ -15,3 +15,50 @@
     mv 2022/public dist/2022
     cd 2023 && npm ci --legacy-peer-deps && npm run build -- --prefix-paths --verbose && mv public ../dist/2023
     '''
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "deny"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
+    Strict-Transport-Security = '''
+      max-age=31536000;
+      includeSubDomains;
+      preload
+    '''
+    Content-Security-Policy-Report-Only = '''
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' maps.gstatic.com maps.googleapis.com google-analytics.com;
+        style-src 'self' 'unsafe-inline' fonts.googleapis.com;
+        img-src 'self' data: google-analytics.com/collect;
+        font-src 'self' fonts.gstatic.com;
+        connect-src 'self' google.com maps.googleapis.com;
+        frame-src google.com;
+        base-uri 'self';
+        form-action 'self';
+        object-src 'none';
+        worker-src 'none';
+        manifest-src 'self';
+        prefetch-src 'self';
+    '''
+    Permissions-Policy = '''
+      accelerometer=(none),
+      ambient-light-sensor=(none),
+      autoplay=(none),
+      camera=(none),
+      encrypted-media=(none),
+      fullscreen=(none),
+      geolocation=(none),
+      gyroscope=(none),
+      magnetometer=(none),
+      microphone=(none),
+      midi=(none),
+      payment=(none),
+      picture-in-picture=(none),
+      speaker=(none),
+      usb=(none),
+      vibrate=(none),
+      vr=(none)
+    '''
