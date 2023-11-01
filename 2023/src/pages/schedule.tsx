@@ -18,6 +18,11 @@ import { rangeTimeBoxes, escapeTime } from "../util/rangeTimeBoxes"
 import { Dates, times, Rooms, rooms } from "../util/misc"
 import { enOrJa } from "../util/languages"
 
+function timeToDate(time: string): Date {
+  const [h, m] = time.split(":")
+  return new Date(2023, 10, 19, parseInt(h), parseInt(m))
+}
+
 const dummyTrack = String.fromCharCode(
   rooms[rooms.length - 1].charCodeAt(0) + 1,
 ) as Rooms
@@ -247,6 +252,9 @@ export default function SchedulePage() {
                 {sessions.map(s => {
                   const hasDescription =
                     s.uuid && (s.speakers.length || s.sponsors.length)
+                  const start = timeToDate(s.startsAt)
+                  const end = timeToDate(s.endsAt)
+                  const diff = differenceInMinutes(end, start)
                   return (
                     <Area
                       // @ts-expect-error
@@ -267,22 +275,8 @@ export default function SchedulePage() {
                           <li id="talkTime">
                             {s.startsAt}-{s.endsAt}
                           </li>
-                          {
-                            (differenceInMinutes(
-                                new Date(2023, 10, 19, parseInt(s.endsAt.split(":")[0]), parseInt(s.endsAt.split(":")[1])),
-                                new Date(2023, 10, 19, parseInt(s.startsAt.split(":")[0]), parseInt(s.startsAt.split(":")[1]))
-                            )) !== 0 ? (
-                              <li id="lengthOfSpokenTime">
-                                {
-                                  "(" +
-                                  (differenceInMinutes(
-                                    new Date(2023, 10, 19, parseInt(s.endsAt.split(":")[0]), parseInt(s.endsAt.split(":")[1])),
-                                    new Date(2023, 10, 19, parseInt(s.startsAt.split(":")[0]), parseInt(s.startsAt.split(":")[1]))
-                                  )) + "min" + ")"
-                                }
-                              </li>
-                            ) : (
-                              ""
+                          {diff > 0 && (
+                            <li id="lengthOfSpokenTime">{`(${diff} min)`}</li>
                           )}
                         </ul>
                       </AreaTitle>
