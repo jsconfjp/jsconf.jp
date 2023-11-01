@@ -1,3 +1,42 @@
+- uuid: anirudh-sharma-1
+  date: day1
+  startsAt: "11:25"
+  endsAt: "11:55"
+  room: A
+  title: "Web Internals: Mastering the JavaScript Engine"
+  description: >-
+    For every developer, it's really essential to understand the internals in
+    order to be aware and write optimized code. With a whole existing and
+    upcoming ecosystem of libraries and frameworks around JavaScript, the need
+    for thorough understanding of code execution on the web becomes more
+    relevant. This knowledge also helps you to better understand and distinguish
+    technologies like WebAssembly from JavaScript.
+
+
+    Attend this talk to get an in-depth overview of the JavaScript engine and
+    learn how it can help you as a developer to write more optimized JavaScript
+    code. You will learn how exactly your high-level code is converted to
+    bytecode and then to the optimized machine code with the magic of the V8
+    engine.
+
+
+    The key session highlights include:
+
+    1. Intro to JS engines and the V8 engine evolution
+
+    2. Abstract Syntax Tree (AST)
+
+    3. Ignition, Bytecode and Turbofan
+
+    4. Hidden classes and Inline caching
+
+    5. Garbage collection
+
+    6. Writing optimized code
+  spokenLanguage: en
+  slideLanguage: en
+  speakerIDs:
+    - anirudh-sharma
 - uuid: aileen-villanueva-lecuona-1
   date: day1
   startsAt: "13:00"
@@ -54,45 +93,6 @@
   slideLanguage: en
   speakerIDs:
     - aakansha
-- uuid: anirudh-sharma-1
-  date: day1
-  startsAt: "14:40"
-  endsAt: "15:20"
-  room: A
-  title: "Web Internals: Mastering the JavaScript Engine"
-  description: >-
-    For every developer, it's really essential to understand the internals in
-    order to be aware and write optimized code. With a whole existing and
-    upcoming ecosystem of libraries and frameworks around JavaScript, the need
-    for thorough understanding of code execution on the web becomes more
-    relevant. This knowledge also helps you to better understand and distinguish
-    technologies like WebAssembly from JavaScript.
-
-
-    Attend this talk to get an in-depth overview of the JavaScript engine and
-    learn how it can help you as a developer to write more optimized JavaScript
-    code. You will learn how exactly your high-level code is converted to
-    bytecode and then to the optimized machine code with the magic of the V8
-    engine.
-
-
-    The key session highlights include:
-
-    1. Intro to JS engines and the V8 engine evolution
-
-    2. Abstract Syntax Tree (AST)
-
-    3. Ignition, Bytecode and Turbofan
-
-    4. Hidden classes and Inline caching
-
-    5. Garbage collection
-
-    6. Writing optimized code
-  spokenLanguage: en
-  slideLanguage: en
-  speakerIDs:
-    - anirudh-sharma
 - uuid: ankur-datta-1
   date: day1
   startsAt: "17:10"
@@ -538,24 +538,6 @@
   slideLanguage: en
   speakerIDs:
     - jon-zhang
-- uuid: kian-jamali-1
-  date: day1
-  startsAt: "11:25"
-  endsAt: "11:55"
-  room: A
-  title: "Trusted Types: DOM XSS Proteciton at Scale"
-  description: >-
-    DOM XSS continues to be the most critical threat to web security. Our
-    current best defense against DOM XSS is Trusted Types, a browser-based
-    runtime feature to limit the uses of DOM APIs (and limit the possibility of
-    DOM injection). We will discuss our approach to using Trusted Types at
-    Google to protect billions of our users, the challenges of backporting
-    Trusted Types compatibility to hundreds of webapps, and our approach to
-    making the entire JS ecosystem safer with Trusted Types.
-  spokenLanguage: en
-  slideLanguage: en
-  speakerIDs:
-    - kian-jamali
 - uuid: kenneth-rohde-christiansen-1
   date: day1
   startsAt: "14:10"
@@ -580,6 +562,24 @@
   slideLanguage: en
   speakerIDs:
     - kenneth-rohde-christiansen
+- uuid: kian-jamali-1
+  date: day1
+  startsAt: "14:40"
+  endsAt: "15:20"
+  room: A
+  title: "Trusted Types: DOM XSS Proteciton at Scale"
+  description: >-
+    DOM XSS continues to be the most critical threat to web security. Our
+    current best defense against DOM XSS is Trusted Types, a browser-based
+    runtime feature to limit the uses of DOM APIs (and limit the possibility of
+    DOM injection). We will discuss our approach to using Trusted Types at
+    Google to protect billions of our users, the challenges of backporting
+    Trusted Types compatibility to hundreds of webapps, and our approach to
+    making the entire JS ecosystem safer with Trusted Types.
+  spokenLanguage: en
+  slideLanguage: en
+  speakerIDs:
+    - kian-jamali
 - uuid: koji-ota-1
   date: day1
   startsAt: "16:40"
