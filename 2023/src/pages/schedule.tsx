@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link as _Link } from "gatsby-link"
 import flatten from "lodash/flatten"
+import { differenceInMinutes } from "date-fns"
 
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
@@ -16,6 +17,11 @@ import { generateTimetable } from "../util/generateTimetable"
 import { rangeTimeBoxes, escapeTime } from "../util/rangeTimeBoxes"
 import { Dates, times, Rooms, rooms } from "../util/misc"
 import { enOrJa } from "../util/languages"
+
+function timeToDate(time: string): Date {
+  const [h, m] = time.split(":")
+  return new Date(2023, 10, 19, parseInt(h), parseInt(m))
+}
 
 const dummyTrack = String.fromCharCode(
   rooms[rooms.length - 1].charCodeAt(0) + 1,
@@ -97,20 +103,49 @@ const AreaTitle = styled.div`
   color: ${({ theme }) => theme.colors.text};
   ul {
     display: flex;
-    justify-content: space-between;
-
     padding-left: 0;
     margin: 0;
   }
   li#talkTime {
+    font-size: 2rem;
+    margin: 0 0.25em 0 0;
     list-style: none;
+  }
+  li#lengthOfSpokenTime {
+    font-size: 1.5rem;
+    list-style: none;
+
+    padding: 0.25em 0.1em 0.1em;
+    margin: 0 0 0 0.25em;
+  }
+`
+const AreaFooter = styled.div`
+  color: ${({ theme }) => theme.colors.text};
+  ul {
+    display: flex;
+    padding-left: 0;
   }
   li#spokenLangage {
     background-color: #f0ffff;
     font-size: 1.2rem;
     list-style: none;
 
-    padding: 0.1em 0.5em 0.1em;
+    padding: 0.25em 0.5em 0.25em;
+    margin: 0;
+
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+  }
+  li#speakerLocation {
+    background-color: #f0ffff;
+    font-size: 1.2rem;
+    list-style: none;
+
+    padding: 0.25em 0.5em 0.25em;
+    margin: 0 0 0 0.25em;
 
     border-radius: 0.5em 0.5em 0.5em 0.5em;
     border-top: 1px solid #000000;
@@ -130,6 +165,7 @@ export default function SchedulePage() {
             node {
               uuid
               name
+              location
             }
           }
         }
@@ -216,6 +252,9 @@ export default function SchedulePage() {
                 {sessions.map(s => {
                   const hasDescription =
                     s.uuid && (s.speakers.length || s.sponsors.length)
+                  const start = timeToDate(s.startsAt)
+                  const end = timeToDate(s.endsAt)
+                  const diff = differenceInMinutes(end, start)
                   return (
                     <Area
                       // @ts-expect-error
@@ -236,13 +275,8 @@ export default function SchedulePage() {
                           <li id="talkTime">
                             {s.startsAt}-{s.endsAt}
                           </li>
-
-                          {s.spokenLanguage != null ? (
-                            <li id="spokenLangage">
-                              {"SpokenLang: " + s.spokenLanguage || ""}
-                            </li>
-                          ) : (
-                            ""
+                          {diff > 0 && (
+                            <li id="lengthOfSpokenTime">{`(${diff} min)`}</li>
                           )}
                         </ul>
                       </AreaTitle>
@@ -256,6 +290,26 @@ export default function SchedulePage() {
                             .join(" and ")}
                         </Text>
                       ) : null}
+
+                      <AreaFooter>
+                        <ul>
+                          {s.spokenLanguage != null ? (
+                            <li id="spokenLangage">
+                              { t("SpokenLang") + s.spokenLanguage || ""}
+                            </li>
+                          ) : (
+                            ""
+                          )}
+                          {s.speakers.map(speaker => (speaker.location != "") ? (
+                            <li id="speakerLocation">
+                              {t("Location") + speaker.location}
+                            </li>
+                            ) : (
+                              ""
+                            )
+                          )}
+                        </ul>
+                      </AreaFooter>
                     </Area>
                   )
                 })}
