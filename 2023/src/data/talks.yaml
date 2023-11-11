@@ -344,7 +344,7 @@
     - Biome での linter の実装例の紹介
         linter の実装方法について、簡単なルールを例に具体的なコードを紹介しながら解説します。
   spokenLanguage: ja
-  slideLanguage: ja
+  slideLanguage: en
   speakerIDs:
     - daiki-nishikawa
 - uuid: day1-break-A-11:55
