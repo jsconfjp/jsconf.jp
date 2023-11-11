@@ -37,6 +37,7 @@
   slideLanguage: en
   speakerIDs:
     - anirudh-sharma
+  sponsorIDs: []
 - uuid: aileen-villanueva-lecuona-1
   date: day1
   startsAt: "13:00"
@@ -61,6 +62,7 @@
   slideLanguage: en
   speakerIDs:
     - aileen-villanueva-lecuona
+  sponsorIDs: []
 - uuid: akfm-sato-1
   date: day1
   startsAt: "14:10"
@@ -72,6 +74,7 @@
   slideLanguage: ja
   speakerIDs:
     - akfm-sato
+  sponsorIDs: []
 - uuid: aakansha-1
   date: day1
   startsAt: "14:10"
@@ -93,6 +96,7 @@
   slideLanguage: en
   speakerIDs:
     - aakansha
+  sponsorIDs: []
 - uuid: ankur-datta-1
   date: day1
   startsAt: "17:10"
@@ -147,6 +151,7 @@
   slideLanguage: en
   speakerIDs:
     - ankur-datta
+  sponsorIDs: []
 - uuid: azukiazusa-1
   date: day1
   startsAt: "19:40"
@@ -174,6 +179,7 @@
   slideLanguage: ja
   speakerIDs:
     - azukiazusa
+  sponsorIDs: []
 - uuid: baseballyama-1
   date: day1
   startsAt: "11:25"
@@ -219,6 +225,7 @@
   slideLanguage: ja
   speakerIDs:
     - baseballyama
+  sponsorIDs: []
 - uuid: christoph-nakazawa-1
   date: day1
   startsAt: "13:30"
@@ -233,6 +240,7 @@
   slideLanguage: en
   speakerIDs:
     - christoph-nakazawa
+  sponsorIDs: []
 - uuid: canalun-1
   date: day1
   startsAt: "16:00"
@@ -296,6 +304,7 @@
   slideLanguage: en
   speakerIDs:
     - canalun
+  sponsorIDs: []
 - uuid: day1-break-A-10:00
   startsAt: "10:00"
   endsAt: "10:30"
@@ -303,6 +312,7 @@
   date: day1
   title: open
   speakerIDs: []
+  sponsorIDs: []
 - uuid: day1-break-A-10:30
   startsAt: "10:30"
   endsAt: "10:45"
@@ -310,6 +320,7 @@
   date: day1
   title: opening talk
   speakerIDs: []
+  sponsorIDs: []
 - uuid: day1-break-A-11:15
   startsAt: "11:15"
   endsAt: "11:25"
@@ -317,6 +328,7 @@
   date: day1
   title: Break
   speakerIDs: []
+  sponsorIDs: []
 - uuid: daiki-nishikawa-1
   date: day1
   startsAt: "11:25"
@@ -347,6 +359,7 @@
   slideLanguage: en
   speakerIDs:
     - daiki-nishikawa
+  sponsorIDs: []
 - uuid: day1-break-A-11:55
   startsAt: "11:55"
   endsAt: "13:00"
@@ -354,6 +367,7 @@
   date: day1
   title: Break
   speakerIDs: []
+  sponsorIDs: []
 - uuid: day1-break-A-14:00
   startsAt: "14:00"
   endsAt: "14:10"
@@ -361,6 +375,7 @@
   date: day1
   title: Break
   speakerIDs: []
+  sponsorIDs: []
 - uuid: day1-break-A-15:20
   startsAt: "15:20"
   endsAt: "15:30"
@@ -368,6 +383,7 @@
   date: day1
   title: Break
   speakerIDs: []
+  sponsorIDs: []
 - uuid: day1-break-A-16:30
   startsAt: "16:30"
   endsAt: "16:40"
@@ -375,6 +391,7 @@
   date: day1
   title: Break
   speakerIDs: []
+  sponsorIDs: []
 - uuid: day1-break-A-17:40
   startsAt: "17:40"
   endsAt: "17:50"
@@ -382,6 +399,7 @@
   date: day1
   title: Break
   speakerIDs: []
+  sponsorIDs: []
 - uuid: day1-break-A-17:50
   startsAt: "17:50"
   endsAt: "18:50"
@@ -389,6 +407,7 @@
   date: day1
   title: sponsor
   speakerIDs: []
+  sponsorIDs: []
 - uuid: day1-break-A-18:50
   startsAt: "18:50"
   endsAt: "19:00"
@@ -396,6 +415,7 @@
   date: day1
   title: Break
   speakerIDs: []
+  sponsorIDs: []
 - uuid: day1-break-A-19:50
   startsAt: "19:50"
   endsAt: "20:00"
@@ -403,6 +423,7 @@
   date: day1
   title: closing talk
   speakerIDs: []
+  sponsorIDs: []
 - uuid: day1-break-A-20:00
   startsAt: "20:00"
   endsAt: "22:00"
@@ -410,6 +431,7 @@
   date: day1
   title: party
   speakerIDs: []
+  sponsorIDs: []
 - uuid: himeno-kosei-1
   date: day1
   startsAt: "13:30"
@@ -430,6 +452,7 @@
   slideLanguage: ja
   speakerIDs:
     - himeno-kosei
+  sponsorIDs: []
 - uuid: hajime-mugishima-1
   date: day1
   startsAt: "14:40"
@@ -452,6 +475,7 @@
   slideLanguage: ja
   speakerIDs:
     - hajime-mugishima
+  sponsorIDs: []
 - uuid: josh-goldberg-1
   date: day1
   startsAt: "15:30"
@@ -493,6 +517,7 @@
   slideLanguage: en
   speakerIDs:
     - josh-goldberg
+  sponsorIDs: []
 - uuid: jon-zhang-1
   date: day1
   startsAt: "16:00"
@@ -538,6 +563,7 @@
   slideLanguage: en
   speakerIDs:
     - jon-zhang
+  sponsorIDs: []
 - uuid: kenneth-rohde-christiansen-1
   date: day1
   startsAt: "14:10"
@@ -562,6 +588,7 @@
   slideLanguage: en
   speakerIDs:
     - kenneth-rohde-christiansen
+  sponsorIDs: []
 - uuid: kian-jamali-1
   date: day1
   startsAt: "14:40"
@@ -580,6 +607,7 @@
   slideLanguage: en
   speakerIDs:
     - kian-jamali
+  sponsorIDs: []
 - uuid: koji-ota-1
   date: day1
   startsAt: "16:40"
@@ -600,6 +628,7 @@
   slideLanguage: en/ja
   speakerIDs:
     - koji-ota
+  sponsorIDs: []
 - uuid: kkeeth-1
   date: day1
   startsAt: "16:40"
@@ -614,6 +643,7 @@
   slideLanguage: ja
   speakerIDs:
     - kkeeth
+  sponsorIDs: []
 - uuid: kateryna-porshnieva-1
   date: day1
   startsAt: "17:10"
@@ -636,6 +666,7 @@
   slideLanguage: en
   speakerIDs:
     - kateryna-porshnieva
+  sponsorIDs: []
 - uuid: luca-mugnaini-1
   date: day1
   startsAt: "19:20"
@@ -653,6 +684,7 @@
   slideLanguage: en
   speakerIDs:
     - luca-mugnaini
+  sponsorIDs: []
 - uuid: mizchi-1
   date: day1
   startsAt: "13:00"
@@ -667,6 +699,7 @@
   slideLanguage: ja
   speakerIDs:
     - mizchi
+  sponsorIDs: []
 - uuid: masaki-suzuki-1
   date: day1
   startsAt: "16:00"
@@ -695,6 +728,7 @@
   slideLanguage: ja
   speakerIDs:
     - masaki-suzuki
+  sponsorIDs: []
 - uuid: peter-eijgermans-1
   date: day1
   startsAt: "13:00"
@@ -737,6 +771,7 @@
   slideLanguage: en
   speakerIDs:
     - peter-eijgermans
+  sponsorIDs: []
 - uuid: poteboy-1
   date: day1
   startsAt: "19:30"
@@ -753,6 +788,7 @@
   slideLanguage: ja
   speakerIDs:
     - poteboy
+  sponsorIDs: []
 - uuid: ryusei-sajiki-1
   date: day1
   startsAt: "17:10"
@@ -780,6 +816,7 @@
   slideLanguage: ja
   speakerIDs:
     - ryusei-sajiki
+  sponsorIDs: []
 - uuid: sosuke-suzuki-1
   date: day1
   startsAt: "15:30"
@@ -806,6 +843,7 @@
   slideLanguage: ja
   speakerIDs:
     - sosuke-suzuki
+  sponsorIDs: []
 - uuid: takuto-wada-1
   date: day1
   startsAt: "19:00"
@@ -819,6 +857,7 @@
   slideLanguage: en/ja
   speakerIDs:
     - takuto-wada
+  sponsorIDs: []
 - uuid: vasilika-klimova-1
   date: day1
   startsAt: "16:40"
@@ -836,6 +875,7 @@
   slideLanguage: en
   speakerIDs:
     - vasilika-klimova
+  sponsorIDs: []
 - uuid: wakamsha-1
   date: day1
   startsAt: "13:30"
@@ -849,6 +889,73 @@
   slideLanguage: en/ja
   speakerIDs:
     - wakamsha
+  sponsorIDs: []
+- uuid: workshop-helpfeel
+  date: day1
+  startsAt: "15:30"
+  endsAt: "16:00"
+  room: D
+  title: "From Loading to Generating: Leveraging AI in State Management"
+  description: >-
+    The static expression of "loading" in state management has been transformed
+    into a dynamic expression of "generating" by the emergence of ChatGPT. For
+    effectively illustrating generative processes, understanding the concept of
+    streams in asynchronous processing is fundamental. In this presentation, we
+    will provide an overview of language models along with other machine
+    learning models, and examine how streams of data received from the APIs are
+    managed using Fetch API. Lastly, drawing perspectives from both developers
+    and users, we shall delve into the potential and limitations of user
+    interfaces that harness the power of generative AI.
+  descriptionJa: >-
+    状態管理における「読み込み中」の表現は、ChatGPTの登場によって「生成中」へとシフトしました。生成的なプロセスを効果的に表現するためには、非同期処理におけるストリームの概念を理解することが重要です。本発表では、言語モデルを含む他の機械学習モデルについて概観し、APIから受け取ったデータのストリームがFetch
+    APIを用いてどのように扱われるかを見ます。最後に、開発者とユーザー双方の視点から、生成AIの力を引き出すユーザーインターフェースの可能性と限界について議論します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  presenterNameEn: Yudai Nishiyama
+  speakerIDs: []
+  sponsorIDs:
+    - helpfeel
+- uuid: workshop-ubie
+  date: day1
+  startsAt: "16:00"
+  endsAt: "16:30"
+  room: D
+  titleJa: ユビーを支えるシステムアーキテクチャのこれまでとこれから
+  descriptionJa: >-
+    ユビーはヘルステックのスタートアップとして、toC、toB向けに医療系のサービスを提供しています。サービスの提供から数年経過し、徐々に技術的負債も溜まってきているのが現状です。プロダクトも組織もこれからスケールすることが見込まれており、それに伴って生産性が毀損されないようにアーキテクチャを見直しているところです。フロントエンドにおける課題やサーバーサイドをKotlinからNode.jsに書き換えている話しなど、ユビーにおけるシステムの課題や今後の取り組みについてお話します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  presenterNameJa: 外村 和仁
+  speakerIDs: []
+  sponsorIDs:
+    - ubie
+- uuid: workshop-kaonavi
+  date: day1
+  startsAt: "16:40"
+  endsAt: "17:10"
+  room: D
+  titleJa: Storybook駆動開発 UI開発の再現性と効率化
+  descriptionJa: >-
+    システム開発には不確実性が多く、顧客への価値の提供やスケジュール管理が難しい。そういった不確実性と対峙するために、アジャイル開発におけるイテレーションのスピードと、顧客が体感できる価値を提供し続けることが重要です。そして、フロントエンド開発を効率的に進めるためには、顧客視点での再現性と集中的な開発環境の構築が必要になってきました。ここでStorybookをインテグレーションテストツールとして活用することで、「Storybook駆動開発」を推進することにしました。このアプローチにより、複雑なフロントエンド開発でも効率的に進め、開発体験を向上させることができた体験をご紹介します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  presenterNameJa: 木下 博貴
+  speakerIDs: []
+  sponsorIDs:
+    - kaonavi
+- uuid: workshop-wantedly
+  date: day1
+  startsAt: "17:10"
+  endsAt: "17:40"
+  room: D
+  titleJa: デザインシステム仕切り直し（仮）
+  descriptionJa: デザインシステムを継続的に改善していくための組織を立ち上げた背景や経緯などをお話します。
+  spokenLanguage: ja
+  slideLanguage: ja
+  presenterNameJa: 原 剛士
+  speakerIDs: []
+  sponsorIDs:
+    - wantedly
 - uuid: yulia-startsev-1
   date: day1
   startsAt: "10:45"
@@ -868,6 +975,7 @@
   slideLanguage: en
   speakerIDs:
     - yulia-startsev
+  sponsorIDs: []
 - uuid: yonatan-mevorach-1
   date: day1
   startsAt: "14:40"
@@ -893,6 +1001,7 @@
   slideLanguage: en
   speakerIDs:
     - yonatan-mevorach
+  sponsorIDs: []
 - uuid: yusuke-wada-1
   date: day1
   startsAt: "15:30"
@@ -913,6 +1022,7 @@
   slideLanguage: ja
   speakerIDs:
     - yusuke-wada
+  sponsorIDs: []
 - uuid: yamanoku-1
   date: day1
   startsAt: "19:10"
@@ -927,3 +1037,4 @@
   slideLanguage: ja
   speakerIDs:
     - yamanoku
+  sponsorIDs: []

@@ -15,6 +15,8 @@ export type TalkType = {
   slideLanguage: string
   speakerIDs: string[]
   sponsorIDs: string[]
+  presenterNameEn: string | undefined
+  presenterNameJa: string | undefined
   date: "day1"
   startsAt: string
   endsAt: string
@@ -82,7 +84,7 @@ export function Speaker(props: Props) {
     return (
       <div>
         <Avatar image={avatar} alt={name} loading="lazy" />
-        <Title lang="en">{enOrJa(i18n)(title, titleJa)}</Title>
+        <Title>{enOrJa(i18n)(title, titleJa)}</Title>
         <Name>{name}</Name>
       </div>
     )

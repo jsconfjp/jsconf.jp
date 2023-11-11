@@ -33,6 +33,8 @@ export default function SpeakersPage() {
             descriptionJa
             spokenLanguage
             slideLanguage
+            presenterNameEn
+            presenterNameJa
             speakerIDs
           }
         }

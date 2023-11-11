@@ -22,6 +22,7 @@ export const ja: {
     roomA: "トラックA",
     roomB: "トラックB",
     roomC: "トラックC",
+    roomD: "トラックD",
     SpokenLang: "発表言語: ",
     Location: "発表場所: ",
     venue: "会場アクセス",
