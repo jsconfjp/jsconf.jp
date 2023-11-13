@@ -190,8 +190,11 @@ export default function SchedulePage() {
               description
               descriptionJa
               spokenLanguage
+              presenterNameEn
+              presenterNameJa
               slideLanguage
               speakerIDs
+              sponsorIDs
               startsAt
               endsAt
               room
@@ -255,6 +258,41 @@ export default function SchedulePage() {
                   const start = timeToDate(s.startsAt)
                   const end = timeToDate(s.endsAt)
                   const diff = differenceInMinutes(end, start)
+
+                  const locations = s.sponsors.length
+                    ? ["on-site"]
+                    : s.speakers.length
+                    ? Array.from(
+                        s.speakers.reduce((locations, speaker) => {
+                          if (speaker.location) {
+                            locations.add(speaker.location)
+                          }
+                          return locations
+                        }, new Set()),
+                      )
+                    : undefined
+                  const speaker = s.sponsors.length
+                    ? `${enOrJa(i18n)(
+                        s.presenterNameEn ?? s.presenterNameJa ?? "",
+                        s.presenterNameJa ?? s.presenterNameEn ?? "",
+                      )} (${s.sponsors[0].name})`
+                    : s.speakers
+                    ? s.speakers
+                        .map(speaker => speaker.name)
+                        .concat(
+                          ...(s.presenterNameEn || s.presenterNameJa
+                            ? [
+                                enOrJa(i18n)(
+                                  (s.presenterNameEn ??
+                                    s.presenterNameJa) as string,
+                                  (s.presenterNameJa ??
+                                    s.presenterNameEn) as string,
+                                ),
+                              ]
+                            : []),
+                        )
+                        .join(" and ")
+                    : null
                   return (
                     <Area
                       // @ts-expect-error
@@ -282,14 +320,7 @@ export default function SchedulePage() {
                       </AreaTitle>
 
                       <Text>{enOrJa(i18n)(s.title, s.titleJa) || "TBA"}</Text>
-                      {s.speakers.length ? (
-                        <Text>
-                          by{" "}
-                          {s.speakers
-                            .map(speaker => speaker.name)
-                            .join(" and ")}
-                        </Text>
-                      ) : null}
+                      {speaker ? <Text>by {speaker}</Text> : null}
 
                       <AreaFooter>
                         <ul>
@@ -300,15 +331,13 @@ export default function SchedulePage() {
                           ) : (
                             ""
                           )}
-                          {s.speakers.map(speaker =>
-                            speaker.location != "" ? (
-                              <li id="speakerLocation">
-                                {t("Location") + speaker.location}
-                              </li>
-                            ) : (
-                              ""
-                            ),
-                          )}
+                          {locations
+                            ? locations.map(location => (
+                                <li id="speakerLocation">
+                                  {t("Location") + location}
+                                </li>
+                              ))
+                            : null}
                         </ul>
                       </AreaFooter>
                     </Area>

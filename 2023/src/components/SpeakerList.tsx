@@ -38,11 +38,15 @@ export function SpeakerList(props: Props) {
     .filter(speaker => {
       return speaker.presentations.length > 0
     })
-    .map(speaker => ({
-      speaker: speaker,
-      talk: talkMap[speaker.presentations[0]],
-      avatar: avatarMap[speaker.uuid],
-    }))
+    .map(speaker => {
+      const talk = talkMap[speaker.presentations[0]]
+      return {
+        speaker,
+        talk,
+        avatar:
+          avatarMap[speaker.uuid] ?? "/sponsors/" + talk.sponsorIDs[0] + ".png",
+      }
+    })
 
   return (
     <Container>

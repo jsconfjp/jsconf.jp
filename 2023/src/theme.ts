@@ -21,6 +21,8 @@ export const theme: DefaultTheme = {
     roomBBorder: "#36A49C",
     roomC: "lemonchiffon",
     roomCBorder: "gold",
+    roomD: "#ddf1ff",
+    roomDBorder: "#509edd",
     accessibility: "#D3EEEC",
   },
   fonts: {

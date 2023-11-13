@@ -102,7 +102,10 @@ export default function Speaker(props: Props) {
   })
   const speakerNames = speakers.length
     ? speakers.map(speaker => speaker.name).join(" and ")
-    : sponsors[0].name
+    : `${enOrJa(i18n)(
+        talk.presenterNameEn ?? talk.presenterNameJa ?? "",
+        talk.presenterNameJa ?? talk.presenterNameEn ?? "",
+      )} (${sponsors[0].name})`
 
   return (
     <Layout>

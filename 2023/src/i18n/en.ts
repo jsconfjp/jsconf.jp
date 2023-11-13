@@ -26,6 +26,7 @@ export const en = {
     roomA: "Track A",
     roomB: "Track B",
     roomC: "Track C",
+    roomD: "Track D",
     SpokenLang: "SpokenLangage: ",
     Location: "Location: ",
     tickets: "Tickets",

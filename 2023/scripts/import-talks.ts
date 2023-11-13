@@ -36,19 +36,32 @@ type PresentationRow = {
   "description-ja": string
   "slides-language": string
 }
+type SponsorRow = {
+  uuid: string
+  "sponsor-id": string
+  "title-en": string
+  "title-ja": string
+  "description-en": string
+  "presenter-name-en": string
+  "presenter-name-ja": string
+  "description-ja": string
+  "spoken-language": string
+  "slides-language": string
+}
 type TimetableRow = {
   start: string
   end: string
   a: string
   b: string
   c: string
+  d: string
 }
 type Session = {
   uuid: string
   date: string
   startsAt: string
   endsAt: string
-  room: "A" | "B" | "C"
+  room: "A" | "B" | "C" | "D"
 }
 
 const todoToEmpty = (str: string) =>
@@ -79,6 +92,8 @@ const URLS = {
   schedule: {
     day1: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSXITBODWuYi_kGDe8mJBM-Z7U6n43VAllNvZO-oA7nekk_hBuYrWoSGcWVgzLWRV25aqJuDzN6fh7M/pub?gid=1755144529&single=true&output=csv",
   },
+  sponsorWorkshop:
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vSXITBODWuYi_kGDe8mJBM-Z7U6n43VAllNvZO-oA7nekk_hBuYrWoSGcWVgzLWRV25aqJuDzN6fh7M/pub?gid=1052475107&single=true&output=csv",
   speakers:
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vSXITBODWuYi_kGDe8mJBM-Z7U6n43VAllNvZO-oA7nekk_hBuYrWoSGcWVgzLWRV25aqJuDzN6fh7M/pub?gid=2056928025&single=true&output=csv",
   presentations:
@@ -123,6 +138,12 @@ const mapTalks = (acc: Omit<Session, "date">[], row: TimetableRow) => {
         startsAt,
         endsAt,
         room: "C" as const,
+      },
+      {
+        uuid: row.d,
+        startsAt,
+        endsAt,
+        room: "D" as const,
       },
     ].filter(talk => !!talk.uuid),
   )
@@ -197,6 +218,9 @@ async function loadImage(speaker: string, imageUrl: string): Promise<string> {
   // Presentations
   const talkRows = await load<PresentationRow>(URLS.presentations)
 
+  // Sponsor
+  const sponsorWorkshops = await load<SponsorRow>(URLS.sponsorWorkshop)
+
   // Speakers
   const speakers = (await load<PresenterRow>(URLS.speakers))
     .map(row => ({
@@ -269,25 +293,32 @@ async function loadImage(speaker: string, imageUrl: string): Promise<string> {
 
   const talks = sessions
     .map(session => {
-      const talk = talkRows.find(row => row.presentation === session.uuid)
-
       const sessionSpeakers = speakers.filter(
         ({ presentations }) => presentations.indexOf(session.uuid) !== -1,
       )
 
-      if (notTalkIds.includes(session.uuid)) {
+      let talk: PresentationRow | SponsorRow | undefined = talkRows.find(
+        row => row.presentation === session.uuid,
+      )
+      if (!talk) {
+        talk = sponsorWorkshops.find(row => row.uuid === session.uuid)
+      }
+
+      if (!talk) {
+        if (!notTalkIds.includes(session.uuid)) {
+          throw new Error(`Talk not found: ${session.uuid}`)
+        }
         return {
           ...session,
           uuid: `${session.date}-break-${session.room}-${session.startsAt}`,
           title: session.uuid.replace("-", " "),
           speakerIDs: [],
+          sponsorIDs: [],
         }
-      } else if (!talk) {
-        throw new Error(`Talk not found: ${session.uuid}`)
       }
 
       return {
-        uuid: talk.presentation,
+        uuid: session.uuid,
         date: session.date,
         startsAt: session.startsAt,
         endsAt: session.endsAt,
@@ -298,7 +329,16 @@ async function loadImage(speaker: string, imageUrl: string): Promise<string> {
         descriptionJa: todoToEmpty(talk["description-ja"]),
         spokenLanguage: talk["spoken-language"],
         slideLanguage: talk["slides-language"] || talk["spoken-language"],
+        presenterNameEn:
+          "presenter-name-en" in talk
+            ? todoToEmpty(talk["presenter-name-en"])
+            : undefined,
+        presenterNameJa:
+          "presenter-name-en" in talk
+            ? todoToEmpty(talk["presenter-name-ja"])
+            : undefined,
         speakerIDs: sessionSpeakers.map(({ uuid }) => uuid),
+        sponsorIDs: "sponsor-id" in talk ? [talk["sponsor-id"]] : [],
       }
     })
     .filter(Boolean)
