@@ -968,11 +968,8 @@
     implementation in the SpiderMonkey engine. You will learn about the
     standardization process, how to read the specification, and how to implement
     the feature yourself.
-
-
-    Let’s live code the feature together!
   spokenLanguage: en
-  slideLanguage: en
+  slideLanguage: en/ja
   speakerIDs:
     - yulia-startsev
   sponsorIDs: []
