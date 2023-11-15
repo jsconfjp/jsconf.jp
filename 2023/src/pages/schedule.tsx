@@ -101,6 +101,10 @@ const Text = styled.span`
 
 const AreaTitle = styled.div`
   color: ${({ theme }) => theme.colors.text};
+  font-family: ${({ theme }) => theme.fonts.header};
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
   ul {
     display: flex;
     padding-left: 0;
@@ -120,40 +124,47 @@ const AreaTitle = styled.div`
   }
 `
 const AreaFooter = styled.div`
-  color: ${({ theme }) => theme.colors.text};
-  ul {
-    display: flex;
-    padding-left: 0;
-  }
-  li#spokenLangage {
-    background-color: #f0ffff;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: end;
+  margin-top: 2.5rem;
+`
+
+const TagList = styled.ul`
+  display: flex;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+    color: ${({ theme }) => theme.colors.text};
+    font-family: ${({ theme }) => theme.fonts.header};
     font-size: 1.2rem;
     list-style: none;
 
     padding: 0.25em 0.5em 0.25em;
     margin: 0;
 
-    border-radius: 0.5em 0.5em 0.5em 0.5em;
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid #000000;
-    border-left: 1px solid #000000;
-    border-right: 1px solid #000000;
-  }
-  li#speakerLocation {
-    background-color: #f0ffff;
-    font-size: 1.2rem;
-    list-style: none;
-
-    padding: 0.25em 0.5em 0.25em;
-    margin: 0 0 0 0.25em;
-
-    border-radius: 0.5em 0.5em 0.5em 0.5em;
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid #000000;
-    border-left: 1px solid #000000;
-    border-right: 1px solid #000000;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
   }
 `
+
+type TagsProps = {
+  children: Array<string | null | false>
+}
+const Tags = ({ children }: TagsProps) => (
+  <TagList>
+    {children.filter(Boolean).map(text => (
+      <li>{text}</li>
+    ))}
+  </TagList>
+)
 
 export default function SchedulePage() {
   const { t, i18n } = useTranslation()
@@ -315,19 +326,11 @@ export default function SchedulePage() {
                       {speaker ? <Text>by {speaker}</Text> : null}
 
                       <AreaFooter>
-                        <ul>
-                          {s.spokenLanguage != null ? (
-                            <li id="spokenLangage">
-                              {t("SpokenLang") + s.spokenLanguage || ""}
-                            </li>
-                          ) : (
-                            ""
-                          )}
-
-                          {location === "remote" && (
-                            <li id="speakerLocation">{t(`location.remote`)}</li>
-                          )}
-                        </ul>
+                        <Tags>
+                          {s.spokenLanguage &&
+                            t(`lang.${s.spokenLanguage || ""}`)}
+                          {location === "remote" && t(`location.remote`)}
+                        </Tags>
                       </AreaFooter>
                     </Area>
                   )
