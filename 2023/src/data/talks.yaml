@@ -376,8 +376,8 @@
   title: Break
   speakerIDs: []
   sponsorIDs: []
-- uuid: day1-break-A-15:20
-  startsAt: "15:20"
+- uuid: day1-break-A-15:10
+  startsAt: "15:10"
   endsAt: "15:30"
   room: A
   date: day1
@@ -456,7 +456,7 @@
 - uuid: hajime-mugishima-1
   date: day1
   startsAt: "14:40"
-  endsAt: "15:20"
+  endsAt: "15:10"
   room: B
   titleJa: Next.js App Router でのMPAフロントエンド刷新
   descriptionJa: >-
@@ -592,7 +592,7 @@
 - uuid: kian-jamali-1
   date: day1
   startsAt: "14:40"
-  endsAt: "15:20"
+  endsAt: "15:10"
   room: A
   title: "Trusted Types: DOM XSS Proteciton at Scale"
   description: >-
@@ -976,7 +976,7 @@
 - uuid: yonatan-mevorach-1
   date: day1
   startsAt: "14:40"
-  endsAt: "15:20"
+  endsAt: "15:10"
   room: C
   title: Mastering Cryptography Fundamentals with Node's crypto module
   description: >-
