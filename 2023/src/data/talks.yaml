@@ -890,6 +890,20 @@
   speakerIDs:
     - wakamsha
   sponsorIDs: []
+- uuid: workshop-auth0
+  date: day1
+  startsAt: "14:40"
+  endsAt: "15:10"
+  room: D
+  titleJa: パスワードレス認証がもたらすユーザー体験の向上と考慮点
+  descriptionJa: >-
+    アプリやWebサービスの開発において必要不可欠な認証がユーザー体験の改善案として注目されています。このセッションではWebAuthnやPasskeysによって実現されるパスワードレス認証によってユーザーの体験がどのように変化するのか、また、導入時に考慮するべきことは何かについてみなさんと考えてみたいと思います。
+  spokenLanguage: ja
+  slideLanguage: ja
+  presenterNameJa: 池原大然
+  speakerIDs: []
+  sponsorIDs:
+    - auth0
 - uuid: workshop-helpfeel
   date: day1
   startsAt: "15:30"
@@ -911,7 +925,7 @@
     APIを用いてどのように扱われるかを見ます。最後に、開発者とユーザー双方の視点から、生成AIの力を引き出すユーザーインターフェースの可能性と限界について議論します。
   spokenLanguage: ja
   slideLanguage: ja
-  presenterNameEn: Yudai Nishiyama
+  presenterNameJa: Yudai Nishiyama
   speakerIDs: []
   sponsorIDs:
     - helpfeel
@@ -925,6 +939,7 @@
     ユビーはヘルステックのスタートアップとして、toC、toB向けに医療系のサービスを提供しています。サービスの提供から数年経過し、徐々に技術的負債も溜まってきているのが現状です。プロダクトも組織もこれからスケールすることが見込まれており、それに伴って生産性が毀損されないようにアーキテクチャを見直しているところです。フロントエンドにおける課題やサーバーサイドをKotlinからNode.jsに書き換えている話しなど、ユビーにおけるシステムの課題や今後の取り組みについてお話します。
   spokenLanguage: ja
   slideLanguage: ja
+  presenterNameEn: Kazuhito Tonomura
   presenterNameJa: 外村 和仁
   speakerIDs: []
   sponsorIDs:
@@ -939,6 +954,7 @@
     システム開発には不確実性が多く、顧客への価値の提供やスケジュール管理が難しい。そういった不確実性と対峙するために、アジャイル開発におけるイテレーションのスピードと、顧客が体感できる価値を提供し続けることが重要です。そして、フロントエンド開発を効率的に進めるためには、顧客視点での再現性と集中的な開発環境の構築が必要になってきました。ここでStorybookをインテグレーションテストツールとして活用することで、「Storybook駆動開発」を推進することにしました。このアプローチにより、複雑なフロントエンド開発でも効率的に進め、開発体験を向上させることができた体験をご紹介します。
   spokenLanguage: ja
   slideLanguage: ja
+  presenterNameEn: Hiroki Kinoshita
   presenterNameJa: 木下 博貴
   speakerIDs: []
   sponsorIDs:
@@ -952,6 +968,7 @@
   descriptionJa: デザインシステムを継続的に改善していくための組織を立ち上げた背景や経緯などをお話します。
   spokenLanguage: ja
   slideLanguage: ja
+  presenterNameEn: Takeshi Hara
   presenterNameJa: 原 剛士
   speakerIDs: []
   sponsorIDs:
