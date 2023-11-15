@@ -287,7 +287,7 @@
   location: on-site
 - uuid: koji-ota
   name: Koji Ota
-  nameReading: "pronounce: Kohji Ohta"
+  nameReading: Kohji Ohta
   pronoun: he
   featured: false
   presentations:
@@ -323,7 +323,7 @@
   homepage: https://lucamug.guupa.com
   location: on-site
 - uuid: masaki-suzuki
-  name: 鈴木 正樹(Masaki Suzuki)
+  name: 鈴木 正樹
   nameReading: Masaki Suzuki
   pronoun: he
   featured: false
