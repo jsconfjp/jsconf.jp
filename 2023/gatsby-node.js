@@ -95,16 +95,31 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         const posts = result.data.allMarkdownRemark.edges
+        const postBySlug = {}
         posts.forEach(({ node: post }) => {
+          let [_, slug, lang] = /^(.*?)(?:-(en|ja)\/)?$/g.exec(post.fields.slug)
+          if (lang) {
+            slug += "/"
+          }
+          let langPost = postBySlug[slug]
+          if (!langPost) {
+            langPost = {}
+            postBySlug[slug] = langPost
+          }
+          langPost[lang ?? ""] = post
+        })
+        for (const [slug, { en, ja, "": unknown }] of Object.entries(
+          postBySlug,
+        )) {
           createPage({
-            path: `${post.fields.slug}`,
+            path: slug,
             component: mdTemplate,
             context: {
-              post: post,
-              slug: post.fields.slug,
+              post: { en, ja, unknown },
+              slug,
             },
           })
-        })
+        }
 
         const speakers = result.data.allSpeakersYaml.edges.map(
           ({ node }) => node,

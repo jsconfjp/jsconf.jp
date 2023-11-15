@@ -67,4 +67,5 @@ Any speech that reinforce harmful stereotypes is unwelcome. Examples include but
 Making undue assumptions and/or sweeping generalizations about a group of people.
 Any language that deems disability a defect.
 Any unwelcome comments on one’s physical appearance.
+
 Last Updated on 1st June.

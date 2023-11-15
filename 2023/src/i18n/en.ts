@@ -47,7 +47,7 @@ export const en = {
       "Approx. 90 minutes from Narita Airport to JR Kudanshita Station",
     "venue.accessByHanedaAirport":
       "Approx. 50 minutes from Haneda Airport to JR Kudanshita Station",
-    "jp-specified-commercial-transactions-act": "特定商取引法に基づく表示",
+    "specified-commercial-transactions-act": "Commercial Summary",
     "code-of-conduct": "Code of Conduct",
     moreDetails: "More details",
     callForSpeakers: "Call For Speakers",

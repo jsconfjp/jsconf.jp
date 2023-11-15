@@ -6,17 +6,24 @@ import { SEO } from "../components/Seo"
 import { Title } from "../components/Title"
 import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
+import { useEnOrJa } from "../util/languages"
+
+type Language = {
+  fields: {
+    slug: string
+  }
+  frontmatter: {
+    title: string
+  }
+  html: string
+}
 
 type Props = {
   pageContext: {
     post: {
-      fields: {
-        slug: string
-      }
-      frontmatter: {
-        title: string
-      }
-      html: string
+      en: Language
+      ja: Language
+      unknown: Language
     }
   }
 }
@@ -29,10 +36,12 @@ export default function Markdown(props: Props) {
   const {
     pageContext: { post },
   } = props
+  const enOrJa = useEnOrJa()
+  const data = enOrJa(post.en, post.ja) ?? post.unknown
   const {
     frontmatter: { title },
     html,
-  } = post
+  } = data
 
   return (
     <Layout>
