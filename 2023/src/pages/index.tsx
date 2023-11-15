@@ -132,6 +132,7 @@ export default function IndexPage() {
           node {
             uuid
             name
+            nameReading
             biography
             biographyJa
             presentations
@@ -145,6 +146,8 @@ export default function IndexPage() {
             uuid
             title
             titleJa
+            presenterName
+            presenterNameReading
             description
             descriptionJa
             spokenLanguage

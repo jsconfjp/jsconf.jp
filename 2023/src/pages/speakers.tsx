@@ -17,6 +17,7 @@ export default function SpeakersPage() {
           node {
             uuid
             name
+            nameReading
             biography
             biographyJa
             presentations
@@ -33,8 +34,8 @@ export default function SpeakersPage() {
             descriptionJa
             spokenLanguage
             slideLanguage
-            presenterNameEn
-            presenterNameJa
+            presenterName
+            presenterNameReading
             speakerIDs
           }
         }

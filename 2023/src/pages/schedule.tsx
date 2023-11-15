@@ -11,6 +11,7 @@ import { Title } from "../components/Title"
 import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
 import { EventTime } from "../components/EventTime"
+import { EventSpeakers } from "../components/EventSpeakers"
 import { RoomLegend } from "../components/RoomLegend"
 import { TalkType, SpeakerType } from "../data/types"
 import { generateTimetable } from "../util/generateTimetable"
@@ -57,8 +58,11 @@ const Area = styled(_Link)<{
   border-left: 5px solid;
   border-color: ${({ track, isBreak, theme }) =>
     isBreak ? theme.colors.disabledText : theme.colors[`room${track}Border`]};
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
 
-  ::before {
+  &::before {
     content: "";
     position: absolute;
     top: -8px;
@@ -90,6 +94,7 @@ const RoomLegendBox = styled.div`
 const Text = styled.span`
   color: ${({ theme }) => theme.colors.text};
   display: block;
+  margin: 0.75rem 0;
   font-size: 2rem;
   font-family: ${({ theme }) => theme.fonts.text};
 `
@@ -160,6 +165,7 @@ export default function SchedulePage() {
             node {
               uuid
               name
+              nameReading
               location
             }
           }
@@ -185,8 +191,8 @@ export default function SchedulePage() {
               description
               descriptionJa
               spokenLanguage
-              presenterNameEn
-              presenterNameJa
+              presenterName
+              presenterNameReading
               slideLanguage
               speakerIDs
               sponsorIDs
@@ -255,28 +261,6 @@ export default function SchedulePage() {
                     ? "on-site"
                     : s.speakers[0]?.location ?? "on-site"
 
-                  const speaker = s.sponsors.length
-                    ? `${enOrJa(
-                        s.presenterNameEn ?? s.presenterNameJa ?? "",
-                        s.presenterNameJa ?? s.presenterNameEn ?? "",
-                      )} (${s.sponsors[0].name})`
-                    : s.speakers
-                    ? s.speakers
-                        .map(speaker => speaker.name)
-                        .concat(
-                          ...(s.presenterNameEn || s.presenterNameJa
-                            ? [
-                                enOrJa(
-                                  (s.presenterNameEn ??
-                                    s.presenterNameJa) as string,
-                                  (s.presenterNameJa ??
-                                    s.presenterNameEn) as string,
-                                ),
-                              ]
-                            : []),
-                        )
-                        .join(" and ")
-                    : null
                   return (
                     <Area
                       // @ts-expect-error
@@ -296,7 +280,7 @@ export default function SchedulePage() {
                         <EventTime session={s} />
                       </AreaTitle>
                       <Text>{enOrJa(s.title, s.titleJa) || "TBA"}</Text>
-                      {speaker ? <Text>by {speaker}</Text> : null}
+                      <EventSpeakers session={s} byLine="by" />
 
                       <AreaFooter>
                         <Tags>
