@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { GatsbyImage as Image } from "gatsby-plugin-image"
 import Markdown from "react-markdown"
-import { times } from "../util/misc"
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
 import { Title } from "../components/Title"
@@ -12,6 +11,7 @@ import { Breadcrumb } from "../components/Breadcrumb"
 import { AvatarType } from "../components/Speaker"
 import { SpeakerType, TalkType } from "../data/types"
 import { enOrJa } from "../util/languages"
+import { EventTime } from "../components/EventTime"
 
 type Props = {
   pageContext: {
@@ -91,16 +91,8 @@ export default function Speaker(props: Props) {
     descriptionJa,
     spokenLanguage,
     slideLanguage,
-    date,
-    startsAt,
-    endsAt,
     room,
   } = talk
-  const dateFormatter = Intl.DateTimeFormat(i18n.language, {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  })
   const speakerNames = speakers.length
     ? speakers.map(speaker => speaker.name).join(" and ")
     : `${enOrJa(i18n)(
@@ -139,7 +131,7 @@ export default function Speaker(props: Props) {
         <TalkBox>
           <TalkTitle>{enOrJa(i18n)(title, titleJa)}</TalkTitle>
           <p>
-            {dateFormatter.format(times[date].startsAt)}, {startsAt} - {endsAt}
+            <EventTime session={talk} />
             <br />
             {t(`room${room}`)}
             <br />

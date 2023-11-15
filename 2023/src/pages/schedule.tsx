@@ -4,24 +4,19 @@ import { useTranslation } from "react-i18next"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link as _Link } from "gatsby-link"
 import flatten from "lodash/flatten"
-import { differenceInMinutes } from "date-fns"
 
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
 import { Title } from "../components/Title"
 import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
+import { EventTime } from "../components/EventTime"
 import { RoomLegend } from "../components/RoomLegend"
 import { TalkType, SpeakerType } from "../data/types"
 import { generateTimetable } from "../util/generateTimetable"
 import { rangeTimeBoxes, escapeTime } from "../util/rangeTimeBoxes"
 import { Dates, times, Rooms, rooms } from "../util/misc"
-import { enOrJa } from "../util/languages"
-
-function timeToDate(time: string): Date {
-  const [h, m] = time.split(":")
-  return new Date(2023, 10, 19, parseInt(h), parseInt(m))
-}
+import { useEnOrJa } from "../util/languages"
 
 const dummyTrack = String.fromCharCode(
   rooms[rooms.length - 1].charCodeAt(0) + 1,
@@ -106,18 +101,6 @@ const AreaTitle = styled.div`
     padding-left: 0;
     margin: 0;
   }
-  li#talkTime {
-    font-size: 2rem;
-    margin: 0 0.25em 0 0;
-    list-style: none;
-  }
-  li#lengthOfSpokenTime {
-    font-size: 1.5rem;
-    list-style: none;
-
-    padding: 0.25em 0.1em 0.1em;
-    margin: 0 0 0 0.25em;
-  }
 `
 const AreaFooter = styled.div`
   color: ${({ theme }) => theme.colors.text};
@@ -157,6 +140,7 @@ const AreaFooter = styled.div`
 
 export default function SchedulePage() {
   const { t, i18n } = useTranslation()
+  const enOrJa = useEnOrJa()
   const { allSpeakersYaml, allSponsorsYaml, allTalksYaml } = useStaticQuery(
     graphql`
       query {
@@ -255,9 +239,6 @@ export default function SchedulePage() {
                 {sessions.map(s => {
                   const hasDescription =
                     s.uuid && (s.speakers.length || s.sponsors.length)
-                  const start = timeToDate(s.startsAt)
-                  const end = timeToDate(s.endsAt)
-                  const diff = differenceInMinutes(end, start)
 
                   const locations = s.sponsors.length
                     ? ["on-site"]
@@ -272,7 +253,7 @@ export default function SchedulePage() {
                       )
                     : undefined
                   const speaker = s.sponsors.length
-                    ? `${enOrJa(i18n)(
+                    ? `${enOrJa(
                         s.presenterNameEn ?? s.presenterNameJa ?? "",
                         s.presenterNameJa ?? s.presenterNameEn ?? "",
                       )} (${s.sponsors[0].name})`
@@ -282,7 +263,7 @@ export default function SchedulePage() {
                         .concat(
                           ...(s.presenterNameEn || s.presenterNameJa
                             ? [
-                                enOrJa(i18n)(
+                                enOrJa(
                                   (s.presenterNameEn ??
                                     s.presenterNameJa) as string,
                                   (s.presenterNameJa ??
@@ -309,17 +290,9 @@ export default function SchedulePage() {
                       isBreak={s.break}
                     >
                       <AreaTitle>
-                        <ul>
-                          <li id="talkTime">
-                            {s.startsAt}-{s.endsAt}
-                          </li>
-                          {diff > 0 && (
-                            <li id="lengthOfSpokenTime">{`(${diff} min)`}</li>
-                          )}
-                        </ul>
+                        <EventTime session={s} />
                       </AreaTitle>
-
-                      <Text>{enOrJa(i18n)(s.title, s.titleJa) || "TBA"}</Text>
+                      <Text>{enOrJa(s.title, s.titleJa) || "TBA"}</Text>
                       {speaker ? <Text>by {speaker}</Text> : null}
 
                       <AreaFooter>
