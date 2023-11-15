@@ -259,18 +259,10 @@ export default function SchedulePage() {
                   const end = timeToDate(s.endsAt)
                   const diff = differenceInMinutes(end, start)
 
-                  const locations = s.sponsors.length
-                    ? ["on-site"]
-                    : s.speakers.length
-                    ? Array.from(
-                        s.speakers.reduce((locations, speaker) => {
-                          if (speaker.location) {
-                            locations.add(speaker.location)
-                          }
-                          return locations
-                        }, new Set()),
-                      )
-                    : undefined
+                  const location = s.sponsors.length
+                    ? "on-site"
+                    : s.speakers[0]?.location ?? "on-site"
+
                   const speaker = s.sponsors.length
                     ? `${enOrJa(i18n)(
                         s.presenterNameEn ?? s.presenterNameJa ?? "",
@@ -331,13 +323,10 @@ export default function SchedulePage() {
                           ) : (
                             ""
                           )}
-                          {locations
-                            ? locations.map(location => (
-                                <li id="speakerLocation">
-                                  {t("Location") + location}
-                                </li>
-                              ))
-                            : null}
+
+                          {location === "remote" && (
+                            <li id="speakerLocation">{t(`location.remote`)}</li>
+                          )}
                         </ul>
                       </AreaFooter>
                     </Area>
