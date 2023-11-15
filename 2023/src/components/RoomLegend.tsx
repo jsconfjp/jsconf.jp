@@ -12,6 +12,7 @@ const Box = styled.div`
   ${({ theme }) => theme.breakpoints.mobile} {
     flex-direction: column;
     align-items: flex-start;
+    gap: 1em;
   }
 `
 const RoomBox = styled.div`
@@ -19,10 +20,6 @@ const RoomBox = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-
-  ${({ theme }) => theme.breakpoints.mobile} {
-    margin-bottom: 1em;
-  }
 `
 const Circle = styled.div<{ area: Rooms }>`
   width: 30px;
@@ -38,16 +35,23 @@ const Text = styled.span`
   font-family: ${({ theme }) => theme.fonts.text};
 `
 
-export function RoomLegend() {
+type RoomProps = {
+  room: Rooms
+}
+export const Room = ({ room }: RoomProps) => {
   const { t } = useTranslation()
   return (
-    <Box>
-      {rooms.map(room => (
-        <RoomBox key={room}>
-          <Circle area={room} />
-          <Text>{t(`room${room}`)}</Text>
-        </RoomBox>
-      ))}
-    </Box>
+    <RoomBox key={room}>
+      <Circle area={room} />
+      <Text>{t(`room${room}`)}</Text>
+    </RoomBox>
   )
 }
+
+export const RoomLegend = () => (
+  <Box>
+    {rooms.map(room => (
+      <Room room={room} />
+    ))}
+  </Box>
+)
