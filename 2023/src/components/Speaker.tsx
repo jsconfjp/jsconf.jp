@@ -4,36 +4,7 @@ import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
 import { GatsbyImage as Image, IGatsbyImageData } from "gatsby-plugin-image"
 import { enOrJa } from "../util/languages"
-
-export type TalkType = {
-  uuid: string
-  title: string
-  titleJa: string
-  description: string
-  descriptionJa: string
-  spokenLanguage: string
-  slideLanguage: string
-  speakerIDs: string[]
-  sponsorIDs: string[]
-  presenterNameEn: string | undefined
-  presenterNameJa: string | undefined
-  date: "day1"
-  startsAt: string
-  endsAt: string
-  hiddenTimeBoxes: string[] | null
-  room: "A" | "B"
-}
-
-export type SpeakerType = {
-  uuid: string
-  name: string
-  biography: string
-  biographyJa: string
-  presentations: string[]
-  github: string
-  twitter: string
-  location: string
-}
+import { SpeakerType, TalkType } from "../data/types"
 
 export type AvatarType = {
   uuid: string

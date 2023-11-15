@@ -9,7 +9,8 @@ import { SEO } from "../components/Seo"
 import { Title } from "../components/Title"
 import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
-import { SpeakerType, TalkType, AvatarType } from "../components/Speaker"
+import { AvatarType } from "../components/Speaker"
+import { SpeakerType, TalkType } from "../data/types"
 import { enOrJa } from "../util/languages"
 
 type Props = {

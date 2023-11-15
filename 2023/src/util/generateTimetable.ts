@@ -3,14 +3,7 @@ import sortBy from "lodash/sortBy"
 import mapValues from "lodash/mapValues"
 
 import { Dates } from "../util/misc"
-// FIXME: Should not import from here
-import { SpeakerType, TalkType } from "../components/Speaker"
-
-type Session = TalkType & {
-  break: boolean
-  speakers: SpeakerType[]
-  sponsors: SpeakerType[]
-}
+import { Session, SpeakerType, TalkType } from "../data/types"
 
 type Timebox = {
   timebox: string
