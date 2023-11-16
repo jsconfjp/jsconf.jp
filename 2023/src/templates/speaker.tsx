@@ -85,6 +85,23 @@ const TalkTitle = styled.h2`
   text-align: left;
 `
 
+export interface SocialLinksProps {
+  links: Array<{account: string, name: string, site: string}>
+}
+
+export function SocialLinks(props: SocialLinksProps) {
+  const { links } = props
+
+  return <>
+    <h3>Social Links:</h3>
+    <ul>
+      {links.map(data => (
+        <li>{data.name}: <a href={`${data.site}${data.account}`}>{data.account}</a></li>
+      ))}
+    </ul>
+  </>
+}
+
 export default function Speaker(props: Props) {
   const { t, i18n } = useTranslation()
   const {
@@ -112,19 +129,27 @@ export default function Speaker(props: Props) {
       />
       <ResponsiveBox>
         <Breadcrumb path={[{ label: t("speakers"), to: "/speakers" }, title]} />
-        {speakers.map((speaker, i) => (
-          <SpeakerBox key={speaker.uuid}>
-            <Avatar image={avatars[i]} alt={speaker.name} loading="eager" />
+        {speakers.map((speaker, i) => {
+          const socialLinks = [
+            {account: speaker.github, name: 'Github', site: 'https://github.com/'},
+            {account: speaker.mastodon, name: 'Mastodon', site: ''},
+            {account: speaker.twitter, name: 'X (twitter)', site: 'https://twitter.com/'}
+          ].filter(item => item.account);
+
+          const biography = enOrJa(i18n)(speaker.biography, speaker.biographyJa)
+          return <SpeakerBox key={speaker.uuid}>
+            <Avatar image={avatars[i]} alt={speaker.name} loading="eager"/>
             <SpeakerSide>
               <h1>
-                <SpeakerName speaker={speaker} />
+                <SpeakerName speaker={speaker}/>
               </h1>
               <Markdown>
-                {enOrJa(i18n)(speaker.biography, speaker.biographyJa)}
+                {biography}
               </Markdown>
+              <SocialLinks links={socialLinks}></SocialLinks>
             </SpeakerSide>
           </SpeakerBox>
-        ))}
+        })}
         {sponsors.map(sponsor => (
           <SpeakerBox key={sponsor.uuid}>
             <SponsorLogo
