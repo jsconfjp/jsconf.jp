@@ -63,11 +63,17 @@ const Area = styled(_Link)<{
   justify-content: stretch;
 
   &::before {
-    content: "";
+    content: "${({ track }) => track}";
+    font-family: ${({ theme }) => theme.fonts.text};
+    font-weight: bold;
+    color: ${({ theme }) => theme.colors.base };
+    font-size: 0.7em;
     position: absolute;
     top: -8px;
     left: -10px;
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: 16px;
     height: 16px;
     border-radius: 100%;
