@@ -12,6 +12,8 @@ import { AvatarType } from "../components/Speaker"
 import { SpeakerType, TalkType } from "../data/types"
 import { enOrJa } from "../util/languages"
 import { EventTime } from "../components/EventTime"
+import { Room } from "../components/RoomLegend"
+import { Rooms } from "../util/misc"
 
 type Props = {
   pageContext: {
@@ -62,13 +64,19 @@ const SponsorLogo = styled.img`
     max-width: 100%;
   }
 `
-const TalkBox = styled.div`
+const TalkBox = styled.div<{
+  track: Rooms
+}>`
   font-family: ${({ theme }) => theme.fonts.text};
-  background-color: ${({ theme }) => theme.colors.talkBg};
-  padding: 40px;
+  background-color: ${({ track, theme }) => theme.colors[`room${track}`]};
+  border-left: 5px solid;
+  border-color: ${({ track, theme }) => theme.colors[`room${track}Border`]};
+  padding: 2rem 5rem;
+  position: relative;
+  margin: 0 1.25rem;
 
   ${({ theme }) => theme.breakpoints.mobile} {
-    padding: 2em 1em;
+    padding: 1em 2em;
   }
 `
 const TalkTitle = styled.h2`
@@ -128,12 +136,11 @@ export default function Speaker(props: Props) {
             <Biography>{sponsor.prText}</Biography>
           </SpeakerBox>
         ))}
-        <TalkBox>
+        <Room room={room} />
+        <TalkBox track={room}>
           <TalkTitle>{enOrJa(i18n)(title, titleJa)}</TalkTitle>
           <p>
             <EventTime session={talk} />
-            <br />
-            {t(`room${room}`)}
             <br />
             {t("session.lang.spoken")}: {t(`lang.${spokenLanguage}`)}
             {slideLanguage ? (
