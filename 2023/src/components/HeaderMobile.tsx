@@ -112,7 +112,7 @@ export function InnerHeaderMobile(props: Props) {
       <InnerBox>
         <Brand>
           <LogoLink to="/">
-            <Logo alt="JS Conf JP" size={46} />
+            <Logo size={46} />
           </LogoLink>
         </Brand>
 
