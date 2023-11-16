@@ -262,7 +262,9 @@ export default function SchedulePage() {
                     : s.speakers[0]?.location ?? "on-site"
 
                   const tKey = `talk.${s.title}`
-                  const title = i18n.exists(tKey) ? t(tKey) : enOrJa(s.title, s.titleJa) || "TBA"
+                  const title = i18n.exists(tKey)
+                    ? t(tKey)
+                    : enOrJa(s.title, s.titleJa) || "TBA"
 
                   return (
                     <Area
