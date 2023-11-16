@@ -8,7 +8,22 @@ import { Header } from "./Header"
 import { HeaderMobile } from "./HeaderMobile"
 import { Footer } from "./Footer"
 import { SmoothScroll } from "./SmoothScroll"
-import "./layout.css"
+import { createGlobalStyle } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+  html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 62.5%;
+  }
+  body {
+    font-size: 1.6em;
+    font-family: ${({ theme }) => theme.fonts.text}
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+`
 
 type Props = {
   children: React.ReactNode
@@ -79,6 +94,7 @@ export function Layout({ children }: Props) {
 
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <>
         <OnlyMobile>
           <HeaderMobile

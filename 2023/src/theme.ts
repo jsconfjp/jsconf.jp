@@ -27,7 +27,28 @@ export const theme: DefaultTheme = {
   },
   fonts: {
     header: "Lato",
-    text: "Arial",
+    text: [
+      "Frutiger",
+      "Frutiger Linotype",
+      "Univers",
+      "Calibri",
+      "Gill Sans",
+      "Gill Sans MT",
+      "Myriad Pro",
+      "Myriad",
+      "DejaVu Sans Condensed",
+      "Liberation Sans",
+      "Nimbus Sans L",
+      "Tahoma",
+      "Geneva",
+      "Helvetica Neue",
+      "Helvetica",
+      "Arial",
+      "Hiragino Sans",
+      "sans-serif",
+    ]
+      .map(n => `"${n}"`)
+      .join(", "),
   },
   fontSizes: {
     hero: "6rem",
