@@ -25,6 +25,7 @@
     "*.{yml,yaml,ts,json}": "prettier"
   },
   "dependencies": {
+    "@styled-icons/remix-line": "^10.46.0",
     "date-fns": "^2.30.0",
     "gatsby": "^5.12.9",
     "gatsby-image": "3.11.0",

@@ -14,6 +14,11 @@ import { enOrJa } from "../util/languages"
 import { EventTime } from "../components/EventTime"
 import { Room } from "../components/RoomLegend"
 import { Rooms } from "../util/misc"
+import { ExternalLink } from "@styled-icons/remix-line/ExternalLink"
+import { Mastodon } from "@styled-icons/remix-line/Mastodon"
+import { Github } from "@styled-icons/remix-line/Github"
+import { Twitter } from "@styled-icons/remix-line/Twitter"
+import { Link } from "gatsby"
 
 type Props = {
   pageContext: {
@@ -86,20 +91,63 @@ const TalkTitle = styled.h2`
 `
 
 export interface SocialLinksProps {
-  links: Array<{account: string, name: string, site: string}>
+  speaker: SpeakerType
 }
 
-export function SocialLinks(props: SocialLinksProps) {
-  const { links } = props
+const SocialLinkContainer = styled.ul`
+  &,
+  & > li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  & {
+    display: flex;
+  }
+  & > li > a {
+    padding: 0.4em;
+    color: ${({ theme }) => theme.colors.disabledText};
+    &:hover {
+      color: ${({ theme }) => theme.colors.primary};
+    }
+  }
+  svg {
+    width: 1.6em;
+  }
+`
 
-  return <>
-    <h3>Social Links:</h3>
-    <ul>
-      {links.map(data => (
-        <li>{data.name}: <a href={`${data.site}${data.account}`}>{data.account}</a></li>
-      ))}
-    </ul>
-  </>
+export function SocialLinks(props: SocialLinksProps) {
+  const { speaker } = props
+  const socialLinks = [
+    speaker.homepage ? (
+      <Link to={speaker.homepage}>
+        <ExternalLink />
+      </Link>
+    ) : null,
+    speaker.github ? (
+      <Link to={`https://github.com/${speaker.github}`}>
+        <Github />
+      </Link>
+    ) : null,
+    speaker.mastodon ? (
+      <Link to={speaker.mastodon}>
+        <Mastodon />
+      </Link>
+    ) : null,
+    speaker.twitter ? (
+      <Link to={`https://twitter.com/${speaker.twitter}`}>
+        <Twitter />
+      </Link>
+    ) : null,
+  ]
+    .filter(Boolean)
+    .map(entry => <li>{entry}</li>)
+
+  if (!socialLinks.length) {
+    return <></>
+  }
+
+  return <SocialLinkContainer>{socialLinks}</SocialLinkContainer>
 }
 
 export default function Speaker(props: Props) {
@@ -129,28 +177,20 @@ export default function Speaker(props: Props) {
       />
       <ResponsiveBox>
         <Breadcrumb path={[{ label: t("speakers"), to: "/speakers" }, title]} />
-        {speakers.map((speaker, i) => {
-          const socialLinks = [
-            {account: speaker.github, name: 'Github', site: 'https://github.com/'},
-            {account: speaker.mastodon, name: 'Mastodon', site: ''},
-            {account: speaker.twitter, name: 'X (twitter)', site: 'https://twitter.com/'},
-            {account: speaker.homepage, name: 'Homepage', site: ''}
-          ].filter(item => item.account);
-
-          const biography = enOrJa(i18n)(speaker.biography, speaker.biographyJa)
-          return <SpeakerBox key={speaker.uuid}>
-            <Avatar image={avatars[i]} alt={speaker.name} loading="eager"/>
+        {speakers.map((speaker, i) => (
+          <SpeakerBox key={speaker.uuid}>
+            <Avatar image={avatars[i]} alt={speaker.name} loading="eager" />
             <SpeakerSide>
               <h1>
-                <SpeakerName speaker={speaker}/>
+                <SpeakerName speaker={speaker} />
               </h1>
               <Markdown>
-                {biography}
+                {enOrJa(i18n)(speaker.biography, speaker.biographyJa)}
               </Markdown>
-              <SocialLinks links={socialLinks}></SocialLinks>
+              <SocialLinks speaker={speaker} />
             </SpeakerSide>
           </SpeakerBox>
-        })}
+        ))}
         {sponsors.map(sponsor => (
           <SpeakerBox key={sponsor.uuid}>
             <SponsorLogo

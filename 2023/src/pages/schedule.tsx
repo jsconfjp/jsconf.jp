@@ -65,6 +65,10 @@ const Area = styled(_Link)<{
   &::before {
     content: "";
     position: absolute;
+    font-family: ${({ theme }) => theme.fonts.text};
+    font-weight: bold;
+    color: ${({ theme }) => theme.colors.base};
+    font-size: 0.7em;
     top: -8px;
     left: -10px;
     display: inline-block;
