@@ -12,12 +12,16 @@ const Path = styled.path.attrs(({ theme }) => ({
   fill: theme.colors.primary,
 }))``
 
+const Svg = styled.svg`
+  cursor: pointer;
+`
+
 export function HamburgerMenu(props: Props) {
   const { t } = useTranslation()
   const { onTouchEnd, onKeyDown, open } = props
 
   return (
-    <svg
+    <Svg
       aria-controls="drawerMenu"
       aria-expanded={open}
       tabIndex={0}
@@ -25,7 +29,7 @@ export function HamburgerMenu(props: Props) {
       width={32}
       height={32}
       viewBox="0,0,100,100"
-      onTouchEnd={onTouchEnd}
+      onClick={onTouchEnd}
       onKeyDown={onKeyDown}
     >
       <title>{open ? t("closeMobileMenu") : t("openMobileMenu")}</title>
@@ -45,6 +49,6 @@ export function HamburgerMenu(props: Props) {
           ].join(" ")}
         />
       )}
-    </svg>
+    </Svg>
   )
 }
