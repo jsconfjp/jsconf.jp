@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { Speaker, SpeakerType, TalkType, AvatarType } from "./Speaker"
+import { Speaker, AvatarType } from "./Speaker"
+import { SpeakerType, TalkType } from "../data/types"
 
 export type Props = {
   speakers: SpeakerType[]
