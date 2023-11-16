@@ -8,6 +8,9 @@ declare module "styled-components" {
     colors: {
       base: string
       baseDimmed: string
+      bgLight: string
+      bgMiddle: string
+      bgDark: string
       text: string
       shadow: string
       primary: string
