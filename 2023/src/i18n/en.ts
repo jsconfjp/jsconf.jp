@@ -61,5 +61,10 @@ export const en = {
     closeMobileMenu: "Close Navigation Menu",
     "jna-address":
       "〒210-0024 27-7-903 Nisshincho Kawasaki-ku Kawasaki-shi Kanagawa",
+    "talk.open": "Doors Open",
+    "talk.opening talk": "Opening Talk",
+    "talk.Break": "Break",
+    "talk.closing talk": "Closing Talk",
+    "talk.party": "Party",
   },
 }

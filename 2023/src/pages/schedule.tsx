@@ -261,6 +261,9 @@ export default function SchedulePage() {
                     ? "on-site"
                     : s.speakers[0]?.location ?? "on-site"
 
+                  const tKey = `talk.${s.title}`
+                  const title = i18n.exists(tKey) ? t(tKey) : enOrJa(s.title, s.titleJa) || "TBA"
+
                   return (
                     <Area
                       // @ts-expect-error
@@ -279,7 +282,7 @@ export default function SchedulePage() {
                       <AreaTitle>
                         <EventTime session={s} />
                       </AreaTitle>
-                      <Text>{enOrJa(s.title, s.titleJa) || "TBA"}</Text>
+                      <Text>{title}</Text>
                       <EventSpeakers session={s} byLine="by" />
 
                       <AreaFooter>
