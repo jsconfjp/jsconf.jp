@@ -37,6 +37,7 @@ exports.createPages = ({ graphql, actions }) => {
                 mastodon
                 homepage
                 twitter
+                pronoun
               }
             }
           }

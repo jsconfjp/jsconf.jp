@@ -28,6 +28,7 @@ export type SpeakerType = {
   homepage: string
   twitter: string
   location: string
+  pronoun: string
 }
 
 export type Session = TalkType & {

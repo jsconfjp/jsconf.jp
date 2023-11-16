@@ -90,7 +90,7 @@ const TalkTitle = styled.h2`
   text-align: left;
 `
 
-export interface SocialLinksProps {
+type SocialLinksProps = {
   speaker: SpeakerType
 }
 
@@ -116,7 +116,7 @@ const SocialLinkContainer = styled.ul`
   }
 `
 
-export function SocialLinks(props: SocialLinksProps) {
+function SocialLinks(props: SocialLinksProps) {
   const { speaker } = props
   const socialLinks = [
     speaker.homepage ? (
@@ -148,6 +148,28 @@ export function SocialLinks(props: SocialLinksProps) {
   }
 
   return <SocialLinkContainer>{socialLinks}</SocialLinkContainer>
+}
+
+const SpeakerPronounWrap = styled.em`
+  margin-left: 0.5em;
+  font-size: 0.75em;
+`
+
+type SpeakerPronounProps = {
+  speaker: SpeakerType
+}
+
+const SpeakerPronoun = ({ speaker }: SpeakerPronounProps) => {
+  if (!speaker.pronoun) {
+    return <></>
+  }
+  return (
+    <SpeakerPronounWrap>
+      {"("}
+      {speaker.pronoun}
+      {")"}
+    </SpeakerPronounWrap>
+  )
 }
 
 export default function Speaker(props: Props) {
@@ -183,6 +205,7 @@ export default function Speaker(props: Props) {
             <SpeakerSide>
               <h1>
                 <SpeakerName speaker={speaker} />
+                <SpeakerPronoun speaker={speaker} />
               </h1>
               <Markdown>
                 {enOrJa(i18n)(speaker.biography, speaker.biographyJa)}
