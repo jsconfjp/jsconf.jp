@@ -140,9 +140,8 @@
     5. Streamlining Data Access with Prisma ORM
         - Introducing Prisma ORM as a powerful tool for efficient data access and manipulation.
         - Exploring its integration with React Server Components for seamless database connections.
-    6. Real-World Examples and Case Studies -> talk about personal experience
-    (RSCs, Next.js API routes / SSR / SSG are in the same bucket)
-        - Showcasing organizations that have embraced React Server Components and Prisma ORM, highlighting their benefits and success stories.
+    6. Real-World Examples and Case Studies
+        - Showcasing organizations that have embraced React Server Components, highlighting their benefits and success stories.
     7. Further Considerations
         - Discussing potential challenges and considerations when adopting React Server Components; use cases not being covered by RSCs
     9. Conclusion
