@@ -52,5 +52,6 @@ export const ja: {
     "talk.Break": "休憩",
     "talk.closing talk": "締めの言葉",
     "talk.party": "パーティー",
+    "talk.sponsor": "スポンサートーク",
   },
 }

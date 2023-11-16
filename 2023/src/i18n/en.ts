@@ -66,5 +66,6 @@ export const en = {
     "talk.Break": "Break",
     "talk.closing talk": "Closing Talk",
     "talk.party": "Party",
+    "talk.sponsor": "Sponsor Talks",
   },
 }
