@@ -35,6 +35,7 @@ exports.createPages = ({ graphql, actions }) => {
                 biographyJa
                 github
                 mastodon
+                homepage
                 twitter
               }
             }

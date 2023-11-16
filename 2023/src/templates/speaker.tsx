@@ -133,7 +133,8 @@ export default function Speaker(props: Props) {
           const socialLinks = [
             {account: speaker.github, name: 'Github', site: 'https://github.com/'},
             {account: speaker.mastodon, name: 'Mastodon', site: ''},
-            {account: speaker.twitter, name: 'X (twitter)', site: 'https://twitter.com/'}
+            {account: speaker.twitter, name: 'X (twitter)', site: 'https://twitter.com/'},
+            {account: speaker.homepage, name: 'Homepage', site: ''}
           ].filter(item => item.account);
 
           const biography = enOrJa(i18n)(speaker.biography, speaker.biographyJa)
