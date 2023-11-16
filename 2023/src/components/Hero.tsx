@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Logo } from "./Logo"
+import { Logo2023 } from "./Logo2023"
 
 type Props = {
   title: string
@@ -51,7 +51,7 @@ export function Hero(props: Props) {
 
   return (
     <Box>
-      <Logo size={270} alt="JSConf JP Logo" />
+      <Logo2023 size={270} />
       <TextBox>
         <Title lang="en">{title}</Title>
         <SubTitle>{subTitle}</SubTitle>

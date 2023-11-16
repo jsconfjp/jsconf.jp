@@ -89,7 +89,7 @@ export function Header(props: Props) {
         <Brand>
           <>
             <LogoLink to="/">
-              <Logo size={46} alt="JSConf JP" />
+              <Logo size={46} />
             </LogoLink>
             <LanguageSwitch
               languages={{
