@@ -115,7 +115,7 @@ export default function Speaker(props: Props) {
         ogImage={avatars.length ? avatars[0].images.sources : undefined}
       />
       <ResponsiveBox>
-        <Breadcrumb path={[{ label: "speakers", to: "/speakers" }, title]} />
+        <Breadcrumb path={[{ label: t("speakers"), to: "/speakers" }, title]} />
         <Title>{speakerNames}</Title>
         {speakers.map((speaker, i) => (
           <SpeakerBox key={speaker.uuid}>
