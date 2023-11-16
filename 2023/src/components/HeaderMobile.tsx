@@ -1,13 +1,13 @@
 import React, { useState, useCallback } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { useTranslation } from "react-i18next"
 import Headroom from "react-headroom"
 
 import { Logo } from "./Logo"
 import { LanguageSwitch } from "./LanguageSwitch"
 import { LinkButton } from "./LinkButton"
 import { HamburgerMenu } from "./HamburgerMenu"
+import { I18N } from "./I18N"
 
 type Props = {
   siteTitle: string
@@ -92,7 +92,6 @@ export function InnerHeaderMobile(props: Props) {
     enableSchedule,
     enableSponsors,
   } = props
-  const { t, i18n } = useTranslation()
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
   const toggleMenu = useCallback(() => {
     setMenuOpen(!menuOpen)
@@ -119,7 +118,7 @@ export function InnerHeaderMobile(props: Props) {
         {ticketUrl ? (
           <TicketBox>
             <LinkButton color="primary" to={ticketUrl} size="inline">
-              {t("tickets")}
+              <I18N k="tickets" />
             </LinkButton>
           </TicketBox>
         ) : null}
@@ -138,19 +137,28 @@ export function InnerHeaderMobile(props: Props) {
                 ja: "日本語",
                 en: "EN",
               }}
-              currentLanguage={i18n.language}
               onChange={changeLanguage}
             />
           </LanguageSwitchBox>
           {enableSpeakers ? (
-            <MenuItem to="/speakers/">{t("speakers")}</MenuItem>
+            <MenuItem to="/speakers/">
+              <I18N k="speakers" />
+            </MenuItem>
           ) : null}
-          {enableVenue ? <MenuItem to="/venue/">{t("venue")}</MenuItem> : null}
+          {enableVenue ? (
+            <MenuItem to="/venue/">
+              <I18N k="venue" />
+            </MenuItem>
+          ) : null}
           {enableSchedule ? (
-            <MenuItem to="/schedule/">{t("schedule")}</MenuItem>
+            <MenuItem to="/schedule/">
+              <I18N k="schedule" />
+            </MenuItem>
           ) : null}
           {enableSponsors ? (
-            <MenuItem to="/sponsors/">{t("sponsors")}</MenuItem>
+            <MenuItem to="/sponsors/">
+              <I18N k="sponsors" />
+            </MenuItem>
           ) : null}
         </MenuBox>
       )}
