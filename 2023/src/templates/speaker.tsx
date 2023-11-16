@@ -142,11 +142,11 @@ export default function Speaker(props: Props) {
             <br />
             {t(`room${room}`)}
             <br />
-            Spoken language: {t(spokenLanguage)}
+            {t("session.lang.spoken")}: {t(`lang.${spokenLanguage}`)}
             {slideLanguage ? (
               <>
                 <br />
-                Slide language: {t(slideLanguage)}
+                {t("session.lang.slides")}: {t(`lang.${slideLanguage}`)}
               </>
             ) : null}
             <br />
