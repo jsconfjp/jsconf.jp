@@ -8,7 +8,7 @@ import { Header } from "./Header"
 import { HeaderMobile } from "./HeaderMobile"
 import { Footer } from "./Footer"
 import { SmoothScroll } from "./SmoothScroll"
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
   html {
