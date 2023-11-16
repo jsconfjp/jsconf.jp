@@ -42,8 +42,8 @@ type SponsorRow = {
   "title-en": string
   "title-ja": string
   "description-en": string
-  "presenter-name-en": string
-  "presenter-name-ja": string
+  "presenter-name": string
+  "presenter-name-reading": string
   "description-ja": string
   "spoken-language": string
   "slides-language": string
@@ -329,13 +329,13 @@ async function loadImage(speaker: string, imageUrl: string): Promise<string> {
         descriptionJa: todoToEmpty(talk["description-ja"]),
         spokenLanguage: talk["spoken-language"],
         slideLanguage: talk["slides-language"] || talk["spoken-language"],
-        presenterNameEn:
-          "presenter-name-en" in talk
-            ? todoToEmpty(talk["presenter-name-en"])
+        presenterName:
+          "presenter-name" in talk
+            ? todoToEmpty(talk["presenter-name"])
             : undefined,
-        presenterNameJa:
-          "presenter-name-en" in talk
-            ? todoToEmpty(talk["presenter-name-ja"])
+        presenterNameReading:
+          "presenter-name-reading" in talk
+            ? todoToEmpty(talk["presenter-name-reading"])
             : undefined,
         speakerIDs: sessionSpeakers.map(({ uuid }) => uuid),
         sponsorIDs: "sponsor-id" in talk ? [talk["sponsor-id"]] : [],

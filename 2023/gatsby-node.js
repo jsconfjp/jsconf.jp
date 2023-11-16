@@ -30,6 +30,7 @@ exports.createPages = ({ graphql, actions }) => {
               node {
                 uuid
                 name
+                nameReading
                 biography
                 biographyJa
               }
@@ -47,8 +48,8 @@ exports.createPages = ({ graphql, actions }) => {
                 slideLanguage
                 speakerIDs
                 sponsorIDs
-                presenterNameEn
-                presenterNameJa
+                presenterName
+                presenterNameReading
                 date
                 startsAt
                 endsAt

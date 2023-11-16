@@ -5,10 +5,10 @@ import { GatsbyImage as Image } from "gatsby-plugin-image"
 import Markdown from "react-markdown"
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
-import { Title } from "../components/Title"
 import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
 import { AvatarType } from "../components/Speaker"
+import { SpeakerName, SpeakerNames } from "../components/EventSpeakers"
 import { SpeakerType, TalkType } from "../data/types"
 import { enOrJa } from "../util/languages"
 import { EventTime } from "../components/EventTime"
@@ -27,24 +27,22 @@ type Props = {
 const SpeakerBox = styled.div`
   display: flex;
   flex-direction: row;
-  margin-bottom: 2em;
+  margin: 2em 0;
+  padding: 0 2.5rem;
 
   ${({ theme }) => theme.breakpoints.mobile} {
     flex-direction: column;
   }
 `
-const Description = styled(Markdown)`
+
+const SpeakerSide = styled.div`
   font-family: ${({ theme }) => theme.fonts.text};
-  font-size: 1.8rem;
-`
-const Biography = styled(Description)`
   flex: 1;
-  margin: 0;
-  margin-left: 60px;
+  font-size: 1.8rem;
+  margin: 0 3em;
 
   ${({ theme }) => theme.breakpoints.mobile} {
-    margin-left: 0;
-    margin-top: 40px;
+    margin: 2em 0;
   }
 `
 const Avatar = styled(Image)`
@@ -102,11 +100,8 @@ export default function Speaker(props: Props) {
     room,
   } = talk
   const speakerNames = speakers.length
-    ? speakers.map(speaker => speaker.name).join(" and ")
-    : `${enOrJa(i18n)(
-        talk.presenterNameEn ?? talk.presenterNameJa ?? "",
-        talk.presenterNameJa ?? talk.presenterNameEn ?? "",
-      )} (${sponsors[0].name})`
+    ? speakers.map(speaker => speaker.name)
+    : talk.presenterName ?? ""
 
   return (
     <Layout>
@@ -117,13 +112,17 @@ export default function Speaker(props: Props) {
       />
       <ResponsiveBox>
         <Breadcrumb path={[{ label: t("speakers"), to: "/speakers" }, title]} />
-        <Title>{speakerNames}</Title>
         {speakers.map((speaker, i) => (
           <SpeakerBox key={speaker.uuid}>
             <Avatar image={avatars[i]} alt={speaker.name} loading="eager" />
-            <Biography>
-              {enOrJa(i18n)(speaker.biography, speaker.biographyJa)}
-            </Biography>
+            <SpeakerSide>
+              <h1>
+                <SpeakerName speaker={speaker} />
+              </h1>
+              <Markdown>
+                {enOrJa(i18n)(speaker.biography, speaker.biographyJa)}
+              </Markdown>
+            </SpeakerSide>
           </SpeakerBox>
         ))}
         {sponsors.map(sponsor => (
@@ -133,7 +132,20 @@ export default function Speaker(props: Props) {
               alt={sponsor.name}
               loading="eager"
             />
-            <Biography>{sponsor.prText}</Biography>
+            <SpeakerSide>
+              <h1>
+                <SpeakerNames
+                  speakers={[
+                    {
+                      name: talk.presenterName!,
+                      nameReading: talk.presenterNameReading,
+                      sponsor: sponsor.name,
+                    },
+                  ]}
+                />
+              </h1>
+              <Markdown>{sponsor.prText}</Markdown>
+            </SpeakerSide>
           </SpeakerBox>
         ))}
         <Room room={room} />
@@ -151,7 +163,7 @@ export default function Speaker(props: Props) {
             ) : null}
             <br />
           </p>
-          <Description>{enOrJa(i18n)(description, descriptionJa)}</Description>
+          <Markdown>{enOrJa(i18n)(description, descriptionJa)}</Markdown>
         </TalkBox>
       </ResponsiveBox>
     </Layout>
