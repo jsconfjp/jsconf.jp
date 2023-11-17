@@ -24,8 +24,11 @@ export type SpeakerType = {
   biographyJa: string
   presentations: string[]
   github: string
+  mastodon: string
+  homepage: string
   twitter: string
   location: string
+  pronoun: string
 }
 
 export type Session = TalkType & {

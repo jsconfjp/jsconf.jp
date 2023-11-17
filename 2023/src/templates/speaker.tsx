@@ -14,6 +14,11 @@ import { enOrJa } from "../util/languages"
 import { EventTime } from "../components/EventTime"
 import { Room } from "../components/RoomLegend"
 import { Rooms } from "../util/misc"
+import { ExternalLink } from "@styled-icons/remix-line/ExternalLink"
+import { Mastodon } from "@styled-icons/remix-line/Mastodon"
+import { Github } from "@styled-icons/remix-line/Github"
+import { Twitter } from "@styled-icons/remix-line/Twitter"
+import { Link } from "gatsby"
 
 type Props = {
   pageContext: {
@@ -85,6 +90,88 @@ const TalkTitle = styled.h2`
   text-align: left;
 `
 
+type SocialLinksProps = {
+  speaker: SpeakerType
+}
+
+const SocialLinkContainer = styled.ul`
+  &,
+  & > li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  & {
+    display: flex;
+  }
+  & > li > a {
+    padding: 0.4em;
+    color: ${({ theme }) => theme.colors.disabledText};
+    &:hover {
+      color: ${({ theme }) => theme.colors.primary};
+    }
+  }
+  svg {
+    width: 1.6em;
+  }
+`
+
+function SocialLinks(props: SocialLinksProps) {
+  const { speaker } = props
+  const socialLinks = [
+    speaker.homepage ? (
+      <Link to={speaker.homepage}>
+        <ExternalLink />
+      </Link>
+    ) : null,
+    speaker.github ? (
+      <Link to={`https://github.com/${speaker.github}`}>
+        <Github />
+      </Link>
+    ) : null,
+    speaker.mastodon ? (
+      <Link to={speaker.mastodon}>
+        <Mastodon />
+      </Link>
+    ) : null,
+    speaker.twitter ? (
+      <Link to={`https://twitter.com/${speaker.twitter}`}>
+        <Twitter />
+      </Link>
+    ) : null,
+  ]
+    .filter(Boolean)
+    .map(entry => <li>{entry}</li>)
+
+  if (!socialLinks.length) {
+    return <></>
+  }
+
+  return <SocialLinkContainer>{socialLinks}</SocialLinkContainer>
+}
+
+const SpeakerPronounWrap = styled.em`
+  margin-left: 0.5em;
+  font-size: 0.75em;
+`
+
+type SpeakerPronounProps = {
+  speaker: SpeakerType
+}
+
+const SpeakerPronoun = ({ speaker }: SpeakerPronounProps) => {
+  if (!speaker.pronoun) {
+    return <></>
+  }
+  return (
+    <SpeakerPronounWrap>
+      {"("}
+      {speaker.pronoun}
+      {")"}
+    </SpeakerPronounWrap>
+  )
+}
+
 export default function Speaker(props: Props) {
   const { t, i18n } = useTranslation()
   const {
@@ -118,10 +205,12 @@ export default function Speaker(props: Props) {
             <SpeakerSide>
               <h1>
                 <SpeakerName speaker={speaker} />
+                <SpeakerPronoun speaker={speaker} />
               </h1>
               <Markdown>
                 {enOrJa(i18n)(speaker.biography, speaker.biographyJa)}
               </Markdown>
+              <SocialLinks speaker={speaker} />
             </SpeakerSide>
           </SpeakerBox>
         ))}

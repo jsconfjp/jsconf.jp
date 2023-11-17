@@ -33,6 +33,11 @@ exports.createPages = ({ graphql, actions }) => {
                 nameReading
                 biography
                 biographyJa
+                github
+                mastodon
+                homepage
+                twitter
+                pronoun
               }
             }
           }
