@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-size: 1.6em;
     font-family: ${({ theme }) => theme.fonts.text}
+    padding: 0;
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -96,8 +97,8 @@ export function Layout({ children, background }: Props) {
 
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
       <>
+        <GlobalStyle />
         <OnlyMobile>
           <HeaderMobile
             siteTitle={site.siteMetadata.title}
