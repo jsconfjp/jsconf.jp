@@ -8,6 +8,7 @@ import { Title } from "../components/Title"
 import { SpeakerList } from "../components/SpeakerList"
 import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
+import { theme } from "../theme"
 
 export default function SpeakersPage() {
   const { allSpeakersYaml, allTalksYaml, allFile } = useStaticQuery(graphql`
@@ -66,7 +67,7 @@ export default function SpeakersPage() {
   const talks = allTalksYaml.edges.map(({ node }: any) => node)
 
   return (
-    <Layout>
+    <Layout background={theme.colors.bgLight}>
       <SEO title={t("speakers")} description={t("speakers.description")} />
       <ResponsiveBox>
         <Breadcrumb path={[t("speakers")]} />

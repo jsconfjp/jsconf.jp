@@ -27,10 +27,12 @@ const GlobalStyle = createGlobalStyle`
 
 type Props = {
   children: React.ReactNode
+  background?: string
 }
 
-const MainBox = styled.div`
+const MainBox = styled.div<{ background?: string }>`
   position: relative;
+  ${({ background }) => (background ? `background: ${background};` : "")}
 `
 const BackToTopBox = styled.div`
   position: absolute;
@@ -66,7 +68,7 @@ const BackToTopButton = styled.button`
   background-color: ${({ theme }) => theme.colors.primary};
 `
 
-export function Layout({ children }: Props) {
+export function Layout({ children, background }: Props) {
   const { t, i18n } = useTranslation()
   const onChangeLanguage = useCallback(
     (lang: string) => {
@@ -118,7 +120,7 @@ export function Layout({ children }: Props) {
             onChangeLanguage={onChangeLanguage}
           />
         </NotMobile>
-        <MainBox>
+        <MainBox background={background}>
           <main>{children}</main>
           <BackToTopBox>
             <SmoothScroll selector="body">

@@ -6,6 +6,9 @@ export const theme: DefaultTheme = {
   innerWidth: "940px",
   colors: {
     base: "#ffffff",
+    bgLight: "#FCEDD2",
+    bgMiddle: "#FBE4CA",
+    bgDark: "#FBE4CA",
     baseDimmed: "#F5F5F5",
     text: "#000000",
     shadow: "rgba(0, 0, 0, 0.16)",

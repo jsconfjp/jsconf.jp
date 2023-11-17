@@ -10,16 +10,11 @@ export type Props = {
 }
 
 const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 60px;
-  grid-row-gap: 60px;
-
-  ${({ theme }) => theme.breakpoints.mobile} {
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-  }
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 1.5em;
 `
 
 export function SpeakerList(props: Props) {
