@@ -94,8 +94,8 @@ export function Footer(_props: Props) {
           <Link to="/code-of-conduct/">{t("code-of-conduct")}</Link>
         </li>
         <li>
-          <Link to="/jp-specified-commercial-transactions-act/">
-            {t("jp-specified-commercial-transactions-act")}
+          <Link to="/specified-commercial-transactions-act/">
+            {t("specified-commercial-transactions-act")}
           </Link>
         </li>
       </LinksBox>

@@ -39,7 +39,7 @@ export const ja: {
     "venue.accessByNaritaAirport": "成田空港からJR 九段下駅まで約90分",
     "venue.accessByHanedaAirport": "羽田空港からJR 九段下駅まで約50分",
     moreDetails: "詳細",
-    "jp-specified-commercial-transactions-act": "特定商取引法に基づく表示",
+    "specified-commercial-transactions-act": "特定商取引法に基づく表示",
     "code-of-conduct": "行動規範",
     // @ts-expect-error It's not defined in en.ts
     Japanese: "日本語",
