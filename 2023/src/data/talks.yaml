@@ -153,8 +153,8 @@
   sponsorIDs: []
 - uuid: azukiazusa-1
   date: day1
-  startsAt: "19:40"
-  endsAt: "19:50"
+  startsAt: "19:30"
+  endsAt: "19:40"
   room: A
   titleJa: JavaScript なしで動作するモダンなコードの書き方
   descriptionJa: >-
@@ -668,8 +668,8 @@
   sponsorIDs: []
 - uuid: luca-mugnaini-1
   date: day1
-  startsAt: "19:20"
-  endsAt: "19:30"
+  startsAt: "19:10"
+  endsAt: "19:20"
   room: A
   title: Hope is postponed disappointment
   description: >-
@@ -773,8 +773,8 @@
   sponsorIDs: []
 - uuid: poteboy-1
   date: day1
-  startsAt: "19:30"
-  endsAt: "19:40"
+  startsAt: "19:20"
+  endsAt: "19:30"
   room: A
   title: The Past and Future of Kuma UI
   description: >-
@@ -1038,8 +1038,8 @@
   sponsorIDs: []
 - uuid: yamanoku-1
   date: day1
-  startsAt: "19:10"
-  endsAt: "19:20"
+  startsAt: "19:40"
+  endsAt: "19:50"
   room: A
   titleJa: 画面遷移のアクセシビリティ課題を解決しうる Navigation API への期待
   descriptionJa: >-
