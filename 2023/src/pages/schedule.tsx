@@ -18,6 +18,7 @@ import { generateTimetable } from "../util/generateTimetable"
 import { rangeTimeBoxes, escapeTime } from "../util/rangeTimeBoxes"
 import { Dates, times, Rooms, rooms } from "../util/misc"
 import { useEnOrJa } from "../util/languages"
+import { rgba } from "../util/rgba"
 
 const dummyTrack = String.fromCharCode(
   rooms[rooms.length - 1].charCodeAt(0) + 1,
@@ -53,11 +54,17 @@ const Area = styled(_Link)<{
     isBreak ? `A / ${dummyTrack}` : track};
   grid-row: ${({ startsAt, endsAt }) =>
     `t-${escapeTime(startsAt)} / t-${escapeTime(endsAt)}`};
-  background-color: ${({ track, isBreak, theme }) =>
-    isBreak ? theme.colors.disabled + "cc" : theme.colors[`room${track}`]};
+  background-color: ${({ track, isBreak, theme, to }) =>
+    rgba(
+      isBreak ? theme.colors.disabled : theme.colors[`room${track}`],
+      to ? 1.0 : 0.4,
+    )};
   border-left: 5px solid;
-  border-color: ${({ track, isBreak, theme }) =>
-    isBreak ? theme.colors.disabledText : theme.colors[`room${track}Border`]};
+  border-color: ${({ track, isBreak, theme, to }) =>
+    rgba(
+      isBreak ? theme.colors.disabledText : theme.colors[`room${track}Border`],
+      to ? 1.0 : 0.4,
+    )};
   display: flex;
   flex-direction: column;
   justify-content: stretch;
@@ -80,6 +87,20 @@ const Area = styled(_Link)<{
     background-color: ${({ track, isBreak, theme }) =>
       isBreak ? theme.colors.disabledText : theme.colors[`room${track}Border`]};
   }
+
+  ${({ to }) =>
+    to
+      ? `&:hover {
+    left: -2px;
+    top: -2px;
+    &::before {
+      top: -10px;
+      left: -12px;
+      width: 20px;
+      height: 20px;
+    }
+  }`
+      : ""}
 
   ${({ theme }) => theme.breakpoints.mobile} {
     margin-bottom: 1em;
