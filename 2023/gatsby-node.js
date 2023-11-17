@@ -38,6 +38,7 @@ exports.createPages = ({ graphql, actions }) => {
                 homepage
                 twitter
                 pronoun
+                location
               }
             }
           }

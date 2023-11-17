@@ -19,6 +19,7 @@ import { Mastodon } from "@styled-icons/remix-line/Mastodon"
 import { Github } from "@styled-icons/remix-line/Github"
 import { Twitter } from "@styled-icons/remix-line/Twitter"
 import { Link } from "gatsby"
+import { Tags } from "../components/Tags"
 
 type Props = {
   pageContext: {
@@ -74,7 +75,7 @@ const TalkBox = styled.div<{
   background-color: ${({ track, theme }) => theme.colors[`room${track}`]};
   border-left: 5px solid;
   border-color: ${({ track, theme }) => theme.colors[`room${track}Border`]};
-  padding: 2rem 5rem;
+  padding: 2rem 3rem;
   position: relative;
   margin: 0 1.25rem;
 
@@ -85,7 +86,7 @@ const TalkBox = styled.div<{
 const TalkTitle = styled.h2`
   text-transform: uppercase;
   font-family: ${({ theme }) => theme.fonts.header};
-  margin: 0 0 0.5em;
+  margin: 0.5em 0;
   font-size: ${({ theme }) => theme.fontSizes.subTitle};
   text-align: left;
 `
@@ -190,6 +191,22 @@ export default function Speaker(props: Props) {
     ? speakers.map(speaker => speaker.name)
     : talk.presenterName ?? ""
 
+  const location = speakers.length
+    ? speakers[0]?.location ?? "on-site"
+    : "on-site"
+
+  const langTags =
+    spokenLanguage !== slideLanguage
+      ? [
+          `${t("session.lang.spoken")}: ${t(`lang.${spokenLanguage}`)}`,
+          `${t("session.lang.slides")}: ${t(`lang.${slideLanguage}`)}`,
+        ]
+      : [t(`lang.${spokenLanguage}`)]
+
+  if (location === "remote") {
+    langTags.push(t("location.remote"))
+  }
+
   return (
     <Layout>
       <SEO
@@ -239,19 +256,9 @@ export default function Speaker(props: Props) {
         ))}
         <Room room={room} />
         <TalkBox track={room}>
+          <EventTime session={talk} />
           <TalkTitle>{enOrJa(i18n)(title, titleJa)}</TalkTitle>
-          <p>
-            <EventTime session={talk} />
-            <br />
-            {t("session.lang.spoken")}: {t(`lang.${spokenLanguage}`)}
-            {slideLanguage ? (
-              <>
-                <br />
-                {t("session.lang.slides")}: {t(`lang.${slideLanguage}`)}
-              </>
-            ) : null}
-            <br />
-          </p>
+          <Tags>{langTags}</Tags>
           <Markdown>{enOrJa(i18n)(description, descriptionJa)}</Markdown>
         </TalkBox>
       </ResponsiveBox>

@@ -19,6 +19,7 @@ import { rangeTimeBoxes, escapeTime } from "../util/rangeTimeBoxes"
 import { Dates, times, Rooms, rooms } from "../util/misc"
 import { useEnOrJa } from "../util/languages"
 import { rgba } from "../util/rgba"
+import { Tags } from "../components/Tags"
 
 const dummyTrack = String.fromCharCode(
   rooms[rooms.length - 1].charCodeAt(0) + 1,
@@ -73,7 +74,7 @@ const Area = styled(_Link)<{
     content: "${({ track }) => track}";
     font-family: ${({ theme }) => theme.fonts.text};
     font-weight: bold;
-    color: ${({ theme }) => theme.colors.base };
+    color: ${({ theme }) => theme.colors.base};
     font-size: 0.7em;
     position: absolute;
     font-family: ${({ theme }) => theme.fonts.text};
@@ -150,40 +151,6 @@ const AreaFooter = styled.div`
   justify-content: end;
   margin-top: 2.5rem;
 `
-
-const TagList = styled.ul`
-  display: flex;
-  gap: 0.5rem;
-  margin: 0;
-  padding: 0;
-
-  li {
-    margin: 0;
-    padding: 0;
-    color: ${({ theme }) => theme.colors.text};
-    font-family: ${({ theme }) => theme.fonts.header};
-    font-size: 1.2rem;
-    list-style: none;
-
-    padding: 0.25em 0.5em 0.25em;
-    margin: 0;
-
-    background: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 0.5em;
-  }
-`
-
-type TagsProps = {
-  children: Array<string | null | false>
-}
-const Tags = ({ children }: TagsProps) => (
-  <TagList>
-    {children.filter(Boolean).map(text => (
-      <li>{text}</li>
-    ))}
-  </TagList>
-)
 
 export default function SchedulePage() {
   const { t, i18n } = useTranslation()
@@ -322,7 +289,7 @@ export default function SchedulePage() {
                         <Tags>
                           {s.spokenLanguage &&
                             t(`lang.${s.spokenLanguage || ""}`)}
-                          {location === "remote" && t(`location.remote`)}
+                          {location === "remote" && t("location.remote")}
                         </Tags>
                       </AreaFooter>
                     </Area>
