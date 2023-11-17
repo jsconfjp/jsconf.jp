@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
-import { useTranslation } from "react-i18next"
+import { GatsbyLinkProps, Link } from "gatsby"
 
 import { Logo } from "./Logo"
 import { LanguageSwitch } from "./LanguageSwitch"
 import { LinkButton } from "./LinkButton"
+import { I18N } from "./I18N"
 
 type Props = {
   siteTitle: string
@@ -49,7 +49,7 @@ const MenuBox = styled.div`
   display: flex;
   justify-content: flex-end;
 `
-const MenuItem = styled(Link)`
+const MenuItemWrap = styled(Link)`
   flex: 1;
   display: flex;
   align-items: center;
@@ -60,16 +60,48 @@ const MenuItem = styled(Link)`
   font-size: 2rem;
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
 
-  :last-of-type {
+  span :last-of-type {
     margin-right: 40px;
   }
+  & span {
+    white-space: nowrap;
+    display: inline-block;
+    border-bottom: 4px solid transparent;
+  }
+  &:hover span {
+    border-color: ${({ theme }) => theme.colors.disabled};
+  }
+  &[aria-current="page"] span {
+    border-color: ${({ theme }) => theme.colors.primary};
+  }
 `
+
+function MenuItem<TState>({
+  children,
+  to,
+  ...Props
+}: Omit<GatsbyLinkProps<TState>, "ref">) {
+  return (
+    <MenuItemWrap to={to} {...Props}>
+      <span>{children}</span>
+    </MenuItemWrap>
+  )
+}
+
 const TicketBox = styled.div`
   flex: 1;
   display: flex;
   align-self: stretch;
   max-width: 200px;
+
+  a span {
+    border-bottom: 4px solid transparent;
+  }
+  &:hover a span {
+    border-color: ${({ theme }) => theme.colors.primaryText};
+  }
 `
 
 export function Header(props: Props) {
@@ -81,8 +113,6 @@ export function Header(props: Props) {
     enableSchedule,
     enableSponsors,
   } = props
-  const { t, i18n } = useTranslation()
-
   return (
     <Box>
       <InnerBox>
@@ -96,7 +126,6 @@ export function Header(props: Props) {
                 ja: "日本語",
                 en: "EN",
               }}
-              currentLanguage={i18n.language}
               onChange={onChangeLanguage}
             />
           </>
@@ -104,19 +133,31 @@ export function Header(props: Props) {
 
         <MenuBox>
           {enableSpeakers ? (
-            <MenuItem to="/speakers/">{t("speakers")}</MenuItem>
+            <MenuItem to="/speakers/">
+              <I18N k="speakers" />
+            </MenuItem>
           ) : null}
-          {enableVenue ? <MenuItem to="/venue/">{t("venue")}</MenuItem> : null}
+          {enableVenue ? (
+            <MenuItem to="/venue/">
+              <I18N k="venue" />
+            </MenuItem>
+          ) : null}
           {enableSchedule ? (
-            <MenuItem to="/schedule/">{t("schedule")}</MenuItem>
+            <MenuItem to="/schedule/">
+              <I18N k="schedule" />
+            </MenuItem>
           ) : null}
           {enableSponsors ? (
-            <MenuItem to="/sponsors/">{t("sponsors")}</MenuItem>
+            <MenuItem to="/sponsors/">
+              <I18N k="sponsors" />
+            </MenuItem>
           ) : null}
           {ticketUrl ? (
             <TicketBox>
               <LinkButton color="primary" to={ticketUrl} size="inline">
-                {t("tickets")}
+                <span>
+                  <I18N k="tickets" />
+                </span>
               </LinkButton>
             </TicketBox>
           ) : null}

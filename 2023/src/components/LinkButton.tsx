@@ -46,11 +46,11 @@ const InternalBox = styled(Link)`
   text-decoration: none;
 `
 const InternalPrimaryBox = styled(InternalBox)`
-  color: white;
+  color: ${({ theme }) => theme.colors.primaryText};
   background-color: ${({ theme }) => theme.colors.primary};
 `
 const InternalSecondaryBox = styled(InternalBox)`
-  color: white;
+  color: ${({ theme }) => theme.colors.secondaryText};
   background-color: ${({ theme }) => theme.colors.secondary};
 `
 
@@ -59,11 +59,11 @@ const ExternalBox = styled(OutboundLink)`
   text-decoration: none;
 `
 const ExternalPrimaryBox = styled(ExternalBox)`
-  color: white;
+  color: ${({ theme }) => theme.colors.primaryText};
   background-color: ${({ theme }) => theme.colors.primary};
 `
 const ExternalSecondaryBox = styled(ExternalBox)`
-  color: white;
+  color: ${({ theme }) => theme.colors.secondaryText};
   background-color: ${({ theme }) => theme.colors.secondary};
 `
 

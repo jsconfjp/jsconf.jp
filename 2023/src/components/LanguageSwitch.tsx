@@ -1,22 +1,28 @@
 import React from "react"
+import { useTranslation } from "react-i18next"
 import styled from "styled-components"
 
 type Props = {
   languages: Record<Languages, string>
-  currentLanguage: string
   onChange: (lang: string) => void
 }
 
-const Lang = styled.a`
+const Lang = styled.a<{ selected: boolean }>`
   text-decoration: none;
   font-family: ${({ theme }) => theme.fonts.header};
   font-size: 2rem;
-  border-bottom: 4px solid ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.text};
+  border-bottom: 4px solid
+    ${({ theme, selected }) =>
+      selected ? theme.colors.primary : "transparent"};
+  white-space: nowrap;
 
-  &[href="#"] {
-    color: ${({ theme }) => theme.colors.text};
-    border-bottom-color: transparent;
-  }
+  ${({ theme, selected }) =>
+    selected
+      ? ""
+      : `&:hover {
+    border-bottom-color: ${theme.colors.disabled};
+  }`}
 `
 const Separator = styled.span`
   font-family: ${({ theme }) => theme.fonts.header};
@@ -26,25 +32,33 @@ const Separator = styled.span`
 `
 
 export function LanguageSwitch(props: Props) {
-  const { onChange, currentLanguage, languages } = props
+  const { onChange, languages } = props
   const [hasMounted, setHasMounted] = React.useState(false)
   const langKeys = Object.keys(languages) as Languages[]
+
+  const { i18n } = useTranslation()
 
   React.useEffect(() => {
     setHasMounted(true)
   }, [])
 
-  return hasMounted ? (
+  return (
     <>
       {langKeys.map((langKey, i) => {
+        const selected = hasMounted && i18n.language.startsWith(langKey)
         return (
           <React.Fragment key={langKey}>
             <Lang
-              href={currentLanguage?.startsWith(langKey) ? undefined : "#"}
-              onClick={e => {
-                e.preventDefault()
-                onChange(langKey)
-              }}
+              selected={selected}
+              href={!hasMounted || selected ? undefined : "#"}
+              onClick={
+                !hasMounted || selected
+                  ? undefined
+                  : e => {
+                      e.preventDefault()
+                      onChange(langKey)
+                    }
+              }
             >
               {languages[langKey]}
             </Lang>
@@ -53,5 +67,5 @@ export function LanguageSwitch(props: Props) {
         )
       })}
     </>
-  ) : null
+  )
 }
