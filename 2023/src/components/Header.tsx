@@ -27,6 +27,10 @@ const Box = styled.header`
   top: 0;
   height: 90px;
   box-shadow: 2px 0px 5px ${({ theme }) => theme.colors.shadow};
+
+  @media print {
+    display: none;
+  }
 `
 const InnerBox = styled.div`
   display: flex;

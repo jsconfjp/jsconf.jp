@@ -9,14 +9,22 @@ export type Props = {
 
 const Box = styled.div`
   display: flex;
+  font-size: 1.4rem;
+
+  @media print {
+    display: none;
+  }
 `
 const Text = styled.span`
   margin-right: 0.5em;
-  font-size: 1.4rem;
   font-weight: bold;
   text-transform: uppercase;
   font-family: ${({ theme }) => theme.fonts.header};
   text-transform: uppercase;
+
+  @media print {
+    color: ${({ theme }) => theme.colors.disabledText};
+  }
 `
 
 export function Breadcrumb(props: Props) {
