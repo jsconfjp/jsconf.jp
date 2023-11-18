@@ -908,20 +908,15 @@
   startsAt: "15:30"
   endsAt: "16:00"
   room: D
-  title: "From Loading to Generating: Leveraging AI in State Management"
+  title: How to make ChatGPT-like UI
+  titleJa: ChatGPTっぽいUIを実現する技術
   description: >-
-    The static expression of "loading" in state management has been transformed
-    into a dynamic expression of "generating" by the emergence of ChatGPT. For
-    effectively illustrating generative processes, understanding the concept of
-    streams in asynchronous processing is fundamental. In this presentation, we
-    will provide an overview of language models along with other machine
-    learning models, and examine how streams of data received from the APIs are
-    managed using Fetch API. Lastly, drawing perspectives from both developers
-    and users, we shall delve into the potential and limitations of user
-    interfaces that harness the power of generative AI.
+    What makes ChatGPT-like user interface? In this presentation, we will see
+    how generative experiences can be realized on the web, focusing on language
+    models and Streams API interfaces.
   descriptionJa: >-
-    状態管理における「読み込み中」の表現は、ChatGPTの登場によって「生成中」へとシフトしました。生成的なプロセスを効果的に表現するためには、非同期処理におけるストリームの概念を理解することが重要です。本発表では、言語モデルを含む他の機械学習モデルについて概観し、APIから受け取ったデータのストリームがFetch
-    APIを用いてどのように扱われるかを見ます。最後に、開発者とユーザー双方の視点から、生成AIの力を引き出すユーザーインターフェースの可能性と限界について議論します。
+    ChatGPTのようなUIはどのように実現されているのでしょうか？本発表では、言語モデルやStreams
+    APIのインタフェースに着目し、生成的な体験がウェブ上でどのように実現可能かを見ます。
   spokenLanguage: ja
   slideLanguage: ja
   presenterName: Yudai Nishiyama
