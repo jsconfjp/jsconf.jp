@@ -339,6 +339,10 @@ async function loadImage(speaker: string, imageUrl: string): Promise<string> {
             : undefined,
         speakerIDs: sessionSpeakers.map(({ uuid }) => uuid),
         sponsorIDs: "sponsor-id" in talk ? [talk["sponsor-id"]] : [],
+        slidesEn:
+          "slides-en" in talk ? talk["slides-en"] || undefined : undefined,
+        slidesJa:
+          "slides-ja" in talk ? talk["slides-ja"] || undefined : undefined,
       }
     })
     .filter(Boolean)

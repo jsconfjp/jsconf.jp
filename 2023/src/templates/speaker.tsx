@@ -10,7 +10,7 @@ import { Breadcrumb } from "../components/Breadcrumb"
 import { AvatarType } from "../components/Speaker"
 import { SpeakerName, SpeakerNames } from "../components/EventSpeakers"
 import { SpeakerType, TalkType } from "../data/types"
-import { enOrJa } from "../util/languages"
+import { enOrJa, useEnOrJa } from "../util/languages"
 import { EventTime } from "../components/EventTime"
 import { Room } from "../components/RoomLegend"
 import { Rooms } from "../util/misc"
@@ -20,6 +20,7 @@ import { Github } from "@styled-icons/remix-line/Github"
 import { Twitter } from "@styled-icons/remix-line/Twitter"
 import { Link } from "gatsby"
 import { Tags } from "../components/Tags"
+import { I18N } from "../components/I18N"
 
 type Props = {
   pageContext: {
@@ -173,6 +174,33 @@ const SpeakerPronoun = ({ speaker }: SpeakerPronounProps) => {
   )
 }
 
+type SlidesProps = {
+  session: TalkType
+}
+const SlidesBox = styled.div`
+  margin-top: 2rem;
+  a {
+    color: ${({ theme }) => theme.colors.text };
+    font-size: 1em;
+  }
+  svg {
+    width: 1.6em;
+    margin-right: 0.3em;
+  }
+`
+const Slides = ({ session }: SlidesProps) => {
+  const enOrJa = useEnOrJa()
+  if (!session.slidesEn && !session.slidesJa) return <></>
+  return (
+    <SlidesBox>
+      <Link to={enOrJa(session.slidesEn, session.slidesJa)}>
+        <ExternalLink/>
+        <I18N k="slides" />
+      </Link>
+    </SlidesBox>
+  )
+}
+
 export default function Speaker(props: Props) {
   const { t, i18n } = useTranslation()
   const {
@@ -260,6 +288,7 @@ export default function Speaker(props: Props) {
           <TalkTitle>{enOrJa(i18n)(title, titleJa)}</TalkTitle>
           <Tags>{langTags}</Tags>
           <Markdown>{enOrJa(i18n)(description, descriptionJa)}</Markdown>
+          <Slides session={talk} />
         </TalkBox>
       </ResponsiveBox>
     </Layout>
