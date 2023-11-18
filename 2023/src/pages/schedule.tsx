@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react"
+import React, { useLayoutEffect, useState } from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { useStaticQuery, graphql } from "gatsby"
@@ -12,8 +12,8 @@ import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
 import { EventTime } from "../components/EventTime"
 import { EventSpeakers } from "../components/EventSpeakers"
-import { RoomLegend } from "../components/RoomLegend"
-import { TalkType, SpeakerType } from "../data/types"
+import { Room, RoomLegend } from "../components/RoomLegend"
+import { TalkType, SpeakerType, Session } from "../data/types"
 import { generateTimetable } from "../util/generateTimetable"
 import { rangeTimeBoxes, escapeTime } from "../util/rangeTimeBoxes"
 import { Dates, times, Rooms, rooms } from "../util/misc"
@@ -24,21 +24,39 @@ import { Tags } from "../components/Tags"
 const dummyTrack = String.fromCharCode(
   rooms[rooms.length - 1].charCodeAt(0) + 1,
 ) as Rooms
-const Grid = styled.div<{ startsAt: Date; endsAt: Date }>`
+
+function getHours (time: string | Date) {
+  if (typeof time === "string") {
+    return parseInt(time.split(':')[0])
+  }
+  return time.getHours()
+}
+
+function getMinutes (time: string | Date) {
+  if (typeof time === 'string') {
+    return parseInt(time.split(':')[1])
+  }
+  return time.getMinutes()
+}
+
+const Grid = styled.div<{ startsAt: Date | string; endsAt: Date | string, rooms: Rooms[] }>`
   display: grid;
   grid-column-gap: 1em;
-  grid-template-columns: ${rooms
+  grid-template-columns: ${({ rooms }) => rooms
     .concat(dummyTrack)
     .map(r => `[${r}]`)
     .join(" 1fr ")};
   grid-template-rows: ${({ startsAt, endsAt }) =>
-    rangeTimeBoxes(5, startsAt.getHours(), endsAt.getHours())
+    rangeTimeBoxes(5, getHours(startsAt), getHours(endsAt), getMinutes(startsAt), getMinutes(endsAt))
       .map(t => `[t-${escapeTime(t)}]`)
       .join(" minmax(1em, max-content) ")};
 
   ${({ theme }) => theme.breakpoints.mobile} {
     display: flex;
     flex-direction: column;
+    @media print {
+      grid-column-gap: .2em;
+    }
   }
 `
 const Area = styled(_Link)<{
@@ -46,13 +64,14 @@ const Area = styled(_Link)<{
   startsAt: string
   endsAt: string
   isBreak: boolean
+  selectedRoom: string | undefined
 }>`
   margin-bottom: 1em;
   padding: 1em;
   text-decoration: none;
   position: relative;
-  grid-column: ${({ track, isBreak }) =>
-    isBreak ? `A / ${dummyTrack}` : track};
+  grid-column: ${({ track, isBreak, selectedRoom }) =>
+    !selectedRoom && isBreak ? `A / ${dummyTrack}` : track};
   grid-row: ${({ startsAt, endsAt }) =>
     `t-${escapeTime(startsAt)} / t-${escapeTime(endsAt)}`};
   background-color: ${({ track, isBreak, theme, to }) =>
@@ -70,27 +89,34 @@ const Area = styled(_Link)<{
   flex-direction: column;
   justify-content: stretch;
 
-  &::before {
-    content: "${({ track }) => track}";
-    font-family: ${({ theme }) => theme.fonts.text};
-    font-weight: bold;
-    color: ${({ theme }) => theme.colors.base};
-    font-size: 0.7em;
-    position: absolute;
-    font-family: ${({ theme }) => theme.fonts.text};
-    font-weight: bold;
-    color: ${({ theme }) => theme.colors.base};
-    font-size: 0.7em;
-    top: -8px;
-    left: -10px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 16px;
-    height: 16px;
-    border-radius: 100%;
-    background-color: ${({ track, isBreak, theme }) =>
-      isBreak ? theme.colors.disabledText : theme.colors[`room${track}Border`]};
+  @media not print {
+    &::before {
+      content: "${({ track }) => track}";
+      font-family: ${({ theme }) => theme.fonts.text};
+      font-weight: bold;
+      color: ${({ theme }) => theme.colors.base};
+      font-size: 0.7em;
+      position: absolute;
+      font-family: ${({ theme }) => theme.fonts.text};
+      font-weight: bold;
+      color: ${({ theme }) => theme.colors.base};
+      font-size: 0.7em;
+      top: -8px;
+      left: -10px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 16px;
+      height: 16px;
+      border-radius: 100%;
+      background-color: ${({ track, isBreak, theme }) =>
+        isBreak ? theme.colors.disabledText : theme.colors[`room${track}Border`]};
+    }
+  }
+  @media print {
+    padding: 0 1em;
+    background-color: ${({ track, isBreak, theme }) => isBreak ? theme.colors.disabled : theme.colors[`room${track}`] };
+    border-color: ${({ track, isBreak, theme }) => isBreak ? theme.colors.disabledText : theme.colors[`room${track}Border`]};
   }
 
   ${({ to }) =>
@@ -109,6 +135,9 @@ const Area = styled(_Link)<{
 
   ${({ theme }) => theme.breakpoints.mobile} {
     margin-bottom: 1em;
+    @media print {
+      margin-bottom: 0.2em;
+    }
   }
 `
 
@@ -119,9 +148,19 @@ const SubTitle = styled.h2`
   margin: 20px 0 1em;
   padding: 0.2em 1em;
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
+
+  @media print {
+    margin: .5em 0;
+    border-bottom: none;
+    padding: 0;
+    font-size: 1em;
+  }
 `
 const RoomLegendBox = styled.div`
   margin-bottom: 2em;
+  @media print {
+    margin-bottom: 0;
+  }
 `
 const Text = styled.span`
   color: ${({ theme }) => theme.colors.text};
@@ -129,6 +168,11 @@ const Text = styled.span`
   margin: 0.75rem 0;
   font-size: 2rem;
   font-family: ${({ theme }) => theme.fonts.text};
+
+  @media print {
+    margin: 0.2em 0;
+    font-size: 1em;
+  }
 `
 
 const AreaTitle = styled.div`
@@ -142,6 +186,9 @@ const AreaTitle = styled.div`
     padding-left: 0;
     margin: 0;
   }
+  @media print {
+    margin: 0;
+  }
 `
 const AreaFooter = styled.div`
   flex-grow: 1;
@@ -150,7 +197,29 @@ const AreaFooter = styled.div`
   align-items: end;
   justify-content: end;
   margin-top: 2.5rem;
+  @media print {
+    margin-top: 0;
+  }
 `
+
+function filterTrim <T>(array: T[], filter: (t: T) => boolean) {
+  let start = 0;
+  let len = array.length;
+  while (start < len) {
+    if (!filter(array[start])) {
+      break
+    }
+    start += 1;
+  }
+  let end = len - 1;
+  while (end > start) {
+    if (!filter(array[end])) {
+      break
+    }
+    end -= 1;
+  }
+  return array.slice(start, end)
+}
 
 export default function SchedulePage() {
   const { t, i18n } = useTranslation()
@@ -230,6 +299,8 @@ export default function SchedulePage() {
     window.scrollTo({ top })
   }, [])
 
+  const [selectedRoom, setSelectedRoom] = useState<Rooms | undefined>()
+
   return (
     <Layout>
       <SEO title={t("schedule")} description={t("schedule.description")} />
@@ -238,19 +309,33 @@ export default function SchedulePage() {
         <Title>{t("schedule")}</Title>
 
         {days.map(day => {
-          const { startsAt, endsAt } = times[day]
-          const sessions = flatten(
-            timetable[day].map(({ sessions }) => sessions),
-          )
+          let { startsAt, endsAt } = times[day] as { startsAt: Date | string, endsAt: Date | string }
+          let sessions = flatten(
+            timetable[day].map(({ sessions }) => sessions.filter(session => selectedRoom ? session.room === selectedRoom || session.break : true)),
+          ).map((event) => {
+            if (event.break && selectedRoom) {
+              return { ...event, room: selectedRoom, uuid: `${event.uuid}_${selectedRoom}` } as Session
+            }
+            return event
+          })
+          if (selectedRoom) {
+            sessions = filterTrim(sessions, session => session.break || session.title === 'open')
+            startsAt = sessions[0].startsAt
+            endsAt = sessions[sessions.length-1].endsAt
+          }
           return (
             <React.Fragment key={day}>
               <SubTitle id={day}>
                 {dateTimeFormatter.format(times[day].startsAt)}
               </SubTitle>
               <RoomLegendBox>
-                <RoomLegend />
+                <RoomLegend>
+                  {rooms.map(room => (
+                    <Room key={room} room={room} onClick={setSelectedRoom} selectedRoom={selectedRoom} />
+                  ))}
+                </RoomLegend>
               </RoomLegendBox>
-              <Grid startsAt={startsAt} endsAt={endsAt}>
+              <Grid startsAt={startsAt} endsAt={endsAt} rooms={selectedRoom ? [selectedRoom] : rooms}>
                 {sessions.map(s => {
                   const hasDescription =
                     s.uuid && (s.speakers.length || s.sponsors.length)
@@ -274,10 +359,11 @@ export default function SchedulePage() {
                         }
                       }}
                       key={s.room + s.uuid}
-                      track={s.room}
+                      track={selectedRoom ? selectedRoom : s.room}
                       startsAt={s.startsAt}
                       endsAt={s.endsAt}
                       isBreak={s.break}
+                      selectedRoom={selectedRoom}
                     >
                       <AreaTitle>
                         <EventTime session={s} />

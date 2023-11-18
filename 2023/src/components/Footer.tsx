@@ -13,6 +13,10 @@ const Box = styled.footer`
   align-items: center;
   font-family: ${({ theme }) => theme.fonts.text};
   background-color: ${({ theme }) => theme.colors.border};
+
+  @media print {
+    display: none;
+  }
 `
 const LinksBox = styled.ul`
   display: flex;

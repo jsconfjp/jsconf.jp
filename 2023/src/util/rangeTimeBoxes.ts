@@ -8,15 +8,18 @@ export const rangeTimeBoxes = (
   everyMinutes: number,
   startHours: number,
   endHours: number,
+  startMinutes: number = 0,
+  endMinutes: number = 0,
 ) => {
   const timeboxes = []
+  const end = endHours * 60 + endMinutes
   for (
-    let hour = startHours * 60;
-    hour <= endHours * 60;
-    hour += everyMinutes
+    let time = startHours * 60 + startMinutes;
+    time <= end;
+    time += everyMinutes
   ) {
-    const h = Math.floor(hour / 60)
-    const m = hour % 60
+    const h = Math.floor(time / 60)
+    const m = time % 60
     timeboxes.push(`${zeroFill(h, 2)}:${zeroFill(m, 2)}`)
   }
   return timeboxes

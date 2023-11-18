@@ -17,6 +17,9 @@ const TalkTime = styled.span`
   font-family: ${({ theme }) => theme.fonts.header};
   font-size: 1.5rem;
   font-weight: bold;
+  @media print {
+    font-size: .75em;
+  }
 `
 
 const TalkLength = styled.span`

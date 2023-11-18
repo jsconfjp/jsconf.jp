@@ -24,6 +24,10 @@ const ByLineText = styled.span`
   font-size: 0.8em;
   font-style: italic;
   margin: 0.5em 0;
+
+  @media print {
+    display: none;
+  }
 `
 
 type Props = {
