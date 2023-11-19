@@ -14,6 +14,7 @@ export const en = {
     description:
       "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the fourth time event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
     speakers: "Speakers",
+    slides: "Slides",
     timetable: "Timetable",
     aboutUs: "About us",
     organizingTeam: "Organizing team",

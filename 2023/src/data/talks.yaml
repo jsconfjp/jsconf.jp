@@ -588,6 +588,8 @@
   speakerIDs:
     - kenneth-rohde-christiansen
   sponsorIDs: []
+  slidesEn: >-
+    https://docs.google.com/presentation/d/1kk8ooZ8Ejx7puPNNRKV6OH91bYvn1R-9/edit?usp=sharing&ouid=111176479737822035744&rtpof=true&sd=true
 - uuid: kian-jamali-1
   date: day1
   startsAt: "14:40"
@@ -628,6 +630,10 @@
   speakerIDs:
     - koji-ota
   sponsorIDs: []
+  slidesEn: >-
+    https://www.dropbox.com/scl/fi/jze9f5yu8doxyiwzvcpzh/On-Browser-Advertisement-Auction-using-PrivacySandboxAPI-en.pdf?rlkey=ebpn5hcms3sy55jmrym01f137&dl=0
+  slidesJa: >-
+    https://www.dropbox.com/scl/fi/go55bumm2zqoyx58ms1a2/On-Browser-Advertisement-Auction-using-PrivacySandboxAPI-ja.pdf?rlkey=i0wf0vjkolg27cn7h80gwqlss&dl=0
 - uuid: kkeeth-1
   date: day1
   startsAt: "16:40"
@@ -666,6 +672,7 @@
   speakerIDs:
     - kateryna-porshnieva
   sponsorIDs: []
+  slidesEn: https://bit.ly/46ptcFM
 - uuid: luca-mugnaini-1
   date: day1
   startsAt: "19:10"
@@ -771,6 +778,8 @@
   speakerIDs:
     - peter-eijgermans
   sponsorIDs: []
+  slidesEn: >-
+    https://docs.google.com/presentation/d/1XmnkwTXcjUcAD40x-F658EnGrjulJF1B/edit?usp=sharing&ouid=105236729432728057097&rtpof=true&sd=true
 - uuid: poteboy-1
   date: day1
   startsAt: "19:20"
@@ -984,6 +993,8 @@
   speakerIDs:
     - yulia-startsev
   sponsorIDs: []
+  slidesEn: >-
+    https://docs.google.com/presentation/d/11MzrGYRpmqSwiEQJUm8Nn6KUcwlTw9iTYEf7RZLlG2A/edit?usp=sharing
 - uuid: yonatan-mevorach-1
   date: day1
   startsAt: "14:40"
@@ -1010,6 +1021,8 @@
   speakerIDs:
     - yonatan-mevorach
   sponsorIDs: []
+  slidesEn: >-
+    https://noti.st/cowchimp/ZQ91P1/mastering-cryptography-fundamentals-with-nodes-crypto-module
 - uuid: yusuke-wada-1
   date: day1
   startsAt: "15:30"

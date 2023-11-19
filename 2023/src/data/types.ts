@@ -15,6 +15,8 @@ export type TalkType = {
   endsAt: string
   hiddenTimeBoxes: string[] | null
   room: "A" | "B"
+  slidesEn: string
+  slidesJa: string
 }
 
 export type SpeakerType = {
