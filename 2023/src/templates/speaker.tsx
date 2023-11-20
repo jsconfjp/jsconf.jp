@@ -180,7 +180,7 @@ type SlidesProps = {
 const SlidesBox = styled.div`
   margin-top: 2rem;
   a {
-    color: ${({ theme }) => theme.colors.text };
+    color: ${({ theme }) => theme.colors.text};
     font-size: 1em;
   }
   svg {
@@ -194,7 +194,7 @@ const Slides = ({ session }: SlidesProps) => {
   return (
     <SlidesBox>
       <Link to={enOrJa(session.slidesEn, session.slidesJa)}>
-        <ExternalLink/>
+        <ExternalLink />
         <I18N k="slides" />
       </Link>
     </SlidesBox>
