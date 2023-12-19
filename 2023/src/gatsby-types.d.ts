@@ -2179,6 +2179,7 @@ type Query_talksYamlArgs = {
   title: InputMaybe<StringQueryOperatorInput>;
   titleJa: InputMaybe<StringQueryOperatorInput>;
   uuid: InputMaybe<StringQueryOperatorInput>;
+  youtube: InputMaybe<StringQueryOperatorInput>;
 };
 
 type Site = Node & {
@@ -3358,6 +3359,7 @@ type TalksYaml = Node & {
   readonly title: Maybe<Scalars['String']>;
   readonly titleJa: Maybe<Scalars['String']>;
   readonly uuid: Maybe<Scalars['String']>;
+  readonly youtube: Maybe<Scalars['String']>;
 };
 
 type TalksYamlConnection = {
@@ -3427,6 +3429,7 @@ type TalksYamlFieldSelector = {
   readonly title: InputMaybe<FieldSelectorEnum>;
   readonly titleJa: InputMaybe<FieldSelectorEnum>;
   readonly uuid: InputMaybe<FieldSelectorEnum>;
+  readonly youtube: InputMaybe<FieldSelectorEnum>;
 };
 
 type TalksYamlFilterInput = {
@@ -3451,6 +3454,7 @@ type TalksYamlFilterInput = {
   readonly title: InputMaybe<StringQueryOperatorInput>;
   readonly titleJa: InputMaybe<StringQueryOperatorInput>;
   readonly uuid: InputMaybe<StringQueryOperatorInput>;
+  readonly youtube: InputMaybe<StringQueryOperatorInput>;
 };
 
 type TalksYamlFilterListInput = {
@@ -3520,6 +3524,7 @@ type TalksYamlSortInput = {
   readonly title: InputMaybe<SortOrderEnum>;
   readonly titleJa: InputMaybe<SortOrderEnum>;
   readonly uuid: InputMaybe<SortOrderEnum>;
+  readonly youtube: InputMaybe<SortOrderEnum>;
 };
 
 type TransformOptions = {

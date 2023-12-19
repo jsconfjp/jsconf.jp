@@ -17,6 +17,7 @@ export type TalkType = {
   room: "A" | "B"
   slidesEn: string
   slidesJa: string
+  youtube: string
 }
 
 export type SpeakerType = {

@@ -201,6 +201,27 @@ const Slides = ({ session }: SlidesProps) => {
   )
 }
 
+type YoutubeProps = {
+  session: TalkType
+}
+const Youtube = ({ session: { youtube } }: YoutubeProps) => {
+  if (!youtube) return <></>
+  const [_, id] = (/watch\?v=(.*)$/g).exec(youtube) || []
+  if (!id) return <></>
+  return (
+    <iframe
+      style={{maxWidth: '100%'}}
+      width="560"
+      height="315"
+      src={`https://www.youtube.com/embed/${id}`}
+      title="YouTube video player"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    />
+  )
+}
+
 export default function Speaker(props: Props) {
   const { t, i18n } = useTranslation()
   const {
@@ -289,6 +310,7 @@ export default function Speaker(props: Props) {
           <Tags>{langTags}</Tags>
           <Markdown>{enOrJa(i18n)(description, descriptionJa)}</Markdown>
           <Slides session={talk} />
+          <Youtube session={talk} />
         </TalkBox>
       </ResponsiveBox>
     </Layout>
