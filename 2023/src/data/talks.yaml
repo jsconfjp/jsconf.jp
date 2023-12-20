@@ -38,6 +38,7 @@
   speakerIDs:
     - anirudh-sharma
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=N5hczoxUzMU
 - uuid: aileen-villanueva-lecuona-1
   date: day1
   startsAt: "13:00"
@@ -63,6 +64,7 @@
   speakerIDs:
     - aileen-villanueva-lecuona
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=rj62gsG-Tj4
 - uuid: akfm-sato-1
   date: day1
   startsAt: "14:10"
@@ -75,6 +77,7 @@
   speakerIDs:
     - akfm-sato
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=fOyQ7A8cy4k
 - uuid: aakansha-1
   date: day1
   startsAt: "14:10"
@@ -97,6 +100,7 @@
   speakerIDs:
     - aakansha
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=Xd2kmqyMwj4
 - uuid: ankur-datta-1
   date: day1
   startsAt: "17:10"
@@ -151,6 +155,7 @@
   speakerIDs:
     - ankur-datta
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=7uD6_n5w-uY
 - uuid: azukiazusa-1
   date: day1
   startsAt: "19:30"
@@ -179,6 +184,7 @@
   speakerIDs:
     - azukiazusa
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=gaiCvYdVX3s
 - uuid: baseballyama-1
   date: day1
   startsAt: "11:25"
@@ -225,6 +231,7 @@
   speakerIDs:
     - baseballyama
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=zYJAfTHrojE
 - uuid: christoph-nakazawa-1
   date: day1
   startsAt: "13:30"
@@ -240,6 +247,7 @@
   speakerIDs:
     - christoph-nakazawa
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=2cOxefuzuls
 - uuid: canalun-1
   date: day1
   startsAt: "16:00"
@@ -304,6 +312,7 @@
   speakerIDs:
     - canalun
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=MK0leZt1N30
 - uuid: day1-break-A-10:00
   startsAt: "10:00"
   endsAt: "10:30"
@@ -359,6 +368,7 @@
   speakerIDs:
     - daiki-nishikawa
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=aJsxEL2z8ds
 - uuid: day1-break-A-11:55
   startsAt: "11:55"
   endsAt: "13:00"
@@ -452,6 +462,7 @@
   speakerIDs:
     - himeno-kosei
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=DmUDI1BYZiE
 - uuid: hajime-mugishima-1
   date: day1
   startsAt: "14:40"
@@ -475,6 +486,7 @@
   speakerIDs:
     - hajime-mugishima
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=k66t6iJSLaE
 - uuid: josh-goldberg-1
   date: day1
   startsAt: "15:30"
@@ -517,6 +529,7 @@
   speakerIDs:
     - josh-goldberg
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=9ZBkN1ciLrU
 - uuid: jon-zhang-1
   date: day1
   startsAt: "16:00"
@@ -563,6 +576,7 @@
   speakerIDs:
     - jon-zhang
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=9pOyzjHSQD0
 - uuid: kenneth-rohde-christiansen-1
   date: day1
   startsAt: "14:10"
@@ -590,6 +604,7 @@
   sponsorIDs: []
   slidesEn: >-
     https://docs.google.com/presentation/d/1kk8ooZ8Ejx7puPNNRKV6OH91bYvn1R-9/edit?usp=sharing&ouid=111176479737822035744&rtpof=true&sd=true
+  youtube: https://www.youtube.com/watch?v=87vEbZXFG30
 - uuid: kian-jamali-1
   date: day1
   startsAt: "14:40"
@@ -609,6 +624,7 @@
   speakerIDs:
     - kian-jamali
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=X7czn28EzZo
 - uuid: koji-ota-1
   date: day1
   startsAt: "16:40"
@@ -631,9 +647,10 @@
     - koji-ota
   sponsorIDs: []
   slidesEn: >-
-    https://www.dropbox.com/scl/fi/jze9f5yu8doxyiwzvcpzh/On-Browser-Advertisement-Auction-using-PrivacySandboxAPI-en.pdf?rlkey=ebpn5hcms3sy55jmrym01f137&dl=0
+    https://speakerdeck.com/kojiota/on-browser-advertisement-auction-using-privacysandboxapi
   slidesJa: >-
-    https://www.dropbox.com/scl/fi/go55bumm2zqoyx58ms1a2/On-Browser-Advertisement-Auction-using-PrivacySandboxAPI-ja.pdf?rlkey=i0wf0vjkolg27cn7h80gwqlss&dl=0
+    https://speakerdeck.com/kojiota/privacysandboxapiwoshi-tutaburauzashang-denoguang-gao-okusiyon
+  youtube: https://www.youtube.com/watch?v=VNYsJLMLA8U
 - uuid: kkeeth-1
   date: day1
   startsAt: "16:40"
@@ -649,6 +666,7 @@
   speakerIDs:
     - kkeeth
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=bD-etQwyL4Y
 - uuid: kateryna-porshnieva-1
   date: day1
   startsAt: "17:10"
@@ -673,6 +691,7 @@
     - kateryna-porshnieva
   sponsorIDs: []
   slidesEn: https://bit.ly/46ptcFM
+  youtube: https://www.youtube.com/watch?v=NdqsiUUV8hk
 - uuid: luca-mugnaini-1
   date: day1
   startsAt: "19:10"
@@ -691,6 +710,7 @@
   speakerIDs:
     - luca-mugnaini
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=l_-5jsJrR2o
 - uuid: mizchi-1
   date: day1
   startsAt: "13:00"
@@ -706,6 +726,7 @@
   speakerIDs:
     - mizchi
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=mQonm2X0AAc
 - uuid: masaki-suzuki-1
   date: day1
   startsAt: "16:00"
@@ -735,6 +756,7 @@
   speakerIDs:
     - masaki-suzuki
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=_As6HIiURKU
 - uuid: peter-eijgermans-1
   date: day1
   startsAt: "13:00"
@@ -780,6 +802,7 @@
   sponsorIDs: []
   slidesEn: >-
     https://docs.google.com/presentation/d/1XmnkwTXcjUcAD40x-F658EnGrjulJF1B/edit?usp=sharing&ouid=105236729432728057097&rtpof=true&sd=true
+  youtube: https://www.youtube.com/watch?v=XEioyYxGaX4
 - uuid: poteboy-1
   date: day1
   startsAt: "19:20"
@@ -797,6 +820,7 @@
   speakerIDs:
     - poteboy
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=FGvVg09dFs0
 - uuid: ryusei-sajiki-1
   date: day1
   startsAt: "17:10"
@@ -825,6 +849,7 @@
   speakerIDs:
     - ryusei-sajiki
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=F7mLZlix4WU
 - uuid: sosuke-suzuki-1
   date: day1
   startsAt: "15:30"
@@ -852,6 +877,7 @@
   speakerIDs:
     - sosuke-suzuki
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=0tv8qwzZJts
 - uuid: takuto-wada-1
   date: day1
   startsAt: "19:00"
@@ -866,6 +892,7 @@
   speakerIDs:
     - takuto-wada
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=GqjlTiQSDDc
 - uuid: vasilika-klimova-1
   date: day1
   startsAt: "16:40"
@@ -884,6 +911,7 @@
   speakerIDs:
     - vasilika-klimova
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=Wa4uJQci1u8
 - uuid: wakamsha-1
   date: day1
   startsAt: "13:30"
@@ -898,6 +926,11 @@
   speakerIDs:
     - wakamsha
   sponsorIDs: []
+  slidesEn: >-
+    https://speakerdeck.com/wakamsha/hurontoendoriakitekutiyaringutokai-fa-timunosukirutoransuhuaniokeru9keyue-jian-nofen-dou-ji
+  slidesJa: >-
+    https://speakerdeck.com/wakamsha/hurontoendoriakitekutiyaringutokai-fa-timunosukirutoransuhuaniokeru9keyue-jian-nofen-dou-ji
+  youtube: https://www.youtube.com/watch?v=5hNpRc6-lHw
 - uuid: workshop-auth0
   date: day1
   startsAt: "14:40"
@@ -912,6 +945,7 @@
   speakerIDs: []
   sponsorIDs:
     - auth0
+  youtube: https://www.youtube.com/watch?v=wH22I6wAEPo
 - uuid: workshop-helpfeel
   date: day1
   startsAt: "15:30"
@@ -932,6 +966,7 @@
   speakerIDs: []
   sponsorIDs:
     - helpfeel
+  youtube: https://www.youtube.com/watch?v=wQJEGMFSbOU
 - uuid: workshop-ubie
   date: day1
   startsAt: "16:00"
@@ -947,6 +982,7 @@
   speakerIDs: []
   sponsorIDs:
     - ubie
+  youtube: https://www.youtube.com/watch?v=BIH1twXi57U
 - uuid: workshop-kaonavi
   date: day1
   startsAt: "16:40"
@@ -962,6 +998,7 @@
   speakerIDs: []
   sponsorIDs:
     - kaonavi
+  youtube: https://www.youtube.com/watch?v=w_9huLNyGK0
 - uuid: workshop-wantedly
   date: day1
   startsAt: "17:10"
@@ -976,6 +1013,7 @@
   speakerIDs: []
   sponsorIDs:
     - wantedly
+  youtube: https://www.youtube.com/watch?v=us5W0Z3Ltpo
 - uuid: yulia-startsev-1
   date: day1
   startsAt: "10:45"
@@ -995,6 +1033,7 @@
   sponsorIDs: []
   slidesEn: >-
     https://docs.google.com/presentation/d/11MzrGYRpmqSwiEQJUm8Nn6KUcwlTw9iTYEf7RZLlG2A/edit?usp=sharing
+  youtube: https://www.youtube.com/watch?v=kEeSgRya-aw
 - uuid: yonatan-mevorach-1
   date: day1
   startsAt: "14:40"
@@ -1023,6 +1062,7 @@
   sponsorIDs: []
   slidesEn: >-
     https://noti.st/cowchimp/ZQ91P1/mastering-cryptography-fundamentals-with-nodes-crypto-module
+  youtube: https://www.youtube.com/watch?v=bhyPIQSSMVI
 - uuid: yusuke-wada-1
   date: day1
   startsAt: "15:30"
@@ -1044,6 +1084,7 @@
   speakerIDs:
     - yusuke-wada
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=sP7SBWsHSDE
 - uuid: yamanoku-1
   date: day1
   startsAt: "19:40"
@@ -1059,3 +1100,4 @@
   speakerIDs:
     - yamanoku
   sponsorIDs: []
+  youtube: https://www.youtube.com/watch?v=NYq68T1ZL3U

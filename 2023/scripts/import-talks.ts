@@ -35,6 +35,7 @@ type PresentationRow = {
   "slides-ja": string
   "description-ja": string
   "slides-language": string
+  youtube: string
 }
 type SponsorRow = {
   uuid: string
@@ -47,6 +48,7 @@ type SponsorRow = {
   "description-ja": string
   "spoken-language": string
   "slides-language": string
+  youtube: string
 }
 type TimetableRow = {
   start: string
@@ -343,6 +345,7 @@ async function loadImage(speaker: string, imageUrl: string): Promise<string> {
           "slides-en" in talk ? talk["slides-en"] || undefined : undefined,
         slidesJa:
           "slides-ja" in talk ? talk["slides-ja"] || undefined : undefined,
+        youtube: todoToEmpty(talk.youtube),
       }
     })
     .filter(Boolean)
