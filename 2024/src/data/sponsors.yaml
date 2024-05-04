@@ -1,0 +1,7 @@
+- uuid: yyy
+  ready: false
+  name: Example
+  url: https://example.com/
+  grade: premium
+  logoUrl: /2024/sponsors/xxx.png
+  prText: ""

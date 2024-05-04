@@ -1,0 +1,16 @@
+- uuid: xxx
+  name: First Last
+  nameReading: ファースト
+  pronoun: they
+  featured: false
+  presentations:
+    - xxx-1
+  biography: >-
+    information
+  biographyJa: >-
+    information
+  location: on-site
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""

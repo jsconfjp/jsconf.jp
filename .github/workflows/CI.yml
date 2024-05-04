@@ -3,25 +3,25 @@ name: CI
 on: [pull_request]
 
 jobs:
-  build_2023:
+  build_2024:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: 2023/package-lock.json
-      - run: cd 2023 && npm ci --legacy-peer-deps
-      - run: cd 2023 && npm run build -- --prefix-paths
-  test_2023:
+          cache-dependency-path: 2024/package-lock.json
+      - run: cd 2024 && npm ci --legacy-peer-deps
+      - run: cd 2024 && npm run build -- --prefix-paths
+  test_2024:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: 2023/package-lock.json
-      - run: cd 2023 && npm ci --legacy-peer-deps
-      - run: cd 2023 && npm test
+          cache-dependency-path: 2024/package-lock.json
+      - run: cd 2024 && npm ci --legacy-peer-deps
+      - run: cd 2024 && npm test
