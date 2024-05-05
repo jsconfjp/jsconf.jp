@@ -1,6 +1,5 @@
 module.exports = {
   graphqlTypegen: true,
-  assetPrefix: `/2024`,
   pathPrefix: `/2024`,
   siteMetadata: {
     title: `JSConf JP`,
