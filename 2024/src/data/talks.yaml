@@ -1,0 +1,22 @@
+- uuid: xxx-1
+  date: day1
+  startsAt: "11:25"
+  endsAt: "11:55"
+  room: A
+  title: TODO
+  titleJa: TODO
+  presenterName: ""
+  presenterNameReading: ""
+  description: >-
+    todo
+  descriptionJa: >-
+    todo
+  spokenLanguage: en
+  slideLanguage: en
+  slidesEn: ""
+  slidesJa: ""
+  speakerIDs:
+    - xxx
+  sponsorIDs:
+    - yyy
+  youtube: ""
