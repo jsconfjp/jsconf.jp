@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  deploy_2023:
+  deploy_2024:
     runs-on: ubuntu-latest
     permissions:
       pages: write
@@ -15,8 +15,8 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
@@ -26,7 +26,9 @@ jobs:
       - run: mv 2019/public dist/2019
       - run: mv 2021/public dist/2021
       - run: mv 2022/public dist/2022
-      - run: cd 2023 && npm ci --legacy-peer-deps && npm run build -- --prefix-paths && mv public ../dist/2023
+      - run: mv 2023/public dist/2023
+      - run: cd 2024 && npm i && npm run build -- --prefix-paths --verbose && (mv public/2024 ../dist || mkdir ../dist/2024) && cp -r public/* ../dist/2024
+      - run: find dist
       - uses: actions/upload-pages-artifact@v1
         with:
           path: dist

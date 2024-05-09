@@ -1,0 +1,69 @@
+{
+  "name": "jsconfjp-2024",
+  "private": true,
+  "license": "UNLICENSED",
+  "repository": "jsconfjp/jsconf.jp",
+  "author": "Leko <leko.noor@gmail.com>",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yaml,yml}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "pretest": "tsc --noEmit",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{yml,yaml,ts,json}": "prettier"
+  },
+  "dependencies": {
+    "@styled-icons/remix-line": "^10.46.0",
+    "date-fns": "^3.6.0",
+    "gatsby": "^5.13.4",
+    "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-manifest": "^5.13.1",
+    "gatsby-plugin-react-helmet": "^6.13.1",
+    "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-sharp": "^5.13.1",
+    "i18next": "^23.11.3",
+    "i18next-browser-languagedetector": "^7.2.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-headroom": "3.2.1",
+    "react-helmet": "6.1.0",
+    "react-i18next": "^14.1.1",
+    "react-markdown": "^9.0.1"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.4.17",
+    "@types/js-yaml": "^4.0.9",
+    "@types/react-headroom": "^3.2.3",
+    "@types/react-helmet": "^6.1.11",
+    "@types/styled-components": "^5.1.34",
+    "babel-plugin-styled-components": "^2.1.4",
+    "gatsby-plugin-brotli": "2.1.0",
+    "gatsby-plugin-google-analytics": "^5.13.1",
+    "gatsby-plugin-google-fonts": "1.0.1",
+    "gatsby-plugin-offline": "^6.13.2",
+    "gatsby-plugin-sitemap": "^6.13.1",
+    "gatsby-plugin-styled-components": "^6.13.1",
+    "gatsby-plugin-typescript": "^5.13.1",
+    "gatsby-plugin-zopfli": "2.0.0",
+    "gatsby-remark-autolink-headers": "^6.13.1",
+    "gatsby-remark-external-links": "0.0.4",
+    "gatsby-transformer-remark": "^6.13.1",
+    "gatsby-transformer-yaml": "^5.13.1",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "styled-components": "^6.1.9",
+    "typescript": "^5.4.5"
+  }
+}
