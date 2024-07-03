@@ -114,6 +114,7 @@ export default function IndexPage() {
           sponsorFormUrl
           cfpFormUrl
           cfpDeadline
+          enableVenue
         }
       }
       allSponsorsYaml(filter: { ready: { eq: true } }) {
