@@ -20,7 +20,7 @@ export function Map(props: Props) {
     <Iframe
       width={width}
       height={height}
-      src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJxe2InfyLGGARY7lD5QxJ2fg&key=AIzaSyAhtEqpuBA3ChFU30d4A1bSODO-anJ54Vo&language=${i18n.language}`}
+      src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJWSmeUWqMGGAR8liQymoZP50&key=AIzaSyAhtEqpuBA3ChFU30d4A1bSODO-anJ54Vo&language=${i18n.language}`}
       frameBorder="0"
       allowFullScreen
       title={title ?? undefined}

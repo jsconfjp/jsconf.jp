@@ -38,16 +38,16 @@ export const en = {
     buyTickets: "Registration",
     comingSoon: "Coming soon",
     venue: "Venue",
-    "venue.name": "GranTokyo South Tower",
-    "venue.address": "Gran Tokyo South Tower, 1-chōme-9-2 Marunouchi, Chiyoda City, Tokyo 100-0005",
+    "venue.name": "KS Building Kudansakaue",
+    "venue.address": "〒102-0073 1-14-6 Kudankita Chiyoda-ku Tokyo",
     "venue.accessBytrain": "ACCESS BY TRAIN",
     "venue.accessBytrainRoute":
-      "Directly connected to JR Tokyo Station",
+      "1 minute walk from Exit 1 of Kudanshita Station on Tokyo Metro Hanzomon Line, Tokyo Metro Tozai Line or Toei Shinjuku Line",
     "venue.accessByPlane": "ACCESS BY PLANE",
     "venue.accessByNaritaAirport":
-      "Approx. 90 minutes from Narita Airport to JR Tokyo Station",
+      "Approx. 90 minutes from Narita Airport to JR Kudanshita Station",
     "venue.accessByHanedaAirport":
-      "Approx. 50 minutes from Haneda Airport to JR Tokyo Station",
+      "Approx. 50 minutes from Haneda Airport to JR Kudanshita Station",
     "specified-commercial-transactions-act": "Commercial Summary",
     "code-of-conduct": "Code of Conduct",
     moreDetails: "More details",
