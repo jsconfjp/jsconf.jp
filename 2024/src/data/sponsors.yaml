@@ -1,7 +1,136 @@
-- uuid: yyy
+- uuid: hireroo
   ready: false
-  name: Example
-  url: https://example.com/
+  name: 株式会社ハイヤールー
+  url: https://hireroo.io/
   grade: premium
-  logoUrl: /2024/sponsors/xxx.png
-  prText: ""
+  logoUrl: /2024/sponsors/hireroo.png
+  prText: |
+    HireRoo（ハイヤールー） は、エンジニア採用を効率化するコーディンス試験サービスです。
+    幅広い設問が豊富に揃い、職能やレイヤー、測りたいスキルに合わせて最適な試験を作ることができます。
+    さらに英語対応もしており、海外採用にも利用可能です。
+    詳しくはこちらをご覧ください！
+    https://hireroo.io/
+- uuid: earthbrain
+  ready: true
+  name: 株式会社EARTHBRAIN
+  url: https://earthbrain.notion.site/EARTHBRAIN-Tech-3775fb71b41342aebf0aee6848d722bd
+  grade: premium
+  logoUrl: /2024/sponsors/earthbrain.svg
+  prText: EARTHBRAINは、建設現場のデジタル革命で新たな世界を創ることをビジョンに掲げ、2021年に創業したジョイントベンチャーです。建設現場の見える化、施工の最適化のためのプロダクトを複数開発しており、既に世界20カ国以上で利用されています。EARTHBRAINは現在、さまざまな職種のエンジニアを募集しています。建設現場のデジタル革命を通じて、次の10年、20年後の世界を一緒に創っていきませんか。
+- uuid: lycorp
+  ready: true
+  name: LINEヤフー株式会社
+  url: https://www.lycorp.co.jp/ja/technology/
+  grade: premium
+  logoUrl: /2024/sponsors/lycorp.png
+  prText: |
+    LINEヤフー株式会社は、2023年10月に、LINE株式会社やヤフー株式会社などのグループ会社による再編を経て誕生した日本最大級のテックカンパニーです。
+    『「WOW」なライフプラットフォームを創り、日常に「！」を届ける。』をミッションに掲げ、検索・ポータル、eコマース、メッセンジャー、広告など、多様な領域において事業を展開しています。
+- uuid: layerx
+  ready: true
+  name: 株式会社LayerX
+  url: https://layerx.co.jp/
+  grade: premium
+  logoUrl: /2024/sponsors/layerx.svg
+  prText: LayerXは、「すべての経済活動を、デジタル化する。」をミッションに掲げ、SaaS+FinTechを軸にAIを中心としたソフトウェア体験を社会実装するスタートアップです。 法人支出管理サービス「バクラク」を中心に、デジタルネイティブなアセットマネジメント会社を目指す合弁会社「三井物産デジタル・アセットマネジメント」、大規模言語モデル（LLM）関連技術を活用し企業や行政における業務効率化・データ活用を支援する「AI・LLM事業」などを開発・運営しています。
+- uuid: miidas
+  ready: true
+  name: ミイダス株式会社
+  url: https://miidas.jp/
+  grade: premium
+  logoUrl: /2024/sponsors/miidas.png
+  prText: ミイダスは、マッチングをゴールとした従来の人材サービスとは一線を画し、データとテクノロジーを駆使して、人と仕事、人と組織のフィッティングを科学しています。 ミイダスが提唱する客観的・数値的な評価に基づいた採用「アセスメントリクルーティング」が日本の採用・転職の常識を変え、適材適所を見い出します。
+- uuid: helpfeel
+  ready: true
+  name: 株式会社Helpfeel
+  url: https://corp.helpfeel.com/ja/home
+  grade: premium
+  logoUrl: /2024/sponsors/helpfeel.png
+  prText: 株式会社Helpfeelでは、知識を届けるエンタープライズサーチ「Helpfeel」知識を磨き上げるアイディエーションツール「Helpfeel Cosense（旧：Scrapbox）」情報を知識にするメディアキャプチャー「Gyazo」の開発運用を行なっています。エンジニア、プロダクトデザイナー積極募集中です！
+- uuid: recruit
+  ready: false
+  name: 株式会社リクルート
+  url: https://www.recruit.co.jp/
+  grade: sponsor
+  logoUrl: /2024/sponsors/recruit.png
+  prText: 私たちは、個人と企業をつなぎ、より多くの選択肢を提供することで、「まだ、ここにない、出会い。」を実現してきました。いつでもどこでも情報を得られるようになった今だからこそ、より最適な選択肢を提案することで、「まだ、ここにない、出会い。」を、桁違いに速く、驚くほどシンプルに、もっと身近にしていきたいと考えています。
+- uuid: mercari
+  ready: true
+  name: 株式会社メルカリ
+  url: https://about.mercari.com/
+  grade: premium
+  logoUrl: /2024/sponsors/mercari.png
+  prText: |
+    メルカリは「あらゆる価値を循環させ、あらゆる人の可能性を広げる」をミッションに掲げる日本発の企業です。2013年の創業以降、ミッションの達成に向かって挑戦してきたメルカリは今、スタートアップから「世界に通用する企業」へと変化する挑戦の真っ只中にいます。
+    メルカリではソフトウェア開発に携わるすべてのエンジニアを「ソフトウェアエンジニア」と呼びます。バックエンドやフロントエンド、iOSやAndroidなどの垣根を設けず、一人ひとりが専門性を武器に、必要に応じて役割や職域を越境することで、機能の実現に向かうことができると考えています。手段を問わず、プロダクト開発にコミットしたいソフトウェアエンジニアからのご応募をお待ちしています。
+- uuid: kinto-technologies
+  ready: true
+  name: KINTOテクノロジーズ株式会社
+  url: https://www.kinto-technologies.com/
+  grade: premium
+  logoUrl: /2024/sponsors/kinto-technologies.svg
+  prText: KINTOテクノロジーズ株式会社は、トヨタ自動車グループ各社が展開するモビリティサービスやビジネスをテクノロジーで支援するために、2021年4月に創設されたテックカンパニーです。トヨタ自動車グループ内でも唯一の「BtoC・DtoC領域に特化した内製開発組織」であり、世界30ヵ国で展開するグローバルモビリティブランド『KINTO』関連プロダクトや、マルチモーダルモビリティサービス『my route』など、「クルマに乗る人」に焦点を当てた新しいサービスの開発・運用を担当。エンジニアは約350名。全員中途入社で、様々な企業で活躍していたエンジニアが、自分自身の「専門性」を武器に、日々業務にあたっています。
+- uuid: ivry
+  ready: true
+  name: 株式会社IVRy
+  url: https://ivry.jp/company/
+  grade: premium
+  logoUrl: /2024/sponsors/ivry.svg
+  prText: |
+    私たちは、IVR（電話自動応答）を起点として、AI対話システムを開発・運営しています。
+    現在は電話にAIを組み込んだプロダクト、対話型音声AI SaaS「IVRy（アイブリー）」を中心に展開しています。
+    目指すのは、AIやソフトウェアを活用し業務を効率化することで、人が介在する仕事の価値を最大化し、楽しく・豊かに事業活動を行うことができる世界の実現です。
+    IVRyでは、ビジョンである「Work is Fun（働くことは、楽しい）」を実現しながら、世界で使われ、期待されるサービスをともに創る仲間を募集しています。
+    https://ivry-jp.notion.site/IVRy-b30395752c7c4a448f1520576dc55778
+- uuid: hamee
+  ready: true
+  name: Hamee株式会社
+  url: https://hamee.co.jp/recruit/love-odawara
+  grade: sponsor
+  logoUrl: /2024/sponsors/hamee.png
+  prText: |
+    私たちHameeの「Mission」は『By your side, 人を彩るモノづくりと脱炭素の両立』です。
+    Hameeは創業時から、全ての事業においてプロダクトを自分たちで考え、生み出すことにこだわり続けてきました。
+    これからは地球にも寄り添いながら、よりいろどりあふれる世界を目指して、相棒となるプロダクトやサービスを生み出し続けます。
+- uuid: sakura
+  ready: true
+  name: さくらインターネット株式会社
+  url: https://www.sakura.ad.jp/
+  grade: premium
+  logoUrl: /2024/sponsors/sakura.png
+  prText: さくらインターネットは、さくらのクラウドをはじめとするクラウドコンピューティングサービスを、自社運営の国内のデータセンターから提供しています。「『やりたいこと』を『できる』に変える」の企業理念のもと、お客さまのご要望にお応えする多様なサービスを開発し、あらゆる分野に対応するDXソリューションを提案します。
+- uuid: enechain
+  ready: false
+  name: 株式会社enechain
+  url: https://enechain.co.jp/
+  grade: premium
+  logoUrl: /2024/sponsors/enechain.png
+  prText: enechainは、日本最大のエネルギー取引所の運営者として、「Building Energy Markets, Coloring Our Society」というミッションを掲げ、卸電力や環境価値の取引機会を提供しています。複雑な業界に対し「国のインフラを創る」という熱い気持ちを持って向き合い、テクノロジーのパワーを取り入れ業界に圧倒的な変化を起こすことを目指しています。
+- uuid: kubell
+  ready: true
+  name: 株式会社kubell
+  url: https://www.kubell.com/recruit/engineer/
+  grade: sponsor
+  logoUrl: /2024/sponsors/kubell.png
+  prText: 「働くをもっと楽しく、創造的に」をコーポレートミッションとして掲げる株式会社kubell（旧Chatwork株式会社）は、誰もが使いやすく、社外のユーザーとも簡単につながることができる日本最大級のビジネスチャット「Chatwork」を運営しています。また、チャット経由で会計、労務、総務など様々なバックオフィス業務をアウトソースできる「Chatwork アシスタント」などのBPaaSサービスを幅広く展開。ビジネスチャットの会社から、BPaaSで「働く」を変えるプラットフォームを提供する会社へ。2024年7月1日より社名を株式会社kubell（読み：クベル）に変更しました。
+- uuid: medley
+  ready: false
+  name: 株式会社メドレー
+  url: https://www.medley.jp/
+  grade: premium
+  logoUrl: /2024/sponsors/medley.png
+  prText: |
+    メドレーは、「医療ヘルスケアの未来をつくる」ミッションのもと、テクノロジーを活用した事業やプロジェクトを通じて、医療ヘルスケア分野の課題を解決していきます。それにより、病院や行政による「持続可能な医療」の実現と、患者さんやそのご家族にとって「納得できる医療」の実現を目指しています。
+    医療ヘルスケア領域の成果報酬型人材採用システム「ジョブメドレー」、オンライン動画研修サービス「ジョブメドレーアカデミー」、オンライン診療・服薬指導アプリ「CLINICS」、かかりつけ薬局支援システム「Pharms」、クラウド歯科業務支援システム「Dentis」などを運営しています。
+    各プロダクトでフロントエンド開発にTypeScriptを採用しており、生産性向上に寄与しています。エンジニアは得意な技術領域をベースとしつつも、チームでの開発効率を高めるために領域を越えて開発していく体制になっています。
+- uuid: team-lab
+  ready: false
+  name: チームラボ株式会社
+  url: https://www.team-lab.com/
+  grade: sponsor
+  logoUrl: /2024/sponsors/team-lab.png
+  prText: |
+    チームラボは、アート活動を行うArt collective teamLabの基盤であり、法人格である。最新のテクノロジーを活用したソリューション、大規模なシステム開発や、プロダクト、デジタルコンテンツの制作、都市計画や建築空間設計などを行う。
+
+    チームラボのソリューションチームは日本で随一のデジタルプラットフォーム構築・運用の高いノウハウをもった専門家集団です。
+    チームラボが構築運用しているデジタルサービスを合わせると、アプリでは累計1億ダウンロード以上、アクティブなユーザーでは合計3000万ユーザー以上にのぼり、日本社会の様々な場面で生活者の体験を向上し続けています。

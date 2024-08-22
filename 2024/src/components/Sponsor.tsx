@@ -22,6 +22,7 @@ const Img = styled.img`
   width: 100%;
 
   &.premium {
+    padding: 40px;
     width: 780px;
     height: 200px;
 
@@ -40,6 +41,9 @@ const Img = styled.img`
   ${({ theme }) => theme.breakpoints.mobile} {
     padding: 10px;
 
+    &.premium {
+      padding: 20px;
+    }
     &.sponsor {
       width: 100%;
       max-height: 64px;
