@@ -114,7 +114,7 @@
   logoUrl: /2024/sponsors/kubell.png
   prText: 「働くをもっと楽しく、創造的に」をコーポレートミッションとして掲げる株式会社kubell（旧Chatwork株式会社）は、誰もが使いやすく、社外のユーザーとも簡単につながることができる日本最大級のビジネスチャット「Chatwork」を運営しています。また、チャット経由で会計、労務、総務など様々なバックオフィス業務をアウトソースできる「Chatwork アシスタント」などのBPaaSサービスを幅広く展開。ビジネスチャットの会社から、BPaaSで「働く」を変えるプラットフォームを提供する会社へ。2024年7月1日より社名を株式会社kubell（読み：クベル）に変更しました。
 - uuid: medley
-  ready: false
+  ready: true
   name: 株式会社メドレー
   url: https://www.medley.jp/
   grade: premium
