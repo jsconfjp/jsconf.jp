@@ -100,7 +100,7 @@
   logoUrl: /2024/sponsors/sakura.png
   prText: さくらインターネットは、さくらのクラウドをはじめとするクラウドコンピューティングサービスを、自社運営の国内のデータセンターから提供しています。「『やりたいこと』を『できる』に変える」の企業理念のもと、お客さまのご要望にお応えする多様なサービスを開発し、あらゆる分野に対応するDXソリューションを提案します。
 - uuid: enechain
-  ready: false
+  ready: true
   name: 株式会社enechain
   url: https://enechain.co.jp/
   grade: premium
