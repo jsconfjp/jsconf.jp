@@ -133,3 +133,36 @@
     最新のテクノロジーを活用したソリューション、大規模なシステム開発や、プロダクト、デジタルコンテンツの制作、都市計画や建築空間設計などを行っています。 
     チームラボのソリューションチームは日本で随一のデジタルプラットフォーム構築・運用の高いノウハウをもった専門家集団です。
     チームラボが構築運用しているデジタルサービスを合わせると、アプリでは累計1億4000万ダウンロード以上、アクティブなユーザーでは合計3000万ユーザー以上にのぼり、日本社会の様々な場面で生活者の体験を向上し続けています。
+- uuid: plaid
+  ready: false
+  name: 株式会社プレイド
+  url: https://plaid.co.jp/
+  grade: sponsor
+  logoUrl: /2024/sponsors/plaid.png
+  prText: |
+    プレイドは「データによって人の価値を最大化する」をミッションとし、KARTEというプロダクトを開発しています。KARTEはWebサイトやアプリ上でのユーザー行動をリアルタイムに解析し、それぞれのエンドユーザーにとって最適な体験を提供するための「CX（顧客体験）プラットフォーム」です。
+- uuid: cybozu
+  ready: true
+  name: サイボウズ株式会社
+  url: https://cybozu.co.jp
+  grade: sponsor
+  logoUrl: /2024/sponsors/cybozu.png
+  prText: |
+    サイボウズはクラウドベースのグループウェアや業務改善サービスを軸に、社会のチームワーク向上を支援しています。
+    サイボウズではフロントエンドを最高にするメンバーを募集しています！ https://cybozu.co.jp/recruit/entry/
+- uuid: bitkey
+  ready: false
+  name: 株式会社ビットキー
+  url: https://bitkey.co.jp/
+  grade: sponsor
+  logoUrl: /2024/sponsors/bitkey.png
+  prText: |
+    ビットキーは、独自開発のデジタルコネクトプラットフォームを通して、人と「暮らし」や「仕事」の間にある分断を解消するアプリ/SaaSを開発しています。 あらゆるサービスやモノを柔軟につなげることで、体験のアップデートを進めています。
+- uuid: pay
+  ready: true
+  name: PAY株式会社
+  url: https://pay.co.jp/
+  grade: sponsor
+  logoUrl: /2024/sponsors/pay.png
+  prText: |
+    PAY株式会社はシンプルなAPIと豊富なライブラリで、スムーズに決済を組み込むことができるPAY.JPを提供しています。 わかりやすく安い料金体系で、ビジネスを支援します。
