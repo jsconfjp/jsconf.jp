@@ -12,7 +12,7 @@ export const en = {
     siteName: "JSConf JP",
     festivalPeriod: "November 23, 2024",
     description:
-      "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the fourth time event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
+      "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the fifth time event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
     speakers: "Speakers",
     slides: "Slides",
     timetable: "Timetable",
