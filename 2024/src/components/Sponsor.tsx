@@ -60,6 +60,21 @@ export type Props = {
   showPrText: boolean
 }
 
+const urlRegex = /(https?:\/\/[\w/:%#\$&\?\(\)~\.=\+\-]+)/
+const renderText = (text: string) => {
+  const parts = text.split(urlRegex)
+  return parts.map((part, index) => {
+    if (part.match(urlRegex)) {
+      return (
+        <a key={index} href={part} target="_blank" rel="noreferrer">
+          {part}
+        </a>
+      )
+    }
+    return part
+  })
+}
+
 export function Sponsor(props: Props) {
   const { logoUrl, url, grade, name, prText, showPrText } = props
 
@@ -74,7 +89,7 @@ export function Sponsor(props: Props) {
           title={prText}
         />
       </Link>
-      {showPrText ? <Text>{prText}</Text> : null}
+      {showPrText ? <Text>{renderText(prText)}</Text> : null}
     </div>
   )
 }
