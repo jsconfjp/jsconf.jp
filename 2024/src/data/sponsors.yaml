@@ -1,11 +1,11 @@
 - uuid: hireroo
-  ready: false
+  ready: true
   name: 株式会社ハイヤールー
   url: https://hireroo.io/
   grade: premium
   logoUrl: /2024/sponsors/hireroo.png
   prText: |
-    HireRoo（ハイヤールー） は、エンジニア採用を効率化するコーディンス試験サービスです。
+    HireRoo（ハイヤールー） は、エンジニア採用を効率化するコーディング試験サービスです。
     幅広い設問が豊富に揃い、職能やレイヤー、測りたいスキルに合わせて最適な試験を作ることができます。
     さらに英語対応もしており、海外採用にも利用可能です。
     詳しくはこちらをご覧ください！
