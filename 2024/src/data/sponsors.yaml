@@ -134,7 +134,7 @@
     チームラボのソリューションチームは日本で随一のデジタルプラットフォーム構築・運用の高いノウハウをもった専門家集団です。
     チームラボが構築運用しているデジタルサービスを合わせると、アプリでは累計1億4000万ダウンロード以上、アクティブなユーザーでは合計3000万ユーザー以上にのぼり、日本社会の様々な場面で生活者の体験を向上し続けています。
 - uuid: plaid
-  ready: false
+  ready: true
   name: 株式会社プレイド
   url: https://plaid.co.jp/
   grade: sponsor
@@ -151,7 +151,7 @@
     サイボウズはクラウドベースのグループウェアや業務改善サービスを軸に、社会のチームワーク向上を支援しています。
     サイボウズではフロントエンドを最高にするメンバーを募集しています！ https://cybozu.co.jp/recruit/entry/
 - uuid: bitkey
-  ready: false
+  ready: true
   name: 株式会社ビットキー
   url: https://bitkey.co.jp/
   grade: sponsor
