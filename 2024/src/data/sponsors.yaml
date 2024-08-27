@@ -48,11 +48,11 @@
   logoUrl: /2024/sponsors/helpfeel.png
   prText: 株式会社Helpfeelでは、知識を届けるエンタープライズサーチ「Helpfeel」知識を磨き上げるアイディエーションツール「Helpfeel Cosense（旧：Scrapbox）」情報を知識にするメディアキャプチャー「Gyazo」の開発運用を行なっています。エンジニア、プロダクトデザイナー積極募集中です！
 - uuid: recruit
-  ready: false
+  ready: true
   name: 株式会社リクルート
   url: https://www.recruit.co.jp/
   grade: sponsor
-  logoUrl: /2024/sponsors/recruit.png
+  logoUrl: /2024/sponsors/recruit.jpg
   prText: 私たちは、個人と企業をつなぎ、より多くの選択肢を提供することで、「まだ、ここにない、出会い。」を実現してきました。いつでもどこでも情報を得られるようになった今だからこそ、より最適な選択肢を提案することで、「まだ、ここにない、出会い。」を、桁違いに速く、驚くほどシンプルに、もっと身近にしていきたいと考えています。
 - uuid: mercari
   ready: true
