@@ -1,8 +1,7 @@
 export const times = {
   day1: {
-    // TODO: Fix date
-    startsAt: new Date(2023, 10, 19, 10),
-    endsAt: new Date(2023, 10, 19, 21),
+    startsAt: new Date(2024, 10, 23, 9, 30),
+    endsAt: new Date(2024, 10, 23, 20),
   },
 }
 export type Dates = keyof typeof times

@@ -147,8 +147,6 @@ export default function IndexPage() {
             uuid
             title
             titleJa
-            presenterName
-            presenterNameReading
             description
             descriptionJa
             spokenLanguage

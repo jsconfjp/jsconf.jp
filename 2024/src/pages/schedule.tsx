@@ -189,8 +189,6 @@ export default function SchedulePage() {
               description
               descriptionJa
               spokenLanguage
-              presenterName
-              presenterNameReading
               slideLanguage
               speakerIDs
               sponsorIDs

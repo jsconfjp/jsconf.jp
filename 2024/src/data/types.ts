@@ -8,8 +8,6 @@ export type TalkType = {
   slideLanguage: string
   speakerIDs: string[]
   sponsorIDs: string[]
-  presenterName: string | undefined
-  presenterNameReading: string | undefined
   date: "day1"
   startsAt: string
   endsAt: string
@@ -23,6 +21,7 @@ export type TalkType = {
 export type SpeakerType = {
   uuid: string
   name: string
+  nameReading: string
   biography: string
   biographyJa: string
   presentations: string[]
