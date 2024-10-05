@@ -89,18 +89,9 @@ export const SpeakerNames = ({ speakers, byLine }: SpeakerNamesProps) => {
 }
 
 export const EventSpeakers = ({ session: s, byLine }: Props) => {
-  const speakers: EventSpeaker[] = s.sponsors.length
-    ? [
-        {
-          name: s.presenterName!,
-          nameReading: s.presenterNameReading,
-          sponsor: s.sponsors[0].name,
-        },
-      ]
-    : ((s.speakers as EventSpeaker[]) ?? []).concat(
-        ...(s.presenterName
-          ? [{ name: s.presenterName!, nameReading: s.presenterNameReading }]
-          : []),
-      )
+  const speakers: EventSpeaker[] = [
+    ...s.sponsors.map(s => ({name:'', nameReading:'', sponsor:s.name})),
+    ...s.speakers.map(s => ({name:s.name, nameReading:s.nameReading})),
+  ]
   return <SpeakerNames speakers={speakers} byLine={byLine} />
 }

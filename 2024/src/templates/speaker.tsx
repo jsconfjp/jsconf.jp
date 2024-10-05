@@ -237,8 +237,8 @@ export default function Speaker(props: Props) {
     room,
   } = talk
   const speakerNames = speakers.length
-    ? speakers.map(speaker => speaker.name)
-    : talk.presenterName ?? ""
+    ? speakers.map(s => s.name)
+    : sponsors.map(s => s.name)
 
   const location = speakers.length
     ? speakers[0]?.location ?? "on-site"
@@ -292,8 +292,8 @@ export default function Speaker(props: Props) {
                 <SpeakerNames
                   speakers={[
                     {
-                      name: talk.presenterName!,
-                      nameReading: talk.presenterNameReading,
+                      name: '',
+                      nameReading: '',
                       sponsor: sponsor.name,
                     },
                   ]}
