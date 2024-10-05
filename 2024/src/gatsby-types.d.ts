@@ -2168,8 +2168,6 @@ type Query_talksYamlArgs = {
   id: InputMaybe<StringQueryOperatorInput>;
   internal: InputMaybe<InternalFilterInput>;
   parent: InputMaybe<NodeFilterInput>;
-  presenterName: InputMaybe<StringQueryOperatorInput>;
-  presenterNameReading: InputMaybe<StringQueryOperatorInput>;
   room: InputMaybe<StringQueryOperatorInput>;
   slideLanguage: InputMaybe<StringQueryOperatorInput>;
   slidesEn: InputMaybe<StringQueryOperatorInput>;
@@ -3348,8 +3346,6 @@ type TalksYaml = Node & {
   readonly id: Scalars['ID'];
   readonly internal: Internal;
   readonly parent: Maybe<Node>;
-  readonly presenterName: Maybe<Scalars['String']>;
-  readonly presenterNameReading: Maybe<Scalars['String']>;
   readonly room: Maybe<Scalars['String']>;
   readonly slideLanguage: Maybe<Scalars['String']>;
   readonly slidesEn: Maybe<Scalars['String']>;
@@ -3418,8 +3414,6 @@ type TalksYamlFieldSelector = {
   readonly id: InputMaybe<FieldSelectorEnum>;
   readonly internal: InputMaybe<InternalFieldSelector>;
   readonly parent: InputMaybe<NodeFieldSelector>;
-  readonly presenterName: InputMaybe<FieldSelectorEnum>;
-  readonly presenterNameReading: InputMaybe<FieldSelectorEnum>;
   readonly room: InputMaybe<FieldSelectorEnum>;
   readonly slideLanguage: InputMaybe<FieldSelectorEnum>;
   readonly slidesEn: InputMaybe<FieldSelectorEnum>;
@@ -3443,8 +3437,6 @@ type TalksYamlFilterInput = {
   readonly id: InputMaybe<StringQueryOperatorInput>;
   readonly internal: InputMaybe<InternalFilterInput>;
   readonly parent: InputMaybe<NodeFilterInput>;
-  readonly presenterName: InputMaybe<StringQueryOperatorInput>;
-  readonly presenterNameReading: InputMaybe<StringQueryOperatorInput>;
   readonly room: InputMaybe<StringQueryOperatorInput>;
   readonly slideLanguage: InputMaybe<StringQueryOperatorInput>;
   readonly slidesEn: InputMaybe<StringQueryOperatorInput>;
@@ -3513,8 +3505,6 @@ type TalksYamlSortInput = {
   readonly id: InputMaybe<SortOrderEnum>;
   readonly internal: InputMaybe<InternalSortInput>;
   readonly parent: InputMaybe<NodeSortInput>;
-  readonly presenterName: InputMaybe<SortOrderEnum>;
-  readonly presenterNameReading: InputMaybe<SortOrderEnum>;
   readonly room: InputMaybe<SortOrderEnum>;
   readonly slideLanguage: InputMaybe<SortOrderEnum>;
   readonly slidesEn: InputMaybe<SortOrderEnum>;
@@ -3576,7 +3566,7 @@ type SiteTitleQueryQuery = { readonly site: { readonly siteMetadata: { readonly 
 type SpeakersQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type SpeakersQuery = { readonly allSpeakersYaml: { readonly edges: ReadonlyArray<{ readonly node: { readonly uuid: string | null, readonly name: string | null, readonly nameReading: string | null, readonly biography: string | null, readonly biographyJa: string | null, readonly presentations: ReadonlyArray<string | null> | null } }> }, readonly allTalksYaml: { readonly edges: ReadonlyArray<{ readonly node: { readonly uuid: string | null, readonly title: string | null, readonly titleJa: string | null, readonly description: string | null, readonly descriptionJa: string | null, readonly spokenLanguage: string | null, readonly slideLanguage: string | null, readonly presenterName: string | null, readonly presenterNameReading: string | null, readonly speakerIDs: ReadonlyArray<string | null> | null } }> }, readonly allFile: { readonly nodes: ReadonlyArray<{ readonly name: string, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null }> } };
+type SpeakersQuery = { readonly allSpeakersYaml: { readonly edges: ReadonlyArray<{ readonly node: { readonly uuid: string | null, readonly name: string | null, readonly nameReading: string | null, readonly biography: string | null, readonly biographyJa: string | null, readonly presentations: ReadonlyArray<string | null> | null } }> }, readonly allTalksYaml: { readonly edges: ReadonlyArray<{ readonly node: { readonly uuid: string | null, readonly title: string | null, readonly titleJa: string | null, readonly description: string | null, readonly descriptionJa: string | null, readonly spokenLanguage: string | null, readonly slideLanguage: string | null, readonly speakerIDs: ReadonlyArray<string | null> | null } }> }, readonly allFile: { readonly nodes: ReadonlyArray<{ readonly name: string, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null }> } };
 
 type SponsorsQueryVariables = Exact<{ [key: string]: never; }>;
 

@@ -66,7 +66,7 @@ const Name = styled.p`
 export const Speaker = (props: Props) => {
   const { talk, speaker, avatar } = props
   if (!talk) {
-    return <>???</>
+    return null
   }
   const { uuid } = talk
   const { name } = speaker

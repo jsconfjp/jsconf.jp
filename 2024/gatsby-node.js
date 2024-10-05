@@ -56,8 +56,6 @@ exports.createPages = ({ graphql, actions }) => {
                 slidesJa
                 speakerIDs
                 sponsorIDs
-                presenterName
-                presenterNameReading
                 date
                 startsAt
                 endsAt
