@@ -167,8 +167,8 @@
     This talk starts talking about the beginnings of WebAssembly and its contribution to the modern web development as a critical tool to build amazing applications. Later the main topic becomes to explain how this technology can also have a big impact in server-side applications by allowing performant and portable code that can be used across multiple programming languages.
   descriptionJa: >-
     この講演は、WebAssemblyの始まりとその現代のウェブ開発への貢献について、重要なツールとして驚くべきアプリケーションを構築する方法から始まります。その後、話の中心は、この技術がどのようにしてサーバーサイドのアプリケーションにも大きな影響を与えるかに移ります。WebAssemblyにより、複数のプログラミング言語で使用できる高性能で移植可能なコードが可能になり、サーバーサイドでも大きな利便性を提供できる点が強調されます。
-  spokenLanguage: null
-  slideLanguage: null
+  spokenLanguage: en
+  slideLanguage: en
   slidesEn: ""
   slidesJa: ""
   speakerIDs:
@@ -420,8 +420,8 @@
     todo
   descriptionJa: >-
     todo
-  spokenLanguage: en
-  slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -444,8 +444,8 @@
     todo
   descriptionJa: >-
     todo
-  spokenLanguage: en
-  slideLanguage: en
+  spokenLanguage: ''
+  slideLanguage: ''
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -988,8 +988,8 @@
     近年、React や Elm の台頭により ""関数型プログラミング"" の考え方は身近なものとなり、『Domain Modeling Made Functional』の邦訳版出版なども相まって、関心度はさらに高まっているように思います。
     
     この LT では、関数型プログラミングの各手法を JavaScript / TypeScript 開発へ適用するにあたって、陥りがちな困難をご紹介します。
-  spokenLanguage: null
-  slideLanguage: null
+  spokenLanguage: ja
+  slideLanguage: en
   slidesEn: ""
   slidesJa: ""
   speakerIDs:
@@ -1284,8 +1284,8 @@
   titleJa: 'ESLintのカスタムルールで治安維持活動をする'
   description: ''
   descriptionJa: ''
-  spokenLanguage: en
-  slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1302,8 +1302,8 @@
   titleJa: '@effect/schemaによる型安全な軽量DDDの実践'
   description: ''
   descriptionJa: ''
-  spokenLanguage: en
-  slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1320,8 +1320,8 @@
   titleJa: '未定'
   description: ''
   descriptionJa: ''
-  # spokenLanguage: en
-  # slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1340,8 +1340,8 @@
     todo
   descriptionJa: >-
     todo
-  # spokenLanguage: en
-  # slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1358,8 +1358,8 @@
   titleJa: 'Yahoo! JAPANトップページにおけるマイクロフロントエンド - 大規模組織におけるFE開発を加速させるには'
   description: ''
   descriptionJa: ''
-  # spokenLanguage: en
-  # slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1376,8 +1376,8 @@
   titleJa: '電話を切らさない技術：電話自動応答サービスを支えるフロントエンド'
   description: ''
   descriptionJa: ''
-  # spokenLanguage: en
-  # slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1394,8 +1394,8 @@
   titleJa: 'Cosenseのフロントエンドでのパフォーマンスチューニング'
   description: ''
   descriptionJa: ''
-  # spokenLanguage: en
-  # slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1412,8 +1412,8 @@
   titleJa: '静的解析を活用したi18対応'
   description: ''
   descriptionJa: ''
-  # spokenLanguage: en
-  # slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1430,8 +1430,8 @@
   titleJa: 'クルマのサブスクサービスをNext.jsで内製化した経験とその1年後（仮）'
   description: ''
   descriptionJa: ''
-  # spokenLanguage: en
-  # slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1448,8 +1448,8 @@
   titleJa: '未定'
   description: ''
   descriptionJa: ''
-  # spokenLanguage: en
-  # slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
