@@ -184,6 +184,7 @@ export default function SchedulePage() {
           edges {
             node {
               uuid
+              kind
               title
               titleJa
               description
@@ -228,6 +229,31 @@ export default function SchedulePage() {
     window.scrollTo({ top })
   }, [])
 
+  function getSessionName(talk: TalkType) {
+    switch (talk.kind) {
+      case 'OPEN': {
+        return i18n.t('talk.open')
+      }
+      case 'OPENING_TALK': {
+        return i18n.t('talk.opening talk')
+      }
+      case 'BREAK': {
+        return i18n.t('talk.Break')
+      }
+      case 'CLOSING_TALK': {
+        return i18n.t('talk.closing talk')
+      }
+      case 'AFTER_PARTY': {
+        return i18n.t('talk.party')
+      }
+      case 'TALK': {
+        return enOrJa(talk.title, talk.titleJa) || "TBA"
+      }
+      default:
+        throw new Error(`Unrecognized kind: ${talk.kind}`)
+    }
+  }
+
   return (
     <Layout>
       <SEO title={t("schedule")} description={t("schedule.description")} />
@@ -257,11 +283,6 @@ export default function SchedulePage() {
                     ? "on-site"
                     : s.speakers[0]?.location ?? "on-site"
 
-                  const tKey = `talk.${s.title}`
-                  const title = i18n.exists(tKey)
-                    ? t(tKey)
-                    : enOrJa(s.title, s.titleJa) || "TBA"
-
                   return (
                     <Area
                       // @ts-expect-error
@@ -271,7 +292,7 @@ export default function SchedulePage() {
                           e.preventDefault()
                         }
                       }}
-                      key={s.room + s.uuid}
+                      key={s.room + s.startsAt + s.endsAt}
                       track={s.room}
                       startsAt={s.startsAt}
                       endsAt={s.endsAt}
@@ -280,8 +301,8 @@ export default function SchedulePage() {
                       <AreaTitle>
                         <EventTime session={s} />
                       </AreaTitle>
-                      <Text>{title}</Text>
-                      <EventSpeakers session={s} byLine="by" />
+                      <Text>{getSessionName(s)}</Text>
+                      <EventSpeakers session={s} />
 
                       <AreaFooter>
                         <Tags>

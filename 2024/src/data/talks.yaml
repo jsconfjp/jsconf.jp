@@ -1,21 +1,50 @@
-- uuid: day1-open
-  date: day1
+# Properties common to all types:
+# - kind: One of OPEN, OPENING_TALK, TALK, BREAK, CLOSING_TALK, AFTER_PARTY
+# 
+# Properties that need to be defined by the user:
+# - uuid: You can set any value you like, but it's better to set the UUID of the speaker.
+#   - If all the titles are in English, you can convert them to kebab cases and use them as UUIDs,
+#     but since there are also Japanese titles, this is not suitable for URLs.
+# - date: Depends on the number of days the event is held, i.e. `day1`, `day2`, etc.
+#   - If the event is held for only one day, it will all be `day1`.
+#   - @see src/util/misc.ts
+# - startsAt, endsAt: Zero-filled `HH:MM` format
+# - room: A, B, C, ..., Depends on how many tracks we have.
+#   - @see src/util/misc.ts
+# - speakerIDs: UUID list of speakers in charge of the talk
+#   - For CFP-based talks, there should be at least one speaker.
+# - sponsorIDs: UUIDs list of sponsors in charge of the talk
+#   - In the case of a talk by a sponsor, there should be at least one sponsor.
+# 
+# Properties that can be copied and pasted from the CFP:
+# - title
+# - titleJa
+# - description
+# - descriptionJa
+# - spokenLanguage
+# - slideLanguage
+# 
+# Properties required for archiving after the event has been held
+# - slidesEn, slidesJa: URL of the presentation materials
+# - youtube: URL of the YouTube recordings
+
+- date: day1
   startsAt: "09:30"
   endsAt: "10:00"
   room: A
-  title: open
-- uuid: day1-opening-talk
-  date: day1
+  kind: OPEN
+- date: day1
   startsAt: "10:00"
   endsAt: "10:10"
   room: A
-  title: opening talk
+  kind: OPENING_TALK
   youtube: ""
 - uuid: sahil-khokhar
   date: day1
   startsAt: "10:10"
   endsAt: "10:20"
   room: A
+  kind: TALK
   title: 'LT: Connecting the dots – Web Accessibility through Internationalization and Localization'
   titleJa: 'LT: Connecting the dots – Web Accessibility through Internationalization and Localization'
   description: >-
@@ -64,6 +93,7 @@
   startsAt: "10:20"
   endsAt: "10:30"
   room: A
+  kind: TALK
   title: 'LT: Web can be fun!'
   titleJa: 'LT: Web can be fun!'
   description: >-
@@ -77,17 +107,17 @@
   speakerIDs:
     - phumrapee-limpianchop
   youtube: ""
-- uuid: day1-break-10:30
-  date: day1
+- date: day1
   startsAt: "10:30"
   endsAt: "10:40"
   room: A
-  title: Break
+  kind: BREAK
 - uuid: csaba-tamas
   date: day1
   startsAt: "10:40"
   endsAt: "10:50"
   room: A
+  kind: TALK
   title: 'LT: Stay Fit, Code Better: An Sportsman’s 10 practical Advice for JavaScript Developers'
   titleJa: 'LT: Stay Fit, Code Better: An Sportsman’s 10 practical Advice for JavaScript Developers'
   description: >-
@@ -106,6 +136,7 @@
   startsAt: "10:50"
   endsAt: "11:00"
   room: A
+  kind: TALK
   title: 'LT: Building a Creative Coding Library for Fun and Learning'
   titleJa: 'LT: Building a Creative Coding Library for Fun and Learning'
   description: >-
@@ -119,25 +150,25 @@
   speakerIDs:
     - anushka-trivedi
   youtube: ""
-- uuid: day1-break-11:00
-  date: day1
+- date: day1
   startsAt: "11:00"
   endsAt: "11:10"
   room: A
-  title: Break
+  kind: BREAK
 - uuid: chris-fuentes
   date: day1
   startsAt: "11:10"
   endsAt: "11:40"
   room: A
+  kind: TALK
   title: 'WebAssembly Unleashed: Powering Server-Side Applications'
   titleJa: 'WebAssembly Unleashed: Powering Server-Side Applications'
   description: >-
     This talk starts talking about the beginnings of WebAssembly and its contribution to the modern web development as a critical tool to build amazing applications. Later the main topic becomes to explain how this technology can also have a big impact in server-side applications by allowing performant and portable code that can be used across multiple programming languages.
   descriptionJa: >-
     この講演は、WebAssemblyの始まりとその現代のウェブ開発への貢献について、重要なツールとして驚くべきアプリケーションを構築する方法から始まります。その後、話の中心は、この技術がどのようにしてサーバーサイドのアプリケーションにも大きな影響を与えるかに移ります。WebAssemblyにより、複数のプログラミング言語で使用できる高性能で移植可能なコードが可能になり、サーバーサイドでも大きな利便性を提供できる点が強調されます。
-  spokenLanguage: null
-  slideLanguage: null
+  spokenLanguage: en
+  slideLanguage: en
   slidesEn: ""
   slidesJa: ""
   speakerIDs:
@@ -148,6 +179,7 @@
   startsAt: "11:40"
   endsAt: "12:10"
   room: A
+  kind: TALK
   title: Creating Fast-Feeling Web Apps
   titleJa: Creating Fast-Feeling Web Apps
   description: >-
@@ -163,17 +195,17 @@
   speakerIDs:
     - trung-vo
   youtube: ""
-- uuid: day1-break-12:10
-  date: day1
+- date: day1
   startsAt: "12:10"
   endsAt: "13:10"
   room: A
-  title: Break
+  kind: BREAK
 - uuid: aileen-villanueva-lecuona
   date: day1
   startsAt: "13:10"
   endsAt: "13:40"
   room: A
+  kind: TALK
   title: Building AI apps with JavaScript
   titleJa: Building AI apps with JavaScript
   description: >-
@@ -208,6 +240,7 @@
   startsAt: "13:40"
   endsAt: "14:10"
   room: A
+  kind: TALK
   title: Why Build a Secure Supply Chain Management ?
   titleJa: Why Build a Secure Supply Chain Management ?
   description: >-
@@ -250,17 +283,17 @@
   speakerIDs:
     - vj
   youtube: ""
-- uuid: day1-break-14:10
-  date: day1
+- date: day1
   startsAt: "14:10"
   endsAt: "14:20"
   room: A
-  title: Break
+  kind: BREAK
 - uuid: motoki-shakagori
   date: day1
   startsAt: "14:20"
   endsAt: "14:50"
   room: A
+  kind: TALK
   title: Cloudflare Workers in Production
   titleJa: Cloudflare Workers in Production
   description: >-
@@ -283,6 +316,7 @@
   startsAt: "14:50"
   endsAt: "15:20"
   room: A
+  kind: TALK
   title: Encrypting data in the Browser - Exploring Web Crypto APIs
   titleJa: Encrypting data in the Browser - Exploring Web Crypto APIs
   description: >-
@@ -324,17 +358,17 @@
   speakerIDs:
     - aakansha-doshi
   youtube: ""
-- uuid: day1-break-15:20
-  date: day1
+- date: day1
   startsAt: "15:20"
   endsAt: "15:30"
   room: A
-  title: Break
+  kind: BREAK
 - uuid: mariko-kosaka
   date: day1
   startsAt: "15:30"
   endsAt: "16:00"
   room: A
+  kind: TALK
   title: Web標準の進化を止めない！Baselineというブラウザサポートの考え方
   titleJa: Web標準の進化を止めない！Baselineというブラウザサポートの考え方
   description: >-
@@ -355,6 +389,7 @@
   startsAt: "16:00"
   endsAt: "16:30"
   room: A
+  kind: TALK
   title: Moving Three.js from WebGL to WebGPU
   titleJa: Moving Three.js from WebGL to WebGPU
   description: >-
@@ -368,49 +403,49 @@
   speakerIDs:
     - mrdoob
   youtube: ""
-- uuid: day1-break-16:30
-  date: day1
+- date: day1
   startsAt: "16:30"
   endsAt: "16:40"
   room: A
-  title: Break
+  kind: BREAK
 - uuid: day1-
   date: day1
   startsAt: "16:40"
   endsAt: "17:40"
   room: A
+  kind: TALK
   title: Sponsor LT x 12
   titleJa: Sponsor LT x 12
   description: >-
     todo
   descriptionJa: >-
     todo
-  spokenLanguage: en
-  slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
   sponsorIDs: [] # TODO: Add sponsor IDs
   youtube: ""
-- uuid: day1-break-17:40
-  date: day1
+- date: day1
   startsAt: "17:40"
   endsAt: "17:50"
   room: A
-  title: Break
+  kind: BREAK
 - uuid: day1-
   date: day1
   startsAt: "17:50"
   endsAt: "18:30"
   room: A
+  kind: TALK
   title: キーノート (TBD)
   titleJa: キーノート (TBD)
   description: >-
     todo
   descriptionJa: >-
     todo
-  spokenLanguage: en
-  slideLanguage: en
+  spokenLanguage: ''
+  slideLanguage: ''
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -421,19 +456,20 @@
   startsAt: "18:30"
   endsAt: "18:40"
   room: A
-  title: closing talk
+  kind: CLOSING_TALK
   youtube: ""
 - uuid: day1-
   date: day1
   startsAt: "18:40"
   endsAt: "20:00"
   room: A
-  title: party
+  kind: AFTER_PARTY
 - uuid: saku
   date: day1
   startsAt: "10:10"
   endsAt: "10:20"
   room: B
+  kind: TALK
   title: 'LT: Promise.try: シンプルで強力な同期/非同期統合の未来 - 実装の深層とPromiseの進化'
   titleJa: 'LT: Promise.try: シンプルで強力な同期/非同期統合の未来 - 実装の深層とPromiseの進化'
   description: >-
@@ -464,6 +500,7 @@
   startsAt: "10:20"
   endsAt: "10:30"
   room: B
+  kind: TALK
   title: 'LT: JavaScriptを支えるエコシステム（漫才）'
   titleJa: 'LT: JavaScriptを支えるエコシステム（漫才）'
   description: >-
@@ -507,6 +544,7 @@
   startsAt: "10:40"
   endsAt: "10:50"
   room: B
+  kind: TALK
   title: 'LT: romajip: 日本の住所CSVデータを活用した英語住所変換ライブラリを作った話'
   titleJa: 'LT: romajip: 日本の住所CSVデータを活用した英語住所変換ライブラリを作った話'
   description: >-
@@ -527,6 +565,7 @@
   startsAt: "10:50"
   endsAt: "11:00"
   room: B
+  kind: TALK
   title: 'LT: ステップバイステップで進めるYahoo!知恵袋のフロントエンドリアーキテクト'
   titleJa: 'LT: ステップバイステップで進めるYahoo!知恵袋のフロントエンドリアーキテクト'
   description: >-
@@ -555,6 +594,7 @@
   startsAt: "11:10"
   endsAt: "11:40"
   room: B
+  kind: TALK
   title: React への依存を最小にするフロントエンドの設計
   titleJa: React への依存を最小にするフロントエンドの設計
   description: >-
@@ -589,6 +629,7 @@
   startsAt: "11:40"
   endsAt: "12:10"
   room: B
+  kind: TALK
   title: React CompilerとFine Grained Reactivityと宣言的UIのこれから
   titleJa: React CompilerとFine Grained Reactivityと宣言的UIのこれから
   description: >-
@@ -617,6 +658,7 @@
   startsAt: "13:10"
   endsAt: "13:40"
   room: B
+  kind: TALK
   title: 'Vapor Revolution: Unleashing Vue evolution and Potential with Vapor Mode'
   titleJa: 'Vapor Revolution: Unleashing Vue evolution and Potential with Vapor Mode'
   description: >-
@@ -653,6 +695,7 @@
   startsAt: "13:40"
   endsAt: "14:10"
   room: B
+  kind: TALK
   title: 幸せの形はどれも似ているが、不幸なプロジェクトはそれぞれの形がある
   titleJa: 幸せの形はどれも似ているが、不幸なプロジェクトはそれぞれの形がある
   description: >-
@@ -675,6 +718,7 @@
   startsAt: "14:20"
   endsAt: "14:50"
   room: B
+  kind: TALK
   title: リアルアセットとWebのシームレスな活用のためのパスキー
   titleJa: リアルアセットとWebのシームレスな活用のためのパスキー
   description: >-
@@ -711,6 +755,7 @@
   startsAt: "14:50"
   endsAt: "15:20"
   room: B
+  kind: TALK
   title: JavaScriptのモジュール解決の相互運用性
   titleJa: JavaScriptのモジュール解決の相互運用性
   description: >-
@@ -735,6 +780,7 @@
   startsAt: "15:30"
   endsAt: "16:00"
   room: B
+  kind: TALK
   title: Modular Monolith Monorepo
   titleJa: Modular Monolith Monorepo
   description: >-
@@ -857,6 +903,7 @@
   startsAt: "16:00"
   endsAt: "16:30"
   room: B
+  kind: TALK
   title: JavaScriptのイテレータとイテラブルの概要と課題、未来
   titleJa: JavaScriptのイテレータとイテラブルの概要と課題、未来
   description: >-
@@ -899,6 +946,7 @@
   startsAt: "10:10"
   endsAt: "10:20"
   room: C
+  kind: TALK
   title: 'LT: UI 開発における ヘッドレス UI ライブラリの重要性とデザインシステムへの取り入れ方'
   titleJa: 'LT: UI 開発における ヘッドレス UI ライブラリの重要性とデザインシステムへの取り入れ方'
   description: >-
@@ -917,6 +965,7 @@
   startsAt: "10:20"
   endsAt: "10:30"
   room: C
+  kind: TALK
   title: 'LT: A Tour of Anti-patterns for Functional Programming'
   titleJa: 'LT: A Tour of Anti-patterns for Functional Programming'
   description: >-
@@ -939,8 +988,8 @@
     近年、React や Elm の台頭により ""関数型プログラミング"" の考え方は身近なものとなり、『Domain Modeling Made Functional』の邦訳版出版なども相まって、関心度はさらに高まっているように思います。
     
     この LT では、関数型プログラミングの各手法を JavaScript / TypeScript 開発へ適用するにあたって、陥りがちな困難をご紹介します。
-  spokenLanguage: null
-  slideLanguage: null
+  spokenLanguage: ja
+  slideLanguage: en
   slidesEn: ""
   slidesJa: ""
   speakerIDs:
@@ -951,6 +1000,7 @@
   startsAt: "10:40"
   endsAt: "10:50"
   room: C
+  kind: TALK
   title: 'LT: Storybook との上手な向き合い方を考える'
   titleJa: 'LT: Storybook との上手な向き合い方を考える'
   description: >-
@@ -969,6 +1019,7 @@
   startsAt: "10:50"
   endsAt: "11:00"
   room: C
+  kind: TALK
   title: 'LT: あなたの知らない Function.prototype.toString() の世界'
   titleJa: 'LT: あなたの知らない Function.prototype.toString() の世界'
   description: >-
@@ -1001,6 +1052,7 @@
   startsAt: "11:10"
   endsAt: "11:40"
   room: C
+  kind: TALK
   title: 'You Don’t Know Figma Yet - FigmaをJSでハックする'
   titleJa: 'You Don’t Know Figma Yet - FigmaをJSでハックする'
   description: >-
@@ -1022,6 +1074,7 @@
   startsAt: "11:40"
   endsAt: "12:10"
   room: C
+  kind: TALK
   title: '30 Minutes to Understand All of `RegExp` Syntax'
   titleJa: '30 Minutes to Understand All of `RegExp` Syntax'
   description: >-
@@ -1044,6 +1097,7 @@
   startsAt: "13:10"
   endsAt: "13:40"
   room: C
+  kind: TALK
   title: 'The challenges of web apps: what we’ve solved and what’s next?'
   titleJa: 'The challenges of web apps: what we’ve solved and what’s next?'
   description: >-
@@ -1066,6 +1120,7 @@
   startsAt: "13:40"
   endsAt: "14:10"
   room: C
+  kind: TALK
   title: 'Boost your Test Implementation in Javascript by 10x?'
   titleJa: 'Boost your Test Implementation in Javascript by 10x?'
   description: >-
@@ -1182,6 +1237,7 @@
   startsAt: "14:20"
   endsAt: "14:50"
   room: C
+  kind: TALK
   title: 'LINEヤフーにおけるPrerender技術の導入とその効果'
   titleJa: 'LINEヤフーにおけるPrerender技術の導入とその効果'
   description: >-
@@ -1204,6 +1260,7 @@
   startsAt: "14:50"
   endsAt: "15:20"
   room: C
+  kind: TALK
   title: 'How to automate your murder mystery: immersive games in your home'
   titleJa: 'How to automate your murder mystery: immersive games in your home'
   description: >-
@@ -1222,12 +1279,13 @@
   startsAt: "15:30"
   endsAt: "16:00"
   room: C
+  kind: TALK
   title: 'ESLintのカスタムルールで治安維持活動をする'
   titleJa: 'ESLintのカスタムルールで治安維持活動をする'
   description: ''
   descriptionJa: ''
-  spokenLanguage: en
-  slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1239,12 +1297,13 @@
   startsAt: "16:00"
   endsAt: "16:30"
   room: C
+  kind: TALK
   title: '@effect/schemaによる型安全な軽量DDDの実践'
   titleJa: '@effect/schemaによる型安全な軽量DDDの実践'
   description: ''
   descriptionJa: ''
-  spokenLanguage: en
-  slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1256,12 +1315,13 @@
   startsAt: "11:10"
   endsAt: "11:40"
   room: D
+  kind: TALK
   title: '未定'
   titleJa: '未定'
   description: ''
   descriptionJa: ''
-  spokenLanguage: en
-  slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1273,14 +1333,15 @@
   startsAt: "11:40"
   endsAt: "12:10"
   room: D
+  kind: TALK
   title: '(仮)生成AIでコーディング試験を解いてみよう'
   titleJa: '(仮)生成AIでコーディング試験を解いてみよう'
   description: >-
     todo
   descriptionJa: >-
     todo
-  spokenLanguage: en
-  slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1292,12 +1353,13 @@
   startsAt: "13:10"
   endsAt: "13:40"
   room: D
+  kind: TALK
   title: 'Yahoo! JAPANトップページにおけるマイクロフロントエンド - 大規模組織におけるFE開発を加速させるには'
   titleJa: 'Yahoo! JAPANトップページにおけるマイクロフロントエンド - 大規模組織におけるFE開発を加速させるには'
   description: ''
   descriptionJa: ''
-  spokenLanguage: en
-  slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1309,12 +1371,13 @@
   startsAt: "13:40"
   endsAt: "14:10"
   room: D
+  kind: TALK
   title: '電話を切らさない技術：電話自動応答サービスを支えるフロントエンド'
   titleJa: '電話を切らさない技術：電話自動応答サービスを支えるフロントエンド'
   description: ''
   descriptionJa: ''
-  spokenLanguage: en
-  slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1326,12 +1389,13 @@
   startsAt: "14:20"
   endsAt: "14:50"
   room: D
+  kind: TALK
   title: 'Cosenseのフロントエンドでのパフォーマンスチューニング'
   titleJa: 'Cosenseのフロントエンドでのパフォーマンスチューニング'
   description: ''
   descriptionJa: ''
-  spokenLanguage: en
-  slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1343,12 +1407,13 @@
   startsAt: "14:50"
   endsAt: "15:20"
   room: D
+  kind: TALK
   title: '静的解析を活用したi18対応'
   titleJa: '静的解析を活用したi18対応'
   description: ''
   descriptionJa: ''
-  spokenLanguage: en
-  slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1360,12 +1425,13 @@
   startsAt: "15:30"
   endsAt: "16:00"
   room: D
+  kind: TALK
   title: 'クルマのサブスクサービスをNext.jsで内製化した経験とその1年後（仮）'
   titleJa: 'クルマのサブスクサービスをNext.jsで内製化した経験とその1年後（仮）'
   description: ''
   descriptionJa: ''
-  spokenLanguage: en
-  slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1377,12 +1443,13 @@
   startsAt: "16:00"
   endsAt: "16:30"
   room: D
+  kind: TALK
   title: '未定'
   titleJa: '未定'
   description: ''
   descriptionJa: ''
-  spokenLanguage: en
-  slideLanguage: en
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []

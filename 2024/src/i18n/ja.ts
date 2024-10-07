@@ -11,7 +11,7 @@ export const ja: {
     backToTop: "TOPへ戻る",
     festivalPeriod: "2024/11/23",
     guestSpeakers: "ゲストスピーカー",
-    goToGuests: "スピーカー一覧へ",
+    goToSpeakers: "スピーカー一覧へ",
     tickets: "チケット",
     buyTickets: "参加登録",
     callForSpeakers: "トーク募集",

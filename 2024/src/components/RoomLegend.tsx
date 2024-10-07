@@ -50,8 +50,8 @@ export const Room = ({ room }: RoomProps) => {
 
 export const RoomLegend = () => (
   <Box>
-    {rooms.map(room => (
-      <Room room={room} />
+    {rooms.map((room, i) => (
+      <Room key={i} room={room} />
     ))}
   </Box>
 )

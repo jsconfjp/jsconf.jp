@@ -1,3 +1,32 @@
+# Properties that need to be defined by the user:
+# - uuid: An unique ID for the speaker
+#   - If the CFP has an English name, convert it to kebab case,
+#     if it has a GitHub or X ID, use that, and if it only has Japanese, decide as you see fit.
+#   - If there are multiple speakers, please take the following measures according to the contents of the CFP
+#     A. If they have one profile and one image:
+#       - Please define as a single speaker.
+#       - ex. https://jsconf.jp/2024/talk/tiger-daphne-oakes/
+#     B. If they have multiple profiles or images:
+#       - Please define each speaker with a different UUID, and set multiple speakerIDs in talks.yaml.
+#       - ex. https://jsconf.jp/2024/talk/ecma-boys/
+#       - ex. https://jsconf.jp/2024/talk/hiroki-tani-corey-lee/
+# - featured: true for guest speakers, false for CFPs
+# - presentations: List of UUIDs for talks by the speaker
+# 
+# Properties that can be copied and pasted from the CFP:
+# - name
+# - biography
+# - biographyJa
+# 
+# Properties that are not currently in use:
+# - nameReading
+# - pronoun
+# - location
+# - github
+# - twitter
+# - homepage
+# - mastodon
+
 - uuid: sahil-khokhar
   name: Sahil Khokhar
   nameReading: ''
@@ -34,7 +63,7 @@
   name: Csaba Tamas
   nameReading: ''
   pronoun: ''
-  featured: false
+  featured: true
   presentations:
     - csaba-tamas
   biography: >-
@@ -104,7 +133,7 @@
   name: Aileen Villanueva Lecuona
   nameReading: ''
   pronoun: ''
-  featured: false
+  featured: true
   presentations:
     - aileen-villanueva-lecuona
   biography: >-
@@ -178,7 +207,7 @@
   name: Mariko Kosaka
   nameReading: ''
   pronoun: ''
-  featured: false
+  featured: true
   presentations:
     - mariko-kosaka
   biography: >-
@@ -194,9 +223,9 @@
   name: Mr.doob
   nameReading: ''
   pronoun: ''
-  featured: false
+  featured: true
   presentations:
-    - mr.doob
+    - mrdoob
   biography: >-
     Mr.doob is the creator of Three.js, a widely-used JavaScript library that makes 3D graphics more accessible on the web. His focus has always been on experimenting with new ways to bring creativity and technology together, while contributing to the open-source community. Through Three.js and other projects, he continues to learn, share, and collaborate with developers around the world, helping to push the boundaries of what’s possible on the web.
   biographyJa: >-

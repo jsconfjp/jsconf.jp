@@ -1,3 +1,17 @@
+# Properties and usage:
+# - uuid: An unique ID for the sponsor
+# - name: The sponsor name
+# - prText: The promotion text
+# - grade: `premium` or `sponsor`
+# - ready: (boolean) Whether or not all the information necessary for publishing is available
+#   - If you set this to false, it will be excluded from the build and will not appear on the website.
+#   - This is useful if there are items that need to be confirmed in the published information,  
+#     or if the information is missing in part.
+# - logoUrl: Please place the image file in `/static/sponsors/{uuid}.{ext}`.
+#   - The following file extensions can be used: png, jpg, svg, etc.
+#   - This is because the local development environment and the path are different here,
+#     like /2024, so it cannot be checked for operation. Please check the preview by posting a PR.
+
 - uuid: hireroo
   ready: true
   name: 株式会社ハイヤールー
