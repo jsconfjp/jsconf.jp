@@ -400,8 +400,8 @@
   title: Break
 - uuid: day1-
   date: day1
-  startsAt: "17:20"
-  endsAt: "17:50"
+  startsAt: "17:50"
+  endsAt: "18:30"
   room: A
   title: キーノート (TBD)
   titleJa: キーノート (TBD)
@@ -418,14 +418,14 @@
   youtube: ""
 - uuid: day1-
   date: day1
-  startsAt: "17:50"
-  endsAt: "18:00"
+  startsAt: "18:30"
+  endsAt: "18:40"
   room: A
   title: closing talk
   youtube: ""
 - uuid: day1-
   date: day1
-  startsAt: "18:00"
+  startsAt: "18:40"
   endsAt: "20:00"
   room: A
   title: party
