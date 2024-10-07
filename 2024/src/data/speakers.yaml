@@ -63,7 +63,7 @@
   name: Csaba Tamas
   nameReading: ''
   pronoun: ''
-  featured: false
+  featured: true
   presentations:
     - csaba-tamas
   biography: >-
@@ -133,7 +133,7 @@
   name: Aileen Villanueva Lecuona
   nameReading: ''
   pronoun: ''
-  featured: false
+  featured: true
   presentations:
     - aileen-villanueva-lecuona
   biography: >-
@@ -207,7 +207,7 @@
   name: Mariko Kosaka
   nameReading: ''
   pronoun: ''
-  featured: false
+  featured: true
   presentations:
     - mariko-kosaka
   biography: >-
@@ -223,9 +223,9 @@
   name: Mr.doob
   nameReading: ''
   pronoun: ''
-  featured: false
+  featured: true
   presentations:
-    - mr.doob
+    - mrdoob
   biography: >-
     Mr.doob is the creator of Three.js, a widely-used JavaScript library that makes 3D graphics more accessible on the web. His focus has always been on experimenting with new ways to bring creativity and technology together, while contributing to the open-source community. Through Three.js and other projects, he continues to learn, share, and collaborate with developers around the world, helping to push the boundaries of what’s possible on the web.
   biographyJa: >-

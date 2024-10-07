@@ -205,14 +205,16 @@ export default function IndexPage() {
       available: featuredSpeakers.length,
       render: () => (
         <>
-          <SpeakerList
-            speakers={featuredSpeakers}
-            avatars={avatars}
-            talks={talks}
-          />
+          <div style={{ marginBottom: '1em' }}>
+            <SpeakerList
+              speakers={featuredSpeakers}
+              avatars={avatars}
+              talks={talks}
+            />
+          </div>
           <Centerize>
             <LinkButton color="primary" to="/speakers/">
-              {t("goToGuests")}
+              {t("goToSpeakers")}
             </LinkButton>
           </Centerize>
         </>
