@@ -53,45 +53,35 @@ export const SpeakerName = ({ speaker }: SpeakerNameProps) => (
     </SpeakerText>
     {speaker.sponsor && (
       <SponsorText>
-        {"("}
         {speaker.sponsor}
-        {")"}
       </SponsorText>
     )}
   </>
 )
 
-export interface SpeakerNamesProps {
-  speakers: EventSpeaker[]
-  byLine?: string
-}
-export const SpeakerNames = ({ speakers, byLine }: SpeakerNamesProps) => {
+export const EventSpeakers = ({ session: s }: Props) => {
+  const speakers: EventSpeaker[] = [
+    ...s.sponsors.map(s => ({ name: "", nameReading: "", sponsor: s.name })),
+    ...s.speakers.map(s => ({ name: s.name, nameReading: s.nameReading })),
+  ]
+
+  if (speakers.length === 0) {
+    return null
+  }
+
   return (
     <>
-      {Array.from(
-        (function* () {
-          let first = true
-          for (const speaker of speakers) {
-            if (first) {
-              first = false
-              if (byLine) {
-                yield <ByLineText>{byLine}</ByLineText>
-              }
-            } else {
-              yield <ByLineText>and</ByLineText>
-            }
-            yield <SpeakerName speaker={speaker} />
-          }
-        })(),
+      <ByLineText>by</ByLineText>
+      {speakers.map((s, i) =>
+        i > 0 ? (
+          <React.Fragment key={i}>
+            <ByLineText>and</ByLineText>
+            <SpeakerName speaker={s} />
+          </React.Fragment>
+        ) : (
+          <SpeakerName key={i} speaker={s} />
+        ),
       )}
     </>
   )
-}
-
-export const EventSpeakers = ({ session: s, byLine }: Props) => {
-  const speakers: EventSpeaker[] = [
-    ...s.sponsors.map(s => ({name:'', nameReading:'', sponsor:s.name})),
-    ...s.speakers.map(s => ({name:s.name, nameReading:s.nameReading})),
-  ]
-  return <SpeakerNames speakers={speakers} byLine={byLine} />
 }

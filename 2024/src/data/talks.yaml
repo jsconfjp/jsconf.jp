@@ -1,3 +1,6 @@
+# Properties common to all types:
+# - kind: One of OPEN, OPENING_TALK, TALK, BREAK, CLOSING_TALK, AFTER_PARTY
+# 
 # Properties that need to be defined by the user:
 # - uuid: You can set any value you like, but it's better to set the UUID of the speaker.
 #   - If all the titles are in English, you can convert them to kebab cases and use them as UUIDs,
@@ -8,7 +11,6 @@
 # - startsAt, endsAt: Zero-filled `HH:MM` format
 # - room: A, B, C, ..., Depends on how many tracks we have.
 #   - @see src/util/misc.ts
-# - kind: One of OPEN, OPENING_TALK, TALK, BREAK, CLOSING_TALK, AFTER_PARTY
 # - speakerIDs: UUID list of speakers in charge of the talk
 #   - For CFP-based talks, there should be at least one speaker.
 # - sponsorIDs: UUIDs list of sponsors in charge of the talk
@@ -26,20 +28,16 @@
 # - slidesEn, slidesJa: URL of the presentation materials
 # - youtube: URL of the YouTube recordings
 
-- uuid: day1-open
-  date: day1
+- date: day1
   startsAt: "09:30"
   endsAt: "10:00"
   room: A
   kind: OPEN
-  title: open
-- uuid: day1-opening-talk
-  date: day1
+- date: day1
   startsAt: "10:00"
   endsAt: "10:10"
   room: A
   kind: OPENING_TALK
-  title: opening talk
   youtube: ""
 - uuid: sahil-khokhar
   date: day1
@@ -109,13 +107,11 @@
   speakerIDs:
     - phumrapee-limpianchop
   youtube: ""
-- uuid: day1-break-10:30
-  date: day1
+- date: day1
   startsAt: "10:30"
   endsAt: "10:40"
   room: A
   kind: BREAK
-  title: Break
 - uuid: csaba-tamas
   date: day1
   startsAt: "10:40"
@@ -154,13 +150,11 @@
   speakerIDs:
     - anushka-trivedi
   youtube: ""
-- uuid: day1-break-11:00
-  date: day1
+- date: day1
   startsAt: "11:00"
   endsAt: "11:10"
   room: A
   kind: BREAK
-  title: Break
 - uuid: chris-fuentes
   date: day1
   startsAt: "11:10"
@@ -201,13 +195,11 @@
   speakerIDs:
     - trung-vo
   youtube: ""
-- uuid: day1-break-12:10
-  date: day1
+- date: day1
   startsAt: "12:10"
   endsAt: "13:10"
   room: A
   kind: BREAK
-  title: Break
 - uuid: aileen-villanueva-lecuona
   date: day1
   startsAt: "13:10"
@@ -291,13 +283,11 @@
   speakerIDs:
     - vj
   youtube: ""
-- uuid: day1-break-14:10
-  date: day1
+- date: day1
   startsAt: "14:10"
   endsAt: "14:20"
   room: A
   kind: BREAK
-  title: Break
 - uuid: motoki-shakagori
   date: day1
   startsAt: "14:20"
@@ -368,13 +358,11 @@
   speakerIDs:
     - aakansha-doshi
   youtube: ""
-- uuid: day1-break-15:20
-  date: day1
+- date: day1
   startsAt: "15:20"
   endsAt: "15:30"
   room: A
   kind: BREAK
-  title: Break
 - uuid: mariko-kosaka
   date: day1
   startsAt: "15:30"
@@ -415,13 +403,11 @@
   speakerIDs:
     - mrdoob
   youtube: ""
-- uuid: day1-break-16:30
-  date: day1
+- date: day1
   startsAt: "16:30"
   endsAt: "16:40"
   room: A
   kind: BREAK
-  title: Break
 - uuid: day1-
   date: day1
   startsAt: "16:40"
@@ -441,13 +427,11 @@
   speakerIDs: []
   sponsorIDs: [] # TODO: Add sponsor IDs
   youtube: ""
-- uuid: day1-break-17:40
-  date: day1
+- date: day1
   startsAt: "17:40"
   endsAt: "17:50"
   room: A
   kind: BREAK
-  title: Break
 - uuid: day1-
   date: day1
   startsAt: "17:50"
@@ -473,7 +457,6 @@
   endsAt: "18:40"
   room: A
   kind: CLOSING_TALK
-  title: closing talk
   youtube: ""
 - uuid: day1-
   date: day1
@@ -481,7 +464,6 @@
   endsAt: "20:00"
   room: A
   kind: AFTER_PARTY
-  title: party
 - uuid: saku
   date: day1
   startsAt: "10:10"
@@ -1338,8 +1320,8 @@
   titleJa: '未定'
   description: ''
   descriptionJa: ''
-  spokenLanguage: en
-  slideLanguage: en
+  # spokenLanguage: en
+  # slideLanguage: en
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1358,8 +1340,8 @@
     todo
   descriptionJa: >-
     todo
-  spokenLanguage: en
-  slideLanguage: en
+  # spokenLanguage: en
+  # slideLanguage: en
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1376,8 +1358,8 @@
   titleJa: 'Yahoo! JAPANトップページにおけるマイクロフロントエンド - 大規模組織におけるFE開発を加速させるには'
   description: ''
   descriptionJa: ''
-  spokenLanguage: en
-  slideLanguage: en
+  # spokenLanguage: en
+  # slideLanguage: en
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1394,8 +1376,8 @@
   titleJa: '電話を切らさない技術：電話自動応答サービスを支えるフロントエンド'
   description: ''
   descriptionJa: ''
-  spokenLanguage: en
-  slideLanguage: en
+  # spokenLanguage: en
+  # slideLanguage: en
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1412,8 +1394,8 @@
   titleJa: 'Cosenseのフロントエンドでのパフォーマンスチューニング'
   description: ''
   descriptionJa: ''
-  spokenLanguage: en
-  slideLanguage: en
+  # spokenLanguage: en
+  # slideLanguage: en
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1430,8 +1412,8 @@
   titleJa: '静的解析を活用したi18対応'
   description: ''
   descriptionJa: ''
-  spokenLanguage: en
-  slideLanguage: en
+  # spokenLanguage: en
+  # slideLanguage: en
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1448,8 +1430,8 @@
   titleJa: 'クルマのサブスクサービスをNext.jsで内製化した経験とその1年後（仮）'
   description: ''
   descriptionJa: ''
-  spokenLanguage: en
-  slideLanguage: en
+  # spokenLanguage: en
+  # slideLanguage: en
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -1466,8 +1448,8 @@
   titleJa: '未定'
   description: ''
   descriptionJa: ''
-  spokenLanguage: en
-  slideLanguage: en
+  # spokenLanguage: en
+  # slideLanguage: en
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []

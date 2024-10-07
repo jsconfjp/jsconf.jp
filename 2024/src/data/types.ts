@@ -1,5 +1,6 @@
 export type TalkType = {
   uuid: string
+  kind: 'OPEN' | 'OPENING_TALK' | 'TALK' | 'BREAK' | 'CLOSING_TALK' | 'AFTER_PARTY'
   title: string
   titleJa: string
   description: string

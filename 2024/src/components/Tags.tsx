@@ -31,14 +31,14 @@ function toArray<T>(input: T | T[]): T[] {
   return Array.isArray(input) ? input : [input]
 }
 export const Tags = ({ children }: TagsProps) => {
-  const tags = toArray(children).filter(Boolean)
+  const tags = toArray(children).filter(Boolean) as string[]
   if (tags.length === 0) {
     return <></>
   }
   return (
     <TagList>
       {tags.map(text => (
-        <li>{text}</li>
+        <li key={text}>{text}</li>
       ))}
     </TagList>
   )

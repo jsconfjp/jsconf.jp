@@ -8,7 +8,7 @@ import { SEO } from "../components/Seo"
 import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
 import { AvatarType } from "../components/Speaker"
-import { SpeakerName, SpeakerNames } from "../components/EventSpeakers"
+import { SpeakerName } from "../components/EventSpeakers"
 import { SpeakerType, TalkType } from "../data/types"
 import { enOrJa, useEnOrJa } from "../util/languages"
 import { EventTime } from "../components/EventTime"
@@ -289,14 +289,12 @@ export default function Speaker(props: Props) {
             />
             <SpeakerSide>
               <h1>
-                <SpeakerNames
-                  speakers={[
-                    {
-                      name: '',
-                      nameReading: '',
-                      sponsor: sponsor.name,
-                    },
-                  ]}
+                <SpeakerName
+                  speaker={{
+                    name: '',
+                    nameReading: '',
+                    sponsor: sponsor.name,
+                  }}
                 />
               </h1>
               <Markdown>{sponsor.prText}</Markdown>

@@ -2167,6 +2167,7 @@ type Query_talksYamlArgs = {
   endsAt: InputMaybe<StringQueryOperatorInput>;
   id: InputMaybe<StringQueryOperatorInput>;
   internal: InputMaybe<InternalFilterInput>;
+  kind: InputMaybe<StringQueryOperatorInput>;
   parent: InputMaybe<NodeFilterInput>;
   room: InputMaybe<StringQueryOperatorInput>;
   slideLanguage: InputMaybe<StringQueryOperatorInput>;
@@ -3345,6 +3346,7 @@ type TalksYaml = Node & {
   readonly endsAt: Maybe<Scalars['String']>;
   readonly id: Scalars['ID'];
   readonly internal: Internal;
+  readonly kind: Maybe<Scalars['String']>;
   readonly parent: Maybe<Node>;
   readonly room: Maybe<Scalars['String']>;
   readonly slideLanguage: Maybe<Scalars['String']>;
@@ -3413,6 +3415,7 @@ type TalksYamlFieldSelector = {
   readonly endsAt: InputMaybe<FieldSelectorEnum>;
   readonly id: InputMaybe<FieldSelectorEnum>;
   readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly kind: InputMaybe<FieldSelectorEnum>;
   readonly parent: InputMaybe<NodeFieldSelector>;
   readonly room: InputMaybe<FieldSelectorEnum>;
   readonly slideLanguage: InputMaybe<FieldSelectorEnum>;
@@ -3436,6 +3439,7 @@ type TalksYamlFilterInput = {
   readonly endsAt: InputMaybe<StringQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
   readonly internal: InputMaybe<InternalFilterInput>;
+  readonly kind: InputMaybe<StringQueryOperatorInput>;
   readonly parent: InputMaybe<NodeFilterInput>;
   readonly room: InputMaybe<StringQueryOperatorInput>;
   readonly slideLanguage: InputMaybe<StringQueryOperatorInput>;
@@ -3504,6 +3508,7 @@ type TalksYamlSortInput = {
   readonly endsAt: InputMaybe<SortOrderEnum>;
   readonly id: InputMaybe<SortOrderEnum>;
   readonly internal: InputMaybe<InternalSortInput>;
+  readonly kind: InputMaybe<SortOrderEnum>;
   readonly parent: InputMaybe<NodeSortInput>;
   readonly room: InputMaybe<SortOrderEnum>;
   readonly slideLanguage: InputMaybe<SortOrderEnum>;
