@@ -1408,8 +1408,8 @@
   endsAt: "15:20"
   room: D
   kind: TALK
-  title: '静的解析を活用したi18対応'
-  titleJa: '静的解析を活用したi18対応'
+  title: '静的解析を活用したi18n対応'
+  titleJa: '静的解析を活用したi18n対応'
   description: ''
   descriptionJa: ''
   spokenLanguage: ja
