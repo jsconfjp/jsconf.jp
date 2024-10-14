@@ -35,8 +35,21 @@ const Text = styled.span`
   flex: 1;
   margin-left: 10px;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: ${({ theme }) => theme.fonts.text};
+`
+const SubText = styled.span`
+  flex: 1;
+  margin-left: 10px;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: -0.1rem;
+  font-family: ${({ theme }) => theme.fonts.text};
+`
+const TextBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
 `
 
 type RoomProps = {
@@ -65,7 +78,10 @@ export const Room = ({ track, selectedTrack, onClick }: RoomProps) => {
       tabIndex={onClick ? 0 : -1}
     >
       <Circle track={track} />
-      <Text>{t(`room${track}`)}</Text>
+      <TextBox>
+        <Text>{t(`room${track}`)}</Text>
+        <SubText>{t(`room${track}Sub`)}</SubText>
+      </TextBox>
     </RoomBox>
   )
 }
