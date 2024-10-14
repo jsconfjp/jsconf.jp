@@ -71,13 +71,13 @@ export type Props = {
   color?: "primary" | "secondary"
   size: "inline" | "normal" | "large"
   to: string
-  disabled: boolean
   onClick?: MouseEventHandler
   children: React.ReactNode
 }
 
 export function LinkButton(props: Props) {
-  const { color, to, size, onClick, children } = props
+  const { color, to, onClick, children } = props
+  const size = props.size ?? "normal"
 
   if (!to?.startsWith("http")) {
     if (color === "primary") {
@@ -130,9 +130,4 @@ export function LinkButton(props: Props) {
       </ExternalBox>
     )
   }
-}
-
-LinkButton.defaultProps = {
-  disabled: false,
-  size: "normal",
 }

@@ -6,13 +6,17 @@ type MetaProps = JSX.IntrinsicElements["meta"]
 
 type Props = {
   description?: string | null
-  lang: Languages
-  meta: MetaProps[]
+  lang?: Languages
+  meta?: MetaProps[]
   title?: string | null
   ogImage?: string
 }
 
 export function SEO({ description, ogImage, lang, meta, title }: Props) {
+  lang ??= "en"
+  meta ??= []
+  description ??= ""
+
   const { site, logo } = useStaticQuery(graphql`
     query {
       site {
@@ -87,10 +91,4 @@ export function SEO({ description, ogImage, lang, meta, title }: Props) {
       ).concat(meta)}
     />
   )
-}
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
 }
