@@ -1,0 +1,7 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directories:
+      - "/2024"
+    schedule:
+      interval: "daily"
