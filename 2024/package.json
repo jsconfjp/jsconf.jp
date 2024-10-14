@@ -61,7 +61,7 @@
     "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-yaml": "^5.13.1",
     "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.2.5",
     "styled-components": "^6.1.9",
     "typescript": "^5.4.5"
