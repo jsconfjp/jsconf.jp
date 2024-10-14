@@ -1,8 +1,8 @@
-import React, { useLayoutEffect, useState } from "react"
+import React, { useLayoutEffect } from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { useStaticQuery, graphql } from "gatsby"
-import { Link as _Link } from "gatsby-link"
+import { Link as _Link, navigate } from "gatsby-link"
 import flatten from "lodash/flatten"
 
 import { Layout } from "../components/Layout"
@@ -198,9 +198,20 @@ function filterTrim<T>(array: T[], filter: (t: T) => boolean) {
   return array.slice(start, end)
 }
 
-export default function SchedulePage() {
+export type SchedulePageProps = {
+  pageContext: {
+    selectedTrack?: Rooms
+  }
+}
+
+export default function SchedulePage({
+  pageContext: { selectedTrack },
+}: SchedulePageProps) {
   const { t, i18n } = useTranslation()
   const enOrJa = useEnOrJa()
+  const setSelectedTrack = (track: Rooms | undefined) => {
+    navigate(track ? `/schedule/${track}` : "/schedule")
+  }
   const { allSpeakersYaml, allSponsorsYaml, allTalksYaml } = useStaticQuery(
     graphql`
       query {
@@ -274,8 +285,6 @@ export default function SchedulePage() {
     const { top } = el.getBoundingClientRect()
     window.scrollTo({ top })
   }, [])
-
-  const [selectedTrack, setSelectedTrack] = useState<Rooms | undefined>()
 
   function getSessionName(talk: TalkType) {
     switch (talk.kind) {
