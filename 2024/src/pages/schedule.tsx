@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react"
+import React, { useLayoutEffect, useState } from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { useStaticQuery, graphql } from "gatsby"
@@ -13,7 +13,7 @@ import { Breadcrumb } from "../components/Breadcrumb"
 import { EventTime } from "../components/EventTime"
 import { EventSpeakers } from "../components/EventSpeakers"
 import { RoomLegend } from "../components/RoomLegend"
-import { TalkType, SpeakerType } from "../data/types"
+import { TalkType, SpeakerType, Session } from "../data/types"
 import { generateTimetable } from "../util/generateTimetable"
 import { rangeTimeBoxes, escapeTime } from "../util/rangeTimeBoxes"
 import { Dates, times, Rooms, rooms } from "../util/misc"
@@ -24,15 +24,41 @@ import { Tags } from "../components/Tags"
 const dummyTrack = String.fromCharCode(
   rooms[rooms.length - 1].charCodeAt(0) + 1,
 ) as Rooms
-const Grid = styled.div<{ startsAt: Date; endsAt: Date }>`
+
+function getHours(time: string | Date) {
+  if (typeof time === "string") {
+    return parseInt(time.split(":")[0])
+  }
+  return time.getHours()
+}
+
+function getMinutes(time: string | Date) {
+  if (typeof time === "string") {
+    return parseInt(time.split(":")[1])
+  }
+  return time.getMinutes()
+}
+
+const Grid = styled.div<{
+  startsAt: Date | string
+  endsAt: Date | string
+  tracks: Rooms[]
+}>`
   display: grid;
   grid-column-gap: 1em;
-  grid-template-columns: ${rooms
-    .concat(dummyTrack)
-    .map(r => `[${r}]`)
-    .join(" 1fr ")};
+  grid-template-columns: ${({ tracks }) =>
+    tracks
+      .concat(dummyTrack)
+      .map(r => `[${r}]`)
+      .join(" 1fr ")};
   grid-template-rows: ${({ startsAt, endsAt }) =>
-    rangeTimeBoxes(5, startsAt.getHours(), endsAt.getHours())
+    rangeTimeBoxes(
+      5,
+      getHours(startsAt),
+      getHours(endsAt),
+      getMinutes(startsAt),
+      getMinutes(endsAt),
+    )
       .map(t => `[t-${escapeTime(t)}]`)
       .join(" minmax(1em, max-content) ")};
 
@@ -46,13 +72,14 @@ const Area = styled(_Link)<{
   startsAt: string
   endsAt: string
   isBreak: boolean
+  selectedTrack: string | undefined
 }>`
   margin-bottom: 1em;
   padding: 1em;
   text-decoration: none;
   position: relative;
-  grid-column: ${({ track, isBreak }) =>
-    isBreak ? `A / ${dummyTrack}` : track};
+  grid-column: ${({ track, isBreak, selectedTrack }) =>
+    !selectedTrack && isBreak ? `A / ${dummyTrack}` : track};
   grid-row: ${({ startsAt, endsAt }) =>
     `t-${escapeTime(startsAt)} / t-${escapeTime(endsAt)}`};
   background-color: ${({ track, isBreak, theme, to }) =>
@@ -152,6 +179,25 @@ const AreaFooter = styled.div`
   margin-top: 2.5rem;
 `
 
+function filterTrim<T>(array: T[], filter: (t: T) => boolean) {
+  let start = 0
+  let len = array.length
+  while (start < len) {
+    if (!filter(array[start])) {
+      break
+    }
+    start += 1
+  }
+  let end = len - 1
+  while (end > start) {
+    if (!filter(array[end])) {
+      break
+    }
+    end -= 1
+  }
+  return array.slice(start, end)
+}
+
 export default function SchedulePage() {
   const { t, i18n } = useTranslation()
   const enOrJa = useEnOrJa()
@@ -229,6 +275,8 @@ export default function SchedulePage() {
     window.scrollTo({ top })
   }, [])
 
+  const [selectedTrack, setSelectedTrack] = useState<Rooms | undefined>()
+
   function getSessionName(talk: TalkType) {
     switch (talk.kind) {
       case "OPEN": {
@@ -262,19 +310,52 @@ export default function SchedulePage() {
         <Title>{t("schedule")}</Title>
 
         {days.map(day => {
-          const { startsAt, endsAt } = times[day]
-          const sessions = flatten(
-            timetable[day].map(({ sessions }) => sessions),
-          )
+          let { startsAt, endsAt } = times[day] as {
+            startsAt: Date | string
+            endsAt: Date | string
+          }
+          let sessions = flatten(
+            timetable[day].map(({ sessions }) =>
+              sessions.filter(session =>
+                selectedTrack
+                  ? session.track === selectedTrack || session.break
+                  : true,
+              ),
+            ),
+          ).map(event => {
+            if (event.break && selectedTrack) {
+              return {
+                ...event,
+                track: selectedTrack,
+                uuid: `${event.uuid}_${selectedTrack}`,
+              } as Session
+            }
+            return event
+          })
+          if (selectedTrack) {
+            sessions = filterTrim(
+              sessions,
+              session => session.break || session.title === "open",
+            )
+            startsAt = sessions[0].startsAt
+            endsAt = sessions[sessions.length - 1].endsAt
+          }
           return (
             <React.Fragment key={day}>
               <SubTitle id={day}>
                 {dateTimeFormatter.format(times[day].startsAt)}
               </SubTitle>
               <RoomLegendBox>
-                <RoomLegend />
+                <RoomLegend
+                  onClick={setSelectedTrack}
+                  selectedTrack={selectedTrack}
+                />
               </RoomLegendBox>
-              <Grid startsAt={startsAt} endsAt={endsAt}>
+              <Grid
+                startsAt={startsAt}
+                endsAt={endsAt}
+                tracks={selectedTrack ? [selectedTrack] : rooms}
+              >
                 {sessions.map(s => {
                   const hasDescription =
                     s.uuid && (s.speakers.length || s.sponsors.length)
@@ -297,6 +378,7 @@ export default function SchedulePage() {
                       startsAt={s.startsAt}
                       endsAt={s.endsAt}
                       isBreak={s.break}
+                      selectedTrack={selectedTrack}
                     >
                       <AreaTitle>
                         <EventTime session={s} />
