@@ -146,7 +146,7 @@ function SocialLinks(props: SocialLinksProps) {
     .map(entry => <li>{entry}</li>)
 
   if (!socialLinks.length) {
-    return <></>
+    return null
   }
 
   return <SocialLinkContainer>{socialLinks}</SocialLinkContainer>
@@ -163,7 +163,7 @@ type SpeakerPronounProps = {
 
 const SpeakerPronoun = ({ speaker }: SpeakerPronounProps) => {
   if (!speaker.pronoun) {
-    return <></>
+    return null
   }
   return (
     <SpeakerPronounWrap>
@@ -190,7 +190,7 @@ const SlidesBox = styled.div`
 `
 const Slides = ({ session }: SlidesProps) => {
   const enOrJa = useEnOrJa()
-  if (!session.slidesEn && !session.slidesJa) return <></>
+  if (!session.slidesEn && !session.slidesJa) return null
   return (
     <SlidesBox>
       <Link to={enOrJa(session.slidesEn, session.slidesJa)}>
@@ -205,9 +205,9 @@ type YoutubeProps = {
   session: TalkType
 }
 const Youtube = ({ session: { youtube } }: YoutubeProps) => {
-  if (!youtube) return <></>
+  if (!youtube) return null
   const [_, id] = /watch\?v=(.*)$/g.exec(youtube) || []
-  if (!id) return <></>
+  if (!id) return null
   return (
     <iframe
       style={{ maxWidth: "100%" }}
