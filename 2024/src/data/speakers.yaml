@@ -12,12 +12,12 @@
 #       - ex. https://jsconf.jp/2024/talk/hiroki-tani-corey-lee/
 # - featured: true for guest speakers, false for CFPs
 # - presentations: List of UUIDs for talks by the speaker
-# 
+#
 # Properties that can be copied and pasted from the CFP:
 # - name
 # - biography
 # - biographyJa
-# 
+#
 # Properties that are not currently in use:
 # - nameReading
 # - pronoun
@@ -29,8 +29,8 @@
 
 - uuid: sahil-khokhar
   name: Sahil Khokhar
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - sahil-khokhar
@@ -38,15 +38,15 @@
     Sahil is a Frontend Tech Lead at Mercari Inc., leading teams that deliver product-facing features for Mercari's Marketplace. Previously, he contributed to open source projects with Wikimedia.
   biographyJa: >-
     Sahil is a Frontend Tech Lead at Mercari Inc., leading teams that deliver product-facing features for Mercari's Marketplace. Previously, he contributed to open source projects with Wikimedia.
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: phumrapee-limpianchop
   name: Phumrapee Limpianchop
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - phumrapee-limpianchop
@@ -54,15 +54,15 @@
     I work as Software Engineer at Agoda in Thailand, but outside work I also a Tech Evangelist for Thai developer community called Creatorsgarten. I like to explore many possibilities to make web application to solve many daily life routines, and workflows.
   biographyJa: >-
     I work as Software Engineer at Agoda in Thailand, but outside work I also a Tech Evangelist for Thai developer community called Creatorsgarten. I like to explore many possibilities to make web application to solve many daily life routines, and workflows.
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: csaba-tamas
   name: Csaba Tamas
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: true
   presentations:
     - csaba-tamas
@@ -70,15 +70,15 @@
     I am a frontend geek with over a decade of experience in the tech industry, specializing in JavaScript technologies. My passion for coding is matched only by my dedication to fitness, as I have been involved in bodybuilding and powerlifting for more than 15 years. I believe that a strong body supports a strong mind, and I strive to integrate healthy habits into my daily routine as a developer.
   biographyJa: >-
     I am a frontend geek with over a decade of experience in the tech industry, specializing in JavaScript technologies. My passion for coding is matched only by my dedication to fitness, as I have been involved in bodybuilding and powerlifting for more than 15 years. I believe that a strong body supports a strong mind, and I strive to integrate healthy habits into my daily routine as a developer.
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: anushka-trivedi
   name: Anushka Trivedi, opheliagame
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - anushka-trivedi
@@ -86,15 +86,15 @@
     Anushka Trivedi / opheliagame as a creative technologist uses code to write computer programs that create images and poems. As a net artist, her practice also involves making tools, websites and live coding visuals. Coming from a technology background, she is continually thinking about and exploring what it means to make art and be an artist.
   biographyJa: >-
     Anushka Trivedi / opheliagame as a creative technologist uses code to write computer programs that create images and poems. As a net artist, her practice also involves making tools, websites and live coding visuals. Coming from a technology background, she is continually thinking about and exploring what it means to make art and be an artist.
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: chris-fuentes
   name: Chris Fuentes
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - chris-fuentes
@@ -102,15 +102,15 @@
     Full-stack developer from El Salvador with +6 years of experience creating end-to-end applications across the globe. Active member of developer communities and founder of the GDG San Miguel.
   biographyJa: >-
     Full-stack developer from El Salvador with +6 years of experience creating end-to-end applications across the globe. Active member of developer communities and founder of the GDG San Miguel.
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: trung-vo
   name: Trung Vo
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - trung-vo
@@ -118,15 +118,15 @@
     Trung Vo, a web expert and Google Developer Expert in Angular, is known for his open-source projects like Angular Spotify and Jira Clone. Currently at Ascenda, he simplifies loyalty programs worldwide. As a community builder, he has significantly contributed to the growth of web development communities in Singapore, mentoring individuals and sharing his expertise to foster career growth. Trung also shares his insights as a regular speaker at tech conferences worldwide.
   biographyJa: >-
     Trung Vo, a web expert and Google Developer Expert in Angular, is known for his open-source projects like Angular Spotify and Jira Clone. Currently at Ascenda, he simplifies loyalty programs worldwide. As a community builder, he has significantly contributed to the growth of web development communities in Singapore, mentoring individuals and sharing his expertise to foster career growth. Trung also shares his insights as a regular speaker at tech conferences worldwide.
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: aileen-villanueva-lecuona
   name: Aileen Villanueva Lecuona
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: true
   presentations:
     - aileen-villanueva-lecuona
@@ -134,37 +134,37 @@
     My background includes 9 years experience in Web development and currently venturing into Machine Learning, I am deeply passionate about empowering and inspiring others, which is why I proudly serve as a Women Techmaker Ambassador, dedicated to sharing my knowledge and experiences with the community and fostering diversity in the tech industry.
   biographyJa: >-
     My background includes 9 years experience in Web development and currently venturing into Machine Learning, I am deeply passionate about empowering and inspiring others, which is why I proudly serve as a Women Techmaker Ambassador, dedicated to sharing my knowledge and experiences with the community and fostering diversity in the tech industry.
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: vj
   name: VJ
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - vj
   biography: >-
     I am passionate about Information Security & Cyber security. I have almost 8+ years of experience working in many industries like Finance, Healthcare etc.
-    
+
     I am Currently working as Lead Security at Observe.ai
     Also Worked in multiple different areas of Security and compliance such as Infra security, Cloud Security, Application Security Vulnerability Management, Penetration Testing, SDLC, and Compliance. I always try to protect the ecosystem & try to spread security awareness among people.
   biographyJa: >-
     I am passionate about Information Security & Cyber security. I have almost 8+ years of experience working in many industries like Finance, Healthcare etc.
-    
+
     I am Currently working as Lead Security at Observe.ai
     Also Worked in multiple different areas of Security and compliance such as Infra security, Cloud Security, Application Security Vulnerability Management, Penetration Testing, SDLC, and Compliance. I always try to protect the ecosystem & try to spread security awareness among people.
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: motoki-shakagori
   name: Motoki Shakagori (釋迦郡 元気)
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - motoki-shakagori
@@ -176,15 +176,15 @@
     Engineering Manager at Spir Inc. He writes TypeScript every day and is passionate about types.
     GitHub: https://github.com/m-shaka
     X: https://x.com/schwmtl
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: aakansha-doshi
   name: Aakansha Doshi
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - aakansha-doshi
@@ -192,15 +192,15 @@
     Aakansha is passionate about Free and open-source software (FOSS) and loves deep diving into the internals of Web and Javascript. She is a core maintainer of excalidraw, react-tags, mermaid-to-excalidraw and more. She also leads the FOSS meetups in Bangalore, India. Beyond her tech interests, she is a big foodie, loves traveling, and spending quality time with her family.
   biographyJa: >-
     Aakansha is passionate about Free and open-source software (FOSS) and loves deep diving into the internals of Web and Javascript. She is a core maintainer of excalidraw, react-tags, mermaid-to-excalidraw and more. She also leads the FOSS meetups in Bangalore, India. Beyond her tech interests, she is a big foodie, loves traveling, and spending quality time with her family.
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: mariko-kosaka
   name: Mariko Kosaka
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: true
   presentations:
     - mariko-kosaka
@@ -208,15 +208,15 @@
     Google Chrome Developer Advocate 最近はブラウザリリースの度に互換性をチェックする日々。
   biographyJa: >-
     Google Chrome Developer Advocate 最近はブラウザリリースの度に互換性をチェックする日々。
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: mrdoob
   name: Mr.doob
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: true
   presentations:
     - mrdoob
@@ -224,15 +224,15 @@
     Mr.doob is the creator of Three.js, a widely-used JavaScript library that makes 3D graphics more accessible on the web. His focus has always been on experimenting with new ways to bring creativity and technology together, while contributing to the open-source community. Through Three.js and other projects, he continues to learn, share, and collaborate with developers around the world, helping to push the boundaries of what’s possible on the web.
   biographyJa: >-
     Mr.doob is the creator of Three.js, a widely-used JavaScript library that makes 3D graphics more accessible on the web. His focus has always been on experimenting with new ways to bring creativity and technology together, while contributing to the open-source community. Through Three.js and other projects, he continues to learn, share, and collaborate with developers around the world, helping to push the boundaries of what’s possible on the web.
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: saku
   name: saku
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - saku
@@ -240,15 +240,15 @@
     UIを思索することが好きです。Web Frontend Developer @Cybozu, Inc.
   biographyJa: >-
     UIを思索することが好きです。Web Frontend Developer @Cybozu, Inc.
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: uhyo_
   name: ECMAボーイ (@uhyo_)
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - ecma-boys
@@ -256,15 +256,15 @@
     2024年結成。2024年解散予定。
   biographyJa: >-
     2024年結成。2024年解散予定。
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: shqld
   name: ECMAボーイ (@shqld)
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - ecma-boys
@@ -272,29 +272,29 @@
     2024年結成。2024年解散予定。
   biographyJa: >-
     2024年結成。2024年解散予定。
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: kang-sangun
   name: カンサンウン(Kang Sangun)
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - kang-sangun
-  biography: ''
-  biographyJa: ''
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  biography: ""
+  biographyJa: ""
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: koki-tsumura
   name: Koki Tsumura
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - koki-tsumura
@@ -304,39 +304,39 @@
   biographyJa: >-
     LINEヤフー株式会社にてSWE(フロントエンドエンジニア)として働いています。中華料理(特に火鍋)が好きです。犬アレルギーですが、ミニチュアシュナウザーを飼っています。
     Twitter: https://twitter.com/l1lhu1hu1
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: takashi-onda
   name: 恩田 崇
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - takashi-onda
   biography: >-
     株式会社一休 CTO室 プラットフォーム開発チーム
-    
+
     OAuth/OIDC 基盤導入、領収書・請求書発行マイクロサービス導入の技術支援、基盤マイクロサービスの Google Cloud 移行などを手がける。
-    
+
     2023年9月より一休.com レストランでフロントエンドのリーアキテクトを担当。
   biographyJa: >-
     株式会社一休 CTO室 プラットフォーム開発チーム
-    
+
     OAuth/OIDC 基盤導入、領収書・請求書発行マイクロサービス導入の技術支援、基盤マイクロサービスの Google Cloud 移行などを手がける。
-    
+
     2023年9月より一休.com レストランでフロントエンドのリーアキテクトを担当。
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: ssssota
   name: ssssota (TOMIKAWA Sotaro)
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - ssssota
@@ -344,15 +344,15 @@
     株式会社ZOZOでフロントエンドエンジニアをしています。
   biographyJa: >-
     株式会社ZOZOでフロントエンドエンジニアをしています。
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: kazupon
   name: kazupon
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - kazupon
@@ -362,15 +362,15 @@
   biographyJa: >-
     Software engineer at Plaid,Inc / Part-time open sourceror. 
     Vue.js Core team, creator of Intlify & i18n enthusiast, Vuejs japan user group & Vue Fes Japan organizer.
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: mizchi
   name: mizchi
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - mizchi
@@ -378,15 +378,15 @@
     Node.js とフロントエンドのエキスパート。Frontend Ops の傭兵。世界を速くしている。
   biographyJa: >-
     Node.js とフロントエンドのエキスパート。Frontend Ops の傭兵。世界を速くしている。
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: maxmellon
   name: maxmellon (Kento TSUJI)
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - maxmellon
@@ -394,15 +394,15 @@
     東急株式会社で Web Frontend エンジニアをしています。TOKYU ID などの開発に従事しています。
   biographyJa: >-
     東急株式会社で Web Frontend エンジニアをしています。TOKYU ID などの開発に従事しています。
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: berlysia
   name: berlysia
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - berlysia
@@ -412,15 +412,15 @@
   biographyJa: >-
     妄想を現実にする活動をしています。フロントエンドを得意領域とするWebエンジニアです。株式会社ドワンゴの教育事業でWebフロントエンドを担当し、TSKaigiのコアスタッフとしても活動しています。
     Webフロントエンドをやり、Webフロントエンドのためのことをすべてやります。
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: yui_tang
   name: 坂本結衣(yui_tang)
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - yui_tang
@@ -430,15 +430,15 @@
   biographyJa: >-
     Software Engineer at newmo, Inc.
     猫・メタル・筋トレ・VTuberが好き
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: sosuke-suzuki
   name: Sosuke Suzuki
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - sosuke-suzuki
@@ -446,15 +446,15 @@
     筑波大学情報学群の学生で、Ubie株式会社のソフトウェアエンジニア。「テクノロジーで人々を適切な医療に案内する」ことを目指して、症状検索エンジン「ユビー」の開発に尽力している。また、JavaScriptのコードフォーマッターであるPrettierのメンテナーや、ブラウザエンジンであるWebKitのコミッターとしても活動中。
   biographyJa: >-
     筑波大学情報学群の学生で、Ubie株式会社のソフトウェアエンジニア。「テクノロジーで人々を適切な医療に案内する」ことを目指して、症状検索エンジン「ユビー」の開発に尽力している。また、JavaScriptのコードフォーマッターであるPrettierのメンテナーや、ブラウザエンジンであるWebKitのコミッターとしても活動中。
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: azukiazusa
   name: azukiazusa
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - azukiazusa
@@ -462,35 +462,35 @@
     フロントエンドが好きな Web アプリケーションエンジニア
   biographyJa: >-
     フロントエンドが好きな Web アプリケーションエンジニア
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: guvalif
   name: TAKASE Kazuyuki (@Guvalif)
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - guvalif
   biography: >-
     2024 年に株式会社ドワンゴへ TechPM としてジョインし、EdTech × ML 系プロダクトのプロトタイピングに従事。個人でも、技術と教育をつなげることに興味があり、大人から子どもまで、技術を広める活動に従事している。
-    
+
     クライアントサイドに適した軽量かつ疎結合なアーキテクチャに関心があり、JSConf JP でも『宣言的 UI 時代のクライアントサイド DDD 大考察』などを発表している。
   biographyJa: >-
     2024 年に株式会社ドワンゴへ TechPM としてジョインし、EdTech × ML 系プロダクトのプロトタイピングに従事。個人でも、技術と教育をつなげることに興味があり、大人から子どもまで、技術を広める活動に従事している。
-    
+
     クライアントサイドに適した軽量かつ疎結合なアーキテクチャに関心があり、JSConf JP でも『宣言的 UI 時代のクライアントサイド DDD 大考察』などを発表している。
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: re-taro
   name: りんたろー
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - re-taro
@@ -498,15 +498,15 @@
     フリーランスしながら学生やってます。来年度から緑色の会社で働きます。Frontend Ops と 開発者体験に思いを馳せるのが好き。
   biographyJa: >-
     フリーランスしながら学生やってます。来年度から緑色の会社で働きます。Frontend Ops と 開発者体験に思いを馳せるのが好き。
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: mizdra
   name: mizdra
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - mizdra
@@ -514,15 +514,15 @@
     Web Application Engineer at Hatena Co., Ltd.
   biographyJa: >-
     Web Application Engineer at Hatena Co., Ltd.
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: hiroki-tani
   name: Hiroki Tani
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - hiroki-tani-corey-lee
@@ -530,15 +530,15 @@
     中小企業向けのSaaS、フリーランスでの受託、起業やスタートアップでの開発チーム立ち上げを経験。Webのフロントエンド開発や、UI・UX設計をおこなう。現在はFigmaのマーケティングやリソースの設計・開発に取り組んでいる。またデザインシステムに関連する情報のキュレーションや、その他講演・執筆活動などもおこなっている。著書に『Web制作者のためのCSS設計の教科書』。
   biographyJa: >-
     中小企業向けのSaaS、フリーランスでの受託、起業やスタートアップでの開発チーム立ち上げを経験。Webのフロントエンド開発や、UI・UX設計をおこなう。現在はFigmaのマーケティングやリソースの設計・開発に取り組んでいる。またデザインシステムに関連する情報のキュレーションや、その他講演・執筆活動などもおこなっている。著書に『Web制作者のためのCSS設計の教科書』。
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: corey-lee
   name: Corey Lee
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - hiroki-tani-corey-lee
@@ -546,15 +546,15 @@
     アメリカ、カリフォルニア州出身。2010年に来日後プロダクトデザイナーとして活動開始。大手からスタートアップ企業まで幅広く在籍し、プロダクトデザイン、サービス設計、DesignOpsに従事。2017年度グッドデザイン賞を受賞。2018年に独立し新規事業の立ち上げやリブランディングを成功に導く。2022年にFigmaのDesigner Advocateに就任。https://coreylee.tokyo/
   biographyJa: >-
     アメリカ、カリフォルニア州出身。2010年に来日後プロダクトデザイナーとして活動開始。大手からスタートアップ企業まで幅広く在籍し、プロダクトデザイン、サービス設計、DesignOpsに従事。2017年度グッドデザイン賞を受賞。2018年に独立し新規事業の立ち上げやリブランディングを成功に導く。2022年にFigmaのDesigner Advocateに就任。https://coreylee.tokyo/
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: yuji-sugiura
   name: Yuji Sugiura
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - yuji-sugiura
@@ -566,35 +566,35 @@
     ピクセルグリッドという会社でエンジニアをしています。仕事の合間にRustで正規表現パーサーを実装していたら、OXCのコアメンバーになっていました。
     GitHub: https://github.com/leaysgur
     X: https://x.com/leaysgur
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: alexey-taktarov
   name: Alexey Taktarov
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - alexey-taktarov
   biography: >-
     My previous talks: https://molefrog.com/speaking
-    
+
     Alexey is a full-stack engineer, an open-source maintainer (his primary project is Wouter – a tiny ~1.5 KB router for React), a founder and ex-CTO of resume.io/rirekisho.jp. He has been involved in web development since 2011 when he tried Node for the first time and fell in love with it. He is still very excited about the future of front-end, and his primary interests now are React, Svelte, Deno, local-first, and real-time apps.
   biographyJa: >-
     My previous talks: https://molefrog.com/speaking
-    
+
     Alexey is a full-stack engineer, an open-source maintainer (his primary project is Wouter – a tiny ~1.5 KB router for React), a founder and ex-CTO of resume.io/rirekisho.jp. He has been involved in web development since 2011 when he tried Node for the first time and fell in love with it. He is still very excited about the future of front-end, and his primary interests now are React, Svelte, Deno, local-first, and real-time apps.
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: mesut-durukal
   name: Mesut Durukal
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - mesut-durukal
@@ -602,15 +602,15 @@
     https://mesutdurukal.github.io/himesut/
   biographyJa: >-
     https://mesutdurukal.github.io/himesut/
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: masanari-hamada-tomoki-kiraku
-  name: Masanari Hamada / Tomoki Kiraku 
-  nameReading: ''
-  pronoun: ''
+  name: Masanari Hamada / Tomoki Kiraku
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - masanari-hamada-tomoki-kiraku
@@ -618,32 +618,32 @@
     LINEヤフーでYahoo!JAPANトップページの開発を行いながら、組織横断でパフォーマンス改善の取り組みを行っています。
   biographyJa: >-
     LINEヤフーでYahoo!JAPANトップページの開発を行いながら、組織横断でパフォーマンス改善の取り組みを行っています。
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
 - uuid: tiger-daphne-oakes
   name: Tiger & Daphne Oakes
-  nameReading: ''
-  pronoun: ''
+  nameReading: ""
+  pronoun: ""
   featured: false
   presentations:
     - tiger-daphne-oakes
   biography: >-
     Tiger & Daphne bring their dynamic working together with conference speaking and improv experience to teach you about home automation while making you laugh a lot. 
-    
+
     Tiger is an enthusiastic member of the W3C and previously worked on Microsoft Edge, Firefox for Android, and Google Chrome. He creates art projects out of old devices, including junk phone wall decor and an e-reader tea menu.
-    
+
     Daphne works on the web team at Grow Therapy, connecting patients with therapists. She fell in love with speaking when she founded the Women in CS club in college, when she realized she could use her voice to encourage other women to transition into tech and grow a diverse community.
   biographyJa: >-
     Tiger & Daphne bring their dynamic working together with conference speaking and improv experience to teach you about home automation while making you laugh a lot. 
-    
+
     Tiger is an enthusiastic member of the W3C and previously worked on Microsoft Edge, Firefox for Android, and Google Chrome. He creates art projects out of old devices, including junk phone wall decor and an e-reader tea menu.
-    
+
     Daphne works on the web team at Grow Therapy, connecting patients with therapists. She fell in love with speaking when she founded the Women in CS club in college, when she realized she could use her voice to encourage other women to transition into tech and grow a diverse community.
-  location: ''
-  github: ''
-  twitter: ''
-  homepage: ''
-  mastodon: ''
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""

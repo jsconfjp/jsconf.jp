@@ -205,7 +205,7 @@ export default function IndexPage() {
       available: featuredSpeakers.length,
       render: () => (
         <>
-          <div style={{ marginBottom: '1em' }}>
+          <div style={{ marginBottom: "1em" }}>
             <SpeakerList
               speakers={featuredSpeakers}
               avatars={avatars}

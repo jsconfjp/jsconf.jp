@@ -1,6 +1,6 @@
 # Properties common to all types:
 # - kind: One of OPEN, OPENING_TALK, TALK, BREAK, CLOSING_TALK, AFTER_PARTY
-# 
+#
 # Properties that need to be defined by the user:
 # - uuid: You can set any value you like, but it's better to set the UUID of the speaker.
 #   - If all the titles are in English, you can convert them to kebab cases and use them as UUIDs,
@@ -15,7 +15,7 @@
 #   - For CFP-based talks, there should be at least one speaker.
 # - sponsorIDs: UUIDs list of sponsors in charge of the talk
 #   - In the case of a talk by a sponsor, there should be at least one sponsor.
-# 
+#
 # Properties that can be copied and pasted from the CFP:
 # - title
 # - titleJa
@@ -23,7 +23,7 @@
 # - descriptionJa
 # - spokenLanguage
 # - slideLanguage
-# 
+#
 # Properties required for archiving after the event has been held
 # - slidesEn, slidesJa: URL of the presentation materials
 # - youtube: URL of the YouTube recordings
@@ -45,38 +45,38 @@
   endsAt: "10:20"
   room: A
   kind: TALK
-  title: 'LT: Connecting the dots – Web Accessibility through Internationalization and Localization'
-  titleJa: 'LT: Connecting the dots – Web Accessibility through Internationalization and Localization'
+  title: "LT: Connecting the dots – Web Accessibility through Internationalization and Localization"
+  titleJa: "LT: Connecting the dots – Web Accessibility through Internationalization and Localization"
   description: >-
     Talk Title: Connecting the Dots: Web Accessibility through Internationalization and Localization
-    
+
     Overview: In today’s globalized world, web products need to be accessible to users of diverse languages, cultures, and abilities. This talk will explore how internationalization (i18n) and localization (l10n) work hand-in-hand with web accessibility standards to create inclusive, globalized digital experiences.
-    
+
     Attendees will gain insights into:
-    
+
     Internationalization: The technical foundations necessary for adapting content for any language or culture, including character encoding, RTL/LTR design, and internationalized code structures.
     Localization: The process of tailoring a product to meet specific cultural, linguistic, and regulatory requirements, such as translating content, modifying UI elements, and adapting formatting conventions.
     Web Accessibility: Ensuring that web content is robust and accessible to users with disabilities across different locales, focusing on the intersections between i18n, l10n, and accessibility standards (WCAG).
-    
+
     Key Takeaways:
-    
+
     How to architect products that are both culturally adaptable and accessible to all users, regardless of language or physical ability.
     Practical examples of i18n and l10n in global brands like IKEA and Pixar, and how they integrate accessibility into their design and development processes.
     Best practices for implementing robust, accessible web applications that cater to diverse user bases without extensive re-engineering.
     Target Audience: Frontend developers, product designers, accessibility advocates, and anyone interested in building inclusive web applications for global audiences.
   descriptionJa: >-
     講演タイトル: 点をつなぐ: 国際化とローカリゼーションによる Web アクセシビリティ
-    
+
     概要: 今日のグローバル化した世界では、Web 製品は、さまざまな言語、文化、能力のユーザーがアクセスできる必要があります。この講演では、国際化 (i18n) とローカライゼーション (l10n) が Web アクセシビリティ標準とどのように連携して、包括的でグローバル化されたデジタル エクスペリエンスを生み出すのかについて説明します。
-    
+
     参加者は以下についての洞察を得ることができます。
-    
+
     国際化: 文字エンコーディング、RTL/LTR 設計、国際化されたコード構造など、コンテンツをあらゆる言語または文化に適応させるために必要な技術的基盤。
     ローカリゼーション: コンテンツの翻訳、UI 要素の変更、書式設定規則の調整など、特定の文化的、言語的、規制要件を満たすように製品を調整するプロセス。
     Web アクセシビリティ: i18n、l10n、およびアクセシビリティ標準 (WCAG) の共通部分に焦点を当て、Web コンテンツが堅牢であり、さまざまなロケールにわたって障害のあるユーザーがアクセスできることを保証します。
-    
+
     重要なポイント:
-    
+
     文化的に適応でき、言語や身体能力に関係なく、すべてのユーザーがアクセスできる製品を設計する方法。
     IKEA や Pixar などの世界的ブランドにおける i18n と l10n の実践例と、アクセシビリティを設計および開発プロセスにどのように組み込んでいるかについて説明します。
     大規模な再エンジニアリングを行わずに、多様なユーザー ベースに対応する、堅牢でアクセスしやすい Web アプリケーションを実装するためのベスト プラクティス。
@@ -94,8 +94,8 @@
   endsAt: "10:30"
   room: A
   kind: TALK
-  title: 'LT: Web can be fun!'
-  titleJa: 'LT: Web can be fun!'
+  title: "LT: Web can be fun!"
+  titleJa: "LT: Web can be fun!"
   description: >-
     Web APIs is capable of way more than we might think. There're so many unusual Web APIs to explore. We'll explore parts of the web that we might not known before. Did you know you can send Bluetooth signal directly to the web? or did you know you can control web by using synthesizer via Web MIDI? In this session, we will play something fun together, by controlling my jacket, and synthesizer, and explore ranges of strange Web APIs.
   descriptionJa: >-
@@ -118,8 +118,8 @@
   endsAt: "10:50"
   room: A
   kind: TALK
-  title: 'LT: Stay Fit, Code Better: An Sportsman’s 10 practical Advice for JavaScript Developers'
-  titleJa: 'LT: Stay Fit, Code Better: An Sportsman’s 10 practical Advice for JavaScript Developers'
+  title: "LT: Stay Fit, Code Better: An Sportsman’s 10 practical Advice for JavaScript Developers"
+  titleJa: "LT: Stay Fit, Code Better: An Sportsman’s 10 practical Advice for JavaScript Developers"
   description: >-
     As developers, we often push our minds and bodies to the limit, spending long hours in front of screens, neglecting physical activity, and compromising our sleep. But just like elite athletes, we need to prioritize our health to maintain peak performance. In this talk, we’ll explore 10 practical health tips and how we can use JavaScript to help track, organize, and implement these habits seamlessly into your daily routine.
   descriptionJa: >-
@@ -137,8 +137,8 @@
   endsAt: "11:00"
   room: A
   kind: TALK
-  title: 'LT: Building a Creative Coding Library for Fun and Learning'
-  titleJa: 'LT: Building a Creative Coding Library for Fun and Learning'
+  title: "LT: Building a Creative Coding Library for Fun and Learning"
+  titleJa: "LT: Building a Creative Coding Library for Fun and Learning"
   description: >-
     In this talk, I will introduce the concept of creative coding and the role of creative coding libraries in blending art and programming. I'll share my experience of building a new creative coding library from scratch—why I chose to do it despite the many libraries already available and why I believe it's a valuable exercise for anyone interested in coding or digital art. Along the way, I'll highlight the key learnings, fun moments, and challenges I encountered during the process. Finally, I’ll wrap up with a live coding demonstration, showcasing the potential of the library and the creative possibilities it offers.
   descriptionJa: >-
@@ -161,8 +161,8 @@
   endsAt: "11:40"
   room: A
   kind: TALK
-  title: 'WebAssembly Unleashed: Powering Server-Side Applications'
-  titleJa: 'WebAssembly Unleashed: Powering Server-Side Applications'
+  title: "WebAssembly Unleashed: Powering Server-Side Applications"
+  titleJa: "WebAssembly Unleashed: Powering Server-Side Applications"
   description: >-
     This talk starts talking about the beginnings of WebAssembly and its contribution to the modern web development as a critical tool to build amazing applications. Later the main topic becomes to explain how this technology can also have a big impact in server-side applications by allowing performant and portable code that can be used across multiple programming languages.
   descriptionJa: >-
@@ -186,7 +186,7 @@
     In web development, perception is reality. A website that feels fast is fast, regardless of the metrics. In web performance, we focus on four key areas: reducing overall load time, ensuring the site is usable as soon as possible, enhancing smoothness and interactivity, and optimising perceived performance. In this talk, we'll explore topics in each of these areas, highlighting proven patterns and techniques from large-scale codebases to create lightning-fast user experiences that effectively engage users. Learn how to make your web applications not just performant but also feel instantaneous. Topics will include reducing layout jank, optimising loading indicators, seeding the data, image loading optimisation, optimistic UI, and much more.
   descriptionJa: >-
     ウェブ開発において、「感じられる速さこそが現実」です。どんなメトリクスが示そうとも、速く感じるウェブサイトは速いのです。この講演では、Reactアプリケーションにおける「知覚されるパフォーマンス」のアートと科学を探求します。大規模なコードベースで実証されたパターンやテクニックを使って、ユーザー体験を飛躍的に向上させ、顧客満足度を高め、コンバージョンを増やす方法を学びます。Reactアプリを単にパフォーマンス向上させるだけでなく、ユーザーに「瞬時に応答する」と感じさせる秘訣をお伝えします。
-    
+
     取り上げるトピックには、レイアウトのガタつき（レイアウトジャンク）の削減・解消、効果的なローディングインジケータの使用、リソースの事前フェッチ、ブラウザキャッシュの活用、画像読み込みの最適化などが含まれます。
   spokenLanguage: en
   slideLanguage: en
@@ -210,23 +210,23 @@
   titleJa: Building AI apps with JavaScript
   description: >-
     This talk guides you through creating more capable web applications using JavaScript , vector databases, semantic search and webllms. We'll explore:
-    
+
     Leveraging vector databases like Supabase for efficient storage and retrieval of high-dimensional data, enabling faster and more accurate similarity searches.
-    
+
     Implementing semantic search to improve content discovery and user experience by understanding the meaning behind queries, not just matching keywords.
-    
+
     Integrating AI agents in JavaScript apps to enable features like Retrieval-Augmented Generation (RAG), allowing your app to provide more contextually relevant responses.
-    
+
     Through practical examples and live coding, we'll see how these technologies work together in JavaScript . You'll learn about embeddings, their role in semantic search and RAG, and how to implement these concepts in your projects.
   descriptionJa: >-
     このトークでは、JavaScript、ベクター データベース、セマンティック検索、webllms を使用して、より高機能な Web アプリケーションを作成する方法を説明します。以下について調べていきます。
-    
+
     Supabase のようなベクトル データベースを活用して高次元データを効率的に保存および取得し、より高速かつ正確な類似性検索を可能にします。
-    
+
     セマンティック検索を実装すると、キーワードの一致だけでなく、クエリの背後にある意味を理解することで、コンテンツの検出とユーザー エクスペリエンスが向上します。
-    
+
     AI エージェントを JavaScript アプリに統合して、検索拡張生成 (RAG) などの機能を有効にし、アプリがよりコンテキストに応じた応答を提供できるようにします。
-    
+
     実際の例とライブコーディングを通じて、これらのテクノロジーが JavaScript でどのように連携するかを見ていきます。埋め込み、セマンティック検索と RAG における埋め込みの役割、およびこれらの概念をプロジェクトに実装する方法について学びます。
   spokenLanguage: en
   slideLanguage: en
@@ -244,35 +244,35 @@
   title: Why Build a Secure Supply Chain Management ?
   titleJa: Why Build a Secure Supply Chain Management ?
   description: >-
-    
+
     Software supply chain security is a critical challenge for the future of software development. As the software supply chain becomes increasingly complex, with more and more components being developed and distributed by third parties, the risk of security vulnerabilities being introduced into the supply chain increases resulting in more attacks and exploits.
-    
+
     In recent years, we have seen a number of high-profile software supply chain attacks, such as the SolarWinds hack and the Log4j vulnerability. These attacks have highlighted the need for organizations to take Software supply chain security seriously.
-    
+
     In my talk, I will dive into several best practices to improve their Software supply chain security posture.
-    
+
     What is a supply chain attack ? Various categories of Supply chain attacks with examples
-    
+
     How the Javascript libraries and dependencies play a vital role in the software supply chain. I will show examples.
-    
+
     Vetting the third-party components - why and how organizations should carefully vet the third-party components they use to ensure that they are from reputable and trustable sources and that they do not contain known vulnerabilities.
-    
+
     What is the supply chain management process and how should we use it to ensure that the software we use is secure and compliant.
     Examples of recent security vulnerability in Javascript  - the recent polyfill.js vulnerability
     Takeaways and closing thoughts
   descriptionJa: >-
     ソフトウェア サプライ チェーンのセキュリティは、ソフトウェア開発の将来にとって重要な課題です。サードパーティによって開発および配布されるコンポーネントが増え、ソフトウェアのサプライ チェーンがますます複雑になるにつれて、セキュリティの脆弱性がサプライ チェーンに持ち込まれるリスクが増大し、その結果、より多くの攻撃や悪用が発生します。
-    
+
     近年、SolarWinds ハッキングや Log4j 脆弱性など、注目を集めるソフトウェア サプライ チェーン攻撃が数多く発生しています。これらの攻撃は、組織がソフトウェア サプライ チェーンのセキュリティを真剣に受け止める必要性を浮き彫りにしました。
-    
+
     私の講演では、ソフトウェア サプライ チェーンのセキュリティ体制を改善するためのいくつかのベスト プラクティスについて詳しく説明します。
-    
+
     サプライチェーン攻撃とは何ですか?さまざまなカテゴリのサプライ チェーン攻撃と例
-    
+
     Javascript ライブラリと依存関係がソフトウェア サプライ チェーンでどのように重要な役割を果たすか。例を示します。
-    
+
     サードパーティ コンポーネントの精査 - 組織が使用するサードパーティ コンポーネントを慎重に精査し、信頼できるソースからのものであること、既知の脆弱性が含まれていないことを確認する必要がある理由と方法。
-    
+
     サプライ チェーン管理プロセスとは何ですか。使用するソフトウェアが安全で準拠していることを確認するには、それをどのように使用する必要があります。
     Javascript の最近のセキュリティ脆弱性の例 - 最近の Polyfill.js の脆弱性
     要点と締めくくりの考え
@@ -298,11 +298,11 @@
   titleJa: Cloudflare Workers in Production
   description: >-
     Cloudflare Workers is a serverless platform that allows you to run JavaScript code on Cloudflare's edge servers. In Japan, it's not yet widely adopted for production use, especially for building ""standard"" SaaS applications. ""standard"" here means applications that have user authentication, database access, and so on. At Spir Inc., we've successfully launched a ""standard"" SaaS application using Cloudflare Workers!
-    
+
     In this talk, I'll share my experience of using Cloudflare Workers in production. My main focus will be on matters around the runtime. The runtime of Cloudflare Workers is `workerd`, which is different from Node.js, Deno, or Bun. I'll provide a brief introduction to workerd and demonstrate how to write and test code that runs on this runtime. You’ll learn what workerd makes possible, as well as its limitations. Additionally, I will address common concerns, such as database access and interaction between services.
   descriptionJa: >-
     Cloudflare Workers は、Cloudflare のエッジ サーバーで JavaScript コードを実行できるサーバーレス プラットフォームです。日本では、実稼働用途、特に「標準」SaaS アプリケーションの構築にはまだ広く採用されていません。ここでの「標準」とは、ユーザー認証やデータベース アクセスなどを備えたアプリケーションを意味します。 Spir Inc. では、Cloudflare Workers を使用して「標準」SaaS アプリケーションの立ち上げに成功しました。
-    
+
     この講演では、本番環境で Cloudflare Workers を使用した私の経験を共有します。私の主な焦点は、ランタイム周りの問題です。 Cloudflare Workers のランタイムは「workerd」であり、Node.js、Deno、Bun とは異なります。ここでは、workerd について簡単に説明し、このランタイムで実行されるコードを作成してテストする方法を示します。 Workerd によって何が可能になるのか、またその制限についても学びます。さらに、データベース アクセスやサービス間の相互作用などの一般的な懸念事項にも対処します。
   spokenLanguage: en
   slideLanguage: en
@@ -321,7 +321,7 @@
   titleJa: Encrypting data in the Browser - Exploring Web Crypto APIs
   description: >-
     In this talk, I will be covering the following things
-    
+
     What is Encryption
     How it works in a traditional Client Server Architecture
     Encrypting your data in the browser - How it enhances security
@@ -337,7 +337,7 @@
     Closing thoughts
   descriptionJa: >-
     この講演では次のことについて説明します
-    
+
     暗号化とは
     従来のクライアントサーバーアーキテクチャでの動作方法
     ブラウザ内のデータを暗号化する - セキュリティを強化する方法
@@ -444,8 +444,8 @@
     todo
   descriptionJa: >-
     todo
-  spokenLanguage: ''
-  slideLanguage: ''
+  spokenLanguage: ""
+  slideLanguage: ""
   slidesEn: ""
   slidesJa: ""
   speakerIDs: []
@@ -470,8 +470,8 @@
   endsAt: "10:20"
   room: B
   kind: TALK
-  title: 'LT: Promise.try: シンプルで強力な同期/非同期統合の未来 - 実装の深層とPromiseの進化'
-  titleJa: 'LT: Promise.try: シンプルで強力な同期/非同期統合の未来 - 実装の深層とPromiseの進化'
+  title: "LT: Promise.try: シンプルで強力な同期/非同期統合の未来 - 実装の深層とPromiseの進化"
+  titleJa: "LT: Promise.try: シンプルで強力な同期/非同期統合の未来 - 実装の深層とPromiseの進化"
   description: >-
     JavaScriptの世界では、同期処理と非同期処理の共存が長年の課題でした。この課題に革新的な解決策をもたらすのが、現在Stage 3にあるPromise.tryです。
     本LTでは、Promise.tryの可能性を探るとともに、より大局的な文脈でのJavaScript Promise進化の潮流を考察します。
@@ -501,14 +501,14 @@
   endsAt: "10:30"
   room: B
   kind: TALK
-  title: 'LT: JavaScriptを支えるエコシステム（漫才）'
-  titleJa: 'LT: JavaScriptを支えるエコシステム（漫才）'
+  title: "LT: JavaScriptを支えるエコシステム（漫才）"
+  titleJa: "LT: JavaScriptを支えるエコシステム（漫才）"
   description: >-
     JavaScriptを支える様々なエコシステムについて、それぞれの特徴や主な違いを漫才の形式で簡潔に紹介します。
-    
-    
+
+
     触れる予定のトピック（※時間の都合により一部のトピックに絞られる可能性があります）
-    
+
     * パッケージマネージャ
         * npm, yarn v1~4, pnpm, Deno, Bun
     * バンドラ
@@ -519,10 +519,10 @@
         * Fastly Compute@Edge, Cloudflare Workers, AWS Lambda@Edge, AWS Cloudfront Functions, Deno Deploy, Vercel Edge Functions
   descriptionJa: >-
     JavaScriptを支える様々なエコシステムについて、それぞれの特徴や主な違いを漫才の形式で簡潔に紹介します。
-    
-    
+
+
     触れる予定のトピック（※時間の都合により一部のトピックに絞られる可能性があります）
-    
+
     * パッケージマネージャ
         * npm, yarn v1~4, pnpm, Deno, Bun
     * バンドラ
@@ -545,8 +545,8 @@
   endsAt: "10:50"
   room: B
   kind: TALK
-  title: 'LT: romajip: 日本の住所CSVデータを活用した英語住所変換ライブラリを作った話'
-  titleJa: 'LT: romajip: 日本の住所CSVデータを活用した英語住所変換ライブラリを作った話'
+  title: "LT: romajip: 日本の住所CSVデータを活用した英語住所変換ライブラリを作った話"
+  titleJa: "LT: romajip: 日本の住所CSVデータを活用した英語住所変換ライブラリを作った話"
   description: >-
     デジタル庁や郵便局は、日本の住所データをCSV形式で公開しています。romajipは、日本の都道府県、市区町村、郡まで含む複雑で巨大なデータセットを最適化されたJSONに変換し、日本語の住所を英語に変換するTypeScriptライブラリです。10分間のライトニングトークでは、romajipを作成した理由、データセット作成時に直面した課題、ライブラリとしてこだわった点などを紹介します。
     github link: https://github.com/Sangun-Kang/romajip
@@ -566,19 +566,19 @@
   endsAt: "11:00"
   room: B
   kind: TALK
-  title: 'LT: ステップバイステップで進めるYahoo!知恵袋のフロントエンドリアーキテクト'
-  titleJa: 'LT: ステップバイステップで進めるYahoo!知恵袋のフロントエンドリアーキテクト'
+  title: "LT: ステップバイステップで進めるYahoo!知恵袋のフロントエンドリアーキテクト"
+  titleJa: "LT: ステップバイステップで進めるYahoo!知恵袋のフロントエンドリアーキテクト"
   description: >-
     概要: Yahoo!知恵袋の20周年を迎え、フロントエンドのスパゲティコード化により開発効率や保守性、品質に課題があります。また生成AIを利用した新機能開発も増加しており、課題解決と新規開発を並行して進める必要があります。
     本LTでは、Yahoo!知恵袋のフロントエンドリアーキテクトの具体的な取り組みと進め方について主に以下の内容について紹介します。
-    
+
     - 大規模システムのTypeScript化: JavaScriptで動作している既存システムをどのようにしてTypeScriptに移行したか。
     - リアーキテクトのプロセス: スパゲティコードを整理し、コードの可読性と保守性を向上させるための具体的な手法。
     - ユニットテストの書き直し: 1ファイルに27000行存在するユニットテストをゼロからどのように書き直したか。
   descriptionJa: >-
     概要: Yahoo!知恵袋の20周年を迎え、フロントエンドのスパゲティコード化により開発効率や保守性、品質に課題があります。また生成AIを利用した新機能開発も増加しており、課題解決と新規開発を並行して進める必要があります。
     本LTでは、Yahoo!知恵袋のフロントエンドリアーキテクトの具体的な取り組みと進め方について主に以下の内容について紹介します。
-    
+
     - 大規模システムのTypeScript化: JavaScriptで動作している既存システムをどのようにしてTypeScriptに移行したか。
     - リアーキテクトのプロセス: スパゲティコードを整理し、コードの可読性と保守性を向上させるための具体的な手法。
     - ユニットテストの書き直し: 1ファイルに27000行存在するユニットテストをゼロからどのように書き直したか。
@@ -599,23 +599,23 @@
   titleJa: React への依存を最小にするフロントエンドの設計
   description: >-
     Remix を利用したサービスを開発しています。
-    
+
     もとは Nuxt v2 で動いていたサービスで、リニューアルにあたって React ベースに rewrite することになり、また、リニューアル版のリリース直後に Next.js App Router から Remix に乗り換えたという経緯を持っています。
-    
+
     弊社の事例のように、エコシステムの栄枯盛衰よりも長い寿命を持つサービスを運営するにあたって、特定のフレームワークに過度の依存をしてしまうと、特に変化の著しいフロントエンドの世界では将来の選択肢を狭めてしまうことになります。
-    
+
     今のアーキテクチャは Remix に留まらず React への依存も最小限となる形でデザインしており、ほとんどのフロントエンドロジックが Vanilla JS (TS)  にあるので、例えば仮に SolidStart や SvelteKit などの React 以外のフレームワークに移行する決定をしても、薄いコンポーネント層だけを移植すればよい構造となっています。
-    
+
     本発表では、フレームワークへの依存を最小にするための基本的な考え方、具体的にどのように実現しているかについてご紹介したいと思います。
   descriptionJa: >-
     Remix を利用したサービスを開発しています。
-    
+
     もとは Nuxt v2 で動いていたサービスで、リニューアルにあたって React ベースに rewrite することになり、また、リニューアル版のリリース直後に Next.js App Router から Remix に乗り換えたという経緯を持っています。
-    
+
     弊社の事例のように、エコシステムの栄枯盛衰よりも長い寿命を持つサービスを運営するにあたって、特定のフレームワークに過度の依存をしてしまうと、特に変化の著しいフロントエンドの世界では将来の選択肢を狭めてしまうことになります。
-    
+
     今のアーキテクチャは Remix に留まらず React への依存も最小限となる形でデザインしており、ほとんどのフロントエンドロジックが Vanilla JS (TS)  にあるので、例えば仮に SolidStart や SvelteKit などの React 以外のフレームワークに移行する決定をしても、薄いコンポーネント層だけを移植すればよい構造となっています。
-    
+
     本発表では、フレームワークへの依存を最小にするための基本的な考え方、具体的にどのように実現しているかについてご紹介したいと思います。
   spokenLanguage: ja
   slideLanguage: ja
@@ -635,16 +635,16 @@
   description: >-
     2024年春React Compilerがお披露目されました。また、Vue.jsはVue Vaporを、SvelteはSvelte v5を開発しており、双方ともSolid(JS)のようなFine Grained Reactivityと呼ばれる手法を採用しています。
     彼らは一体何者で、どのように世界を変えるのでしょうか。
-    
+
     いままで仮想DOMに魂を震えさせていた私たちはどうやら次のステージへと向かうようです。
-    
+
     このセッションでは、Svelte、Vue.js、Solid(JS)が採用するFine Grained Reactivityとは何者か、仮想DOMとの違いは何か、React Compilerで何が変わるのかを確認し、宣言的UIのいまとこれからを考えます。
   descriptionJa: >-
     2024年春React Compilerがお披露目されました。また、Vue.jsはVue Vaporを、SvelteはSvelte v5を開発しており、双方ともSolid(JS)のようなFine Grained Reactivityと呼ばれる手法を採用しています。
     彼らは一体何者で、どのように世界を変えるのでしょうか。
-    
+
     いままで仮想DOMに魂を震えさせていた私たちはどうやら次のステージへと向かうようです。
-    
+
     このセッションでは、Svelte、Vue.js、Solid(JS)が採用するFine Grained Reactivityとは何者か、仮想DOMとの違いは何か、React Compilerで何が変わるのかを確認し、宣言的UIのいまとこれからを考えます。
   spokenLanguage: ja
   slideLanguage: ja
@@ -659,29 +659,29 @@
   endsAt: "13:40"
   room: B
   kind: TALK
-  title: 'Vapor Revolution: Unleashing Vue evolution and Potential with Vapor Mode'
-  titleJa: 'Vapor Revolution: Unleashing Vue evolution and Potential with Vapor Mode'
+  title: "Vapor Revolution: Unleashing Vue evolution and Potential with Vapor Mode"
+  titleJa: "Vapor Revolution: Unleashing Vue evolution and Potential with Vapor Mode"
   description: >-
     2023年 Vue Amsterdam で Vue.js の作者である Evan 氏は Vue.js (以降 Vue 略) の新しいコンパイル戦略として Vapor Mode (以降 Vapor 略) をアナウンスしました。
-    
+
     Vapor は仮想 DOM を使わない Vue のレンダリングモードをサポートするコンパイルモードです。
     Vapor 化された Vue コンポーネントは、従来の仮想 DOM を使ったVueコンポーネントよりも、メモリ使用量削減、ランタイムコードの削減により、パフォーマンスが向上します。
-    
+
     また Vapor は既存の Vue コンポーネントとの互換性を保ちつつ、Vapor 化されたコンポーネントを徐々に導入することができるため、既存の Vue で作られた Web アプリケーションに対して相互運用性(interoperability)も提供します。
-    
+
     Vapor は Vue アプリケーション開発者にそのようなメリットを提供してくれますが、Vapor のアーキテクチャに着目すると Vue 以外の Web フロントエンドフレームワークのコンポーネントに対して新たな可能性を提供してくれることに気づきました。
-    
+
     本発表では、Vapor のコンパイラアーキテクチャについて解説し、デモを交えながら Vapor と Web フロントエンドの今後の可能性を探ります。
   descriptionJa: >-
     2023年 Vue Amsterdam で Vue.js の作者である Evan 氏は Vue.js (以降 Vue 略) の新しいコンパイル戦略として Vapor Mode (以降 Vapor 略) をアナウンスしました。
-    
+
     Vapor は仮想 DOM を使わない Vue のレンダリングモードをサポートするコンパイルモードです。
     Vapor 化された Vue コンポーネントは、従来の仮想 DOM を使ったVueコンポーネントよりも、メモリ使用量削減、ランタイムコードの削減により、パフォーマンスが向上します。
-    
+
     また Vapor は既存の Vue コンポーネントとの互換性を保ちつつ、Vapor 化されたコンポーネントを徐々に導入することができるため、既存の Vue で作られた Web アプリケーションに対して相互運用性(interoperability)も提供します。
-    
+
     Vapor は Vue アプリケーション開発者にそのようなメリットを提供してくれますが、Vapor のアーキテクチャに着目すると Vue 以外の Web フロントエンドフレームワークのコンポーネントに対して新たな可能性を提供してくれることに気づきました。
-    
+
     本発表では、Vapor のコンパイラアーキテクチャについて解説し、デモを交えながら Vapor と Web フロントエンドの今後の可能性を探ります。
   spokenLanguage: ja
   slideLanguage: ja
@@ -726,7 +726,7 @@
     人が行き交う改札口では、スムーズに QR コードを提示する必要があるため、2要素認証にかける時間を減らす必要がありました。
     また、一般的な Web サービスと異なり利用するユーザーの幅が非常に広いです。
     さまざまな方に利用していただくために、迅速なログインの実現を目指してパスキーをはじめとした以下の工夫を導入した事例を紹介します。
-    
+
     - あえて passkey autofill をしないという選択
     - above the fold で表示する UI のスコープのこだわり
     - アクセサビリティ (WCAG)
@@ -737,7 +737,7 @@
     人が行き交う改札口では、スムーズに QR コードを提示する必要があるため、2要素認証にかける時間を減らす必要がありました。
     また、一般的な Web サービスと異なり利用するユーザーの幅が非常に広いです。
     さまざまな方に利用していただくために、迅速なログインの実現を目指してパスキーをはじめとした以下の工夫を導入した事例を紹介します。
-    
+
     - あえて passkey autofill をしないという選択
     - above the fold で表示する UI のスコープのこだわり
     - アクセサビリティ (WCAG)
@@ -761,12 +761,12 @@
   description: >-
     インポートパスのエイリアスを普段設定していますか？ その良し悪しは置いておいて、ツールチェインのすべてを動作させるためには、たくさんの設定ファイルにエイリアスの設定を入れなければなりません。あるいは、それが軽微で済むように追加のモジュールを入れているでしょうか。
     インポートパスのエイリアスに限らずとも、モジュール解決はランタイムやバンドラーだけでなく、Linter等の周辺ツールやエディタが同様に扱えなければなりません。しかしこれらツールのモジュール解決は、それぞれのツールの要求に応じて、しばしば独自のモジュール解決処理を必要とします。
-    
+
     周辺ツールがRust製になったり、ランタイムもバンドラーも多様化しているいま、モジュール解決の相互運用性の現在地を確認します。
   descriptionJa: >-
     インポートパスのエイリアスを普段設定していますか？ その良し悪しは置いておいて、ツールチェインのすべてを動作させるためには、たくさんの設定ファイルにエイリアスの設定を入れなければなりません。あるいは、それが軽微で済むように追加のモジュールを入れているでしょうか。
     インポートパスのエイリアスに限らずとも、モジュール解決はランタイムやバンドラーだけでなく、Linter等の周辺ツールやエディタが同様に扱えなければなりません。しかしこれらツールのモジュール解決は、それぞれのツールの要求に応じて、しばしば独自のモジュール解決処理を必要とします。
-    
+
     周辺ツールがRust製になったり、ランタイムもバンドラーも多様化しているいま、モジュール解決の相互運用性の現在地を確認します。
   spokenLanguage: ja
   slideLanguage: ja
@@ -785,25 +785,25 @@
   titleJa: Modular Monolith Monorepo
   description: >-
     ## イントロ
-    
+
     monorepoの採用が増える中、その真価を発揮させるには単にソースコードを1つのリポジトリに入れるだけでは不十分です。
-    
+
     本セッションでは、スタートアップの開発組織視点から、シンプルさを保ちながらmonorepoのメリットを最大化する「Modular Monolith Monorepo」のアプローチについて、具体的な実装例と意思決定プロセスを交えて紹介します。
-    
+
     ## 想定する対象者
-    
+
     - monorepoで開発する・したい人
     - monorepoを管理する・したい人
     - ライブラリの依存管理に課題を抱えている人
-    
+
     ## 学べること
-    
+
     実践的なmonorepoのプラクティスと、それに至るまでの意思決定プロセス・コミュニケーションデザインについて
-    
+
     ### 内容
-    
+
     これは現在考えてる発表内容ですが、大まかなイメージです。
-    
+
     - monorepoのメリットとそれを最大化する方法
         - newmoではModular MonolithとMonorepoで開発をしている
         - monorepoのメリット
@@ -831,33 +831,33 @@
             - 共有されるコンポーネントとして作る基準の設計
             - 共有ライブラリとアプリケーション間の責任共有モデル
                 - 共有ライブラリ（提供側）とアプリケーション（利用者側）での責務をしっかりと線引したテスト設計
-    
+
     ## 発表の参考情報
-    
+
     - https://j3t.ch/tech/modular-monolith-monorepo/
     - https://monorepo.tools/
     - https://tech.newmo.me/entry/one-version-rule-built-on-pnpm-catalog
   descriptionJa: >-
     ## イントロ
-    
+
     monorepoの採用が増える中、その真価を発揮させるには単にソースコードを1つのリポジトリに入れるだけでは不十分です。
-    
+
     本セッションでは、スタートアップの開発組織視点から、シンプルさを保ちながらmonorepoのメリットを最大化する「Modular Monolith Monorepo」のアプローチについて、具体的な実装例と意思決定プロセスを交えて紹介します。
-    
+
     ## 想定する対象者
-    
+
     - monorepoで開発する・したい人
     - monorepoを管理する・したい人
     - ライブラリの依存管理に課題を抱えている人
-    
+
     ## 学べること
-    
+
     実践的なmonorepoのプラクティスと、それに至るまでの意思決定プロセス・コミュニケーションデザインについて
-    
+
     ### 内容
-    
+
     これは現在考えてる発表内容ですが、大まかなイメージです。
-    
+
     - monorepoのメリットとそれを最大化する方法
         - newmoではModular MonolithとMonorepoで開発をしている
         - monorepoのメリット
@@ -885,9 +885,9 @@
             - 共有されるコンポーネントとして作る基準の設計
             - 共有ライブラリとアプリケーション間の責任共有モデル
                 - 共有ライブラリ（提供側）とアプリケーション（利用者側）での責務をしっかりと線引したテスト設計
-    
+
     ## 発表の参考情報
-    
+
     - https://j3t.ch/tech/modular-monolith-monorepo/
     - https://monorepo.tools/
     - https://tech.newmo.me/entry/one-version-rule-built-on-pnpm-catalog
@@ -908,13 +908,13 @@
   titleJa: JavaScriptのイテレータとイテラブルの概要と課題、未来
   description: >-
     JavaScriptにはイテレータとイテラブルという概念があります。これらの概念はJavaScriptでのプログラミングの幅を広げてくれます。
-    
+
     しかし、現実のJavaScriptプログラミングでは、イテレータやイテラブルが意図して使われているのを見かけることはあまり多くありません。これは、現状のイテレータとイテラブルの使い勝手があまり良くないためだと私は思っています。
-    
+
     この課題を解決するIterator Helpersという提案があります。この提案は現在ステージ3（JSConfが開催されるころには、もうステージ4になっているかもしれません）で、メジャーなブラウザへの実装がほとんど完了しています。
-    
+
     このセッションでは、イテレータとイテラブルについて、以下のことがらについて話します：
-    
+
     ・JavaScriptにおけるイテレータとイテラブルとは何か
     ・今のイテレータとイテラブルが抱えている課題
     ・Iterator Helpersが、それらの課題をどのように解決するのか
@@ -922,13 +922,13 @@
     ・これからの、イテレータとイテラブルを使ったプログラミングについての考察
   descriptionJa: >-
     JavaScriptにはイテレータとイテラブルという概念があります。これらの概念はJavaScriptでのプログラミングの幅を広げてくれます。
-    
+
     しかし、現実のJavaScriptプログラミングでは、イテレータやイテラブルが意図して使われているのを見かけることはあまり多くありません。これは、現状のイテレータとイテラブルの使い勝手があまり良くないためだと私は思っています。
-    
+
     この課題を解決するIterator Helpersという提案があります。この提案は現在ステージ3（JSConfが開催されるころには、もうステージ4になっているかもしれません）で、メジャーなブラウザへの実装がほとんど完了しています。
-    
+
     このセッションでは、イテレータとイテラブルについて、以下のことがらについて話します：
-    
+
     ・JavaScriptにおけるイテレータとイテラブルとは何か
     ・今のイテレータとイテラブルが抱えている課題
     ・Iterator Helpersが、それらの課題をどのように解決するのか
@@ -947,8 +947,8 @@
   endsAt: "10:20"
   room: C
   kind: TALK
-  title: 'LT: UI 開発における ヘッドレス UI ライブラリの重要性とデザインシステムへの取り入れ方'
-  titleJa: 'LT: UI 開発における ヘッドレス UI ライブラリの重要性とデザインシステムへの取り入れ方'
+  title: "LT: UI 開発における ヘッドレス UI ライブラリの重要性とデザインシステムへの取り入れ方"
+  titleJa: "LT: UI 開発における ヘッドレス UI ライブラリの重要性とデザインシステムへの取り入れ方"
   description: >-
     昨今の Web 開発における UI はますます複雑化し、アクセシビリティの重要性が高まっています。ブラウザの標準機能だけでは実現できない複雑な UI を実装する際、アクセシビリティに関する誤った実装が原因で、ユーザー体験を損なう可能性があります。ヘッドレス UI ライブラリは、あらかじめアクセシビリティに配慮されたコンポーネントを提供することで、開発者がこれらの問題に悩まされることなく、高品質な UI を構築できるようになります。本セッションでは、ヘッドレス UI ライブラリを活用し、デザインシステムの一部として、アクセシブルでカスタマイズ可能な UI を構築する方法を紹介します。
   descriptionJa: >-
@@ -966,27 +966,27 @@
   endsAt: "10:30"
   room: C
   kind: TALK
-  title: 'LT: A Tour of Anti-patterns for Functional Programming'
-  titleJa: 'LT: A Tour of Anti-patterns for Functional Programming'
+  title: "LT: A Tour of Anti-patterns for Functional Programming"
+  titleJa: "LT: A Tour of Anti-patterns for Functional Programming"
   description: >-
     In recent years, with the rise of frameworks like React and Elm, the concept of ""Functional Programming"" has become much more familiar. Coupled with the publication of the Japanese translation of ""Domain Modeling Made Functional"", interest in this area seems to be growing even further.
-    
+
     In this lightning talk, I’ll introduce some common challenges developers tend to face when applying functional programming techniques in JavaScript / TypeScript development.
-    
+
     ---
-    
+
     近年、React や Elm の台頭により ""関数型プログラミング"" の考え方は身近なものとなり、『Domain Modeling Made Functional』の邦訳版出版なども相まって、関心度はさらに高まっているように思います。
-    
+
     この LT では、関数型プログラミングの各手法を JavaScript / TypeScript 開発へ適用するにあたって、陥りがちな困難をご紹介します。
   descriptionJa: >-
     In recent years, with the rise of frameworks like React and Elm, the concept of ""Functional Programming"" has become much more familiar. Coupled with the publication of the Japanese translation of ""Domain Modeling Made Functional"", interest in this area seems to be growing even further.
-    
+
     In this lightning talk, I’ll introduce some common challenges developers tend to face when applying functional programming techniques in JavaScript / TypeScript development.
-    
+
     ---
-    
+
     近年、React や Elm の台頭により ""関数型プログラミング"" の考え方は身近なものとなり、『Domain Modeling Made Functional』の邦訳版出版なども相まって、関心度はさらに高まっているように思います。
-    
+
     この LT では、関数型プログラミングの各手法を JavaScript / TypeScript 開発へ適用するにあたって、陥りがちな困難をご紹介します。
   spokenLanguage: ja
   slideLanguage: en
@@ -1001,8 +1001,8 @@
   endsAt: "10:50"
   room: C
   kind: TALK
-  title: 'LT: Storybook との上手な向き合い方を考える'
-  titleJa: 'LT: Storybook との上手な向き合い方を考える'
+  title: "LT: Storybook との上手な向き合い方を考える"
+  titleJa: "LT: Storybook との上手な向き合い方を考える"
   description: >-
     今ではすっかり「便利だし入れておこう」枠となった Storybook。しかし手軽に導入することはできても(できるかな、できない時もある)、それを上手にプロダクトで活かし、保守するのは難しい今日この頃。この LT では Storybook 公式の推奨する向き合い方と比較しながら、実際に業務で「気楽」に最大限のリターンを得る向き合い方を考えます。
   descriptionJa: >-
@@ -1020,13 +1020,13 @@
   endsAt: "11:00"
   room: C
   kind: TALK
-  title: 'LT: あなたの知らない Function.prototype.toString() の世界'
-  titleJa: 'LT: あなたの知らない Function.prototype.toString() の世界'
+  title: "LT: あなたの知らない Function.prototype.toString() の世界"
+  titleJa: "LT: あなたの知らない Function.prototype.toString() の世界"
   description: >-
     JavaScript には Function.prototype.toString() という API があります。この API を使うと、関数本体のソースコードを文字列として取得できます。
     一見すると何の使い道があるか分からないかもしれません。しかし、関数本体のソースコードを取得できるということは、実行時に関数のソースコードを静的解析できることを意味します。また、関数をシリアライズしてどこかに転送した後、デシリアライズして実行するといったことも可能です。この特徴は、JavaScript に大きな力をもたらします。
     このトークでは、 Function.prototype.toString() はどんな API なのか、どういう使い道があるのか、世の中のライブラリで利用されている実用的なものから、狂った使い方まで紹介します。
-    
+
     - リモート関数 (puppeteer の page.evaluate())
     - ネイティブコード判定
     - tempalte literal を使わない複数行文字列リテラル
@@ -1035,7 +1035,7 @@
     JavaScript には Function.prototype.toString() という API があります。この API を使うと、関数本体のソースコードを文字列として取得できます。
     一見すると何の使い道があるか分からないかもしれません。しかし、関数本体のソースコードを取得できるということは、実行時に関数のソースコードを静的解析できることを意味します。また、関数をシリアライズしてどこかに転送した後、デシリアライズして実行するといったことも可能です。この特徴は、JavaScript に大きな力をもたらします。
     このトークでは、 Function.prototype.toString() はどんな API なのか、どういう使い道があるのか、世の中のライブラリで利用されている実用的なものから、狂った使い方まで紹介します。
-    
+
     - リモート関数 (puppeteer の page.evaluate())
     - ネイティブコード判定
     - tempalte literal を使わない複数行文字列リテラル
@@ -1053,8 +1053,8 @@
   endsAt: "11:40"
   room: C
   kind: TALK
-  title: 'You Don’t Know Figma Yet - FigmaをJSでハックする'
-  titleJa: 'You Don’t Know Figma Yet - FigmaをJSでハックする'
+  title: "You Don’t Know Figma Yet - FigmaをJSでハックする"
+  titleJa: "You Don’t Know Figma Yet - FigmaをJSでハックする"
   description: >-
     Figmaはデザイナーが扱うGUIのツールとしての印象は強いかもしれませんが、実はAPIをつかって色々なことができます。
     プロダクト開発を効率化する、面倒な作業を自動化する...コードをかけるエンジニアだからこそできるFigmaの「遊び方」をお話します。
@@ -1075,8 +1075,8 @@
   endsAt: "12:10"
   room: C
   kind: TALK
-  title: '30 Minutes to Understand All of `RegExp` Syntax'
-  titleJa: '30 Minutes to Understand All of `RegExp` Syntax'
+  title: "30 Minutes to Understand All of `RegExp` Syntax"
+  titleJa: "30 Minutes to Understand All of `RegExp` Syntax"
   description: >-
     意味を理解しないまま、正規表現を書いたりコピペしたりしていませんか？そんなあなたのために、正規表現のすべての構文を解説する30分です。
     最新のES2024までをカバーしつつ、来たるES2025やまだProposal段階の仕様についても紹介します。
@@ -1098,15 +1098,15 @@
   endsAt: "13:40"
   room: C
   kind: TALK
-  title: 'The challenges of web apps: what we’ve solved and what’s next?'
-  titleJa: 'The challenges of web apps: what we’ve solved and what’s next?'
+  title: "The challenges of web apps: what we’ve solved and what’s next?"
+  titleJa: "The challenges of web apps: what we’ve solved and what’s next?"
   description: >-
     The complexity of an average web app has been increasing over time, and so are the tools and frameworks we’re using. There were problems that we as web developers don’t have to worry about anymore: interactivity (the rise of SPAs in early 2010), declarative apps and effective DOM updates (with the introduction of React in 2013), state management, and now, performance, bundle size, time to interactive, and DX (modern frameworks such as Next.js, Qwik, Svelte, etc.). In this talk, we will look at the evolution of web apps and these problems that have been driving the progress. We will start with simple questions such as “but wait, why are there Server Components in the first place? How did we get there?”. The big unanswered question though is “what’s coming next?”.
-    
+
     Who is this talk for? For beginner and experienced front-end developers, as well as back-end engineers who want to understand modern frameworks and their motivations.
   descriptionJa: >-
     平均的な Web アプリの複雑さは時間の経過とともに増加しており、使用しているツールやフレームワークも複雑になっています。私たち Web 開発者がもう心配する必要のない問題がありました。対話性 (2010 年初頭の SPA の台頭)、宣言型アプリと効果的な DOM 更新 (2013 年の React の導入)、状態管理、そして現在、パフォーマンス、バンドル サイズ、インタラクティブ化までの時間、DX (Next.js、Qwik、Svelte などの最新のフレームワーク)。この講演では、Web アプリの進化と、その進歩を促進しているこれらの問題について見ていきます。 「でもちょっと待って、そもそもなぜサーバー コンポーネントがあるの?」というような単純な質問から始めます。どうやってそこにたどり着いたの？」しかし、答えのない大きな疑問は、「次に何が起こるのか?」ということです。
-    
+
     この話は誰に向けてですか？初心者および経験豊富なフロントエンド開発者、および最新のフレームワークとその動機を理解したいバックエンド エンジニア向け。
   spokenLanguage: en
   slideLanguage: en
@@ -1121,46 +1121,46 @@
   endsAt: "14:10"
   room: C
   kind: TALK
-  title: 'Boost your Test Implementation in Javascript by 10x?'
-  titleJa: 'Boost your Test Implementation in Javascript by 10x?'
+  title: "Boost your Test Implementation in Javascript by 10x?"
+  titleJa: "Boost your Test Implementation in Javascript by 10x?"
   description: >-
     Elevator Pitch
     ---------------
     How can we facilitate involving everyone in testing, namely holistic testing, and making collaboration as a whole team? In one of my last projects, I experienced developing a framework, by which we not only easily onboarded all parties in automation, but also reduced duplication. In this talk, I will share my story to reduce the average test implementation duration from 5 hours to 30 mins. 
-    
+
     Problem:
     ---------------
     There are various problems in testing. Firstly, to encourage holistic testing, we have to spread the quality mindset and make everyone (including developers and other roles) involved. For this purpose, test implementation should be simplified to facilitate this process.
-    
+
     Secondly, especially in large organizations, several teams or groups are trying to cope with the same or similar technical challenges in different ways. They are even unaware of each other. To summarize:
     * There is no standard among these teams: Each is following a different approach/strategy.
     * Some of them are struggling with problems, which were solved by others. The effort is duplicated.
-    
+
     To have a better understanding of the implementation variations, I attached a slide where I showed how a simple scenario could be automated in 4 different ways:
     https://drive.google.com/file/d/1c0aboWtk9WffpxNHCSuooI3QfvrrTsD0
-    
+
     Solution:
     ---------------
     We came up with the centralized test framework development idea. The motivation was to develop a framework in which the most common problems were handled and serve the teams. In this way, we would remove the imbalance, support those who are struggling with the problems that were solved by others, and ensure the code quality in all test frameworks used by several teams.
-    
+
     I will show the architecture of a well-structured central framework, which includes: 
-    
+
     * Test runner
     * Parallelization (in local and remote, in spec and test levels)
     * Retries (in test and failing requests level)
     * Test reporter (Test level isolated execution details)
     * Config management (Execution parameters)
     * Execution Metrics collection
-    
+
     Outcomes:
     ---------------
     The achievements of the distributed central framework are:
-    
+
     * Ease of Automation: Average test automation duration from 5 hours to 30 mins
     * Execution speed: Fast runs
     * Reliability: Low false alarm rate
     * Maintainability: Fast test fixes
-    
+
     Takeaways
     ---------------
     In this session, attendees will see:
@@ -1168,7 +1168,7 @@
     * Ways to improve the reusability of tests
     * Solutions against flakiness and maintenance.
     * Ways to improve troubleshooting in test executions
-    
+
     Agenda
     ---------------
     7 mins: Introduction: Problem definition, Proposal: Benefits of a distributed test package
@@ -1176,24 +1176,24 @@
     5 mins: Architecture: Building the components
     5 mins: Monitoring: Key quality metrics
     5 mins: Summary & QA
-    
+
   descriptionJa: >-
     **エレベーターピッチ**
     ---------------
     全員がテストに参加しやすくするにはどうすればよいか、つまりホリスティックなテストを促進し、チーム全体でのコラボレーションを実現するにはどうすればよいのでしょうか。私が最近のプロジェクトで経験したのは、すべての関係者を自動化に簡単に参加させ、重複を減らすフレームワークの開発でした。この講演では、テストの実装時間を平均5時間から30分に短縮した話を共有します。
-    
+
     **課題**
     ---------------
     テストにはさまざまな課題があります。まず、ホリスティックなテストを推進するためには、品質マインドを広め、開発者や他の役割を含めて全員を巻き込む必要があります。そのためには、テスト実装を簡素化し、このプロセスを促進する必要があります。
-    
+
     次に、特に大規模な組織では、複数のチームやグループが同じ技術的な課題に異なる方法で取り組んでおり、互いに存在を知らないことがよくあります。要するに、次のような問題があります：
     * チーム間で標準がない：各チームが異なるアプローチや戦略を採用している。
     * 一部のチームは、他のチームがすでに解決した問題に取り組んでおり、努力が重複している。
-    
+
     **解決策**
     ---------------
     そこで、私たちは中央集中型のテストフレームワークを開発するアイデアを思いつきました。このフレームワークは共通の問題に対応し、各チームに提供することで、不均衡を解消し、他のチームがすでに解決した問題に苦しむチームを支援し、複数のチームが使用するすべてのテストフレームワークでコード品質を確保します。
-    
+
     講演では、以下を含む、構造化された中央フレームワークのアーキテクチャを紹介します：
     * テストランナー
     * 並列実行（ローカルとリモート、specレベルとテストレベル）
@@ -1201,7 +1201,7 @@
     * テストレポーター（テストレベルでの詳細な実行データ）
     * 設定管理（実行パラメータ）
     * 実行メトリクスの収集
-    
+
     **成果**
     ---------------
     分散型の中央フレームワークがもたらした成果は次の通りです：
@@ -1209,7 +1209,7 @@
     * 実行速度の向上：高速な実行
     * 信頼性：低い誤警報率
     * 保守性：迅速なテスト修正
-    
+
     **学べること**
     ---------------
     このセッションでは、参加者は次のことを学びます：
@@ -1217,7 +1217,7 @@
     * テストの再利用性を向上させる方法
     * フレーク問題と保守性への対策
     * テスト実行中のトラブルシューティングを改善する方法
-    
+
     **アジェンダ**
     ---------------
     7分: 導入：問題の定義、提案：分散テストパッケージのメリット
@@ -1238,15 +1238,15 @@
   endsAt: "14:50"
   room: C
   kind: TALK
-  title: 'LINEヤフーにおけるPrerender技術の導入とその効果'
-  titleJa: 'LINEヤフーにおけるPrerender技術の導入とその効果'
+  title: "LINEヤフーにおけるPrerender技術の導入とその効果"
+  titleJa: "LINEヤフーにおけるPrerender技術の導入とその効果"
   description: >-
     LINEヤフーは快適なユーザー体験を追求するために、表示パフォーマンスの改善に取り組んでいます。その取組の1つとして、私達はSpeculationRulesAPIを用いてページを事前にレンダリングし、Yahoo! JAPAN トップページとYahoo!ニュース間の遷移において、その結果を検証してきました。
-    
+
     本セッションでは、Web標準やJavaScriptエコシステムがこれまでどのような先読みの技術を扱ってきたかその変遷を振り返りながら、SpeculationRulesAPIの基本的な仕組みとその利点について説明し、どのようにしてYahoo! JAPANのユーザー体験を向上させたかを具体例を交えて紹介します。加えて、今回の結果をもとに、導入に際して得られたノウハウや課題、重要なビジネスKPIにどう影響したか、ユーザーエンゲージメントがどの程度向上したか、サーバーリソースにどの程度影響があるのか、などについて具体的なデータをもとに解説します。WebにおけるPrerender技術を適用するべきポイントの可能性を探り、プロダクトに取り入れるために参考となる情報を提供します。
   descriptionJa: >-
     LINEヤフーは快適なユーザー体験を追求するために、表示パフォーマンスの改善に取り組んでいます。その取組の1つとして、私達はSpeculationRulesAPIを用いてページを事前にレンダリングし、Yahoo! JAPAN トップページとYahoo!ニュース間の遷移において、その結果を検証してきました。
-    
+
     本セッションでは、Web標準やJavaScriptエコシステムがこれまでどのような先読みの技術を扱ってきたかその変遷を振り返りながら、SpeculationRulesAPIの基本的な仕組みとその利点について説明し、どのようにしてYahoo! JAPANのユーザー体験を向上させたかを具体例を交えて紹介します。加えて、今回の結果をもとに、導入に際して得られたノウハウや課題、重要なビジネスKPIにどう影響したか、ユーザーエンゲージメントがどの程度向上したか、サーバーリソースにどの程度影響があるのか、などについて具体的なデータをもとに解説します。WebにおけるPrerender技術を適用するべきポイントの可能性を探り、プロダクトに取り入れるために参考となる情報を提供します。
   spokenLanguage: ja
   slideLanguage: ja
@@ -1261,10 +1261,10 @@
   endsAt: "15:20"
   room: C
   kind: TALK
-  title: 'How to automate your murder mystery: immersive games in your home'
-  titleJa: 'How to automate your murder mystery: immersive games in your home'
+  title: "How to automate your murder mystery: immersive games in your home"
+  titleJa: "How to automate your murder mystery: immersive games in your home"
   description: >-
-    Have you hosted a murder mystery party but dreaded the paper puzzles and constant character confusion? For Halloween, we tricked out our party with Node.js by building a electromagnetic treasure chest, IoT-powered dramatic deaths, and digital character sheet. We relied on JavaScript to enhance the immerse role-playing game and elevated our home into an escape room. Come learn how to use your programming skills to become the ultimate party host! 
+    Have you hosted a murder mystery party but dreaded the paper puzzles and constant character confusion? For Halloween, we tricked out our party with Node.js by building a electromagnetic treasure chest, IoT-powered dramatic deaths, and digital character sheet. We relied on JavaScript to enhance the immerse role-playing game and elevated our home into an escape room. Come learn how to use your programming skills to become the ultimate party host!
   descriptionJa: >-
     ハロウィンにミステリーパーティーを開催したけど、紙のパズルやキャラクターの混乱に悩まされたことはありませんか？私たちはNode.jsを使って、エレクトロマグネティックの宝箱やIoTで制御されたドラマチックな「死」、そしてデジタルキャラクターシートを作り、パーティーをレベルアップさせました。JavaScriptを駆使して、没入感あふれるロールプレイングゲームを強化し、家をまるで脱出ゲームのように変身させました。プログラミングスキルを使って、究極のパーティーホストになる方法を学んでみませんか？
   spokenLanguage: en
@@ -1280,10 +1280,10 @@
   endsAt: "16:00"
   room: C
   kind: TALK
-  title: 'ESLintのカスタムルールで治安維持活動をする'
-  titleJa: 'ESLintのカスタムルールで治安維持活動をする'
-  description: ''
-  descriptionJa: ''
+  title: "ESLintのカスタムルールで治安維持活動をする"
+  titleJa: "ESLintのカスタムルールで治安維持活動をする"
+  description: ""
+  descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
   slidesEn: ""
@@ -1298,10 +1298,10 @@
   endsAt: "16:30"
   room: C
   kind: TALK
-  title: '@effect/schemaによる型安全な軽量DDDの実践'
-  titleJa: '@effect/schemaによる型安全な軽量DDDの実践'
-  description: ''
-  descriptionJa: ''
+  title: "@effect/schemaによる型安全な軽量DDDの実践"
+  titleJa: "@effect/schemaによる型安全な軽量DDDの実践"
+  description: ""
+  descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
   slidesEn: ""
@@ -1316,10 +1316,10 @@
   endsAt: "11:40"
   room: D
   kind: TALK
-  title: '未定'
-  titleJa: '未定'
-  description: ''
-  descriptionJa: ''
+  title: "未定"
+  titleJa: "未定"
+  description: ""
+  descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
   slidesEn: ""
@@ -1334,8 +1334,8 @@
   endsAt: "12:10"
   room: D
   kind: TALK
-  title: '(仮)生成AIでコーディング試験を解いてみよう'
-  titleJa: '(仮)生成AIでコーディング試験を解いてみよう'
+  title: "(仮)生成AIでコーディング試験を解いてみよう"
+  titleJa: "(仮)生成AIでコーディング試験を解いてみよう"
   description: >-
     todo
   descriptionJa: >-
@@ -1354,10 +1354,10 @@
   endsAt: "13:40"
   room: D
   kind: TALK
-  title: 'Yahoo! JAPANトップページにおけるマイクロフロントエンド - 大規模組織におけるFE開発を加速させるには'
-  titleJa: 'Yahoo! JAPANトップページにおけるマイクロフロントエンド - 大規模組織におけるFE開発を加速させるには'
-  description: ''
-  descriptionJa: ''
+  title: "Yahoo! JAPANトップページにおけるマイクロフロントエンド - 大規模組織におけるFE開発を加速させるには"
+  titleJa: "Yahoo! JAPANトップページにおけるマイクロフロントエンド - 大規模組織におけるFE開発を加速させるには"
+  description: ""
+  descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
   slidesEn: ""
@@ -1372,10 +1372,10 @@
   endsAt: "14:10"
   room: D
   kind: TALK
-  title: '電話を切らさない技術：電話自動応答サービスを支えるフロントエンド'
-  titleJa: '電話を切らさない技術：電話自動応答サービスを支えるフロントエンド'
-  description: ''
-  descriptionJa: ''
+  title: "電話を切らさない技術：電話自動応答サービスを支えるフロントエンド"
+  titleJa: "電話を切らさない技術：電話自動応答サービスを支えるフロントエンド"
+  description: ""
+  descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
   slidesEn: ""
@@ -1390,10 +1390,10 @@
   endsAt: "14:50"
   room: D
   kind: TALK
-  title: 'Cosenseのフロントエンドでのパフォーマンスチューニング'
-  titleJa: 'Cosenseのフロントエンドでのパフォーマンスチューニング'
-  description: ''
-  descriptionJa: ''
+  title: "Cosenseのフロントエンドでのパフォーマンスチューニング"
+  titleJa: "Cosenseのフロントエンドでのパフォーマンスチューニング"
+  description: ""
+  descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
   slidesEn: ""
@@ -1408,10 +1408,10 @@
   endsAt: "15:20"
   room: D
   kind: TALK
-  title: '静的解析を活用したi18n対応'
-  titleJa: '静的解析を活用したi18n対応'
-  description: ''
-  descriptionJa: ''
+  title: "静的解析を活用したi18n対応"
+  titleJa: "静的解析を活用したi18n対応"
+  description: ""
+  descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
   slidesEn: ""
@@ -1426,10 +1426,10 @@
   endsAt: "16:00"
   room: D
   kind: TALK
-  title: 'クルマのサブスクサービスをNext.jsで内製化した経験とその1年後（仮）'
-  titleJa: 'クルマのサブスクサービスをNext.jsで内製化した経験とその1年後（仮）'
-  description: ''
-  descriptionJa: ''
+  title: "クルマのサブスクサービスをNext.jsで内製化した経験とその1年後（仮）"
+  titleJa: "クルマのサブスクサービスをNext.jsで内製化した経験とその1年後（仮）"
+  description: ""
+  descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
   slidesEn: ""
@@ -1444,10 +1444,10 @@
   endsAt: "16:30"
   room: D
   kind: TALK
-  title: '徹底解剖！医療業務システムのReactコンポーネント設計'
-  titleJa: '徹底解剖！医療業務システムのReactコンポーネント設計'
-  description: ''
-  descriptionJa: ''
+  title: "徹底解剖！医療業務システムのReactコンポーネント設計"
+  titleJa: "徹底解剖！医療業務システムのReactコンポーネント設計"
+  description: ""
+  descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
   slidesEn: ""
