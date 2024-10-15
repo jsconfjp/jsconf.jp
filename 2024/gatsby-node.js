@@ -59,7 +59,7 @@ exports.createPages = ({ graphql, actions }) => {
                 date
                 startsAt
                 endsAt
-                room
+                track
                 youtube
               }
             }

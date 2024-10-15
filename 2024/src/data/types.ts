@@ -1,3 +1,5 @@
+import { Rooms } from "../util/misc"
+
 export type TalkType = {
   uuid: string
   kind:
@@ -19,7 +21,7 @@ export type TalkType = {
   startsAt: string
   endsAt: string
   hiddenTimeBoxes: string[] | null
-  room: "A" | "B"
+  track: Rooms
   slidesEn: string
   slidesJa: string
   youtube: string

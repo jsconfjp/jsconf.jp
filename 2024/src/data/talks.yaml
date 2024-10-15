@@ -9,7 +9,7 @@
 #   - If the event is held for only one day, it will all be `day1`.
 #   - @see src/util/misc.ts
 # - startsAt, endsAt: Zero-filled `HH:MM` format
-# - room: A, B, C, ..., Depends on how many tracks we have.
+# - track: A, B, C, ..., Depends on how many tracks we have.
 #   - @see src/util/misc.ts
 # - speakerIDs: UUID list of speakers in charge of the talk
 #   - For CFP-based talks, there should be at least one speaker.
@@ -31,19 +31,19 @@
 - date: day1
   startsAt: "09:30"
   endsAt: "10:00"
-  room: A
+  track: A
   kind: OPEN
 - date: day1
   startsAt: "10:00"
   endsAt: "10:10"
-  room: A
+  track: A
   kind: OPENING_TALK
   youtube: ""
 - uuid: sahil-khokhar
   date: day1
   startsAt: "10:10"
   endsAt: "10:20"
-  room: A
+  track: A
   kind: TALK
   title: "LT: Connecting the dots – Web Accessibility through Internationalization and Localization"
   titleJa: "LT: Connecting the dots – Web Accessibility through Internationalization and Localization"
@@ -92,7 +92,7 @@
   date: day1
   startsAt: "10:20"
   endsAt: "10:30"
-  room: A
+  track: A
   kind: TALK
   title: "LT: Web can be fun!"
   titleJa: "LT: Web can be fun!"
@@ -110,13 +110,13 @@
 - date: day1
   startsAt: "10:30"
   endsAt: "10:40"
-  room: A
+  track: A
   kind: BREAK
 - uuid: csaba-tamas
   date: day1
   startsAt: "10:40"
   endsAt: "10:50"
-  room: A
+  track: A
   kind: TALK
   title: "LT: Stay Fit, Code Better: An Sportsman’s 10 practical Advice for JavaScript Developers"
   titleJa: "LT: Stay Fit, Code Better: An Sportsman’s 10 practical Advice for JavaScript Developers"
@@ -135,7 +135,7 @@
   date: day1
   startsAt: "10:50"
   endsAt: "11:00"
-  room: A
+  track: A
   kind: TALK
   title: "LT: Building a Creative Coding Library for Fun and Learning"
   titleJa: "LT: Building a Creative Coding Library for Fun and Learning"
@@ -153,13 +153,13 @@
 - date: day1
   startsAt: "11:00"
   endsAt: "11:10"
-  room: A
+  track: A
   kind: BREAK
 - uuid: chris-fuentes
   date: day1
   startsAt: "11:10"
   endsAt: "11:40"
-  room: A
+  track: A
   kind: TALK
   title: "WebAssembly Unleashed: Powering Server-Side Applications"
   titleJa: "WebAssembly Unleashed: Powering Server-Side Applications"
@@ -178,7 +178,7 @@
   date: day1
   startsAt: "11:40"
   endsAt: "12:10"
-  room: A
+  track: A
   kind: TALK
   title: Creating Fast-Feeling Web Apps
   titleJa: Creating Fast-Feeling Web Apps
@@ -198,13 +198,13 @@
 - date: day1
   startsAt: "12:10"
   endsAt: "13:10"
-  room: A
+  track: A
   kind: BREAK
 - uuid: aileen-villanueva-lecuona
   date: day1
   startsAt: "13:10"
   endsAt: "13:40"
-  room: A
+  track: A
   kind: TALK
   title: Building AI apps with JavaScript
   titleJa: Building AI apps with JavaScript
@@ -239,7 +239,7 @@
   date: day1
   startsAt: "13:40"
   endsAt: "14:10"
-  room: A
+  track: A
   kind: TALK
   title: Why Build a Secure Supply Chain Management ?
   titleJa: Why Build a Secure Supply Chain Management ?
@@ -286,13 +286,13 @@
 - date: day1
   startsAt: "14:10"
   endsAt: "14:20"
-  room: A
+  track: A
   kind: BREAK
 - uuid: motoki-shakagori
   date: day1
   startsAt: "14:20"
   endsAt: "14:50"
-  room: A
+  track: A
   kind: TALK
   title: Cloudflare Workers in Production
   titleJa: Cloudflare Workers in Production
@@ -315,7 +315,7 @@
   date: day1
   startsAt: "14:50"
   endsAt: "15:20"
-  room: A
+  track: A
   kind: TALK
   title: Encrypting data in the Browser - Exploring Web Crypto APIs
   titleJa: Encrypting data in the Browser - Exploring Web Crypto APIs
@@ -361,13 +361,13 @@
 - date: day1
   startsAt: "15:20"
   endsAt: "15:30"
-  room: A
+  track: A
   kind: BREAK
 - uuid: mariko-kosaka
   date: day1
   startsAt: "15:30"
   endsAt: "16:00"
-  room: A
+  track: A
   kind: TALK
   title: Web標準の進化を止めない！Baselineというブラウザサポートの考え方
   titleJa: Web標準の進化を止めない！Baselineというブラウザサポートの考え方
@@ -388,7 +388,7 @@
   date: day1
   startsAt: "16:00"
   endsAt: "16:30"
-  room: A
+  track: A
   kind: TALK
   title: Moving Three.js from WebGL to WebGPU
   titleJa: Moving Three.js from WebGL to WebGPU
@@ -406,13 +406,13 @@
 - date: day1
   startsAt: "16:30"
   endsAt: "16:40"
-  room: A
+  track: A
   kind: BREAK
 - uuid: day1-
   date: day1
   startsAt: "16:40"
   endsAt: "17:40"
-  room: A
+  track: A
   kind: TALK
   title: Sponsor LT x 12
   titleJa: Sponsor LT x 12
@@ -430,13 +430,13 @@
 - date: day1
   startsAt: "17:40"
   endsAt: "17:50"
-  room: A
+  track: A
   kind: BREAK
 - uuid: day1-
   date: day1
   startsAt: "17:50"
   endsAt: "18:30"
-  room: A
+  track: A
   kind: TALK
   title: キーノート (TBD)
   titleJa: キーノート (TBD)
@@ -455,20 +455,20 @@
   date: day1
   startsAt: "18:30"
   endsAt: "18:40"
-  room: A
+  track: A
   kind: CLOSING_TALK
   youtube: ""
 - uuid: day1-
   date: day1
   startsAt: "18:40"
   endsAt: "20:00"
-  room: A
+  track: A
   kind: AFTER_PARTY
 - uuid: saku
   date: day1
   startsAt: "10:10"
   endsAt: "10:20"
-  room: B
+  track: B
   kind: TALK
   title: "LT: Promise.try: シンプルで強力な同期/非同期統合の未来 - 実装の深層とPromiseの進化"
   titleJa: "LT: Promise.try: シンプルで強力な同期/非同期統合の未来 - 実装の深層とPromiseの進化"
@@ -499,7 +499,7 @@
   date: day1
   startsAt: "10:20"
   endsAt: "10:30"
-  room: B
+  track: B
   kind: TALK
   title: "LT: JavaScriptを支えるエコシステム（漫才）"
   titleJa: "LT: JavaScriptを支えるエコシステム（漫才）"
@@ -543,7 +543,7 @@
   date: day1
   startsAt: "10:40"
   endsAt: "10:50"
-  room: B
+  track: B
   kind: TALK
   title: "LT: romajip: 日本の住所CSVデータを活用した英語住所変換ライブラリを作った話"
   titleJa: "LT: romajip: 日本の住所CSVデータを活用した英語住所変換ライブラリを作った話"
@@ -564,7 +564,7 @@
   date: day1
   startsAt: "10:50"
   endsAt: "11:00"
-  room: B
+  track: B
   kind: TALK
   title: "LT: ステップバイステップで進めるYahoo!知恵袋のフロントエンドリアーキテクト"
   titleJa: "LT: ステップバイステップで進めるYahoo!知恵袋のフロントエンドリアーキテクト"
@@ -593,7 +593,7 @@
   date: day1
   startsAt: "11:10"
   endsAt: "11:40"
-  room: B
+  track: B
   kind: TALK
   title: React への依存を最小にするフロントエンドの設計
   titleJa: React への依存を最小にするフロントエンドの設計
@@ -628,7 +628,7 @@
   date: day1
   startsAt: "11:40"
   endsAt: "12:10"
-  room: B
+  track: B
   kind: TALK
   title: React CompilerとFine Grained Reactivityと宣言的UIのこれから
   titleJa: React CompilerとFine Grained Reactivityと宣言的UIのこれから
@@ -657,7 +657,7 @@
   date: day1
   startsAt: "13:10"
   endsAt: "13:40"
-  room: B
+  track: B
   kind: TALK
   title: "Vapor Revolution: Unleashing Vue evolution and Potential with Vapor Mode"
   titleJa: "Vapor Revolution: Unleashing Vue evolution and Potential with Vapor Mode"
@@ -694,7 +694,7 @@
   date: day1
   startsAt: "13:40"
   endsAt: "14:10"
-  room: B
+  track: B
   kind: TALK
   title: 幸せの形はどれも似ているが、不幸なプロジェクトはそれぞれの形がある
   titleJa: 幸せの形はどれも似ているが、不幸なプロジェクトはそれぞれの形がある
@@ -717,7 +717,7 @@
   date: day1
   startsAt: "14:20"
   endsAt: "14:50"
-  room: B
+  track: B
   kind: TALK
   title: リアルアセットとWebのシームレスな活用のためのパスキー
   titleJa: リアルアセットとWebのシームレスな活用のためのパスキー
@@ -754,7 +754,7 @@
   date: day1
   startsAt: "14:50"
   endsAt: "15:20"
-  room: B
+  track: B
   kind: TALK
   title: JavaScriptのモジュール解決の相互運用性
   titleJa: JavaScriptのモジュール解決の相互運用性
@@ -779,7 +779,7 @@
   date: day1
   startsAt: "15:30"
   endsAt: "16:00"
-  room: B
+  track: B
   kind: TALK
   title: Modular Monolith Monorepo
   titleJa: Modular Monolith Monorepo
@@ -902,7 +902,7 @@
   date: day1
   startsAt: "16:00"
   endsAt: "16:30"
-  room: B
+  track: B
   kind: TALK
   title: JavaScriptのイテレータとイテラブルの概要と課題、未来
   titleJa: JavaScriptのイテレータとイテラブルの概要と課題、未来
@@ -945,7 +945,7 @@
   date: day1
   startsAt: "10:10"
   endsAt: "10:20"
-  room: C
+  track: C
   kind: TALK
   title: "LT: UI 開発における ヘッドレス UI ライブラリの重要性とデザインシステムへの取り入れ方"
   titleJa: "LT: UI 開発における ヘッドレス UI ライブラリの重要性とデザインシステムへの取り入れ方"
@@ -964,7 +964,7 @@
   date: day1
   startsAt: "10:20"
   endsAt: "10:30"
-  room: C
+  track: C
   kind: TALK
   title: "LT: A Tour of Anti-patterns for Functional Programming"
   titleJa: "LT: A Tour of Anti-patterns for Functional Programming"
@@ -999,7 +999,7 @@
   date: day1
   startsAt: "10:40"
   endsAt: "10:50"
-  room: C
+  track: C
   kind: TALK
   title: "LT: Storybook との上手な向き合い方を考える"
   titleJa: "LT: Storybook との上手な向き合い方を考える"
@@ -1018,7 +1018,7 @@
   date: day1
   startsAt: "10:50"
   endsAt: "11:00"
-  room: C
+  track: C
   kind: TALK
   title: "LT: あなたの知らない Function.prototype.toString() の世界"
   titleJa: "LT: あなたの知らない Function.prototype.toString() の世界"
@@ -1051,7 +1051,7 @@
   date: day1
   startsAt: "11:10"
   endsAt: "11:40"
-  room: C
+  track: C
   kind: TALK
   title: "You Don’t Know Figma Yet - FigmaをJSでハックする"
   titleJa: "You Don’t Know Figma Yet - FigmaをJSでハックする"
@@ -1073,7 +1073,7 @@
   date: day1
   startsAt: "11:40"
   endsAt: "12:10"
-  room: C
+  track: C
   kind: TALK
   title: "30 Minutes to Understand All of `RegExp` Syntax"
   titleJa: "30 Minutes to Understand All of `RegExp` Syntax"
@@ -1096,7 +1096,7 @@
   date: day1
   startsAt: "13:10"
   endsAt: "13:40"
-  room: C
+  track: C
   kind: TALK
   title: "The challenges of web apps: what we’ve solved and what’s next?"
   titleJa: "The challenges of web apps: what we’ve solved and what’s next?"
@@ -1119,7 +1119,7 @@
   date: day1
   startsAt: "13:40"
   endsAt: "14:10"
-  room: C
+  track: C
   kind: TALK
   title: "Boost your Test Implementation in Javascript by 10x?"
   titleJa: "Boost your Test Implementation in Javascript by 10x?"
@@ -1236,7 +1236,7 @@
   date: day1
   startsAt: "14:20"
   endsAt: "14:50"
-  room: C
+  track: C
   kind: TALK
   title: "LINEヤフーにおけるPrerender技術の導入とその効果"
   titleJa: "LINEヤフーにおけるPrerender技術の導入とその効果"
@@ -1259,12 +1259,12 @@
   date: day1
   startsAt: "14:50"
   endsAt: "15:20"
-  room: C
+  track: C
   kind: TALK
   title: "How to automate your murder mystery: immersive games in your home"
   titleJa: "How to automate your murder mystery: immersive games in your home"
   description: >-
-    Have you hosted a murder mystery party but dreaded the paper puzzles and constant character confusion? For Halloween, we tricked out our party with Node.js by building a electromagnetic treasure chest, IoT-powered dramatic deaths, and digital character sheet. We relied on JavaScript to enhance the immerse role-playing game and elevated our home into an escape room. Come learn how to use your programming skills to become the ultimate party host!
+    Have you hosted a murder mystery party but dreaded the paper puzzles and constant character confusion? For Halloween, we tricked out our party with Node.js by building a electromagnetic treasure chest, IoT-powered dramatic deaths, and digital character sheet. We relied on JavaScript to enhance the immerse role-playing game and elevated our home into an escape track. Come learn how to use your programming skills to become the ultimate party host!
   descriptionJa: >-
     ハロウィンにミステリーパーティーを開催したけど、紙のパズルやキャラクターの混乱に悩まされたことはありませんか？私たちはNode.jsを使って、エレクトロマグネティックの宝箱やIoTで制御されたドラマチックな「死」、そしてデジタルキャラクターシートを作り、パーティーをレベルアップさせました。JavaScriptを駆使して、没入感あふれるロールプレイングゲームを強化し、家をまるで脱出ゲームのように変身させました。プログラミングスキルを使って、究極のパーティーホストになる方法を学んでみませんか？
   spokenLanguage: en
@@ -1278,7 +1278,7 @@
   date: day1
   startsAt: "15:30"
   endsAt: "16:00"
-  room: C
+  track: C
   kind: TALK
   title: "ESLintのカスタムルールで治安維持活動をする"
   titleJa: "ESLintのカスタムルールで治安維持活動をする"
@@ -1296,7 +1296,7 @@
   date: day1
   startsAt: "16:00"
   endsAt: "16:30"
-  room: C
+  track: C
   kind: TALK
   title: "@effect/schemaによる型安全な軽量DDDの実践"
   titleJa: "@effect/schemaによる型安全な軽量DDDの実践"
@@ -1314,7 +1314,7 @@
   date: day1
   startsAt: "11:10"
   endsAt: "11:40"
-  room: D
+  track: D
   kind: TALK
   title: "未定"
   titleJa: "未定"
@@ -1332,7 +1332,7 @@
   date: day1
   startsAt: "11:40"
   endsAt: "12:10"
-  room: D
+  track: D
   kind: TALK
   title: "(仮)生成AIでコーディング試験を解いてみよう"
   titleJa: "(仮)生成AIでコーディング試験を解いてみよう"
@@ -1352,7 +1352,7 @@
   date: day1
   startsAt: "13:10"
   endsAt: "13:40"
-  room: D
+  track: D
   kind: TALK
   title: "Yahoo! JAPANトップページにおけるマイクロフロントエンド - 大規模組織におけるFE開発を加速させるには"
   titleJa: "Yahoo! JAPANトップページにおけるマイクロフロントエンド - 大規模組織におけるFE開発を加速させるには"
@@ -1370,7 +1370,7 @@
   date: day1
   startsAt: "13:40"
   endsAt: "14:10"
-  room: D
+  track: D
   kind: TALK
   title: "電話を切らさない技術：電話自動応答サービスを支えるフロントエンド"
   titleJa: "電話を切らさない技術：電話自動応答サービスを支えるフロントエンド"
@@ -1388,7 +1388,7 @@
   date: day1
   startsAt: "14:20"
   endsAt: "14:50"
-  room: D
+  track: D
   kind: TALK
   title: "Cosenseのフロントエンドでのパフォーマンスチューニング"
   titleJa: "Cosenseのフロントエンドでのパフォーマンスチューニング"
@@ -1406,7 +1406,7 @@
   date: day1
   startsAt: "14:50"
   endsAt: "15:20"
-  room: D
+  track: D
   kind: TALK
   title: "静的解析を活用したi18n対応"
   titleJa: "静的解析を活用したi18n対応"
@@ -1424,7 +1424,7 @@
   date: day1
   startsAt: "15:30"
   endsAt: "16:00"
-  room: D
+  track: D
   kind: TALK
   title: "クルマのサブスクサービスをNext.jsで内製化した経験とその1年後（仮）"
   titleJa: "クルマのサブスクサービスをNext.jsで内製化した経験とその1年後（仮）"
@@ -1442,7 +1442,7 @@
   date: day1
   startsAt: "16:00"
   endsAt: "16:30"
-  room: D
+  track: D
   kind: TALK
   title: "徹底解剖！医療業務システムのReactコンポーネント設計"
   titleJa: "徹底解剖！医療業務システムのReactコンポーネント設計"
