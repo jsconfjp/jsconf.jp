@@ -234,7 +234,7 @@ export default function Speaker(props: Props) {
     descriptionJa,
     spokenLanguage,
     slideLanguage,
-    room,
+    track,
   } = talk
   const speakerNames = speakers.length
     ? speakers.map(s => s.name)
@@ -301,8 +301,8 @@ export default function Speaker(props: Props) {
             </SpeakerSide>
           </SpeakerBox>
         ))}
-        <Room room={room} />
-        <TalkBox track={room}>
+        <Room track={track} />
+        <TalkBox track={track}>
           <EventTime session={talk} />
           <TalkTitle>{enOrJa(i18n)(title, titleJa)}</TalkTitle>
           <Tags>{langTags}</Tags>

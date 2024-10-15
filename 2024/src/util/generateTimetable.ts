@@ -29,7 +29,7 @@ export function generateTimetable({
 
   const talksByDay = groupBy(talks, talk => talk.date)
   const talksByTimeboxes = mapValues(talksByDay, (talks): Timebox[] => {
-    const sessions = sortBy(talks, talk => talk.room).map(talk => ({
+    const sessions = sortBy(talks, talk => talk.track).map(talk => ({
       ...talk,
       break: talk.kind === "BREAK",
       speakers:

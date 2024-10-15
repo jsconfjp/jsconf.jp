@@ -36,22 +36,22 @@ const Text = styled.span`
 `
 
 type RoomProps = {
-  room: Rooms
+  track: Rooms
 }
-export const Room = ({ room }: RoomProps) => {
+export const Room = ({ track }: RoomProps) => {
   const { t } = useTranslation()
   return (
-    <RoomBox key={room}>
-      <Circle area={room} />
-      <Text>{t(`room${room}`)}</Text>
+    <RoomBox key={track}>
+      <Circle area={track} />
+      <Text>{t(`room${track}`)}</Text>
     </RoomBox>
   )
 }
 
 export const RoomLegend = () => (
   <Box>
-    {rooms.map((room, i) => (
-      <Room key={i} room={room} />
+    {rooms.map((track, i) => (
+      <Room key={i} track={track} />
     ))}
   </Box>
 )
