@@ -10,7 +10,7 @@ import { Breadcrumb } from "../components/Breadcrumb"
 import { AvatarType } from "../components/Speaker"
 import { SpeakerName } from "../components/EventSpeakers"
 import { SpeakerType, TalkType } from "../data/types"
-import { enOrJa, useEnOrJa } from "../util/languages"
+import { enOrJa } from "../util/languages"
 import { EventTime } from "../components/EventTime"
 import { Room } from "../components/RoomLegend"
 import { Rooms } from "../util/misc"
@@ -189,11 +189,10 @@ const SlidesBox = styled.div`
   }
 `
 const Slides = ({ session }: SlidesProps) => {
-  const enOrJa = useEnOrJa()
-  if (!session.slidesEn && !session.slidesJa) return null
+  if (!session.slidesUrl) return null
   return (
     <SlidesBox>
-      <Link to={enOrJa(session.slidesEn, session.slidesJa)}>
+      <Link to={session.slidesUrl}>
         <ExternalLink />
         <I18N k="slides" />
       </Link>

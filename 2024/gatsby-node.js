@@ -52,8 +52,7 @@ exports.createPages = ({ graphql, actions }) => {
                 descriptionJa
                 spokenLanguage
                 slideLanguage
-                slidesEn
-                slidesJa
+                slidesUrl
                 speakerIDs
                 sponsorIDs
                 date

@@ -25,7 +25,7 @@
 # - slideLanguage
 #
 # Properties required for archiving after the event has been held
-# - slidesEn, slidesJa: URL of the presentation materials
+# - slidesUrl: URL of the presentation materials
 # - youtube: URL of the YouTube recordings
 
 - date: day1
@@ -83,8 +83,7 @@
     対象者: フロントエンド開発者、製品デザイナー、アクセシビリティ推進者、および世界中の視聴者向けの包括的な Web アプリケーションの構築に興味がある人。
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - sahil-khokhar
   youtube: ""
@@ -102,8 +101,7 @@
     Web API は私たちが思っているよりもはるかに多くの機能を備えています。探索すべき珍しい Web API がたくさんあります。これまで知られていなかった Web の部分を探索していきます。 Bluetooth 信号を Web に直接送信できることをご存知ですか?それとも Web MIDI 経由でシンセサイザーを使用して Web を制御できることをご存知ですか?このセッションでは、ジャケットとシンセサイザーを制御して一緒に楽しいことを演奏し、さまざまな奇妙な Web API を探索します。
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - phumrapee-limpianchop
   youtube: ""
@@ -126,8 +124,7 @@
     開発者として、私たちは画面の前で長時間過ごし、身体活動を無視し、睡眠を犠牲にして、心と体を限界まで追い込むことがよくあります。しかし、エリートアスリートと同じように、最高のパフォーマンスを維持するには健康を優先する必要があります。この講演では、健康に関する 10 の実践的なヒントと、JavaScript を使用してこれらの習慣を追跡、整理し、日常生活にシームレスに導入する方法について説明します。
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - csaba-tamas
   youtube: ""
@@ -145,8 +142,7 @@
     この講演では、クリエイティブ コーディングの概念と、アートとプログラミングの融合におけるクリエイティブ コーディング ライブラリの役割について紹介します。新しいクリエイティブなコーディング ライブラリをゼロから構築した私の経験を共有します。すでに利用可能なライブラリが多数あるにもかかわらず、なぜそれを行うことにしたのか、また、これがコーディングやデジタル アートに興味がある人にとって価値のある演習であると信じている理由を説明します。その過程で、私がその過程で遭遇した重要な学び、楽しい瞬間、課題に焦点を当てます。最後に、ライブ コーディングのデモンストレーションで締めくくり、ライブラリの可能性とそれが提供する創造的な可能性を紹介します。
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - anushka-trivedi
   youtube: ""
@@ -169,8 +165,7 @@
     この講演は、WebAssemblyの始まりとその現代のウェブ開発への貢献について、重要なツールとして驚くべきアプリケーションを構築する方法から始まります。その後、話の中心は、この技術がどのようにしてサーバーサイドのアプリケーションにも大きな影響を与えるかに移ります。WebAssemblyにより、複数のプログラミング言語で使用できる高性能で移植可能なコードが可能になり、サーバーサイドでも大きな利便性を提供できる点が強調されます。
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - chris-fuentes
   youtube: ""
@@ -190,8 +185,7 @@
     取り上げるトピックには、レイアウトのガタつき（レイアウトジャンク）の削減・解消、効果的なローディングインジケータの使用、リソースの事前フェッチ、ブラウザキャッシュの活用、画像読み込みの最適化などが含まれます。
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - trung-vo
   youtube: ""
@@ -230,8 +224,7 @@
     実際の例とライブコーディングを通じて、これらのテクノロジーが JavaScript でどのように連携するかを見ていきます。埋め込み、セマンティック検索と RAG における埋め込みの役割、およびこれらの概念をプロジェクトに実装する方法について学びます。
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - aileen-villanueva-lecuona
   youtube: ""
@@ -278,8 +271,7 @@
     要点と締めくくりの考え
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - vj
   youtube: ""
@@ -306,8 +298,7 @@
     この講演では、本番環境で Cloudflare Workers を使用した私の経験を共有します。私の主な焦点は、ランタイム周りの問題です。 Cloudflare Workers のランタイムは「workerd」であり、Node.js、Deno、Bun とは異なります。ここでは、workerd について簡単に説明し、このランタイムで実行されるコードを作成してテストする方法を示します。 Workerd によって何が可能になるのか、またその制限についても学びます。さらに、データベース アクセスやサービス間の相互作用などの一般的な懸念事項にも対処します。
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - motoki-shakagori
   youtube: ""
@@ -353,8 +344,7 @@
     最後に
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - aakansha-doshi
   youtube: ""
@@ -379,8 +369,7 @@
     数百人のエンジニアがアップデートを重ねるweb platformはブラウザ互換性のわかりにくさという課題から新機能が実際に利用されるまでに時間がかかります。このセッションでは、この課題を解決すべく集まったW3C Web DX Community Groupで始まったBaselineというブラウザ互換性の考え方を紹介、Interopプロジェクトとの関係性や互換性をチェックする新しいツールについて考えます。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - mariko-kosaka
   youtube: ""
@@ -398,8 +387,7 @@
     この講演では、Three.js の WebGL から WebGPU への移行について取り上げ、その過程で遭遇した機会と課題を振り返ります。 WebGPU はパフォーマンスと柔軟性の新たな可能性を提供します。その過程で、シェーダーの作成とカスタマイズを簡素化するモジュール式シェーディング言語を開発しました。この移行は、次世代の Web グラフィックスを採用しながら、Three.js をアクセスし続けることを目的としています。
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - mrdoob
   youtube: ""
@@ -422,8 +410,7 @@
     todo
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs: [] # TODO: Add sponsor IDs
   youtube: ""
@@ -446,8 +433,7 @@
     todo
   spokenLanguage: ""
   slideLanguage: ""
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs: []
   youtube: ""
@@ -490,8 +476,7 @@
     JavaScriptの進化に興味のある開発者、より洗練されたエラーハンドリング手法を求める方にとって、本LTが新たな視座を提供する機会となれればと思っています。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - saku
   youtube: ""
@@ -533,8 +518,7 @@
         * Fastly Compute@Edge, Cloudflare Workers, AWS Lambda@Edge, AWS Cloudfront Functions, Deno Deploy, Vercel Edge Functions
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - uhyo_
     - shqld
@@ -555,8 +539,7 @@
     github link: https://github.com/Sangun-Kang/romajip
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - kang-sangun
   youtube: ""
@@ -584,8 +567,7 @@
     - ユニットテストの書き直し: 1ファイルに27000行存在するユニットテストをゼロからどのように書き直したか。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - koki-tsumura
   youtube: ""
@@ -619,8 +601,7 @@
     本発表では、フレームワークへの依存を最小にするための基本的な考え方、具体的にどのように実現しているかについてご紹介したいと思います。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - takashi-onda
   youtube: ""
@@ -648,8 +629,7 @@
     このセッションでは、Svelte、Vue.js、Solid(JS)が採用するFine Grained Reactivityとは何者か、仮想DOMとの違いは何か、React Compilerで何が変わるのかを確認し、宣言的UIのいまとこれからを考えます。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - ssssota
   youtube: ""
@@ -685,8 +665,7 @@
     本発表では、Vapor のコンパイラアーキテクチャについて解説し、デモを交えながら Vapor と Web フロントエンドの今後の可能性を探ります。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - kazupon
   youtube: ""
@@ -708,8 +687,7 @@
     本発表では、 Frontend Ops の専門家として、できるだけ一般化した形でツールチェインによって発生する問題を認識・計測・解消するための考え方を一般化します。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - mizchi
   youtube: ""
@@ -745,8 +723,7 @@
     - 帯域が確保できない環境で動かすための工夫
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - maxmellon
   youtube: ""
@@ -770,8 +747,7 @@
     周辺ツールがRust製になったり、ランタイムもバンドラーも多様化しているいま、モジュール解決の相互運用性の現在地を確認します。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - berlysia
   youtube: ""
@@ -893,8 +869,7 @@
     - https://tech.newmo.me/entry/one-version-rule-built-on-pnpm-catalog
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - yui_tang
   youtube: ""
@@ -936,8 +911,7 @@
     ・これからの、イテレータとイテラブルを使ったプログラミングについての考察
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - sosuke-suzuki
   youtube: ""
@@ -955,8 +929,7 @@
     昨今の Web 開発における UI はますます複雑化し、アクセシビリティの重要性が高まっています。ブラウザの標準機能だけでは実現できない複雑な UI を実装する際、アクセシビリティに関する誤った実装が原因で、ユーザー体験を損なう可能性があります。ヘッドレス UI ライブラリは、あらかじめアクセシビリティに配慮されたコンポーネントを提供することで、開発者がこれらの問題に悩まされることなく、高品質な UI を構築できるようになります。本セッションでは、ヘッドレス UI ライブラリを活用し、デザインシステムの一部として、アクセシブルでカスタマイズ可能な UI を構築する方法を紹介します。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - azukiazusa
   youtube: ""
@@ -990,8 +963,7 @@
     この LT では、関数型プログラミングの各手法を JavaScript / TypeScript 開発へ適用するにあたって、陥りがちな困難をご紹介します。
   spokenLanguage: ja
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - guvalif
   youtube: ""
@@ -1009,8 +981,7 @@
     今ではすっかり「便利だし入れておこう」枠となった Storybook。しかし手軽に導入することはできても(できるかな、できない時もある)、それを上手にプロダクトで活かし、保守するのは難しい今日この頃。この LT では Storybook 公式の推奨する向き合い方と比較しながら、実際に業務で「気楽」に最大限のリターンを得る向き合い方を考えます。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - re-taro
   youtube: ""
@@ -1042,8 +1013,7 @@
     - etc...
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - mizdra
   youtube: ""
@@ -1063,8 +1033,7 @@
     プロダクト開発を効率化する、面倒な作業を自動化する...コードをかけるエンジニアだからこそできるFigmaの「遊び方」をお話します。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - hiroki-tani
     - corey-lee
@@ -1087,8 +1056,7 @@
     資料は英語で作りますが、トークは日本語です。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - yuji-sugiura
   youtube: ""
@@ -1110,8 +1078,7 @@
     この話は誰に向けてですか？初心者および経験豊富なフロントエンド開発者、および最新のフレームワークとその動機を理解したいバックエンド エンジニア向け。
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - alexey-taktarov
   youtube: ""
@@ -1227,8 +1194,7 @@
     5分: まとめ & Q&A
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - mesut-durukal
   youtube: ""
@@ -1250,8 +1216,7 @@
     本セッションでは、Web標準やJavaScriptエコシステムがこれまでどのような先読みの技術を扱ってきたかその変遷を振り返りながら、SpeculationRulesAPIの基本的な仕組みとその利点について説明し、どのようにしてYahoo! JAPANのユーザー体験を向上させたかを具体例を交えて紹介します。加えて、今回の結果をもとに、導入に際して得られたノウハウや課題、重要なビジネスKPIにどう影響したか、ユーザーエンゲージメントがどの程度向上したか、サーバーリソースにどの程度影響があるのか、などについて具体的なデータをもとに解説します。WebにおけるPrerender技術を適用するべきポイントの可能性を探り、プロダクトに取り入れるために参考となる情報を提供します。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - masanari-hamada-tomoki-kiraku
   youtube: ""
@@ -1269,8 +1234,7 @@
     ハロウィンにミステリーパーティーを開催したけど、紙のパズルやキャラクターの混乱に悩まされたことはありませんか？私たちはNode.jsを使って、エレクトロマグネティックの宝箱やIoTで制御されたドラマチックな「死」、そしてデジタルキャラクターシートを作り、パーティーをレベルアップさせました。JavaScriptを駆使して、没入感あふれるロールプレイングゲームを強化し、家をまるで脱出ゲームのように変身させました。プログラミングスキルを使って、究極のパーティーホストになる方法を学んでみませんか？
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - tiger-daphne-oakes
   youtube: ""
@@ -1286,8 +1250,7 @@
   descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs:
     - miidas
@@ -1304,8 +1267,7 @@
   descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs:
     - earthbrain
@@ -1322,8 +1284,7 @@
   descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs:
     - mercari
@@ -1342,8 +1303,7 @@
     todo
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs:
     - hireroo
@@ -1360,8 +1320,7 @@
   descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs:
     - lycorp
@@ -1378,8 +1337,7 @@
   descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs:
     - ivry
@@ -1396,8 +1354,7 @@
   descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs:
     - helpfeel
@@ -1414,8 +1371,7 @@
   descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs:
     - layerx
@@ -1432,8 +1388,7 @@
   descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs:
     - kinto-technologies
@@ -1450,8 +1405,7 @@
   descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs:
     - medley

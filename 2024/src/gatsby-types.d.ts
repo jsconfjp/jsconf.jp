@@ -2170,8 +2170,7 @@ type Query_talksYamlArgs = {
   kind: InputMaybe<StringQueryOperatorInput>;
   parent: InputMaybe<NodeFilterInput>;
   slideLanguage: InputMaybe<StringQueryOperatorInput>;
-  slidesEn: InputMaybe<StringQueryOperatorInput>;
-  slidesJa: InputMaybe<StringQueryOperatorInput>;
+  slidesUrl: InputMaybe<StringQueryOperatorInput>;
   speakerIDs: InputMaybe<StringQueryOperatorInput>;
   spokenLanguage: InputMaybe<StringQueryOperatorInput>;
   sponsorIDs: InputMaybe<StringQueryOperatorInput>;
@@ -3349,8 +3348,7 @@ type TalksYaml = Node & {
   readonly kind: Maybe<Scalars['String']>;
   readonly parent: Maybe<Node>;
   readonly slideLanguage: Maybe<Scalars['String']>;
-  readonly slidesEn: Maybe<Scalars['String']>;
-  readonly slidesJa: Maybe<Scalars['String']>;
+  readonly slidesUrl: Maybe<Scalars['String']>;
   readonly speakerIDs: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly spokenLanguage: Maybe<Scalars['String']>;
   readonly sponsorIDs: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
@@ -3418,8 +3416,7 @@ type TalksYamlFieldSelector = {
   readonly kind: InputMaybe<FieldSelectorEnum>;
   readonly parent: InputMaybe<NodeFieldSelector>;
   readonly slideLanguage: InputMaybe<FieldSelectorEnum>;
-  readonly slidesEn: InputMaybe<FieldSelectorEnum>;
-  readonly slidesJa: InputMaybe<FieldSelectorEnum>;
+  readonly slidesUrl: InputMaybe<FieldSelectorEnum>;
   readonly speakerIDs: InputMaybe<FieldSelectorEnum>;
   readonly spokenLanguage: InputMaybe<FieldSelectorEnum>;
   readonly sponsorIDs: InputMaybe<FieldSelectorEnum>;
@@ -3442,8 +3439,7 @@ type TalksYamlFilterInput = {
   readonly kind: InputMaybe<StringQueryOperatorInput>;
   readonly parent: InputMaybe<NodeFilterInput>;
   readonly slideLanguage: InputMaybe<StringQueryOperatorInput>;
-  readonly slidesEn: InputMaybe<StringQueryOperatorInput>;
-  readonly slidesJa: InputMaybe<StringQueryOperatorInput>;
+  readonly slidesUrl: InputMaybe<StringQueryOperatorInput>;
   readonly speakerIDs: InputMaybe<StringQueryOperatorInput>;
   readonly spokenLanguage: InputMaybe<StringQueryOperatorInput>;
   readonly sponsorIDs: InputMaybe<StringQueryOperatorInput>;
@@ -3511,8 +3507,7 @@ type TalksYamlSortInput = {
   readonly kind: InputMaybe<SortOrderEnum>;
   readonly parent: InputMaybe<NodeSortInput>;
   readonly slideLanguage: InputMaybe<SortOrderEnum>;
-  readonly slidesEn: InputMaybe<SortOrderEnum>;
-  readonly slidesJa: InputMaybe<SortOrderEnum>;
+  readonly slidesUrl: InputMaybe<SortOrderEnum>;
   readonly speakerIDs: InputMaybe<SortOrderEnum>;
   readonly spokenLanguage: InputMaybe<SortOrderEnum>;
   readonly sponsorIDs: InputMaybe<SortOrderEnum>;

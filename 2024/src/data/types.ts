@@ -22,8 +22,7 @@ export type TalkType = {
   endsAt: string
   hiddenTimeBoxes: string[] | null
   track: Rooms
-  slidesEn: string
-  slidesJa: string
+  slidesUrl: string
   youtube: string
 }
 
