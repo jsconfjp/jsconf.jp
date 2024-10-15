@@ -5,7 +5,7 @@
 # - grade: `premium` or `sponsor`
 # - ready: (boolean) Whether or not all the information necessary for publishing is available
 #   - If you set this to false, it will be excluded from the build and will not appear on the website.
-#   - This is useful if there are items that need to be confirmed in the published information,  
+#   - This is useful if there are items that need to be confirmed in the published information,
 #     or if the information is missing in part.
 # - logoUrl: Please place the image file in `/static/sponsors/{uuid}.{ext}`.
 #   - The following file extensions can be used: png, jpg, svg, etc.

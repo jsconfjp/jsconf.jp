@@ -2,7 +2,7 @@ import groupBy from "lodash/groupBy"
 import sortBy from "lodash/sortBy"
 import mapValues from "lodash/mapValues"
 
-import { times,Dates } from "../util/misc"
+import { times, Dates } from "../util/misc"
 import { Session, SpeakerType, TalkType } from "../data/types"
 
 type Timebox = {
@@ -31,7 +31,7 @@ export function generateTimetable({
   const talksByTimeboxes = mapValues(talksByDay, (talks): Timebox[] => {
     const sessions = sortBy(talks, talk => talk.room).map(talk => ({
       ...talk,
-      break: talk.kind === 'BREAK',
+      break: talk.kind === "BREAK",
       speakers:
         talk.speakerIDs?.map(speakerID => {
           const speaker = lookup[speakerID]
@@ -69,6 +69,6 @@ export function generateTimetable({
   })
 
   return Object.fromEntries(
-    Object.keys(times).map(day => [day, talksByTimeboxes[day] ?? []])
+    Object.keys(times).map(day => [day, talksByTimeboxes[day] ?? []]),
   ) as Timetable
 }

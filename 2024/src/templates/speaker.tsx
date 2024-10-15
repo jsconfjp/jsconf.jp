@@ -206,11 +206,11 @@ type YoutubeProps = {
 }
 const Youtube = ({ session: { youtube } }: YoutubeProps) => {
   if (!youtube) return <></>
-  const [_, id] = (/watch\?v=(.*)$/g).exec(youtube) || []
+  const [_, id] = /watch\?v=(.*)$/g.exec(youtube) || []
   if (!id) return <></>
   return (
     <iframe
-      style={{maxWidth: '100%'}}
+      style={{ maxWidth: "100%" }}
       width="560"
       height="315"
       src={`https://www.youtube.com/embed/${id}`}
@@ -291,8 +291,8 @@ export default function Speaker(props: Props) {
               <h1>
                 <SpeakerName
                   speaker={{
-                    name: '',
-                    nameReading: '',
+                    name: "",
+                    nameReading: "",
                     sponsor: sponsor.name,
                   }}
                 />

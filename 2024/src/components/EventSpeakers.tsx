@@ -51,11 +51,7 @@ export const SpeakerName = ({ speaker }: SpeakerNameProps) => (
         speaker.name
       )}
     </SpeakerText>
-    {speaker.sponsor && (
-      <SponsorText>
-        {speaker.sponsor}
-      </SponsorText>
-    )}
+    {speaker.sponsor && <SponsorText>{speaker.sponsor}</SponsorText>}
   </>
 )
 

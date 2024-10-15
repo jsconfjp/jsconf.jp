@@ -231,22 +231,22 @@ export default function SchedulePage() {
 
   function getSessionName(talk: TalkType) {
     switch (talk.kind) {
-      case 'OPEN': {
-        return i18n.t('talk.open')
+      case "OPEN": {
+        return i18n.t("talk.open")
       }
-      case 'OPENING_TALK': {
-        return i18n.t('talk.opening talk')
+      case "OPENING_TALK": {
+        return i18n.t("talk.opening talk")
       }
-      case 'BREAK': {
-        return i18n.t('talk.Break')
+      case "BREAK": {
+        return i18n.t("talk.Break")
       }
-      case 'CLOSING_TALK': {
-        return i18n.t('talk.closing talk')
+      case "CLOSING_TALK": {
+        return i18n.t("talk.closing talk")
       }
-      case 'AFTER_PARTY': {
-        return i18n.t('talk.party')
+      case "AFTER_PARTY": {
+        return i18n.t("talk.party")
       }
-      case 'TALK': {
+      case "TALK": {
         return enOrJa(talk.title, talk.titleJa) || "TBA"
       }
       default:
