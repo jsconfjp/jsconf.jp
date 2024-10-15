@@ -10,7 +10,7 @@ import { Breadcrumb } from "../components/Breadcrumb"
 import { AvatarType } from "../components/Speaker"
 import { SpeakerName } from "../components/EventSpeakers"
 import { SpeakerType, TalkType } from "../data/types"
-import { enOrJa } from "../util/languages"
+import { useEnOrJa } from "../util/languages"
 import { EventTime } from "../components/EventTime"
 import { Room } from "../components/RoomLegend"
 import { Rooms } from "../util/misc"
@@ -222,7 +222,8 @@ const Youtube = ({ session: { youtube } }: YoutubeProps) => {
 }
 
 export default function Speaker(props: Props) {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
+  const enOrJa = useEnOrJa()
   const {
     pageContext: { speakers, avatars, sponsors, talk },
   } = props
@@ -258,7 +259,7 @@ export default function Speaker(props: Props) {
   return (
     <Layout>
       <SEO
-        title={`${enOrJa(i18n)(title, titleJa)} - ${speakerNames}`}
+        title={`${enOrJa(title, titleJa)} - ${speakerNames}`}
         // @ts-expect-error FIXME
         ogImage={avatars.length ? avatars[0].images.sources : undefined}
       />
@@ -273,7 +274,7 @@ export default function Speaker(props: Props) {
                 <SpeakerPronoun speaker={speaker} />
               </h1>
               <Markdown>
-                {enOrJa(i18n)(speaker.biography, speaker.biographyJa)}
+                {enOrJa(speaker.biography, speaker.biographyJa)}
               </Markdown>
               <SocialLinks speaker={speaker} />
             </SpeakerSide>
@@ -303,9 +304,9 @@ export default function Speaker(props: Props) {
         <Room track={track} />
         <TalkBox track={track}>
           <EventTime session={talk} />
-          <TalkTitle>{enOrJa(i18n)(title, titleJa)}</TalkTitle>
+          <TalkTitle>{enOrJa(title, titleJa)}</TalkTitle>
           <Tags>{langTags}</Tags>
-          <Markdown>{enOrJa(i18n)(description, descriptionJa)}</Markdown>
+          <Markdown>{enOrJa(description, descriptionJa)}</Markdown>
           <Slides session={talk} />
           <Youtube session={talk} />
         </TalkBox>
