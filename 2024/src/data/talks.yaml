@@ -1444,8 +1444,8 @@
   endsAt: "16:30"
   room: D
   kind: TALK
-  title: '未定'
-  titleJa: '未定'
+  title: '徹底解剖！医療業務システムのReactコンポーネント設計'
+  titleJa: '徹底解剖！医療業務システムのReactコンポーネント設計'
   description: ''
   descriptionJa: ''
   spokenLanguage: ja
