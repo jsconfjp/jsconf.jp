@@ -3,7 +3,7 @@ module.exports = {
   pathPrefix: `/2024`,
   siteMetadata: {
     title: `JSConf JP`,
-    description: `jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the first event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.`,
+    description: `jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the fifth time event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.`,
     author: `JSConf JP`,
     twitter: `jsconfjp`,
     siteUrl: `https://jsconf.jp`,
