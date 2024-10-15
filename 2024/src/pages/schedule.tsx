@@ -195,7 +195,7 @@ export default function SchedulePage() {
               sponsorIDs
               startsAt
               endsAt
-              room
+              track
               date
             }
           }
@@ -292,8 +292,8 @@ export default function SchedulePage() {
                           e.preventDefault()
                         }
                       }}
-                      key={s.room + s.startsAt + s.endsAt}
-                      track={s.room}
+                      key={s.track + s.startsAt + s.endsAt}
+                      track={s.track}
                       startsAt={s.startsAt}
                       endsAt={s.endsAt}
                       isBreak={s.break}

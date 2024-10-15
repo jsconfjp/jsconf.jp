@@ -10,7 +10,7 @@ import { Breadcrumb } from "../components/Breadcrumb"
 import { AvatarType } from "../components/Speaker"
 import { SpeakerName } from "../components/EventSpeakers"
 import { SpeakerType, TalkType } from "../data/types"
-import { enOrJa, useEnOrJa } from "../util/languages"
+import { useEnOrJa } from "../util/languages"
 import { EventTime } from "../components/EventTime"
 import { Room } from "../components/RoomLegend"
 import { Rooms } from "../util/misc"
@@ -146,7 +146,7 @@ function SocialLinks(props: SocialLinksProps) {
     .map(entry => <li>{entry}</li>)
 
   if (!socialLinks.length) {
-    return <></>
+    return null
   }
 
   return <SocialLinkContainer>{socialLinks}</SocialLinkContainer>
@@ -163,7 +163,7 @@ type SpeakerPronounProps = {
 
 const SpeakerPronoun = ({ speaker }: SpeakerPronounProps) => {
   if (!speaker.pronoun) {
-    return <></>
+    return null
   }
   return (
     <SpeakerPronounWrap>
@@ -189,11 +189,10 @@ const SlidesBox = styled.div`
   }
 `
 const Slides = ({ session }: SlidesProps) => {
-  const enOrJa = useEnOrJa()
-  if (!session.slidesEn && !session.slidesJa) return <></>
+  if (!session.slidesUrl) return null
   return (
     <SlidesBox>
-      <Link to={enOrJa(session.slidesEn, session.slidesJa)}>
+      <Link to={session.slidesUrl}>
         <ExternalLink />
         <I18N k="slides" />
       </Link>
@@ -205,9 +204,9 @@ type YoutubeProps = {
   session: TalkType
 }
 const Youtube = ({ session: { youtube } }: YoutubeProps) => {
-  if (!youtube) return <></>
+  if (!youtube) return null
   const [_, id] = /watch\?v=(.*)$/g.exec(youtube) || []
-  if (!id) return <></>
+  if (!id) return null
   return (
     <iframe
       style={{ maxWidth: "100%" }}
@@ -223,7 +222,8 @@ const Youtube = ({ session: { youtube } }: YoutubeProps) => {
 }
 
 export default function Speaker(props: Props) {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
+  const enOrJa = useEnOrJa()
   const {
     pageContext: { speakers, avatars, sponsors, talk },
   } = props
@@ -234,7 +234,7 @@ export default function Speaker(props: Props) {
     descriptionJa,
     spokenLanguage,
     slideLanguage,
-    room,
+    track,
   } = talk
   const speakerNames = speakers.length
     ? speakers.map(s => s.name)
@@ -259,7 +259,7 @@ export default function Speaker(props: Props) {
   return (
     <Layout>
       <SEO
-        title={`${enOrJa(i18n)(title, titleJa)} - ${speakerNames}`}
+        title={`${enOrJa(title, titleJa)} - ${speakerNames}`}
         // @ts-expect-error FIXME
         ogImage={avatars.length ? avatars[0].images.sources : undefined}
       />
@@ -274,7 +274,7 @@ export default function Speaker(props: Props) {
                 <SpeakerPronoun speaker={speaker} />
               </h1>
               <Markdown>
-                {enOrJa(i18n)(speaker.biography, speaker.biographyJa)}
+                {enOrJa(speaker.biography, speaker.biographyJa)}
               </Markdown>
               <SocialLinks speaker={speaker} />
             </SpeakerSide>
@@ -301,12 +301,12 @@ export default function Speaker(props: Props) {
             </SpeakerSide>
           </SpeakerBox>
         ))}
-        <Room room={room} />
-        <TalkBox track={room}>
+        <Room track={track} />
+        <TalkBox track={track}>
           <EventTime session={talk} />
-          <TalkTitle>{enOrJa(i18n)(title, titleJa)}</TalkTitle>
+          <TalkTitle>{enOrJa(title, titleJa)}</TalkTitle>
           <Tags>{langTags}</Tags>
-          <Markdown>{enOrJa(i18n)(description, descriptionJa)}</Markdown>
+          <Markdown>{enOrJa(description, descriptionJa)}</Markdown>
           <Slides session={talk} />
           <Youtube session={talk} />
         </TalkBox>

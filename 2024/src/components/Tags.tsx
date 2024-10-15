@@ -33,7 +33,7 @@ function toArray<T>(input: T | T[]): T[] {
 export const Tags = ({ children }: TagsProps) => {
   const tags = toArray(children).filter(Boolean) as string[]
   if (tags.length === 0) {
-    return <></>
+    return null
   }
   return (
     <TagList>

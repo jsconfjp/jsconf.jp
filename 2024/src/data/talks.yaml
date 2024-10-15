@@ -9,7 +9,7 @@
 #   - If the event is held for only one day, it will all be `day1`.
 #   - @see src/util/misc.ts
 # - startsAt, endsAt: Zero-filled `HH:MM` format
-# - room: A, B, C, ..., Depends on how many tracks we have.
+# - track: A, B, C, ..., Depends on how many tracks we have.
 #   - @see src/util/misc.ts
 # - speakerIDs: UUID list of speakers in charge of the talk
 #   - For CFP-based talks, there should be at least one speaker.
@@ -25,25 +25,25 @@
 # - slideLanguage
 #
 # Properties required for archiving after the event has been held
-# - slidesEn, slidesJa: URL of the presentation materials
+# - slidesUrl: URL of the presentation materials
 # - youtube: URL of the YouTube recordings
 
 - date: day1
   startsAt: "09:30"
   endsAt: "10:00"
-  room: A
+  track: A
   kind: OPEN
 - date: day1
   startsAt: "10:00"
   endsAt: "10:10"
-  room: A
+  track: A
   kind: OPENING_TALK
   youtube: ""
 - uuid: sahil-khokhar
   date: day1
   startsAt: "10:10"
   endsAt: "10:20"
-  room: A
+  track: A
   kind: TALK
   title: "LT: Connecting the dots – Web Accessibility through Internationalization and Localization"
   titleJa: "LT: Connecting the dots – Web Accessibility through Internationalization and Localization"
@@ -83,8 +83,7 @@
     対象者: フロントエンド開発者、製品デザイナー、アクセシビリティ推進者、および世界中の視聴者向けの包括的な Web アプリケーションの構築に興味がある人。
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - sahil-khokhar
   youtube: ""
@@ -92,7 +91,7 @@
   date: day1
   startsAt: "10:20"
   endsAt: "10:30"
-  room: A
+  track: A
   kind: TALK
   title: "LT: Web can be fun!"
   titleJa: "LT: Web can be fun!"
@@ -102,21 +101,20 @@
     Web API は私たちが思っているよりもはるかに多くの機能を備えています。探索すべき珍しい Web API がたくさんあります。これまで知られていなかった Web の部分を探索していきます。 Bluetooth 信号を Web に直接送信できることをご存知ですか?それとも Web MIDI 経由でシンセサイザーを使用して Web を制御できることをご存知ですか?このセッションでは、ジャケットとシンセサイザーを制御して一緒に楽しいことを演奏し、さまざまな奇妙な Web API を探索します。
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - phumrapee-limpianchop
   youtube: ""
 - date: day1
   startsAt: "10:30"
   endsAt: "10:40"
-  room: A
+  track: A
   kind: BREAK
 - uuid: csaba-tamas
   date: day1
   startsAt: "10:40"
   endsAt: "10:50"
-  room: A
+  track: A
   kind: TALK
   title: "LT: Stay Fit, Code Better: An Sportsman’s 10 practical Advice for JavaScript Developers"
   titleJa: "LT: Stay Fit, Code Better: An Sportsman’s 10 practical Advice for JavaScript Developers"
@@ -126,8 +124,7 @@
     開発者として、私たちは画面の前で長時間過ごし、身体活動を無視し、睡眠を犠牲にして、心と体を限界まで追い込むことがよくあります。しかし、エリートアスリートと同じように、最高のパフォーマンスを維持するには健康を優先する必要があります。この講演では、健康に関する 10 の実践的なヒントと、JavaScript を使用してこれらの習慣を追跡、整理し、日常生活にシームレスに導入する方法について説明します。
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - csaba-tamas
   youtube: ""
@@ -135,7 +132,7 @@
   date: day1
   startsAt: "10:50"
   endsAt: "11:00"
-  room: A
+  track: A
   kind: TALK
   title: "LT: Building a Creative Coding Library for Fun and Learning"
   titleJa: "LT: Building a Creative Coding Library for Fun and Learning"
@@ -145,21 +142,20 @@
     この講演では、クリエイティブ コーディングの概念と、アートとプログラミングの融合におけるクリエイティブ コーディング ライブラリの役割について紹介します。新しいクリエイティブなコーディング ライブラリをゼロから構築した私の経験を共有します。すでに利用可能なライブラリが多数あるにもかかわらず、なぜそれを行うことにしたのか、また、これがコーディングやデジタル アートに興味がある人にとって価値のある演習であると信じている理由を説明します。その過程で、私がその過程で遭遇した重要な学び、楽しい瞬間、課題に焦点を当てます。最後に、ライブ コーディングのデモンストレーションで締めくくり、ライブラリの可能性とそれが提供する創造的な可能性を紹介します。
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - anushka-trivedi
   youtube: ""
 - date: day1
   startsAt: "11:00"
   endsAt: "11:10"
-  room: A
+  track: A
   kind: BREAK
 - uuid: chris-fuentes
   date: day1
   startsAt: "11:10"
   endsAt: "11:40"
-  room: A
+  track: A
   kind: TALK
   title: "WebAssembly Unleashed: Powering Server-Side Applications"
   titleJa: "WebAssembly Unleashed: Powering Server-Side Applications"
@@ -169,8 +165,7 @@
     この講演は、WebAssemblyの始まりとその現代のウェブ開発への貢献について、重要なツールとして驚くべきアプリケーションを構築する方法から始まります。その後、話の中心は、この技術がどのようにしてサーバーサイドのアプリケーションにも大きな影響を与えるかに移ります。WebAssemblyにより、複数のプログラミング言語で使用できる高性能で移植可能なコードが可能になり、サーバーサイドでも大きな利便性を提供できる点が強調されます。
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - chris-fuentes
   youtube: ""
@@ -178,7 +173,7 @@
   date: day1
   startsAt: "11:40"
   endsAt: "12:10"
-  room: A
+  track: A
   kind: TALK
   title: Creating Fast-Feeling Web Apps
   titleJa: Creating Fast-Feeling Web Apps
@@ -190,21 +185,20 @@
     取り上げるトピックには、レイアウトのガタつき（レイアウトジャンク）の削減・解消、効果的なローディングインジケータの使用、リソースの事前フェッチ、ブラウザキャッシュの活用、画像読み込みの最適化などが含まれます。
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - trung-vo
   youtube: ""
 - date: day1
   startsAt: "12:10"
   endsAt: "13:10"
-  room: A
+  track: A
   kind: BREAK
 - uuid: aileen-villanueva-lecuona
   date: day1
   startsAt: "13:10"
   endsAt: "13:40"
-  room: A
+  track: A
   kind: TALK
   title: Building AI apps with JavaScript
   titleJa: Building AI apps with JavaScript
@@ -230,8 +224,7 @@
     実際の例とライブコーディングを通じて、これらのテクノロジーが JavaScript でどのように連携するかを見ていきます。埋め込み、セマンティック検索と RAG における埋め込みの役割、およびこれらの概念をプロジェクトに実装する方法について学びます。
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - aileen-villanueva-lecuona
   youtube: ""
@@ -239,7 +232,7 @@
   date: day1
   startsAt: "13:40"
   endsAt: "14:10"
-  room: A
+  track: A
   kind: TALK
   title: Why Build a Secure Supply Chain Management ?
   titleJa: Why Build a Secure Supply Chain Management ?
@@ -278,21 +271,20 @@
     要点と締めくくりの考え
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - vj
   youtube: ""
 - date: day1
   startsAt: "14:10"
   endsAt: "14:20"
-  room: A
+  track: A
   kind: BREAK
 - uuid: motoki-shakagori
   date: day1
   startsAt: "14:20"
   endsAt: "14:50"
-  room: A
+  track: A
   kind: TALK
   title: Cloudflare Workers in Production
   titleJa: Cloudflare Workers in Production
@@ -306,8 +298,7 @@
     この講演では、本番環境で Cloudflare Workers を使用した私の経験を共有します。私の主な焦点は、ランタイム周りの問題です。 Cloudflare Workers のランタイムは「workerd」であり、Node.js、Deno、Bun とは異なります。ここでは、workerd について簡単に説明し、このランタイムで実行されるコードを作成してテストする方法を示します。 Workerd によって何が可能になるのか、またその制限についても学びます。さらに、データベース アクセスやサービス間の相互作用などの一般的な懸念事項にも対処します。
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - motoki-shakagori
   youtube: ""
@@ -315,7 +306,7 @@
   date: day1
   startsAt: "14:50"
   endsAt: "15:20"
-  room: A
+  track: A
   kind: TALK
   title: Encrypting data in the Browser - Exploring Web Crypto APIs
   titleJa: Encrypting data in the Browser - Exploring Web Crypto APIs
@@ -353,21 +344,20 @@
     最後に
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - aakansha-doshi
   youtube: ""
 - date: day1
   startsAt: "15:20"
   endsAt: "15:30"
-  room: A
+  track: A
   kind: BREAK
 - uuid: mariko-kosaka
   date: day1
   startsAt: "15:30"
   endsAt: "16:00"
-  room: A
+  track: A
   kind: TALK
   title: Web標準の進化を止めない！Baselineというブラウザサポートの考え方
   titleJa: Web標準の進化を止めない！Baselineというブラウザサポートの考え方
@@ -379,8 +369,7 @@
     数百人のエンジニアがアップデートを重ねるweb platformはブラウザ互換性のわかりにくさという課題から新機能が実際に利用されるまでに時間がかかります。このセッションでは、この課題を解決すべく集まったW3C Web DX Community Groupで始まったBaselineというブラウザ互換性の考え方を紹介、Interopプロジェクトとの関係性や互換性をチェックする新しいツールについて考えます。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - mariko-kosaka
   youtube: ""
@@ -388,7 +377,7 @@
   date: day1
   startsAt: "16:00"
   endsAt: "16:30"
-  room: A
+  track: A
   kind: TALK
   title: Moving Three.js from WebGL to WebGPU
   titleJa: Moving Three.js from WebGL to WebGPU
@@ -398,21 +387,20 @@
     この講演では、Three.js の WebGL から WebGPU への移行について取り上げ、その過程で遭遇した機会と課題を振り返ります。 WebGPU はパフォーマンスと柔軟性の新たな可能性を提供します。その過程で、シェーダーの作成とカスタマイズを簡素化するモジュール式シェーディング言語を開発しました。この移行は、次世代の Web グラフィックスを採用しながら、Three.js をアクセスし続けることを目的としています。
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - mrdoob
   youtube: ""
 - date: day1
   startsAt: "16:30"
   endsAt: "16:40"
-  room: A
+  track: A
   kind: BREAK
 - uuid: day1-
   date: day1
   startsAt: "16:40"
   endsAt: "17:40"
-  room: A
+  track: A
   kind: TALK
   title: Sponsor LT x 12
   titleJa: Sponsor LT x 12
@@ -422,21 +410,20 @@
     todo
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs: [] # TODO: Add sponsor IDs
   youtube: ""
 - date: day1
   startsAt: "17:40"
   endsAt: "17:50"
-  room: A
+  track: A
   kind: BREAK
 - uuid: day1-
   date: day1
   startsAt: "17:50"
   endsAt: "18:30"
-  room: A
+  track: A
   kind: TALK
   title: キーノート (TBD)
   titleJa: キーノート (TBD)
@@ -446,8 +433,7 @@
     todo
   spokenLanguage: ""
   slideLanguage: ""
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs: []
   youtube: ""
@@ -455,20 +441,20 @@
   date: day1
   startsAt: "18:30"
   endsAt: "18:40"
-  room: A
+  track: A
   kind: CLOSING_TALK
   youtube: ""
 - uuid: day1-
   date: day1
   startsAt: "18:40"
   endsAt: "20:00"
-  room: A
+  track: A
   kind: AFTER_PARTY
 - uuid: saku
   date: day1
   startsAt: "10:10"
   endsAt: "10:20"
-  room: B
+  track: B
   kind: TALK
   title: "LT: Promise.try: シンプルで強力な同期/非同期統合の未来 - 実装の深層とPromiseの進化"
   titleJa: "LT: Promise.try: シンプルで強力な同期/非同期統合の未来 - 実装の深層とPromiseの進化"
@@ -490,8 +476,7 @@
     JavaScriptの進化に興味のある開発者、より洗練されたエラーハンドリング手法を求める方にとって、本LTが新たな視座を提供する機会となれればと思っています。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - saku
   youtube: ""
@@ -499,7 +484,7 @@
   date: day1
   startsAt: "10:20"
   endsAt: "10:30"
-  room: B
+  track: B
   kind: TALK
   title: "LT: JavaScriptを支えるエコシステム（漫才）"
   titleJa: "LT: JavaScriptを支えるエコシステム（漫才）"
@@ -533,8 +518,7 @@
         * Fastly Compute@Edge, Cloudflare Workers, AWS Lambda@Edge, AWS Cloudfront Functions, Deno Deploy, Vercel Edge Functions
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - uhyo_
     - shqld
@@ -543,7 +527,7 @@
   date: day1
   startsAt: "10:40"
   endsAt: "10:50"
-  room: B
+  track: B
   kind: TALK
   title: "LT: romajip: 日本の住所CSVデータを活用した英語住所変換ライブラリを作った話"
   titleJa: "LT: romajip: 日本の住所CSVデータを活用した英語住所変換ライブラリを作った話"
@@ -555,8 +539,7 @@
     github link: https://github.com/Sangun-Kang/romajip
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - kang-sangun
   youtube: ""
@@ -564,7 +547,7 @@
   date: day1
   startsAt: "10:50"
   endsAt: "11:00"
-  room: B
+  track: B
   kind: TALK
   title: "LT: ステップバイステップで進めるYahoo!知恵袋のフロントエンドリアーキテクト"
   titleJa: "LT: ステップバイステップで進めるYahoo!知恵袋のフロントエンドリアーキテクト"
@@ -584,8 +567,7 @@
     - ユニットテストの書き直し: 1ファイルに27000行存在するユニットテストをゼロからどのように書き直したか。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - koki-tsumura
   youtube: ""
@@ -593,7 +575,7 @@
   date: day1
   startsAt: "11:10"
   endsAt: "11:40"
-  room: B
+  track: B
   kind: TALK
   title: React への依存を最小にするフロントエンドの設計
   titleJa: React への依存を最小にするフロントエンドの設計
@@ -619,8 +601,7 @@
     本発表では、フレームワークへの依存を最小にするための基本的な考え方、具体的にどのように実現しているかについてご紹介したいと思います。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - takashi-onda
   youtube: ""
@@ -628,7 +609,7 @@
   date: day1
   startsAt: "11:40"
   endsAt: "12:10"
-  room: B
+  track: B
   kind: TALK
   title: React CompilerとFine Grained Reactivityと宣言的UIのこれから
   titleJa: React CompilerとFine Grained Reactivityと宣言的UIのこれから
@@ -648,8 +629,7 @@
     このセッションでは、Svelte、Vue.js、Solid(JS)が採用するFine Grained Reactivityとは何者か、仮想DOMとの違いは何か、React Compilerで何が変わるのかを確認し、宣言的UIのいまとこれからを考えます。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - ssssota
   youtube: ""
@@ -657,7 +637,7 @@
   date: day1
   startsAt: "13:10"
   endsAt: "13:40"
-  room: B
+  track: B
   kind: TALK
   title: "Vapor Revolution: Unleashing Vue evolution and Potential with Vapor Mode"
   titleJa: "Vapor Revolution: Unleashing Vue evolution and Potential with Vapor Mode"
@@ -685,8 +665,7 @@
     本発表では、Vapor のコンパイラアーキテクチャについて解説し、デモを交えながら Vapor と Web フロントエンドの今後の可能性を探ります。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - kazupon
   youtube: ""
@@ -694,7 +673,7 @@
   date: day1
   startsAt: "13:40"
   endsAt: "14:10"
-  room: B
+  track: B
   kind: TALK
   title: 幸せの形はどれも似ているが、不幸なプロジェクトはそれぞれの形がある
   titleJa: 幸せの形はどれも似ているが、不幸なプロジェクトはそれぞれの形がある
@@ -708,8 +687,7 @@
     本発表では、 Frontend Ops の専門家として、できるだけ一般化した形でツールチェインによって発生する問題を認識・計測・解消するための考え方を一般化します。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - mizchi
   youtube: ""
@@ -717,7 +695,7 @@
   date: day1
   startsAt: "14:20"
   endsAt: "14:50"
-  room: B
+  track: B
   kind: TALK
   title: リアルアセットとWebのシームレスな活用のためのパスキー
   titleJa: リアルアセットとWebのシームレスな活用のためのパスキー
@@ -745,8 +723,7 @@
     - 帯域が確保できない環境で動かすための工夫
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - maxmellon
   youtube: ""
@@ -754,7 +731,7 @@
   date: day1
   startsAt: "14:50"
   endsAt: "15:20"
-  room: B
+  track: B
   kind: TALK
   title: JavaScriptのモジュール解決の相互運用性
   titleJa: JavaScriptのモジュール解決の相互運用性
@@ -770,8 +747,7 @@
     周辺ツールがRust製になったり、ランタイムもバンドラーも多様化しているいま、モジュール解決の相互運用性の現在地を確認します。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - berlysia
   youtube: ""
@@ -779,7 +755,7 @@
   date: day1
   startsAt: "15:30"
   endsAt: "16:00"
-  room: B
+  track: B
   kind: TALK
   title: Modular Monolith Monorepo
   titleJa: Modular Monolith Monorepo
@@ -893,8 +869,7 @@
     - https://tech.newmo.me/entry/one-version-rule-built-on-pnpm-catalog
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - yui_tang
   youtube: ""
@@ -902,7 +877,7 @@
   date: day1
   startsAt: "16:00"
   endsAt: "16:30"
-  room: B
+  track: B
   kind: TALK
   title: JavaScriptのイテレータとイテラブルの概要と課題、未来
   titleJa: JavaScriptのイテレータとイテラブルの概要と課題、未来
@@ -936,8 +911,7 @@
     ・これからの、イテレータとイテラブルを使ったプログラミングについての考察
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - sosuke-suzuki
   youtube: ""
@@ -945,7 +919,7 @@
   date: day1
   startsAt: "10:10"
   endsAt: "10:20"
-  room: C
+  track: C
   kind: TALK
   title: "LT: UI 開発における ヘッドレス UI ライブラリの重要性とデザインシステムへの取り入れ方"
   titleJa: "LT: UI 開発における ヘッドレス UI ライブラリの重要性とデザインシステムへの取り入れ方"
@@ -955,8 +929,7 @@
     昨今の Web 開発における UI はますます複雑化し、アクセシビリティの重要性が高まっています。ブラウザの標準機能だけでは実現できない複雑な UI を実装する際、アクセシビリティに関する誤った実装が原因で、ユーザー体験を損なう可能性があります。ヘッドレス UI ライブラリは、あらかじめアクセシビリティに配慮されたコンポーネントを提供することで、開発者がこれらの問題に悩まされることなく、高品質な UI を構築できるようになります。本セッションでは、ヘッドレス UI ライブラリを活用し、デザインシステムの一部として、アクセシブルでカスタマイズ可能な UI を構築する方法を紹介します。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - azukiazusa
   youtube: ""
@@ -964,7 +937,7 @@
   date: day1
   startsAt: "10:20"
   endsAt: "10:30"
-  room: C
+  track: C
   kind: TALK
   title: "LT: A Tour of Anti-patterns for Functional Programming"
   titleJa: "LT: A Tour of Anti-patterns for Functional Programming"
@@ -990,8 +963,7 @@
     この LT では、関数型プログラミングの各手法を JavaScript / TypeScript 開発へ適用するにあたって、陥りがちな困難をご紹介します。
   spokenLanguage: ja
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - guvalif
   youtube: ""
@@ -999,7 +971,7 @@
   date: day1
   startsAt: "10:40"
   endsAt: "10:50"
-  room: C
+  track: C
   kind: TALK
   title: "LT: Storybook との上手な向き合い方を考える"
   titleJa: "LT: Storybook との上手な向き合い方を考える"
@@ -1009,8 +981,7 @@
     今ではすっかり「便利だし入れておこう」枠となった Storybook。しかし手軽に導入することはできても(できるかな、できない時もある)、それを上手にプロダクトで活かし、保守するのは難しい今日この頃。この LT では Storybook 公式の推奨する向き合い方と比較しながら、実際に業務で「気楽」に最大限のリターンを得る向き合い方を考えます。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - re-taro
   youtube: ""
@@ -1018,7 +989,7 @@
   date: day1
   startsAt: "10:50"
   endsAt: "11:00"
-  room: C
+  track: C
   kind: TALK
   title: "LT: あなたの知らない Function.prototype.toString() の世界"
   titleJa: "LT: あなたの知らない Function.prototype.toString() の世界"
@@ -1042,8 +1013,7 @@
     - etc...
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - mizdra
   youtube: ""
@@ -1051,7 +1021,7 @@
   date: day1
   startsAt: "11:10"
   endsAt: "11:40"
-  room: C
+  track: C
   kind: TALK
   title: "You Don’t Know Figma Yet - FigmaをJSでハックする"
   titleJa: "You Don’t Know Figma Yet - FigmaをJSでハックする"
@@ -1063,8 +1033,7 @@
     プロダクト開発を効率化する、面倒な作業を自動化する...コードをかけるエンジニアだからこそできるFigmaの「遊び方」をお話します。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - hiroki-tani
     - corey-lee
@@ -1073,7 +1042,7 @@
   date: day1
   startsAt: "11:40"
   endsAt: "12:10"
-  room: C
+  track: C
   kind: TALK
   title: "30 Minutes to Understand All of `RegExp` Syntax"
   titleJa: "30 Minutes to Understand All of `RegExp` Syntax"
@@ -1087,8 +1056,7 @@
     資料は英語で作りますが、トークは日本語です。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - yuji-sugiura
   youtube: ""
@@ -1096,7 +1064,7 @@
   date: day1
   startsAt: "13:10"
   endsAt: "13:40"
-  room: C
+  track: C
   kind: TALK
   title: "The challenges of web apps: what we’ve solved and what’s next?"
   titleJa: "The challenges of web apps: what we’ve solved and what’s next?"
@@ -1110,8 +1078,7 @@
     この話は誰に向けてですか？初心者および経験豊富なフロントエンド開発者、および最新のフレームワークとその動機を理解したいバックエンド エンジニア向け。
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - alexey-taktarov
   youtube: ""
@@ -1119,7 +1086,7 @@
   date: day1
   startsAt: "13:40"
   endsAt: "14:10"
-  room: C
+  track: C
   kind: TALK
   title: "Boost your Test Implementation in Javascript by 10x?"
   titleJa: "Boost your Test Implementation in Javascript by 10x?"
@@ -1227,8 +1194,7 @@
     5分: まとめ & Q&A
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - mesut-durukal
   youtube: ""
@@ -1236,7 +1202,7 @@
   date: day1
   startsAt: "14:20"
   endsAt: "14:50"
-  room: C
+  track: C
   kind: TALK
   title: "LINEヤフーにおけるPrerender技術の導入とその効果"
   titleJa: "LINEヤフーにおけるPrerender技術の導入とその効果"
@@ -1250,8 +1216,7 @@
     本セッションでは、Web標準やJavaScriptエコシステムがこれまでどのような先読みの技術を扱ってきたかその変遷を振り返りながら、SpeculationRulesAPIの基本的な仕組みとその利点について説明し、どのようにしてYahoo! JAPANのユーザー体験を向上させたかを具体例を交えて紹介します。加えて、今回の結果をもとに、導入に際して得られたノウハウや課題、重要なビジネスKPIにどう影響したか、ユーザーエンゲージメントがどの程度向上したか、サーバーリソースにどの程度影響があるのか、などについて具体的なデータをもとに解説します。WebにおけるPrerender技術を適用するべきポイントの可能性を探り、プロダクトに取り入れるために参考となる情報を提供します。
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - masanari-hamada-tomoki-kiraku
   youtube: ""
@@ -1259,18 +1224,17 @@
   date: day1
   startsAt: "14:50"
   endsAt: "15:20"
-  room: C
+  track: C
   kind: TALK
   title: "How to automate your murder mystery: immersive games in your home"
   titleJa: "How to automate your murder mystery: immersive games in your home"
   description: >-
-    Have you hosted a murder mystery party but dreaded the paper puzzles and constant character confusion? For Halloween, we tricked out our party with Node.js by building a electromagnetic treasure chest, IoT-powered dramatic deaths, and digital character sheet. We relied on JavaScript to enhance the immerse role-playing game and elevated our home into an escape room. Come learn how to use your programming skills to become the ultimate party host!
+    Have you hosted a murder mystery party but dreaded the paper puzzles and constant character confusion? For Halloween, we tricked out our party with Node.js by building a electromagnetic treasure chest, IoT-powered dramatic deaths, and digital character sheet. We relied on JavaScript to enhance the immerse role-playing game and elevated our home into an escape track. Come learn how to use your programming skills to become the ultimate party host!
   descriptionJa: >-
     ハロウィンにミステリーパーティーを開催したけど、紙のパズルやキャラクターの混乱に悩まされたことはありませんか？私たちはNode.jsを使って、エレクトロマグネティックの宝箱やIoTで制御されたドラマチックな「死」、そしてデジタルキャラクターシートを作り、パーティーをレベルアップさせました。JavaScriptを駆使して、没入感あふれるロールプレイングゲームを強化し、家をまるで脱出ゲームのように変身させました。プログラミングスキルを使って、究極のパーティーホストになる方法を学んでみませんか？
   spokenLanguage: en
   slideLanguage: en
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs:
     - tiger-daphne-oakes
   youtube: ""
@@ -1278,7 +1242,7 @@
   date: day1
   startsAt: "15:30"
   endsAt: "16:00"
-  room: C
+  track: C
   kind: TALK
   title: "ESLintのカスタムルールで治安維持活動をする"
   titleJa: "ESLintのカスタムルールで治安維持活動をする"
@@ -1286,8 +1250,7 @@
   descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs:
     - miidas
@@ -1296,7 +1259,7 @@
   date: day1
   startsAt: "16:00"
   endsAt: "16:30"
-  room: C
+  track: C
   kind: TALK
   title: "@effect/schemaによる型安全な軽量DDDの実践"
   titleJa: "@effect/schemaによる型安全な軽量DDDの実践"
@@ -1304,8 +1267,7 @@
   descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs:
     - earthbrain
@@ -1314,7 +1276,7 @@
   date: day1
   startsAt: "11:10"
   endsAt: "11:40"
-  room: D
+  track: D
   kind: TALK
   title: "未定"
   titleJa: "未定"
@@ -1322,8 +1284,7 @@
   descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs:
     - mercari
@@ -1332,7 +1293,7 @@
   date: day1
   startsAt: "11:40"
   endsAt: "12:10"
-  room: D
+  track: D
   kind: TALK
   title: "(仮)生成AIでコーディング試験を解いてみよう"
   titleJa: "(仮)生成AIでコーディング試験を解いてみよう"
@@ -1342,8 +1303,7 @@
     todo
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs:
     - hireroo
@@ -1352,7 +1312,7 @@
   date: day1
   startsAt: "13:10"
   endsAt: "13:40"
-  room: D
+  track: D
   kind: TALK
   title: "Yahoo! JAPANトップページにおけるマイクロフロントエンド - 大規模組織におけるFE開発を加速させるには"
   titleJa: "Yahoo! JAPANトップページにおけるマイクロフロントエンド - 大規模組織におけるFE開発を加速させるには"
@@ -1360,8 +1320,7 @@
   descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs:
     - lycorp
@@ -1370,7 +1329,7 @@
   date: day1
   startsAt: "13:40"
   endsAt: "14:10"
-  room: D
+  track: D
   kind: TALK
   title: "電話を切らさない技術：電話自動応答サービスを支えるフロントエンド"
   titleJa: "電話を切らさない技術：電話自動応答サービスを支えるフロントエンド"
@@ -1378,8 +1337,7 @@
   descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs:
     - ivry
@@ -1388,7 +1346,7 @@
   date: day1
   startsAt: "14:20"
   endsAt: "14:50"
-  room: D
+  track: D
   kind: TALK
   title: "Cosenseのフロントエンドでのパフォーマンスチューニング"
   titleJa: "Cosenseのフロントエンドでのパフォーマンスチューニング"
@@ -1396,8 +1354,7 @@
   descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs:
     - helpfeel
@@ -1406,7 +1363,7 @@
   date: day1
   startsAt: "14:50"
   endsAt: "15:20"
-  room: D
+  track: D
   kind: TALK
   title: "静的解析を活用したi18n対応"
   titleJa: "静的解析を活用したi18n対応"
@@ -1414,8 +1371,7 @@
   descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs:
     - layerx
@@ -1424,7 +1380,7 @@
   date: day1
   startsAt: "15:30"
   endsAt: "16:00"
-  room: D
+  track: D
   kind: TALK
   title: "クルマのサブスクサービスをNext.jsで内製化した経験とその1年後（仮）"
   titleJa: "クルマのサブスクサービスをNext.jsで内製化した経験とその1年後（仮）"
@@ -1432,8 +1388,7 @@
   descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs:
     - kinto-technologies
@@ -1442,7 +1397,7 @@
   date: day1
   startsAt: "16:00"
   endsAt: "16:30"
-  room: D
+  track: D
   kind: TALK
   title: "徹底解剖！医療業務システムのReactコンポーネント設計"
   titleJa: "徹底解剖！医療業務システムのReactコンポーネント設計"
@@ -1450,8 +1405,7 @@
   descriptionJa: ""
   spokenLanguage: ja
   slideLanguage: ja
-  slidesEn: ""
-  slidesJa: ""
+  slidesUrl: ""
   speakerIDs: []
   sponsorIDs:
     - medley
