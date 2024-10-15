@@ -183,7 +183,7 @@
   title: Creating Fast-Feeling Web Apps
   titleJa: Creating Fast-Feeling Web Apps
   description: >-
-    In web development, perception is reality. A website that feels fast is fast, no matter what the metrics say. Discover the art and science of perceived performance in React applications. We'll explore proven patterns and techniques used in large-scale codebases to create lightning-fast user experiences that lead to happier customers and higher conversions. Learn how to make your React apps not just performant, but feel instantaneous to your users. Topics include reducing/removing layout jank, better use of loading indicators, pre-fetching resources, leveraging the browser cache, image loading optimisation, and much more.
+    In web development, perception is reality. A website that feels fast is fast, regardless of the metrics. In web performance, we focus on four key areas: reducing overall load time, ensuring the site is usable as soon as possible, enhancing smoothness and interactivity, and optimising perceived performance. In this talk, we'll explore topics in each of these areas, highlighting proven patterns and techniques from large-scale codebases to create lightning-fast user experiences that effectively engage users. Learn how to make your web applications not just performant but also feel instantaneous. Topics will include reducing layout jank, optimising loading indicators, seeding the data, image loading optimisation, optimistic UI, and much more.
   descriptionJa: >-
     ウェブ開発において、「感じられる速さこそが現実」です。どんなメトリクスが示そうとも、速く感じるウェブサイトは速いのです。この講演では、Reactアプリケーションにおける「知覚されるパフォーマンス」のアートと科学を探求します。大規模なコードベースで実証されたパターンやテクニックを使って、ユーザー体験を飛躍的に向上させ、顧客満足度を高め、コンバージョンを増やす方法を学びます。Reactアプリを単にパフォーマンス向上させるだけでなく、ユーザーに「瞬時に応答する」と感じさせる秘訣をお伝えします。
     
