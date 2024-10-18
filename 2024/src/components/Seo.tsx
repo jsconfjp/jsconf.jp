@@ -1,6 +1,6 @@
 import React from "react"
-import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { useTranslation } from "react-i18next"
 
 type MetaProps = JSX.IntrinsicElements["meta"]
 
@@ -12,8 +12,7 @@ type Props = {
   ogImage?: string
 }
 
-export function SEO({ description, ogImage, lang, meta, title }: Props) {
-  lang ??= "en"
+export function SEO({ description, ogImage, meta, title }: Props) {
   meta ??= []
   description ??= ""
 
@@ -32,63 +31,36 @@ export function SEO({ description, ogImage, lang, meta, title }: Props) {
       }
     }
   `)
+  const {
+    i18n: { language },
+  } = useTranslation()
+  const lang = language ?? "en"
   const defaultOgImage = `${site.siteMetadata.siteUrl}${logo.publicURL}`
   const metaTitle = title || site.siteMetadata.title
   const metaDescription = description || site.siteMetadata.description
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      defaultTitle={site.siteMetadata.title}
-      title={title ?? undefined}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={(
-        [
-          {
-            name: `viewport`,
-            content: `width=device-width`,
-          },
-          {
-            name: `description`,
-            content: metaDescription,
-          },
-          {
-            property: `og:title`,
-            content: metaTitle,
-          },
-          {
-            property: `og:description`,
-            content: metaDescription,
-          },
-          {
-            property: `og:image`,
-            content: ogImage
-              ? `${site.siteMetadata.siteUrl}${ogImage}`
-              : defaultOgImage,
-          },
-          {
-            property: `og:type`,
-            content: `website`,
-          },
-          {
-            name: `twitter:card`,
-            content: `summary`,
-          },
-          {
-            name: `twitter:creator`,
-            content: site.siteMetadata.author,
-          },
-          {
-            name: `twitter:title`,
-            content: title,
-          },
-          {
-            name: `twitter:description`,
-            content: metaDescription,
-          },
-        ] as MetaProps[]
-      ).concat(meta)}
-    />
+    <>
+      <html lang={lang} />
+      <title>
+        {title
+          ? `${title} | ${site.siteMetadata.title}`
+          : site.siteMetadata.title}
+      </title>
+      <meta name="description" content={metaDescription} />
+      <meta name="og:description" content={metaDescription} />
+      <meta name="og:title" content={metaTitle} />
+      <meta name="og:type" content="website" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:creator" content={site.siteMetadata.author} />
+      <meta name="twitter:title" content={title ?? site.siteMetadata.title} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="viewport" content="width=device-width" />
+      <meta
+        name="og:image"
+        content={
+          ogImage ? `${site.siteMetadata.siteUrl}${ogImage}` : defaultOgImage
+        }
+      />
+    </>
   )
 }

@@ -97,6 +97,8 @@ const SponsorBox = styled.div`
   }
 `
 
+export const Head = () => <SEO />
+
 export default function IndexPage() {
   const { t, i18n } = useTranslation()
   const {
@@ -295,7 +297,6 @@ export default function IndexPage() {
   return (
     <Layout>
       <WavyBox>
-        <SEO lang={i18n.language as Languages} />
         <Container>
           <Centerize>
             <Hero

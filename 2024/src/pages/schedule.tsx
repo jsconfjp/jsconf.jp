@@ -163,6 +163,11 @@ const AreaFooter = styled.div`
   margin-top: 2.5rem;
 `
 
+export const Head = () => {
+  const { t } = useTranslation()
+  return <SEO title={t("schedule")} description={t("schedule.description")} />
+}
+
 export default function SchedulePage() {
   const { t, i18n } = useTranslation()
   const enOrJa = useEnOrJa()
@@ -267,7 +272,6 @@ export default function SchedulePage() {
 
   return (
     <Layout>
-      <SEO title={t("schedule")} description={t("schedule.description")} />
       <ResponsiveBox>
         <Breadcrumb path={[t("schedule")]} />
         <Title>{t("schedule")}</Title>
