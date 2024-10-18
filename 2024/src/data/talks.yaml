@@ -39,6 +39,18 @@
   track: A
   kind: OPENING_TALK
   youtube: ""
+- date: day1
+  startsAt: "10:00"
+  endsAt: "10:10"
+  track: B
+  kind: OPENING_TALK_STREAM
+  youtube: ""
+- date: day1
+  startsAt: "10:00"
+  endsAt: "10:10"
+  track: C
+  kind: OPENING_TALK_STREAM
+  youtube: ""
 - uuid: sahil-khokhar
   date: day1
   startsAt: "10:10"

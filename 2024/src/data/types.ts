@@ -5,6 +5,7 @@ export type TalkType = {
   kind:
     | "OPEN"
     | "OPENING_TALK"
+    | "OPENING_TALK_STREAM"
     | "TALK"
     | "BREAK"
     | "CLOSING_TALK"
