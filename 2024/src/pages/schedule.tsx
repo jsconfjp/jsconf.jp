@@ -253,6 +253,9 @@ export default function SchedulePage() {
       case "OPENING_TALK": {
         return i18n.t("talk.opening talk")
       }
+      case "OPENING_TALK_STREAM": {
+        return i18n.t("talk.opening talk stream")
+      }
       case "BREAK": {
         return i18n.t("talk.Break")
       }
