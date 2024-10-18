@@ -10,6 +10,11 @@ import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
 import { theme } from "../theme"
 
+export const Head = () => {
+  const { t } = useTranslation()
+  return <SEO title={t("speakers")} description={t("speakers.description")} />
+}
+
 export default function SpeakersPage() {
   const { allSpeakersYaml, allTalksYaml, allFile } = useStaticQuery(graphql`
     query Speakers {
@@ -66,7 +71,6 @@ export default function SpeakersPage() {
 
   return (
     <Layout background={theme.colors.bgLight}>
-      <SEO title={t("speakers")} description={t("speakers.description")} />
       <ResponsiveBox>
         <Breadcrumb path={[t("speakers")]} />
         <Title>{t("speakers")}</Title>

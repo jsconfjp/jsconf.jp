@@ -9,6 +9,11 @@ import { SponsorList } from "../components/SponsorList"
 import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
 
+export const Head = () => {
+  const { t } = useTranslation()
+  return <SEO title={t("sponsors")} description={t("sponsors.description")} />
+}
+
 export default function SponsorsPage() {
   const data = useStaticQuery(graphql`
     query Sponsors {
@@ -30,7 +35,6 @@ export default function SponsorsPage() {
 
   return (
     <Layout>
-      <SEO title={t("sponsors")} description={t("sponsors.description")} />
       <ResponsiveBox>
         <Breadcrumb path={[t("sponsors")]} />
         <Title>{t("sponsors")}</Title>

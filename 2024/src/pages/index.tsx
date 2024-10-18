@@ -97,6 +97,8 @@ const SponsorBox = styled.div`
   }
 `
 
+export const Head = () => <SEO />
+
 export default function IndexPage() {
   const { t, i18n } = useTranslation()
   const {
@@ -261,7 +263,7 @@ export default function IndexPage() {
       subTitle: t("callForSponsors"),
       available: site.siteMetadata.sponsorFormUrl,
       render: () =>
-        site.siteMetadata.sponsorFormUrl ? (
+        false ? (
           <LinkButton
             color="primary"
             size="large"
@@ -270,7 +272,7 @@ export default function IndexPage() {
             {t("becomeASponsor")}
           </LinkButton>
         ) : (
-          <LinkButton size="large" disabled to={""}>
+          <LinkButton size="large" to={""}>
             {t("comingSoon")}
           </LinkButton>
         ),
@@ -295,7 +297,6 @@ export default function IndexPage() {
   return (
     <Layout>
       <WavyBox>
-        <SEO lang={i18n.language as Languages} />
         <Container>
           <Centerize>
             <Hero
