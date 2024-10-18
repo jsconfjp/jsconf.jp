@@ -2,7 +2,6 @@ import React, { useLayoutEffect } from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { useStaticQuery, graphql } from "gatsby"
-import { Link as _Link } from "gatsby-link"
 import flatten from "lodash/flatten"
 
 import { Layout } from "../components/Layout"
@@ -20,6 +19,7 @@ import { Dates, times, Rooms, rooms } from "../util/misc"
 import { useEnOrJa } from "../util/languages"
 import { rgba } from "../util/rgba"
 import { Tags } from "../components/Tags"
+import { OptionalLink } from "../components/OptionalLink"
 
 const dummyTrack = String.fromCharCode(
   rooms[rooms.length - 1].charCodeAt(0) + 1,
@@ -52,7 +52,7 @@ const Grid = styled.div<{
     flex-direction: column;
   }
 `
-const Area = styled(_Link)<{
+const Area = styled(OptionalLink)<{
   track: Rooms
   ["starts-at"]: string
   ["ends-at"]: string
@@ -296,7 +296,6 @@ export default function SchedulePage() {
 
                   return (
                     <Area
-                      // @ts-expect-error
                       to={hasDescription ? `/talk/${s.uuid}` : null}
                       onClick={e => {
                         if (!hasDescription) {
