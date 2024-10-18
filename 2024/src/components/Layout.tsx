@@ -1,5 +1,9 @@
 import React, { useCallback } from "react"
-import styled, { ThemeProvider } from "styled-components"
+import styled, {
+  StyleSheetManager,
+  ThemeProvider,
+  WebTarget,
+} from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import { useTranslation } from "react-i18next"
 
@@ -69,6 +73,11 @@ const BackToTopButton = styled.button`
   background-color: ${({ theme }) => theme.colors.primary};
 `
 
+function shouldForwardProp(_propName: string, _target: WebTarget) {
+  // See: https://styled-components.com/docs/faqs#what-do-i-need-to-do-to-migrate-to-v6
+  return true
+}
+
 export function Layout({ children, background }: Props) {
   const { t, i18n } = useTranslation()
   const onChangeLanguage = useCallback(
@@ -97,7 +106,7 @@ export function Layout({ children, background }: Props) {
 
   return (
     <ThemeProvider theme={theme}>
-      <>
+      <StyleSheetManager shouldForwardProp={shouldForwardProp}>
         <GlobalStyle />
         <OnlyMobile>
           <HeaderMobile
@@ -130,7 +139,7 @@ export function Layout({ children, background }: Props) {
           </BackToTopBox>
         </MainBox>
         <Footer />
-      </>
+      </StyleSheetManager>
     </ThemeProvider>
   )
 }

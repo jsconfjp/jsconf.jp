@@ -24,15 +24,26 @@ import { Tags } from "../components/Tags"
 const dummyTrack = String.fromCharCode(
   rooms[rooms.length - 1].charCodeAt(0) + 1,
 ) as Rooms
-const Grid = styled.div<{ startsAt: Date; endsAt: Date }>`
+
+function getHours(time: string | Date) {
+  if (typeof time === "string") {
+    return parseInt(time.split(":")[0])
+  }
+  return time.getHours()
+}
+
+const Grid = styled.div<{
+  "starts-at": Date | string
+  "ends-at": Date | string
+}>`
   display: grid;
   grid-column-gap: 1em;
   grid-template-columns: ${rooms
     .concat(dummyTrack)
     .map(r => `[${r}]`)
     .join(" 1fr ")};
-  grid-template-rows: ${({ startsAt, endsAt }) =>
-    rangeTimeBoxes(5, startsAt.getHours(), endsAt.getHours())
+  grid-template-rows: ${({ "starts-at": startsAt, "ends-at": endsAt }) =>
+    rangeTimeBoxes(5, getHours(startsAt), getHours(endsAt))
       .map(t => `[t-${escapeTime(t)}]`)
       .join(" minmax(1em, max-content) ")};
 
@@ -43,25 +54,25 @@ const Grid = styled.div<{ startsAt: Date; endsAt: Date }>`
 `
 const Area = styled(_Link)<{
   track: Rooms
-  startsAt: string
-  endsAt: string
-  isBreak: boolean
+  ["starts-at"]: string
+  ["ends-at"]: string
+  ["$is-break"]: boolean
 }>`
   margin-bottom: 1em;
   padding: 1em;
   text-decoration: none;
   position: relative;
-  grid-column: ${({ track, isBreak }) =>
+  grid-column: ${({ track, "$is-break": isBreak }) =>
     isBreak ? `A / ${dummyTrack}` : track};
-  grid-row: ${({ startsAt, endsAt }) =>
+  grid-row: ${({ "starts-at": startsAt, "ends-at": endsAt }) =>
     `t-${escapeTime(startsAt)} / t-${escapeTime(endsAt)}`};
-  background-color: ${({ track, isBreak, theme, to }) =>
+  background-color: ${({ track, "$is-break": isBreak, theme, to }) =>
     rgba(
       isBreak ? theme.colors.disabled : theme.colors[`room${track}`],
       to ? 1.0 : 0.4,
     )};
   border-left: 5px solid;
-  border-color: ${({ track, isBreak, theme, to }) =>
+  border-color: ${({ track, "$is-break": isBreak, theme, to }) =>
     rgba(
       isBreak ? theme.colors.disabledText : theme.colors[`room${track}Border`],
       to ? 1.0 : 0.4,
@@ -89,7 +100,7 @@ const Area = styled(_Link)<{
     width: 16px;
     height: 16px;
     border-radius: 100%;
-    background-color: ${({ track, isBreak, theme }) =>
+    background-color: ${({ track, "$is-break": isBreak, theme }) =>
       isBreak ? theme.colors.disabledText : theme.colors[`room${track}Border`]};
   }
 
@@ -274,7 +285,7 @@ export default function SchedulePage() {
               <RoomLegendBox>
                 <RoomLegend />
               </RoomLegendBox>
-              <Grid startsAt={startsAt} endsAt={endsAt}>
+              <Grid starts-at={startsAt} ends-at={endsAt}>
                 {sessions.map(s => {
                   const hasDescription =
                     s.uuid && (s.speakers.length || s.sponsors.length)
@@ -294,9 +305,9 @@ export default function SchedulePage() {
                       }}
                       key={s.track + s.startsAt + s.endsAt}
                       track={s.track}
-                      startsAt={s.startsAt}
-                      endsAt={s.endsAt}
-                      isBreak={s.break}
+                      starts-at={s.startsAt}
+                      ends-at={s.endsAt}
+                      $is-break={s.break || false}
                     >
                       <AreaTitle>
                         <EventTime session={s} />
