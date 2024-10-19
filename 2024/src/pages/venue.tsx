@@ -9,12 +9,16 @@ import { Address } from "../components/Address"
 import { ResponsiveBox } from "../components/ResponsiveBox"
 import { Breadcrumb } from "../components/Breadcrumb"
 
+export const Head = () => {
+  const { t } = useTranslation()
+  return <SEO title={t("venue")} description={t("venue.address")} />
+}
+
 export default function VenuePage() {
   const { t } = useTranslation()
 
   return (
     <Layout>
-      <SEO title={t("venue")} description={t("venue.address")} />
       <ResponsiveBox>
         <Breadcrumb path={[t("venue")]} />
 

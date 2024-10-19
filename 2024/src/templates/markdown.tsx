@@ -32,20 +32,29 @@ const Box = styled.div`
   font-family: ${({ theme }) => theme.fonts.header};
 `
 
-export default function Markdown(props: Props) {
+function useData(props: Props) {
   const {
     pageContext: { post },
   } = props
   const enOrJa = useEnOrJa()
-  const data = enOrJa(post.en, post.ja) ?? post.unknown
+  return enOrJa(post.en, post.ja) ?? post.unknown
+}
+
+export const Head = (props: Props) => {
+  const {
+    frontmatter: { title },
+  } = useData(props)
+  return <SEO title={title} />
+}
+
+export default function Markdown(props: Props) {
   const {
     frontmatter: { title },
     html,
-  } = data
+  } = useData(props)
 
   return (
     <Layout>
-      <SEO title={title} />
       <ResponsiveBox>
         <Breadcrumb path={[title]} />
         <Title>{title}</Title>

@@ -221,6 +221,27 @@ const Youtube = ({ session: { youtube } }: YoutubeProps) => {
   )
 }
 
+export const Head = (props: Props) => {
+  const enOrJa = useEnOrJa()
+  const {
+    pageContext: { speakers, avatars, sponsors, talk },
+  } = props
+
+  const { title, titleJa } = talk
+
+  const speakerNames = speakers.length
+    ? speakers.map(s => s.name)
+    : sponsors.map(s => s.name)
+
+  return (
+    <SEO
+      title={`${enOrJa(title, titleJa)} - ${speakerNames}`}
+      // @ts-expect-error FIXME
+      ogImage={avatars.length ? avatars[0].images.sources : undefined}
+    />
+  )
+}
+
 export default function Speaker(props: Props) {
   const { t } = useTranslation()
   const enOrJa = useEnOrJa()
@@ -236,9 +257,6 @@ export default function Speaker(props: Props) {
     slideLanguage,
     track,
   } = talk
-  const speakerNames = speakers.length
-    ? speakers.map(s => s.name)
-    : sponsors.map(s => s.name)
 
   const location = speakers.length
     ? speakers[0]?.location ?? "on-site"
@@ -258,11 +276,6 @@ export default function Speaker(props: Props) {
 
   return (
     <Layout>
-      <SEO
-        title={`${enOrJa(title, titleJa)} - ${speakerNames}`}
-        // @ts-expect-error FIXME
-        ogImage={avatars.length ? avatars[0].images.sources : undefined}
-      />
       <ResponsiveBox>
         <Breadcrumb path={[{ label: t("speakers"), to: "/speakers" }, title]} />
         {speakers.map((speaker, i) => (
