@@ -54,6 +54,8 @@ export const ja: {
     "jna-address": "〒210-0024 神奈川県川崎市川崎区日進町27-7-903",
     "talk.open": "開場",
     "talk.opening talk": "オープニング/開場説明",
+    "talk.opening talk stream": "オープニング/開場説明",
+    "talk.stream": " ストリーム",
     "talk.Break": "休憩",
     "talk.closing talk": "クロージング",
     "talk.party": "懇親会",

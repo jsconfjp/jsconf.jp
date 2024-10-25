@@ -2175,6 +2175,7 @@ type Query_talksYamlArgs = {
   spokenLanguage: InputMaybe<StringQueryOperatorInput>;
   sponsorIDs: InputMaybe<StringQueryOperatorInput>;
   startsAt: InputMaybe<StringQueryOperatorInput>;
+  stream: InputMaybe<StringQueryOperatorInput>;
   title: InputMaybe<StringQueryOperatorInput>;
   titleJa: InputMaybe<StringQueryOperatorInput>;
   track: InputMaybe<StringQueryOperatorInput>;
@@ -3353,6 +3354,7 @@ type TalksYaml = Node & {
   readonly spokenLanguage: Maybe<Scalars['String']>;
   readonly sponsorIDs: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly startsAt: Maybe<Scalars['String']>;
+  readonly stream: Maybe<Scalars['String']>;
   readonly title: Maybe<Scalars['String']>;
   readonly titleJa: Maybe<Scalars['String']>;
   readonly track: Maybe<Scalars['String']>;
@@ -3421,6 +3423,7 @@ type TalksYamlFieldSelector = {
   readonly spokenLanguage: InputMaybe<FieldSelectorEnum>;
   readonly sponsorIDs: InputMaybe<FieldSelectorEnum>;
   readonly startsAt: InputMaybe<FieldSelectorEnum>;
+  readonly stream: InputMaybe<FieldSelectorEnum>;
   readonly title: InputMaybe<FieldSelectorEnum>;
   readonly titleJa: InputMaybe<FieldSelectorEnum>;
   readonly track: InputMaybe<FieldSelectorEnum>;
@@ -3444,6 +3447,7 @@ type TalksYamlFilterInput = {
   readonly spokenLanguage: InputMaybe<StringQueryOperatorInput>;
   readonly sponsorIDs: InputMaybe<StringQueryOperatorInput>;
   readonly startsAt: InputMaybe<StringQueryOperatorInput>;
+  readonly stream: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
   readonly titleJa: InputMaybe<StringQueryOperatorInput>;
   readonly track: InputMaybe<StringQueryOperatorInput>;
@@ -3512,6 +3516,7 @@ type TalksYamlSortInput = {
   readonly spokenLanguage: InputMaybe<SortOrderEnum>;
   readonly sponsorIDs: InputMaybe<SortOrderEnum>;
   readonly startsAt: InputMaybe<SortOrderEnum>;
+  readonly stream: InputMaybe<SortOrderEnum>;
   readonly title: InputMaybe<SortOrderEnum>;
   readonly titleJa: InputMaybe<SortOrderEnum>;
   readonly track: InputMaybe<SortOrderEnum>;
