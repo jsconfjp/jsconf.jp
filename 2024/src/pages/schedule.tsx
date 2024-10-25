@@ -12,7 +12,7 @@ import { Breadcrumb } from "../components/Breadcrumb"
 import { EventTime } from "../components/EventTime"
 import { EventSpeakers } from "../components/EventSpeakers"
 import { RoomLegend } from "../components/RoomLegend"
-import { TalkType, SpeakerType } from "../data/types"
+import { TalkType, SpeakerType, Session } from "../data/types"
 import { generateTimetable } from "../util/generateTimetable"
 import { rangeTimeBoxes, escapeTime } from "../util/rangeTimeBoxes"
 import { Dates, times, Rooms, rooms } from "../util/misc"
@@ -212,6 +212,7 @@ export default function SchedulePage() {
               startsAt
               endsAt
               track
+              stream
               date
             }
           }
@@ -245,7 +246,23 @@ export default function SchedulePage() {
     window.scrollTo({ top })
   }, [])
 
-  function getSessionName(talk: TalkType) {
+  function getStreamSession(
+    talk: TalkType,
+    sessions: Session[],
+  ): string | undefined {
+    const session = sessions.find(
+      session =>
+        session.date === talk.date &&
+        session.startsAt === talk.startsAt &&
+        session.track === talk.stream,
+    )
+    if (!session) {
+      return
+    }
+    return getSessionName(session, sessions)
+  }
+
+  function getSessionName(talk: TalkType, sessions: Session[]): string {
     switch (talk.kind) {
       case "OPEN": {
         return i18n.t("talk.open")
@@ -253,8 +270,8 @@ export default function SchedulePage() {
       case "OPENING_TALK": {
         return i18n.t("talk.opening talk")
       }
-      case "OPENING_TALK_STREAM": {
-        return i18n.t("talk.opening talk stream")
+      case "STREAM": {
+        return `${getStreamSession(talk, sessions) ?? "???"}${i18n.t("talk.stream")}`
       }
       case "BREAK": {
         return i18n.t("talk.Break")
@@ -318,7 +335,7 @@ export default function SchedulePage() {
                       <AreaTitle>
                         <EventTime session={s} />
                       </AreaTitle>
-                      <Text>{getSessionName(s)}</Text>
+                      <Text>{getSessionName(s, sessions)}</Text>
                       <EventSpeakers session={s} />
 
                       <AreaFooter>

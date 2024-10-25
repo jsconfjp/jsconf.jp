@@ -5,7 +5,7 @@ export type TalkType = {
   kind:
     | "OPEN"
     | "OPENING_TALK"
-    | "OPENING_TALK_STREAM"
+    | "STREAM"
     | "TALK"
     | "BREAK"
     | "CLOSING_TALK"
@@ -19,6 +19,7 @@ export type TalkType = {
   speakerIDs: string[]
   sponsorIDs: string[]
   date: "day1"
+  stream?: Rooms
   startsAt: string
   endsAt: string
   hiddenTimeBoxes: string[] | null
