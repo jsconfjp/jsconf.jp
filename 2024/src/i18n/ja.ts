@@ -60,5 +60,10 @@ export const ja: {
     "talk.closing talk": "クロージング",
     "talk.party": "懇親会",
     "talk.sponsor": "スポンサートーク",
+    "time.in": "残り",
+    "time.weeks": "週",
+    "time.days": "日",
+    "time.hours": "時",
+    "time.minutes": "分",
   },
 }

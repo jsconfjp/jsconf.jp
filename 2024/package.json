@@ -23,8 +23,8 @@
     "*.{yml,yaml,ts,json}": "prettier"
   },
   "dependencies": {
+    "@js-temporal/polyfill": "^0.4.4",
     "@styled-icons/remix-line": "^10.46.0",
-    "date-fns": "^3.6.0",
     "gatsby": "^5.13.4",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
