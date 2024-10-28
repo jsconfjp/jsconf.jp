@@ -60,5 +60,10 @@ export const ja: {
     "talk.closing talk": "クロージング",
     "talk.party": "懇親会",
     "talk.sponsor": "スポンサートーク",
+
+    "pageNotFound.title": "ページが見つかりません",
+    "pageNotFound.description":
+      "無効なリンクを辿ったか、URLを間違えて入力したようです。",
+    "pageNotFound.cta": "ホームページに戻る",
   },
 }
