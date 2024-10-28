@@ -73,5 +73,9 @@ export const en = {
     "talk.closing talk": "Closing Talk",
     "talk.party": "Party",
     "talk.sponsor": "Sponsor Talks",
+
+    "pageNotFound.title": "Page not found",
+    "pageNotFound.description": "Looks like you followed a bad link or mistyped the URL.",
+    "pageNotFound.cta": "Go back to homepage",
   },
 }
