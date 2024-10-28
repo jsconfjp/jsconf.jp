@@ -1,12 +1,10 @@
 import React from "react"
-import { differenceInMinutes } from "date-fns"
+import { Temporal } from "@js-temporal/polyfill"
 import { TalkType } from "../data/types"
 import styled from "styled-components"
 
-function timeToDate(time: string): Date {
-  const [h, m] = time.split(":")
-  // TODO: Enter time here!
-  return new Date(2024, 10, 19, parseInt(h), parseInt(m))
+function timeToDate(time: string) {
+  return Temporal.PlainTime.from(time)
 }
 
 type Props = {
@@ -31,7 +29,7 @@ const TalkLength = styled.span`
 export const EventTime = ({ session: s }: Props) => {
   const start = timeToDate(s.startsAt)
   const end = timeToDate(s.endsAt)
-  const diff = differenceInMinutes(end, start)
+  const diff = start.until(end).total("minutes")
 
   return (
     <>

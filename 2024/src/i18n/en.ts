@@ -73,5 +73,10 @@ export const en = {
     "talk.closing talk": "Closing Talk",
     "talk.party": "Party",
     "talk.sponsor": "Sponsor Talks",
+    "time.in": "in ",
+    "time.weeks": " weeks ",
+    "time.days": " days ",
+    "time.hours": " hours ",
+    "time.minutes": " minutes",
   },
 }
