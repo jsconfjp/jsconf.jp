@@ -12,6 +12,7 @@ module.exports = {
     cfpFormUrl:
       "https://docs.google.com/forms/d/e/1FAIpQLScWYqrnSqD-CTnJX6GATU8IzTk6qKwJyXb8GOoVD70EbGXbDA/viewform",
     cfpDeadline: new Date("2024-10-01T00:00:00.000+0900"),
+    sponsorDeadline: new Date("2024-10-01T00:00:00.000+0900"),
     previousFiscalYear: `2023`,
     enableSpeakers: true,
     enableVenue: true,
