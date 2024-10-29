@@ -116,6 +116,7 @@ export default function IndexPage() {
           sponsorFormUrl
           cfpFormUrl
           cfpDeadline
+          sponsorDeadline
           enableVenue
         }
       }
@@ -200,6 +201,8 @@ export default function IndexPage() {
   })
   const cfpOverDue =
     Date.now() > new Date(site.siteMetadata.cfpDeadline).getTime()
+  const sponsorDateOverDue =
+    Date.now() > new Date(site.siteMetadata.sponsorDeadline).getTime()
 
   const parts = [
     {
@@ -263,7 +266,7 @@ export default function IndexPage() {
       subTitle: t("callForSponsors"),
       available: site.siteMetadata.sponsorFormUrl,
       render: () =>
-        false ? (
+        !sponsorDateOverDue ? (
           <LinkButton
             color="primary"
             size="large"
