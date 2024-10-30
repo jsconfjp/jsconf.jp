@@ -21,13 +21,31 @@ const RoomBox = styled(InlineLink)<{ disabled: boolean }>`
   display: flex;
   flex-direction: row;
   align-items: center;
-  ${({ disabled }) => (disabled ? `opacity: 0.5;` : "")}
+  ${({ disabled }) =>
+    disabled
+      ? `
+  opacity: 0.5;
+
+  @media print {
+    display: none;
+    font-size: 0.5rem;
+  }
+  `
+      : ""}
 `
 const Circle = styled.div<{ track: Rooms }>`
   width: 30px;
   height: 30px;
   border-radius: 30px;
   background-color: ${({ track, theme }) => theme.colors[`room${track}Border`]};
+
+  @media print {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 2.5em;
+  }
 `
 const Text = styled.span`
   flex: 1;
@@ -35,6 +53,10 @@ const Text = styled.span`
   font-weight: bold;
   font-size: 1.8rem;
   font-family: ${({ theme }) => theme.fonts.text};
+
+  @media print {
+    font-size: 2.5em;
+  }
 `
 const SubText = styled.span`
   flex: 1;

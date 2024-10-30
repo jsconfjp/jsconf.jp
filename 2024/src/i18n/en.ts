@@ -69,6 +69,7 @@ export const en = {
     "talk.open": "Doors Open",
     "talk.opening talk": "Opening Talk",
     "talk.stream": " (Stream)",
+    "talk.closed": "(Closed)",
     "talk.Break": "Break",
     "talk.closing talk": "Closing Talk",
     "talk.party": "Party",

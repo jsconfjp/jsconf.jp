@@ -7,10 +7,13 @@ export type Props = {
 
 const Box = styled.div`
   width: 100%;
-  max-width: ${({ theme }) => theme.innerWidth};
   padding: 2em 1em 5em;
   margin: 0 auto;
   box-sizing: border-box;
+
+  @media not print {
+    max-width: ${({ theme }) => theme.innerWidth};
+  }
 `
 
 export function ResponsiveBox(props: Props) {
