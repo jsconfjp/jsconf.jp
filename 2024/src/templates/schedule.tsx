@@ -69,7 +69,7 @@ const Grid = styled.div<{
   }
 
   @media print {
-    margin: 0.5em 0 0 .55em;
+    margin: 0.5em 0 0 0.55em;
     grid-template-rows: ${({ "starts-at": startsAt, "ends-at": endsAt }) =>
       rangeTimeBoxes(
         5,
@@ -92,8 +92,12 @@ const Area = styled(OptionalLink)<{
   padding: 1em;
   text-decoration: none;
   position: relative;
-  grid-column: ${({ track, "$is-break": isBreak, "selected-track": selectedTrack }) =>
-    !selectedTrack && isBreak ? `A / ${dummyTrack}` : track};
+  grid-column: ${({
+    track,
+    "$is-break": isBreak,
+    "selected-track": selectedTrack,
+  }) =>
+    !selectedTrack && isBreak && track == "A" ? `A / ${dummyTrack}` : track};
   grid-row: ${({ "starts-at": startsAt, "ends-at": endsAt }) =>
     `t-${escapeTime(startsAt)} / t-${escapeTime(endsAt)}`};
   border-left: 5px solid;
@@ -109,20 +113,23 @@ const Area = styled(OptionalLink)<{
     margin-bottom: 1em;
     flex-direction: column;
     background-color: ${({ track, "$is-break": isBreak, theme, to }) =>
-    rgba(
-      isBreak ? theme.colors.disabled : theme.colors[`room${track}`],
-      to ? 1.0 : 0.4,
-    )};
-    $::before{
-      content: "${({ track }) => track}";
-      font-family: ${({ theme }) => theme.fonts.text};
+      rgba(
+        isBreak ? theme.colors.disabled : theme.colors[`room${track}`],
+        to ? 1.0 : 0.4,
+      )};
+    ${({ track, theme, "$is-break": isBreak }) =>
+      isBreak
+        ? ""
+        : `&::before {
+      content: "${track}";
+      font-family: ${theme.fonts.text};
       font-weight: bold;
-      color: ${({ theme }) => theme.colors.base};
+      color: ${theme.colors.base};
       font-size: 0.7em;
       position: absolute;
-      font-family: ${({ theme }) => theme.fonts.text};
+      font-family: ${theme.fonts.text};
       font-weight: bold;
-      color: ${({ theme }) => theme.colors.base};
+      color: ${theme.colors.base};
       font-size: 0.7em;
       top: -8px;
       left: -10px;
@@ -132,14 +139,15 @@ const Area = styled(OptionalLink)<{
       width: 16px;
       height: 16px;
       border-radius: 100%;
-      background-color: ${({ track, "$is-break": isBreak, theme }) =>
-        isBreak ? theme.colors.disabledText : theme.colors[`room${track}Border`]};
-    }
+      background-color: ${
+        isBreak ? theme.colors.disabledText : theme.colors[`room${track}Border`]
+      };
+    }`}
   }
   @media print {
-    margin-bottom: .3em;
+    margin-bottom: 0.3em;
     flex-direction: row;
-    padding: 0 .75em;
+    padding: 0 0.75em;
     align-items: start;
     border-color: ${({ track, "$is-break": isBreak, theme }) =>
       isBreak ? theme.colors.disabledText : theme.colors[`room${track}Border`]};
@@ -217,9 +225,12 @@ const AreaTitle = styled.div<{ isSidetrack: boolean }>`
 
   @media print {
     margin: 0;
-    ${({ isSidetrack }) => isSidetrack ? `
+    ${({ isSidetrack }) =>
+      isSidetrack
+        ? `
       display: none;
-    ` : ''}
+    `
+        : ""}
   }
 `
 const AreaFooter = styled.div`
@@ -375,6 +386,9 @@ export default function SchedulePage({
       case "OPENING_TALK": {
         return i18n.t("talk.opening talk")
       }
+      case "CLOSED": {
+        return i18n.t("talk.closed")
+      }
       case "STREAM": {
         return `${getStreamSession(talk, sessions) ?? "???"}${i18n.t("talk.stream")}`
       }
@@ -469,7 +483,7 @@ export default function SchedulePage({
                       $is-break={s.break || false}
                       selected-track={selectedTrack}
                     >
-                      <AreaTitle isSidetrack={!selectedTrack && s.track != 'A'}>
+                      <AreaTitle isSidetrack={!selectedTrack && s.track != "A"}>
                         <EventTime session={s} />
                       </AreaTitle>
                       <EventEntry>

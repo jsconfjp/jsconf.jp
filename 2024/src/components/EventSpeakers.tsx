@@ -29,7 +29,7 @@ const ByLineText = styled.span`
   }
 
   @media print {
-    margin: 0 .5em 0 0;
+    margin: 0 0.5em 0 0;
   }
 `
 
@@ -84,12 +84,12 @@ export const EventSpeakers = ({ session: s }: Props) => {
 
   return (
     <>
-      {speakers.map((s, i) =>
+      {speakers.map((s, i) => (
         <SpeakerEntry key={i}>
-          <ByLineText>{i == 0 ? 'by' : 'and' }</ByLineText>
+          <ByLineText>{i == 0 ? "by" : "and"}</ByLineText>
           <SpeakerName speaker={s} />
         </SpeakerEntry>
-      )}
+      ))}
     </>
   )
 }

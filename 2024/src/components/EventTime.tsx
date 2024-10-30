@@ -24,7 +24,7 @@ const TalkTime = styled.span`
 
 const TalkStart = styled.span`
   @media print {
-    padding-right: .75em;
+    padding-right: 0.75em;
   }
 `
 const TalkEnd = styled.span`

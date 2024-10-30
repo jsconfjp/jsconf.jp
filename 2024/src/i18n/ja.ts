@@ -56,6 +56,7 @@ export const ja: {
     "talk.opening talk": "オープニング/開場説明",
     "talk.opening talk stream": "オープニング/開場説明",
     "talk.stream": " ストリーム",
+    "talk.closed": "閉館",
     "talk.Break": "休憩",
     "talk.closing talk": "クロージング",
     "talk.party": "懇親会",

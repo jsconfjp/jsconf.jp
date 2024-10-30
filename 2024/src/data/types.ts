@@ -10,6 +10,7 @@ export type TalkType = {
     | "BREAK"
     | "CLOSING_TALK"
     | "AFTER_PARTY"
+    | "CLOSED"
   title: string
   titleJa: string
   description: string
