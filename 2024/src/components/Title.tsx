@@ -11,6 +11,10 @@ const Box = styled.h1`
   font-size: ${({ theme }) => theme.fontSizes.title};
   text-transform: none;
   font-family: ${({ theme }) => theme.fonts.header};
+
+  @media print {
+    display: none;
+  }
 `
 
 export function Title(props: Props) {

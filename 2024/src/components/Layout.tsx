@@ -28,6 +28,9 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  @page {
+    margin: .5cm 1.2cm;
+  }
 `
 
 type Props = {
@@ -71,6 +74,10 @@ const BackToTopButton = styled.button`
   padding: 10px 24px;
   color: white;
   background-color: ${({ theme }) => theme.colors.primary};
+
+  @media print {
+    display: none;
+  }
 `
 
 function shouldForwardProp(_propName: string, _target: WebTarget) {

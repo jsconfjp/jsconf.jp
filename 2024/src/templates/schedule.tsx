@@ -67,6 +67,20 @@ const Grid = styled.div<{
     display: flex;
     flex-direction: column;
   }
+
+  @media print {
+    margin: 0.5em 0 0 .55em;
+    grid-template-rows: ${({ "starts-at": startsAt, "ends-at": endsAt }) =>
+      rangeTimeBoxes(
+        5,
+        getHours(startsAt),
+        getHours(endsAt),
+        getMinutes(startsAt),
+        getMinutes(endsAt),
+      )
+        .map(t => `[t-${escapeTime(t)}]`)
+        .join(" max-content ")};
+  }
 `
 const Area = styled(OptionalLink)<{
   track: Rooms
@@ -75,7 +89,6 @@ const Area = styled(OptionalLink)<{
   ["$is-break"]: boolean
   "selected-track": string | undefined
 }>`
-  margin-bottom: 1em;
   padding: 1em;
   text-decoration: none;
   position: relative;
@@ -83,11 +96,6 @@ const Area = styled(OptionalLink)<{
     !selectedTrack && isBreak ? `A / ${dummyTrack}` : track};
   grid-row: ${({ "starts-at": startsAt, "ends-at": endsAt }) =>
     `t-${escapeTime(startsAt)} / t-${escapeTime(endsAt)}`};
-  background-color: ${({ track, "$is-break": isBreak, theme, to }) =>
-    rgba(
-      isBreak ? theme.colors.disabled : theme.colors[`room${track}`],
-      to ? 1.0 : 0.4,
-    )};
   border-left: 5px solid;
   border-color: ${({ track, "$is-break": isBreak, theme, to }) =>
     rgba(
@@ -95,29 +103,45 @@ const Area = styled(OptionalLink)<{
       to ? 1.0 : 0.4,
     )};
   display: flex;
-  flex-direction: column;
   justify-content: stretch;
 
-  &::before {
-    content: "${({ track }) => track}";
-    font-family: ${({ theme }) => theme.fonts.text};
-    font-weight: bold;
-    color: ${({ theme }) => theme.colors.base};
-    font-size: 0.7em;
-    position: absolute;
-    font-family: ${({ theme }) => theme.fonts.text};
-    font-weight: bold;
-    color: ${({ theme }) => theme.colors.base};
-    font-size: 0.7em;
-    top: -8px;
-    left: -10px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 16px;
-    height: 16px;
-    border-radius: 100%;
-    background-color: ${({ track, "$is-break": isBreak, theme }) =>
+  @media not print {
+    margin-bottom: 1em;
+    flex-direction: column;
+    background-color: ${({ track, "$is-break": isBreak, theme, to }) =>
+    rgba(
+      isBreak ? theme.colors.disabled : theme.colors[`room${track}`],
+      to ? 1.0 : 0.4,
+    )};
+    $::before{
+      content: "${({ track }) => track}";
+      font-family: ${({ theme }) => theme.fonts.text};
+      font-weight: bold;
+      color: ${({ theme }) => theme.colors.base};
+      font-size: 0.7em;
+      position: absolute;
+      font-family: ${({ theme }) => theme.fonts.text};
+      font-weight: bold;
+      color: ${({ theme }) => theme.colors.base};
+      font-size: 0.7em;
+      top: -8px;
+      left: -10px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 16px;
+      height: 16px;
+      border-radius: 100%;
+      background-color: ${({ track, "$is-break": isBreak, theme }) =>
+        isBreak ? theme.colors.disabledText : theme.colors[`room${track}Border`]};
+    }
+  }
+  @media print {
+    margin-bottom: .3em;
+    flex-direction: row;
+    padding: 0 .75em;
+    align-items: start;
+    border-color: ${({ track, "$is-break": isBreak, theme }) =>
       isBreak ? theme.colors.disabledText : theme.colors[`room${track}Border`]};
   }
 
@@ -137,6 +161,10 @@ const Area = styled(OptionalLink)<{
 
   ${({ theme }) => theme.breakpoints.mobile} {
     margin-bottom: 1em;
+
+    @media print {
+      margin-bottom: 0.2em;
+    }
   }
 `
 
@@ -147,9 +175,20 @@ const SubTitle = styled.h2`
   margin: 20px 0 1em;
   padding: 0.2em 1em;
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
+
+  @media print {
+    margin: 0.5em 0;
+    border-bottom: none;
+    padding: 0;
+    font-size: 1em;
+  }
 `
 const RoomLegendBox = styled.div`
   margin-bottom: 2em;
+
+  @media print {
+    margin-bottom: 0;
+  }
 `
 const Text = styled.span`
   color: ${({ theme }) => theme.colors.text};
@@ -157,9 +196,14 @@ const Text = styled.span`
   margin: 0.75rem 0;
   font-size: 2rem;
   font-family: ${({ theme }) => theme.fonts.text};
+
+  @media print {
+    margin: 0.2em 0;
+    font-size: 1em;
+  }
 `
 
-const AreaTitle = styled.div`
+const AreaTitle = styled.div<{ isSidetrack: boolean }>`
   color: ${({ theme }) => theme.colors.text};
   font-family: ${({ theme }) => theme.fonts.header};
   display: flex;
@@ -170,6 +214,13 @@ const AreaTitle = styled.div`
     padding-left: 0;
     margin: 0;
   }
+
+  @media print {
+    margin: 0;
+    ${({ isSidetrack }) => isSidetrack ? `
+      display: none;
+    ` : ''}
+  }
 `
 const AreaFooter = styled.div`
   flex-grow: 1;
@@ -178,6 +229,16 @@ const AreaFooter = styled.div`
   align-items: end;
   justify-content: end;
   margin-top: 2.5rem;
+
+  @media print {
+    display: none;
+  }
+`
+
+const EventEntry = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
 `
 
 export const Head = () => {
@@ -408,19 +469,21 @@ export default function SchedulePage({
                       $is-break={s.break || false}
                       selected-track={selectedTrack}
                     >
-                      <AreaTitle>
+                      <AreaTitle isSidetrack={!selectedTrack && s.track != 'A'}>
                         <EventTime session={s} />
                       </AreaTitle>
-                      <Text>{getSessionName(s, allSessions)}</Text>
-                      <EventSpeakers session={s} />
+                      <EventEntry>
+                        <Text>{getSessionName(s, allSessions)}</Text>
+                        <EventSpeakers session={s} />
 
-                      <AreaFooter>
-                        <Tags>
-                          {s.spokenLanguage &&
-                            t(`lang.${s.spokenLanguage || ""}`)}
-                          {location === "remote" && t("location.remote")}
-                        </Tags>
-                      </AreaFooter>
+                        <AreaFooter>
+                          <Tags>
+                            {s.spokenLanguage &&
+                              t(`lang.${s.spokenLanguage || ""}`)}
+                            {location === "remote" && t("location.remote")}
+                          </Tags>
+                        </AreaFooter>
+                      </EventEntry>
                     </Area>
                   )
                 })}

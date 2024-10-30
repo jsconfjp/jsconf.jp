@@ -16,6 +16,24 @@ const TalkTime = styled.span`
   font-family: ${({ theme }) => theme.fonts.header};
   font-size: 1.5rem;
   font-weight: bold;
+
+  @media print {
+    font-size: 1em;
+  }
+`
+
+const TalkStart = styled.span`
+  @media print {
+    padding-right: .75em;
+  }
+`
+const TalkEnd = styled.span`
+  &::before {
+    content: "-";
+  }
+  @media print {
+    display: none;
+  }
 `
 
 const TalkLength = styled.span`
@@ -24,6 +42,10 @@ const TalkLength = styled.span`
   font-size: 1.2rem;
   list-style: none;
   margin-left: 0.5rem;
+
+  @media print {
+    display: none;
+  }
 `
 
 export const EventTime = ({ session: s }: Props) => {
@@ -34,7 +56,8 @@ export const EventTime = ({ session: s }: Props) => {
   return (
     <>
       <TalkTime>
-        {s.startsAt}-{s.endsAt}
+        <TalkStart>{s.startsAt}</TalkStart>
+        <TalkEnd>{s.endsAt}</TalkEnd>
       </TalkTime>
       {diff > 0 && <TalkLength>{`(${diff} min)`}</TalkLength>}
     </>
