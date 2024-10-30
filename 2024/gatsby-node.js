@@ -2,6 +2,7 @@
 
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const schedulePages = [undefined, "A", "B", "C", "D"]
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -9,6 +10,7 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     const mdTemplate = path.resolve(`./src/templates/markdown.tsx`)
     const speakerTemplate = path.resolve(`./src/templates/speaker.tsx`)
+    const scheduleTemplate = path.resolve(`./src/templates/schedule.tsx`)
     resolve(
       graphql(`
         query {
@@ -192,6 +194,15 @@ exports.createPages = ({ graphql, actions }) => {
               avatars: speakerAvatars,
               sponsors: talkSponsors,
               talk,
+            },
+          })
+        })
+        schedulePages.forEach(track => {
+          createPage({
+            path: track ? `schedule/${track}` : "schedule",
+            component: scheduleTemplate,
+            context: {
+              selectedTrack: track,
             },
           })
         })
