@@ -2,6 +2,7 @@ import React, { useLayoutEffect } from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { useStaticQuery, graphql } from "gatsby"
+import { Link as _Link } from "gatsby-link"
 import flatten from "lodash/flatten"
 
 import { Layout } from "../components/Layout"
@@ -32,18 +33,33 @@ function getHours(time: string | Date) {
   return time.getHours()
 }
 
+function getMinutes(time: string | Date) {
+  if (typeof time === "string") {
+    return parseInt(time.split(":")[1])
+  }
+  return time.getMinutes()
+}
+
 const Grid = styled.div<{
   "starts-at": Date | string
   "ends-at": Date | string
+  tracks: Rooms[]
 }>`
   display: grid;
   grid-column-gap: 1em;
-  grid-template-columns: ${rooms
-    .concat(dummyTrack)
-    .map(r => `[${r}]`)
-    .join(" 1fr ")};
+  grid-template-columns: ${({ tracks }) =>
+    tracks
+      .concat(dummyTrack)
+      .map(r => `[${r}]`)
+      .join(" 1fr ")};
   grid-template-rows: ${({ "starts-at": startsAt, "ends-at": endsAt }) =>
-    rangeTimeBoxes(5, getHours(startsAt), getHours(endsAt))
+    rangeTimeBoxes(
+      5,
+      getHours(startsAt),
+      getHours(endsAt),
+      getMinutes(startsAt),
+      getMinutes(endsAt),
+    )
       .map(t => `[t-${escapeTime(t)}]`)
       .join(" minmax(1em, max-content) ")};
 
@@ -57,13 +73,14 @@ const Area = styled(OptionalLink)<{
   ["starts-at"]: string
   ["ends-at"]: string
   ["$is-break"]: boolean
+  "selected-track": string | undefined
 }>`
   margin-bottom: 1em;
   padding: 1em;
   text-decoration: none;
   position: relative;
-  grid-column: ${({ track, "$is-break": isBreak }) =>
-    isBreak ? `A / ${dummyTrack}` : track};
+  grid-column: ${({ track, "$is-break": isBreak, "selected-track": selectedTrack }) =>
+    !selectedTrack && isBreak ? `A / ${dummyTrack}` : track};
   grid-row: ${({ "starts-at": startsAt, "ends-at": endsAt }) =>
     `t-${escapeTime(startsAt)} / t-${escapeTime(endsAt)}`};
   background-color: ${({ track, "$is-break": isBreak, theme, to }) =>
@@ -168,7 +185,34 @@ export const Head = () => {
   return <SEO title={t("schedule")} description={t("schedule.description")} />
 }
 
-export default function SchedulePage() {
+function filterTrim<T>(array: T[], filter: (t: T) => boolean) {
+  let start = 0
+  let len = array.length
+  while (start < len) {
+    if (!filter(array[start])) {
+      break
+    }
+    start += 1
+  }
+  let end = len - 1
+  while (end > start) {
+    if (!filter(array[end])) {
+      break
+    }
+    end -= 1
+  }
+  return array.slice(start, end + 1)
+}
+
+export type SchedulePageProps = {
+  pageContext: {
+    selectedTrack?: Rooms
+  }
+}
+
+export default function SchedulePage({
+  pageContext: { selectedTrack },
+}: SchedulePageProps) {
   const { t, i18n } = useTranslation()
   const enOrJa = useEnOrJa()
   const { allSpeakersYaml, allSponsorsYaml, allTalksYaml } = useStaticQuery(
@@ -297,19 +341,50 @@ export default function SchedulePage() {
         <Title>{t("schedule")}</Title>
 
         {days.map(day => {
-          const { startsAt, endsAt } = times[day]
-          const sessions = flatten(
+          let { startsAt, endsAt } = times[day] as {
+            startsAt: Date | string
+            endsAt: Date | string
+          }
+          const allSessions = flatten(
             timetable[day].map(({ sessions }) => sessions),
           )
+          let sessions = allSessions
+          if (selectedTrack) {
+            sessions = filterTrim(
+              sessions
+                .filter(
+                  session =>
+                    session.track === selectedTrack ||
+                    (session.break && session.track === "A"),
+                )
+                .map(event => {
+                  if (event.break) {
+                    return {
+                      ...event,
+                      track: selectedTrack,
+                      uuid: `${event.uuid}_${selectedTrack}`,
+                    } as Session
+                  }
+                  return event
+                }),
+              session => session.break,
+            )
+            startsAt = sessions[0].startsAt
+            endsAt = sessions[sessions.length - 1].endsAt
+          }
           return (
             <React.Fragment key={day}>
               <SubTitle id={day}>
                 {dateTimeFormatter.format(times[day].startsAt)}
               </SubTitle>
               <RoomLegendBox>
-                <RoomLegend />
+                <RoomLegend selected-track={selectedTrack} />
               </RoomLegendBox>
-              <Grid starts-at={startsAt} ends-at={endsAt}>
+              <Grid
+                starts-at={startsAt}
+                ends-at={endsAt}
+                tracks={selectedTrack ? [selectedTrack] : rooms}
+              >
                 {sessions.map(s => {
                   const hasDescription =
                     s.uuid && (s.speakers.length || s.sponsors.length)
@@ -331,11 +406,12 @@ export default function SchedulePage() {
                       starts-at={s.startsAt}
                       ends-at={s.endsAt}
                       $is-break={s.break || false}
+                      selected-track={selectedTrack}
                     >
                       <AreaTitle>
                         <EventTime session={s} />
                       </AreaTitle>
-                      <Text>{getSessionName(s, sessions)}</Text>
+                      <Text>{getSessionName(s, allSessions)}</Text>
                       <EventSpeakers session={s} />
 
                       <AreaFooter>
