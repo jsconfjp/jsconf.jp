@@ -22,6 +22,10 @@ const TagList = styled.ul`
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 0.5em;
   }
+
+  @media print {
+    display: none;
+  }
 `
 
 type TagsProps = {

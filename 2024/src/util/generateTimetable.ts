@@ -31,7 +31,8 @@ export function generateTimetable({
   const talksByTimeboxes = mapValues(talksByDay, (talks): Timebox[] => {
     const sessions = sortBy(talks, talk => talk.track).map(talk => ({
       ...talk,
-      break: talk.kind === "BREAK",
+      break:
+        talk.kind === "BREAK" || talk.kind === "OPEN" || talk.kind === "CLOSED",
       speakers:
         talk.speakerIDs?.map(speakerID => {
           const speaker = lookup[speakerID]

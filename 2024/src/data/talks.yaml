@@ -1,5 +1,5 @@
 # Properties common to all types:
-# - kind: One of OPEN, OPENING_TALK, TALK, BREAK, CLOSING_TALK, AFTER_PARTY
+# - kind: One of OPEN, OPENING_TALK, TALK, BREAK, CLOSING_TALK, AFTER_PARTY, CLOSED
 #
 # Properties that need to be defined by the user:
 # - uuid: You can set any value you like, but it's better to set the UUID of the speaker.
@@ -53,6 +53,11 @@
   kind: STREAM
   stream: A
   youtube: ""
+- date: day1
+  startsAt: "10:00"
+  endsAt: "10:30"
+  track: D
+  kind: CLOSED
 - uuid: sahil-khokhar
   date: day1
   startsAt: "10:10"
@@ -160,6 +165,11 @@
   speakerIDs:
     - anushka-trivedi
   youtube: ""
+- date: day1
+  startsAt: "10:40"
+  endsAt: "11:00"
+  track: D
+  kind: CLOSED
 - date: day1
   startsAt: "11:00"
   endsAt: "11:10"
@@ -441,6 +451,11 @@
   kind: STREAM
   stream: A
 - date: day1
+  startsAt: "16:40"
+  endsAt: "17:40"
+  track: D
+  kind: CLOSED
+- date: day1
   startsAt: "17:40"
   endsAt: "17:50"
   track: A
@@ -482,6 +497,11 @@
   track: A
   kind: CLOSING_TALK
   youtube: ""
+- date: day1
+  startsAt: "17:50"
+  endsAt: "18:40"
+  track: D
+  kind: CLOSED
 - date: day1
   startsAt: "18:30"
   endsAt: "18:40"

@@ -2,6 +2,7 @@ import React, { useLayoutEffect } from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { useStaticQuery, graphql } from "gatsby"
+import { Link as _Link } from "gatsby-link"
 import flatten from "lodash/flatten"
 
 import { Layout } from "../components/Layout"
@@ -32,18 +33,33 @@ function getHours(time: string | Date) {
   return time.getHours()
 }
 
+function getMinutes(time: string | Date) {
+  if (typeof time === "string") {
+    return parseInt(time.split(":")[1])
+  }
+  return time.getMinutes()
+}
+
 const Grid = styled.div<{
   "starts-at": Date | string
   "ends-at": Date | string
+  tracks: Rooms[]
 }>`
   display: grid;
   grid-column-gap: 1em;
-  grid-template-columns: ${rooms
-    .concat(dummyTrack)
-    .map(r => `[${r}]`)
-    .join(" 1fr ")};
+  grid-template-columns: ${({ tracks }) =>
+    tracks
+      .concat(dummyTrack)
+      .map(r => `[${r}]`)
+      .join(" 1fr ")};
   grid-template-rows: ${({ "starts-at": startsAt, "ends-at": endsAt }) =>
-    rangeTimeBoxes(5, getHours(startsAt), getHours(endsAt))
+    rangeTimeBoxes(
+      5,
+      getHours(startsAt),
+      getHours(endsAt),
+      getMinutes(startsAt),
+      getMinutes(endsAt),
+    )
       .map(t => `[t-${escapeTime(t)}]`)
       .join(" minmax(1em, max-content) ")};
 
@@ -51,26 +67,39 @@ const Grid = styled.div<{
     display: flex;
     flex-direction: column;
   }
+
+  @media print {
+    margin: 0.5em 0 0 0.55em;
+    grid-template-rows: ${({ "starts-at": startsAt, "ends-at": endsAt }) =>
+      rangeTimeBoxes(
+        5,
+        getHours(startsAt),
+        getHours(endsAt),
+        getMinutes(startsAt),
+        getMinutes(endsAt),
+      )
+        .map(t => `[t-${escapeTime(t)}]`)
+        .join(" max-content ")};
+  }
 `
 const Area = styled(OptionalLink)<{
   track: Rooms
   ["starts-at"]: string
   ["ends-at"]: string
   ["$is-break"]: boolean
+  "selected-track": string | undefined
 }>`
-  margin-bottom: 1em;
   padding: 1em;
   text-decoration: none;
   position: relative;
-  grid-column: ${({ track, "$is-break": isBreak }) =>
-    isBreak ? `A / ${dummyTrack}` : track};
+  grid-column: ${({
+    track,
+    "$is-break": isBreak,
+    "selected-track": selectedTrack,
+  }) =>
+    !selectedTrack && isBreak && track == "A" ? `A / ${dummyTrack}` : track};
   grid-row: ${({ "starts-at": startsAt, "ends-at": endsAt }) =>
     `t-${escapeTime(startsAt)} / t-${escapeTime(endsAt)}`};
-  background-color: ${({ track, "$is-break": isBreak, theme, to }) =>
-    rgba(
-      isBreak ? theme.colors.disabled : theme.colors[`room${track}`],
-      to ? 1.0 : 0.4,
-    )};
   border-left: 5px solid;
   border-color: ${({ track, "$is-break": isBreak, theme, to }) =>
     rgba(
@@ -78,29 +107,49 @@ const Area = styled(OptionalLink)<{
       to ? 1.0 : 0.4,
     )};
   display: flex;
-  flex-direction: column;
   justify-content: stretch;
 
-  &::before {
-    content: "${({ track }) => track}";
-    font-family: ${({ theme }) => theme.fonts.text};
-    font-weight: bold;
-    color: ${({ theme }) => theme.colors.base};
-    font-size: 0.7em;
-    position: absolute;
-    font-family: ${({ theme }) => theme.fonts.text};
-    font-weight: bold;
-    color: ${({ theme }) => theme.colors.base};
-    font-size: 0.7em;
-    top: -8px;
-    left: -10px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 16px;
-    height: 16px;
-    border-radius: 100%;
-    background-color: ${({ track, "$is-break": isBreak, theme }) =>
+  @media not print {
+    margin-bottom: 1em;
+    flex-direction: column;
+    background-color: ${({ track, "$is-break": isBreak, theme, to }) =>
+      rgba(
+        isBreak ? theme.colors.disabled : theme.colors[`room${track}`],
+        to ? 1.0 : 0.4,
+      )};
+    ${({ track, theme, "$is-break": isBreak }) =>
+      isBreak
+        ? ""
+        : `&::before {
+      content: "${track}";
+      font-family: ${theme.fonts.text};
+      font-weight: bold;
+      color: ${theme.colors.base};
+      font-size: 0.7em;
+      position: absolute;
+      font-family: ${theme.fonts.text};
+      font-weight: bold;
+      color: ${theme.colors.base};
+      font-size: 0.7em;
+      top: -8px;
+      left: -10px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 16px;
+      height: 16px;
+      border-radius: 100%;
+      background-color: ${
+        isBreak ? theme.colors.disabledText : theme.colors[`room${track}Border`]
+      };
+    }`}
+  }
+  @media print {
+    margin-bottom: 0.3em;
+    flex-direction: row;
+    padding: 0 0.75em;
+    align-items: start;
+    border-color: ${({ track, "$is-break": isBreak, theme }) =>
       isBreak ? theme.colors.disabledText : theme.colors[`room${track}Border`]};
   }
 
@@ -120,6 +169,13 @@ const Area = styled(OptionalLink)<{
 
   ${({ theme }) => theme.breakpoints.mobile} {
     margin-bottom: 1em;
+
+    ${({ "$is-break": isBreak, track }) =>
+      isBreak && track !== "A" ? "display: none;" : ""}
+
+    @media print {
+      margin-bottom: 0.2em;
+    }
   }
 `
 
@@ -130,9 +186,20 @@ const SubTitle = styled.h2`
   margin: 20px 0 1em;
   padding: 0.2em 1em;
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
+
+  @media print {
+    margin: 0.5em 0;
+    border-bottom: none;
+    padding: 0;
+    font-size: 1em;
+  }
 `
 const RoomLegendBox = styled.div`
   margin-bottom: 2em;
+
+  @media print {
+    margin-bottom: 0;
+  }
 `
 const Text = styled.span`
   color: ${({ theme }) => theme.colors.text};
@@ -140,9 +207,14 @@ const Text = styled.span`
   margin: 0.75rem 0;
   font-size: 2rem;
   font-family: ${({ theme }) => theme.fonts.text};
+
+  @media print {
+    margin: 0.2em 0;
+    font-size: 1em;
+  }
 `
 
-const AreaTitle = styled.div`
+const AreaTitle = styled.div<{ isSidetrack: boolean }>`
   color: ${({ theme }) => theme.colors.text};
   font-family: ${({ theme }) => theme.fonts.header};
   display: flex;
@@ -153,6 +225,16 @@ const AreaTitle = styled.div`
     padding-left: 0;
     margin: 0;
   }
+
+  @media print {
+    margin: 0;
+    ${({ isSidetrack }) =>
+      isSidetrack
+        ? `
+      display: none;
+    `
+        : ""}
+  }
 `
 const AreaFooter = styled.div`
   flex-grow: 1;
@@ -161,6 +243,16 @@ const AreaFooter = styled.div`
   align-items: end;
   justify-content: end;
   margin-top: 2.5rem;
+
+  @media print {
+    display: none;
+  }
+`
+
+const EventEntry = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
 `
 
 export const Head = () => {
@@ -168,7 +260,34 @@ export const Head = () => {
   return <SEO title={t("schedule")} description={t("schedule.description")} />
 }
 
-export default function SchedulePage() {
+function filterTrim<T>(array: T[], filter: (t: T) => boolean) {
+  let start = 0
+  let len = array.length
+  while (start < len) {
+    if (!filter(array[start])) {
+      break
+    }
+    start += 1
+  }
+  let end = len - 1
+  while (end > start) {
+    if (!filter(array[end])) {
+      break
+    }
+    end -= 1
+  }
+  return array.slice(start, end + 1)
+}
+
+export type SchedulePageProps = {
+  pageContext: {
+    selectedTrack?: Rooms
+  }
+}
+
+export default function SchedulePage({
+  pageContext: { selectedTrack },
+}: SchedulePageProps) {
   const { t, i18n } = useTranslation()
   const enOrJa = useEnOrJa()
   const { allSpeakersYaml, allSponsorsYaml, allTalksYaml } = useStaticQuery(
@@ -270,6 +389,9 @@ export default function SchedulePage() {
       case "OPENING_TALK": {
         return i18n.t("talk.opening talk")
       }
+      case "CLOSED": {
+        return i18n.t("talk.closed")
+      }
       case "STREAM": {
         return `${getStreamSession(talk, sessions) ?? "???"}${i18n.t("talk.stream")}`
       }
@@ -297,19 +419,50 @@ export default function SchedulePage() {
         <Title>{t("schedule")}</Title>
 
         {days.map(day => {
-          const { startsAt, endsAt } = times[day]
-          const sessions = flatten(
+          let { startsAt, endsAt } = times[day] as {
+            startsAt: Date | string
+            endsAt: Date | string
+          }
+          const allSessions = flatten(
             timetable[day].map(({ sessions }) => sessions),
           )
+          let sessions = allSessions
+          if (selectedTrack) {
+            sessions = filterTrim(
+              sessions
+                .filter(
+                  session =>
+                    session.track === selectedTrack ||
+                    (session.break && session.track === "A"),
+                )
+                .map(event => {
+                  if (event.break) {
+                    return {
+                      ...event,
+                      track: selectedTrack,
+                      uuid: `${event.uuid}_${selectedTrack}`,
+                    } as Session
+                  }
+                  return event
+                }),
+              session => session.break,
+            )
+            startsAt = sessions[0].startsAt
+            endsAt = sessions[sessions.length - 1].endsAt
+          }
           return (
             <React.Fragment key={day}>
               <SubTitle id={day}>
                 {dateTimeFormatter.format(times[day].startsAt)}
               </SubTitle>
               <RoomLegendBox>
-                <RoomLegend />
+                <RoomLegend selected-track={selectedTrack} />
               </RoomLegendBox>
-              <Grid starts-at={startsAt} ends-at={endsAt}>
+              <Grid
+                starts-at={startsAt}
+                ends-at={endsAt}
+                tracks={selectedTrack ? [selectedTrack] : rooms}
+              >
                 {sessions.map(s => {
                   const hasDescription =
                     s.uuid && (s.speakers.length || s.sponsors.length)
@@ -331,20 +484,23 @@ export default function SchedulePage() {
                       starts-at={s.startsAt}
                       ends-at={s.endsAt}
                       $is-break={s.break || false}
+                      selected-track={selectedTrack}
                     >
-                      <AreaTitle>
+                      <AreaTitle isSidetrack={!selectedTrack && s.track != "A"}>
                         <EventTime session={s} />
                       </AreaTitle>
-                      <Text>{getSessionName(s, sessions)}</Text>
-                      <EventSpeakers session={s} />
+                      <EventEntry>
+                        <Text>{getSessionName(s, allSessions)}</Text>
+                        <EventSpeakers session={s} />
 
-                      <AreaFooter>
-                        <Tags>
-                          {s.spokenLanguage &&
-                            t(`lang.${s.spokenLanguage || ""}`)}
-                          {location === "remote" && t("location.remote")}
-                        </Tags>
-                      </AreaFooter>
+                        <AreaFooter>
+                          <Tags>
+                            {s.spokenLanguage &&
+                              t(`lang.${s.spokenLanguage || ""}`)}
+                            {location === "remote" && t("location.remote")}
+                          </Tags>
+                        </AreaFooter>
+                      </EventEntry>
                     </Area>
                   )
                 })}

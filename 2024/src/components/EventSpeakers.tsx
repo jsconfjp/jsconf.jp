@@ -23,7 +23,24 @@ const ByLineText = styled.span`
   color: ${({ theme }) => theme.colors.text};
   font-size: 0.8em;
   font-style: italic;
-  margin: 0.5em 0;
+
+  @media not print {
+    margin: 0.5em 0;
+  }
+
+  @media print {
+    margin: 0 0.5em 0 0;
+  }
+`
+
+const SpeakerEntry = styled.span`
+  display: flex;
+  flex-direction: column;
+
+  @media print {
+    flex-direction: row;
+    align-items: end;
+  }
 `
 
 type Props = {
@@ -67,17 +84,12 @@ export const EventSpeakers = ({ session: s }: Props) => {
 
   return (
     <>
-      <ByLineText>by</ByLineText>
-      {speakers.map((s, i) =>
-        i > 0 ? (
-          <React.Fragment key={i}>
-            <ByLineText>and</ByLineText>
-            <SpeakerName speaker={s} />
-          </React.Fragment>
-        ) : (
-          <SpeakerName key={i} speaker={s} />
-        ),
-      )}
+      {speakers.map((s, i) => (
+        <SpeakerEntry key={i}>
+          <ByLineText>{i == 0 ? "by" : "and"}</ByLineText>
+          <SpeakerName speaker={s} />
+        </SpeakerEntry>
+      ))}
     </>
   )
 }

@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Logo2023 } from "./Logo2023"
+import { HeroCountdown } from "./HeroCountdown"
 
 type Props = {
   title: string
@@ -55,6 +56,7 @@ export function Hero(props: Props) {
       <TextBox>
         <Title lang="en">{title}</Title>
         <SubTitle>{subTitle}</SubTitle>
+        <HeroCountdown />
         <Paragraph lang="en">{description}</Paragraph>
       </TextBox>
     </Box>

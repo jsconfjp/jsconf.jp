@@ -17,6 +17,10 @@ const Text = styled.span`
   text-transform: uppercase;
   font-family: ${({ theme }) => theme.fonts.header};
   text-transform: uppercase;
+
+  @media print {
+    display: none;
+  }
 `
 
 export function Breadcrumb(props: Props) {
