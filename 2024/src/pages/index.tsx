@@ -264,9 +264,9 @@ export default function IndexPage() {
     },
     {
       subTitle: t("callForSponsors"),
-      available: site.siteMetadata.sponsorFormUrl,
+      available: !sponsorDateOverDue,
       render: () =>
-        !sponsorDateOverDue ? (
+        site.siteMetadata.sponsorFormUrl ? (
           <LinkButton
             color="primary"
             size="large"
