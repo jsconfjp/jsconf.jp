@@ -170,6 +170,9 @@ const Area = styled(OptionalLink)<{
   ${({ theme }) => theme.breakpoints.mobile} {
     margin-bottom: 1em;
 
+    ${({ "$is-break": isBreak, track }) =>
+      isBreak && track !== "A" ? "display: none;" : ""}
+
     @media print {
       margin-bottom: 0.2em;
     }
