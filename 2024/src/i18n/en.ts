@@ -76,8 +76,12 @@ export const en = {
     "talk.sponsor": "Sponsor Talks",
     "time.in": "in ",
     "time.weeks": " weeks ",
+    "time.week": " week ",
     "time.days": " days ",
+    "time.day": " day ",
     "time.hours": " hours ",
+    "time.hour": " hour ",
     "time.minutes": " minutes",
+    "time.minute": " minute",
   },
 }

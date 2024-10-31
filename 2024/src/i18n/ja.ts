@@ -63,8 +63,11 @@ export const ja: {
     "talk.sponsor": "スポンサートーク",
     "time.in": "残り",
     "time.weeks": "週",
+    "time.week": "週",
     "time.days": "日",
+    "time.day": "日",
     "time.hours": "時",
+    "time.hour": "時",
     "time.minutes": "分",
   },
 }

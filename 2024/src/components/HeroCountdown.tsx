@@ -21,14 +21,17 @@ export const HeroCountdown = () => {
   if (duration.sign != 1) {
     return <></>
   }
+  const f = (time: number, unit: string) =>
+    `${time}${t(time === 1 ? `time.${unit}` : `time.${unit}s`)}`
   return (
     <Paragraph>
       {t("time.in")}
-      {duration.weeks ? `${duration.weeks}${t("time.weeks")}` : ""}
-      {duration.days ? `${duration.days}${t("time.days")}` : ""}
-      {duration.hours ? `${duration.hours}${t("time.hours")}` : ""}
-      {duration.minutes}
-      {t("time.minutes")}
+      {duration.weeks ? f(duration.weeks, "week") : ""}
+      {duration.weeks || duration.days ? f(duration.days, "day") : ""}
+      {duration.weeks || duration.days || duration.hours
+        ? f(duration.hours, "hour")
+        : ""}
+      {f(duration.minutes, "minute")}
     </Paragraph>
   )
 }
