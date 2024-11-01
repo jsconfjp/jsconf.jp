@@ -475,7 +475,8 @@
   spokenLanguage: ""
   slideLanguage: ""
   slidesUrl: ""
-  speakerIDs: []
+  speakerIDs:
+    - eiji-kitamura
   sponsorIDs: []
   youtube: ""
 - date: day1
