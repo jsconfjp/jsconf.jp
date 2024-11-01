@@ -647,3 +647,19 @@
   twitter: ""
   homepage: ""
   mastodon: ""
+- uuid: eiji-kitamura
+  name: Eiji Kitamura / えーじ
+  nameReading: ""
+  pronoun: ""
+  featured: true
+  presentations:
+    - eiji-kitamura
+  biography: >-
+    ブラウザ開発企業でDevRel Identityチームのテックリードを努めています。WebOTP、WebAuthn、FedCM、Digital Credentialsなど、ブラウザ技術の中でも、アイデンティティと認証に関連する技術すべてに精通しています。
+  biographyJa: >-
+    ブラウザ開発企業でDevRel Identityチームのテックリードを努めています。WebOTP、WebAuthn、FedCM、Digital Credentialsなど、ブラウザ技術の中でも、アイデンティティと認証に関連する技術すべてに精通しています。
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
