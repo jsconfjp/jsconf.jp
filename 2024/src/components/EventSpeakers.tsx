@@ -6,6 +6,7 @@ const SpeakerText = styled.span`
   color: ${({ theme }) => theme.colors.text};
   font-size: 1em;
   font-family: ${({ theme }) => theme.fonts.text};
+  text-wrap: balance;
 `
 const SpeakerRT = styled.rt`
   color: ${({ theme }) => theme.colors.text};
