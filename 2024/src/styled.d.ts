@@ -41,6 +41,7 @@ declare module "styled-components" {
       subTitle: string
     }
     breakpoints: {
+      mobileSm: string
       mobile: string
       largerThanMobile: string
     }

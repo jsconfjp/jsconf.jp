@@ -61,6 +61,7 @@ export const theme: DefaultTheme = {
     subTitle: "2.6rem",
   },
   breakpoints: {
+    mobileSm: "@media (max-width: 600px)",
     mobile: "@media (max-width: 860px)",
     largerThanMobile: "@media (min-width: 861px)",
   },

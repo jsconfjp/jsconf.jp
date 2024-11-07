@@ -32,12 +32,17 @@ type Props = {
 }
 
 const SpeakerBox = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 25% 1fr;
   margin: 2em 0;
   padding: 0 2.5rem;
 
   ${({ theme }) => theme.breakpoints.mobile} {
+    grid-template-columns: 45% 1fr;
+  }
+
+  ${({ theme }) => theme.breakpoints.mobileSm} {
+    display: flex;
     flex-direction: column;
   }
 `
@@ -48,13 +53,14 @@ const SpeakerSide = styled.div`
   font-size: 1.8rem;
   margin: 0 3em;
 
-  ${({ theme }) => theme.breakpoints.mobile} {
+  ${({ theme }) => theme.breakpoints.mobileSm} {
     margin: 2em 0;
   }
 `
 const Avatar = styled(Image)`
   width: 100%;
-  max-width: 273px;
+
+  aspect-ratio: 1 / 1;
 
   ${({ theme }) => theme.breakpoints.mobile} {
     max-width: 100%;
