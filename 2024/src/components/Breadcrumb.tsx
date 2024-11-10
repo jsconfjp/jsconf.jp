@@ -1,22 +1,33 @@
 import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
-import { Link } from "gatsby"
+import { Link as _Link } from "gatsby"
 
 export type Props = {
   path: (string | null | { label: string; to: string })[]
 }
 
+const Link = styled(_Link)`
+  text-decoration: none;
+`
+
 const Box = styled.div`
   display: flex;
 `
 const Text = styled.span`
+  color: #575757;
   margin-right: 0.5em;
   font-size: 1.4rem;
   font-weight: bold;
   text-transform: uppercase;
   font-family: ${({ theme }) => theme.fonts.header};
   text-transform: uppercase;
+
+  ${Link} & {
+    &:hover {
+      color: black;
+    }
+  }
 
   @media print {
     display: none;
