@@ -315,14 +315,14 @@ export default function IndexPage() {
               if (i % 2 !== 0) {
                 return (
                   <Card key={i}>
-                    <Title>{subTitle}</Title>
+                    <Title heading="h2">{subTitle}</Title>
                     <Centerize>{render()}</Centerize>
                   </Card>
                 )
               }
               return (
                 <Centerize key={i}>
-                  <Title>{subTitle}</Title>
+                  <Title heading="h2">{subTitle}</Title>
                   {render()}
                 </Centerize>
               )
@@ -331,7 +331,7 @@ export default function IndexPage() {
           <Centerize>
             {jnaMembers.length > 0 ? (
               <>
-                <Title>{t("organizingTeam")}</Title>
+                <Title heading="h2">{t("organizingTeam")}</Title>
                 <OrganizersBox>
                   {jnaMembers.map(
                     ({ node: member }: { node: any }, i: number) => (
@@ -343,7 +343,7 @@ export default function IndexPage() {
             ) : null}
             {notJnaMembers.length > 0 ? (
               <>
-                <Title>{t("volunteerTeam")}</Title>
+                <Title heading="h2">{t("volunteerTeam")}</Title>
                 <MembersBox>
                   {notJnaMembers.map(
                     ({ node: member }: { node: any }, i: number) => (
