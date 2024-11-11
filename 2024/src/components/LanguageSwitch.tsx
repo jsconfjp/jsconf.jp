@@ -7,10 +7,14 @@ type Props = {
   onChange: (lang: string) => void
 }
 
-const Lang = styled.a<{ selected: boolean }>`
+const Lang = styled.button<{ selected: boolean }>`
+  border: none;
+  background: transparent;
+  cursor: pointer;
   text-decoration: none;
   font-family: ${({ theme }) => theme.fonts.header};
   font-size: 2rem;
+  font-weight: bold;
   color: ${({ theme }) => theme.colors.text};
   border-bottom: 4px solid
     ${({ theme, selected }) =>
@@ -50,7 +54,6 @@ export function LanguageSwitch(props: Props) {
           <React.Fragment key={langKey}>
             <Lang
               selected={selected}
-              href={!hasMounted || selected ? undefined : "#"}
               onClick={
                 !hasMounted || selected
                   ? undefined

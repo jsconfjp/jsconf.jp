@@ -71,6 +71,7 @@ const BackToTopButton = styled.button`
   display: inline-block;
   font-family: ${({ theme }) => theme.fonts.header};
   font-size: 1.6rem;
+  font-weight: bold;
   padding: 10px 24px;
   color: white;
   background-color: ${({ theme }) => theme.colors.primary};
