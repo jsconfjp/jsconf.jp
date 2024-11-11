@@ -33,7 +33,7 @@ const LinksBox = styled.ul`
   & > li::after {
     margin: 0px 8px;
     content: "|";
-    color: #575757;
+    color: ${({ theme }) => theme.colors.textGrey};
   }
   & > li:last-child::after {
     content: "";
@@ -51,7 +51,7 @@ const LinksBox = styled.ul`
 const Link = styled(_Link)`
   line-height: 1.8em;
   line-height: 1.8em;
-  color: #575757;
+  color: ${({ theme }) => theme.colors.textGrey};
   text-decoration: none;
   &:hover {
     color: #000;
@@ -59,10 +59,10 @@ const Link = styled(_Link)`
 `
 const ExternalLink = styled(OutboundLink)`
   line-height: 1.8em;
-  color: #575757;
+  color: ${({ theme }) => theme.colors.textGrey};
   text-decoration: none;
   &:hover {
-    color: #000;
+    color: ${({ theme }) => theme.colors.text};
   }
 
   ${({ theme }) => theme.breakpoints.mobile} {

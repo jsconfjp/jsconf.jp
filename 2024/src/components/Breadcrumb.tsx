@@ -15,7 +15,7 @@ const Box = styled.div`
   display: flex;
 `
 const Text = styled.span`
-  color: #575757;
+  color: ${({ theme }) => theme.colors.textGrey};
   margin-right: 0.5em;
   font-size: 1.4rem;
   font-weight: bold;
@@ -25,7 +25,7 @@ const Text = styled.span`
 
   ${Link} & {
     &:hover {
-      color: black;
+      color: ${({ theme }) => theme.colors.text};
     }
   }
 
