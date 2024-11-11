@@ -54,7 +54,6 @@ export function LanguageSwitch(props: Props) {
           <React.Fragment key={langKey}>
             <Lang
               selected={selected}
-              // href={!hasMounted || selected ? undefined : "#"}
               onClick={
                 !hasMounted || selected
                   ? undefined
