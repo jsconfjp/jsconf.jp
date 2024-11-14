@@ -335,37 +335,23 @@
   title: Encrypting data in the Browser - Exploring Web Crypto APIs
   titleJa: Encrypting data in the Browser - Exploring Web Crypto APIs
   description: >-
-    In this talk, I will be covering the following things
+    Have you ever considered securing your app data within the browser? Let’s understand how encrypting your data in the browser enhances overall security.
 
-    What is Encryption
-    How it works in a traditional Client Server Architecture
-    Encrypting your data in the browser - How it enhances security
-    Typed Arrays
-    Symmetric vs Asymmetric Encryption
-    What is AES-GCM and how you use the crypto APIs with the algorithm. How is AES-GCM different from other AES Modes with a demo.
-    covering the crypto.subtle APIs - encrypt, decrypt, deriveKey, generateKey, importKey and exportKey
-    crypto.getRandomValues and why its better than Math.random for cryptographic usage with a demo
-    Whats is PBKDF2, how to use, pros and cons
-    Demo for better understanding of the Web Crypto APIs
-    Use cases
-    An App I built using these Web Crypto APIs - <https://cryptmoji.in⁠>
-    Closing thoughts
+
+    In this talk Aakansha will be deep-diving into the world of Web Crypto APIs, starting from key generation, various encryption algorithms, implementation techniques, and more. 
+    The session will include live demos, coding examples, and a fun side project that she created as a result of learning about the Web Crypto APIs. 
+
+
+    Let’s dive into the Web Crypto APIs together and explore its capabilities.
   descriptionJa: >-
-    この講演では次のことについて説明します
+    ブラウザ内でアプリのデータを保護することを考えたことはありますか？ブラウザ内でデータを暗号化することで、全体的なセキュリティがどのように強化されるかを理解しましょう。
 
-    暗号化とは
-    従来のクライアントサーバーアーキテクチャでの動作方法
-    ブラウザ内のデータを暗号化する - セキュリティを強化する方法
-    型付き配列
-    対称暗号化と非対称暗号化
-    AES-GCM とは何ですか、また、このアルゴリズムで暗号化 API を使用する方法。 AES-GCM は他の AES モードとどのように違うのか、デモをご覧ください。
-    crypto.subtle API - encrypt、decrypt、deriveKey、generateKey、importKey、exportKey をカバーします。
-    crypto.getRandomValues と、デモによる暗号化の使用において Math.random よりも優れている理由
-    PBKDF2とは何ですか、使用方法、長所と短所
-    Web Crypto API をより深く理解するためのデモ
-    ユースケース
-    これらの Web Crypto API を使用して構築したアプリ - <https://cryptmoji.in⁠>
-    最後に
+
+    このトークでAakanshaは、鍵の生成から始まり、様々な暗号化アルゴリズム、実装テクニックなど、Web Crypto APIの世界に深く潜り込みます。
+    セッションには、ライブデモ、コーディング例、そしてWeb Crypto APIについて学んだ結果として彼女が作成した楽しいサイドプロジェクトが含まれます。
+
+
+    一緒にWeb Crypto APIに飛び込み、その機能を探求しましょう。
   spokenLanguage: en
   slideLanguage: en
   slidesUrl: ""
