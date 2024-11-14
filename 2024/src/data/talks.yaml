@@ -348,7 +348,7 @@
     Whats is PBKDF2, how to use, pros and cons
     Demo for better understanding of the Web Crypto APIs
     Use cases
-    An App I built using these Web Crypto APIs - https://cryptmoji.in⁠
+    An App I built using these Web Crypto APIs - <https://cryptmoji.in⁠>
     Closing thoughts
   descriptionJa: >-
     この講演では次のことについて説明します
@@ -364,7 +364,7 @@
     PBKDF2とは何ですか、使用方法、長所と短所
     Web Crypto API をより深く理解するためのデモ
     ユースケース
-    これらの Web Crypto API を使用して構築したアプリ - https://cryptmoji.in⁠
+    これらの Web Crypto API を使用して構築したアプリ - <https://cryptmoji.in⁠>
     最後に
   spokenLanguage: en
   slideLanguage: en
@@ -631,17 +631,17 @@
      - リアーキテクトのプロセス: スパゲティコードを整理し、コードの可読性と保守性を向上させるための具体的な手法。
      
      - ユニットテストの書き直し: 1ファイルに27000行存在するユニットテストをゼロからどのように書き直したか。
-     
+
   descriptionJa: >-
     概要: Yahoo!知恵袋の20周年を迎え、フロントエンドのスパゲティコード化により開発効率や保守性、品質に課題があります。また生成AIを利用した新機能開発も増加しており、課題解決と新規開発を並行して進める必要があります。
     本LTでは、Yahoo!知恵袋のフロントエンドリアーキテクトの具体的な取り組みと進め方について主に以下の内容について紹介します。
 
     - 大規模システムのTypeScript化: JavaScriptで動作している既存システムをどのようにしてTypeScriptに移行したか。
-    
+
     - リアーキテクトのプロセス: スパゲティコードを整理し、コードの可読性と保守性を向上させるための具体的な手法。
-    
+
     - ユニットテストの書き直し: 1ファイルに27000行存在するユニットテストをゼロからどのように書き直したか。
-    
+
   spokenLanguage: ja
   slideLanguage: ja
   slidesUrl: ""
@@ -783,15 +783,15 @@
     さまざまな方に利用していただくために、迅速なログインの実現を目指してパスキーをはじめとした以下の工夫を導入した事例を紹介します。
 
     - あえて passkey autofill をしないという選択
-    
+
     - above the fold で表示する UI のスコープのこだわり
-    
+
     - アクセサビリティ (WCAG)
-    
+
     - ユーザーネームファースト
-    
+
     - 帯域が確保できない環境で動かすための工夫
-    
+
   descriptionJa: >-
     東急グループでは、スーパー、ホテル、不動産などの様々なリアルアセットを抱えており、その中の一つの鉄道領域では Web 上で乗車券を購入し、QR コード をかざして改札を通るサービスがあります。
     人が行き交う改札口では、スムーズに QR コードを提示する必要があるため、2要素認証にかける時間を減らす必要がありました。
@@ -799,15 +799,15 @@
     さまざまな方に利用していただくために、迅速なログインの実現を目指してパスキーをはじめとした以下の工夫を導入した事例を紹介します。
 
     - あえて passkey autofill をしないという選択
-    
+
     - above the fold で表示する UI のスコープのこだわり
-    
+
     - アクセサビリティ (WCAG)
-    
+
     - ユーザーネームファースト
-    
+
     - 帯域が確保できない環境で動かすための工夫
-    
+
   spokenLanguage: ja
   slideLanguage: ja
   slidesUrl: ""
@@ -977,11 +977,15 @@
 
     このセッションでは、イテレータとイテラブルについて、以下のことがらについて話します：
 
-    ・JavaScriptにおけるイテレータとイテラブルとは何か
-    ・今のイテレータとイテラブルが抱えている課題
-    ・Iterator Helpersが、それらの課題をどのように解決するのか
-    ・JavaScriptCoreにおけるIterator Helpersの実装
-    ・これからの、イテレータとイテラブルを使ったプログラミングについての考察
+    - JavaScriptにおけるイテレータとイテラブルとは何か
+
+    - 今のイテレータとイテラブルが抱えている課題
+
+    - Iterator Helpersが、それらの課題をどのように解決するのか
+
+    - JavaScriptCoreにおけるIterator Helpersの実装
+
+    - これからの、イテレータとイテラブルを使ったプログラミングについての考察
   descriptionJa: >-
     JavaScriptにはイテレータとイテラブルという概念があります。これらの概念はJavaScriptでのプログラミングの幅を広げてくれます。
 
@@ -991,11 +995,15 @@
 
     このセッションでは、イテレータとイテラブルについて、以下のことがらについて話します：
 
-    ・JavaScriptにおけるイテレータとイテラブルとは何か
-    ・今のイテレータとイテラブルが抱えている課題
-    ・Iterator Helpersが、それらの課題をどのように解決するのか
-    ・JavaScriptCoreにおけるIterator Helpersの実装
-    ・これからの、イテレータとイテラブルを使ったプログラミングについての考察
+    - JavaScriptにおけるイテレータとイテラブルとは何か
+
+    - 今のイテレータとイテラブルが抱えている課題
+
+    - Iterator Helpersが、それらの課題をどのように解決するのか
+
+    - JavaScriptCoreにおけるIterator Helpersの実装
+
+    - これからの、イテレータとイテラブルを使ったプログラミングについての考察
   spokenLanguage: ja
   slideLanguage: ja
   slidesUrl: ""
@@ -1086,18 +1094,26 @@
     このトークでは、 Function.prototype.toString() はどんな API なのか、どういう使い道があるのか、世の中のライブラリで利用されている実用的なものから、狂った使い方まで紹介します。
 
     - リモート関数 (puppeteer の page.evaluate())
+
     - ネイティブコード判定
+
     - tempalte literal を使わない複数行文字列リテラル
+
     - etc...
+
   descriptionJa: >-
     JavaScript には Function.prototype.toString() という API があります。この API を使うと、関数本体のソースコードを文字列として取得できます。
     一見すると何の使い道があるか分からないかもしれません。しかし、関数本体のソースコードを取得できるということは、実行時に関数のソースコードを静的解析できることを意味します。また、関数をシリアライズしてどこかに転送した後、デシリアライズして実行するといったことも可能です。この特徴は、JavaScript に大きな力をもたらします。
     このトークでは、 Function.prototype.toString() はどんな API なのか、どういう使い道があるのか、世の中のライブラリで利用されている実用的なものから、狂った使い方まで紹介します。
 
     - リモート関数 (puppeteer の page.evaluate())
+
     - ネイティブコード判定
+
     - tempalte literal を使わない複数行文字列リテラル
+
     - etc...
+
   spokenLanguage: ja
   slideLanguage: ja
   slidesUrl: ""
@@ -1179,106 +1195,173 @@
   titleJa: "Boost your Test Implementation in Javascript by 10x?"
   description: >-
     Elevator Pitch
+
     ---------------
+
     How can we facilitate involving everyone in testing, namely holistic testing, and making collaboration as a whole team? In one of my last projects, I experienced developing a framework, by which we not only easily onboarded all parties in automation, but also reduced duplication. In this talk, I will share my story to reduce the average test implementation duration from 5 hours to 30 mins. 
 
+
     Problem:
+
     ---------------
+
     There are various problems in testing. Firstly, to encourage holistic testing, we have to spread the quality mindset and make everyone (including developers and other roles) involved. For this purpose, test implementation should be simplified to facilitate this process.
 
     Secondly, especially in large organizations, several teams or groups are trying to cope with the same or similar technical challenges in different ways. They are even unaware of each other. To summarize:
+
     * There is no standard among these teams: Each is following a different approach/strategy.
+
     * Some of them are struggling with problems, which were solved by others. The effort is duplicated.
 
     To have a better understanding of the implementation variations, I attached a slide where I showed how a simple scenario could be automated in 4 different ways:
-    https://drive.google.com/file/d/1c0aboWtk9WffpxNHCSuooI3QfvrrTsD0
+    <https://drive.google.com/file/d/1c0aboWtk9WffpxNHCSuooI3QfvrrTsD0>
 
     Solution:
+
     ---------------
+
     We came up with the centralized test framework development idea. The motivation was to develop a framework in which the most common problems were handled and serve the teams. In this way, we would remove the imbalance, support those who are struggling with the problems that were solved by others, and ensure the code quality in all test frameworks used by several teams.
 
     I will show the architecture of a well-structured central framework, which includes: 
 
+
     * Test runner
+
     * Parallelization (in local and remote, in spec and test levels)
+
     * Retries (in test and failing requests level)
+
     * Test reporter (Test level isolated execution details)
+
     * Config management (Execution parameters)
+
     * Execution Metrics collection
 
     Outcomes:
+
     ---------------
+
     The achievements of the distributed central framework are:
 
+
     * Ease of Automation: Average test automation duration from 5 hours to 30 mins
+
     * Execution speed: Fast runs
+
     * Reliability: Low false alarm rate
+
     * Maintainability: Fast test fixes
 
     Takeaways
+
     ---------------
+
     In this session, attendees will see:
+
     * How to publish a test automation framework
+
     * Ways to improve the reusability of tests
+
     * Solutions against flakiness and maintenance.
+
     * Ways to improve troubleshooting in test executions
 
     Agenda
+
     ---------------
-    7 mins: Introduction: Problem definition, Proposal: Benefits of a distributed test package
-    8 mins: Strategy: Things to consider for a well-equipped framework
-    5 mins: Architecture: Building the components
-    5 mins: Monitoring: Key quality metrics
-    5 mins: Summary & QA
+
+    * 7 mins: Introduction: Problem definition, Proposal: Benefits of a distributed test package
+
+    * 8 mins: Strategy: Things to consider for a well-equipped framework
+
+    * 5 mins: Architecture: Building the components
+
+    * 5 mins: Monitoring: Key quality metrics
+
+    * 5 mins: Summary & QA
 
   descriptionJa: >-
     **エレベーターピッチ**
+
     ---------------
+
     全員がテストに参加しやすくするにはどうすればよいか、つまりホリスティックなテストを促進し、チーム全体でのコラボレーションを実現するにはどうすればよいのでしょうか。私が最近のプロジェクトで経験したのは、すべての関係者を自動化に簡単に参加させ、重複を減らすフレームワークの開発でした。この講演では、テストの実装時間を平均5時間から30分に短縮した話を共有します。
 
+
     **課題**
+
     ---------------
+
     テストにはさまざまな課題があります。まず、ホリスティックなテストを推進するためには、品質マインドを広め、開発者や他の役割を含めて全員を巻き込む必要があります。そのためには、テスト実装を簡素化し、このプロセスを促進する必要があります。
 
     次に、特に大規模な組織では、複数のチームやグループが同じ技術的な課題に異なる方法で取り組んでおり、互いに存在を知らないことがよくあります。要するに、次のような問題があります：
+
     * チーム間で標準がない：各チームが異なるアプローチや戦略を採用している。
+
     * 一部のチームは、他のチームがすでに解決した問題に取り組んでおり、努力が重複している。
 
     **解決策**
+
     ---------------
+
     そこで、私たちは中央集中型のテストフレームワークを開発するアイデアを思いつきました。このフレームワークは共通の問題に対応し、各チームに提供することで、不均衡を解消し、他のチームがすでに解決した問題に苦しむチームを支援し、複数のチームが使用するすべてのテストフレームワークでコード品質を確保します。
 
     講演では、以下を含む、構造化された中央フレームワークのアーキテクチャを紹介します：
+
     * テストランナー
+
     * 並列実行（ローカルとリモート、specレベルとテストレベル）
+
     * リトライ機能（テストレベルと失敗したリクエストレベル）
+
     * テストレポーター（テストレベルでの詳細な実行データ）
+
     * 設定管理（実行パラメータ）
+
     * 実行メトリクスの収集
 
     **成果**
+
     ---------------
+
     分散型の中央フレームワークがもたらした成果は次の通りです：
+
     * 自動化の容易さ：テスト自動化の平均時間を5時間から30分に短縮
+
     * 実行速度の向上：高速な実行
+
     * 信頼性：低い誤警報率
+
     * 保守性：迅速なテスト修正
 
     **学べること**
+
     ---------------
+
     このセッションでは、参加者は次のことを学びます：
+
     * テスト自動化フレームワークの公開方法
+
     * テストの再利用性を向上させる方法
+
     * フレーク問題と保守性への対策
+
     * テスト実行中のトラブルシューティングを改善する方法
 
     **アジェンダ**
+
     ---------------
-    7分: 導入：問題の定義、提案：分散テストパッケージのメリット
-    8分: 戦略：設備の整ったフレームワークのために考慮すべきこと
-    5分: アーキテクチャ：コンポーネントの構築
-    5分: モニタリング：主要な品質指標
-    5分: まとめ & Q&A
+
+    * 7分: 導入：問題の定義、提案：分散テストパッケージのメリット
+
+    * 8分: 戦略：設備の整ったフレームワークのために考慮すべきこと
+
+    * 5分: アーキテクチャ：コンポーネントの構築
+
+    * 5分: モニタリング：主要な品質指標
+
+    * 5分: まとめ & Q&A
+
   spokenLanguage: en
   slideLanguage: en
   slidesUrl: ""
