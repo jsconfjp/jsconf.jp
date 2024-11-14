@@ -1,3 +1,4 @@
+import Markdown from "react-markdown"
 import React, { useLayoutEffect } from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
@@ -490,7 +491,14 @@ export default function SchedulePage({
                         <EventTime session={s} />
                       </AreaTitle>
                       <EventEntry>
-                        <Text>{getSessionName(s, allSessions)}</Text>
+                        <Text>
+                          <Markdown
+                            allowedElements={["p", "code"]}
+                            components={{ p: "span" }}
+                          >
+                            {getSessionName(s, allSessions)}
+                          </Markdown>
+                        </Text>
                         <EventSpeakers session={s} />
 
                         <AreaFooter>
