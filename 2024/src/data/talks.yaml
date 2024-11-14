@@ -364,7 +364,7 @@
     PBKDF2とは何ですか、使用方法、長所と短所
     Web Crypto API をより深く理解するためのデモ
     ユースケース
-    これらの Web Crypto API を使用して構築したアプリ - <https://cryptmoji.in>
+    これらの Web Crypto API を使用して構築したアプリ - <https://cryptmoji.in⁠>
     最後に
   spokenLanguage: en
   slideLanguage: en
@@ -604,10 +604,10 @@
   titleJa: "LT: romajip: 日本の住所CSVデータを活用した英語住所変換ライブラリを作った話"
   description: >-
     デジタル庁や郵便局は、日本の住所データをCSV形式で公開しています。romajipは、日本の都道府県、市区町村、郡まで含む複雑で巨大なデータセットを最適化されたJSONに変換し、日本語の住所を英語に変換するTypeScriptライブラリです。10分間のライトニングトークでは、romajipを作成した理由、データセット作成時に直面した課題、ライブラリとしてこだわった点などを紹介します。
-    github link: <https://github.com/Sangun-Kang/romajip>
+    github link: https://github.com/Sangun-Kang/romajip
   descriptionJa: >-
     デジタル庁や郵便局は、日本の住所データをCSV形式で公開しています。romajipは、日本の都道府県、市区町村、郡まで含む複雑で巨大なデータセットを最適化されたJSONに変換し、日本語の住所を英語に変換するTypeScriptライブラリです。10分間のライトニングトークでは、romajipを作成した理由、データセット作成時に直面した課題、ライブラリとしてこだわった点などを紹介します。
-    github link: <https://github.com/Sangun-Kang/romajip>
+    github link: https://github.com/Sangun-Kang/romajip
   spokenLanguage: ja
   slideLanguage: ja
   slidesUrl: ""
@@ -875,7 +875,7 @@
         - 更に、そのメリットを最大化するためのプラクティスとしてのOne Version Rule
     - One Version Rule with pnpmの実践的事例とその課題
         - monorepo内では1つのライブラリは1つのバージョンだけを参照するという仕組み
-            - <https://tech.newmo.me/entry/one-version-rule-built-on-pnpm-catalog>
+            - https://tech.newmo.me/entry/one-version-rule-built-on-pnpm-catalog
         - monorepoのインストールがシンプルになりセットアップをシンプルにする
         - プロダクトを一から作成するからこそ取れる選択肢、monorepo管理のアプローチ
         - 将来の拡張性を考えたpnpm catalogsの利用
@@ -897,11 +897,9 @@
 
     ## 発表の参考情報
 
-    - <https://j3t.ch/tech/modular-monolith-monorepo/>
-
-    - <https://monorepo.tools/>
-
-    - <https://tech.newmo.me/entry/one-version-rule-built-on-pnpm-catalog>
+    - https://j3t.ch/tech/modular-monolith-monorepo/
+    - https://monorepo.tools/
+    - https://tech.newmo.me/entry/one-version-rule-built-on-pnpm-catalog
   descriptionJa: >-
     ## イントロ
 
@@ -931,7 +929,7 @@
         - 更に、そのメリットを最大化するためのプラクティスとしてのOne Version Rule
     - One Version Rule with pnpmの実践的事例とその課題
         - monorepo内では1つのライブラリは1つのバージョンだけを参照するという仕組み
-            - <https://tech.newmo.me/entry/one-version-rule-built-on-pnpm-catalog>
+            - https://tech.newmo.me/entry/one-version-rule-built-on-pnpm-catalog
         - monorepoのインストールがシンプルになりセットアップをシンプルにする
         - プロダクトを一から作成するからこそ取れる選択肢、monorepo管理のアプローチ
         - 将来の拡張性を考えたpnpm catalogsの利用
@@ -953,12 +951,9 @@
 
     ## 発表の参考情報
 
-    - <https://j3t.ch/tech/modular-monolith-monorepo/>
-
-    - <https://monorepo.tools/>
-
-    - <https://tech.newmo.me/entry/one-version-rule-built-on-pnpm-catalog>
-
+    - https://j3t.ch/tech/modular-monolith-monorepo/
+    - https://monorepo.tools/
+    - https://tech.newmo.me/entry/one-version-rule-built-on-pnpm-catalog
   spokenLanguage: ja
   slideLanguage: ja
   slidesUrl: ""
