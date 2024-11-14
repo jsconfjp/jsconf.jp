@@ -335,21 +335,15 @@
   title: Encrypting data in the Browser - Exploring Web Crypto APIs
   titleJa: Encrypting data in the Browser - Exploring Web Crypto APIs
   description: >-
-    In this talk, I will be covering the following things
+    Have you ever considered securing your app data within the browser? Let’s understand how encrypting your data in the browser enhances overall security.
 
-    What is Encryption
-    How it works in a traditional Client Server Architecture
-    Encrypting your data in the browser - How it enhances security
-    Typed Arrays
-    Symmetric vs Asymmetric Encryption
-    What is AES-GCM and how you use the crypto APIs with the algorithm. How is AES-GCM different from other AES Modes with a demo.
-    covering the crypto.subtle APIs - encrypt, decrypt, deriveKey, generateKey, importKey and exportKey
-    crypto.getRandomValues and why its better than Math.random for cryptographic usage with a demo
-    Whats is PBKDF2, how to use, pros and cons
-    Demo for better understanding of the Web Crypto APIs
-    Use cases
-    An App I built using these Web Crypto APIs - https://cryptmoji.in⁠
-    Closing thoughts
+
+    In this talk Aakansha will be deep-diving into the world of Web Crypto APIs, starting from key generation, various encryption algorithms, implementation techniques, and more. 
+    The session will include live demos, coding examples, and a fun side project that she created as a result of learning about the Web Crypto APIs. 
+
+
+    Let’s dive into the Web Crypto APIs together and explore its capabilities.
+
   descriptionJa: >-
     この講演では次のことについて説明します
 
@@ -631,17 +625,17 @@
      - リアーキテクトのプロセス: スパゲティコードを整理し、コードの可読性と保守性を向上させるための具体的な手法。
      
      - ユニットテストの書き直し: 1ファイルに27000行存在するユニットテストをゼロからどのように書き直したか。
-     
+
   descriptionJa: >-
     概要: Yahoo!知恵袋の20周年を迎え、フロントエンドのスパゲティコード化により開発効率や保守性、品質に課題があります。また生成AIを利用した新機能開発も増加しており、課題解決と新規開発を並行して進める必要があります。
     本LTでは、Yahoo!知恵袋のフロントエンドリアーキテクトの具体的な取り組みと進め方について主に以下の内容について紹介します。
 
     - 大規模システムのTypeScript化: JavaScriptで動作している既存システムをどのようにしてTypeScriptに移行したか。
-    
+
     - リアーキテクトのプロセス: スパゲティコードを整理し、コードの可読性と保守性を向上させるための具体的な手法。
-    
+
     - ユニットテストの書き直し: 1ファイルに27000行存在するユニットテストをゼロからどのように書き直したか。
-    
+
   spokenLanguage: ja
   slideLanguage: ja
   slidesUrl: ""
@@ -783,15 +777,15 @@
     さまざまな方に利用していただくために、迅速なログインの実現を目指してパスキーをはじめとした以下の工夫を導入した事例を紹介します。
 
     - あえて passkey autofill をしないという選択
-    
+
     - above the fold で表示する UI のスコープのこだわり
-    
+
     - アクセサビリティ (WCAG)
-    
+
     - ユーザーネームファースト
-    
+
     - 帯域が確保できない環境で動かすための工夫
-    
+
   descriptionJa: >-
     東急グループでは、スーパー、ホテル、不動産などの様々なリアルアセットを抱えており、その中の一つの鉄道領域では Web 上で乗車券を購入し、QR コード をかざして改札を通るサービスがあります。
     人が行き交う改札口では、スムーズに QR コードを提示する必要があるため、2要素認証にかける時間を減らす必要がありました。
@@ -799,15 +793,15 @@
     さまざまな方に利用していただくために、迅速なログインの実現を目指してパスキーをはじめとした以下の工夫を導入した事例を紹介します。
 
     - あえて passkey autofill をしないという選択
-    
+
     - above the fold で表示する UI のスコープのこだわり
-    
+
     - アクセサビリティ (WCAG)
-    
+
     - ユーザーネームファースト
-    
+
     - 帯域が確保できない環境で動かすための工夫
-    
+
   spokenLanguage: ja
   slideLanguage: ja
   slidesUrl: ""
