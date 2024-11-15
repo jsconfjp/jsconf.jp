@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 import { Link as _Link } from "gatsby"
+import Markdown from "react-markdown"
 
 export type Props = {
   path: (string | null | { label: string; to: string })[]
@@ -13,15 +14,15 @@ const Link = styled(_Link)`
 
 const Box = styled.div`
   display: flex;
+  flex-direction: row;
+  align-items: center;
 `
 const Text = styled.span`
   color: ${({ theme }) => theme.colors.textGrey};
   margin-right: 0.5em;
   font-size: 1.4rem;
   font-weight: bold;
-  text-transform: uppercase;
   font-family: ${({ theme }) => theme.fonts.header};
-  text-transform: uppercase;
 
   ${Link} & {
     &:hover {
@@ -57,7 +58,14 @@ export function Breadcrumb(props: Props) {
                   <Text>{path.label}</Text>
                 </Link>
               ) : (
-                <Text>{path.label}</Text>
+                <Text>
+                  <Markdown
+                    allowedElements={["p", "code"]}
+                    components={{ p: "span" }}
+                  >
+                    {path.label}
+                  </Markdown>
+                </Text>
               )}
             </React.Fragment>
           )

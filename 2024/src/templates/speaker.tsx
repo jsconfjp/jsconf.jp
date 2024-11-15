@@ -91,7 +91,6 @@ const TalkBox = styled.div<{
   }
 `
 const TalkTitle = styled.h2`
-  text-transform: uppercase;
   font-family: ${({ theme }) => theme.fonts.header};
   margin: 0.5em 0;
   font-size: ${({ theme }) => theme.fontSizes.subTitle};
@@ -323,7 +322,14 @@ export default function Speaker(props: Props) {
         <Room track={track} />
         <TalkBox track={track}>
           <EventTime session={talk} />
-          <TalkTitle>{enOrJa(title, titleJa)}</TalkTitle>
+          <TalkTitle>
+            <Markdown
+              allowedElements={["p", "code"]}
+              components={{ p: "span" }}
+            >
+              {enOrJa(title, titleJa)}
+            </Markdown>
+          </TalkTitle>
           <Tags>{langTags}</Tags>
           <Markdown>{enOrJa(description, descriptionJa)}</Markdown>
           <Slides session={talk} />
