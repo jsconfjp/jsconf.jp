@@ -67,21 +67,33 @@
   title: "LT: Connecting the dots – Web Accessibility through Internationalization and Localization"
   titleJa: "LT: Connecting the dots – Web Accessibility through Internationalization and Localization"
   description: >-
-    Talk Title: Connecting the Dots: Web Accessibility through Internationalization and Localization
+    Talk Title:  Connecting the Dots: Web Accessibility through Internationalization and Localization
+    
 
-    Overview: In today’s globalized world, web products need to be accessible to users of diverse languages, cultures, and abilities. This talk will explore how internationalization (i18n) and localization (l10n) work hand-in-hand with web accessibility standards to create inclusive, globalized digital experiences.
+    Overview: 
+    
+    In today’s globalized world, web products need to be accessible to users of diverse languages, cultures, and abilities. This talk will explore how internationalization (i18n) and localization (l10n) work hand-in-hand with web accessibility standards to create inclusive, globalized digital experiences.
+
 
     Attendees will gain insights into:
 
-    Internationalization: The technical foundations necessary for adapting content for any language or culture, including character encoding, RTL/LTR design, and internationalized code structures.
-    Localization: The process of tailoring a product to meet specific cultural, linguistic, and regulatory requirements, such as translating content, modifying UI elements, and adapting formatting conventions.
-    Web Accessibility: Ensuring that web content is robust and accessible to users with disabilities across different locales, focusing on the intersections between i18n, l10n, and accessibility standards (WCAG).
+
+    #Internationalization: The technical foundations necessary for adapting content for any language or culture, including character encoding, RTL/LTR design, and internationalized code structures.
+
+
+    #Localization: The process of tailoring a product to meet specific cultural, linguistic, and regulatory requirements, such as translating content, modifying UI elements, and adapting formatting conventions.
+
+
+    #Web Accessibility: Ensuring that web content is robust and accessible to users with disabilities across different locales, focusing on the intersections between i18n, l10n, and accessibility standards (WCAG).
+
 
     Key Takeaways:
 
     How to architect products that are both culturally adaptable and accessible to all users, regardless of language or physical ability.
     Practical examples of i18n and l10n in global brands like IKEA and Pixar, and how they integrate accessibility into their design and development processes.
     Best practices for implementing robust, accessible web applications that cater to diverse user bases without extensive re-engineering.
+
+
     Target Audience: Frontend developers, product designers, accessibility advocates, and anyone interested in building inclusive web applications for global audiences.
   descriptionJa: >-
     講演タイトル: 点をつなぐ: 国際化とローカリゼーションによる Web アクセシビリティ
@@ -227,13 +239,20 @@
   title: Building AI apps with JavaScript
   titleJa: Building AI apps with JavaScript
   description: >-
-    This talk guides you through creating more capable web applications using JavaScript , vector databases, semantic search and webllms. We'll explore:
+    This talk guides you through creating more capable web applications using JavaScript , vector databases, semantic search and webllms. 
+    
+    
+    We'll explore:
 
-    Leveraging vector databases like Supabase for efficient storage and retrieval of high-dimensional data, enabling faster and more accurate similarity searches.
 
-    Implementing semantic search to improve content discovery and user experience by understanding the meaning behind queries, not just matching keywords.
+    #Leveraging vector databases like Supabase for efficient storage and retrieval of high-dimensional data, enabling faster and more accurate similarity searches.
 
-    Integrating AI agents in JavaScript apps to enable features like Retrieval-Augmented Generation (RAG), allowing your app to provide more contextually relevant responses.
+
+    #Implementing semantic search to improve content discovery and user experience by understanding the meaning behind queries, not just matching keywords.
+
+
+    #Integrating AI agents in JavaScript apps to enable features like Retrieval-Augmented Generation (RAG), allowing your app to provide more contextually relevant responses.
+
 
     Through practical examples and live coding, we'll see how these technologies work together in JavaScript . You'll learn about embeddings, their role in semantic search and RAG, and how to implement these concepts in your projects.
   descriptionJa: >-
