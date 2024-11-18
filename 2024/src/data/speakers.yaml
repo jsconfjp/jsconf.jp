@@ -663,3 +663,43 @@
   twitter: ""
   homepage: ""
   mastodon: ""
+- uuid: n-okawara
+  name: N Okawara
+  nameReading: ""
+  pronoun: ""
+  featured: false
+  presentations:
+    - kinto-technologies
+  biography: >-
+    ベンチャー企業でサービス開発に従事した後、2020年の２月に当時のKINTOへ入社。
+    それ以降KINTO ONE開発に従事する。2020年12月~リプレイスPJにjoinし、2023年の8月にリプレイスをリリース完了する。
+    その後もKINTO ONEの機能開発・運用に携わる。
+  biographyJa: >-
+    ベンチャー企業でサービス開発に従事した後、2020年の２月に当時のKINTOへ入社。
+    それ以降KINTO ONE開発に従事する。2020年12月~リプレイスPJにjoinし、2023年の8月にリプレイスをリリース完了する。
+    その後もKINTO ONEの機能開発・運用に携わる。
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
+- uuid: ahomu
+  name: ahomu
+  nameReading: ""
+  pronoun: ""
+  featured: false
+  presentations:
+    - kinto-technologies
+  biography: >-
+    2024年6月からKINTO テクノロジーズ株式会社に所属。トヨタグループの内製開発子会社としてモビリティサービスの開発に関わっています。
+    Webフロントエンド技術とUI開発が好き。近年はメガベンチャーの技術人事やスタートアップのVPoEなども務めていました。
+    日本CTO協会ではWebフロントエンド版DX Criteriaの策定など。
+  biographyJa: >-
+    2024年6月からKINTO テクノロジーズ株式会社に所属。トヨタグループの内製開発子会社としてモビリティサービスの開発に関わっています。
+    Webフロントエンド技術とUI開発が好き。近年はメガベンチャーの技術人事やスタートアップのVPoEなども務めていました。
+    日本CTO協会ではWebフロントエンド版DX Criteriaの策定など。
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
