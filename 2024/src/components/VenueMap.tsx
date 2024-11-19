@@ -17,12 +17,19 @@ const MapContainer = styled.div`
   margin-top: 30px;
 `
 
+const Img = styled.img`
+  width: 100%;
+  max-width: 940px;
+
+  height: 100%;
+`
+
 export const VenueMap = ({ width, height }: Props) => {
   const { t } = useTranslation()
 
   return (
     <MapContainer>
-      <img width={width} height={height} src={venueMap} alt={t("venue.map")} />
+      <Img width={width} height={height} src={venueMap} alt={t("venue.map")} />
     </MapContainer>
   )
 }
