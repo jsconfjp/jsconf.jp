@@ -43,6 +43,7 @@ export const en = {
     comingSoon: "Coming soon",
     venue: "Venue",
     "venue.name": "KS Building Kudansakaue",
+    "venue.map": "Venue Map",
     "venue.address": "〒102-0073 1-14-6 Kudankita Chiyoda-ku Tokyo",
     "venue.accessBytrain": "ACCESS BY TRAIN",
     "venue.accessBytrainRoute":
