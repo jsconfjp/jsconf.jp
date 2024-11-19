@@ -1582,7 +1582,9 @@
   spokenLanguage: ja
   slideLanguage: ja
   slidesUrl: ""
-  speakerIDs: []
+  speakerIDs:
+    - n-okawara
+    - ahomu
   sponsorIDs:
     - kinto-technologies
   youtube: ""
