@@ -1460,12 +1460,24 @@
   endsAt: "12:10"
   track: D
   kind: TALK
-  title: "(仮)生成AIでコーディング試験を解いてみよう"
-  titleJa: "(仮)生成AIでコーディング試験を解いてみよう"
+  title: "生成AIでコーディング試験を解いてみよう"
+  titleJa: "生成AIでコーディング試験を解いてみよう"
   description: >-
-    todo
+    This workshop is designed for participants to solve coding tests using only the output results of the generated AI. 
+
+    Participants will experience first-hand how AI can be used to support programming and learn about its effectiveness and limitations. 
+
+    What to bring
+    * PC 
+    * Pre-registered account for a generative AI tool (e.g. ChatGPT, Gemini, etc.)
   descriptionJa: >-
-    todo
+    このワークショップは、生成AIの出力結果のみでコーディング試験を解いていただくものとなっております。
+
+    参加者は、AIをどのようにプログラミングのサポートに活用できるかを実際に体験し、その有効性や限界について学ぶことができます。
+
+    持ち物
+    * PC
+    * 事前登録済みの生成AIツールのアカウント（例: ChatGPT, Gemini等）
   spokenLanguage: ja
   slideLanguage: ja
   slidesUrl: ""
