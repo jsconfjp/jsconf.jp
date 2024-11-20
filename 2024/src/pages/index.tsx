@@ -16,6 +16,7 @@ import { times } from "../util/misc"
 import bg from "../images/bg.png"
 import bgFlipX from "../images/bg-flip-x.png"
 import { Address } from "../components/Address"
+import { VenueMap } from "../components/VenueMap"
 import { Map } from "../components/Map"
 
 const WavyBox = styled.div`
@@ -286,6 +287,7 @@ export default function IndexPage() {
       render: () => (
         <>
           <Map width={940} height={500} title={t("venue")} />
+          <VenueMap width={940} height={500} />
           <Address summary />
           <Centerize>
             <LinkButton color="primary" to="/venue/">
@@ -372,3 +374,4 @@ export default function IndexPage() {
     </Layout>
   )
 }
+

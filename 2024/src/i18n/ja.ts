@@ -35,6 +35,7 @@ export const ja: {
     "session.lang.spoken": "音声言語",
     "session.lang.slides": "スライド言語",
     venue: "会場アクセス",
+    "venue.map": "会場の地図",
     "venue.name": "九段坂上KSビル",
     "venue.address": "〒102-0073 東京都千代田区九段北1-14-6",
     "venue.accessBytrain": "電車でのアクセス",
