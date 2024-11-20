@@ -1525,8 +1525,8 @@
   endsAt: "14:50"
   track: D
   kind: TALK
-  title: "Cosenseのフロントエンドでのパフォーマンスチューニング"
-  titleJa: "Cosenseのフロントエンドでのパフォーマンスチューニング"
+  title: "CosenseのTranslation modeの設計と実装"
+  titleJa: "CosenseのTranslation modeの設計と実装"
   description: ""
   descriptionJa: ""
   spokenLanguage: ja
@@ -1605,3 +1605,4 @@
   sponsorIDs:
     - medley
   youtube: ""
+
