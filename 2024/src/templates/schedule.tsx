@@ -505,6 +505,7 @@ export default function SchedulePage({
                           <Tags>
                             {s.spokenLanguage &&
                               t(`lang.${s.spokenLanguage || ""}`)}
+
                             {location === "remote" && t("location.remote")}
                           </Tags>
                         </AreaFooter>
@@ -520,3 +521,4 @@ export default function SchedulePage({
     </Layout>
   )
 }
+
