@@ -891,8 +891,8 @@
          inkscape:label="text"><tspan
            sodipodi:role="line"
            id="tspan83"
-           x="188.01346"
-           y="-5.262465">Track A</tspan></text></g><g
+           x="177.01346"
+           y="-5.262465">トラック A</tspan></text></g><g
        id="g3"
        inkscape:label="line-track-d"><circle
          style="fill:#509edd;fill-opacity:1;stroke:none;stroke-width:1.00013;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -915,8 +915,8 @@
          inkscape:label="text"><tspan
            sodipodi:role="line"
            id="tspan28"
-           x="197.1631"
-           y="-15.262464">Track D</tspan></text></g><g
+           x="185.01346"
+           y="-15.262464">トラック D</tspan></text></g><g
        id="g4"
        inkscape:label="line-track-coffee"><circle
          style="fill:#9a9a9a;fill-opacity:0.996078;stroke:none;stroke-width:1.00013;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -941,7 +941,7 @@
            sodipodi:role="line"
            id="tspan33"
            x="215.41599"
-           y="84.737526">Coffee</tspan></text></g><g
+           y="84.737526">コーヒー</tspan></text></g><g
        id="g40"
        inkscape:label="line-track-tshirt"
        style="display:inline"
@@ -968,7 +968,7 @@
            sodipodi:role="line"
            id="tspan40"
            x="200.0423"
-           y="62.956249">T-Shirt</tspan></text></g><g
+           y="62.956249">Tシャツ</tspan></text></g><g
        id="g5"
        inkscape:label="line-track-c"><circle
          style="fill:#f9d749;fill-opacity:1;stroke:none;stroke-width:1.00013;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -992,7 +992,7 @@
            sodipodi:role="line"
            id="tspan35"
            x="68.288033"
-           y="24.737532">Track C</tspan></text></g><g
+           y="24.737532">トラック C</tspan></text></g><g
        id="g6"
        inkscape:label="line-track-b"><circle
          style="fill:#36a49c;fill-opacity:1;stroke:none;stroke-width:1.00013;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -1016,7 +1016,7 @@
            sodipodi:role="line"
            id="tspan36"
            x="59.092533"
-           y="34.73753">Track B</tspan></text></g><text
+           y="34.73753">トラック B</tspan></text></g><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;opacity:0.455;fill:#000000;fill-opacity:0.996078;stroke:none;stroke-width:0.705556;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        x="-153.04449"
@@ -1027,7 +1027,7 @@
          sodipodi:role="line"
          id="tspan83-0-5-1"
          x="-153.04449"
-         y="118.50358">ELEVATOR</tspan></text><text
+         y="118.50358">エレベーター</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;opacity:0.455;fill:#000000;fill-opacity:0.996078;stroke:none;stroke-width:0.705556;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        x="113.14352"
@@ -1061,7 +1061,7 @@
            sodipodi:role="line"
            id="tspan37"
            x="-153.04449"
-           y="118.50358">ELEVATOR</tspan></text><text
+           y="118.50358">エレベーター</tspan></text><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:0.996078;stroke:none;stroke-width:0.705556;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          x="113.14352"
@@ -1195,11 +1195,7 @@
            sodipodi:role="line"
            id="tspan47-3"
            x="14.182115"
-           y="209.57936">Convenience</tspan><tspan
-           sodipodi:role="line"
-           x="14.182115"
-           y="218.3988"
-           id="tspan48">Store</tspan></text></g><g
+           y="209.57936">コンビニ</tspan></text></g><g
        id="g7"
        inkscape:label="line-entrance"><circle
          style="display:inline;fill:#9a9a9a;fill-opacity:0.996078;stroke:none;stroke-width:1.00013;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -1224,4 +1220,4 @@
            sodipodi:role="line"
            id="tspan83-0-5"
            x="65.876678"
-           y="209.6846">Entrance</tspan></text></g></g></svg>
+           y="209.6846">入口</tspan></text></g></g></svg>
