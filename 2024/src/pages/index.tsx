@@ -7,6 +7,7 @@ import { SEO } from "../components/Seo"
 import { Hero } from "../components/Hero"
 import { Title } from "../components/Title"
 import { SpeakerList } from "../components/SpeakerList"
+import { StreamLinks } from "../components/StreamLinks"
 import { SponsorList } from "../components/SponsorList"
 import { LinkButton } from "../components/LinkButton"
 import { Card as _Card } from "../components/Card"
@@ -206,6 +207,18 @@ export default function IndexPage() {
     Date.now() > new Date(site.siteMetadata.sponsorDeadline).getTime()
 
   const parts = [
+    {
+      subTitle: t("streamLinks.title"),
+      available: true,
+      render: () => (
+        <>
+          <div style={{ marginBottom: "1em" }}>
+            <StreamLinks />
+          </div>
+        </>
+      ),
+    },
+
     {
       subTitle: t("speakers"),
       available: featuredSpeakers.length,

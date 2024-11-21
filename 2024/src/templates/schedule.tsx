@@ -459,6 +459,7 @@ export default function SchedulePage({
               <RoomLegendBox>
                 <RoomLegend selected-track={selectedTrack} />
               </RoomLegendBox>
+
               <Grid
                 starts-at={startsAt}
                 ends-at={endsAt}
@@ -520,3 +521,4 @@ export default function SchedulePage({
     </Layout>
   )
 }
+
