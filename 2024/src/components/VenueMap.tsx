@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 
 import venueMap from "../images/venue-map.svg"
+import venueMapJa from "../images/venue-map-ja.svg"
 
 type Props = {
   width: number
@@ -25,11 +26,18 @@ const Img = styled.img`
 `
 
 export const VenueMap = ({ width, height }: Props) => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+
+  console.log(i18n.language)
 
   return (
     <MapContainer>
-      <Img width={width} height={height} src={venueMap} alt={t("venue.map")} />
+      <Img
+        width={width}
+        height={height}
+        src={i18n.language === "ja" ? venueMapJa : venueMap}
+        alt={t("venue.map")}
+      />
     </MapContainer>
   )
 }
