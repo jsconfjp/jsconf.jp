@@ -16,11 +16,25 @@ const Box = styled.div`
     gap: 1em;
   }
 `
+
+const RoomBoxContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1em;
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    align-items: flex-start;
+    gap: 0;
+  }
+`
+
 const RoomBox = styled(InlineLink)<{ disabled: boolean }>`
   flex: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
+
   ${({ disabled }) =>
     disabled
       ? `
@@ -66,10 +80,32 @@ const SubText = styled.span`
   margin-top: -0.1rem;
   font-family: ${({ theme }) => theme.fonts.text};
 `
+
+const StreamLink = styled.a<{ track: Rooms }>`
+  display: block;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  text-align: left;
+  font-family: ${({ theme }) => theme.fonts.text};
+
+  color: ${({ theme }) => theme.colors.text};
+  text-decoration-color: ${({ track, theme }) =>
+    theme.colors[`room${track}Border`]};
+
+  &:hover {
+    color: ${({ track, theme }) => theme.colors[`room${track}Border`]};
+  }
+
+  @media print {
+    display: none;
+  }
+`
+
 const TextBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-items: center;
+  align-items: center;
 `
 
 type RoomProps = {
@@ -78,22 +114,42 @@ type RoomProps = {
 }
 
 export const Room = ({ track, "selected-track": selectedTrack }: RoomProps) => {
+  function getTrackLink(track: Rooms) {
+    switch (track) {
+      case "A":
+        return "https://youtube.com/live/ew1zmA7y9q8"
+      case "B":
+        return "https://youtube.com/live/2BXwigWGjWQ"
+      case "C":
+        return "https://youtube.com/live/E3yTtaGr7V8"
+      case "D":
+        return "https://youtube.com/live/5Wt0r5vHOwQ"
+    }
+  }
+
   const { t } = useTranslation()
   return (
-    <RoomBox
-      to={
-        selectedTrack && selectedTrack === track
-          ? "/schedule"
-          : `/schedule/${track}`
-      }
-      disabled={!!selectedTrack && track != selectedTrack}
-    >
-      <Circle track={track} />
-      <TextBox>
-        <Text>{t(`room${track}`)}</Text>
-        <SubText>{t(`room${track}Sub`)}</SubText>
-      </TextBox>
-    </RoomBox>
+    <RoomBoxContainer>
+      <RoomBox
+        to={
+          selectedTrack && selectedTrack === track
+            ? "/schedule"
+            : `/schedule/${track}`
+        }
+        disabled={!!selectedTrack && track != selectedTrack}
+      >
+        <Circle track={track} />
+        <TextBox>
+          <Text>{t(`room${track}`)}</Text>
+          <SubText>{t(`room${track}Sub`)}</SubText>
+          <SubText></SubText>
+        </TextBox>
+      </RoomBox>
+
+      <StreamLink track={track} href={getTrackLink(track)} target="_blank">
+        {t("viewStream")}
+      </StreamLink>
+    </RoomBoxContainer>
   )
 }
 
@@ -106,3 +162,4 @@ export const RoomLegend = (props: RoomLegendProps) => (
     ))}
   </Box>
 )
+

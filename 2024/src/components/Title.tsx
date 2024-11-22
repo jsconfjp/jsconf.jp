@@ -33,5 +33,26 @@ const H2 = styled.h2`
 export function Title(props: Props) {
   const { children, heading = "h1" } = props
 
-  return heading === "h1" ? <H1>{children}</H1> : <H2>{children}</H2>
+  const processedChildren = React.Children.map(children, child => {
+    if (typeof child === "string") {
+      return child.split("<br/>").map((text, i, array) =>
+        i === array.length - 1 ? (
+          text
+        ) : (
+          <>
+            {text}
+            <br />
+          </>
+        ),
+      )
+    }
+    return child
+  })
+
+  return heading === "h1" ? (
+    <H1>{processedChildren}</H1>
+  ) : (
+    <H2>{processedChildren}</H2>
+  )
 }
+
