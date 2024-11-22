@@ -33,12 +33,14 @@
   endsAt: "10:00"
   track: A
   kind: OPEN
+
 - date: day1
   startsAt: "10:00"
   endsAt: "10:10"
   track: A
   kind: OPENING_TALK
   youtube: ""
+  spokenLanguage: ja
 - date: day1
   startsAt: "10:00"
   endsAt: "10:10"
@@ -46,12 +48,14 @@
   kind: STREAM
   stream: A
   youtube: ""
+  spokenLanguage: ja
 - date: day1
   startsAt: "10:00"
   endsAt: "10:10"
   track: C
   kind: STREAM
   stream: A
+  spokenLanguage: ja
   youtube: ""
 - date: day1
   startsAt: "10:00"
@@ -430,12 +434,14 @@
   track: B
   kind: STREAM
   stream: A
+  spokenLanguage: ja
 - date: day1
   startsAt: "16:40"
   endsAt: "17:40"
   track: C
   kind: STREAM
   stream: A
+  spokenLanguage: ja
 - date: day1
   startsAt: "16:40"
   endsAt: "17:40"
@@ -458,7 +464,7 @@
     遭遇したチャレンジや裏話を交えながら、担当したAPI (HTML、セキュリティ、ペイメント、認証系など)について振り返ります。
   descriptionJa: >-
     遭遇したチャレンジや裏話を交えながら、担当したAPI (HTML、セキュリティ、ペイメント、認証系など)について振り返ります。
-  spokenLanguage: ""
+  spokenLanguage: "ja"
   slideLanguage: ""
   slidesUrl: ""
   speakerIDs:
@@ -471,12 +477,14 @@
   track: B
   kind: STREAM
   stream: A
+  spokenLanguage: ja
 - date: day1
   startsAt: "17:50"
   endsAt: "18:30"
   track: C
   kind: STREAM
   stream: A
+  spokenLanguage: ja
 - uuid: day1-
   date: day1
   startsAt: "18:30"
@@ -484,6 +492,7 @@
   track: A
   kind: CLOSING_TALK
   youtube: ""
+  spokenLanguage: ja
 - date: day1
   startsAt: "17:50"
   endsAt: "18:40"
@@ -495,12 +504,14 @@
   track: B
   kind: STREAM
   stream: A
+  spokenLanguage: ja
 - date: day1
   startsAt: "18:30"
   endsAt: "18:40"
   track: C
   kind: STREAM
   stream: A
+  spokenLanguage: ja
 - uuid: day1-
   date: day1
   startsAt: "18:40"
