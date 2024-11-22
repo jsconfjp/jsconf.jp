@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Logo2023 } from "./Logo2023"
+import { Logo2024 } from "./Logo2024"
 import { HeroCountdown } from "./HeroCountdown"
 
 type Props = {
@@ -52,7 +52,7 @@ export function Hero(props: Props) {
 
   return (
     <Box>
-      <Logo2023 size={270} />
+      <Logo2024 size={270} />
       <TextBox>
         <Title lang="en">{title}</Title>
         <SubTitle>{subTitle}</SubTitle>
