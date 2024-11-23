@@ -314,8 +314,10 @@
   endsAt: "14:50"
   track: A
   kind: TALK
-  title: Cloudflare Workers in Production
-  titleJa: Cloudflare Workers in Production
+  title: >-
+    [CANCELED] Cloudflare Workers in Production
+  titleJa: >-
+    [キャンセルされた] Cloudflare Workers in Production
   description: >-
     Cloudflare Workers is a serverless platform that allows you to run JavaScript code on Cloudflare's edge servers. In Japan, it's not yet widely adopted for production use, especially for building ""standard"" SaaS applications. ""standard"" here means applications that have user authentication, database access, and so on. At Spir Inc., we've successfully launched a ""standard"" SaaS application using Cloudflare Workers!
 
