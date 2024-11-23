@@ -308,30 +308,50 @@
   endsAt: "14:20"
   track: A
   kind: BREAK
-- uuid: motoki-shakagori
+
+# - uuid: motoki-shakagori
+#   date: day1
+#   startsAt: "14:20"
+#   endsAt: "14:50"
+#   track: A
+#   kind: TALK
+#   title: >-
+#     [CANCELED] Cloudflare Workers in Production
+#   titleJa: >-
+#     [キャンセルされた] Cloudflare Workers in Production
+#   description: >-
+#     Cloudflare Workers is a serverless platform that allows you to run JavaScript code on Cloudflare's edge servers. In Japan, it's not yet widely adopted for production use, especially for building ""standard"" SaaS applications. ""standard"" here means applications that have user authentication, database access, and so on. At Spir Inc., we've successfully launched a ""standard"" SaaS application using Cloudflare Workers!
+#
+#     In this talk, I'll share my experience of using Cloudflare Workers in production. My main focus will be on matters around the runtime. The runtime of Cloudflare Workers is `workerd`, which is different from Node.js, Deno, or Bun. I'll provide a brief introduction to workerd and demonstrate how to write and test code that runs on this runtime. You’ll learn what workerd makes possible, as well as its limitations. Additionally, I will address common concerns, such as database access and interaction between services.
+#   descriptionJa: >-
+#     Cloudflare Workers は、Cloudflare のエッジ サーバーで JavaScript コードを実行できるサーバーレス プラットフォームです。日本では、実稼働用途、特に「標準」SaaS アプリケーションの構築にはまだ広く採用されていません。ここでの「標準」とは、ユーザー認証やデータベース アクセスなどを備えたアプリケーションを意味します。 Spir Inc. では、Cloudflare Workers を使用して「標準」SaaS アプリケーションの立ち上げに成功しました。
+#
+#     この講演では、本番環境で Cloudflare Workers を使用した私の経験を共有します。私の主な焦点は、ランタイム周りの問題です。 Cloudflare Workers のランタイムは「workerd」であり、Node.js、Deno、Bun とは異なります。ここでは、workerd について簡単に説明し、このランタイムで実行されるコードを作成してテストする方法を示します。 Workerd によって何が可能になるのか、またその制限についても学びます。さらに、データベース アクセスやサービス間の相互作用などの一般的な懸念事項にも対処します。
+#   spokenLanguage: en
+#   slideLanguage: en
+#   slidesUrl: ""
+#   speakerIDs:
+#     - motoki-shakagori
+#   youtube: ""
+
+- uuid: akfm-sato
   date: day1
   startsAt: "14:20"
   endsAt: "14:50"
   track: A
   kind: TALK
-  title: >-
-    [CANCELED] Cloudflare Workers in Production
-  titleJa: >-
-    [キャンセルされた] Cloudflare Workers in Production
+  title: React Server Componentsとは何であって何でないか
+  titleJa: React Server Componentsとは何であって何でないか
   description: >-
-    Cloudflare Workers is a serverless platform that allows you to run JavaScript code on Cloudflare's edge servers. In Japan, it's not yet widely adopted for production use, especially for building ""standard"" SaaS applications. ""standard"" here means applications that have user authentication, database access, and so on. At Spir Inc., we've successfully launched a ""standard"" SaaS application using Cloudflare Workers!
-
-    In this talk, I'll share my experience of using Cloudflare Workers in production. My main focus will be on matters around the runtime. The runtime of Cloudflare Workers is `workerd`, which is different from Node.js, Deno, or Bun. I'll provide a brief introduction to workerd and demonstrate how to write and test code that runs on this runtime. You’ll learn what workerd makes possible, as well as its limitations. Additionally, I will address common concerns, such as database access and interaction between services.
+    過去の技術や類似する技術と比較して、React Server Componentsは何であって何でないのか解説します。
   descriptionJa: >-
-    Cloudflare Workers は、Cloudflare のエッジ サーバーで JavaScript コードを実行できるサーバーレス プラットフォームです。日本では、実稼働用途、特に「標準」SaaS アプリケーションの構築にはまだ広く採用されていません。ここでの「標準」とは、ユーザー認証やデータベース アクセスなどを備えたアプリケーションを意味します。 Spir Inc. では、Cloudflare Workers を使用して「標準」SaaS アプリケーションの立ち上げに成功しました。
-
-    この講演では、本番環境で Cloudflare Workers を使用した私の経験を共有します。私の主な焦点は、ランタイム周りの問題です。 Cloudflare Workers のランタイムは「workerd」であり、Node.js、Deno、Bun とは異なります。ここでは、workerd について簡単に説明し、このランタイムで実行されるコードを作成してテストする方法を示します。 Workerd によって何が可能になるのか、またその制限についても学びます。さらに、データベース アクセスやサービス間の相互作用などの一般的な懸念事項にも対処します。
-  spokenLanguage: en
-  slideLanguage: en
+    過去の技術や類似する技術と比較して、React Server Componentsは何であって何でないのか解説します。
+  spokenLanguage: ja
+  slideLanguage: ja
   slidesUrl: ""
   speakerIDs:
-    - motoki-shakagori
-  youtube: ""
+    - akfm-sato
+
 - uuid: aakansha-doshi
   date: day1
   startsAt: "14:50"
