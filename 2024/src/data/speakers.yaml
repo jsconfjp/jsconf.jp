@@ -181,6 +181,24 @@
   twitter: ""
   homepage: ""
   mastodon: ""
+
+- uuid: akfm-sato
+  name: akfm_sato
+  nameReading: ""
+  pronoun: ""
+  featured: false
+  presentations:
+    - akfm-sato
+  biography: >-
+    フロントエンドエンジニア。Next.js、Rust、テスト設計、アジャイルが好きです。
+  biographyJa: >-
+    フロントエンドエンジニア。Next.js、Rust、テスト設計、アジャイルが好きです。
+  location: ""
+  github: ""
+  twitter: ""
+  homepage: ""
+  mastodon: ""
+
 - uuid: aakansha-doshi
   name: Aakansha Doshi
   nameReading: ""
