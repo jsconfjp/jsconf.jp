@@ -139,15 +139,15 @@
   endsAt: "10:50"
   track: A
   kind: TALK
-  title: "LT: Stay Fit, Code Better: An Sportsman’s 10 practical Advice for JavaScript Developers"
-  titleJa: "LT: Stay Fit, Code Better: An Sportsman’s 10 practical Advice for JavaScript Developers"
+  title: "LT: Stay Fit, Code Better: A Sportsman’s Practical Tips for JavaScript Developers"
+  titleJa: "LT: Stay Fit, Code Better: A Sportsman’s Practical Tips for JavaScript Developers"
   description: >-
     As developers, we often push our minds and bodies to the limit, spending long hours in front of screens, neglecting physical activity, and compromising our sleep. But just like elite athletes, we need to prioritize our health to maintain peak performance. In this talk, we’ll explore 10 practical health tips and how we can use JavaScript to help track, organize, and implement these habits seamlessly into your daily routine.
   descriptionJa: >-
     開発者として、私たちは画面の前で長時間過ごし、身体活動を無視し、睡眠を犠牲にして、心と体を限界まで追い込むことがよくあります。しかし、エリートアスリートと同じように、最高のパフォーマンスを維持するには健康を優先する必要があります。この講演では、健康に関する 10 の実践的なヒントと、JavaScript を使用してこれらの習慣を追跡、整理し、日常生活にシームレスに導入する方法について説明します。
   spokenLanguage: en
   slideLanguage: en
-  slidesUrl: ""
+  slidesUrl: "https://tamascsaba.github.io/jsconfjp-2024-presentation/"
   speakerIDs:
     - csaba-tamas
   youtube: ""
@@ -344,8 +344,8 @@
     Have you ever considered securing your app data within the browser? Let’s understand how encrypting your data in the browser enhances overall security.
 
 
-    In this talk Aakansha will be deep-diving into the world of Web Crypto APIs, starting from key generation, various encryption algorithms, implementation techniques, and more. 
-    The session will include live demos, coding examples, and a fun side project that she created as a result of learning about the Web Crypto APIs. 
+    In this talk Aakansha will be deep-diving into the world of Web Crypto APIs, starting from key generation, various encryption algorithms, implementation techniques, and more.
+    The session will include live demos, coding examples, and a fun side project that she created as a result of learning about the Web Crypto APIs.
 
 
     Let’s dive into the Web Crypto APIs together and explore its capabilities.
@@ -378,10 +378,10 @@
   title: Web標準の進化を止めない！Baselineというブラウザサポートの考え方
   titleJa: Web標準の進化を止めない！Baselineというブラウザサポートの考え方
   description: >-
-    4週間ごとにアップデートされるウェブブラウザ、細かくアップデートされるJS/CSS/HTMLの機能たち、なかなか全ブラウザでサポートされずいつまで経っても使うのをやめられないpolyfill ライブラリ...もうめんどくさいけれどIEで動く機能だけで実装すればブラウザサポートは確実じゃない!？ 
+    4週間ごとにアップデートされるウェブブラウザ、細かくアップデートされるJS/CSS/HTMLの機能たち、なかなか全ブラウザでサポートされずいつまで経っても使うのをやめられないpolyfill ライブラリ...もうめんどくさいけれどIEで動く機能だけで実装すればブラウザサポートは確実じゃない!？
     数百人のエンジニアがアップデートを重ねるweb platformはブラウザ互換性のわかりにくさという課題から新機能が実際に利用されるまでに時間がかかります。このセッションでは、この課題を解決すべく集まったW3C Web DX Community Groupで始まったBaselineというブラウザ互換性の考え方を紹介、Interopプロジェクトとの関係性や互換性をチェックする新しいツールについて考えます。
   descriptionJa: >-
-    4週間ごとにアップデートされるウェブブラウザ、細かくアップデートされるJS/CSS/HTMLの機能たち、なかなか全ブラウザでサポートされずいつまで経っても使うのをやめられないpolyfill ライブラリ...もうめんどくさいけれどIEで動く機能だけで実装すればブラウザサポートは確実じゃない!？ 
+    4週間ごとにアップデートされるウェブブラウザ、細かくアップデートされるJS/CSS/HTMLの機能たち、なかなか全ブラウザでサポートされずいつまで経っても使うのをやめられないpolyfill ライブラリ...もうめんどくさいけれどIEで動く機能だけで実装すればブラウザサポートは確実じゃない!？
     数百人のエンジニアがアップデートを重ねるweb platformはブラウザ互換性のわかりにくさという課題から新機能が実際に利用されるまでに時間がかかります。このセッションでは、この課題を解決すべく集まったW3C Web DX Community Groupで始まったBaselineというブラウザ互換性の考え方を紹介、Interopプロジェクトとの関係性や互換性をチェックする新しいツールについて考えます。
   spokenLanguage: ja
   slideLanguage: ja
@@ -626,9 +626,9 @@
     本LTでは、Yahoo!知恵袋のフロントエンドリアーキテクトの具体的な取り組みと進め方について主に以下の内容について紹介します。
 
      - 大規模システムのTypeScript化: JavaScriptで動作している既存システムをどのようにしてTypeScriptに移行したか。
-     
+
      - リアーキテクトのプロセス: スパゲティコードを整理し、コードの可読性と保守性を向上させるための具体的な手法。
-     
+
      - ユニットテストの書き直し: 1ファイルに27000行存在するユニットテストをゼロからどのように書き直したか。
 
   descriptionJa: >-
@@ -1206,7 +1206,7 @@
 
     ---------------
 
-    How can we facilitate involving everyone in testing, namely holistic testing, and making collaboration as a whole team? In one of my last projects, I experienced developing a framework, by which we not only easily onboarded all parties in automation, but also reduced duplication. In this talk, I will share my story to reduce the average test implementation duration from 5 hours to 30 mins. 
+    How can we facilitate involving everyone in testing, namely holistic testing, and making collaboration as a whole team? In one of my last projects, I experienced developing a framework, by which we not only easily onboarded all parties in automation, but also reduced duplication. In this talk, I will share my story to reduce the average test implementation duration from 5 hours to 30 mins.
 
 
     Problem:
@@ -1230,7 +1230,7 @@
 
     We came up with the centralized test framework development idea. The motivation was to develop a framework in which the most common problems were handled and serve the teams. In this way, we would remove the imbalance, support those who are struggling with the problems that were solved by others, and ensure the code quality in all test frameworks used by several teams.
 
-    I will show the architecture of a well-structured central framework, which includes: 
+    I will show the architecture of a well-structured central framework, which includes:
 
 
     * Test runner
@@ -1476,15 +1476,15 @@
   title: "生成AIでコーディング試験を解いてみよう"
   titleJa: "生成AIでコーディング試験を解いてみよう"
   description: >-
-    This workshop is designed for participants to solve coding tests using only the output results of the generated AI.  
-    Participants will experience first-hand how AI can be used to support programming and learn about its effectiveness and limitations. 
+    This workshop is designed for participants to solve coding tests using only the output results of the generated AI.
+    Participants will experience first-hand how AI can be used to support programming and learn about its effectiveness and limitations.
 
     What to bring
 
-    * PC 
+    * PC
     * Pre-registered account for a generative AI tool (e.g. ChatGPT, Gemini, etc.)
   descriptionJa: >-
-    このワークショップは、生成AIの出力結果のみでコーディング試験を解いていただくものとなっております。  
+    このワークショップは、生成AIの出力結果のみでコーディング試験を解いていただくものとなっております。
     参加者は、AIをどのようにプログラミングのサポートに活用できるかを実際に体験し、その有効性や限界について学ぶことができます。
 
     持ち物
@@ -1576,18 +1576,18 @@
   titleJa: "クルマのサブスクサービスをNext.jsで内製化した経験とその1年後"
   description: |
     KINTOテクノロジーズ株式会社では2023年に「車のサブスクKINTO」の大規模な内製化（刷新）を完了しました。
-    この際、ユーザー体験はもちろん開発体験の向上も視野に入れつつNext.jsを中心として技術選定を行いました。 
+    この際、ユーザー体験はもちろん開発体験の向上も視野に入れつつNext.jsを中心として技術選定を行いました。
     このセッションでは、車のサブスクを担うシステムの大規模リプレースの中でどのようにWebアプリケーションの刷新を進めたか、
-    技術選定の背景や現在の課題を紹介します。自動車メーカーが提供するWebサービスのフロントエンドを隅々まで話します。 
+    技術選定の背景や現在の課題を紹介します。自動車メーカーが提供するWebサービスのフロントエンドを隅々まで話します。
 
     - KINTO ONE ｢サイト再構築｣ の背景とタイムライ
     - 内製化 Before: 刷新における設計意図
     - 内製化 After: これからの展望と課題
   descriptionJa: |
     KINTOテクノロジーズ株式会社では2023年に「車のサブスクKINTO」の大規模な内製化（刷新）を完了しました。
-    この際、ユーザー体験はもちろん開発体験の向上も視野に入れつつNext.jsを中心として技術選定を行いました。 
+    この際、ユーザー体験はもちろん開発体験の向上も視野に入れつつNext.jsを中心として技術選定を行いました。
     このセッションでは、車のサブスクを担うシステムの大規模リプレースの中でどのようにWebアプリケーションの刷新を進めたか、
-    技術選定の背景や現在の課題を紹介します。自動車メーカーが提供するWebサービスのフロントエンドを隅々まで話します。 
+    技術選定の背景や現在の課題を紹介します。自動車メーカーが提供するWebサービスのフロントエンドを隅々まで話します。
 
     - KINTO ONE ｢サイト再構築｣ の背景とタイムライ
     - 内製化 Before: 刷新における設計意図
