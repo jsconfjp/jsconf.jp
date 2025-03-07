@@ -25,7 +25,7 @@
   "dependencies": {
     "@js-temporal/polyfill": "^0.4.4",
     "@styled-icons/remix-line": "^10.46.0",
-    "gatsby": "^5.13.4",
+    "gatsby": "^5.14.1",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-sharp": "^5.13.1",
