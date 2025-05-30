@@ -20,8 +20,10 @@ export function LanguageToggle() {
         <button
           key={lang}
           onClick={() => handleLanguageChange(lang)}
-          className={`px-2 border-b-4 cursor-pointer font-bold ${
-            language === lang ? "border-b-primary" : "border-b-transparent"
+          className={`px-2 font-bold underline underline-offset-8 decoration-4 ${
+            language === lang
+              ? "decoration-primary"
+              : "cursor-pointer decoration-transparent hover:decoration-dimmed"
           }`}
         >
           {label}

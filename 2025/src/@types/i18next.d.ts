@@ -2,6 +2,7 @@
 import "i18next";
 // import all namespaces (for the default language, only)
 import about from "../app/i18n/locales/en/about.json";
+import navigation from "../app/i18n/locales/en/navigation.json";
 
 declare module "i18next" {
   // Extend CustomTypeOptions
@@ -9,6 +10,7 @@ declare module "i18next" {
     // custom resources type
     resources: {
       about: typeof about;
+      navigation: typeof navigation;
     };
   }
 }

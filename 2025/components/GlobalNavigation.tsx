@@ -1,13 +1,46 @@
+"use client";
+
 import Link from "next/link";
 import { LanguageToggle } from "../src/components/LanguageToggle";
 import Image from "next/image";
 import logoUrl from "../src/assets/logo.svg";
+import { useT } from "@/app/i18n/client";
 
 export function GlobalNavigation() {
+  const t = useT("navigation");
+  const navigations = [
+    {
+      ready: false,
+      label: t("speakers"),
+      href: "/speakers",
+    },
+    {
+      ready: false,
+      label: t("venue"),
+      href: "/venue",
+    },
+    {
+      ready: false,
+      label: t("schedule"),
+      href: "/schedule",
+    },
+    {
+      ready: false,
+      label: t("sponsors"),
+      href: "/sponsors",
+    },
+    {
+      ready: false,
+      label: t("tickets"),
+      href: "/tickets",
+      primary: true,
+    },
+  ];
+
   return (
     <header className="shadow-sm">
-      <div className="flex items-center justify-between py-5 max-w-screen-lg mx-auto">
-        <div className="flex">
+      <div className="flex items-stretch justify-between max-w-screen-lg mx-auto">
+        <Link href="/" className="flex">
           <Image
             src={logoUrl}
             alt="JSConf JP"
@@ -16,23 +49,29 @@ export function GlobalNavigation() {
             className="mr-4"
           />
           <LanguageToggle />
-        </div>
+        </Link>
         <nav className="flex-1 flex items-center gap-4">
-          <Link href="/speakers" className="flex-1 text-center">
-            Speakers
-          </Link>
-          <Link href="/venue" className="flex-1 text-center">
-            Venue
-          </Link>
-          <Link href="/schedule" className="flex-1 text-center">
-            Schedule
-          </Link>
-          <Link href="/sponsors" className="flex-1 text-center">
-            Sponsors
-          </Link>
-          <Link href="/sponsors" className="flex-1 text-center">
-            Tickets
-          </Link>
+          {navigations.map(({ label, href, primary, ready }) =>
+            ready ? (
+              <Link
+                key={href}
+                href={href}
+                className={
+                  "py-5 h-full flex-1 flex items-center justify-center text-lg font-bold underline underline-offset-8 decoration-4 decoration-transparent " +
+                  (primary
+                    ? "bg-primary text-white hover:decoration-white"
+                    : "hover:decoration-dimmed")
+                }
+              >
+                {label}
+              </Link>
+            ) : (
+              // readyでない要素があっても幅の計算は同一になるように空の要素を入れておく
+              <div key={href} className="py-5 h-full flex-1">
+                &nbsp;
+              </div>
+            )
+          )}
         </nav>
       </div>
     </header>
