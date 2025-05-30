@@ -16,11 +16,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="antialiased">
+      <body className="antialiased flex flex-col min-h-screen">
         <I18nProvider>
           <GlobalNavigation />
-          <main>{children}</main>
-          <Footer />
+          <main className="flex-1">{children}</main>
+          <div className="mt-24">
+            <Footer />
+          </div>
         </I18nProvider>
       </body>
     </html>

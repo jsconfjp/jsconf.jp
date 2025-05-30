@@ -3,5 +3,10 @@
   "venue": "Venue/Access",
   "schedule": "Schedule",
   "sponsors": "Sponsors",
-  "tickets": "Tickets"
+  "tickets": "Tickets",
+  "nodejs": "Node.js",
+  "jsconfJp2024": "JSConf JP 2024",
+  "japanNodejsAssociation": "Japan Node.js Association",
+  "codeOfConduct": "Code of Conduct",
+  "commercialSummary": "Commercial Summary"
 }

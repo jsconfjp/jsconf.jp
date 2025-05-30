@@ -3,5 +3,10 @@
   "venue": "会場・アクセス",
   "schedule": "開催スケジュール",
   "sponsors": "スポンサー",
-  "tickets": "チケット"
+  "tickets": "チケット",
+  "nodejs": "Node.js",
+  "jsconfJp2024": "JSConf JP 2024",
+  "japanNodejsAssociation": "Japan Node.js Association",
+  "codeOfConduct": "行動規範",
+  "commercialSummary": "特定商取引法に基づく表示"
 }
