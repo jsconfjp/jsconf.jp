@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useT } from "../src/app/i18n/client";
-import heroImage from "../src/assets/logo.svg";
+import { useT } from "@/app/i18n/client";
+import heroImage from "@/assets/logo.svg";
 
 export function Hero() {
   const t = useT("about");
