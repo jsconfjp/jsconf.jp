@@ -12,8 +12,10 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function Home() {
   return (
-    <div>
-      <Hero />
+    <div className="max-w-screen-lg mx-auto">
+      <div className="max-w-screen-md mx-auto mt-32">
+        <Hero />
+      </div>
     </div>
   );
 }

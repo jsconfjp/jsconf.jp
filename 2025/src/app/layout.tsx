@@ -16,10 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body>
+      <body className="antialiased">
         <I18nProvider>
           <GlobalNavigation />
-          {children}
+          <main>{children}</main>
           <Footer />
         </I18nProvider>
       </body>

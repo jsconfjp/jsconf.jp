@@ -8,7 +8,13 @@ export function GlobalNavigation() {
     <header className="shadow-sm">
       <div className="flex items-center justify-between py-5 max-w-screen-lg mx-auto">
         <div className="flex">
-          <Image src={logoUrl} alt="JSConf JP" width={46} height={46} />
+          <Image
+            src={logoUrl}
+            alt="JSConf JP"
+            width={46}
+            height={46}
+            className="mr-4"
+          />
           <LanguageToggle />
         </div>
         <nav className="flex-1 flex items-center gap-4">
