@@ -24,11 +24,11 @@ export function Footer() {
     },
     {
       label: tNav("codeOfConduct"),
-      href: "/code-of-conduct",
+      href: "/doc/code-of-conduct",
     },
     {
       label: tNav("commercialSummary"),
-      href: "/commercial-summary",
+      href: "/doc/commercial-summary",
     },
   ];
 

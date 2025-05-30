@@ -40,7 +40,7 @@ export function GlobalNavigation() {
   return (
     <header className="shadow-sm">
       <div className="flex items-stretch justify-between max-w-screen-lg mx-auto">
-        <Link href="/" className="flex">
+        <Link href="/" className="flex items-center">
           <Image
             src={logoUrl}
             alt="JSConf JP"
@@ -48,8 +48,8 @@ export function GlobalNavigation() {
             height={46}
             className="mr-4"
           />
-          <LanguageToggle />
         </Link>
+        <LanguageToggle />
         <nav className="flex-1 flex items-center gap-4">
           {navigations.map(({ label, href, primary, ready }) =>
             ready ? (
