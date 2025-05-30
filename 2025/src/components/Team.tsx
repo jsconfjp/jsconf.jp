@@ -1,6 +1,5 @@
 import { ORGANIZING_TEAM, VOLUNTEER_TEAM } from "@/constants/team";
 import { TeamMember } from "./TeamMember";
-import Link from "next/link";
 import { Button } from "./Button";
 
 export function Team() {

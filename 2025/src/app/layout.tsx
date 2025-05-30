@@ -6,10 +6,16 @@ import { I18nProvider } from "../components/I18nProvider";
 import bgUrl from "@/assets/bg.png";
 // import bgFlipXUrl from "@/assets/bg-flip-x.png";
 
-export const metadata: Metadata = {
-  title: "JSConf Japan 2025",
-  description: "日本最大級のJavaScriptカンファレンス",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const about = await import("@/app/i18n/locales/en/about.json");
+  return {
+    title: {
+      template: `%s | ${about.title}`,
+      default: about.title,
+    },
+    description: about.description,
+  };
+}
 
 export default function RootLayout({
   children,

@@ -1,3 +1,7 @@
+---
+title: 行動規範
+---
+
 # 行動規範
 
 この行動規範は、[JSConf EU の行動規範](https://2019.jsconf.eu/code-of-conduct/)を日本の文化や言語に適合するよう調整したものです。JSConf EU の行動規範は、[CSSConf / JSConf AU, The Geek Feminism Wiki](http://jsconfau.com/)、[Valerie Aurora](https://frameshiftconsulting.com/code-of-conduct-training/)、および[Conference Code of Conduct](https://confcodeofconduct.com)の成果に基づいています。

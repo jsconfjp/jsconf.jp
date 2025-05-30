@@ -1,3 +1,7 @@
+---
+title: Code of Conduct
+---
+
 # Code of Conduct
 
 This Code of Conduct was adapted from [JSConf EU’s Code of Conduct](https://2019.jsconf.eu/code-of-conduct/) to fit Japanese culture and language. JSConf EU’s Code of Conduct was in turn based on [CSSConf / JSConf AU, The Geek Feminism Wiki](http://jsconfau.com/), the work of [Valerie Aurora](https://frameshiftconsulting.com/code-of-conduct-training/) and [Conference Code of Conduct](https://confcodeofconduct.com).

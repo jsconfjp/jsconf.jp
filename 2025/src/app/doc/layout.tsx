@@ -1,9 +1,3 @@
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "%s | JSConf JP 2025",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
