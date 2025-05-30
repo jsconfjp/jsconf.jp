@@ -1,6 +1,7 @@
 import { ORGANIZING_TEAM, VOLUNTEER_TEAM } from "@/constants/team";
 import { TeamMember } from "./TeamMember";
 import Link from "next/link";
+import { Button } from "./Button";
 
 export function Team() {
   return (
@@ -24,13 +25,9 @@ export function Team() {
       </ol>
 
       <div className="flex justify-center mt-8">
-        <Link
-          href="https://nodejs.jp/"
-          target="_blank"
-          className="bg-secondary text-white px-4 py-2 rounded-lg font-medium hover:bg-secondary/90 transition-colors"
-        >
+        <Button variant="secondary" href="https://nodejs.jp/" target="_blank">
           Join us
-        </Link>
+        </Button>
       </div>
     </div>
   );
