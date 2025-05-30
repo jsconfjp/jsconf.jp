@@ -18,5 +18,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ul: ({ children }) => <ul className="list-disc pl-4">{children}</ul>,
     ol: ({ children }) => <ol className="list-decimal pl-4">{children}</ol>,
     p: ({ children }) => <p className="my-2">{children}</p>,
+    table: ({ children }) => <table className="w-full">{children}</table>,
+    th: ({ children }) => <th className="py-1 px-2">{children}</th>,
+    td: ({ children }) => <td className="py-1 px-2">{children}</td>,
   };
 }

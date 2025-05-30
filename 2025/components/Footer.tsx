@@ -28,7 +28,7 @@ export function Footer() {
     },
     {
       label: tNav("commercialSummary"),
-      href: "/doc/commercial-summary",
+      href: "/doc/commercial-transactions-act",
     },
   ];
 
