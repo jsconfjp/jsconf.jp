@@ -1,9 +1,7 @@
 @import "tailwindcss";
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+:root {
+  --color-primary: rgb(234 81 6);
 }
 
 html,
