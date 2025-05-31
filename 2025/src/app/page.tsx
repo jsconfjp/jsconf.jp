@@ -16,12 +16,13 @@ export default async function Home() {
   const tCta = await getTranslations("cta");
 
   return (
-    <div className="max-w-screen-lg mx-auto">
-      <div className="max-w-screen-md mx-auto mt-32">
+    <div className="max-w-screen-lg mx-auto px-4 lg:px-0">
+      <div className="max-w-screen-md mx-auto mt-16 md:mt-32">
         <Hero />
 
-        <div className="mt-20 flex justify-center gap-8">
+        <div className="mt-20 flex flex-col md:flex-row justify-center gap-4 md:gap-8">
           <Button
+            full
             variant="primary"
             size="lg"
             href="https://example.com/"
@@ -31,6 +32,7 @@ export default async function Home() {
             {tCta("submitTalk")}
           </Button>
           <Button
+            full
             variant="primary"
             size="lg"
             href="https://example.com/"

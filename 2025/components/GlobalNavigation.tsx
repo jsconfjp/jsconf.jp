@@ -36,7 +36,7 @@ export function GlobalNavigation() {
   ];
 
   return (
-    <header className="shadow-sm bg-white">
+    <header className="shadow-sm bg-white px-2 lg:px-0">
       <div className="flex items-stretch justify-between max-w-screen-lg mx-auto">
         <Link href="/" className="flex items-center">
           <Image

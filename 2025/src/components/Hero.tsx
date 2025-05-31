@@ -6,7 +6,7 @@ export function Hero() {
   const t = useTranslations("about");
 
   return (
-    <div className="flex items-center justify-center gap-16">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-16">
       <Image
         src={heroImage}
         alt={t("title")}

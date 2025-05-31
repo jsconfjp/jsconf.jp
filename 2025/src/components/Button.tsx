@@ -4,6 +4,7 @@ import Link from "next/link";
 export function Button({
   variant,
   size = "md",
+  full,
   endIcon,
   href,
   target,
@@ -11,6 +12,7 @@ export function Button({
 }: {
   variant: "primary" | "secondary";
   size?: "sm" | "md" | "lg" | "xl";
+  full?: boolean;
   endIcon?: React.ReactNode;
   href: string;
   target: string;
@@ -22,17 +24,24 @@ export function Button({
       target={target}
       className={clsx(
         "flex items-center gap-2 rounded-lg font-bold transition-colors shadow-sm",
+        full && "w-full",
         variant === "primary" && "bg-primary text-white hover:bg-primary/80",
         variant === "secondary" &&
-          "bg-secondary text-white hover:bg-secondary/80",
-        size === "sm" && "px-4 py-1 text-sm",
-        size === "md" && "px-8 py-2 text-base",
-        size === "lg" && "px-16 py-2 text-lg",
-        size === "xl" && "px-24 py-3 text-xl"
+          "bg-secondary text-white hover:bg-secondary/80"
       )}
     >
-      <div className="flex-1">{children}</div>
-      {endIcon}
+      <div
+        className={clsx(
+          "flex-1 text-center",
+          size === "sm" && "pl-8 py-1 text-sm",
+          size === "md" && "pl-8 py-2 text-base",
+          size === "lg" && "pl-8 py-2 text-lg",
+          size === "xl" && "pl-8 py-3 text-xl"
+        )}
+      >
+        {children}
+      </div>
+      {endIcon && <div className="px-4">{endIcon}</div>}
     </Link>
   );
 }

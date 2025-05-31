@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { GlobalNavigation } from "../../components/GlobalNavigation";
 import { Footer } from "../../components/Footer";
@@ -6,6 +6,13 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import bgUrl from "@/assets/bg.png";
 // import bgFlipXUrl from "@/assets/bg-flip-x.png";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations({ locale: "en", namespace: "about" });

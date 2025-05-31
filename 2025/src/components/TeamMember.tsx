@@ -11,7 +11,7 @@ export function TeamMember({ member, size }: Props) {
     <Link
       href={member.url}
       target="_blank"
-      className="text-sm text-center block text-blue-600"
+      className="text-sm text-center flex flex-col items-center text-blue-600"
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
@@ -20,6 +20,7 @@ export function TeamMember({ member, size }: Props) {
         alt={member.name}
         width={size}
         height={size}
+        className="max-w-full"
       />
       {member.name}
     </Link>

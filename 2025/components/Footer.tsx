@@ -32,15 +32,20 @@ export function Footer() {
 
   return (
     <footer className="bg-dimmed py-10 flex flex-col items-center">
-      <nav className="flex gap-4 divide-x-1 divide-gray-400">
+      <nav className="flex flex-col items-center md:flex-row gap-2 md:gap-4 md:divide-x-1 md:divide-gray-400">
         {links.map(({ label, href, target }) => (
-          <Link key={href} target={target} href={href} className="pr-4 text-sm">
+          <Link
+            key={href}
+            target={target}
+            href={href}
+            className="pr-4 text-sm hover:underline"
+          >
             {label}
           </Link>
         ))}
       </nav>
-      <small className="text-sm">{tAbout("copyright")}</small>
-      <address className="text-sm">{tAbout("companyAddress")}</address>
+      <small className="pt-2 text-sm">{tAbout("copyright")}</small>
+      <address className="pt-1 text-sm">{tAbout("companyAddress")}</address>
     </footer>
   );
 }
