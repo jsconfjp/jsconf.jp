@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
@@ -13,7 +11,7 @@ export function Footer() {
       target: "_blank",
     },
     {
-      label: tNav("jsconfJp2024"),
+      label: tNav("previousJsconfJp"),
       href: "https://jsconf.jp/2024",
       target: "_blank",
     },
@@ -27,7 +25,7 @@ export function Footer() {
       href: "/doc/code-of-conduct",
     },
     {
-      label: tNav("commercialSummary"),
+      label: tNav("specifiedCommercialTransactionsAct"),
       href: "/doc/commercial-transactions-act",
     },
   ];
@@ -41,7 +39,7 @@ export function Footer() {
           </Link>
         ))}
       </nav>
-      <small className="text-sm">&copy; 2019-2025 JSConf JP</small>
+      <small className="text-sm">{tAbout("copyright")}</small>
       <address className="text-sm">{tAbout("companyAddress")}</address>
     </footer>
   );

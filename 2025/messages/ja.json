@@ -3,7 +3,8 @@
     "title": "JSConf JP 2025",
     "description": "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the sixth time event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
     "eventDate": "2025年11月16日（日）",
-    "companyAddress": "〒210-0024 神奈川県川崎市川崎区日進町27-7-903"
+    "companyAddress": "〒210-0024 神奈川県川崎市川崎区日進町27-7-903",
+    "copyright": "© 2019-2025 JSConf JP"
   },
   "navigation": {
     "speakers": "スピーカー",
@@ -12,9 +13,22 @@
     "sponsors": "スポンサー",
     "tickets": "チケット",
     "nodejs": "Node.js",
-    "jsconfJp2024": "JSConf JP 2024",
+    "previousJsconfJp": "前回のJSConf JP",
     "japanNodejsAssociation": "Japan Node.js Association",
     "codeOfConduct": "行動規範",
-    "commercialSummary": "特定商取引法に基づく表示"
+    "specifiedCommercialTransactionsAct": "特定商取引法に基づく表記"
+  },
+  "lang": {
+    "japanese": "日本語",
+    "english": "English"
+  },
+  "cta": {
+    "submitTalk": "発表を応募する",
+    "becomeSponsor": "スポンサーになる"
+  },
+  "team": {
+    "organizingTeam": "オーガナイザー",
+    "volunteerTeam": "ボランティア",
+    "joinUs": "参加する"
   }
 }

@@ -8,11 +8,12 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations({ locale: "en", namespace: "about" });
   return {
     title: t("title"),
-    description: t("description"),
   };
 }
 
-export default function Home() {
+export default async function Home() {
+  const tCta = await getTranslations("cta");
+
   return (
     <div className="max-w-screen-lg mx-auto">
       <div className="max-w-screen-md mx-auto mt-32">
@@ -25,7 +26,7 @@ export default function Home() {
             href="https://example.com/"
             target="_blank"
           >
-            Submit your talk
+            {tCta("submitTalk")}
           </Button>
           <Button
             variant="primary"
@@ -33,7 +34,7 @@ export default function Home() {
             href="https://example.com/"
             target="_blank"
           >
-            Become a sponsor
+            {tCta("becomeSponsor")}
           </Button>
         </div>
 

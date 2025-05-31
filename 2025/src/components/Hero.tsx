@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import heroImage from "@/assets/logo.svg";
 import { useTranslations } from "next-intl";

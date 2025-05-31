@@ -3,17 +3,19 @@
 import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useTransition } from "react";
+import { useTranslations } from "next-intl";
 import { LOCALE_COOKIE_NAME, COOKIE_MAX_AGE } from "../i18n/constants";
 
 const languages = [
-  { lang: "ja", label: "日本語" },
-  { lang: "en", label: "English" },
+  { lang: "ja", labelKey: "japanese" },
+  { lang: "en", labelKey: "english" },
 ] as const;
 
 export function LanguageSwitcher() {
   const locale = useLocale();
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
+  const t = useTranslations("lang");
 
   const handleLanguageChange = (newLocale: string) => {
     // クッキーを設定
@@ -27,7 +29,7 @@ export function LanguageSwitcher() {
 
   return (
     <div className="flex py-5 gap-2 divide-x divide-dimmed">
-      {languages.map(({ lang, label }) => (
+      {languages.map(({ lang, labelKey }) => (
         <button
           type="button"
           key={lang}
@@ -39,7 +41,7 @@ export function LanguageSwitcher() {
               : "cursor-pointer decoration-transparent hover:decoration-dimmed"
           } ${isPending ? "opacity-50 cursor-not-allowed" : ""}`}
         >
-          {label}
+          {t(labelKey)}
         </button>
       ))}
     </div>
