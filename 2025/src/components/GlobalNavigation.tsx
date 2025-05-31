@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { Link } from "@/i18n/navigation";
+import logoSrc from "@/../public/logo.svg";
 
 export function GlobalNavigation() {
   const t = useTranslations("navigation");
@@ -39,7 +40,7 @@ export function GlobalNavigation() {
       <div className="flex items-stretch justify-between max-w-screen-lg mx-auto">
         <Link href="/" className="flex items-center">
           <Image
-            src="/logo.svg"
+            src={logoSrc}
             alt="JSConf JP"
             width={46}
             height={46}
