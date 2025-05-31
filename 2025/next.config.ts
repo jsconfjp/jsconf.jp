@@ -5,6 +5,7 @@ import remarkFrontmatter from "remark-frontmatter";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
+  basePath: "/2025",
   pageExtensions: ["ts", "tsx", "md"],
   output: "export",
   images: {
