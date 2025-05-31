@@ -5,18 +5,10 @@ import { GlobalNavigation } from "@/components/GlobalNavigation";
 import { Footer } from "@/components/Footer";
 import bgUrl from "@/assets/bg.png";
 import { Metadata } from "next";
-import { Viewport } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { LOCALES } from "@/i18n/constants";
 import "@/app/globals.css";
 import { PropsWithChildren } from "react";
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
-};
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -34,13 +26,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       default: t("title"),
     },
     description: t("description"),
-    openGraph: {
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      site: "@jsconfjp",
-    },
   };
 }
 
