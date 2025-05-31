@@ -8,18 +8,22 @@ import { use } from "react";
 import { Locale } from "@/i18n/constants";
 import { useTranslations } from "next-intl";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations({ locale: "en", namespace: "about" });
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale: locale as Locale,
+    namespace: "about",
+  });
   return {
     title: t("title"),
   };
 }
 
-export default function Home({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default function Home({ params }: Props) {
   const { locale } = use(params);
 
   setRequestLocale(locale as Locale);
