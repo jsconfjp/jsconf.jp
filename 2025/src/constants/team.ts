@@ -7,7 +7,7 @@ export type TeamMember = {
 export const VOLUNTEER_TEAM: TeamMember[] = [
   {
     name: "Leko",
-    url: "https://twitter.com/Leko",
+    url: "https://twitter.com/L_e_k_o",
     avatarUrl: "https://github.com/Leko.png",
   },
 ];
