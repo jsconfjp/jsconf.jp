@@ -13,22 +13,22 @@
     "sponsors": "スポンサー",
     "tickets": "チケット",
     "nodejs": "Node.js",
-    "previousJsconfJp": "前回のJSConf JP",
+    "previousJsconfJp": "JSConf JP 2024",
     "japanNodejsAssociation": "Japan Node.js Association",
     "codeOfConduct": "行動規範",
-    "specifiedCommercialTransactionsAct": "特定商取引法に基づく表記"
+    "specifiedCommercialTransactionsAct": "特定商取引法に基づく表示"
   },
   "lang": {
-    "japanese": "日本語",
-    "english": "English"
+    "japanese": "JA",
+    "english": "EN"
   },
   "cta": {
-    "submitTalk": "発表を応募する",
-    "becomeSponsor": "スポンサーになる"
+    "submitTalk": "トーク申込フォームへ",
+    "becomeSponsor": "スポンサー申込フォームへ"
   },
   "team": {
     "organizingTeam": "オーガナイザー",
     "volunteerTeam": "ボランティア",
-    "joinUs": "参加する"
+    "joinUs": "Join us"
   }
 }

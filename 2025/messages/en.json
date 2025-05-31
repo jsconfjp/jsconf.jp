@@ -13,14 +13,14 @@
     "sponsors": "Sponsors",
     "tickets": "Tickets",
     "nodejs": "Node.js",
-    "previousJsconfJp": "Previous JSConf JP",
+    "previousJsconfJp": "JSConf JP 2024",
     "japanNodejsAssociation": "Japan Node.js Association",
     "codeOfConduct": "Code of Conduct",
     "specifiedCommercialTransactionsAct": "Specified Commercial Transactions Act Disclosure"
   },
   "lang": {
-    "japanese": "日本語",
-    "english": "English"
+    "japanese": "JA",
+    "english": "EN"
   },
   "cta": {
     "submitTalk": "Submit your talk",

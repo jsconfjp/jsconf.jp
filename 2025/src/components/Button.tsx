@@ -4,12 +4,14 @@ import Link from "next/link";
 export function Button({
   variant,
   size = "md",
+  endIcon,
   href,
   target,
   children,
 }: {
   variant: "primary" | "secondary";
   size?: "sm" | "md" | "lg" | "xl";
+  endIcon?: React.ReactNode;
   href: string;
   target: string;
   children: React.ReactNode;
@@ -19,7 +21,7 @@ export function Button({
       href={href}
       target={target}
       className={clsx(
-        "rounded-lg font-medium transition-colors",
+        "flex items-center gap-2 rounded-lg font-medium transition-colors",
         variant === "primary" && "bg-primary text-white hover:bg-primary/80",
         variant === "secondary" &&
           "bg-secondary text-white hover:bg-secondary/80",
@@ -29,7 +31,8 @@ export function Button({
         size === "xl" && "px-24 py-3 text-xl"
       )}
     >
-      {children}
+      <div className="flex-1">{children}</div>
+      {endIcon}
     </Link>
   );
 }

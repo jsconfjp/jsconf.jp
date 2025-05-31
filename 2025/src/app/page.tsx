@@ -1,3 +1,4 @@
+import ArrowTopRightOnSquareIcon from "@heroicons/react/24/outline/ArrowTopRightOnSquareIcon";
 import { Metadata } from "next";
 import { Hero } from "@/components/Hero";
 import { Team } from "@/components/Team";
@@ -22,17 +23,19 @@ export default async function Home() {
         <div className="mt-20 flex justify-center gap-8">
           <Button
             variant="primary"
-            size="xl"
+            size="lg"
             href="https://example.com/"
             target="_blank"
+            endIcon={<ArrowTopRightOnSquareIcon className="w-4 h-4" />}
           >
             {tCta("submitTalk")}
           </Button>
           <Button
             variant="primary"
-            size="xl"
+            size="lg"
             href="https://example.com/"
             target="_blank"
+            endIcon={<ArrowTopRightOnSquareIcon className="w-4 h-4" />}
           >
             {tCta("becomeSponsor")}
           </Button>
