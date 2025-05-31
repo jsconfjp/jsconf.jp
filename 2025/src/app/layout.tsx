@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { GlobalNavigation } from "../../components/GlobalNavigation";
-import { Footer } from "../../components/Footer";
+import { GlobalNavigation } from "@/components/GlobalNavigation";
+import { Footer } from "@/components/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import bgUrl from "@/assets/bg.png";
