@@ -1,11 +1,11 @@
 import { Metadata } from "next";
-import { getT } from "./i18n";
 import { Hero } from "@/components/Hero";
 import { Team } from "@/components/Team";
 import { Button } from "@/components/Button";
+import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const { t } = await getT("about");
+  const t = await getTranslations({ locale: "en", namespace: "about" });
   return {
     title: t("title"),
     description: t("description"),

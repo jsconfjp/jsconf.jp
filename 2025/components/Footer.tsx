@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useT } from "@/app/i18n/client";
+import { useTranslations } from "next-intl";
 
 export function Footer() {
-  const tNav = useT("navigation");
-  const tAbout = useT("about");
+  const tNav = useTranslations("navigation");
+  const tAbout = useTranslations("about");
   const links = [
     {
       label: tNav("nodejs"),

@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { LanguageToggle } from "../src/components/LanguageToggle";
+import { LanguageSwitcher } from "../src/components/LanguageSwitcher";
 import Image from "next/image";
 import logoUrl from "../src/assets/logo.svg";
-import { useT } from "@/app/i18n/client";
+import { useTranslations } from "next-intl";
 
 export function GlobalNavigation() {
-  const t = useT("navigation");
+  const t = useTranslations("navigation");
   const navigations = [
     {
       ready: false,
@@ -49,7 +49,7 @@ export function GlobalNavigation() {
             className="mr-4"
           />
         </Link>
-        <LanguageToggle />
+        <LanguageSwitcher />
         <nav className="flex-1 flex items-center gap-4">
           {navigations.map(({ label, href, primary, ready }) =>
             ready ? (

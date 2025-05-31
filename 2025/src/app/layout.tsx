@@ -2,28 +2,32 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { GlobalNavigation } from "../../components/GlobalNavigation";
 import { Footer } from "../../components/Footer";
-import { I18nProvider } from "../components/I18nProvider";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import bgUrl from "@/assets/bg.png";
 // import bgFlipXUrl from "@/assets/bg-flip-x.png";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const about = await import("@/app/i18n/locales/en/about.json");
+  const t = await getTranslations({ locale: "en", namespace: "about" });
   return {
     title: {
-      template: `%s | ${about.title}`,
-      default: about.title,
+      template: `%s | ${t("title")}`,
+      default: t("title"),
     },
-    description: about.description,
+    description: t("description"),
   };
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
-    <html lang="ja">
+    <html lang={locale}>
       <body
         className="antialiased flex flex-col min-h-screen"
         style={{
@@ -35,13 +39,13 @@ export default function RootLayout({
           backgroundSize: "100%, 120%",
         }}
       >
-        <I18nProvider>
+        <NextIntlClientProvider messages={messages}>
           <GlobalNavigation />
           <main className="flex-1">{children}</main>
           <div className="mt-24">
             <Footer />
           </div>
-        </I18nProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

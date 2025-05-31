@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useT } from "@/app/i18n/client";
 import heroImage from "@/assets/logo.svg";
+import { useTranslations } from "next-intl";
 
 export function Hero() {
-  const t = useT("about");
+  const t = useTranslations("about");
 
   return (
     <div className="flex items-center justify-center gap-16">
