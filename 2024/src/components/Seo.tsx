@@ -26,7 +26,7 @@ export function SEO({ description, ogImage, meta, title }: Props) {
           siteUrl
         }
       }
-      logo: file(relativePath: { in: "logo.png" }) {
+      logo: file(relativePath: { in: "logo2024.png" }) {
         publicURL
       }
     }
