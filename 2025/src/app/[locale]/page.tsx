@@ -36,7 +36,7 @@ export default function Home({
             full
             variant="primary"
             size="lg"
-            href="https://example.com/"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf0QHajs3kQyax0zDX3W6KTFom7LqSqrIEmCp91tV_ccA9QWA/viewform?usp=sharing&ouid=108428319653051170414"
             target="_blank"
             endIcon={<ArrowTopRightOnSquareIcon className="w-4 h-4" />}
           >
@@ -46,7 +46,7 @@ export default function Home({
             full
             variant="primary"
             size="lg"
-            href="https://example.com/"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSe7ULSgMAJUlDuCsD8oTUFJPV2sXAktBSYIaObEB8akmWDSMQ/viewform?usp=sharing&ouid=108428319653051170414"
             target="_blank"
             endIcon={<ArrowTopRightOnSquareIcon className="w-4 h-4" />}
           >
