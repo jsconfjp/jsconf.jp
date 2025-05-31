@@ -1,0 +1,90 @@
+// OGPではimg要素しか使えないため警告を無視
+/* eslint-disable @next/next/no-img-element */
+import en from "@/../messages/en.json";
+import { readFileSync } from "node:fs";
+import path, { join } from "node:path";
+import React from "react";
+import { Chip } from "./Chip";
+import { Talk } from "@/constants/talks";
+
+type Props = {
+  talk: Talk;
+};
+
+const LOGO_URL = join(__dirname, "..", "..", "assets", "logo.svg");
+
+const makeDataUrl = (imagePath: string) => {
+  const imageData = readFileSync(imagePath);
+  const base64 = imageData.toString("base64");
+  const extension = path.extname(imagePath).toLowerCase();
+  const mimeType = [".jpg", ".jpeg"].includes(extension)
+    ? "image/jpeg"
+    : extension === ".png"
+    ? "image/png"
+    : extension === ".svg"
+    ? "image/svg+xml"
+    : null;
+  if (!mimeType) {
+    throw new Error(`Cannot determine MIME type from image path: ${imagePath}`);
+  }
+  const dataUrl = `data:${mimeType};base64,${base64}`;
+  return dataUrl;
+};
+
+export function TalkThumbnail({ talk }: Props) {
+  return (
+    <div
+      style={{
+        fontFamily: "Noto Sans JP",
+        // FIXME: global.cssに定義した独自の色が参照できないため多重定義
+        backgroundImage:
+          "linear-gradient(135deg, rgb(240, 100, 25) 0%, rgb(255, 107, 107) 50%, rgb(220, 90, 20) 100%)",
+      }}
+      tw="h-full w-full flex flex-col p-4"
+    >
+      <div tw="flex-1 flex flex-col rounded-xl bg-white shadow-md">
+        <main tw="flex-1 px-16 flex flex-col items-center justify-center">
+          <h1 tw="text-7xl font-bold" style={{ lineHeight: "1.3" }}>
+            {talk.title}
+          </h1>
+          <div tw="flex items-center" style={{ gap: 8 }}>
+            <Chip track={talk.track}>Track {talk.track}</Chip>
+            <Chip>
+              {talk.startTime}-{talk.endTime}
+            </Chip>
+            <Chip>{talk.language}</Chip>
+          </div>
+        </main>
+        <footer tw="flex items-end justify-between p-8">
+          <div tw="flex flex-col">
+            {talk.speakers.map((speaker) => (
+              <div
+                tw="flex items-center"
+                key={speaker.name}
+                style={{ gap: 16 }}
+              >
+                <img
+                  alt={speaker.name}
+                  src={speaker.avatarUrl}
+                  width={120 / talk.speakers.length}
+                  height={120 / talk.speakers.length}
+                  tw="rounded-full"
+                />
+                <h2 tw="text-5xl font-bold">{speaker.name}</h2>
+              </div>
+            ))}
+          </div>
+          <div tw="flex items-center" style={{ gap: 16 }}>
+            <img
+              alt={en.about.title}
+              src={makeDataUrl(LOGO_URL)}
+              width={80}
+              height={80}
+            />
+            <h2 tw="text-4xl font-bold">{en.about.title}</h2>
+          </div>
+        </footer>
+      </div>
+    </div>
+  );
+}
