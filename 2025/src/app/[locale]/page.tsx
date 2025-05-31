@@ -19,7 +19,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     namespace: "about",
   });
   return {
-    title: t("title"),
+    title: {
+      absolute: t("title"),
+    },
   };
 }
 
