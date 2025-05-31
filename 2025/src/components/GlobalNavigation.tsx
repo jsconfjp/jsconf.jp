@@ -1,8 +1,8 @@
-import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import logoUrl from "@/assets/logo.svg";
+import { Link } from "@/i18n/navigation";
 
 export function GlobalNavigation() {
   const t = useTranslations("navigation");

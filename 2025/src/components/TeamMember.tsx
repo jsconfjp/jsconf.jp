@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { TeamMember as TeamMemberType } from "@/constants/team";
+import { Link } from "@/i18n/navigation";
 
 type Props = {
   member: TeamMemberType;

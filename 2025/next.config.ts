@@ -6,6 +6,10 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
   pageExtensions: ["ts", "tsx", "md"],
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
 };
 
 const withMDX = createMDX({
