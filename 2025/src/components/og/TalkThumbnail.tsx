@@ -1,18 +1,15 @@
 // OGPではimg要素しか使えないため警告を無視
 /* eslint-disable @next/next/no-img-element */
 import en from "@/../messages/en.json";
-import { join } from "node:path";
 import React from "react";
 import { Chip } from "./Chip";
 import { Talk } from "@/constants/talks";
 import { Template } from "./Template";
-import { makeDataUrl } from "@/lib/og/url";
+import { Logo } from "./Logo";
 
 type Props = {
   talk: Talk;
 };
-
-const LOGO_URL = join(__dirname, "..", "..", "assets", "logo.svg");
 
 export function TalkThumbnail({ talk }: Props) {
   return (
@@ -50,12 +47,7 @@ export function TalkThumbnail({ talk }: Props) {
             ))}
           </div>
           <div tw="flex items-center" style={{ gap: 16 }}>
-            <img
-              alt={en.about.title}
-              src={makeDataUrl(LOGO_URL)}
-              width={80}
-              height={80}
-            />
+            <Logo size={80} />
             <h2 tw="text-4xl font-bold">{en.about.title}</h2>
           </div>
         </footer>
