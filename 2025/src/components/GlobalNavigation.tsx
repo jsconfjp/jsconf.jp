@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
-import logoUrl from "@/assets/logo.svg";
 import { Link } from "@/i18n/navigation";
 
 export function GlobalNavigation() {
@@ -40,7 +39,7 @@ export function GlobalNavigation() {
       <div className="flex items-stretch justify-between max-w-screen-lg mx-auto">
         <Link href="/" className="flex items-center">
           <Image
-            src={logoUrl}
+            src="/logo.svg"
             alt="JSConf JP"
             width={46}
             height={46}

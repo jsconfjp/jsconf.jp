@@ -1,5 +1,4 @@
 import Image from "next/image";
-import heroImage from "@/assets/logo.svg";
 import { useTranslations } from "next-intl";
 
 export function Hero() {
@@ -8,7 +7,7 @@ export function Hero() {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-16">
       <Image
-        src={heroImage}
+        src={"/logo.svg"}
         alt={t("title")}
         width={240}
         height={240}

@@ -1,11 +1,12 @@
 // OGPではimg要素しか使えないため警告を無視
 /* eslint-disable @next/next/no-img-element */
 import en from "@/../messages/en.json";
-import { readFileSync } from "node:fs";
-import path, { join } from "node:path";
+import { join } from "node:path";
 import React from "react";
 import { Chip } from "./Chip";
 import { Talk } from "@/constants/talks";
+import { Template } from "./Template";
+import { makeDataUrl } from "@/lib/og/url";
 
 type Props = {
   talk: Talk;
@@ -13,35 +14,9 @@ type Props = {
 
 const LOGO_URL = join(__dirname, "..", "..", "assets", "logo.svg");
 
-const makeDataUrl = (imagePath: string) => {
-  const imageData = readFileSync(imagePath);
-  const base64 = imageData.toString("base64");
-  const extension = path.extname(imagePath).toLowerCase();
-  const mimeType = [".jpg", ".jpeg"].includes(extension)
-    ? "image/jpeg"
-    : extension === ".png"
-    ? "image/png"
-    : extension === ".svg"
-    ? "image/svg+xml"
-    : null;
-  if (!mimeType) {
-    throw new Error(`Cannot determine MIME type from image path: ${imagePath}`);
-  }
-  const dataUrl = `data:${mimeType};base64,${base64}`;
-  return dataUrl;
-};
-
 export function TalkThumbnail({ talk }: Props) {
   return (
-    <div
-      style={{
-        fontFamily: "Noto Sans JP",
-        // FIXME: global.cssに定義した独自の色が参照できないため多重定義
-        backgroundImage:
-          "linear-gradient(135deg, rgb(240, 100, 25) 0%, rgb(255, 107, 107) 50%, rgb(220, 90, 20) 100%)",
-      }}
-      tw="h-full w-full flex flex-col p-4"
-    >
+    <Template>
       <div tw="flex-1 flex flex-col rounded-xl bg-white shadow-md">
         <main tw="flex-1 px-16 flex flex-col items-center justify-center">
           <h1 tw="text-7xl font-bold" style={{ lineHeight: "1.3" }}>
@@ -85,6 +60,6 @@ export function TalkThumbnail({ talk }: Props) {
           </div>
         </footer>
       </div>
-    </div>
+    </Template>
   );
 }
