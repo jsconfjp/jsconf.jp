@@ -17,6 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description: en.about.description,
     openGraph: {
       type: "website",
+      siteName: en.about.title,
     },
     twitter: {
       card: "summary_large_image",

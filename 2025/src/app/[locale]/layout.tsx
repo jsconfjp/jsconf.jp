@@ -26,6 +26,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       default: t("title"),
     },
     description: t("description"),
+    openGraph: {
+      siteName: t("title"),
+    },
   };
 }
 
