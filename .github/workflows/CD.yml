@@ -3,7 +3,7 @@ name: CD
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy_2024:
@@ -28,6 +28,7 @@ jobs:
       - run: mv 2022/public dist/2022
       - run: mv 2023/public dist/2023
       - run: cd 2024 && npm i && npm run build -- --prefix-paths --verbose && (mv public/2024 ../dist || mkdir ../dist/2024) && cp -r public/* ../dist/2024
+      - run: cd 2025 && npm ci && npm run build && mv out dist/2025
       - run: find dist
       - uses: actions/upload-pages-artifact@v1
         with:
