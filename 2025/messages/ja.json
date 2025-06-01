@@ -50,5 +50,13 @@
       "sponsor session": "スポンサーセッション",
       "sponsor LT": "スポンサーLT"
     }
+  },
+  "venue": {
+    "placeName": "サンプルカンファレンスホール",
+    "address": "サンプル市サンプル区サンプル町1-2-3",
+    "accessByTrain": "電車でのアクセス",
+    "accessByTrainDescription": "都営地下鉄 サンプル線「サンプル駅」下車徒歩5分",
+    "accessFromAirport": "空港からのアクセス",
+    "accessFromAirportDescription": "羽田空港→都営地下鉄 サンプル線「サンプル駅」下車徒歩5分、成田空港→都営地下鉄 サンプル線「サンプル駅」下車徒歩5分"
   }
 }

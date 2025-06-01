@@ -50,5 +50,13 @@
       "sponsor session": "Sponsor session",
       "sponsor LT": "Sponsor LT"
     }
+  },
+  "venue": {
+    "placeName": "Sample Conference Hall",
+    "address": "Sample City Sample District Sample Town 1-2-3",
+    "accessByTrain": "Access by train",
+    "accessByTrainDescription": "Toei Subway Sample Line \"Sample Station\" exit 5 minutes walk",
+    "accessFromAirport": "Access from airport",
+    "accessFromAirportDescription": "Haneda Airport → Toei Subway Sample Line \"Sample Station\" exit 5 minutes walk, Narita Airport → Toei Subway Sample Line \"Sample Station\" exit 5 minutes walk"
   }
 }
