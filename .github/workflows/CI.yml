@@ -25,6 +25,8 @@ jobs:
           cache-dependency-path: 2025/package-lock.json
       - run: cd 2025 && npm ci
       - run: cd 2025 && npm run build
+        env:
+          NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
   test_2024:
     runs-on: ubuntu-latest
     steps:
