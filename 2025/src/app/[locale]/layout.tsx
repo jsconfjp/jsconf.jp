@@ -4,7 +4,7 @@ import { routing } from "@/i18n/routing";
 import { GlobalNavigation } from "@/components/GlobalNavigation";
 import { Footer } from "@/components/Footer";
 import bgUrl from "@/assets/bg.webp";
-import bgFlipXUrl from "@/assets/bg-flip-x.webp";
+// import bgFlipXUrl from "@/assets/bg-flip-x.webp";
 import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { LOCALES } from "@/i18n/constants";
