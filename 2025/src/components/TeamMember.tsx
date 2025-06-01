@@ -17,7 +17,7 @@ export function TeamMember({ member, size }: Props) {
       <img
         loading="lazy"
         src={member.avatarUrl}
-        alt={member.name}
+        alt={`${member.name}'s avatar`}
         width={size}
         height={size}
         className="max-w-full"
