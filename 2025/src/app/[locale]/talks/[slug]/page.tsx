@@ -1,4 +1,5 @@
 import { Chip } from "@/components/Chip";
+import { Markdown } from "@/components/Markdown";
 import { TALKS } from "@/constants/talks";
 import { Locale, LOCALES } from "@/i18n/constants";
 import { Metadata } from "next";
@@ -7,7 +8,6 @@ import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { use } from "react";
-import Markdown from "react-markdown";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;

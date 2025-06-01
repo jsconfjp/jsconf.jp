@@ -49,7 +49,7 @@ export function Footer() {
 
   return (
     <footer className="bg-dimmed py-10 flex flex-col items-center">
-      <nav className="flex flex-col items-center md:flex-row gap-2 md:gap-4">
+      <nav className="flex items-center gap-2">
         {asideLinks.map(({ icon, alt, href, target }) => (
           <Link
             key={href}
