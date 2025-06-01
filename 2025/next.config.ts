@@ -1,4 +1,5 @@
 import createMDX from "@next/mdx";
+import bundleAnalyzer from "@next/bundle-analyzer";
 import type { NextConfig } from "next";
 import remarkGfm from "remark-gfm";
 import remarkFrontmatter from "remark-frontmatter";
@@ -21,5 +22,8 @@ const withMDX = createMDX({
 });
 
 const withNextIntl = createNextIntlPlugin();
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+});
 
-export default withNextIntl(withMDX(nextConfig));
+export default withBundleAnalyzer(withNextIntl(withMDX(nextConfig)));
