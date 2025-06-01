@@ -1,8 +1,8 @@
-import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Locale, useTranslations } from "next-intl";
+import { SpeakerGrid } from "@/components/SpeakerGrid";
+import { TALKS } from "@/constants/talks";
 import { Metadata } from "next";
-import { SponsorGrid } from "@/components/SponsorGrid";
-import { SPONSORS } from "@/constants/sponsors";
+import { Locale, useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { use } from "react";
 
 type Props = {
@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     namespace: "navigation",
   });
   return {
-    title: t("sponsors"),
+    title: t("speakers"),
   };
 }
 
@@ -25,11 +25,19 @@ export default function Page({ params }: Props) {
   setRequestLocale(locale as Locale);
 
   const t = useTranslations("navigation");
+  const speakers = TALKS.flatMap((talk) =>
+    talk.speakers.map((speaker) => ({
+      talk,
+      speaker,
+    }))
+  )
+    // filter out sponsors
+    .filter(({ speaker }) => speaker.type === "speaker");
 
   return (
     <div className="max-w-screen-lg mx-auto px-4 lg:px-0 pt-16 md:pt-32">
-      <h1 className="text-3xl font-bold my-4 text-center">{t("sponsors")}</h1>
-      <SponsorGrid sponsors={SPONSORS} showPrText={true} />
+      <h1 className="text-3xl font-bold my-4 text-center">{t("speakers")}</h1>
+      <SpeakerGrid speakers={speakers} />
     </div>
   );
 }

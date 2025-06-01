@@ -1,7 +1,7 @@
 import { Sponsor } from "@/constants/sponsors";
-import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
+import { Link } from "@/i18n/navigation";
 
 type Props = {
   sponsor: Sponsor;
