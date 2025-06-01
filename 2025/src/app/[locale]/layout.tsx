@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { GlobalNavigation } from "@/components/GlobalNavigation";
 import { Footer } from "@/components/Footer";
-import bgUrl from "@/assets/bg.png";
+import bgUrl from "@/assets/bg.webp";
+import bgFlipXUrl from "@/assets/bg-flip-x.webp";
 import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { LOCALES } from "@/i18n/constants";
@@ -52,9 +53,7 @@ export default async function LocaleLayout({
       <body
         className="antialiased flex flex-col min-h-screen"
         style={{
-          // FIXME: まだコンテンツが揃わずページの高さが足りないので1枚だけ表示
-          backgroundImage: `url(${bgUrl.src})`,
-          // backgroundImage: `url(${bgUrl.src}), url(${bgFlipXUrl.src})`,
+          backgroundImage: `url(${bgUrl.src}), url(${bgFlipXUrl.src})`,
           backgroundRepeat: "no-repeat, no-repeat",
           backgroundPosition: "right -300px top -830px, left -450px center",
           backgroundSize: "100%, 120%",
