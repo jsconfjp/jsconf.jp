@@ -53,7 +53,9 @@ export default async function LocaleLayout({
       <body
         className="antialiased flex flex-col min-h-screen"
         style={{
-          backgroundImage: `url(${bgUrl.src}), url(${bgFlipXUrl.src})`,
+          // FIXME: まだコンテンツが揃わずページの高さが足りないので1枚だけ表示
+          // backgroundImage: `url(${bgUrl.src}), url(${bgFlipXUrl.src})`,
+          backgroundImage: `url(${bgUrl.src})`,
           backgroundRepeat: "no-repeat, no-repeat",
           backgroundPosition: "right -300px top -830px, left -450px center",
           backgroundSize: "100%, 120%",
