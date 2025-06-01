@@ -54,9 +54,10 @@
   "venue": {
     "placeName": "Sample Conference Hall",
     "address": "Sample City Sample District Sample Town 1-2-3",
+    "access": "Access",
     "accessByTrain": "Access by train",
-    "accessByTrainDescription": "Toei Subway Sample Line \"Sample Station\" exit 5 minutes walk",
+    "accessByTrainDescription": "* Toei Subway Sample Line \"Sample Station\" exit 5 minutes walk",
     "accessFromAirport": "Access from airport",
-    "accessFromAirportDescription": "Haneda Airport → Toei Subway Sample Line \"Sample Station\" exit 5 minutes walk, Narita Airport → Toei Subway Sample Line \"Sample Station\" exit 5 minutes walk"
+    "accessFromAirportDescription": "* Haneda Airport → Toei Subway Sample Line \"Sample Station\" exit 5 minutes walk\n* Narita Airport → Toei Subway Sample Line \"Sample Station\" exit 5 minutes walk"
   }
 }

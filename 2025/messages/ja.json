@@ -54,9 +54,10 @@
   "venue": {
     "placeName": "サンプルカンファレンスホール",
     "address": "サンプル市サンプル区サンプル町1-2-3",
+    "access": "アクセス",
     "accessByTrain": "電車でのアクセス",
-    "accessByTrainDescription": "都営地下鉄 サンプル線「サンプル駅」下車徒歩5分",
+    "accessByTrainDescription": "* 都営地下鉄 サンプル線「サンプル駅」下車徒歩5分",
     "accessFromAirport": "空港からのアクセス",
-    "accessFromAirportDescription": "羽田空港→都営地下鉄 サンプル線「サンプル駅」下車徒歩5分、成田空港→都営地下鉄 サンプル線「サンプル駅」下車徒歩5分"
+    "accessFromAirportDescription": "* 羽田空港→都営地下鉄 サンプル線「サンプル駅」下車徒歩5分\n* 成田空港→都営地下鉄 サンプル線「サンプル駅」下車徒歩5分"
   }
 }
