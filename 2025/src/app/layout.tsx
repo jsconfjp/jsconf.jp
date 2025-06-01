@@ -10,6 +10,7 @@ export const viewport: Viewport = {
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
+    metadataBase: new URL("https://jsconf.jp"),
     title: {
       template: `%s | ${en.about.title}`,
       default: en.about.title,
