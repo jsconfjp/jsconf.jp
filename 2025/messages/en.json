@@ -27,8 +27,13 @@
     "becomeSponsor": "Become a sponsor"
   },
   "team": {
+    "team": "Our Team",
     "organizingTeam": "Organizing team",
     "volunteerTeam": "Volunteer team",
     "joinUs": "Join us"
+  },
+  "sponsors": {
+    "premium": "Premium sponsors",
+    "sponsor": "Sponsors"
   }
 }

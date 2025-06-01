@@ -7,6 +7,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import { Locale } from "@/i18n/constants";
 import { useTranslations } from "next-intl";
+// import { SponsorGrid } from "@/components/SponsorGrid";
+// import { SPONSORS } from "@/constants/sponsors";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -27,14 +29,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default function Home({ params }: Props) {
   const { locale } = use(params);
-
   setRequestLocale(locale as Locale);
 
-  const tCta = useTranslations("cta");
+  const t = useTranslations();
 
   return (
-    <div className="max-w-screen-lg mx-auto px-4 lg:px-0">
-      <div className="max-w-screen-md mx-auto mt-16 md:mt-32">
+    <div className="max-w-screen-lg mx-auto px-4 lg:px-0 pt-16 md:pt-32">
+      <div className="max-w-screen-md mx-auto">
         <Hero />
 
         <div className="mt-20 flex flex-col md:flex-row justify-center gap-4 md:gap-8">
@@ -46,7 +47,7 @@ export default function Home({ params }: Props) {
             target="_blank"
             endIcon={<ArrowTopRightOnSquareIcon className="w-4 h-4" />}
           >
-            {tCta("submitTalk")}
+            {t("cta.submitTalk")}
           </Button>
           <Button
             full
@@ -56,11 +57,25 @@ export default function Home({ params }: Props) {
             target="_blank"
             endIcon={<ArrowTopRightOnSquareIcon className="w-4 h-4" />}
           >
-            {tCta("becomeSponsor")}
+            {t("cta.becomeSponsor")}
           </Button>
         </div>
+      </div>
 
+      {/* <div className="max-w-screen-md mx-auto mt-16 md:mt-32">
         <div className="mt-20">
+          <h2 className="text-3xl font-bold my-4 text-center">
+            {t("navigation.sponsors")}
+          </h2>
+          <SponsorGrid sponsors={SPONSORS} showPrText />
+        </div>
+      </div> */}
+
+      <div className="max-w-screen-md mx-auto mt-16 md:mt-32">
+        <div className="mt-20">
+          <h2 className="text-3xl font-bold my-4 text-center">
+            {t("team.team")}
+          </h2>
           <Team />
         </div>
       </div>
