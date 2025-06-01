@@ -27,8 +27,13 @@
     "becomeSponsor": "スポンサー申込フォームへ"
   },
   "team": {
+    "team": "チーム",
     "organizingTeam": "オーガナイザー",
     "volunteerTeam": "ボランティア",
     "joinUs": "Join us"
+  },
+  "sponsors": {
+    "premium": "プレミアムスポンサー",
+    "sponsor": "スポンサー"
   }
 }
