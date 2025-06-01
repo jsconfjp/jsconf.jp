@@ -37,7 +37,11 @@ export function TalkThumbnail({ talk }: Props) {
               >
                 <img
                   alt={speaker.name}
-                  src={speaker.avatarUrl}
+                  src={
+                    speaker.type === "speaker"
+                      ? speaker.avatarUrl
+                      : speaker.logoUrl
+                  }
                   width={120 / talk.speakers.length}
                   height={120 / talk.speakers.length}
                   tw="rounded-full"

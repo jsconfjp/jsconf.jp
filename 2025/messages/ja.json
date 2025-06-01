@@ -35,5 +35,20 @@
   "sponsors": {
     "premium": "プレミアムスポンサー",
     "sponsor": "スポンサー"
+  },
+  "talks": {
+    "track": {
+      "A": "トラックA",
+      "B": "トラックB",
+      "C": "トラックC",
+      "D": "トラックD"
+    },
+    "kind": {
+      "keynote": "キーノート",
+      "session": "セッション",
+      "LT": "LT",
+      "sponsor session": "スポンサーセッション",
+      "sponsor LT": "スポンサーLT"
+    }
   }
 }

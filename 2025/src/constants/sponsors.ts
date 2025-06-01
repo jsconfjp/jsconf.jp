@@ -1,6 +1,7 @@
 type Plan = "premium" | "sponsor";
 
 export type Sponsor = {
+  type: "sponsor";
   plan: Plan;
   name: string;
   url: string;
@@ -10,6 +11,7 @@ export type Sponsor = {
 
 export const SPONSORS: Sponsor[] = [
   {
+    type: "sponsor",
     plan: "premium",
     name: "Sample premium 1",
     url: "https://example.com",
@@ -17,6 +19,7 @@ export const SPONSORS: Sponsor[] = [
     prText: "",
   },
   {
+    type: "sponsor",
     plan: "sponsor",
     name: "Sample sponsor 1",
     url: "https://example.com",
