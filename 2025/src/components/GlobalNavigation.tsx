@@ -41,6 +41,7 @@ export function GlobalNavigation() {
         <Link href="/" className="flex items-center">
           <Image
             src={logoSrc}
+            fetchPriority="high"
             alt="JSConf JP"
             width={46}
             height={46}

@@ -16,6 +16,7 @@ export function TeamMember({ member, size }: Props) {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         loading="lazy"
+        fetchPriority="low"
         src={member.avatarUrl}
         alt={`${member.name}'s avatar`}
         width={size}
