@@ -9,6 +9,7 @@ export function Hero() {
     <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-16">
       <Image
         src={logoSrc}
+        fetchPriority="high"
         alt={t("title")}
         width={240}
         height={240}
