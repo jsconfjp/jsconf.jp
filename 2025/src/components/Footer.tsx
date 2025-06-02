@@ -3,6 +3,13 @@ import { useTranslations } from "next-intl";
 import twitterXUrl from "@/assets/twitter-x.svg";
 import githubUrl from "@/assets/github.svg";
 import Image from "next/image";
+import {
+  GITHUB_URL,
+  JNA_URL,
+  NODEJS_OFFICIAL_URL,
+  PREVIOUS_URL,
+  X_URL,
+} from "@/constants/external";
 
 export function Footer() {
   const tNav = useTranslations("navigation");
@@ -11,30 +18,30 @@ export function Footer() {
     {
       icon: twitterXUrl,
       alt: "X",
-      href: "https://x.com/jsconfjp",
+      href: X_URL,
       target: "_blank",
     },
     {
       icon: githubUrl,
       alt: "GitHub",
-      href: "https://github.com/jsconfjp/jsconf.jp",
+      href: GITHUB_URL,
       target: "_blank",
     },
   ];
   const links = [
     {
       label: tNav("nodejs"),
-      href: "https://nodejs.org/",
+      href: NODEJS_OFFICIAL_URL,
       target: "_blank",
     },
     {
       label: tNav("previousJsconfJp"),
-      href: "https://jsconf.jp/2024",
+      href: PREVIOUS_URL,
       target: "_blank",
     },
     {
       label: tNav("japanNodejsAssociation"),
-      href: "https://nodejs.jp/",
+      href: JNA_URL,
       target: "_blank",
     },
     {

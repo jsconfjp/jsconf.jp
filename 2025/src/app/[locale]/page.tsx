@@ -8,6 +8,7 @@ import { use } from "react";
 import { Locale } from "@/i18n/constants";
 import { useTranslations } from "next-intl";
 import { Venue } from "@/components/Venue";
+import { CFP_FORM_URL, SPONSOR_FORM_URL } from "@/constants/external";
 // import { SponsorGrid } from "@/components/SponsorGrid";
 // import { SPONSORS } from "@/constants/sponsors";
 
@@ -44,7 +45,7 @@ export default function Home({ params }: Props) {
             full
             variant="primary"
             size="lg"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSf0QHajs3kQyax0zDX3W6KTFom7LqSqrIEmCp91tV_ccA9QWA/viewform?usp=sharing&ouid=108428319653051170414"
+            href={CFP_FORM_URL}
             target="_blank"
             endIcon={<ArrowTopRightOnSquareIcon className="w-4 h-4" />}
           >
@@ -54,7 +55,7 @@ export default function Home({ params }: Props) {
             full
             variant="primary"
             size="lg"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSe7ULSgMAJUlDuCsD8oTUFJPV2sXAktBSYIaObEB8akmWDSMQ/viewform?usp=sharing&ouid=108428319653051170414"
+            href={SPONSOR_FORM_URL}
             target="_blank"
             endIcon={<ArrowTopRightOnSquareIcon className="w-4 h-4" />}
           >
