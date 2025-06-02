@@ -1,5 +1,3 @@
-import { GoogleMaps } from "@/components/GoogleMaps";
-import { PLACE_ID } from "@/constants/venue";
 import { Metadata } from "next";
 import { Locale, useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
