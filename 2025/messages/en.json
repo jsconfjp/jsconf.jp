@@ -16,7 +16,8 @@
     "previousJsconfJp": "JSConf JP 2024",
     "japanNodejsAssociation": "Japan Node.js Association",
     "codeOfConduct": "Code of Conduct",
-    "specifiedCommercialTransactionsAct": "Specified Commercial Transactions Act Disclosure"
+    "specifiedCommercialTransactionsAct": "Specified Commercial Transactions Act Disclosure",
+    "viewDetails": "View details"
   },
   "lang": {
     "japanese": "JA",
@@ -52,11 +53,11 @@
     }
   },
   "venue": {
-    "placeName": "Sample Conference Hall",
-    "address": "Sample City Sample District Sample Town 1-2-3",
+    "placeName": "Gran Tokyo South Tower",
+    "address": "1 Chome-9-2 Marunouchi, Chiyoda City, Tokyo 100-6690",
     "access": "Access",
     "accessByTrain": "Access by train",
-    "accessByTrainDescription": "* Toei Subway Sample Line \"Sample Station\" exit 5 minutes walk",
+    "accessByTrainDescription": "* Directly connected to JR Tokyo Station",
     "accessFromAirport": "Access from airport",
     "accessFromAirportDescription": "* Haneda Airport → Toei Subway Sample Line \"Sample Station\" exit 5 minutes walk\n* Narita Airport → Toei Subway Sample Line \"Sample Station\" exit 5 minutes walk"
   }

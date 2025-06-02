@@ -1,10 +1,9 @@
-import { GoogleMaps } from "@/components/GoogleMaps";
-import { PLACE_ID } from "@/constants/venue";
 import { Metadata } from "next";
 import { Locale, useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import { Markdown } from "@/components/Markdown";
+import { Venue } from "@/components/Venue";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -32,16 +31,7 @@ export default function Page({ params }: Props) {
       <h1 className="text-3xl font-bold my-4 text-center">
         {t("navigation.venue")}
       </h1>
-      <div className="h-96 flex flex-col gap-2">
-        <h2 className="text-2xl font-bold text-center">
-          {t("venue.placeName")}
-        </h2>
-        <p className="text-center">{t("venue.address")}</p>
-        <GoogleMaps
-          mapMode="place"
-          params={{ q: `place_id:${PLACE_ID}`, language: locale }}
-        />
-      </div>
+      <Venue locale={locale} />
       <div className="flex flex-col gap-2 max-w-screen-sm mx-auto">
         <h2 className="text-2xl font-bold text-center">{t("venue.access")}</h2>
         <h3 className="text-xl font-bold">{t("venue.accessByTrain")}</h3>
@@ -49,10 +39,11 @@ export default function Page({ params }: Props) {
           <Markdown>{t("venue.accessByTrainDescription")}</Markdown>
         </div>
 
-        <h3 className="text-xl font-bold">{t("venue.accessFromAirport")}</h3>
+        {/* TODO: 後で対応 */}
+        {/* <h3 className="text-xl font-bold">{t("venue.accessFromAirport")}</h3>
         <div>
           <Markdown>{t("venue.accessFromAirportDescription")}</Markdown>
-        </div>
+        </div> */}
       </div>
     </div>
   );
