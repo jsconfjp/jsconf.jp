@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import { Markdown } from "@/components/Markdown";
 import { Venue } from "@/components/Venue";
+import { PageContainer } from "@/components/PageContainer";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -27,7 +28,7 @@ export default function Page({ params }: Props) {
   const t = useTranslations();
 
   return (
-    <div className="max-w-screen-lg mx-auto px-4 lg:px-0 pt-16 md:pt-32 flex flex-col gap-4">
+    <PageContainer>
       <h1 className="text-3xl font-bold my-4 text-center">
         {t("navigation.venue")}
       </h1>
@@ -45,6 +46,6 @@ export default function Page({ params }: Props) {
           <Markdown>{t("venue.accessFromAirportDescription")}</Markdown>
         </div> */}
       </div>
-    </div>
+    </PageContainer>
   );
 }

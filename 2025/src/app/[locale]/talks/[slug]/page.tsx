@@ -8,6 +8,7 @@ import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { use } from "react";
+import { PageContainer } from "@/components/PageContainer";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -49,7 +50,7 @@ export default function Page({ params }: Props) {
   }
 
   return (
-    <div className="max-w-screen-lg mx-auto px-4 lg:px-0 pt-16 md:pt-32 flex flex-col">
+    <PageContainer>
       <p>{t(`kind.${talk.kind}`)}</p>
       <h1 className="my-1 text-3xl font-bold">{talk.title}</h1>
       <p className="my-2 flex items-center gap-2">
@@ -91,6 +92,6 @@ export default function Page({ params }: Props) {
           </li>
         ))}
       </ul>
-    </div>
+    </PageContainer>
   );
 }

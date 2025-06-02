@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { SponsorGrid } from "@/components/SponsorGrid";
 import { SPONSORS } from "@/constants/sponsors";
 import { use } from "react";
+import { PageContainer } from "@/components/PageContainer";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -27,9 +28,9 @@ export default function Page({ params }: Props) {
   const t = useTranslations("navigation");
 
   return (
-    <div className="max-w-screen-lg mx-auto px-4 lg:px-0 pt-16 md:pt-32">
+    <PageContainer>
       <h1 className="text-3xl font-bold my-4 text-center">{t("sponsors")}</h1>
       <SponsorGrid sponsors={SPONSORS} showPrText={true} />
-    </div>
+    </PageContainer>
   );
 }
