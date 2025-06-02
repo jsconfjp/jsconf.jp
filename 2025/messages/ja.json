@@ -16,7 +16,8 @@
     "previousJsconfJp": "JSConf JP 2024",
     "japanNodejsAssociation": "Japan Node.js Association",
     "codeOfConduct": "行動規範",
-    "specifiedCommercialTransactionsAct": "特定商取引法に基づく表示"
+    "specifiedCommercialTransactionsAct": "特定商取引法に基づく表示",
+    "viewDetails": "詳細を見る"
   },
   "lang": {
     "japanese": "JA",
@@ -52,11 +53,11 @@
     }
   },
   "venue": {
-    "placeName": "サンプルカンファレンスホール",
-    "address": "サンプル市サンプル区サンプル町1-2-3",
+    "placeName": "グラントウキョウサウスタワー",
+    "address": "東京都千代田区丸の内1-9-2",
     "access": "アクセス",
     "accessByTrain": "電車でのアクセス",
-    "accessByTrainDescription": "* 都営地下鉄 サンプル線「サンプル駅」下車徒歩5分",
+    "accessByTrainDescription": "* JR東京駅直結",
     "accessFromAirport": "空港からのアクセス",
     "accessFromAirportDescription": "* 羽田空港→都営地下鉄 サンプル線「サンプル駅」下車徒歩5分\n* 成田空港→都営地下鉄 サンプル線「サンプル駅」下車徒歩5分"
   }

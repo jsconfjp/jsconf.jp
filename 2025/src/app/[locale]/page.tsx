@@ -7,6 +7,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import { Locale } from "@/i18n/constants";
 import { useTranslations } from "next-intl";
+import { Venue } from "@/components/Venue";
 // import { SponsorGrid } from "@/components/SponsorGrid";
 // import { SPONSORS } from "@/constants/sponsors";
 
@@ -62,22 +63,30 @@ export default function Home({ params }: Props) {
         </div>
       </div>
 
-      {/* <div className="max-w-screen-md mx-auto mt-16 md:mt-32">
-        <div className="mt-20">
-          <h2 className="text-3xl font-bold my-4 text-center">
-            {t("navigation.sponsors")}
-          </h2>
-          <SponsorGrid sponsors={SPONSORS} showPrText />
+      <div className="max-w-screen-md mx-auto mt-16 md:mt-32 flex flex-col gap-4">
+        <h2 className="text-3xl font-bold text-center">
+          {t("navigation.venue")}
+        </h2>
+        <Venue locale={locale} />
+        <div className="flex items-center justify-center">
+          <Button href="/venue" variant="secondary" size="md">
+            {t("navigation.viewDetails")}
+          </Button>
         </div>
+      </div>
+
+      {/* <div className="max-w-screen-md mx-auto mt-16 md:mt-32">
+        <h2 className="text-3xl font-bold my-4 text-center">
+          {t("navigation.sponsors")}
+        </h2>
+        <SponsorGrid sponsors={SPONSORS} showPrText />
       </div> */}
 
       <div className="max-w-screen-md mx-auto mt-16 md:mt-32">
-        <div className="mt-20">
-          <h2 className="text-3xl font-bold my-4 text-center">
-            {t("team.team")}
-          </h2>
-          <Team />
-        </div>
+        <h2 className="text-3xl font-bold my-4 text-center">
+          {t("team.team")}
+        </h2>
+        <Team />
       </div>
     </div>
   );

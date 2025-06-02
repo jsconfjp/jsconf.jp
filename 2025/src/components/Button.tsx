@@ -15,7 +15,7 @@ export function Button({
   full?: boolean;
   endIcon?: React.ReactNode;
   href: string;
-  target: string;
+  target?: string;
   children: React.ReactNode;
 }) {
   return (
@@ -33,10 +33,11 @@ export function Button({
       <div
         className={clsx(
           "flex-1 text-center",
-          size === "sm" && "pl-8 py-1 text-sm",
-          size === "md" && "pl-8 py-2 text-base",
-          size === "lg" && "pl-8 py-2 text-lg",
-          size === "xl" && "pl-8 py-3 text-xl"
+          endIcon ? "pl-8" : "px-8",
+          size === "sm" && "py-1 text-sm",
+          size === "md" && "py-2 text-base",
+          size === "lg" && "py-2 text-lg",
+          size === "xl" && "py-3 text-xl"
         )}
       >
         {children}
