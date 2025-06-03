@@ -43,9 +43,8 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
           ? "cursor-pointer hover:shadow-md"
           : "cursor-auto"
       )}
+      // FIXME: talkの時だけLinkであれば良い、""や"#"ではページ遷移が起こってしまう
       href={session.kind === "talk" ? `/talks/${session.talk.slug}` : ""}
-      // FIXME: talkの時だけLinkであれば良いのに余計な処理をしている
-      onClick={(e) => session.kind !== "talk" && e.preventDefault()}
     >
       {session.kind === "talk" ? (
         <div className="flex flex-col gap-1 items-start">

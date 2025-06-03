@@ -136,10 +136,8 @@ export const TALKS: Talk[] = [
   },
 ] as const;
 
-// TALKSから導出されるslugのunion型（内部使用のみ）
 type TalkSlug = (typeof TALKS)[number]["slug"];
 
-// TALKSを加工してRecordを生成
 export const TALKS_BY_SLUG: Record<TalkSlug, Talk> = TALKS.reduce(
   (acc, talk) => {
     acc[talk.slug as TalkSlug] = talk;
