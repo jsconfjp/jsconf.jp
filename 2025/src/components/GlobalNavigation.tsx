@@ -66,6 +66,7 @@ export function GlobalNavigation() {
           <button
             type="button"
             className="text-2xl p-2 cursor-pointer"
+            aria-label="Show/Hide navigations"
             onClick={() => setIsOpen((prev) => !prev)}
           >
             {isOpen ? (
