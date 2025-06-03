@@ -1,6 +1,7 @@
 import { Chip } from "@/components/Chip";
 import { Markdown } from "@/components/Markdown";
 import { TALKS } from "@/constants/talks";
+import { SCHEDULE } from "@/constants/schedule";
 import { Locale, LOCALES } from "@/i18n/constants";
 import { Metadata } from "next";
 import { useTranslations } from "next-intl";
@@ -15,10 +16,13 @@ type Props = {
 };
 
 export function generateStaticParams() {
-  return TALKS.flatMap((talk) =>
+  // SCHEDULEのtalkセッションからslugを生成
+  const talkSessions = SCHEDULE.filter((session) => session.kind === "talk");
+
+  return talkSessions.flatMap((session) =>
     LOCALES.map((locale) => ({
       locale,
-      slug: talk.slug,
+      slug: session.talk.slug,
     }))
   );
 }
@@ -49,17 +53,24 @@ export default function Page({ params }: Props) {
     throw new Error(`talk not found: ${slug}`);
   }
 
+  // SCHEDULEからこのtalkに対応するセッション情報を取得
+  const session = SCHEDULE.find((s) => s.kind === "talk" && s.talk === talk);
+
   return (
     <PageContainer>
       <p>{t(`kind.${talk.kind}`)}</p>
       <h1 className="my-1 text-3xl font-bold">{talk.title}</h1>
-      <p className="my-2 flex items-center gap-2">
-        <time>
-          {talk.startTime}-{talk.endTime}
-        </time>
-        <Chip track={talk.track}>{t(`track.${talk.track}`)}</Chip>
-        <Chip>{talk.language}</Chip>
-      </p>
+      {session && (
+        <p className="my-2 flex items-center gap-2">
+          <time>
+            {session.startTime}-{session.endTime}
+          </time>
+          {session.track !== "all" && (
+            <Chip track={session.track}>{t(`track.${session.track}`)}</Chip>
+          )}
+          <Chip>{talk.language}</Chip>
+        </p>
+      )}
       <div className="mt-4">
         <Markdown>{talk.description}</Markdown>
       </div>

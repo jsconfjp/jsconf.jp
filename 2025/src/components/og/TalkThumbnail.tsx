@@ -3,15 +3,17 @@
 import en from "@/../messages/en.json";
 import React from "react";
 import { Chip } from "./Chip";
-import { Talk } from "@/constants/talks";
+import { ScheduledSession } from "@/constants/schedule";
 import { Template } from "./Template";
 import { Logo } from "./Logo";
 
 type Props = {
-  talk: Talk;
+  session: ScheduledSession & { kind: "talk" };
 };
 
-export function TalkThumbnail({ talk }: Props) {
+export function TalkThumbnail({ session }: Props) {
+  const { talk } = session;
+
   return (
     <Template>
       <div tw="flex-1 flex flex-col rounded-xl bg-white shadow-md">
@@ -20,9 +22,11 @@ export function TalkThumbnail({ talk }: Props) {
             {talk.title}
           </h1>
           <div tw="flex items-center" style={{ gap: 8 }}>
-            <Chip track={talk.track}>Track {talk.track}</Chip>
+            {session.track !== "all" && (
+              <Chip track={session.track}>Track {session.track}</Chip>
+            )}
             <Chip>
-              {talk.startTime}-{talk.endTime}
+              {session.startTime}-{session.endTime}
             </Chip>
             <Chip>{talk.language}</Chip>
           </div>
