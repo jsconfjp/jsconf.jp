@@ -3,6 +3,7 @@ import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import { Chip } from "./Chip";
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 
 const getSessionColor = (session: ScheduledSession) => {
   switch (session.kind) {
@@ -24,7 +25,7 @@ const getSessionColor = (session: ScheduledSession) => {
       return "bg-trinidad-100 border-trinidad-300";
     case "break":
     case "closed":
-      return "bg-white/20 border-gray-300 border-dashed";
+      return "bg-white border-gray-300 border-dashed";
   }
 };
 
@@ -34,11 +35,17 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
   const tTrack = useTranslations("talks.track");
 
   return (
-    <div
+    // FIXME: talkの時だけLinkであれば良い
+    <Link
       className={clsx(
         "py-2 px-4 rounded-sm border-2 h-full flex flex-col gap-1 justify-start text-wrap",
-        getSessionColor(session)
+        getSessionColor(session),
+        session.kind === "talk"
+          ? "cursor-pointer hover:shadow-md"
+          : "cursor-auto"
       )}
+      href={session.kind === "talk" ? `/talks/${session.talk.slug}` : "#"}
+      aria-disabled={session.kind !== "talk"}
     >
       {session.kind === "talk" ? (
         <div className="flex flex-col gap-1 items-start">
@@ -94,6 +101,6 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
       <time className="text-xs">
         {session.startTime} - {session.endTime}
       </time>
-    </div>
+    </Link>
   );
 }
