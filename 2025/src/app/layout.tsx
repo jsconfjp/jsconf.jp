@@ -1,5 +1,6 @@
 import { Metadata, Viewport } from "next";
 import en from "@/../messages/en.json";
+import { unstable_ViewTransition as ViewTransition } from "react";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -31,5 +32,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return <ViewTransition>{children}</ViewTransition>;
 }
