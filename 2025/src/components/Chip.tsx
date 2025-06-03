@@ -16,11 +16,8 @@ export function Chip({
     track && track !== "all"
       ? `var(--color-track-${track.toLowerCase()})`
       : "var(--color-secondary)";
-
-  // テキスト色は動的に計算（背景色に応じて白か黒を選択）
   const getTextColor = (track?: Track) => {
     if (!track || track === "all") return "white";
-    // 明るい背景色（C）は黒文字、それ以外は白文字
     return track === "C" ? "black" : "white";
   };
 

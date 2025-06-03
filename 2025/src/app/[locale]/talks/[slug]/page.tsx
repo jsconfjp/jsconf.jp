@@ -1,11 +1,9 @@
 import { Chip } from "@/components/Chip";
 import { Markdown } from "@/components/Markdown";
-import { TALKS } from "@/constants/talks";
 import { SCHEDULE } from "@/constants/schedule";
 import { Locale, LOCALES } from "@/i18n/constants";
 import { Metadata } from "next";
 import { useTranslations } from "next-intl";
-// import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { use } from "react";
@@ -16,7 +14,6 @@ type Props = {
 };
 
 export function generateStaticParams() {
-  // SCHEDULEのtalkセッションからslugを生成
   const talkSessions = SCHEDULE.filter((session) => session.kind === "talk");
 
   return talkSessions.flatMap((session) =>
@@ -31,14 +28,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   setRequestLocale(locale as Locale);
 
-  const talk = TALKS.find((talk) => talk.slug === slug);
-  if (!talk) {
-    throw new Error(`talk not found: ${slug}`);
+  const session = SCHEDULE.find(
+    (s) => s.kind === "talk" && s.talk.slug === slug
+  );
+  if (!session || session.kind !== "talk") {
+    throw new Error(`session not found: ${slug}`);
   }
 
   return {
-    title: talk.title,
-    description: talk.description,
+    title: session.talk.title,
+    description: session.talk.description,
   };
 }
 
@@ -47,19 +46,18 @@ export default function Page({ params }: Props) {
   setRequestLocale(locale as Locale);
 
   const t = useTranslations("talks");
-
-  const talk = TALKS.find((talk) => talk.slug === slug);
-  if (!talk) {
-    throw new Error(`talk not found: ${slug}`);
-  }
-
   // SCHEDULEからこのtalkに対応するセッション情報を取得
-  const session = SCHEDULE.find((s) => s.kind === "talk" && s.talk === talk);
+  const session = SCHEDULE.find(
+    (s) => s.kind === "talk" && s.talk.slug === slug
+  );
+  if (!session || session.kind !== "talk") {
+    throw new Error(`session not found: ${slug}`);
+  }
 
   return (
     <PageContainer>
-      <p>{t(`kind.${talk.kind}`)}</p>
-      <h1 className="my-1 text-3xl font-bold">{talk.title}</h1>
+      <p>{t(`kind.${session.talk.kind}`)}</p>
+      <h1 className="my-1 text-3xl font-bold">{session.talk.title}</h1>
       {session && (
         <p className="my-2 flex items-center gap-2">
           <time>
@@ -68,14 +66,14 @@ export default function Page({ params }: Props) {
           {session.track !== "all" && (
             <Chip track={session.track}>{t(`track.${session.track}`)}</Chip>
           )}
-          <Chip>{talk.language}</Chip>
+          <Chip>{session.talk.language}</Chip>
         </p>
       )}
       <div className="mt-4">
-        <Markdown>{talk.description}</Markdown>
+        <Markdown>{session.talk.description}</Markdown>
       </div>
       <ul className="mt-8 flex flex-col gap-2">
-        {talk.speakers.map((speaker) => (
+        {session.talk.speakers.map((speaker) => (
           <li
             key={speaker.name}
             className="flex items-center gap-4 bg-primary/10 p-6 rounded-md"
