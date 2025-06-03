@@ -39,7 +39,7 @@
   },
   "schedule": {
     "kind": {
-      "reception": "Reception",
+      "reception": "Doors open",
       "opening": "Opening",
       "closed": "Closed",
       "break": "Break",

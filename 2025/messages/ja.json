@@ -39,9 +39,9 @@
   },
   "schedule": {
     "kind": {
-      "reception": "受付",
+      "reception": "開場",
       "opening": "オープニング",
-      "closed": "準備中",
+      "closed": "クローズ",
       "break": "休憩",
       "closing": "クロージング",
       "networking": "懇親会"
