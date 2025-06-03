@@ -64,9 +64,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider>
           <GlobalNavigation />
           <main className="flex-1">{children}</main>
-          <div className="mt-24">
-            <Footer />
-          </div>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -15,10 +15,7 @@ export function Team() {
       <div className="max-w-screen-sm mx-auto">
         <ol className="grid grid-cols-3 gap-4">
           {ORGANIZING_TEAM.map((member) => (
-            <li
-              key={member.name}
-              className="items-center hover:underline cursor-pointer"
-            >
+            <li key={member.name} className="hover:underline cursor-pointer">
               <TeamMember member={member} size={160} />
             </li>
           ))}

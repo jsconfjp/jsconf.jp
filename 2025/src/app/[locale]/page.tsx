@@ -36,7 +36,7 @@ export default function Home({ params }: Props) {
   const t = useTranslations();
 
   return (
-    <div className="max-w-screen-lg mx-auto px-4 lg:px-0 pt-16 md:pt-32">
+    <div className="px-4 lg:px-0 pt-16 md:pt-32">
       <div className="max-w-screen-md mx-auto">
         <Hero />
 
@@ -83,11 +83,13 @@ export default function Home({ params }: Props) {
         <SponsorGrid sponsors={SPONSORS} showPrText />
       </div> */}
 
-      <div className="max-w-screen-md mx-auto mt-16 md:mt-32">
-        <h2 className="text-3xl font-bold my-4 text-center">
-          {t("team.team")}
-        </h2>
-        <Team />
+      <div className="bg-trinidad-100 pt-12 pb-24 mt-16 md:mt-32">
+        <div className="max-w-screen-md mx-auto">
+          <h2 className="text-3xl font-bold my-4 text-center">
+            {t("team.team")}
+          </h2>
+          <Team />
+        </div>
       </div>
     </div>
   );

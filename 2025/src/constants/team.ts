@@ -20,6 +20,21 @@ export const VOLUNTEER_TEAM: TeamMember[] = [
     url: "https://twitter.com/shisama_",
     avatarUrl: "https://github.com/shisama.png",
   },
+  {
+    name: "Naturalclar",
+    url: "https://twitter.com/natural_clar",
+    avatarUrl: "https://www.github.com/Naturalclar.png",
+  },
+  {
+    name: "yuik",
+    url: "https://twitter.com/yu1k_",
+    avatarUrl: "https://github.com/yu1k.png",
+  },
+  {
+    name: "Teruhisa",
+    url: "https://twitter.com/t6adev",
+    avatarUrl: "https://github.com/t6adev.png",
+  },
 ];
 
 export const ORGANIZING_TEAM: TeamMember[] = [
