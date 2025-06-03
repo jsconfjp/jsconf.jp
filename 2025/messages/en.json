@@ -39,12 +39,12 @@
   },
   "schedule": {
     "kind": {
-      "reception": "Doors open",
+      "reception": "Doors Open",
       "opening": "Opening",
       "closed": "Closed",
       "break": "Break",
       "closing": "Closing",
-      "networking": "Networking"
+      "networking": "After Party"
     }
   },
   "talks": {
