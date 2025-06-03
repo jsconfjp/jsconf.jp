@@ -35,7 +35,6 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
   const tTrack = useTranslations("talks.track");
 
   return (
-    // FIXME: talkの時だけLinkであれば良い
     <Link
       className={clsx(
         "py-2 px-4 rounded-sm border-2 h-full flex flex-col gap-1 justify-start text-wrap",
@@ -44,8 +43,9 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
           ? "cursor-pointer hover:shadow-md"
           : "cursor-auto"
       )}
-      href={session.kind === "talk" ? `/talks/${session.talk.slug}` : "#"}
-      aria-disabled={session.kind !== "talk"}
+      href={session.kind === "talk" ? `/talks/${session.talk.slug}` : ""}
+      // FIXME: talkの時だけLinkであれば良いのに余計な処理をしている
+      onClick={(e) => session.kind !== "talk" && e.preventDefault()}
     >
       {session.kind === "talk" ? (
         <div className="flex flex-col gap-1 items-start">
