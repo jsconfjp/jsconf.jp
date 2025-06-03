@@ -83,8 +83,7 @@ function DesktopSchedule() {
 
   return (
     <div className="space-y-4">
-      {/* FIXME: -mr-0.5がないと微妙に重なりがズレて右側が1pxほどはみ出る */}
-      <div className="tracks-header sticky top-0 z-10 -mr-0.5">
+      <div className="tracks-header sticky top-0 z-10">
         <div className="flex gap-4 py-2">
           {(["A", "B", "C", "D"] as const).map((track) => (
             <div key={track} className="flex-1 font-bold text-lg text-center">
@@ -94,7 +93,6 @@ function DesktopSchedule() {
         </div>
       </div>
 
-      {/* タイムライングリッド */}
       <div
         className="grid gap-2"
         style={{
@@ -103,7 +101,6 @@ function DesktopSchedule() {
           gridTemplateAreas: gridTemplateAreas,
         }}
       >
-        {/* セッションカード */}
         {Array.from(uniqueSessions.entries()).map(([sessionId, session]) => (
           <div key={sessionId} style={{ gridArea: sessionId }}>
             <SessionCard session={session} />
@@ -115,10 +112,9 @@ function DesktopSchedule() {
 }
 
 export function TimeTable() {
-  // モバイル用：時間順、トラック順でソートしたシンプルなリスト
+  // Gridレイアウト以外（モバイル）でも動作するため：時間順、トラック順でソート
   const sortedSessions = useMemo(() => {
     return [...SCHEDULE].sort((a, b) => {
-      // まず時間でソート
       const timeCompare =
         timeToMinutes(a.startTime) - timeToMinutes(b.startTime);
       if (timeCompare !== 0) return timeCompare;

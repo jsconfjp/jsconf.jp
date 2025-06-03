@@ -46,7 +46,6 @@ export default function Page({ params }: Props) {
   setRequestLocale(locale as Locale);
 
   const t = useTranslations("talks");
-  // SCHEDULEからこのtalkに対応するセッション情報を取得
   const session = SCHEDULE.find(
     (s) => s.kind === "talk" && s.talk.slug === slug
   );
