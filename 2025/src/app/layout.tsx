@@ -5,7 +5,6 @@ import { unstable_ViewTransition as ViewTransition } from "react";
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
 };
 
 export async function generateMetadata(): Promise<Metadata> {
