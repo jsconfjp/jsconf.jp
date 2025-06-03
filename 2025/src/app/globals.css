@@ -4,6 +4,19 @@
   --color-primary: rgb(234 81 6);
   --color-secondary: rgb(17 24 39);
   --color-dimmed: rgb(219, 219, 219);
+
+  /* https://uicolors.app/generate/ea5106 */
+  --color-trinidad-50: #fff7ed;
+  --color-trinidad-100: #ffecd4;
+  --color-trinidad-200: #ffd6a8;
+  --color-trinidad-300: #ffb870;
+  --color-trinidad-400: #ff8e37;
+  --color-trinidad-500: #ff6f10;
+  --color-trinidad-600: #ea5106;
+  --color-trinidad-700: #c73c07;
+  --color-trinidad-800: #9e300e;
+  --color-trinidad-900: #7f2a0f;
+  --color-trinidad-950: #451205;
 }
 
 html,
