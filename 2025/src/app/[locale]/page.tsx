@@ -44,7 +44,7 @@ export default function Home({ params }: Props) {
           <Button
             full
             variant="primary"
-            size="lg"
+            size="xl"
             href={CFP_FORM_URL}
             target="_blank"
             endIcon={<ArrowTopRightOnSquareIcon className="w-4 h-4" />}
@@ -54,7 +54,7 @@ export default function Home({ params }: Props) {
           <Button
             full
             variant="primary"
-            size="lg"
+            size="xl"
             href={SPONSOR_FORM_URL}
             target="_blank"
             endIcon={<ArrowTopRightOnSquareIcon className="w-4 h-4" />}
