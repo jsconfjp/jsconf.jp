@@ -1,13 +1,13 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import clsx from "clsx";
+import Link from "next/link";
 
 export function LanguageSwitcher() {
   const locale = useLocale();
-  const router = useRouter();
   const pathname = usePathname();
   const t = useTranslations("lang");
 
@@ -16,17 +16,12 @@ export function LanguageSwitcher() {
     { lang: "en", label: t("english") },
   ];
 
-  const handleLanguageChange = (newLocale: string) => {
-    router.push(pathname.replace(`/${locale}`, `/${newLocale}`));
-  };
-
   return (
     <div className="flex py-5 gap-2 divide-x divide-dimmed">
       {languages.map(({ lang, label }) => (
-        <button
-          type="button"
+        <Link
           key={lang}
-          onClick={() => handleLanguageChange(lang)}
+          href={pathname.replace(`/${locale}`, `/${lang}`)}
           className={clsx(
             "pr-2 font-bold underline underline-offset-8 decoration-4",
             locale === lang
@@ -35,7 +30,7 @@ export function LanguageSwitcher() {
           )}
         >
           {label}
-        </button>
+        </Link>
       ))}
     </div>
   );
