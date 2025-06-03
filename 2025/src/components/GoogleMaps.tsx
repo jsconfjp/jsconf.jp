@@ -24,6 +24,8 @@ export function GoogleMaps({ mapMode, params }: Props) {
       className="w-full h-full"
       referrerPolicy="no-referrer-when-downgrade"
       allowFullScreen
+      loading="lazy"
+      title="Google Maps"
       src={url.toString()}
     />
   );
