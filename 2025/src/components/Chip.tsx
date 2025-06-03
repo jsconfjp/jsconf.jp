@@ -1,25 +1,37 @@
-import { Talk } from "@/constants/talks";
+import { Track } from "@/constants/schedule";
+import clsx from "clsx";
 import React from "react";
 
 type Props = {
-  track?: Talk["track"];
+  track?: Track;
+  size?: "default" | "sm";
 };
 
-const trackColors = {
-  A: ["rgb(255, 87, 0)", "white"],
-  B: ["rgb(54, 164, 156)", "white"],
-  C: ["rgb(249, 215, 73)", ""],
-  D: ["rgb(80, 158, 221)", "white"],
-} as const;
+export function Chip({
+  children,
+  track,
+  size = "default",
+}: React.PropsWithChildren<Props>) {
+  const backgroundColor =
+    track && track !== "all"
+      ? `var(--color-track-${track.toLowerCase()})`
+      : "var(--color-secondary)";
 
-export function Chip({ children, track }: React.PropsWithChildren<Props>) {
-  const [backgroundColor, color] = track
-    ? trackColors[track]
-    : ["rgb(17 24 39)", "white"];
+  // テキスト色は動的に計算（背景色に応じて白か黒を選択）
+  const getTextColor = (track?: Track) => {
+    if (!track || track === "all") return "white";
+    // 明るい背景色（C）は黒文字、それ以外は白文字
+    return track === "C" ? "black" : "white";
+  };
+
+  const color = getTextColor(track);
 
   return (
     <span
-      className="flex py-1 px-4 rounded-md font-bold text-sm"
+      className={clsx(
+        "flex rounded-md font-bold",
+        size === "default" ? "py-1 px-4 text-sm" : "py-0.5 px-2 text-xs"
+      )}
       style={{ color, backgroundColor }}
     >
       {children}

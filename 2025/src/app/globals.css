@@ -5,6 +5,12 @@
   --color-secondary: rgb(17 24 39);
   --color-dimmed: rgb(219, 219, 219);
 
+  /* Track colors */
+  --color-track-a: rgb(255, 87, 0);
+  --color-track-b: rgb(54, 164, 156);
+  --color-track-c: rgb(249, 215, 73);
+  --color-track-d: rgb(80, 158, 221);
+
   /* https://uicolors.app/generate/ea5106 */
   --color-trinidad-50: #fff7ed;
   --color-trinidad-100: #ffecd4;
@@ -22,5 +28,13 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+}
+
+.tracks-header {
+  container-type: scroll-state;
+}
+@container scroll-state(stuck: top) {
+  .tracks-header > * {
+    @apply shadow-sm bg-white;
+  }
 }

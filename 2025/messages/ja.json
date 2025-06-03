@@ -37,6 +37,16 @@
     "premium": "プレミアムスポンサー",
     "sponsor": "スポンサー"
   },
+  "schedule": {
+    "kind": {
+      "reception": "受付",
+      "opening": "オープニング",
+      "closed": "準備中",
+      "break": "休憩",
+      "closing": "クロージング",
+      "networking": "懇親会"
+    }
+  },
   "talks": {
     "track": {
       "A": "トラックA",
