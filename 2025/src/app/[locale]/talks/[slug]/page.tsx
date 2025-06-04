@@ -3,10 +3,8 @@ import { Markdown } from "@/components/Markdown";
 import { SCHEDULE } from "@/constants/schedule";
 import { Locale, LOCALES } from "@/i18n/constants";
 import { Metadata } from "next";
-import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
-import { use } from "react";
 import { PageContainer } from "@/components/PageContainer";
 
 type Props = {
@@ -41,11 +39,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function Page({ params }: Props) {
-  const { locale, slug } = use(params);
+export default async function Page({ params }: Props) {
+  const { locale, slug } = await params;
   setRequestLocale(locale as Locale);
 
-  const t = useTranslations("talks");
+  const t = await getTranslations({
+    locale: locale as Locale,
+    namespace: "talks",
+  });
   const session = SCHEDULE.find(
     (s) => s.kind === "talk" && s.talk.slug === slug
   );

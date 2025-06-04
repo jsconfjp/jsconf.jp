@@ -4,9 +4,7 @@ import { Hero } from "@/components/Hero";
 import { Team } from "@/components/Team";
 import { Button } from "@/components/Button";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { use } from "react";
 import { Locale } from "@/i18n/constants";
-import { useTranslations } from "next-intl";
 import { Venue } from "@/components/Venue";
 import { CFP_FORM_URL, SPONSOR_FORM_URL } from "@/constants/external";
 // import { SponsorGrid } from "@/components/SponsorGrid";
@@ -29,11 +27,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function Page({ params }: Props) {
-  const { locale } = use(params);
+export default async function Page({ params }: Props) {
+  const { locale } = await params;
   setRequestLocale(locale as Locale);
 
-  const t = useTranslations();
+  const t = await getTranslations({
+    locale: locale as Locale,
+  });
 
   return (
     <div className="pt-16 md:pt-32">

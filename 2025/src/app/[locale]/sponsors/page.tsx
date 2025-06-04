@@ -1,9 +1,8 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Locale, useTranslations } from "next-intl";
+import { Locale } from "next-intl";
 import { Metadata } from "next";
 import { SponsorGrid } from "@/components/SponsorGrid";
 import { SPONSORS } from "@/constants/sponsors";
-import { use } from "react";
 import { PageContainer } from "@/components/PageContainer";
 
 type Props = {
@@ -21,11 +20,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function Page({ params }: Props) {
-  const { locale } = use(params);
+export default async function Page({ params }: Props) {
+  const { locale } = await params;
   setRequestLocale(locale as Locale);
 
-  const t = useTranslations("navigation");
+  const t = await getTranslations({
+    locale: locale as Locale,
+    namespace: "navigation",
+  });
 
   return (
     <PageContainer title={t("sponsors")}>
