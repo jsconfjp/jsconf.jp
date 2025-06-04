@@ -16,8 +16,7 @@ export default function Page({ params }: Props) {
   const t = useTranslations("navigation");
 
   return (
-    <PageContainer>
-      <h1 className="text-3xl font-bold my-4 text-center">{t("schedule")}</h1>
+    <PageContainer title={t("schedule")}>
       <TimeTable />
     </PageContainer>
   );

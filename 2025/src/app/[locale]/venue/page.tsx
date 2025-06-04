@@ -28,10 +28,7 @@ export default function Page({ params }: Props) {
   const t = useTranslations();
 
   return (
-    <PageContainer>
-      <h1 className="text-3xl font-bold my-4 text-center">
-        {t("navigation.venue")}
-      </h1>
+    <PageContainer title={t("navigation.venue")}>
       <Venue locale={locale} />
       <div className="flex flex-col gap-2 max-w-screen-sm mx-auto">
         <h2 className="text-2xl font-bold text-center">{t("venue.access")}</h2>
