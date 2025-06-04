@@ -3,7 +3,6 @@ import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import { Chip } from "./Chip";
 import Image from "next/image";
-import { Link } from "@/i18n/navigation";
 
 const getSessionColor = (session: ScheduledSession) => {
   switch (session.kind) {
@@ -35,7 +34,7 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
   const tTrack = useTranslations("talks.track");
 
   return (
-    <Link
+    <div
       className={clsx(
         "py-2 px-4 rounded-sm border-2 h-full flex flex-col gap-1 justify-start text-wrap",
         getSessionColor(session),
@@ -43,8 +42,6 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
           ? "cursor-pointer hover:shadow-md"
           : "cursor-auto"
       )}
-      // FIXME: talkの時だけLinkであれば良い、""や"#"ではページ遷移が起こってしまう
-      href={session.kind === "talk" ? `/talks/${session.talk.slug}` : ""}
     >
       {session.kind === "talk" ? (
         <div className="flex flex-col gap-1 items-start">
@@ -100,6 +97,6 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
       <time className="text-xs">
         {session.startTime} - {session.endTime}
       </time>
-    </Link>
+    </div>
   );
 }

@@ -1,7 +1,10 @@
+import { timeToMinutes } from "@/lib/utils";
 import { Talk, TALKS_BY_SLUG } from "./talks";
 
 type Day = "1";
 export type Track = "A" | "B" | "C" | "D" | "all";
+
+export const TRACKS = ["A", "B", "C", "D"] satisfies Track[];
 
 export type SessionKind =
   | "reception"
@@ -238,4 +241,16 @@ export const SCHEDULE: ScheduledSession[] = [
     startTime: "12:45",
     endTime: "14:05",
   },
-];
+]
+  // 時間順、トラック順でソート
+  .toSorted((a, b) => {
+    const timeCompare = timeToMinutes(a.startTime) - timeToMinutes(b.startTime);
+    if (timeCompare !== 0) return timeCompare;
+
+    // 時間が同じ場合はトラックでソート（all < A < B < C < D）
+    const trackOrder = { all: 0, A: 1, B: 2, C: 3, D: 4 };
+    return (
+      trackOrder[a.track as keyof typeof trackOrder] -
+      trackOrder[b.track as keyof typeof trackOrder]
+    );
+  }) as ScheduledSession[];
