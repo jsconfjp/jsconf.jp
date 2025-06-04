@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function Home({ params }: Props) {
+export default function Page({ params }: Props) {
   const { locale } = use(params);
   setRequestLocale(locale as Locale);
 

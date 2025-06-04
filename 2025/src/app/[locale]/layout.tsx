@@ -37,7 +37,7 @@ export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
 }
 
-export default async function LocaleLayout({
+export default async function Layout({
   children,
   params,
 }: PropsWithChildren<Props>) {

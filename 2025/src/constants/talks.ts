@@ -2,7 +2,6 @@ import { Sponsor } from "./sponsors";
 
 type Day = "1";
 type Kind = "keynote" | "session" | "LT" | "sponsor session" | "sponsor LT";
-type Track = "A" | "B" | "C" | "D";
 type Language = "English" | "Japanese";
 
 export type Speaker = {
@@ -11,15 +10,13 @@ export type Speaker = {
   avatarUrl: string;
   bio: string; // markdown
 };
+
 export type Talk = {
   slug: string;
   title: string;
   description: string; // markdown
   kind: Kind;
-  track: Track;
   day: Day;
-  startTime: string;
-  endTime: string;
   language: Language;
   speakers: (Speaker | Sponsor)[];
 };
@@ -34,10 +31,7 @@ export const TALKS: Talk[] = [
     title: "Sample talk 1",
     description: "# Sample talk 1\n\nSample talk 1 is a sample talk.",
     kind: "session",
-    track: "A",
     day: "1",
-    startTime: "10:00",
-    endTime: "11:00",
     language: "English",
     speakers: [
       {
@@ -59,10 +53,7 @@ export const TALKS: Talk[] = [
     title: "Sample talk 2",
     description: "# Sample talk 2\n\nSample talk 2 is a sample talk.",
     kind: "session",
-    track: "B",
     day: "1",
-    startTime: "11:00",
-    endTime: "12:00",
     language: "English",
     speakers: [
       {
@@ -78,10 +69,7 @@ export const TALKS: Talk[] = [
     title: "Sample keynote",
     description: "# Sample keynote\n\nSample keynote is a sample keynote.",
     kind: "keynote",
-    track: "A",
     day: "1",
-    startTime: "10:00",
-    endTime: "11:00",
     language: "English",
     speakers: [
       {
@@ -97,10 +85,7 @@ export const TALKS: Talk[] = [
     title: "Sample LT",
     description: "# Sample LT\n\nSample LT is a sample LT.",
     kind: "LT",
-    track: "A",
     day: "1",
-    startTime: "10:00",
-    endTime: "11:00",
     language: "English",
     speakers: [
       {
@@ -117,10 +102,7 @@ export const TALKS: Talk[] = [
     description:
       "# Sample sponsor session\n\nSample sponsor session is a sample sponsor session.",
     kind: "sponsor session",
-    track: "A",
     day: "1",
-    startTime: "10:00",
-    endTime: "11:00",
     language: "English",
     speakers: [
       {
@@ -139,10 +121,7 @@ export const TALKS: Talk[] = [
     description:
       "# Sample sponsor LT\n\nSample sponsor LT is a sample sponsor LT.",
     kind: "sponsor LT",
-    track: "A",
     day: "1",
-    startTime: "10:00",
-    endTime: "11:00",
     language: "English",
     speakers: [
       {
@@ -155,4 +134,14 @@ export const TALKS: Talk[] = [
       },
     ],
   },
-];
+] as const;
+
+type TalkSlug = (typeof TALKS)[number]["slug"];
+
+export const TALKS_BY_SLUG: Record<TalkSlug, Talk> = TALKS.reduce(
+  (acc, talk) => {
+    acc[talk.slug as TalkSlug] = talk;
+    return acc;
+  },
+  {} as Record<TalkSlug, Talk>
+);

@@ -37,6 +37,16 @@
     "premium": "Premium sponsors",
     "sponsor": "Sponsors"
   },
+  "schedule": {
+    "kind": {
+      "reception": "Doors Open",
+      "opening": "Opening",
+      "closed": "Closed",
+      "break": "Break",
+      "closing": "Closing",
+      "networking": "After Party"
+    }
+  },
   "talks": {
     "track": {
       "A": "Track A",
