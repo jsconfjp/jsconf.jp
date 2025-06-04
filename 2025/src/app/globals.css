@@ -7,9 +7,13 @@
 
   /* Track colors */
   --color-track-a: rgb(255, 87, 0);
+  --color-track-a-surface: var(--color-white);
   --color-track-b: rgb(54, 164, 156);
+  --color-track-b-surface: var(--color-white);
   --color-track-c: rgb(249, 215, 73);
+  --color-track-c-surface: var(--color-black);
   --color-track-d: rgb(80, 158, 221);
+  --color-track-d-surface: var(--color-white);
 
   /* https://uicolors.app/generate/ea5106 */
   --color-trinidad-50: #fff7ed;
