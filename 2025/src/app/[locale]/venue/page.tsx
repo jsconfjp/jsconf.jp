@@ -1,7 +1,6 @@
 import { Metadata } from "next";
-import { Locale, useTranslations } from "next-intl";
+import { Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { use } from "react";
 import { Markdown } from "@/components/Markdown";
 import { Venue } from "@/components/Venue";
 import { PageContainer } from "@/components/PageContainer";
@@ -21,11 +20,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function Page({ params }: Props) {
-  const { locale } = use(params);
+export default async function Page({ params }: Props) {
+  const { locale } = await params;
   setRequestLocale(locale as Locale);
 
-  const t = useTranslations();
+  const t = await getTranslations({
+    locale: locale as Locale,
+  });
 
   return (
     <PageContainer title={t("navigation.venue")}>

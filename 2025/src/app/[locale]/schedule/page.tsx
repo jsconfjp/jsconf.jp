@@ -1,19 +1,20 @@
 import { PageContainer } from "@/components/PageContainer";
 import { TimeTable } from "@/components/TimeTable";
-import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
-import { use } from "react";
-import { Locale } from "@/i18n/constants";
+import { Locale } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 type Props = {
   params: Promise<{ locale: Locale }>;
 };
 
-export default function Page({ params }: Props) {
-  const { locale } = use(params);
-  setRequestLocale(locale);
+export default async function Page({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale as Locale);
 
-  const t = useTranslations("navigation");
+  const t = await getTranslations({
+    locale: locale as Locale,
+    namespace: "navigation",
+  });
 
   return (
     <PageContainer title={t("schedule")}>
