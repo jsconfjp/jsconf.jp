@@ -34,6 +34,24 @@ Open [http://localhost:3000/2025](http://localhost:3000/2025) with your browser 
 - `messages/`
   - `[locale].json`: JSON File defining different wording for each language
 
+## Data Modeling
+
+The most complex data modeling on the conference website is the relationship between speakers, talks, and sessions. At first glance, you might think that Speaker and Talk have a 1:1 relationship, but it's actually more complicated than that.
+
+- `Speaker`: Universal information about speakers that does not change depending on the talk is registered in the Speaker section.
+  - See `2025/src/constants/talks.ts`
+  - **Caution:** It can talk and participate multiple talks or sessions
+    - ex. https://jsconf.jp/2019/schedule/ (See Mariko Kosaka)
+- `Talk`: contains information about that talk session.
+  - See `2025/src/constants/talks.ts`
+  - **Caution:** Many talks are given by one person, but there are also talks given by multiple people.
+    - ex. https://jsconf.jp/2019/talk/s-greif-r-benitte
+    - ex. https://jsconf.jp/2024/talk/hiroki-tani-corey-lee/
+- `Session`: contains information such as the location and time of the session
+  - See `2025/src/constants/schedule.ts`
+  - **Caution:** Many sessions are talks, but there are also events other than talks with set times and locations.
+    - ex. https://jsconf.jp/2024/schedule/ (See the Session Title **(Stream)**. It is not actually a talk)
+
 ## How to
 
 ### Add you as a team member on the website
