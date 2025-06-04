@@ -36,8 +36,7 @@ export default function Page({ params }: Props) {
     .filter(({ speaker }) => speaker.type === "speaker");
 
   return (
-    <PageContainer>
-      <h1 className="text-3xl font-bold my-4 text-center">{t("speakers")}</h1>
+    <PageContainer title={t("speakers")}>
       <SpeakerGrid speakers={speakers} />
     </PageContainer>
   );

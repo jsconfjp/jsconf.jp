@@ -54,20 +54,19 @@ export default function Page({ params }: Props) {
   }
 
   return (
-    <PageContainer>
-      <p>{t(`kind.${session.talk.kind}`)}</p>
-      <h1 className="my-1 text-3xl font-bold">{session.talk.title}</h1>
-      {session && (
-        <p className="my-2 flex items-center gap-2">
-          <time>
-            {session.startTime}-{session.endTime}
-          </time>
+    <PageContainer title={session.talk.title} centerizeTitle={false}>
+      <div>
+        <time>
+          {session.startTime}-{session.endTime}
+        </time>
+        <p className="my-1 flex items-center gap-2">
+          <Chip>{t(`kind.${session.talk.kind}`)}</Chip>
           {session.track !== "all" && (
             <Chip track={session.track}>{t(`track.${session.track}`)}</Chip>
           )}
           <Chip>{session.talk.language}</Chip>
         </p>
-      )}
+      </div>
       <div className="mt-4">
         <Markdown>{session.talk.description}</Markdown>
       </div>
