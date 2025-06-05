@@ -14,6 +14,18 @@ jobs:
           cache-dependency-path: 2024/package-lock.json
       - run: cd 2024 && npm ci --legacy-peer-deps
       - run: cd 2024 && npm run build -- --prefix-paths
+  test_2025:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: 2025/package-lock.json
+      - run: cd 2025 && npm ci
+      - run: cd 2025 && npm run lint
+      - run: cd 2025 && npm run test
   build_2025:
     runs-on: ubuntu-latest
     steps:
