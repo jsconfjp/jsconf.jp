@@ -1,6 +1,6 @@
-import { Track } from "@/constants/schedule";
 import clsx from "clsx";
 import React from "react";
+import { Track } from "@/constants/schedule";
 
 type Props = {
   track?: Track;

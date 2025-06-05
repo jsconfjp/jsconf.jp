@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
-import { findTalkSession } from "./findTalkSession";
 import { ScheduledSession } from "@/constants/schedule";
+import { findTalkSession } from "./findTalkSession";
 import { getTalkSessions } from "./getTalkSessions";
 
 describe("findTalkSession", () => {

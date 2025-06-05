@@ -1,8 +1,8 @@
-import { SpeakerGrid } from "@/components/SpeakerGrid";
 import { Metadata } from "next";
 import { Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageContainer } from "@/components/PageContainer";
+import { SpeakerGrid } from "@/components/SpeakerGrid";
 import { flattenSpeakers } from "@/lib/flattenSpeakers";
 
 type Props = {

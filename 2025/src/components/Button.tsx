@@ -1,5 +1,5 @@
-import { Link } from "@/i18n/navigation";
 import clsx from "clsx";
+import { Link } from "@/i18n/navigation";
 
 export function Button({
   variant,

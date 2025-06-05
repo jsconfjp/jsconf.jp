@@ -1,9 +1,9 @@
-import createMDX from "@next/mdx";
 import bundleAnalyzer from "@next/bundle-analyzer";
+import createMDX from "@next/mdx";
 import type { NextConfig } from "next";
-import remarkGfm from "remark-gfm";
-import remarkFrontmatter from "remark-frontmatter";
 import createNextIntlPlugin from "next-intl/plugin";
+import remarkFrontmatter from "remark-frontmatter";
+import remarkGfm from "remark-gfm";
 
 const nextConfig: NextConfig = {
   basePath: "/2025",

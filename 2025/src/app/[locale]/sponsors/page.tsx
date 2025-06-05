@@ -1,9 +1,9 @@
-import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Locale } from "next-intl";
 import { Metadata } from "next";
+import { Locale } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { PageContainer } from "@/components/PageContainer";
 import { SponsorGrid } from "@/components/SponsorGrid";
 import { SPONSORS } from "@/constants/sponsors";
-import { PageContainer } from "@/components/PageContainer";
 
 type Props = {
   params: Promise<{ locale: string }>;

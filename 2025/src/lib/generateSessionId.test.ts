@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
-import { generateSessionId } from "./generateSessionId";
 import { ScheduledSession, SCHEDULE } from "@/constants/schedule";
 import { Talk } from "@/constants/talks";
+import { generateSessionId } from "./generateSessionId";
 
 describe("generateSessionId", () => {
   it("should generate correct ID for track-specific session", () => {

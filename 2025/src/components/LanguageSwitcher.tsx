@@ -1,10 +1,10 @@
 "use client";
 
-import { useLocale } from "next-intl";
-import { usePathname } from "next/navigation";
-import { useTranslations } from "next-intl";
 import clsx from "clsx";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 
 export function LanguageSwitcher() {
   const locale = useLocale();

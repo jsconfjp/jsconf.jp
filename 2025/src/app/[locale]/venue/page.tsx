@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import { Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Markdown } from "@/components/Markdown";
-import { Venue } from "@/components/Venue";
 import { PageContainer } from "@/components/PageContainer";
+import { Venue } from "@/components/Venue";
 
 type Props = {
   params: Promise<{ locale: string }>;

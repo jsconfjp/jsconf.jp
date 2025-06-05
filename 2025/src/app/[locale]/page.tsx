@@ -1,12 +1,12 @@
 import ArrowTopRightOnSquareIcon from "@heroicons/react/24/outline/ArrowTopRightOnSquareIcon";
 import { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Button } from "@/components/Button";
 import { Hero } from "@/components/Hero";
 import { Team } from "@/components/Team";
-import { Button } from "@/components/Button";
-import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Locale } from "@/i18n/constants";
 import { Venue } from "@/components/Venue";
 import { CFP_FORM_URL, SPONSOR_FORM_URL } from "@/constants/external";
+import { Locale } from "@/i18n/constants";
 // import { SponsorGrid } from "@/components/SponsorGrid";
 // import { SPONSORS } from "@/constants/sponsors";
 

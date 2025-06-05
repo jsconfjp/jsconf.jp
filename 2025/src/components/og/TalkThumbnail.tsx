@@ -1,11 +1,11 @@
 // OGPではimg要素しか使えないため警告を無視
 /* eslint-disable @next/next/no-img-element */
-import en from "@/../messages/en.json";
 import React from "react";
-import { Chip } from "./Chip";
+import en from "@/../messages/en.json";
 import { ScheduledSession } from "@/constants/schedule";
-import { Template } from "./Template";
+import { Chip } from "./Chip";
 import { Logo } from "./Logo";
+import { Template } from "./Template";
 
 type Props = {
   session: ScheduledSession & { kind: "talk" };

@@ -1,6 +1,6 @@
 import { ScheduledSession } from "@/constants/schedule";
-import { SessionCard } from "./SessionCard";
 import { Link } from "@/i18n/navigation";
+import { SessionCard } from "./SessionCard";
 
 export function TalkSessionCard({
   session,

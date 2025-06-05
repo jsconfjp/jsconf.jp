@@ -1,6 +1,6 @@
 import { Metadata, Viewport } from "next";
-import en from "@/../messages/en.json";
 import { unstable_ViewTransition as ViewTransition } from "react";
+import en from "@/../messages/en.json";
 
 export const viewport: Viewport = {
   width: "device-width",

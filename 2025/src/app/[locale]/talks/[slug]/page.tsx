@@ -1,10 +1,10 @@
+import { Metadata } from "next";
+import Image from "next/image";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Chip } from "@/components/Chip";
 import { Markdown } from "@/components/Markdown";
-import { Locale, LOCALES } from "@/i18n/constants";
-import { Metadata } from "next";
-import { getTranslations, setRequestLocale } from "next-intl/server";
-import Image from "next/image";
 import { PageContainer } from "@/components/PageContainer";
+import { Locale, LOCALES } from "@/i18n/constants";
 import { findTalkSession } from "@/lib/findTalkSession";
 import { getTalkSessions } from "@/lib/getTalkSessions";
 

@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
-import { flattenSpeakers } from "./flattenSpeakers";
 import { TALKS, Talk } from "@/constants/talks";
+import { flattenSpeakers } from "./flattenSpeakers";
 
 describe("flattenSpeakers", () => {
   const mockTalks: Talk[] = [

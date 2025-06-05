@@ -1,8 +1,8 @@
-import { ScheduledSession } from "@/constants/schedule";
 import clsx from "clsx";
-import { useTranslations } from "next-intl";
-import { Chip } from "./Chip";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { ScheduledSession } from "@/constants/schedule";
+import { Chip } from "./Chip";
 
 const getSessionColor = (session: ScheduledSession) => {
   switch (session.kind) {
