@@ -18,5 +18,8 @@ export function findTalkSession(
   if (!session) {
     throw new Error(`Talk session not found for slug: ${slug}`);
   }
-  return session as TalkSession;
+  if (session.kind !== "talk") {
+    throw new Error(`Session found but not a talk session for slug: ${slug}`);
+  }
+  return session;
 }

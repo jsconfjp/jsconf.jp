@@ -1,4 +1,4 @@
-import { SCHEDULE, ScheduledSession, TRACKS } from "@/constants/schedule";
+import { SCHEDULE, TRACKS } from "@/constants/schedule";
 import { SessionCard } from "@/components/SessionCard";
 import { timeToMinutes } from "@/lib/timeToMinutes";
 import { useMemo } from "react";
@@ -7,10 +7,6 @@ import { TalkSessionCard } from "./TalkSessionCard";
 import clsx from "clsx";
 import { generateSessionId } from "@/lib/generateSessionId";
 import { generateTimeSlots } from "@/lib/generateTimeSlots";
-
-function toSessionId(session: ScheduledSession) {
-  return generateSessionId(session);
-}
 
 export function TimeTable() {
   const t = useTranslations("talks.track");
@@ -31,14 +27,14 @@ export function TimeTable() {
 
           if (sessionStart <= slotTime && slotTime < sessionEnd) {
             if (session.track === "all") {
-              const sessionId = toSessionId(session);
+              const sessionId = generateSessionId(session);
               areas[0] = areas[1] = areas[2] = areas[3] = sessionId;
             } else {
               const trackIndex = TRACKS.indexOf(session.track);
               if (trackIndex === -1) {
                 throw new Error("trackIndex must not be -1");
               }
-              areas[trackIndex] = toSessionId(session);
+              areas[trackIndex] = generateSessionId(session);
             }
           }
         });
@@ -80,8 +76,8 @@ export function TimeTable() {
       >
         {SCHEDULE.map((session) => (
           <div
-            key={toSessionId(session)}
-            style={{ gridArea: toSessionId(session) }}
+            key={generateSessionId(session)}
+            style={{ gridArea: generateSessionId(session) }}
           >
             {session.kind === "talk" ? (
               <TalkSessionCard session={session} />

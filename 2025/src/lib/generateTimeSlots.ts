@@ -1,10 +1,13 @@
 import { SCHEDULE, ScheduledSession } from "@/constants/schedule";
 import { timeToMinutes } from "./timeToMinutes";
 
+/** Time slot interval in minutes for timetable grid layout */
+export const TIME_SLOT_INTERVAL_MINUTES = 5;
+
 /**
- * Generates 5-minute interval time slots covering the entire schedule duration.
+ * Generates time slots covering the entire schedule duration.
  * Calculates the minimum and maximum times from all sessions and creates
- * an array of time slots in 5-minute increments. Used for timetable grid layout
+ * an array of time slots in regular increments. Used for timetable grid layout
  * to ensure consistent spacing and alignment of sessions.
  */
 export function generateTimeSlots(
@@ -31,7 +34,11 @@ export function generateTimeSlots(
   }
 
   const slots = [];
-  for (let time = startMinutes; time < endMinutes; time += 5) {
+  for (
+    let time = startMinutes;
+    time < endMinutes;
+    time += TIME_SLOT_INTERVAL_MINUTES
+  ) {
     slots.push(time);
   }
   return slots;
