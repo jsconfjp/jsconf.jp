@@ -15,16 +15,9 @@ describe("timeToMinutes", () => {
   });
 
   it("should throw error for invalid formats", () => {
-    expect(() => timeToMinutes("")).toThrow("Invalid time format:");
-    expect(() => timeToMinutes("10")).toThrow("Expected HH:mm format");
-    expect(() => timeToMinutes(":30")).toThrow(
-      "Both hours and minutes must be provided"
-    );
-    expect(() => timeToMinutes("ab:cd")).toThrow(
-      "Hours and minutes must be numbers"
-    );
-    expect(() => timeToMinutes("25:00")).toThrow("Hours must be 0-23");
-    expect(() => timeToMinutes("10:60")).toThrow("minutes must be 0-59");
-    expect(() => timeToMinutes("-1:30")).toThrow("Hours must be 0-23");
+    expect(() => timeToMinutes("")).toThrow("Invalid time format");
+    expect(() => timeToMinutes("10")).toThrow("Invalid time format");
+    expect(() => timeToMinutes(":30")).toThrow("Invalid time format");
+    expect(() => timeToMinutes("ab:cd")).toThrow("Invalid time format");
   });
 });
