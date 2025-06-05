@@ -8,15 +8,15 @@ describe("generateTimeSlots", () => {
   it("should generate time slots in configured intervals", () => {
     const slots = generateTimeSlots();
 
-    // スロット数を確認（開始時間から終了時間まで設定された間隔刻み）
+    // Verify slot count (from start to end time in configured intervals)
     expect(slots.length).toBeGreaterThan(0);
 
-    // 設定された間隔になっているかチェック
+    // Check intervals match the configured interval
     for (let i = 1; i < slots.length; i++) {
       expect(slots[i] - slots[i - 1]).toBe(TIME_SLOT_INTERVAL_MINUTES);
     }
 
-    // 最初のスロットが09:30 (570分) であることを確認
+    // Verify first slot is 09:30 (570 minutes)
     expect(slots[0]).toBe(570); // 9:30
   });
 
@@ -27,20 +27,20 @@ describe("generateTimeSlots", () => {
   });
 
   it("should use default SCHEDULE when undefined sessions provided", () => {
-    // undefinedを渡してもデフォルトパラメータによりSCHEDULEが使用される
+    // Default parameter uses SCHEDULE when undefined is passed
     const slots = generateTimeSlots(undefined);
     expect(slots.length).toBeGreaterThan(0);
   });
 
   it("should throw error for invalid time range", () => {
-    // 通常のセッションの開始と終了時間を逆転させてテスト
+    // Test with start and end times set to same value (start >= end)
     const invalidSessions = [
       {
         kind: "break" as const,
         track: "all" as const,
         day: "1" as const,
-        startTime: "11:40", // 同じ時間に設定
-        endTime: "11:40", // 同じ時間に設定（start >= end）
+        startTime: "11:40", // Same time
+        endTime: "11:40", // Same time (start >= end)
       },
     ];
 

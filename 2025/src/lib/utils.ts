@@ -1,1 +1,1 @@
-// timeToMinutes関数はtime-utils.tsに移動しました
+// timeToMinutes function moved to time-utils.ts

@@ -26,7 +26,7 @@ describe("generateSessionId", () => {
     const sessions = SCHEDULE.slice(0, 3);
     const ids = sessions.map(generateSessionId);
 
-    // 重複がないことを確認
+    // Verify no duplicates exist
     const uniqueIds = new Set(ids);
     expect(uniqueIds.size).toBe(ids.length);
   });

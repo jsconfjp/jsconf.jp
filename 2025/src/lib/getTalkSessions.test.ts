@@ -8,7 +8,7 @@ describe("getTalkSessions", () => {
 
     expect(talkSessions.length).toBeGreaterThan(0);
 
-    // 全てがtalkセッションであることを確認
+    // Verify all sessions are talk sessions
     talkSessions.forEach((session) => {
       expect(session.kind).toBe("talk");
     });
@@ -20,9 +20,9 @@ describe("getTalkSessions", () => {
 
     expect(talkSessions.length).toBeLessThan(allSessions.length);
 
-    // 非talkセッションが含まれていないことを確認
+    // Verify no non-talk sessions are included
     const nonTalkSessions = allSessions.filter((s) => s.kind !== "talk");
-    expect(nonTalkSessions.length).toBeGreaterThan(0); // 非talkセッションが存在することを確認
+    expect(nonTalkSessions.length).toBeGreaterThan(0); // Verify non-talk sessions exist in SCHEDULE
   });
 
   it("should return sessions with talk property", () => {

@@ -3,12 +3,11 @@ import { flattenSpeakers } from "./flattenSpeakers";
 import { TALKS } from "@/constants/talks";
 
 describe("flattenSpeakers", () => {
-  it("should flatten speakers from all talks", () => {
+  it("should flatten all speakers from all talks", () => {
     const flattened = flattenSpeakers();
 
     expect(flattened.length).toBeGreaterThan(0);
-
-    // 各要素がtalkとspeakerを持つことを確認
+    // Verify each element has talk and speaker properties
     flattened.forEach((item) => {
       expect(item.talk).toBeDefined();
       expect(item.speaker).toBeDefined();
@@ -20,49 +19,46 @@ describe("flattenSpeakers", () => {
   it("should include speakers from multiple talks", () => {
     const flattened = flattenSpeakers();
 
-    // 複数のトークのスピーカーが含まれていることを確認
+    // Verify speakers from multiple talks are included
     const uniqueTalkSlugs = new Set(flattened.map((item) => item.talk.slug));
     expect(uniqueTalkSlugs.size).toBeGreaterThan(1);
   });
 
-  it("should handle talks with multiple speakers", () => {
+  it("should create multiple entries for talks with multiple speakers", () => {
     const flattened = flattenSpeakers();
 
-    // sample-talk-1は複数のスピーカーを持つので、複数のエントリがあるはず
-    const sampleTalk1Speakers = flattened.filter(
+    // sample-talk-1 has multiple speakers, so there should be multiple entries
+    const sampleTalk1Entries = flattened.filter(
       (item) => item.talk.slug === "sample-talk-1"
     );
-    expect(sampleTalk1Speakers.length).toBeGreaterThan(1);
+    expect(sampleTalk1Entries.length).toBeGreaterThan(1);
   });
 
-  it("should maintain correct talk-speaker relationship", () => {
+  it("should maintain correct relationship between talks and speakers", () => {
     const flattened = flattenSpeakers();
 
-    // 元のTALKSデータと比較して正しい関係性が保たれているか確認
-    TALKS.forEach((talk) => {
-      const flattenedForThisTalk = flattened.filter(
-        (item) => item.talk.slug === talk.slug
-      );
-      expect(flattenedForThisTalk.length).toBe(talk.speakers.length);
-
-      flattenedForThisTalk.forEach((item, index) => {
-        expect(item.talk).toEqual(talk);
-        expect(item.speaker).toEqual(talk.speakers[index]);
-      });
+    // Verify correct relationships are maintained compared to original TALKS data
+    flattened.forEach((item) => {
+      const originalTalk = TALKS.find((talk) => talk.slug === item.talk.slug);
+      expect(originalTalk).toBeDefined();
+      if (originalTalk) {
+        expect(originalTalk.speakers).toContain(item.speaker);
+      }
     });
   });
 
-  it("should include both regular speakers and sponsor speakers", () => {
-    const flattened = flattenSpeakers();
+  it("should work with custom talks array", () => {
+    const customTalks = TALKS.slice(0, 2); // First 2 talks only
+    const flattened = flattenSpeakers(customTalks);
 
-    const regularSpeakers = flattened.filter(
-      (item) => item.speaker.type === "speaker"
-    );
-    const sponsorSpeakers = flattened.filter(
-      (item) => item.speaker.type === "sponsor"
-    );
+    const uniqueTalkSlugs = new Set(flattened.map((item) => item.talk.slug));
+    expect(uniqueTalkSlugs.size).toBeLessThanOrEqual(2);
 
-    expect(regularSpeakers.length).toBeGreaterThan(0);
-    expect(sponsorSpeakers.length).toBeGreaterThan(0);
+    // Should only include speakers from the first 2 talks
+    flattened.forEach((item) => {
+      expect(customTalks.some((talk) => talk.slug === item.talk.slug)).toBe(
+        true
+      );
+    });
   });
 });

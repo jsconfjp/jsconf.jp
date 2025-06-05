@@ -39,7 +39,7 @@ describe("findTalkSession", () => {
   });
 
   it("should throw error for non-existent slug", () => {
-    // 異常系テストでは型制約をバイパス
+    // Bypass type constraint for error case testing
     expect(() =>
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       findTalkSession("non-existent-slug" as any, mockSessions)
@@ -47,7 +47,7 @@ describe("findTalkSession", () => {
   });
 
   it("should throw error for non-talk sessions", () => {
-    // 異常系テストでは型制約をバイパス
+    // Bypass type constraint for error case testing
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     expect(() => findTalkSession("break" as any, mockSessions)).toThrow(
       "Talk session not found for slug: break"
