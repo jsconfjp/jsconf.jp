@@ -8,11 +8,13 @@ import { Locale, LOCALES } from "@/i18n/constants";
 import { findTalkSession } from "@/lib/findTalkSession";
 import { getTalkSessions } from "@/lib/getTalkSessions";
 
+type Params = { locale: Locale; slug: string };
+
 type Props = {
-  params: Promise<{ locale: string; slug: string }>;
+  params: Promise<Params>;
 };
 
-export function generateStaticParams() {
+export function generateStaticParams(): Params[] {
   const talkSessions = getTalkSessions();
 
   return talkSessions.flatMap((session) =>
@@ -25,7 +27,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
-  setRequestLocale(locale as Locale);
+  setRequestLocale(locale);
 
   const session = findTalkSession(slug);
 
@@ -37,10 +39,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Page({ params }: Props) {
   const { locale, slug } = await params;
-  setRequestLocale(locale as Locale);
+  setRequestLocale(locale);
 
   const t = await getTranslations({
-    locale: locale as Locale,
+    locale: locale,
     namespace: "talks",
   });
   const session = findTalkSession(slug);
