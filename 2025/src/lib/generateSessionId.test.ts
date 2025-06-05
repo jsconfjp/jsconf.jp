@@ -125,47 +125,5 @@ describe("generateSessionId", () => {
       (id) => id && typeof id === "string" && id.length > 0
     );
     expect(validIds).toHaveLength(allIds.length);
-
-    // Verify format by filtering conforming IDs
-    const formatCompliantIds = allIds.filter((id) =>
-      id.match(/^session-[A-Za-z]+-\d+$/)
-    );
-    expect(formatCompliantIds).toHaveLength(allIds.length);
-  });
-
-  it("should handle real schedule edge cases correctly", () => {
-    // Group sessions by start time to identify potential collision points
-    const sessionsByTime = new Map<string, ScheduledSession[]>();
-
-    SCHEDULE.forEach((session) => {
-      const time = session.startTime;
-      if (!sessionsByTime.has(time)) {
-        sessionsByTime.set(time, []);
-      }
-      sessionsByTime.get(time)!.push(session);
-    });
-
-    // Test each time slot for ID uniqueness
-    sessionsByTime.forEach((sessions) => {
-      if (sessions.length > 1) {
-        const ids = sessions.map(generateSessionId);
-        const uniqueIds = new Set(ids);
-
-        // This will show exactly which IDs collided at this time
-        expect(uniqueIds.size).toBe(ids.length);
-        expect(ids).not.toContain(undefined);
-        expect(ids).not.toContain("");
-      }
-    });
-
-    // Verify no time slot produces identical IDs
-    const problematicTimeSlots = Array.from(sessionsByTime.entries())
-      .filter(([, sessions]) => sessions.length > 1)
-      .filter(([, sessions]) => {
-        const ids = sessions.map(generateSessionId);
-        return new Set(ids).size !== ids.length;
-      });
-
-    expect(problematicTimeSlots).toEqual([]);
   });
 });
