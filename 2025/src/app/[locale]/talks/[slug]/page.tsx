@@ -1,18 +1,19 @@
 import { Chip } from "@/components/Chip";
 import { Markdown } from "@/components/Markdown";
-import { SCHEDULE } from "@/constants/schedule";
 import { Locale, LOCALES } from "@/i18n/constants";
 import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { PageContainer } from "@/components/PageContainer";
+import { findTalkSession } from "@/lib/findTalkSession";
+import { getTalkSessions } from "@/lib/getTalkSessions";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
 };
 
 export function generateStaticParams() {
-  const talkSessions = SCHEDULE.filter((session) => session.kind === "talk");
+  const talkSessions = getTalkSessions();
 
   return talkSessions.flatMap((session) =>
     LOCALES.map((locale) => ({
@@ -26,12 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   setRequestLocale(locale as Locale);
 
-  const session = SCHEDULE.find(
-    (s) => s.kind === "talk" && s.talk.slug === slug
-  );
-  if (!session || session.kind !== "talk") {
-    throw new Error(`session not found: ${slug}`);
-  }
+  const session = findTalkSession(slug);
 
   return {
     title: session.talk.title,
@@ -47,12 +43,7 @@ export default async function Page({ params }: Props) {
     locale: locale as Locale,
     namespace: "talks",
   });
-  const session = SCHEDULE.find(
-    (s) => s.kind === "talk" && s.talk.slug === slug
-  );
-  if (!session || session.kind !== "talk") {
-    throw new Error(`session not found: ${slug}`);
-  }
+  const session = findTalkSession(slug);
 
   return (
     <PageContainer title={session.talk.title} centerizeTitle={false}>
