@@ -68,7 +68,7 @@ describe("flattenSpeakers", () => {
     expect(talk1Entries.length).toBe(2);
   });
 
-  it("should maintain correct relationship between talks and speakers", () => {
+  it("should preserve correct relationship between talks and speakers", () => {
     const flattened = flattenSpeakers(mockTalks);
 
     // Verify correct relationships are maintained
