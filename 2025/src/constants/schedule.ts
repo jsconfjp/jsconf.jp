@@ -1,4 +1,4 @@
-import { timeToMinutes } from "@/lib/utils";
+import { timeToMinutes } from "@/lib/timeToMinutes";
 import { Talk, TALKS_BY_SLUG } from "./talks";
 
 type Day = "1";

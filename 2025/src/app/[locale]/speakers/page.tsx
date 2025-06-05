@@ -1,9 +1,9 @@
 import { SpeakerGrid } from "@/components/SpeakerGrid";
-import { TALKS } from "@/constants/talks";
 import { Metadata } from "next";
 import { Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageContainer } from "@/components/PageContainer";
+import { flattenSpeakers } from "@/lib/flattenSpeakers";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -28,12 +28,7 @@ export default async function Page({ params }: Props) {
     locale: locale as Locale,
     namespace: "navigation",
   });
-  const speakers = TALKS.flatMap((talk) =>
-    talk.speakers.map((speaker) => ({
-      talk,
-      speaker,
-    }))
-  )
+  const speakers = flattenSpeakers()
     // filter out sponsors
     .filter(({ speaker }) => speaker.type === "speaker");
 

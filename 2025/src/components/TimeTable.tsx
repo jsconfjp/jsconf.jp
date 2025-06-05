@@ -1,15 +1,15 @@
 import { SCHEDULE, ScheduledSession, TRACKS } from "@/constants/schedule";
 import { SessionCard } from "@/components/SessionCard";
-import { timeToMinutes } from "@/lib/utils";
+import { timeToMinutes } from "@/lib/timeToMinutes";
 import { useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { TalkSessionCard } from "./TalkSessionCard";
 import clsx from "clsx";
+import { generateSessionId } from "@/lib/generateSessionId";
+import { generateTimeSlots } from "@/lib/generateTimeSlots";
 
 function toSessionId(session: ScheduledSession) {
-  return session.track === "all"
-    ? `session-${session.kind}-${timeToMinutes(session.startTime)}`
-    : `session-${session.track}-${timeToMinutes(session.startTime)}`;
+  return generateSessionId(session);
 }
 
 export function TimeTable() {
@@ -17,18 +17,7 @@ export function TimeTable() {
 
   // 5分単位のタイムスロットを生成
   const timeSlots = useMemo(() => {
-    const allTimes = SCHEDULE.flatMap((session) => [
-      timeToMinutes(session.startTime),
-      timeToMinutes(session.endTime),
-    ]);
-    const startMinutes = Math.min(...allTimes);
-    const endMinutes = Math.max(...allTimes);
-
-    const slots = [];
-    for (let time = startMinutes; time < endMinutes; time += 5) {
-      slots.push(time);
-    }
-    return slots;
+    return generateTimeSlots(SCHEDULE);
   }, []);
   // 各タイムスロットでのセッション配置を計算
   const gridTemplateAreas = useMemo(() => {
