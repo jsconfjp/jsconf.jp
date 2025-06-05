@@ -33,20 +33,22 @@ describe("findTalkSession", () => {
     const session = findTalkSession("test-talk-1", mockSessions);
 
     expect(session).toBeDefined();
-    expect(session?.kind).toBe("talk");
-    if (session?.kind === "talk") {
-      expect(session.talk.slug).toBe("test-talk-1");
-    }
+    expect(session.kind).toBe("talk");
+    expect(session.talk.slug).toBe("test-talk-1");
   });
 
   it("should throw error for non-existent slug", () => {
-    expect(() => findTalkSession("non-existent-slug", mockSessions)).toThrow(
-      "Talk session not found for slug: non-existent-slug"
-    );
+    // 異常系テストでは型制約をバイパス
+    expect(() =>
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      findTalkSession("non-existent-slug" as any, mockSessions)
+    ).toThrow("Talk session not found for slug: non-existent-slug");
   });
 
   it("should throw error for non-talk sessions", () => {
-    expect(() => findTalkSession("break", mockSessions)).toThrow(
+    // 異常系テストでは型制約をバイパス
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    expect(() => findTalkSession("break" as any, mockSessions)).toThrow(
       "Talk session not found for slug: break"
     );
   });

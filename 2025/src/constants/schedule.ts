@@ -35,6 +35,7 @@ export type ScheduledSession = {
         | "networking";
     }
 );
+export type TalkSession = Extract<ScheduledSession, { kind: "talk" }>;
 
 export const SCHEDULE: ScheduledSession[] = [
   {
