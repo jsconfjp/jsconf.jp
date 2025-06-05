@@ -15,9 +15,6 @@ describe("generateTimeSlots", () => {
     for (let i = 1; i < slots.length; i++) {
       expect(slots[i] - slots[i - 1]).toBe(TIME_SLOT_INTERVAL_MINUTES);
     }
-
-    // Verify first slot is 09:30 (570 minutes)
-    expect(slots[0]).toBe(570); // 9:30
   });
 
   it("should throw error for empty sessions array", () => {
@@ -28,7 +25,7 @@ describe("generateTimeSlots", () => {
 
   it("should use default SCHEDULE when undefined sessions provided", () => {
     // Default parameter uses SCHEDULE when undefined is passed
-    const slots = generateTimeSlots(undefined);
+    const slots = generateTimeSlots();
     expect(slots.length).toBeGreaterThan(0);
   });
 

@@ -21,11 +21,6 @@ export function generateTimeSlots(
     timeToMinutes(session.startTime),
     timeToMinutes(session.endTime),
   ]);
-
-  if (allTimes.length === 0) {
-    throw new Error("No valid times found in sessions");
-  }
-
   const startMinutes = Math.min(...allTimes);
   const endMinutes = Math.max(...allTimes);
 
