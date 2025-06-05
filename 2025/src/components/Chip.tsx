@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import React from "react";
 import { Track } from "@/constants/schedule";
+import { getTrackClassNames } from "@/lib/getTrackClassNames";
 
 type Props = {
   track?: Track;
@@ -18,7 +19,7 @@ export function Chip({
         "flex rounded-md font-bold",
         size === "default" ? "py-1 px-4 text-sm" : "py-0.5 px-2 text-xs",
         track && track !== "all"
-          ? `bg-track-${track.toLowerCase()} text-track-${track.toLowerCase()}-surface`
+          ? getTrackClassNames(track)
           : "bg-secondary text-white"
       )}
     >
