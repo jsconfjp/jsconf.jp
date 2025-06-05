@@ -1,5 +1,11 @@
 import { TALKS, FlattenedSpeaker, Talk } from "@/constants/talks";
 
+// Flattens talk-speaker relationships from default TALKS (recommended for production use)
+export function flattenSpeakers(): FlattenedSpeaker[];
+
+// For testing only: flattens talk-speaker relationships from custom talks array
+export function flattenSpeakers(talks: readonly Talk[]): FlattenedSpeaker[];
+
 /**
  * Flattens the talk-speaker relationship into individual speaker entries.
  * Each speaker gets paired with their corresponding talk, creating
