@@ -1,19 +1,20 @@
 import { Metadata } from "next";
-import { Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Markdown } from "@/components/Markdown";
 import { PageContainer } from "@/components/PageContainer";
 import { Venue } from "@/components/Venue";
+import { Locale } from "@/i18n/constants";
+
+type Params = { locale: Locale };
 
 type Props = {
-  params: Promise<{ locale: string }>;
+  params: Promise<Params>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({
-    locale: locale as Locale,
-  });
+  const t = await getTranslations({ locale });
+
   return {
     title: t("navigation.venue"),
     description: `${t("venue.placeName")} | ${t("venue.address")}`,
@@ -22,11 +23,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Page({ params }: Props) {
   const { locale } = await params;
-  setRequestLocale(locale as Locale);
+  setRequestLocale(locale);
 
-  const t = await getTranslations({
-    locale: locale as Locale,
-  });
+  const t = await getTranslations({ locale });
 
   return (
     <PageContainer title={t("navigation.venue")}>

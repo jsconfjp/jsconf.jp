@@ -10,16 +10,19 @@ import { Locale } from "@/i18n/constants";
 // import { SponsorGrid } from "@/components/SponsorGrid";
 // import { SPONSORS } from "@/constants/sponsors";
 
+type Params = { locale: Locale };
+
 type Props = {
-  params: Promise<{ locale: string }>;
+  params: Promise<Params>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({
-    locale: locale as Locale,
+    locale,
     namespace: "about",
   });
+
   return {
     title: {
       absolute: t("title"),
@@ -29,11 +32,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Page({ params }: Props) {
   const { locale } = await params;
-  setRequestLocale(locale as Locale);
+  setRequestLocale(locale);
 
-  const t = await getTranslations({
-    locale: locale as Locale,
-  });
+  const t = await getTranslations({ locale });
 
   return (
     <div className="pt-16 md:pt-32">

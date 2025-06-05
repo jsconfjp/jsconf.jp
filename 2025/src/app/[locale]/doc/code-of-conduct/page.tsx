@@ -1,17 +1,19 @@
 import { Metadata } from "next";
-import { Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import CoCEn from "@/doc/code-of-conduct-en.md";
 import CoCJa from "@/doc/code-of-conduct-ja.md";
+import { Locale } from "@/i18n/constants";
+
+type Params = { locale: Locale };
 
 type Props = {
-  params: Promise<{ locale: string }>;
+  params: Promise<Params>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({
-    locale: locale as Locale,
+    locale,
     namespace: "navigation",
   });
   return {
