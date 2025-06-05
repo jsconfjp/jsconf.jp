@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { findTalkSession } from "./findTalkSession";
 import { ScheduledSession } from "@/constants/schedule";
+import { getTalkSessions } from "./getTalkSessions";
 
 describe("findTalkSession", () => {
   const mockSessions: ScheduledSession[] = [
@@ -54,7 +55,8 @@ describe("findTalkSession", () => {
   });
 
   it("should work with default SCHEDULE when no sessions provided", () => {
-    const session = findTalkSession("sample-talk-1");
+    const talkSessions = getTalkSessions();
+    const session = findTalkSession(talkSessions[0].talk.slug);
     expect(session).toBeDefined();
   });
 });
