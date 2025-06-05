@@ -5,6 +5,7 @@ import { SessionCard } from "@/components/SessionCard";
 import { SCHEDULE, TRACKS } from "@/constants/schedule";
 import { generateSessionId } from "@/lib/generateSessionId";
 import { generateTimeSlots } from "@/lib/generateTimeSlots";
+import { getTrackClassNames } from "@/lib/getTrackClassNames";
 import { timeToMinutes } from "@/lib/timeToMinutes";
 import { TalkSessionCard } from "./TalkSessionCard";
 
@@ -57,7 +58,7 @@ export function TimeTable() {
               <div
                 className={clsx(
                   "w-6 h-6 rounded-full",
-                  `bg-track-${track.toLowerCase()}`
+                  getTrackClassNames(track)
                 )}
               />
               {t(track)}
