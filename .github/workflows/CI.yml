@@ -27,14 +27,3 @@ jobs:
       - run: cd 2025 && npm run build
         env:
           NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
-  test_2024:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-          cache-dependency-path: 2024/package-lock.json
-      - run: cd 2024 && npm ci --legacy-peer-deps
-      - run: cd 2024 && npm test
