@@ -1,9 +1,9 @@
+import { setRequestLocale } from "next-intl/server";
 import { TalkThumbnail } from "@/components/og/TalkThumbnail";
 import { Locale, LOCALES } from "@/i18n/constants";
-import { generateImage } from "@/lib/og/image";
-import { setRequestLocale } from "next-intl/server";
-import { getTalkSessions } from "@/lib/getTalkSessions";
 import { findTalkSession } from "@/lib/findTalkSession";
+import { getTalkSessions } from "@/lib/getTalkSessions";
+import { generateImage } from "@/lib/og/image";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;

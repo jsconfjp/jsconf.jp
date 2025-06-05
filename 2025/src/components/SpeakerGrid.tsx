@@ -1,7 +1,7 @@
-import { FlattenedSpeaker } from "@/constants/talks";
-import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import React from "react";
+import { FlattenedSpeaker } from "@/constants/talks";
+import { Link } from "@/i18n/navigation";
 
 type Props = {
   speakers: FlattenedSpeaker[];

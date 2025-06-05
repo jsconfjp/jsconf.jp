@@ -1,14 +1,14 @@
 "use client";
 
-import Image from "next/image";
-import { useTranslations } from "next-intl";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
-import { Link, usePathname } from "@/i18n/navigation";
 import Bars3Icon from "@heroicons/react/24/outline/Bars3Icon";
 import XMarkIcon from "@heroicons/react/24/outline/XMarkIcon";
-import logoSrc from "@/../public/logo.svg";
 import clsx from "clsx";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
+import logoSrc from "@/../public/logo.svg";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { Link, usePathname } from "@/i18n/navigation";
 
 export function GlobalNavigation() {
   const [isOpen, setIsOpen] = useState(false);

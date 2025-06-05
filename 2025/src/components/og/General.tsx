@@ -1,7 +1,7 @@
-import en from "@/../messages/en.json";
 import React from "react";
-import { Template } from "./Template";
+import en from "@/../messages/en.json";
 import { Logo } from "./Logo";
+import { Template } from "./Template";
 
 export function General() {
   return (

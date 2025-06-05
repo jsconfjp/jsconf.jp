@@ -1,8 +1,7 @@
-import { Link } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
-import twitterXUrl from "@/assets/twitter-x.svg";
-import githubUrl from "@/assets/github.svg";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import githubUrl from "@/assets/github.svg";
+import twitterXUrl from "@/assets/twitter-x.svg";
 import {
   GITHUB_URL,
   JNA_URL,
@@ -10,6 +9,7 @@ import {
   PREVIOUS_URL,
   X_URL,
 } from "@/constants/external";
+import { Link } from "@/i18n/navigation";
 
 export function Footer() {
   const tNav = useTranslations("navigation");

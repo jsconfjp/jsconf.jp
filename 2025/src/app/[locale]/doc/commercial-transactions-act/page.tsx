@@ -1,7 +1,7 @@
-import CommercialTransactionsAct from "@/doc/commercial-transactions-act.md";
 import { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
 import { Locale } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import CommercialTransactionsAct from "@/doc/commercial-transactions-act.md";
 
 type Props = {
   params: Promise<{ locale: string }>;

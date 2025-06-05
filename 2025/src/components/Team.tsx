@@ -1,8 +1,8 @@
-import { ORGANIZING_TEAM, VOLUNTEER_TEAM } from "@/constants/team";
-import { TeamMember } from "./TeamMember";
-import { Button } from "./Button";
-import { useTranslations } from "next-intl";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import { useTranslations } from "next-intl";
+import { ORGANIZING_TEAM, VOLUNTEER_TEAM } from "@/constants/team";
+import { Button } from "./Button";
+import { TeamMember } from "./TeamMember";
 
 export function Team() {
   const t = useTranslations("team");

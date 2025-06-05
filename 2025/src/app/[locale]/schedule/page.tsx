@@ -1,7 +1,7 @@
-import { PageContainer } from "@/components/PageContainer";
-import { TimeTable } from "@/components/TimeTable";
 import { Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { PageContainer } from "@/components/PageContainer";
+import { TimeTable } from "@/components/TimeTable";
 
 type Props = {
   params: Promise<{ locale: Locale }>;

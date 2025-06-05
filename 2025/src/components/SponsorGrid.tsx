@@ -1,7 +1,7 @@
-import { Sponsor } from "@/constants/sponsors";
 import { useTranslations } from "next-intl";
-import { SponsorLogo } from "./SponsorLogo";
 import React from "react";
+import { Sponsor } from "@/constants/sponsors";
+import { SponsorLogo } from "./SponsorLogo";
 
 type Props = {
   sponsors: Sponsor[];

@@ -1,15 +1,15 @@
-import { Locale, NextIntlClientProvider, hasLocale } from "next-intl";
-import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
-import { GlobalNavigation } from "@/components/GlobalNavigation";
-import { Footer } from "@/components/Footer";
-import bgUrl from "@/assets/bg.webp";
-// import bgFlipXUrl from "@/assets/bg-flip-x.webp";
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { Locale, NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { LOCALES } from "@/i18n/constants";
-import "@/app/globals.css";
 import { PropsWithChildren } from "react";
+import "@/app/globals.css";
+import bgUrl from "@/assets/bg.webp";
+import { Footer } from "@/components/Footer";
+import { GlobalNavigation } from "@/components/GlobalNavigation";
+import { LOCALES } from "@/i18n/constants";
+import { routing } from "@/i18n/routing";
+// import bgFlipXUrl from "@/assets/bg-flip-x.webp";
 
 type Props = {
   params: Promise<{ locale: string }>;

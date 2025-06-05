@@ -1,12 +1,12 @@
-import { SCHEDULE, TRACKS } from "@/constants/schedule";
-import { SessionCard } from "@/components/SessionCard";
-import { timeToMinutes } from "@/lib/timeToMinutes";
-import { useMemo } from "react";
-import { useTranslations } from "next-intl";
-import { TalkSessionCard } from "./TalkSessionCard";
 import clsx from "clsx";
+import { useTranslations } from "next-intl";
+import { useMemo } from "react";
+import { SessionCard } from "@/components/SessionCard";
+import { SCHEDULE, TRACKS } from "@/constants/schedule";
 import { generateSessionId } from "@/lib/generateSessionId";
 import { generateTimeSlots } from "@/lib/generateTimeSlots";
+import { timeToMinutes } from "@/lib/timeToMinutes";
+import { TalkSessionCard } from "./TalkSessionCard";
 
 export function TimeTable() {
   const t = useTranslations("talks.track");

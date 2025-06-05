@@ -1,6 +1,6 @@
+import { useTranslations } from "next-intl";
 import { PLACE_ID } from "@/constants/venue";
 import { GoogleMaps } from "./GoogleMaps";
-import { useTranslations } from "next-intl";
 
 type Props = {
   locale: string;

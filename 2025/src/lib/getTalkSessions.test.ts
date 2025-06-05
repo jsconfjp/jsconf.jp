@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
-import { getTalkSessions } from "./getTalkSessions";
 import { SCHEDULE } from "@/constants/schedule";
+import { getTalkSessions } from "./getTalkSessions";
 
 describe("getTalkSessions", () => {
   it("should return only talk sessions", () => {
