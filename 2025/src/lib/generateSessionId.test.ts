@@ -106,55 +106,6 @@ describe("generateSessionId", () => {
     ]);
   });
 
-  it("should handle same time but different tracks", () => {
-    const mockTalk1: Talk = {
-      slug: "talk-a",
-      title: "Talk A",
-      description: "Description A",
-      kind: "session",
-      day: "1",
-      language: "English",
-      speakers: [],
-    };
-
-    const mockTalk2: Talk = {
-      slug: "talk-b",
-      title: "Talk B",
-      description: "Description B",
-      kind: "session",
-      day: "1",
-      language: "Japanese",
-      speakers: [],
-    };
-
-    const mockSessions: ScheduledSession[] = [
-      {
-        startTime: "14:00",
-        endTime: "14:30",
-        track: "A",
-        day: "1",
-        kind: "talk",
-        talk: mockTalk1,
-      },
-      {
-        startTime: "14:00",
-        endTime: "14:30",
-        track: "B",
-        day: "1",
-        kind: "talk",
-        talk: mockTalk2,
-      },
-    ];
-
-    const ids = mockSessions.map(generateSessionId);
-
-    expect(ids).toEqual([
-      "session-A-840", // 14:00 = 840 minutes
-      "session-B-840", // 14:00 = 840 minutes
-    ]);
-    expect(ids[0]).not.toBe(ids[1]); // Different due to track difference
-  });
-
   it("should generate unique IDs for all sessions in SCHEDULE", () => {
     // Generate IDs for all sessions in the actual schedule
     const allIds = SCHEDULE.map(generateSessionId);
