@@ -35,6 +35,11 @@ export const VOLUNTEER_TEAM: TeamMember[] = [
     url: "https://twitter.com/t6adev",
     avatarUrl: "https://github.com/t6adev.png",
   },
+  {
+    name: "Martin Heidegger",
+    url: "https://github.com/martinheidegger",
+    avatarUrl: "https://avatars.githubusercontent.com/u/914122?v=4",
+  },
 ];
 
 export const ORGANIZING_TEAM: TeamMember[] = [
