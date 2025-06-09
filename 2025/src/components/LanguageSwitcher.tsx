@@ -17,7 +17,7 @@ export function LanguageSwitcher() {
   ];
 
   return (
-    <div className="flex py-5 gap-2 divide-x divide-dimmed">
+    <div className="flex items-center py-4 gap-2 divide-x divide-dimmed">
       {languages.map(({ lang, label }) => (
         <Link
           key={lang}
