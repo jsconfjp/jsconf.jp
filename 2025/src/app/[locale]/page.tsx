@@ -37,11 +37,11 @@ export default async function Page({ params }: Props) {
   const t = await getTranslations({ locale });
 
   return (
-    <div className="pt-16 md:pt-32">
+    <div className="pt-8 md:pt-32">
       <div className="max-w-screen-md mx-auto px-4 lg:px-0">
         <Hero />
 
-        <div className="mt-16 md:mt-20 flex flex-col md:flex-row justify-center gap-4 md:gap-8">
+        <div className="mt-8 md:mt-20 flex flex-col md:flex-row justify-center gap-4 md:gap-8">
           <Button
             full
             variant="primary"
@@ -65,7 +65,7 @@ export default async function Page({ params }: Props) {
         </div>
       </div>
 
-      <div className="max-w-screen-md mx-auto mt-16 md:mt-32 flex flex-col gap-4">
+      <div className="max-w-screen-md mx-auto mt-8 md:mt-32 flex flex-col gap-4">
         <h2 className="text-3xl font-bold text-center">
           {t("navigation.venue")}
         </h2>
@@ -77,14 +77,14 @@ export default async function Page({ params }: Props) {
         </div>
       </div>
 
-      {/* <div className="max-w-screen-md mx-auto mt-16 md:mt-32">
+      {/* <div className="max-w-screen-md mx-auto mt-8 md:mt-32">
         <h2 className="text-3xl font-bold my-4 text-center">
           {t("navigation.sponsors")}
         </h2>
         <SponsorGrid sponsors={SPONSORS} showPrText />
       </div> */}
 
-      <div className="bg-trinidad-100 pt-12 pb-24 px-4 lg:px-0 mt-16 md:mt-32">
+      <div className="bg-trinidad-100 pt-12 pb-24 px-4 lg:px-0 mt-8 md:mt-32">
         <div className="max-w-screen-md mx-auto">
           <h2 className="text-3xl font-bold my-4 text-center">
             {t("team.team")}
