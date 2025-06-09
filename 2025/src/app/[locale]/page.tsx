@@ -41,7 +41,7 @@ export default async function Page({ params }: Props) {
       <div className="max-w-screen-md mx-auto px-4 lg:px-0">
         <Hero />
 
-        <div className="mt-20 flex flex-col md:flex-row justify-center gap-4 md:gap-8">
+        <div className="mt-16 md:mt-20 flex flex-col md:flex-row justify-center gap-4 md:gap-8">
           <Button
             full
             variant="primary"

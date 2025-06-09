@@ -17,7 +17,7 @@ export function Hero() {
         style={{ width: "240px", height: "240px" }}
       />
       <div>
-        <h1 className="text-6xl font-bold">{t("title")}</h1>
+        <h1 className="text-5xl md:text-6xl font-bold">{t("title")}</h1>
         <time className="text-2xl font-bold">{t("eventDate")}</time>
         <p className="text-lg mt-4">{t("description")}</p>
       </div>

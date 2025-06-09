@@ -56,8 +56,8 @@ export function GlobalNavigation() {
             src={logoSrc}
             fetchPriority="high"
             alt="JSConf JP"
-            width={46}
-            height={46}
+            width={40}
+            height={40}
             className="mr-4"
           />
         </Link>
