@@ -77,11 +77,16 @@ export default async function Page({ params }: Props) {
         </div>
       </div>
 
-      <div className="max-w-screen-md mx-auto mt-8 md:mt-32">
-        <h2 className="text-3xl font-bold my-4 text-center">
+      <div className="max-w-screen-md mx-auto mt-8 md:mt-32 flex flex-col gap-4">
+        <h2 className="text-3xl font-bold text-center">
           {t("navigation.sponsors")}
         </h2>
         <SponsorGrid sponsors={SPONSORS} showPrText={false} />
+        <div className="flex items-center justify-center">
+          <Button href="/sponsors" variant="secondary" size="md">
+            {t("navigation.viewDetails")}
+          </Button>
+        </div>
       </div>
 
       <div className="bg-trinidad-100 pt-12 pb-24 px-4 lg:px-0 mt-8 md:mt-32">
