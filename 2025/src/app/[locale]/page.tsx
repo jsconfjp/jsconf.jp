@@ -3,12 +3,12 @@ import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Button } from "@/components/Button";
 import { Hero } from "@/components/Hero";
+import { SponsorGrid } from "@/components/SponsorGrid";
 import { Team } from "@/components/Team";
 import { Venue } from "@/components/Venue";
 import { CFP_FORM_URL, SPONSOR_FORM_URL } from "@/constants/external";
+import { SPONSORS } from "@/constants/sponsors";
 import { Locale } from "@/i18n/constants";
-// import { SponsorGrid } from "@/components/SponsorGrid";
-// import { SPONSORS } from "@/constants/sponsors";
 
 type Params = { locale: Locale };
 
@@ -77,12 +77,12 @@ export default async function Page({ params }: Props) {
         </div>
       </div>
 
-      {/* <div className="max-w-screen-md mx-auto mt-8 md:mt-32">
+      <div className="max-w-screen-md mx-auto mt-8 md:mt-32">
         <h2 className="text-3xl font-bold my-4 text-center">
           {t("navigation.sponsors")}
         </h2>
-        <SponsorGrid sponsors={SPONSORS} showPrText />
-      </div> */}
+        <SponsorGrid sponsors={SPONSORS} showPrText={false} />
+      </div>
 
       <div className="bg-trinidad-100 pt-12 pb-24 px-4 lg:px-0 mt-8 md:mt-32">
         <div className="max-w-screen-md mx-auto">

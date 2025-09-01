@@ -31,7 +31,7 @@ export function GlobalNavigation() {
       href: "/schedule",
     },
     {
-      ready: false,
+      ready: true,
       label: t("sponsors"),
       href: "/sponsors",
     },
