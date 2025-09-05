@@ -1,14 +1,25 @@
 import coderabbitLogo from "../../public/sponsor/coderabbit.svg";
+import cybozuLogo from '../../public/sponsor/cybozu.png'
+import denkiyagiLogo from '../../public/sponsor/denkiyagi.svg'
 import dmmCorpLogo from "../../public/sponsor/dmm-corp.png";
+import dwangoLogo from '../../public/sponsor/dwango.png'
+import earthbrainLogo from '../../public/sponsor/earthbrain.svg'
+import findyLogo from '../../public/sponsor/findy.svg'
 import forciaLogo from "../../public/sponsor/forcia.png";
 import geekneerLogo from "../../public/sponsor/geekneer.png";
 import hameeLogo from "../../public/sponsor/hamee.png";
 import hatenaLogo from "../../public/sponsor/hatena.png";
+import kakehashiLogo from '../../public/sponsor/kakehashi.png'
 import layerXLogo from "../../public/sponsor/layerx.svg";
+import lycorpLogo from '../../public/sponsor/lycorp.png'
 import medleyLogo from "../../public/sponsor/medley.png";
+import miidasLogo from '../../public/sponsor/miidas.png'
 import moneyForwardLogo from "../../public/sponsor/money-forward.svg";
+import plaidLogo from '../../public/sponsor/plaid.png'
+import reiwatravelLogo from '../../public/sponsor/reiwatravel.png'
 import resilireLogo from "../../public/sponsor/resilire.png";
 import techtouchLogo from "../../public/sponsor/techtouch.png";
+import tverLogo from '../../public/sponsor/tver.jpg'
 
 type Plan = "premium" | "sponsor";
 
@@ -27,7 +38,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "デンキヤギ株式会社",
     url: "https://denkiyagi.jp/",
-    logoUrl: "",
+    logoUrl: denkiyagiLogo,
     prText:
       `JavaScriptで動作する帳票エンジン yagisan-reports を開発、販売しています。`.trim(),
   },
@@ -45,7 +56,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "ミイダス株式会社",
     url: "https://careers.miidas.co.jp/tech/",
-    logoUrl: "",
+    logoUrl: miidasLogo,
     prText: `
 ミイダスは独自の「可能性診断」によって、活躍できる可能性の高い会社からスカウトが届く世界初※の転職アプリです。
 「可能性診断」では認知バイアスやパーソナリティ、行動特性などさまざまな項目を細かく分析。自分にフィットしたスカウトを受け取ることができます。
@@ -58,7 +69,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "LINEヤフー株式会社",
     url: "https://www.lycorp.co.jp/ja/",
-    logoUrl: "",
+    logoUrl: lycorpLogo,
     prText:
       `LINEヤフー株式会社は、2023年10月に、LINE株式会社やヤフー株式会社などのグループ会社による再編を経て誕生した日本最大級のテックカンパニーです。 『「WOW」なライフプラットフォームを創り、日常に「！」を届ける。』をミッションに掲げ、検索・ポータル、eコマース、メッセンジャー、広告など、多様な領域において事業を展開しています。`.trim(),
   },
@@ -67,7 +78,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "株式会社令和トラベル",
     url: "https://www.reiwatravel.co.jp/",
-    logoUrl: "",
+    logoUrl: reiwatravelLogo,
     prText: `
 令和トラベルは、「あたらしい旅行を、デザインする。」 をミッションに、" 旅行" におけるあたらしい体験や、あたらしい社会価値の提供を目指すデジタルトラベルエージェンシーです。
 2022年4月より、旅行アプリ『NEWT（ニュート）』をローンチし、海外旅行事業をスタート。2024年9月にはシリーズAとして約48億円の資金調達を実施。さらに、2025年1月には「日本国内の宿・ホテルの予約サービス」をスタートし、国内旅行事業、フライト予約機能、グローバル展開と事業ポートフォリオの拡大を予定しています。
@@ -79,7 +90,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "株式会社カケハシ",
     url: "https://hrmos.co/pages/kakehashi",
-    logoUrl: "",
+    logoUrl: kakehashiLogo,
     prText: `
 株式会社カケハシは日本の医療システムの再構築を目指すヘルステックスタートアップ企業です。テクノロジーを駆使し、患者さんにとってより良い医療を医療現場にとって持続可能な形で実現します。
 薬局体験アシスタント「Musubi」のほか、複数プロダクトを開発・提供し、国内の薬局の1万店舗超をカバー。服薬期間中の患者フォローによる治療効果最大化や医薬品の市中在庫可視化・安定供給などをサポートします。薬局や医療機関をはじめとしたステークホルダーとともに、より良い医療を実現するプラットフォームを構築していきます。
@@ -90,7 +101,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "サイボウズ株式会社",
     url: "https://cybozu.co.jp",
-    logoUrl: "",
+    logoUrl: cybozuLogo,
     prText: `
 サイボウズはクラウドベースのグループウェアや業務改善サービスを軸に、社会のチームワーク向上を支援しています。
 サイボウズではフロントエンドを最高にするメンバーを募集しています！ https://cybozu.co.jp/recruit/entry/
@@ -101,7 +112,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "株式会社ドワンゴ",
     url: "https://dwango.co.jp/",
-    logoUrl: "",
+    logoUrl: dwangoLogo,
     prText:
       `ドワンゴは "ネットの向こうの、リアルを動かす。人間らしさと、つながるデジタルを。" をコーポレートメッセージとして、ネットに特化した通信制高校「N高等学校・S高等学校・R高等学校」、ネットとリアルを融合したオンライン大学「ZEN大学」、オンライン学習アプリ「ZEN Study」、ネットの双方向性を最大限に動画や生放送に取り込んだ「ニコニコ」、ネットとリアルの融合をテーマにした巨大イベント「ニコニコ超会議」など、新しい価値を創り出し、それを事業として成立させていくことに挑戦しつづける企業です。`.trim(),
   },
@@ -142,7 +153,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "sponsor",
     name: "株式会社EARTHBRAIN",
     url: "https://www.earthbrain.com/",
-    logoUrl: "",
+    logoUrl: earthbrainLogo,
     prText:
       `EARTHBRAINは、建設現場のデジタル革命で新たな世界を創ることをビジョンに掲げ、2021年に創業したジョイントベンチャーです。建設現場の見える化、施工の最適化のためのプロダクトを複数開発しており、既に世界20カ国以上で利用されています。`.trim(),
   },
@@ -151,7 +162,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "ファインディ株式会社",
     url: "https://findy.co.jp/",
-    logoUrl: "",
+    logoUrl: findyLogo,
     prText:
       `「挑戦するエンジニアのプラットフォームをつくる。」をビジョンに掲げたスタートアップです。エンジニアスキルや生産性の可視化する独自技術をもとに、IT/Webエンジニアの転職サービス「Findy」「Findy Freelance」及び、エンジニア組織支援SaaS「Findy Team+」を展開しています。`.trim(),
   },
@@ -160,7 +171,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "株式会社TVer",
     url: "https://tver.co.jp/",
-    logoUrl: "",
+    logoUrl: tverLogo,
     prText: `
 株式会社TVerは、民放各局が制作した安心・安全なテレビコンテンツを、いつでもどこでも完全無料でお楽しみいただける民放公式テレビ配信サービス｢TVer（ティーバー）｣を主に運営しています。
 「TVer」は、2015年のサービス開始以来、累計アプリダウンロード数は8,500万、月間ユニークブラウザ数は4,120万を超え、2024年には月間動画再生数も4.9億回を突破しました。
@@ -246,7 +257,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "sponsor",
     name: "株式会社プレイド",
     url: "https://plaid.co.jp/",
-    logoUrl: "",
+    logoUrl: plaidLogo,
     prText: `
 プレイドは「データによって人の価値を最大化する」をミッションに掲げ、オンライン上のユーザー行動をリアルタイムに解析し、最適なアクションを届けるCX（顧客体験）プラットフォーム「KARTE」をはじめ、複数のプロダクトや事業を展開しています。
 我々の技術組織では、リアルタイムデータ解析基盤や大規模分散システムの構築・運用、それらのコア技術を活かしたプロダクト開発、AI活用、開発者体験やパフォーマンスの向上など、多様な技術課題に取り組んでいます。
