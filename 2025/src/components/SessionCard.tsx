@@ -8,23 +8,23 @@ const getSessionColor = (session: ScheduledSession) => {
   switch (session.kind) {
     case "talk":
       return session.track === "A"
-        ? "bg-track-a/20 border-track-a"
+        ? "bg-track-a/50 border-track-a"
         : session.track === "B"
-        ? "bg-track-b/20 border-track-b"
+        ? "bg-track-b/50 border-track-b"
         : session.track === "C"
-        ? "bg-track-c/20 border-track-c"
+        ? "bg-track-c/50 border-track-c"
         : session.track === "D"
-        ? "bg-track-d/20 border-track-d"
+        ? "bg-track-d/50 border-track-d"
         : "";
     case "reception":
-      return "bg-gray-100 border-gray-300";
+      return "bg-slate-100/80 border-slate-400";
     case "opening":
     case "closing":
     case "networking":
-      return "bg-trinidad-100 border-trinidad-300";
+      return "bg-trinidad-200 border-trinidad-300";
     case "break":
     case "closed":
-      return "bg-white border-gray-300 border-dashed";
+      return "bg-slate-100/80 border-slate-400 border-dashed";
   }
 };
 
