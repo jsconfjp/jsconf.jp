@@ -4,19 +4,23 @@ import { join } from "node:path";
 import { Readable } from "node:stream";
 import { finished } from "node:stream/promises";
 import { ReadableStream } from "node:stream/web";
+import { TALKS } from "@/constants/talks";
 import nextConfig from "../next.config";
 
 const DIR_OG_IMAGES = join(__dirname, "..", "screenshots", "ogp");
 
-const pages = [{ label: "Top", url: "/" }].map((page) => ({
-  ...page,
+const pages = [
+  "/",
+  ...TALKS.map((talk) => `/talks/${talk.slug}`),
+  // http://localhost:3001/2025/en/talks/visual-regression-testing-chromatic/opengraph-image
+].map((path) => ({
   url: `http://localhost:3001${join(
     nextConfig.basePath!,
-    page.url,
+    path,
     "opengraph-image"
   )}`,
   slug:
-    page.url === "/" ? "top" : page.url.split("/").filter(Boolean).join("-"),
+    path === "/" ? "top" : path.split("/").filter(Boolean).join("-"),
 }));
 
 main();
