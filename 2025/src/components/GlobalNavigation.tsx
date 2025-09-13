@@ -16,7 +16,7 @@ export function GlobalNavigation() {
   const pathname = usePathname();
   const navigations = [
     {
-      ready: false,
+      ready: true,
       label: t("speakers"),
       href: "/speakers",
     },
@@ -26,7 +26,7 @@ export function GlobalNavigation() {
       href: "/venue",
     },
     {
-      ready: false,
+      ready: true,
       label: t("schedule"),
       href: "/schedule",
     },

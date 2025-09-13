@@ -10,6 +10,8 @@ const pages = [
   { label: "Top", url: "/" },
   { label: "Sponsors", url: "/sponsors" },
   { label: "Venue", url: "/venue" },
+  { label: "Schedule", url: "/schedule" },
+  { label: "Speakers", url: "/speakers" },
   { label: "CoC", url: "/doc/code-of-conduct" },
 ].map(page => ({
   ...page,
