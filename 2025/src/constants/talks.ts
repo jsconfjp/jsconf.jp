@@ -42,7 +42,6 @@ export type FlattenedSpeaker = {
 };
 
 export const TALKS = [
-  // 10:10 - 10:20 Sessions
   {
     slug: "passwordless-in-production",
     title: "Passwordless in Production: Implementing FIDO Passkeys for Frontend",
@@ -1102,7 +1101,7 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
   },
 ] as const satisfies Talk[];
 
-type TalkSlug = (typeof TALKS)[number]["slug"];
+export type TalkSlug = (typeof TALKS)[number]["slug"];
 
 export const TALKS_BY_SLUG: Record<TalkSlug, Talk> = TALKS.reduce(
   (acc, talk) => {

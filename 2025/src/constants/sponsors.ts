@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import cloudinaryLogo from "../../public/sponsor/cloudinary.svg";
 import coderabbitLogo from "../../public/sponsor/coderabbit.svg";
 import cybozuLogo from '../../public/sponsor/cybozu.png'
 import denkiyagiLogo from '../../public/sponsor/denkiyagi.svg'
@@ -7,6 +8,7 @@ import dwangoLogo from '../../public/sponsor/dwango.png'
 import earthbrainLogo from '../../public/sponsor/earthbrain.svg'
 import findyLogo from '../../public/sponsor/findy.svg'
 import forciaLogo from "../../public/sponsor/forcia.png";
+import fullerLogo from '../../public/sponsor/fuller.png'
 import geekneerLogo from "../../public/sponsor/geekneer.png";
 import hameeLogo from "../../public/sponsor/hamee.png";
 import hatenaLogo from "../../public/sponsor/hatena.png";
@@ -202,7 +204,7 @@ export const SPONSORS = ([
     plan: "premium",
     name: "Cloudinary",
     url: "https://cloudinary.com",
-    logoUrl: "https://placehold.jp/250x250.png",
+    logoUrl: cloudinaryLogo,
     prText: ``.trim(),
   },
   {
@@ -210,7 +212,7 @@ export const SPONSORS = ([
     plan: "sponsor",
     name: "フラー株式会社",
     url: "https://www.fuller-inc.com/",
-    logoUrl: "",
+    logoUrl: fullerLogo,
     prText: `
 当社は、デジタル領域全般においてパートナーのビジネス課題を解決するソリューション企業です。
 特にスマホアプリに軸足を置き、事業開発、デザイン、システム開発・運用、データ分析といった上流から下流まで幅広いソリューションを提供しています。
