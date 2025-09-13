@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+import cloudinaryLogo from "../../public/sponsor/cloudinary.svg";
 import coderabbitLogo from "../../public/sponsor/coderabbit.svg";
 import cybozuLogo from '../../public/sponsor/cybozu.png'
 import denkiyagiLogo from '../../public/sponsor/denkiyagi.svg'
@@ -6,6 +8,7 @@ import dwangoLogo from '../../public/sponsor/dwango.png'
 import earthbrainLogo from '../../public/sponsor/earthbrain.svg'
 import findyLogo from '../../public/sponsor/findy.svg'
 import forciaLogo from "../../public/sponsor/forcia.png";
+import fullerLogo from '../../public/sponsor/fuller.png'
 import geekneerLogo from "../../public/sponsor/geekneer.png";
 import hameeLogo from "../../public/sponsor/hamee.png";
 import hatenaLogo from "../../public/sponsor/hatena.png";
@@ -29,10 +32,10 @@ export type Sponsor = {
   name: string;
   url: string;
   prText: string;
-  logoUrl: string;
+  logoUrl: string | StaticImageData;
 };
 
-export const SPONSORS: Sponsor[] = [
+export const SPONSORS = ([
   {
     type: "sponsor",
     plan: "premium",
@@ -201,7 +204,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "Cloudinary",
     url: "https://cloudinary.com",
-    logoUrl: "",
+    logoUrl: cloudinaryLogo,
     prText: ``.trim(),
   },
   {
@@ -209,7 +212,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "sponsor",
     name: "フラー株式会社",
     url: "https://www.fuller-inc.com/",
-    logoUrl: "",
+    logoUrl: fullerLogo,
     prText: `
 当社は、デジタル領域全般においてパートナーのビジネス課題を解決するソリューション企業です。
 特にスマホアプリに軸足を置き、事業開発、デザイン、システム開発・運用、データ分析といった上流から下流まで幅広いソリューションを提供しています。
@@ -292,4 +295,14 @@ export const SPONSORS: Sponsor[] = [
 kickflowは企業の生産性向上で高く評価されており、大手企業や成長中の企業に導入されています。
 `.trim(),
   },
-].filter((s): s is Sponsor => !!s.name && !!s.logoUrl && !!s.url);
+] as const satisfies Sponsor[]).filter((s) => !!s.name && !!s.logoUrl && !!s.url);
+
+type SponsorSlug = (typeof SPONSORS)[number]['name'];
+
+export const SPONSORS_BY_NAME: Record<SponsorSlug, Sponsor> = SPONSORS.reduce(
+  (acc, sponsor) => {
+    acc[sponsor.name] = sponsor;
+    return acc;
+  },
+  {} as Record<SponsorSlug, Sponsor>
+);

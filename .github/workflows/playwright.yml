@@ -1,0 +1,39 @@
+name: screenshots
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: 2025/package-lock.json
+      - run: cd 2025 && npm ci && npm run dev &
+        env:
+          PORT: 3001
+      - run: cd 2025 && npx playwright install --with-deps
+      - run: cd 2025 && npx playwright test
+      - run: cd 2025 && npx tsx scripts/fetch-og-images.ts
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: screenshots
+          path: 2025/screenshots/**/*
+          retention-days: 7
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const url = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `📦 Screenshots: [Download](${url})`
+            });

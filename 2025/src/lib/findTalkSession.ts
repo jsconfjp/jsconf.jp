@@ -1,7 +1,6 @@
 import { SCHEDULE, ScheduledSession, TalkSession } from "@/constants/schedule";
-import { TALKS } from "@/constants/talks";
+import { TalkSlug } from "@/constants/talks";
 
-type TalkSlug = (typeof TALKS)[number]["slug"];
 type ExtractTalkSlug<T extends readonly ScheduledSession[]> = Extract<
   T[number],
   { kind: "talk" }
