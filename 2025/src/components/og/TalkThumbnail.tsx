@@ -44,7 +44,7 @@ export function TalkThumbnail({ session }: Props) {
                   src={
                     speaker.type === "speaker"
                       ? speaker.avatarUrl
-                      : speaker.logoUrl
+                      : speaker.logoUrl as unknown as string
                   }
                   width={120 / talk.speakers.length}
                   height={120 / talk.speakers.length}
