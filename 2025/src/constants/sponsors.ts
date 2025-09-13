@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import coderabbitLogo from "../../public/sponsor/coderabbit.svg";
 import cybozuLogo from '../../public/sponsor/cybozu.png'
 import denkiyagiLogo from '../../public/sponsor/denkiyagi.svg'
@@ -29,10 +30,10 @@ export type Sponsor = {
   name: string;
   url: string;
   prText: string;
-  logoUrl: string;
+  logoUrl: string | StaticImageData;
 };
 
-export const SPONSORS: Sponsor[] = [
+export const SPONSORS = ([
   {
     type: "sponsor",
     plan: "premium",
@@ -201,7 +202,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "Cloudinary",
     url: "https://cloudinary.com",
-    logoUrl: "",
+    logoUrl: "https://placehold.jp/250x250.png",
     prText: ``.trim(),
   },
   {
@@ -292,4 +293,14 @@ export const SPONSORS: Sponsor[] = [
 kickflowは企業の生産性向上で高く評価されており、大手企業や成長中の企業に導入されています。
 `.trim(),
   },
-].filter((s): s is Sponsor => !!s.name && !!s.logoUrl && !!s.url);
+] as const satisfies Sponsor[]).filter((s) => !!s.name && !!s.logoUrl && !!s.url);
+
+type SponsorSlug = (typeof SPONSORS)[number]['name'];
+
+export const SPONSORS_BY_NAME: Record<SponsorSlug, Sponsor> = SPONSORS.reduce(
+  (acc, sponsor) => {
+    acc[sponsor.name] = sponsor;
+    return acc;
+  },
+  {} as Record<SponsorSlug, Sponsor>
+);
