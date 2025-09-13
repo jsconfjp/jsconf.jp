@@ -11,15 +11,19 @@ const pages = [
   { label: "Sponsors", url: "/sponsors" },
   { label: "Venue", url: "/venue" },
   { label: "CoC", url: "/doc/code-of-conduct" },
-].flatMap((page) =>
+].map(page => ({
+  ...page,
+  slug: page.url.split("/").filter(Boolean).join("-"),
+}));
+const pageWithLocales = pages.flatMap((page) =>
   LOCALES.map((locale) => ({
     label: `${page.label} (${locale})`,
     url: `${prefix}/${locale}/${page.url}`,
-    slug: [locale, ...page.url.split("/")].filter(Boolean).join("-"),
+    slug: `${locale}-${page.slug}`,
   }))
 );
 
-pages.forEach(({ label, slug, url }) => {
+pageWithLocales.forEach(({ label, slug, url }) => {
   test(label, async ({ page }, testInfo) => {
     await page.goto(url);
 

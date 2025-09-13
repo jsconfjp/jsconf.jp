@@ -1,4 +1,4 @@
-name: Capture screenshots
+name: screenshots
 
 on:
   pull_request:
@@ -18,10 +18,9 @@ jobs:
       - run: cd 2025 && npm ci && npm run dev &
         env:
           PORT: 3001
-      - name: Install Playwright Browsers
-        run: cd 2025 && npx playwright install --with-deps
-      - name: Run Playwright tests
-        run: cd 2025 && npx playwright test
+      - run: cd 2025 && npx playwright install --with-deps
+      - run: cd 2025 && npx playwright test
+      - run: cd 2025 && npx tsx scripts/fetch-og-images.ts
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
