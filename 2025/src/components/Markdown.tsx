@@ -6,6 +6,7 @@ export function Markdown({ children }: { children: string }) {
       components={{
         ul: ({ children }) => <ul className="list-disc pl-4">{children}</ul>,
         ol: ({ children }) => <ol className="list-decimal pl-4">{children}</ol>,
+        pre: ({ children }) => <pre className="bg-gray-100 py-0.5 px-1.5 rounded-sm">{children}</pre>,
         code: ({ children }) => (
           <code className="bg-gray-100 py-0.5 px-1.5 rounded-sm">
             {children}
