@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Chip } from "@/components/Chip";
 import { Markdown } from "@/components/Markdown";
 import { PageContainer } from "@/components/PageContainer";
+import { TalkSlug } from "@/constants/talks";
 import { Locale, LOCALES } from "@/i18n/constants";
 import { findTalkSession } from "@/lib/findTalkSession";
 import { getTalkSessions } from "@/lib/getTalkSessions";
@@ -29,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   setRequestLocale(locale);
 
-  const session = findTalkSession(slug);
+  const session = findTalkSession(slug as unknown as TalkSlug);
 
   return {
     title: session.talk.title,
@@ -45,7 +46,7 @@ export default async function Page({ params }: Props) {
     locale: locale,
     namespace: "talks",
   });
-  const session = findTalkSession(slug);
+  const session = findTalkSession(slug as unknown as TalkSlug);
 
   return (
     <PageContainer title={session.talk.title} centerizeTitle={false}>

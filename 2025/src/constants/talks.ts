@@ -25,7 +25,7 @@ export type FlattenedSpeaker = {
   speaker: Speaker | Sponsor;
 };
 
-export const TALKS: Talk[] = [
+export const TALKS = [
   {
     slug: "sample-talk-1",
     title: "Sample talk 1",
@@ -134,9 +134,9 @@ export const TALKS: Talk[] = [
       },
     ],
   },
-] as const;
+] as const satisfies Talk[];
 
-type TalkSlug = (typeof TALKS)[number]["slug"];
+export type TalkSlug = (typeof TALKS)[number]["slug"];
 
 export const TALKS_BY_SLUG: Record<TalkSlug, Talk> = TALKS.reduce(
   (acc, talk) => {
