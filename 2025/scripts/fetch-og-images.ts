@@ -8,9 +8,7 @@ import nextConfig from "../next.config";
 
 const DIR_OG_IMAGES = join(__dirname, "..", "screenshots", "ogp");
 
-const pages = [
-  { label: "Top", url: "/" },
-].map((page) => ({
+const pages = [{ label: "Top", url: "/" }].map((page) => ({
   ...page,
   url: `http://localhost:3001${join(
     nextConfig.basePath!,
@@ -24,7 +22,7 @@ const pages = [
 main();
 
 async function main() {
-  await rm(DIR_OG_IMAGES, { recursive: true });
+  await rm(DIR_OG_IMAGES, { recursive: true, force: true });
   await mkdir(DIR_OG_IMAGES, { recursive: true });
 
   await Promise.all(
