@@ -67,17 +67,24 @@ export function TalkThumbnail({ session }: Props) {
                 key={speaker.name}
                 style={{ gap: 16 }}
               >
-                <img
-                  alt={speaker.name}
-                  src={toImageSrc(
-                    speaker.type === "speaker"
-                      ? speaker.avatarUrl
-                      : speaker.logoUrl
-                  )}
-                  width={120 / talk.speakers.length}
-                  height={120 / talk.speakers.length}
-                  tw="rounded-full"
-                />
+                {speaker.type === "speaker" ? (
+                  <img
+                    alt={speaker.name}
+                    src={toImageSrc(
+                      speaker.avatarUrl
+                    )}
+                    width={120 / talk.speakers.length}
+                    height={120 / talk.speakers.length}
+                    tw="rounded-full object-cover"
+                  />
+                ) : (
+                  <img
+                    alt={speaker.name}
+                    src={toImageSrc(speaker.logoUrl)}
+                    width={120 / talk.speakers.length}
+                    tw="object-contain"
+                  />
+                )}
                 <h2 tw="text-5xl font-bold">{speaker.name}</h2>
               </div>
             ))}

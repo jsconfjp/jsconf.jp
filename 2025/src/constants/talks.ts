@@ -24,7 +24,7 @@ type Language = "English" | "Japanese";
 export type Speaker = {
   type: "speaker";
   name: string;
-  avatarUrl: string | StaticImageData
+  avatarUrl: string | StaticImageData;
   bio: string; // markdown
 };
 
@@ -45,16 +45,18 @@ export type FlattenedSpeaker = {
 export const TALKS = [
   {
     slug: "passwordless-in-production",
-    title: "Passwordless in Production: Implementing FIDO Passkeys for Frontend",
-    description: "In this session, I'll share our end-to-end journey implementing FIDO passkeys in our frontend, replacing traditional password authentication with a more secure, frictionless solution. I'll dive into our technical architecture, frontend integration challenges, cross-platform considerations, and critical UX decisions that balanced security with user experience. You'll discover how we tackled browser compatibility issues, optimized performance, and overcame unexpected hurdles during our production rollout. Drawing from our real-world implementation serving millions of users, this talk provides actionable insights for developers considering or currently implementing passwordless authentication, complete with code examples, lessons learned, and tangible results that demonstrate the impact of our transition to passkeys.",
-    kind: 'LT',
+    title:
+      "Passwordless in Production: Implementing FIDO Passkeys for Frontend",
+    description:
+      "In this session, I'll share our end-to-end journey implementing FIDO passkeys in our frontend, replacing traditional password authentication with a more secure, frictionless solution. I'll dive into our technical architecture, frontend integration challenges, cross-platform considerations, and critical UX decisions that balanced security with user experience. You'll discover how we tackled browser compatibility issues, optimized performance, and overcame unexpected hurdles during our production rollout. Drawing from our real-world implementation serving millions of users, this talk provides actionable insights for developers considering or currently implementing passwordless authentication, complete with code examples, lessons learned, and tangible results that demonstrate the impact of our transition to passkeys.",
+    kind: "LT",
     day: "1",
     language: "English",
     speakers: [
       {
         type: "speaker",
         name: "Manish Kumar",
-        avatarUrl: 'https://avatars.githubusercontent.com/u/54291836?v=4',
+        avatarUrl: "https://avatars.githubusercontent.com/u/54291836?v=4",
         bio: "Manish is a Web Platform Engineer at Mercari Inc., where he works on the Mercari login page and also on Platform toolings for Web Developers. He has previously contributed to the Nodejs.org website development.",
       },
     ],
@@ -93,7 +95,8 @@ export const TALKS = [
   },
   {
     slug: "visual-regression-testing-chromatic",
-    title: "横断組織が向き合うVisual Regression Testing —Chromaticは使い続けるべきなのか—",
+    title:
+      "横断組織が向き合うVisual Regression Testing —Chromaticは使い続けるべきなのか—",
     description: `概要：マネーフォワードのtoB領域では現在、20以上のプロダクトがChromaticというSaaSを使ったVisual Regression Testing（VRT）を導入しております。Chromaticはスナップショットごとの従量課金制で、我々は無為な使用を続けた結果、コストが想定以上に大幅に嵩み、予算の管理体制が整っていない状況に直面しています。私はこの課題の解決や、VRT自体の目的や戦略を標準化する取り組みの責任者です。この発表では、私が取り組んでいる内容や多様な現場でのテスト戦略立案の困難さ、Chromaticの利用コストを最適化するための工夫ポイントなどをお話しします。（現時点で絶賛取り組み中の活動のため、答えは出ていないタイプの発表です。）
 
 目的：この発表は、上記の内容を事例として紹介し、これからVRTに取り組むエンジニアや、既に似たような課題に直面している同規模の横断活動を行うEMに、気づきを与えたり、コミュニティ全体のVRTに対する意識向上や議論の活性化に繋げることを目的としています。
@@ -139,7 +142,8 @@ export const TALKS = [
       {
         type: "speaker",
         name: "berlysia",
-        avatarUrl: "https://pbs.twimg.com/profile_images/1584515082364456960/RdKrz-tN_400x400.jpg",
+        avatarUrl:
+          "https://pbs.twimg.com/profile_images/1584515082364456960/RdKrz-tN_400x400.jpg",
         bio: `フロントエンドを得意領域とするWebエンジニアです。株式会社ドワンゴの教育事業でWebフロントエンドを担当しています。仕事でも趣味でも縦書きを扱っています。`,
       },
     ],
@@ -149,7 +153,8 @@ export const TALKS = [
   {
     slug: "whats-new-in-ecma-402",
     title: "What's New in ECMA-402",
-    description: "Many TC39 delegates are working to make JavaScript the premier language for building apps that work seamlessly across languages and cultures. Learn about some of the latest advancements, including message formatting, measurement units, durations, word segmentation, and more.",
+    description:
+      "Many TC39 delegates are working to make JavaScript the premier language for building apps that work seamlessly across languages and cultures. Learn about some of the latest advancements, including message formatting, measurement units, durations, word segmentation, and more.",
     kind: "LT",
     day: "1",
     language: "English",
@@ -215,7 +220,8 @@ SharedArrayBufferの存在・歴史を確認しつつAtomics APIで何ができ�
   },
   {
     slug: "beyond-console-log",
-    title: "Beyond console.log: Developing and Debugging with Observable Side Effects",
+    title:
+      "Beyond console.log: Developing and Debugging with Observable Side Effects",
     description: `This talk explores the power of observable side effects. We'll discover how making them explicit and transparent can dramatically improve code clarity, decrease debugging time, and boost application reliability.
 
 We'll look into practical strategies for building applications where you can effortlessly track and understand these effects. The talk culminates in a live demonstration of a web application built with these principles, showcasing how gaining true insight into your code's behavior can transform your development and debugging workflow.`,
@@ -280,7 +286,8 @@ updates in his area of expertise.`,
   },
   {
     slug: "modern-js-framework-build-process",
-    title: "モダンJSフレームワークのビルドプロセス 〜なぜReactは503行、Svelteは12行なのか〜",
+    title:
+      "モダンJSフレームワークのビルドプロセス 〜なぜReactは503行、Svelteは12行なのか〜",
     description: `JavaScriptフレームワークは、開発者が書いたコードを大幅に変換します。同一の9行のボタンコンポーネントが、Reactでは503行、Svelteではわずか12行のJavaScriptに変換されるのはなぜでしょうか？
 
 本発表では、両フレームワークのビルドプロセスを分解し、各ステップで何が起きているかを可視化します。
@@ -349,7 +356,8 @@ For me, performance and user insight go hand in hand.`,
   },
   {
     slug: "javascript-typespec-safety-karuta",
-    title: "JavaScript/TypeSpec安全開発カルタ (カルタで安全な開発をするテクニックを学ぼう!)",
+    title:
+      "JavaScript/TypeSpec安全開発カルタ (カルタで安全な開発をするテクニックを学ぼう!)",
     description: `JavaScript開発において「やりがち」「見かけがち」なコードや習慣を、カルタ形式で紹介します。
 以下の内容を話す予定です。
 - テストなし・手動チェック地獄
@@ -411,7 +419,8 @@ For me, performance and user insight go hand in hand.`,
   {
     slug: "andromeda-future-of-typescript",
     title: "Andromeda - The Future Of TypeScript",
-    description: "In this talk, we’ll explore Andromeda, a new experimental JS/TS runtime that rethinks what a lightweight execution engine can be. You’ll get a behind-the-scenes look at how Andromeda works, why it exists, and what makes it fundamentally different from Node.js or Deno. We’ll talk about its architecture, how it handles TypeScript natively, and the motivations behind building a runtime focused on simplicity and transparency. Whether you're a runtime nerd, a systems programming enthusiast, or just curious about where the JavaScript ecosystem could go next, this session will spark new ideas about what’s possible when you strip a runtime down to its essentials — and rebuild it with Rust.",
+    description:
+      "In this talk, we’ll explore Andromeda, a new experimental JS/TS runtime that rethinks what a lightweight execution engine can be. You’ll get a behind-the-scenes look at how Andromeda works, why it exists, and what makes it fundamentally different from Node.js or Deno. We’ll talk about its architecture, how it handles TypeScript natively, and the motivations behind building a runtime focused on simplicity and transparency. Whether you're a runtime nerd, a systems programming enthusiast, or just curious about where the JavaScript ecosystem could go next, this session will spark new ideas about what’s possible when you strip a runtime down to its essentials — and rebuild it with Rust.",
     kind: "session",
     day: "1",
     language: "English",
@@ -452,7 +461,8 @@ An invited expert for the WinterCG (Winter Community Group), Dean is deeply invo
   },
   {
     slug: "cross-platform-tv-development",
-    title: "Cross-Platform Television Application Development: JavaScript Frameworks for Smart TV Ecosystems",
+    title:
+      "Cross-Platform Television Application Development: JavaScript Frameworks for Smart TV Ecosystems",
     description: `Join me for an in-depth exploration of developing television applications using JavaScript frameworks and React Native for TV across the fragmented smart TV landscape. In this session, I'll dive into practical solutions for building apps that work seamlessly across Tizen, webOS, Android TV and Fire TV platforms.
 I'll demonstrate which modern JavaScript frameworks to use for television environments, with a special focus on React Native for TV and its powerful cross-platform capabilities. You'll learn to tackle TV-specific challenges including remote control navigation, focus management, spatial navigation with D-pad controls, and designing effective 10-foot user interfaces.
 Through live coding examples and real-world case studies, I'll explore performance optimization techniques that maintain smooth 30+ FPS experiences across diverse TV hardware, memory management strategies for resource-constrained environments, and video streaming integration patterns that work reliably across platforms.
@@ -472,21 +482,20 @@ Whether you're a web developer looking to expand into TV development or seeking 
   },
   {
     slug: "denkiyagi-sponsor-session",
-    title: "デンキヤギ株式会社",
+    title: "スポンサーLT",
     description: "TBD",
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
-    speakers: [
-      SPONSORS_BY_NAME['デンキヤギ株式会社'],
-    ],
+    speakers: [SPONSORS_BY_NAME["デンキヤギ株式会社"]],
   },
 
   // 11:40 - 12:10 Sessions (30 minutes)
   {
     slug: "evolving-nodejs-module-loader",
     title: "Evolving the Node.js module loader",
-    description: "In this talk, we will dive into the story of some of the new features in the Node.js module loader - require(esm), the compile cache, and the module loader customization hooks. We will take a brief look into the history of them, the detours that were taken, the stagnation during their development, and how we are trying to move them forward.",
+    description:
+      "In this talk, we will dive into the story of some of the new features in the Node.js module loader - require(esm), the compile cache, and the module loader customization hooks. We will take a brief look into the history of them, the detours that were taken, the stagnation during their development, and how we are trying to move them forward.",
     kind: "session",
     day: "1",
     language: "English",
@@ -539,7 +548,8 @@ AST×Reporterでテストから“観点カタログ”を自動生成し、LLM�
   },
   {
     slug: "great-migration-webassembly",
-    title: "The Great Migration: Identifying and Offloading Your App's Bottlenecks to WebAssembly",
+    title:
+      "The Great Migration: Identifying and Offloading Your App's Bottlenecks to WebAssembly",
     description: `Even well written JavaScript application can struggle with computation intensive tasks. In the world of browser context, user experience of highly computation intensive tasks vary a lot depending on client's resources and their availability. This session discusses ideas about identifying computer intensive tasks, and strategies to migrate them to WebAssembly so a developer can accomplish more with less.`,
     kind: "session",
     day: "1",
@@ -555,14 +565,12 @@ AST×Reporterでテストから“観点カタログ”を自動生成し、LLM�
   },
   {
     slug: "layerx-sponsor-session",
-    title: "株式会社LayerX",
+    title: "スポンサーLT",
     description: "TBD",
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
-    speakers: [
-      SPONSORS_BY_NAME['株式会社LayerX'],      
-    ],
+    speakers: [SPONSORS_BY_NAME["株式会社LayerX"]],
   },
 
   // 13:10 - 13:40 Sessions (30 minutes)
@@ -627,14 +635,12 @@ Active contributor, releaser, and member of the Node.js Technical Steering Commi
   },
   {
     slug: "miidas-sponsor-session",
-    title: "ミイダス株式会社",
+    title: "スポンサーLT",
     description: "TBD",
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
-    speakers: [
-      SPONSORS_BY_NAME['ミイダス株式会社'],      
-    ],
+    speakers: [SPONSORS_BY_NAME["ミイダス株式会社"]],
   },
 
   // 13:40 - 14:10 Sessions (30 minutes)
@@ -665,7 +671,8 @@ Active contributor, releaser, and member of the Node.js Technical Steering Commi
       {
         type: "speaker",
         name: "Thomas Steiner",
-        avatarUrl: "https://assets.toot.cafe/accounts/avatars/000/055/387/original/90043e56ba11f2b3.jpeg",
+        avatarUrl:
+          "https://assets.toot.cafe/accounts/avatars/000/055/387/original/90043e56ba11f2b3.jpeg",
         bio: `Thomas Steiner is a Developer Relations Engineer at Google, focused on Web AI, WebAssembly, and Project Fugu. He's an alum of University of Lyon (Postdoc), Polytechnic University of Barcelona (Ph. D.), and University of Karlsruhe (MA).`,
       },
     ],
@@ -683,21 +690,20 @@ In 2022 we started working towards solving this problem in WinterCG, which has n
       {
         type: "speaker",
         name: "Andreu Botella",
-        avatarUrl: "https://www.igalia.com/assets/i/igalians/andreu-botella.jpg",
+        avatarUrl:
+          "https://www.igalia.com/assets/i/igalians/andreu-botella.jpg",
         bio: `I'm a browser and standards engineer at Igalia, working on a number of things from implementing CSS features in browsers to working on standards proposals for both CSS and JavaScript. I am also one of the co-chairs of WinterTC, where we work on standards for server-side JavaScript runtimes.`,
       },
     ],
   },
   {
     slug: "line-yahoo-sponsor-session",
-    title: "LINEヤフー株式会社",
+    title: "スポンサーLT",
     description: "TBD",
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
-    speakers: [
-      SPONSORS_BY_NAME['LINEヤフー株式会社'],      
-    ],
+    speakers: [SPONSORS_BY_NAME["LINEヤフー株式会社"]],
   },
 
   // 14:20 - 14:50 Sessions (30 minutes)
@@ -725,7 +731,8 @@ Outside of work, she’s often found making pottery, playing drums, or hiking th
   },
   {
     slug: "javascript-parser-using-support",
-    title: "JavaScript パーサーに using 対応をする過程で与えたエコシステムへの影響",
+    title:
+      "JavaScript パーサーに using 対応をする過程で与えたエコシステムへの影響",
     description: `JavaScript には acorn という JavaScript パーサーがあります。
 Next.js / Svelte / Webpack / Prettier / ESLint / Rollup (スター数順) など、多くの有名なライブラリが acorn に依存しています。
 
@@ -781,14 +788,12 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
   },
   {
     slug: "reiwa-travel-sponsor-session",
-    title: "株式会社令和トラベル",
+    title: "スポンサーLT",
     description: "TBD",
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
-    speakers: [
-      SPONSORS_BY_NAME['株式会社令和トラベル'],      
-    ],
+    speakers: [SPONSORS_BY_NAME["株式会社令和トラベル"]],
   },
 
   // 14:50 - 15:20 Sessions (30 minutes)
@@ -810,7 +815,8 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
   },
   {
     slug: "async-await-stack-trace",
-    title: "JavaScriptにおけるasync/await呼び出しのスタックトレースの困難と実装",
+    title:
+      "JavaScriptにおけるasync/await呼び出しのスタックトレースの困難と実装",
     description: `お手元のChromeで以下のコードを実行してみてください！（もちろんしなくてもいいですよ）
 
     async function foo(x) { await bar(x); }
@@ -846,7 +852,8 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
   },
   {
     slug: "profiling-typescript-at-scale",
-    title: "Profiling TypeScript at Scale: Finding and Fixing Compiler Bottlenecks",
+    title:
+      "Profiling TypeScript at Scale: Finding and Fixing Compiler Bottlenecks",
     description: `As TypeScript projects grow, so does the pain of waiting for the compiler. What once felt instant on a small codebase can turn into a frustrating bottleneck and lost productivity across large teams and codebases.
 
 In this talk, I’ll walk through how I used the TypeScript profiler to uncover hidden bottlenecks in a real-world monolith and applied a single fix that shaved minutes off every build. We didn’t need exotic tools or risky rewrites, just a better understanding of what the compiler was actually doing.`,
@@ -864,14 +871,12 @@ In this talk, I’ll walk through how I used the TypeScript profiler to uncover 
   },
   {
     slug: "kakehashi-sponsor-session",
-    title: "株式会社カケハシ",
+    title: "スポンサーLT",
     description: "TBD",
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
-    speakers: [
-      SPONSORS_BY_NAME['株式会社カケハシ'],      
-    ],
+    speakers: [SPONSORS_BY_NAME["株式会社カケハシ"]],
   },
 
   // 15:30 - 16:00 Sessions (30 minutes)
@@ -896,7 +901,8 @@ In this talk we'll peel back the covers and follow your code on its journey from
   },
   {
     slug: "javascript-prototype-override",
-    title: "Tragedy or Hope in the Commons: The Race for JavaScript Prototype Override",
+    title:
+      "Tragedy or Hope in the Commons: The Race for JavaScript Prototype Override",
     description: `JavaScript is a language of freedom. A defining feature of this freedom is the ability to override built-in prototypes.
 JavaScript also becomes a commons especially in the browser. It's a shared space where your application code, its dependencies, and even parts of browser extensions all co-exist within the same context. And, yes, malicious attackers also live there.
 In this commons, a constant struggle is happening between these stakeholders to override prototypes.
@@ -928,7 +934,8 @@ Outline
       {
         type: "speaker",
         name: "canalun",
-        avatarUrl: "https://github.com/canalun/icons/blob/main/canalun_logo.png?raw=true",
+        avatarUrl:
+          "https://github.com/canalun/icons/blob/main/canalun_logo.png?raw=true",
         bio: `Security Researcher at Flatt Security. Also developer of Firefox at Birchill.
 Browser Enthusiast. Bug Hunter.`,
       },
@@ -937,31 +944,20 @@ Browser Enthusiast. Bug Hunter.`,
   {
     slug: "tver-sponsor-session",
     title: "株式会社TVer",
-    description: "株式会社TVerのスポンサーセッション。",
-    kind: "sponsor session",
-    day: "1",
-    language: "Japanese",
-    speakers: [
-      {
-        type: "sponsor",
-        name: "株式会社TVer",
-        url: "https://tver.jp",
-        prText: "株式会社TVerのスポンサーセッション。",
-        logoUrl: emptyAvatar,
-        plan: "sponsor",
-      },
-    ],
-  },
-  {
-    slug: "cybozu-sponsor-session",
-    title: "サイボウズ株式会社",
     description: "TBD",
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
-    speakers: [
-      SPONSORS_BY_NAME['サイボウズ株式会社'],      
-    ],
+    speakers: [SPONSORS_BY_NAME["株式会社TVer"]],
+  },
+  {
+    slug: "cybozu-sponsor-session",
+    title: "スポンサーLT",
+    description: "TBD",
+    kind: "sponsor session",
+    day: "1",
+    language: "Japanese",
+    speakers: [SPONSORS_BY_NAME["サイボウズ株式会社"]],
   },
 
   // 16:00 - 16:30 Sessions (30 minutes)
@@ -999,25 +995,21 @@ Browser Enthusiast. Bug Hunter.`,
   },
   {
     slug: "cloudinary-sponsor-session",
-    title: "Cloudinary",
+    title: "スポンサーLT",
     description: "TBD",
     kind: "sponsor session",
     day: "1",
     language: "English",
-    speakers: [
-      SPONSORS_BY_NAME['Cloudinary'],      
-    ],
+    speakers: [SPONSORS_BY_NAME["Cloudinary"]],
   },
   {
     slug: "dwango-sponsor-session",
-    title: "株式会社ドワンゴ",
+    title: "スポンサーLT",
     description: "TBD",
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
-    speakers: [
-      SPONSORS_BY_NAME['株式会社ドワンゴ'],      
-    ],
+    speakers: [SPONSORS_BY_NAME["株式会社ドワンゴ"]],
   },
 
   // 16:30 - 17:00 Sessions (30 minutes) - Buffer time
@@ -1036,32 +1028,29 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
       {
         type: "speaker",
         name: "Jemima Abu",
-        avatarUrl: "https://www.jemimaabu.com/static/images/presskit/jemima-1.jpg",
+        avatarUrl:
+          "https://www.jemimaabu.com/static/images/presskit/jemima-1.jpg",
         bio: `Jemima Abu is an award-winning, self-taught Front End Developer who has been building accessible websites since 2017. She is a recognized Google Developer Expert, Microsoft MVP, and Certified Professional in Accessibility Core Competencies. She is passionate about improving diversity in tech and accessibility in web development.`,
       },
     ],
   },
   {
     slug: "money-forward-sponsor-session",
-    title: "株式会社マネーフォワード",
+    title: "スポンサーLT",
     description: "TBD",
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
-    speakers: [
-      SPONSORS_BY_NAME['株式会社マネーフォワード'],      
-    ],
+    speakers: [SPONSORS_BY_NAME["株式会社マネーフォワード"]],
   },
   {
     slug: "findy-sponsor-session",
-    title: "ファインディ株式会社",
+    title: "スポンサーLT",
     description: "TBD",
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
-    speakers: [
-      SPONSORS_BY_NAME['ファインディ株式会社'],      
-    ],
+    speakers: [SPONSORS_BY_NAME["ファインディ株式会社"]],
   },
 
   // 17:10 - 18:10 Sponsor LT
