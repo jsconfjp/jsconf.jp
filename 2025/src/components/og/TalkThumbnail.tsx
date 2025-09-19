@@ -1,5 +1,8 @@
 // OGPではimg要素しか使えないため警告を無視
 /* eslint-disable @next/next/no-img-element */
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+import { StaticImageData } from "next/image";
 import React from "react";
 import en from "@/../messages/en.json";
 import { ScheduledSession } from "@/constants/schedule";
@@ -7,8 +10,33 @@ import { Chip } from "./Chip";
 import { Logo } from "./Logo";
 import { Template } from "./Template";
 
+const DIR_NEXT = join(process.cwd(), ".next");
+
 type Props = {
   session: ScheduledSession & { kind: "talk" };
+};
+
+const toImageSrc = (src: string | StaticImageData) => {
+  if (typeof src === "string") {
+    return src;
+  }
+  // ビルド中のURLは実際のパスとは異なるため置き換え
+  const parts = src.src.split("/");
+  const absPath = join(
+    DIR_NEXT,
+    parts.slice(parts.indexOf("_next") + 1).join("/")
+  );
+  const avatarUrl = readFileSync(absPath, { encoding: "base64" });
+  if (src.src.endsWith(".jpg")) {
+    return `data:image/jpeg;base64,${avatarUrl}`;
+  }
+  if (src.src.endsWith(".png")) {
+    return `data:image/png;base64,${avatarUrl}`;
+  }
+  if (src.src.endsWith(".svg")) {
+    return `data:image/svg+xml;base64,${avatarUrl}`;
+  }
+  throw new Error(`Unsupported image format: ${src.src}`);
 };
 
 export function TalkThumbnail({ session }: Props) {
@@ -41,11 +69,11 @@ export function TalkThumbnail({ session }: Props) {
               >
                 <img
                   alt={speaker.name}
-                  src={
+                  src={toImageSrc(
                     speaker.type === "speaker"
                       ? speaker.avatarUrl
-                      : speaker.logoUrl as unknown as string
-                  }
+                      : speaker.logoUrl
+                  )}
                   width={120 / talk.speakers.length}
                   height={120 / talk.speakers.length}
                   tw="rounded-full"

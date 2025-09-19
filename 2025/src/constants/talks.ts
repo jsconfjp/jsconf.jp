@@ -1,5 +1,6 @@
 import { StaticImageData } from "next/image";
 import { Sponsor, SPONSORS_BY_NAME } from "./sponsors";
+import emptyAvatar from "../../public/speaker/250x250.png";
 import anamAhmedUrl from "../../public/speaker/anam-ahmed.jpg";
 import blagojJovanovUrl from "../../public/speaker/blagoj-jovanov.jpg";
 import deanSrebnikUrl from "../../public/speaker/dean-srebnik.jpg";
@@ -207,7 +208,7 @@ SharedArrayBufferの存在・歴史を確認しつつAtomics APIで何ができ�
       {
         type: "speaker",
         name: "ssssota (TOMIKAWA Sotaro)",
-        avatarUrl: "https://github.com/ssssota.png",
+        avatarUrl: "https://avatars.githubusercontent.com/u/15074382?v=4",
         bio: "株式会社ZOZOでフロントエンドエンジニア（テックリード）をしています。",
       },
     ],
@@ -340,7 +341,7 @@ If you’ve ever left a conference feeling like you just attended, not experienc
       {
         type: "speaker",
         name: "Ricky Kim",
-        avatarUrl: "https://scontent-nrt1-2.xx.fbcdn.net/v/t39.30808-6/468588922_10161308035459130_2539939599287845912_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=0b6b33&_nc_ohc=zXmoJjShXBIQ7kNvwHs1KEK&_nc_oc=AdkZLqOUlz6CdJ0nQ0UTWlWktJv1v4p3Wxznwjt3P5DKiNmeWmGn1A_CPT6DqFEK1N4&_nc_zt=23&_nc_ht=scontent-nrt1-2.xx&_nc_gid=XioU6C_-xsnVSW-PHAu0-A&oh=00_AfYas2LRE5zmK61_p561k7GHJuismgeUL6BAJb-xVX--KQ&oe=68C33E1B",
+        avatarUrl: emptyAvatar,
         bio: `I like figuring out how to make JavaScript bundles smaller and how to improve products using real feedback from users.
 For me, performance and user insight go hand in hand.`,
       },
@@ -362,7 +363,7 @@ For me, performance and user insight go hand in hand.`,
       {
         type: "speaker",
         name: "林 恭央",
-        avatarUrl: "https://placehold.jp/250x250.png",
+        avatarUrl: emptyAvatar,
         bio: "TBD",
       },
     ],
@@ -400,7 +401,7 @@ For me, performance and user insight go hand in hand.`,
       {
         type: "speaker",
         name: "奥村雄太",
-        avatarUrl: "https://placehold.jp/250x250.png",
+        avatarUrl: emptyAvatar,
         bio: `奥村雄太（株式会社Resilire エンジニア）。前職では LINE／出前館にてフロントエンドリプレイスやチームマネジメントを担当。現在は Resilire で IC として、デザインシステム導入、サーバサイドのリアーキテクチャ、Agentic Coding の導入などに取り組んでいる。直近は「インテント駆動フロントエンド」と MCP UI に注目している。趣味は将棋で、アマチュア代表としてプロとの対局経験あり。`,
       },
     ],
@@ -464,7 +465,7 @@ Whether you're a web developer looking to expand into TV development or seeking 
       {
         type: "speaker",
         name: "Giovanni Laquidara",
-        avatarUrl: "https://placehold.jp/250x250.png",
+        avatarUrl: emptyAvatar,
         bio: `Developer Advocate @ Amazon focused on devices, mobile apps and 👨‍💻👩‍💻 developer communities 🌎🌍🌏. Previously I worked as developer advocate, software engineer, VR and mobile developer and real-time software architect/developer. I like working with the cutting-edge technologies and people. Tinkering and sharing the experience.`,
       },
     ],
@@ -802,7 +803,7 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
       {
         type: "speaker",
         name: "Jarred Summer",
-        avatarUrl: "https://placehold.jp/250x250.png",
+        avatarUrl: emptyAvatar,
         bio: "TBD",
       },
     ],
@@ -887,7 +888,8 @@ In this talk we'll peel back the covers and follow your code on its journey from
       {
         type: "speaker",
         name: "Olivier Flückiger",
-        avatarUrl: "https://github.com/o-.png",
+        avatarUrl: "https://avatars.githubusercontent.com/u/710933?v=4",
+        // avatarUrl: "https://github.com/o-.png",
         bio: "I am an engineer on the Google V8 team, where I work on making JavaScript faster. Our focus is on pushing the boundaries of JavaScript performance with novel engine improvements and optimizations. Before V8 I developed a research VM for the R language called Ř. I love explaining and demystifying JITs for a wider audience.",
       },
     ],
@@ -945,7 +947,7 @@ Browser Enthusiast. Bug Hunter.`,
         name: "株式会社TVer",
         url: "https://tver.jp",
         prText: "株式会社TVerのスポンサーセッション。",
-        logoUrl: "https://placehold.jp/250x250.png",
+        logoUrl: emptyAvatar,
         plan: "sponsor",
       },
     ],
@@ -974,7 +976,7 @@ Browser Enthusiast. Bug Hunter.`,
       {
         type: "speaker",
         name: "TBD",
-        avatarUrl: "https://placehold.jp/250x250.png",
+        avatarUrl: emptyAvatar,
         bio: "TBD",
       },
     ],
@@ -1076,7 +1078,7 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
         name: "Various Sponsors",
         url: "https://jsconf.jp",
         prText: "Lightning talks by conference sponsors.",
-        logoUrl: "https://placehold.jp/250x250.png",
+        logoUrl: emptyAvatar,
         plan: "sponsor",
       },
     ],
@@ -1094,7 +1096,7 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
       {
         type: "speaker",
         name: "Jxck",
-        avatarUrl: "https://placehold.jp/250x250.png",
+        avatarUrl: emptyAvatar,
         bio: "Web technology expert and podcast host.",
       },
     ],
