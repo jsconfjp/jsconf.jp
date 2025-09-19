@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "vitest run"
+    "test": "vitest run",
+    "fetch-og-images": "node --experimental-strip-types --loader ./scripts/mock-img-loader.mjs scripts/fetch-og-images.ts"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -38,6 +39,7 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-n": "^17.19.0",
     "tailwindcss": "^4",
+    "tsx": "^4.20.5",
     "typescript": "^5",
     "vitest": "^3.2.1"
   }

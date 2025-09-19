@@ -1,4 +1,4 @@
-import { StaticImageData } from "next/image";
+import type { StaticImageData } from "next/image";
 import cloudinaryLogo from "../../public/sponsor/cloudinary.svg";
 import coderabbitLogo from "../../public/sponsor/coderabbit.svg";
 import cybozuLogo from '../../public/sponsor/cybozu.png'

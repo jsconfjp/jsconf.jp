@@ -46,7 +46,7 @@ export function TalkThumbnail({ session }: Props) {
     <Template>
       <div tw="flex-1 flex flex-col rounded-xl bg-white shadow-md">
         <main tw="flex-1 px-16 flex flex-col items-center justify-center">
-          <h1 tw="text-7xl font-bold" style={{ lineHeight: "1.3" }}>
+          <h1 tw="text-7xl font-bold" style={{ lineHeight: "1.2" }}>
             {talk.title}
           </h1>
           <div tw="flex items-center" style={{ gap: 8 }}>
@@ -59,30 +59,30 @@ export function TalkThumbnail({ session }: Props) {
             <Chip>{talk.language}</Chip>
           </div>
         </main>
-        <footer tw="flex items-end justify-between p-8">
+        <footer tw="flex items-end justify-between px-8 pb-8">
           <div tw="flex flex-col">
             {talk.speakers.map((speaker) => (
               <div
-                tw="flex items-center"
                 key={speaker.name}
+                tw="flex items-center"
                 style={{ gap: 16 }}
               >
                 {speaker.type === "speaker" ? (
                   <img
                     alt={speaker.name}
-                    src={toImageSrc(
-                      speaker.avatarUrl
-                    )}
+                    src={toImageSrc(speaker.avatarUrl)}
                     width={120 / talk.speakers.length}
                     height={120 / talk.speakers.length}
-                    tw="rounded-full object-cover"
+                    tw="rounded-full"
+                    style={{ objectFit: "cover" }}
                   />
                 ) : (
                   <img
                     alt={speaker.name}
                     src={toImageSrc(speaker.logoUrl)}
                     width={120 / talk.speakers.length}
-                    tw="object-contain"
+                    height={120 / talk.speakers.length}
+                    style={{ objectFit: "contain" }}
                   />
                 )}
                 <h2 tw="text-5xl font-bold">{speaker.name}</h2>

@@ -1,5 +1,6 @@
-import { StaticImageData } from "next/image";
-import { Sponsor, SPONSORS_BY_NAME } from "./sponsors";
+import type { StaticImageData } from "next/image";
+// @ts-expect-error see 2025/scripts/fetch-og-images.ts
+import { type Sponsor, SPONSORS_BY_NAME } from "./sponsors.ts";
 import emptyAvatar from "../../public/speaker/250x250.png";
 import anamAhmedUrl from "../../public/speaker/anam-ahmed.jpg";
 import blagojJovanovUrl from "../../public/speaker/blagoj-jovanov.jpg";
@@ -212,7 +213,7 @@ SharedArrayBufferの存在・歴史を確認しつつAtomics APIで何ができ�
     speakers: [
       {
         type: "speaker",
-        name: "ssssota (TOMIKAWA Sotaro)",
+        name: "TOMIKAWA Sotaro",
         avatarUrl: "https://avatars.githubusercontent.com/u/15074382?v=4",
         bio: "株式会社ZOZOでフロントエンドエンジニア（テックリード）をしています。",
       },
@@ -943,7 +944,7 @@ Browser Enthusiast. Bug Hunter.`,
   },
   {
     slug: "tver-sponsor-session",
-    title: "株式会社TVer",
+    title: "スポンサーLT",
     description: "TBD",
     kind: "sponsor session",
     day: "1",
