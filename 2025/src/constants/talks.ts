@@ -150,7 +150,6 @@ export const TALKS = [
     ],
   },
 
-  // 10:20 - 10:30 Sessions
   {
     slug: "whats-new-in-ecma-402",
     title: "What's New in ECMA-402",
@@ -239,7 +238,6 @@ We'll look into practical strategies for building applications where you can eff
     ],
   },
 
-  // 10:40 - 10:50 Sessions
   {
     slug: "in-doubt-what-to-pick-choose-qwik",
     title: "In doubt what to pick? Choose Qwik!",
@@ -327,7 +325,6 @@ Svelteへのコントリビューターとしても活動しています。`,
     ],
   },
 
-  // 10:50 - 11:00 Sessions
   {
     slug: "talks-arent-most-important",
     title: "Talks Aren’t the Most Important Thing at JSConf",
@@ -416,7 +413,6 @@ For me, performance and user insight go hand in hand.`,
     ],
   },
 
-  // 11:10 - 11:40 Sessions (30 minutes)
   {
     slug: "andromeda-future-of-typescript",
     title: "Andromeda - The Future Of TypeScript",
@@ -491,7 +487,6 @@ Whether you're a web developer looking to expand into TV development or seeking 
     speakers: [SPONSORS_BY_NAME["デンキヤギ株式会社"]],
   },
 
-  // 11:40 - 12:10 Sessions (30 minutes)
   {
     slug: "evolving-nodejs-module-loader",
     title: "Evolving the Node.js module loader",
@@ -574,7 +569,6 @@ AST×Reporterでテストから“観点カタログ”を自動生成し、LLM�
     speakers: [SPONSORS_BY_NAME["株式会社LayerX"]],
   },
 
-  // 13:10 - 13:40 Sessions (30 minutes)
   {
     slug: "handling-time-in-javascript-with-temporal",
     title: "Now and Next – Handling Time in JavaScript with Temporal",
@@ -644,7 +638,6 @@ Active contributor, releaser, and member of the Node.js Technical Steering Commi
     speakers: [SPONSORS_BY_NAME["ミイダス株式会社"]],
   },
 
-  // 13:40 - 14:10 Sessions (30 minutes)
   {
     slug: "state-of-the-web",
     title: "The State of the Web",
@@ -707,7 +700,6 @@ In 2022 we started working towards solving this problem in WinterCG, which has n
     speakers: [SPONSORS_BY_NAME["LINEヤフー株式会社"]],
   },
 
-  // 14:20 - 14:50 Sessions (30 minutes)
   {
     slug: "music-visualization-javascript",
     title: "Bringing Songs to Life: Music Visualization with JavaScript",
@@ -797,10 +789,9 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
     speakers: [SPONSORS_BY_NAME["株式会社令和トラベル"]],
   },
 
-  // 14:50 - 15:20 Sessions (30 minutes)
   {
     slug: "bun-video-talk",
-    title: "TBD",
+    title: "Bun (video talk)",
     description: "TBD",
     kind: "session",
     day: "1",
@@ -880,7 +871,6 @@ In this talk, I’ll walk through how I used the TypeScript profiler to uncover 
     speakers: [SPONSORS_BY_NAME["株式会社カケハシ"]],
   },
 
-  // 15:30 - 16:00 Sessions (30 minutes)
   {
     slug: "v8-from-script-to-call-rcx",
     title: "V8: from <script> to `call $rcx`",
@@ -961,7 +951,6 @@ Browser Enthusiast. Bug Hunter.`,
     speakers: [SPONSORS_BY_NAME["サイボウズ株式会社"]],
   },
 
-  // 16:00 - 16:30 Sessions (30 minutes)
   {
     slug: "technical-discussion-tc39",
     title: "Technical Discussion with TC39",
@@ -1013,7 +1002,6 @@ Browser Enthusiast. Bug Hunter.`,
     speakers: [SPONSORS_BY_NAME["株式会社ドワンゴ"]],
   },
 
-  // 16:30 - 17:00 Sessions (30 minutes) - Buffer time
   {
     slug: "i-cant-believe-its-not-javascript",
     title: "I Can't Believe It's Not JavaScript!",
@@ -1054,7 +1042,6 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
     speakers: [SPONSORS_BY_NAME["ファインディ株式会社"]],
   },
 
-  // 17:10 - 18:10 Sponsor LT
   {
     slug: "sponsor-lt-session",
     title: "Sponsor LT x 12",
@@ -1074,11 +1061,21 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
     ],
   },
 
-  // 18:20 - 18:50 Special Session
   {
-    slug: "tbd-by-jxck",
-    title: "TBD",
-    description: "Special session to be announced.",
+    slug: "technical-welfare-and-new-capitalistic-web-development",
+    title: "技術的福祉の受容と「新しい資本主義」的 Web 開発",
+    description: `去年 Web Developer Conference で行った以下のトークの続きという位置づけです。
+https://youtu.be/DRm2QBTqj_E
+
+ここで話していた「技術的福祉」を AI がもたらすとしたら、我々の「技術的貧困」はどう解決されるか。そのために必要なパラダイムシフトをどう「受容」するかについて。を中心に以下のような内容を考えています。
+
+- Web 開発における技術的「貧困」と「福祉」のおさらい
+- Web 開発は新しいパラダイムをどう「受容」してきたか
+- 開発がたどるのは「社会主義」か「新しい資本主義」か
+- 技術的ベーシックインカムはエンジニアを堕落させるか
+- 人間と AI 間の「非決定的出力」の質的差
+
+ただ、当日までにどういう状況になっているのかわからないので、内容はそれに応じて変化し得ます。`,
     kind: "keynote",
     day: "1",
     language: "Japanese",
@@ -1086,8 +1083,24 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
       {
         type: "speaker",
         name: "Jxck",
+        avatarUrl: 'https://logo.jxck.io/jxck.svg',
+        bio: "https://jxck.io",
+      },
+    ],
+  },
+  {
+    slug: "tbd-by-allen",
+    title: "TBD: Online live talk",
+    description: "TBD",
+    kind: "keynote",
+    day: "1",
+    language: "English",
+    speakers: [
+      {
+        type: "speaker",
+        name: "Allen Wirfs Brock",
         avatarUrl: emptyAvatar,
-        bio: "Web technology expert and podcast host.",
+        bio: "TBD",
       },
     ],
   },
