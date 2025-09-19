@@ -24,7 +24,7 @@ export function SponsorLogo({ sponsor }: Props) {
           src={sponsor.logoUrl}
           alt={sponsor.name}
           fill
-          objectFit="contain"
+          className="object-contain"
         />
       </div>
     </Link>

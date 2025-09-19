@@ -73,6 +73,9 @@ export default async function Page({ params }: Props) {
           >
             <div className="relative aspect-square w-48">
               <Image
+                className={
+                  speaker.type === "speaker" ? "object-cover" : "object-contain"
+                }
                 src={
                   speaker.type === "speaker"
                     ? speaker.avatarUrl
@@ -80,7 +83,6 @@ export default async function Page({ params }: Props) {
                 }
                 alt={`${speaker.name}'s avatar`}
                 fill
-                objectFit="cover"
               />
             </div>
             <div className="flex-1 flex flex-col gap-2">

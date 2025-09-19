@@ -68,8 +68,7 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
                       src={speaker.avatarUrl}
                       alt={`${speaker.name}'s avatar`}
                       fill
-                      objectFit="cover"
-                      className="rounded-full"
+                      className="rounded-full object-cover"
                     />
                   </div>
                 )}
