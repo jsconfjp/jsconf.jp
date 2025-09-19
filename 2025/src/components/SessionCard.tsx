@@ -62,19 +62,17 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
           <ul className="flex flex-col gap-1">
             {session.talk.speakers.map((speaker) => (
               <li key={speaker.name} className="flex items-center gap-2">
-                <div className="aspect-square w-6 h-6 relative">
-                  <Image
-                    src={
-                      speaker.type === "speaker"
-                        ? speaker.avatarUrl
-                        : speaker.logoUrl
-                    }
-                    alt={`${speaker.name}'s avatar`}
-                    fill
-                    objectFit="cover"
-                    className="rounded-full"
-                  />
-                </div>
+                {speaker.type === "speaker" && (
+                  <div className="aspect-square w-6 h-6 relative">
+                    <Image
+                      src={speaker.avatarUrl}
+                      alt={`${speaker.name}'s avatar`}
+                      fill
+                      objectFit="cover"
+                      className="rounded-full"
+                    />
+                  </div>
+                )}
                 <span>{speaker.name}</span>
               </li>
             ))}
