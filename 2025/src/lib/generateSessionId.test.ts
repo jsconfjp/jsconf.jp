@@ -113,7 +113,7 @@ describe("generateSessionId", () => {
 
     // Find and expose duplicates if they exist
     const duplicates = allIds.filter(
-      (id, index) => allIds.indexOf(id) !== index
+      (id, index) => allIds.indexOf(id) !== index,
     );
     expect(duplicates).toEqual([]);
 
@@ -122,7 +122,7 @@ describe("generateSessionId", () => {
 
     // Verify no empty/invalid IDs exist by filtering them out
     const validIds = allIds.filter(
-      (id) => id && typeof id === "string" && id.length > 0
+      (id) => id && typeof id === "string" && id.length > 0,
     );
     expect(validIds).toHaveLength(allIds.length);
   });

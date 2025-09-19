@@ -13,7 +13,7 @@ const pages = [
   { label: "Schedule", url: "/schedule" },
   { label: "Speakers", url: "/speakers" },
   { label: "CoC", url: "/doc/code-of-conduct" },
-].map(page => ({
+].map((page) => ({
   ...page,
   slug: page.url.split("/").filter(Boolean).join("-"),
 }));
@@ -22,7 +22,7 @@ const pageWithLocales = pages.flatMap((page) =>
     label: `${page.label} (${locale})`,
     url: `${prefix}/${locale}/${page.url}`,
     slug: `${locale}-${page.slug}`,
-  }))
+  })),
 );
 
 pageWithLocales.forEach(({ label, slug, url }) => {

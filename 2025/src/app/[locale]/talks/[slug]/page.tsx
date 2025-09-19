@@ -22,7 +22,7 @@ export function generateStaticParams(): Params[] {
     LOCALES.map((locale) => ({
       locale,
       slug: session.talk.slug,
-    }))
+    })),
   );
 }
 

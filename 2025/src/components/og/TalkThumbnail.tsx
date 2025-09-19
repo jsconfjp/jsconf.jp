@@ -24,7 +24,7 @@ const toImageSrc = (src: string | StaticImageData) => {
   const parts = src.src.split("/");
   const absPath = join(
     DIR_NEXT,
-    parts.slice(parts.indexOf("_next") + 1).join("/")
+    parts.slice(parts.indexOf("_next") + 1).join("/"),
   );
   const avatarUrl = readFileSync(absPath, { encoding: "base64" });
   if (src.src.endsWith(".jpg")) {

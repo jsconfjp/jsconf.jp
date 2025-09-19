@@ -1083,7 +1083,7 @@ https://youtu.be/DRm2QBTqj_E
       {
         type: "speaker",
         name: "Jxck",
-        avatarUrl: 'https://logo.jxck.io/jxck.svg',
+        avatarUrl: "https://logo.jxck.io/jxck.svg",
         bio: "https://jxck.io",
       },
     ],
@@ -1113,5 +1113,5 @@ export const TALKS_BY_SLUG: Record<TalkSlug, Talk> = TALKS.reduce(
     acc[talk.slug as TalkSlug] = talk;
     return acc;
   },
-  {} as Record<TalkSlug, Talk>
+  {} as Record<TalkSlug, Talk>,
 );

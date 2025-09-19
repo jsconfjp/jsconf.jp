@@ -22,7 +22,7 @@ export async function generateStaticParams(): Promise<Params[]> {
     talkSessions.map((session) => ({
       locale,
       slug: session.talk.slug,
-    }))
+    })),
   );
 }
 

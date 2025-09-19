@@ -58,7 +58,7 @@ export function TimeTable() {
               <div
                 className={clsx(
                   "w-6 h-6 rounded-full",
-                  getTrackClassNames(track)
+                  getTrackClassNames(track),
                 )}
               />
               {t(track)}

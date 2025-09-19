@@ -19,10 +19,9 @@ const pages = [
   url: `http://localhost:3001${join(
     nextConfig.basePath!,
     path,
-    "opengraph-image"
+    "opengraph-image",
   )}`,
-  slug:
-    path === "/" ? "top" : path.split("/").filter(Boolean).join("-"),
+  slug: path === "/" ? "top" : path.split("/").filter(Boolean).join("-"),
 }));
 
 main();
@@ -37,10 +36,10 @@ async function main() {
         .then((res) => Readable.fromWeb(res.body! as unknown as ReadableStream))
         .then(async (stream) => {
           const dist = stream.pipe(
-            createWriteStream(join(DIR_OG_IMAGES, `${slug}.png`))
+            createWriteStream(join(DIR_OG_IMAGES, `${slug}.png`)),
           );
           await finished(dist);
         });
-    })
+    }),
   );
 }

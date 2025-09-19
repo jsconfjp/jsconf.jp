@@ -600,7 +600,9 @@ export const SCHEDULE: ScheduledSession[] = [
 
   {
     kind: "talk",
-    talk: TALKS_BY_SLUG["technical-welfare-and-new-capitalistic-web-development"],
+    talk: TALKS_BY_SLUG[
+      "technical-welfare-and-new-capitalistic-web-development"
+    ],
     track: "A",
     day: "1",
     startTime: "19:20",

@@ -10,12 +10,12 @@ const getSessionColor = (session: ScheduledSession) => {
       return session.track === "A"
         ? "bg-track-a/50 border-track-a"
         : session.track === "B"
-        ? "bg-track-b/50 border-track-b"
-        : session.track === "C"
-        ? "bg-track-c/50 border-track-c"
-        : session.track === "D"
-        ? "bg-track-d/50 border-track-d"
-        : "";
+          ? "bg-track-b/50 border-track-b"
+          : session.track === "C"
+            ? "bg-track-c/50 border-track-c"
+            : session.track === "D"
+              ? "bg-track-d/50 border-track-d"
+              : "";
     case "reception":
       return "bg-slate-100/80 border-slate-400";
     case "opening":
@@ -40,7 +40,7 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
         getSessionColor(session),
         session.kind === "talk"
           ? "cursor-pointer hover:shadow-md"
-          : "cursor-auto"
+          : "cursor-auto",
       )}
     >
       {session.kind === "talk" ? (

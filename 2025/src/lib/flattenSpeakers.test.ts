@@ -63,7 +63,7 @@ describe("flattenSpeakers", () => {
 
     // talk-1 has 2 speakers, so there should be 2 entries
     const talk1Entries = flattened.filter(
-      (item) => item.talk.slug === "talk-1"
+      (item) => item.talk.slug === "talk-1",
     );
     expect(talk1Entries.length).toBe(2);
   });
@@ -74,7 +74,7 @@ describe("flattenSpeakers", () => {
     // Verify correct relationships are maintained
     flattened.forEach((item) => {
       const originalTalk = mockTalks.find(
-        (talk) => talk.slug === item.talk.slug
+        (talk) => talk.slug === item.talk.slug,
       );
       expect(originalTalk).toBeDefined();
       if (originalTalk) {
@@ -87,10 +87,10 @@ describe("flattenSpeakers", () => {
     const flattened = flattenSpeakers(mockTalks);
 
     const regularSpeakers = flattened.filter(
-      (item) => item.speaker.type === "speaker"
+      (item) => item.speaker.type === "speaker",
     );
     const sponsorSpeakers = flattened.filter(
-      (item) => item.speaker.type === "sponsor"
+      (item) => item.speaker.type === "sponsor",
     );
 
     expect(regularSpeakers.length).toBe(2); // Speaker A and B
