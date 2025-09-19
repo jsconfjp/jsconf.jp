@@ -46,8 +46,6 @@ export function TimeTable() {
       .join("\n");
   }, [timeSlots]);
 
-  console.log(SCHEDULE);
-
   return (
     <div>
       <div className="tracks-header sticky top-0 z-10">
