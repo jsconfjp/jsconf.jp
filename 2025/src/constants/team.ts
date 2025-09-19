@@ -45,6 +45,16 @@ export const VOLUNTEER_TEAM: TeamMember[] = [
     url: "https://github.com/Himenon",
     avatarUrl: "https://avatars.githubusercontent.com/u/6715229?v=4",
   },
+  {
+    name: "Maiko Yasunaga",
+    url: "https://www.facebook.com/ma1mai",
+    avatarUrl: "https://scontent-itm1-1.xx.fbcdn.net/v/t39.30808-6/381116119_7007317115968454_6645932012558235085_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=jE1jJ6q0M-wQ7kNvwHqM2kT&_nc_oc=Adlm44w86Rn5kRXl4Ov2q52nQlp3bz5lLObU55cQN_4bQ0OmNFu8_ZW7ZyMMJYOtlZE&_nc_zt=23&_nc_ht=scontent-itm1-1.xx&_nc_gid=Qx7_S7ovzdxixEg3RehKng&oh=00_AfbQOllMd2X9-ZifmdqGMG8aOleytnbsH1meht7Srq7jwQ&oe=68D01F93",
+  },
+  {
+    name: "shimataro",
+    url: "https://x.com/shimataro999",
+    avatarUrl: "https://avatars1.githubusercontent.com/u/3448502",
+  },
 ];
 
 export const ORGANIZING_TEAM: TeamMember[] = [
