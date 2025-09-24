@@ -1,16 +1,13 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
-import { loadGoogleFont } from "./font";
+
+const DIR_FONTS = join(process.cwd(), "public", "fonts");
 
 export async function generateImage(children: React.ReactElement) {
   const [notoSans400, notoSans700] = await Promise.all([
-    loadGoogleFont({
-      family: "Noto Sans JP",
-      weight: 400,
-    }),
-    loadGoogleFont({
-      family: "Noto Sans JP",
-      weight: 700,
-    }),
+    readFile(join(DIR_FONTS, "NotoSansJP-Regular.ttf")),
+    readFile(join(DIR_FONTS, "NotoSansJP-Bold.ttf")),
   ]);
 
   return new ImageResponse(children, {

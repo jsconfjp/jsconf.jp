@@ -2,21 +2,41 @@ import type { StaticImageData } from "next/image";
 // @ts-expect-error see 2025/scripts/fetch-og-images.ts
 import { type Sponsor, SPONSORS_BY_NAME } from "./sponsors.ts";
 import emptyAvatar from "../../public/speaker/250x250.png";
-import anamAhmedUrl from "../../public/speaker/anam-ahmed.jpg";
-import blagojJovanovUrl from "../../public/speaker/blagoj-jovanov.jpg";
-import deanSrebnikUrl from "../../public/speaker/dean-srebnik.jpg";
-import islandryuUrl from "../../public/speaker/islandryu.jpg";
-import jiko21Url from "../../public/speaker/jiko21.jpg";
-import kazukiImamuraUrl from "../../public/speaker/kazuki-imamura.jpg";
-import kojiKojiUrl from "../../public/speaker/koji-koji.jpg";
-import lucaMugnainiUrl from "../../public/speaker/luca-mugnaini.jpg";
-import petamorikenUrl from "../../public/speaker/petamoriken.jpg";
-import sachaGreifUrl from "../../public/speaker/sacha-greif.jpg";
-import shaneCarrUrl from "../../public/speaker/shane-carr.jpg";
-import toshiakiNagayamaUrl from "../../public/speaker/toshiaki-nagayama.jpg";
-import trungVoUrl from "../../public/speaker/trung-vo.jpg";
-import ursulaCervantesUrl from "../../public/speaker/ursula-cervantes.jpg";
-import yutaIkeokuUrl from "../../public/speaker/yuta-ikeoku.jpg";
+import akfmSatoAvatar from "../../public/speaker/akfm-sato.png";
+import anamAhmedAvatar from "../../public/speaker/anam-ahmed.jpg";
+import andreuBotellaAvatar from "../../public/speaker/andreu-botella.jpg";
+import baseballyamaAvatar from "../../public/speaker/baseballyama.jpg";
+import berlysiaAvatar from "../../public/speaker/berlysia.jpg";
+import blagojJovanovAvatar from "../../public/speaker/blagoj-jovanov.jpg";
+import canalunAvatar from "../../public/speaker/canalun.png";
+import deanSrebnikAvatar from "../../public/speaker/dean-srebnik.jpg";
+import islandryuAvatar from "../../public/speaker/islandryu.jpg";
+import itaiSatatiAvatar from "../../public/speaker/itai-satati.jpg";
+import jemimaAbuAvatar from "../../public/speaker/jemima-abu.jpg";
+import jiko21Avatar from "../../public/speaker/jiko21.jpg";
+import joyeeCheungAvatar from "../../public/speaker/joyee-cheung.jpg";
+import jxckAvatar from "../../public/speaker/jxck.svg";
+import kazukiImamuraAvatar from "../../public/speaker/kazuki-imamura.jpg";
+import kojiKojiAvatar from "../../public/speaker/koji-koji.jpg";
+import leoKettmeirAvatar from "../../public/speaker/leo-kettmeir.jpg";
+import lucaMugnainiAvatar from "../../public/speaker/luca-mugnaini.jpg";
+import manishKumarAvatar from "../../public/speaker/manish-kumar.jpg";
+import mapleAvatar from "../../public/speaker/maple.jpg";
+import marcoIppolitoAvatar from "../../public/speaker/marco-ippolito.png";
+import olivierFluckigerAvatar from "../../public/speaker/olivier-fluckiger.jpg";
+import otaMeshiAvatar from "../../public/speaker/ota-meshi.jpg";
+import petamorikenAvatar from "../../public/speaker/petamoriken.jpg";
+import progfayAvatar from "../../public/speaker/progfay.png";
+import sachaGreifAvatar from "../../public/speaker/sacha-greif.jpg";
+import shaneCarrAvatar from "../../public/speaker/shane-carr.jpg";
+import sosukeSuzukiAvatar from "../../public/speaker/sosuke-suzuki.jpg";
+import taigaKiyokawaAvatar from "../../public/speaker/taiga-kiyokawa.jpg";
+import thomasSteinerAvatar from "../../public/speaker/thomas-steiner.jpg";
+import tomikawaSotaroAvatar from "../../public/speaker/tomikawa-sotaro.png";
+import toshiakiNagayamaAvatar from "../../public/speaker/toshiaki-nagayama.jpg";
+import trungVoAvatar from "../../public/speaker/trung-vo.jpg";
+import ursulaCervantesAvatar from "../../public/speaker/ursula-cervantes.jpg";
+import yutaIkeokuAvatar from "../../public/speaker/yuta-ikeoku.jpg";
 
 type Day = "1";
 type Kind = "keynote" | "session" | "LT" | "sponsor session" | "sponsor LT";
@@ -57,7 +77,7 @@ export const TALKS = [
       {
         type: "speaker",
         name: "Manish Kumar",
-        avatarUrl: "https://avatars.githubusercontent.com/u/54291836?v=4",
+        avatarUrl: manishKumarAvatar,
         bio: "Manish is a Web Platform Engineer at Mercari Inc., where he works on the Mercari login page and also on Platform toolings for Web Developers. He has previously contributed to the Nodejs.org website development.",
       },
     ],
@@ -86,7 +106,7 @@ export const TALKS = [
       {
         type: "speaker",
         name: "池奥裕太",
-        avatarUrl: yutaIkeokuUrl,
+        avatarUrl: yutaIkeokuAvatar,
         bio: `
 エムスリー株式会社 / ソフトウェアエンジニア
 
@@ -122,7 +142,7 @@ export const TALKS = [
       {
         type: "speaker",
         name: "Taiga Kiyokawa",
-        avatarUrl: "https://avatars.githubusercontent.com/taigakiyokawa",
+        avatarUrl: taigaKiyokawaAvatar,
         bio: `フロントエンドエンジニア。2020年にマネーフォワード入社。現在は、toB向けプロダクトの横断組織におけるフロントエンド領域の責任者として、デザインシステムMFUIの開発やアクセシビリティ向上、開発標準化などに注力しています。`,
       },
     ],
@@ -143,8 +163,7 @@ export const TALKS = [
       {
         type: "speaker",
         name: "berlysia",
-        avatarUrl:
-          "https://pbs.twimg.com/profile_images/1584515082364456960/RdKrz-tN_400x400.jpg",
+        avatarUrl: berlysiaAvatar,
         bio: `フロントエンドを得意領域とするWebエンジニアです。株式会社ドワンゴの教育事業でWebフロントエンドを担当しています。仕事でも趣味でも縦書きを扱っています。`,
       },
     ],
@@ -162,7 +181,7 @@ export const TALKS = [
       {
         type: "speaker",
         name: "Shane Carr",
-        avatarUrl: shaneCarrUrl,
+        avatarUrl: shaneCarrAvatar,
         bio: "Shane F. Carr is convener of TC39-TG2 (the internationalization working group within ECMA), chair of the ICU4X TC in Unicode, and a Staff Software Engineer at Google. Shane routinely gives talks at conferences, virtual events, and community meetup groups on topics including Unicode, JavaScript, and internationalization.",
       },
     ],
@@ -189,7 +208,7 @@ export const TALKS = [
       {
         type: "speaker",
         name: "jiko21",
-        avatarUrl: jiko21Url,
+        avatarUrl: jiko21Avatar,
         bio: "フロントエンドエンジニア。",
       },
     ],
@@ -213,7 +232,7 @@ SharedArrayBufferの存在・歴史を確認しつつAtomics APIで何ができ�
       {
         type: "speaker",
         name: "TOMIKAWA Sotaro",
-        avatarUrl: "https://avatars.githubusercontent.com/u/15074382?v=4",
+        avatarUrl: tomikawaSotaroAvatar,
         bio: "株式会社ZOZOでフロントエンドエンジニア（テックリード）をしています。",
       },
     ],
@@ -232,7 +251,7 @@ We'll look into practical strategies for building applications where you can eff
       {
         type: "speaker",
         name: "Luca Mugnaini",
-        avatarUrl: lucaMugnainiUrl,
+        avatarUrl: lucaMugnainiAvatar,
         bio: `Luca is a software engineer at Rakuten. He is a passionate Functional Programming advocate. Originally from Italy, he has been living in Tokyo for several years.`,
       },
     ],
@@ -253,7 +272,7 @@ lightning-fast web applications (project structure, routes, loading data from th
       {
         type: "speaker",
         name: "Blagoj Jovanov",
-        avatarUrl: blagojJovanovUrl,
+        avatarUrl: blagojJovanovAvatar,
         bio: `Blagoj is working as Principal Software Engineer at G+D Netcetera. 
 Most of his development work was done for applications in the 3-D Secure Payment area
 as a fullstack developer (Spring Boot + Angular). Currently he is Lead Dev of a SAFe team
@@ -277,7 +296,7 @@ updates in his area of expertise.`,
       {
         type: "speaker",
         name: "永山俊明",
-        avatarUrl: toshiakiNagayamaUrl,
+        avatarUrl: toshiakiNagayamaAvatar,
         bio: `株式会社サザビーリーグHR 横浜業務サポートセンター所属
 業務ではC#がメインですが、サブ言語としてJSの動向も追っています。`,
       },
@@ -301,7 +320,7 @@ Reactが実現するランタイムでの柔軟性（Virtual DOM、Fiber Archite
       {
         type: "speaker",
         name: "Maple",
-        avatarUrl: "https://github.com/fuuki12.png",
+        avatarUrl: mapleAvatar,
         bio: `株式会社SODAのフロントエンドテックリードです。
 Svelteへのコントリビューターとしても活動しています。`,
       },
@@ -318,7 +337,7 @@ Svelteへのコントリビューターとしても活動しています。`,
       {
         type: "speaker",
         name: "今村かずき",
-        avatarUrl: kazukiImamuraUrl,
+        avatarUrl: kazukiImamuraAvatar,
         bio: `IPA デジタル基盤センター デジタルエンジニアリング部 ソフトウェアエンジニアリンググループ（オープンソース推進担当）
 1974年生まれ。九州芸術工科大学音響設計学科卒。Webエンジニア歴13年。2018年よりシビックテック活動を始める。2024年3月より現職。コミュニティ活動名は「GitHub女将」。`,
       },
@@ -387,7 +406,7 @@ For me, performance and user insight go hand in hand.`,
       {
         type: "speaker",
         name: "progfay",
-        avatarUrl: "https://avatars.githubusercontent.com/u/19568747",
+        avatarUrl: progfayAvatar,
         bio: "Web フロントエンドエンジニア。趣味でブラウザの動向を追っかけたりしてます。",
       },
     ],
@@ -425,7 +444,7 @@ For me, performance and user insight go hand in hand.`,
       {
         type: "speaker",
         name: "Dean Srebnik",
-        avatarUrl: deanSrebnikUrl,
+        avatarUrl: deanSrebnikAvatar,
         bio: `Dean Srebnik is a prolific open-source developer and systems engineer based in New Jersey, renowned for his contributions to the Deno and Rust ecosystems. As a co-founder of the Deno Windowing project and a core member of the Denosaurs and TryNova teams, Dean has been instrumental in advancing cross-platform runtime development and modern JavaScript tooling.
 
 Dean's work spans a diverse array of projects, including the Nova ECMAScript engine written in Rust, the Andromeda JS/TS runtime, and the Netsaur machine learning library. He is also the co-creator of Whistle, a programming language designed to push the boundaries of JavaScript capabilities.
@@ -451,7 +470,7 @@ An invited expert for the WinterCG (Winter Community Group), Dean is deeply invo
       {
         type: "speaker",
         name: "akfm_sato",
-        avatarUrl: "https://avatars.githubusercontent.com/u/25711332?v=4",
+        avatarUrl: akfmSatoAvatar,
         bio: `仕事では横断組織でフロントエンドエキスパート的なことをしてます。「Next.jsの考え方」など、Next.jsやテストの話をよくZennで執筆してます。`,
       },
     ],
@@ -499,7 +518,7 @@ Whether you're a web developer looking to expand into TV development or seeking 
       {
         type: "speaker",
         name: "Joyee Cheung",
-        avatarUrl: "https://avatars.githubusercontent.com/u/4299420?v=4",
+        avatarUrl: joyeeCheungAvatar,
         bio: "Joyee is a software engineer at Igalia. As a member of the Node.js Technical Steering Committee and a V8 committer, she loves tinkering with JS runtime/engine to improve their developer experience, stability and performance.",
       },
     ],
@@ -534,7 +553,7 @@ AST×Reporterでテストから“観点カタログ”を自動生成し、LLM�
       {
         type: "speaker",
         name: "小山 功二(koji-koji)",
-        avatarUrl: kojiKojiUrl,
+        avatarUrl: kojiKojiAvatar,
         bio: `プロダクトエンジニアの小山功二です。
 現在はクラスメソッド株式会社のデータ事業本部に所属し、新規プロダクト開発を進めています。
 
@@ -554,7 +573,7 @@ AST×Reporterでテストから“観点カタログ”を自動生成し、LLM�
       {
         type: "speaker",
         name: "Anam Ahmed",
-        avatarUrl: anamAhmedUrl,
+        avatarUrl: anamAhmedAvatar,
         bio: "VP of engineering at Zelf AI. Anam is a software engineer who grew up writing code. Now leads the JavaScript community in Bangladesh.",
       },
     ],
@@ -586,7 +605,7 @@ Even though browser support is still experimental, there are reliable polyfills 
       {
         type: "speaker",
         name: "Trung Vo",
-        avatarUrl: trungVoUrl,
+        avatarUrl: trungVoAvatar,
         bio: `Trung Vo is a seasoned web developer, tech community builder, and recognised Google Developer Expert in Angular. As the founder of Angular Singapore, he leads initiatives to build and nurture the software developer community in Singapore. Trung frequently speaks at international tech conferences, sharing insights on modern development practices to make the web fast and delightful for end users.
 
 At Ascenda, he innovates towards loyalty programs for financial services worldwide, making rewards more accessible and driving a deeper understanding of customer behaviour.`,
@@ -605,7 +624,7 @@ Presentation will be given in Japanese with English slides.`,
       {
         type: "speaker",
         name: "嶋龍平",
-        avatarUrl: islandryuUrl,
+        avatarUrl: islandryuAvatar,
         bio: `Nodejs Collaborator (inspector team)
 https://github.com/islandryu`,
       },
@@ -622,7 +641,7 @@ https://github.com/islandryu`,
       {
         type: "speaker",
         name: "Marco Ippolito",
-        avatarUrl: "https://github.com/marco-ippolito.png",
+        avatarUrl: marcoIppolitoAvatar,
         bio: `Marco is a Senior Security Engineer at HeroDevs.
 Active contributor, releaser, and member of the Node.js Technical Steering Committee, he is a renowned international speaker and a Microsoft MVP. Marco is actively involved in many projects within the Node.js ecosystem and also serves as a delegate in TC39.`,
       },
@@ -649,7 +668,7 @@ Active contributor, releaser, and member of the Node.js Technical Steering Commi
       {
         type: "speaker",
         name: "Sacha Greif",
-        avatarUrl: sachaGreifUrl,
+        avatarUrl: sachaGreifAvatar,
         bio: "Lead Data Mixologist, Devographics",
       },
     ],
@@ -665,8 +684,7 @@ Active contributor, releaser, and member of the Node.js Technical Steering Commi
       {
         type: "speaker",
         name: "Thomas Steiner",
-        avatarUrl:
-          "https://assets.toot.cafe/accounts/avatars/000/055/387/original/90043e56ba11f2b3.jpeg",
+        avatarUrl: thomasSteinerAvatar,
         bio: `Thomas Steiner is a Developer Relations Engineer at Google, focused on Web AI, WebAssembly, and Project Fugu. He's an alum of University of Lyon (Postdoc), Polytechnic University of Barcelona (Ph. D.), and University of Karlsruhe (MA).`,
       },
     ],
@@ -684,8 +702,7 @@ In 2022 we started working towards solving this problem in WinterCG, which has n
       {
         type: "speaker",
         name: "Andreu Botella",
-        avatarUrl:
-          "https://www.igalia.com/assets/i/igalians/andreu-botella.jpg",
+        avatarUrl: andreuBotellaAvatar,
         bio: `I'm a browser and standards engineer at Igalia, working on a number of things from implementing CSS features in browsers to working on standards proposals for both CSS and JavaScript. I am also one of the co-chairs of WinterTC, where we work on standards for server-side JavaScript runtimes.`,
       },
     ],
@@ -715,7 +732,7 @@ Whether you're a developer curious about generative art or a musician with a lov
       {
         type: "speaker",
         name: "Ursula Cervantes",
-        avatarUrl: ursulaCervantesUrl,
+        avatarUrl: ursulaCervantesAvatar,
         bio: `Ursula Cervantes is a senior web developer from Peru, currently based in Germany. She specializes in building creative, user-driven interfaces and has a passion for experimental side projects that blend technology with art. 
 
 Outside of work, she’s often found making pottery, playing drums, or hiking through the woods—always in search of rhythm, texture, and pattern in the world around her.`,
@@ -746,13 +763,13 @@ https://github.com/acornjs/acorn/commit/b4ae0d29384f2bf3fafac7d42f1c3e2ee9a48204
       {
         type: "speaker",
         name: "ota-meshi",
-        avatarUrl: "https://github.com/ota-meshi.png",
+        avatarUrl: otaMeshiAvatar,
         bio: "ESLint / Vue / Svelte などのチームメンバー",
       },
       {
         type: "speaker",
         name: "baseballyama",
-        avatarUrl: "https://github.com/baseballyama.png",
+        avatarUrl: baseballyamaAvatar,
         bio: "Svelteコアチームメンバー",
       },
     ],
@@ -771,7 +788,7 @@ Find out what the team has been working on, including newer exciting projects.`,
       {
         type: "speaker",
         name: "Leo Kettmeir",
-        avatarUrl: "https://kettmeir.dev/profile.jpeg",
+        avatarUrl: leoKettmeirAvatar,
         bio: `I am a software engineer at Deno, where I've implemented key Web APIs—including WebSocket, WebGPU, and Web Storage—and contributed to core runtime features.
 
 I focus on improving developer experience through tooling and documentation.
@@ -837,7 +854,7 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
       {
         type: "speaker",
         name: "Sosuke Suzuki",
-        avatarUrl: "https://avatars.githubusercontent.com/u/14838850?v=4",
+        avatarUrl: sosukeSuzukiAvatar,
         bio: "JavaScriptエンジン開発者。",
       },
     ],
@@ -856,7 +873,7 @@ In this talk, I’ll walk through how I used the TypeScript profiler to uncover 
       {
         type: "speaker",
         name: "Itai Satati",
-        avatarUrl: "https://avatars.githubusercontent.com/u/679826",
+        avatarUrl: itaiSatatiAvatar,
         bio: `Itai is a software developer with nearly a decade of experience and a love for large-scale web systems, the nuts and bolts of payment systems, performance optimizations, and all things TypeScript. Outside of coding, he’s a licensed pilot and marathon runner.`,
       },
     ],
@@ -884,8 +901,7 @@ In this talk we'll peel back the covers and follow your code on its journey from
       {
         type: "speaker",
         name: "Olivier Flückiger",
-        avatarUrl: "https://avatars.githubusercontent.com/u/710933?v=4",
-        // avatarUrl: "https://github.com/o-.png",
+        avatarUrl: olivierFluckigerAvatar,
         bio: "I am an engineer on the Google V8 team, where I work on making JavaScript faster. Our focus is on pushing the boundaries of JavaScript performance with novel engine improvements and optimizations. Before V8 I developed a research VM for the R language called Ř. I love explaining and demystifying JITs for a wider audience.",
       },
     ],
@@ -925,8 +941,7 @@ Outline
       {
         type: "speaker",
         name: "canalun",
-        avatarUrl:
-          "https://github.com/canalun/icons/blob/main/canalun_logo.png?raw=true",
+        avatarUrl: canalunAvatar,
         bio: `Security Researcher at Flatt Security. Also developer of Firefox at Birchill.
 Browser Enthusiast. Bug Hunter.`,
       },
@@ -978,7 +993,7 @@ Browser Enthusiast. Bug Hunter.`,
       {
         type: "speaker",
         name: "森内建太 (@petamoriken)",
-        avatarUrl: petamorikenUrl,
+        avatarUrl: petamorikenAvatar,
         bio: "Web標準を追うのが好きで、趣味でTC39会議をまとめたりZennに記事を書いたりしています。7年くらいFloat16ArrayをECMAScriptに入れてもらう活動をしていました。Denoコントリビューター。",
       },
     ],
@@ -1017,8 +1032,7 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
       {
         type: "speaker",
         name: "Jemima Abu",
-        avatarUrl:
-          "https://www.jemimaabu.com/static/images/presskit/jemima-1.jpg",
+        avatarUrl: jemimaAbuAvatar,
         bio: `Jemima Abu is an award-winning, self-taught Front End Developer who has been building accessible websites since 2017. She is a recognized Google Developer Expert, Microsoft MVP, and Certified Professional in Accessibility Core Competencies. She is passionate about improving diversity in tech and accessibility in web development.`,
       },
     ],
@@ -1083,7 +1097,7 @@ https://youtu.be/DRm2QBTqj_E
       {
         type: "speaker",
         name: "Jxck",
-        avatarUrl: "https://logo.jxck.io/jxck.svg",
+        avatarUrl: jxckAvatar,
         bio: "https://jxck.io",
       },
     ],
