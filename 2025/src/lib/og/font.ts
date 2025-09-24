@@ -48,6 +48,7 @@ export async function loadGoogleFonts<
       if (i === maxRetries - 1) {
         throw error;
       }
+      await new Promise((resolve) => setTimeout(resolve, 1000 * 2 ** i));
     }
   }
   throw new Error("Failed to load Google Fonts");
