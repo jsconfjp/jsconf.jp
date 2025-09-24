@@ -12,10 +12,10 @@ export function SponsorGrid({ sponsors, showPrText = false }: Props) {
   const t = useTranslations("sponsors");
 
   const premiumSponsors = sponsors.filter(
-    (sponsor) => sponsor.plan === "premium"
+    (sponsor) => sponsor.plan === "premium",
   );
   const otherSponsors = sponsors.filter(
-    (sponsor) => sponsor.plan === "sponsor"
+    (sponsor) => sponsor.plan === "sponsor",
   );
 
   return (

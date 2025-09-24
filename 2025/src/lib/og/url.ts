@@ -8,10 +8,10 @@ export const makeDataUrl = (imagePath: string) => {
   const mimeType = [".jpg", ".jpeg"].includes(extension)
     ? "image/jpeg"
     : extension === ".png"
-    ? "image/png"
-    : extension === ".svg"
-    ? "image/svg+xml"
-    : null;
+      ? "image/png"
+      : extension === ".svg"
+        ? "image/svg+xml"
+        : null;
   if (!mimeType) {
     throw new Error(`Cannot determine MIME type from image path: ${imagePath}`);
   }

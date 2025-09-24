@@ -1,0 +1,13 @@
+pre-commit:
+  parallel: true
+  commands:
+    prettier:
+      glob: "*.{json,md,yml,ts,tsx,js,mjs,css}"
+      run: |
+        npx prettier -w {staged_files}
+      stage_fixed: true
+    prisma:
+      glob: "*.prisma"
+      run: |
+        npx prisma format {staged_files}
+      stage_fixed: true

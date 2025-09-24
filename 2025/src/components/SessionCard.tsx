@@ -10,12 +10,12 @@ const getSessionColor = (session: ScheduledSession) => {
       return session.track === "A"
         ? "bg-track-a/50 border-track-a"
         : session.track === "B"
-        ? "bg-track-b/50 border-track-b"
-        : session.track === "C"
-        ? "bg-track-c/50 border-track-c"
-        : session.track === "D"
-        ? "bg-track-d/50 border-track-d"
-        : "";
+          ? "bg-track-b/50 border-track-b"
+          : session.track === "C"
+            ? "bg-track-c/50 border-track-c"
+            : session.track === "D"
+              ? "bg-track-d/50 border-track-d"
+              : "";
     case "reception":
       return "bg-slate-100/80 border-slate-400";
     case "opening":
@@ -40,7 +40,7 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
         getSessionColor(session),
         session.kind === "talk"
           ? "cursor-pointer hover:shadow-md"
-          : "cursor-auto"
+          : "cursor-auto",
       )}
     >
       {session.kind === "talk" ? (
@@ -62,19 +62,16 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
           <ul className="flex flex-col gap-1">
             {session.talk.speakers.map((speaker) => (
               <li key={speaker.name} className="flex items-center gap-2">
-                <div className="aspect-square w-6 h-6 relative">
-                  <Image
-                    src={
-                      speaker.type === "speaker"
-                        ? speaker.avatarUrl
-                        : speaker.logoUrl
-                    }
-                    alt={`${speaker.name}'s avatar`}
-                    fill
-                    objectFit="cover"
-                    className="rounded-full"
-                  />
-                </div>
+                {speaker.type === "speaker" && (
+                  <div className="aspect-square w-6 h-6 relative">
+                    <Image
+                      src={speaker.avatarUrl}
+                      alt={`${speaker.name}'s avatar`}
+                      fill
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                )}
                 <span>{speaker.name}</span>
               </li>
             ))}

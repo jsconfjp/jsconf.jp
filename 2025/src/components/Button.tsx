@@ -27,7 +27,7 @@ export function Button({
         full && "w-full",
         variant === "primary" && "bg-primary text-white hover:bg-primary/80",
         variant === "secondary" &&
-          "bg-secondary text-white hover:bg-secondary/80"
+          "bg-secondary text-white hover:bg-secondary/80",
       )}
     >
       <div
@@ -37,7 +37,7 @@ export function Button({
           size === "sm" && "py-1 text-sm",
           size === "md" && "py-2 text-base",
           size === "lg" && "py-2 text-lg",
-          size === "xl" && "py-3 text-xl"
+          size === "xl" && "py-3 text-xl",
         )}
       >
         {children}

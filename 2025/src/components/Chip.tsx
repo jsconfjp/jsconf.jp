@@ -20,7 +20,7 @@ export function Chip({
         size === "default" ? "py-1 px-4 text-sm" : "py-0.5 px-2 text-xs",
         track && track !== "all"
           ? getTrackClassNames(track)
-          : "bg-secondary text-white"
+          : "bg-secondary text-white",
       )}
     >
       {children}

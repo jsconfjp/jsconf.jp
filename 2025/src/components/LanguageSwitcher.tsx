@@ -26,7 +26,7 @@ export function LanguageSwitcher() {
             "pr-2 font-bold underline underline-offset-8 decoration-4",
             locale === lang
               ? "decoration-primary"
-              : "cursor-pointer decoration-transparent hover:decoration-dimmed"
+              : "cursor-pointer decoration-transparent hover:decoration-dimmed",
           )}
         >
           {label}

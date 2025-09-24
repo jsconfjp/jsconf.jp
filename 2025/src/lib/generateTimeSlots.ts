@@ -11,7 +11,7 @@ export const TIME_SLOT_INTERVAL_MINUTES = 5;
  * to ensure consistent spacing and alignment of sessions.
  */
 export function generateTimeSlots(
-  sessions: ScheduledSession[] = SCHEDULE
+  sessions: ScheduledSession[] = SCHEDULE,
 ): number[] {
   if (!sessions || sessions.length === 0) {
     throw new Error("Sessions array cannot be empty for time slot generation");

@@ -12,15 +12,15 @@ export function findTalkSession(slug: TalkSlug): TalkSession;
 // For testing only: finds a talk session from custom sessions array
 export function findTalkSession<T extends readonly ScheduledSession[]>(
   slug: ExtractTalkSlug<T>,
-  sessions: T
+  sessions: T,
 ): TalkSession;
 // Implementation: handles both overloads with loose string typing
 export function findTalkSession(
   slug: string,
-  sessions: readonly ScheduledSession[] = SCHEDULE
+  sessions: readonly ScheduledSession[] = SCHEDULE,
 ): TalkSession {
   const session = sessions.find(
-    (s) => s.kind === "talk" && s.talk.slug === slug
+    (s) => s.kind === "talk" && s.talk.slug === slug,
   );
   if (!session) {
     throw new Error(`Talk session not found for slug: ${slug}`);

@@ -15,7 +15,7 @@ export function PageContainer({
         <h1
           className={clsx(
             "text-3xl font-bold",
-            centerizeTitle && "text-center"
+            centerizeTitle && "text-center",
           )}
         >
           {title}

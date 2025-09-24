@@ -19,7 +19,7 @@ export async function loadGoogleFont({
   const url = `https://fonts.googleapis.com/css2?${params.toString()}`;
   const css = await fetch(url).then((res) => res.text());
   const fontUrl = css.match(
-    /src: url\((.+)\) format\('(opentype|truetype)'\)/
+    /src: url\((.+)\) format\('(opentype|truetype)'\)/,
   )?.[1];
   if (!fontUrl) {
     throw new Error("Font file not found in CSS fetched from Google Fonts");

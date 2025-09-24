@@ -16,7 +16,7 @@ export function SponsorLogo({ sponsor }: Props) {
       className={clsx(
         "flex items-center justify-center bg-white border-1 border-dimmed",
         sponsor.plan === "premium" && "min-h-52 p-10",
-        sponsor.plan === "sponsor" && "min-h-32 p-5"
+        sponsor.plan === "sponsor" && "min-h-32 p-5",
       )}
     >
       <div className="relative w-full h-full">
@@ -24,7 +24,7 @@ export function SponsorLogo({ sponsor }: Props) {
           src={sponsor.logoUrl}
           alt={sponsor.name}
           fill
-          objectFit="contain"
+          className="object-contain"
         />
       </div>
     </Link>

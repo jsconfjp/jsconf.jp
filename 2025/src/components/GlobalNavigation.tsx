@@ -16,7 +16,7 @@ export function GlobalNavigation() {
   const pathname = usePathname();
   const navigations = [
     {
-      ready: false,
+      ready: true,
       label: t("speakers"),
       href: "/speakers",
     },
@@ -26,7 +26,7 @@ export function GlobalNavigation() {
       href: "/venue",
     },
     {
-      ready: false,
+      ready: true,
       label: t("schedule"),
       href: "/schedule",
     },
@@ -88,7 +88,7 @@ export function GlobalNavigation() {
                     primary && "bg-primary text-white hover:decoration-white",
                     active
                       ? "decoration-primary"
-                      : "decoration-transparent hover:decoration-dimmed"
+                      : "decoration-transparent hover:decoration-dimmed",
                   )}
                 >
                   {label}
@@ -98,14 +98,14 @@ export function GlobalNavigation() {
                 <div key={href} className="py-5 h-full flex-1">
                   &nbsp;
                 </div>
-              )
+              ),
           )}
         </nav>
       </div>
       <nav
         className={clsx(
           "flex-1 items-center gap-4 border-t-1 border-dimmed divide-y-1 divide-dimmed/50",
-          isOpen ? "visible" : "hidden"
+          isOpen ? "visible" : "hidden",
         )}
       >
         {readyItems.map(({ label, href, primary, active }) => (
@@ -117,7 +117,7 @@ export function GlobalNavigation() {
               primary && "bg-primary text-white hover:decoration-white",
               active
                 ? "decoration-primary"
-                : "decoration-transparent hover:decoration-dimmed"
+                : "decoration-transparent hover:decoration-dimmed",
             )}
           >
             {label}

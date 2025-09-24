@@ -19,7 +19,7 @@ describe("generateTimeSlots", () => {
 
   it("should throw error for empty sessions array", () => {
     expect(() => generateTimeSlots([])).toThrow(
-      "Sessions array cannot be empty for time slot generation"
+      "Sessions array cannot be empty for time slot generation",
     );
   });
 
@@ -42,7 +42,7 @@ describe("generateTimeSlots", () => {
     ];
 
     expect(() => generateTimeSlots(invalidSessions)).toThrow(
-      "Invalid time range: start time must be before end time"
+      "Invalid time range: start time must be before end time",
     );
   });
 });

@@ -26,7 +26,7 @@ export function SpeakerGrid({ speakers }: Props) {
                 }
                 alt={`${speaker.name}'s avatar`}
                 fill
-                objectFit="cover"
+                className="object-cover"
               />
             </div>
             <h2 className="text-center py-2 text-md">{speaker.name}</h2>
