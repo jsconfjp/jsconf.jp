@@ -1,4 +1,4 @@
-export async function loadGoogleFont({
+async function loadGoogleFont({
   family,
   weight,
   text,
@@ -26,4 +26,29 @@ export async function loadGoogleFont({
   }
 
   return fetch(fontUrl).then((res) => res.arrayBuffer());
+}
+
+export async function loadGoogleFonts<
+  Font extends {
+    family: string;
+    weight: number;
+    text?: string;
+  },
+>(
+  fonts: Font[],
+  options: {
+    maxRetries?: number; // default: 1
+  } = {},
+): Promise<ArrayBuffer[]> {
+  const maxRetries = options?.maxRetries ?? 1;
+  for (let i = 0; i < maxRetries; i++) {
+    try {
+      return Promise.all(fonts.map((font) => loadGoogleFont(font)));
+    } catch (error) {
+      if (i === maxRetries - 1) {
+        throw error;
+      }
+    }
+  }
+  throw new Error("Failed to load Google Fonts");
 }

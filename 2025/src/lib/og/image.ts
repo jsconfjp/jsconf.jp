@@ -1,16 +1,16 @@
 import { ImageResponse } from "next/og";
-import { loadGoogleFont } from "./font";
+import { loadGoogleFonts } from "./font";
 
 export async function generateImage(children: React.ReactElement) {
-  const [notoSans400, notoSans700] = await Promise.all([
-    loadGoogleFont({
+  const [notoSans400, notoSans700] = await loadGoogleFonts([
+    {
       family: "Noto Sans JP",
       weight: 400,
-    }),
-    loadGoogleFont({
+    },
+    {
       family: "Noto Sans JP",
       weight: 700,
-    }),
+    },
   ]);
 
   return new ImageResponse(children, {
