@@ -1077,19 +1077,8 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
 
   {
     slug: "technical-welfare-and-new-capitalistic-web-development",
-    title: "技術的福祉の受容と「新しい資本主義」的 Web 開発",
-    description: `去年 Web Developer Conference で行った以下のトークの続きという位置づけです。
-https://youtu.be/DRm2QBTqj_E
-
-ここで話していた「技術的福祉」を AI がもたらすとしたら、我々の「技術的貧困」はどう解決されるか。そのために必要なパラダイムシフトをどう「受容」するかについて。を中心に以下のような内容を考えています。
-
-- Web 開発における技術的「貧困」と「福祉」のおさらい
-- Web 開発は新しいパラダイムをどう「受容」してきたか
-- 開発がたどるのは「社会主義」か「新しい資本主義」か
-- 技術的ベーシックインカムはエンジニアを堕落させるか
-- 人間と AI 間の「非決定的出力」の質的差
-
-ただ、当日までにどういう状況になっているのかわからないので、内容はそれに応じて変化し得ます。`,
+    title: "TBD",
+    description: `TBD`,
     kind: "keynote",
     day: "1",
     language: "Japanese",
