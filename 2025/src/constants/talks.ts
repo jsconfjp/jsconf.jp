@@ -816,7 +816,7 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
     speakers: [
       {
         type: "speaker",
-        name: "Jarred Summer",
+        name: "Jarred Sumner",
         avatarUrl: emptyAvatar,
         bio: "TBD",
       },
