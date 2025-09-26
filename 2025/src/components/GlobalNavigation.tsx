@@ -36,10 +36,11 @@ export function GlobalNavigation() {
       href: "/sponsors",
     },
     {
-      ready: false,
+      ready: true,
       label: t("tickets"),
-      href: "https://example.com",
+      href: "https://pretix.eu/jsconfjp/2025/",
       primary: true,
+      target: "_blank",
     },
   ].map((item) => ({
     ...item,
@@ -78,11 +79,12 @@ export function GlobalNavigation() {
         </nav>
         <nav className="flex-1 items-center gap-4 hidden lg:flex">
           {[...spacerItems, ...readyItems].map(
-            ({ label, href, primary, ready, active }) =>
+            ({ label, href, primary, ready, active, target }) =>
               ready ? (
                 <Link
                   key={href}
                   href={href}
+                  target={target}
                   className={clsx(
                     "py-5 h-full flex-1 flex items-center justify-center text-lg font-bold underline underline-offset-8 decoration-4",
                     primary && "bg-primary text-white hover:decoration-white",
