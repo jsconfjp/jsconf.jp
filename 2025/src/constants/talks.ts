@@ -936,7 +936,7 @@ Outline
 `,
     kind: "session",
     day: "1",
-    language: "Japanese",
+    language: "English",
     speakers: [
       {
         type: "speaker",
