@@ -39,6 +39,7 @@
   },
   "schedule": {
     "kind": {
+      "streaming": "Stream",
       "reception": "Doors Open",
       "opening": "Opening",
       "closed": "Closed",
