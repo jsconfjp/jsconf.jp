@@ -855,7 +855,7 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
         type: "speaker",
         name: "Sosuke Suzuki",
         avatarUrl: sosukeSuzukiAvatar,
-        bio: "JavaScriptエンジン開発者。",
+        bio: "Systems Engineer at Bun, WebKit reviewer",
       },
     ],
   },
