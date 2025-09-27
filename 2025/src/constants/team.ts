@@ -61,6 +61,11 @@ export const VOLUNTEER_TEAM: TeamMember[] = [
     url: "https://github.com/awkwardlyjoyful",
     avatarUrl: "https://avatars.githubusercontent.com/u/114798856?v=4",
   },
+  {
+    name: "Jacob Sullivan",
+    url: "https://github.com/nakajimayoshi",
+    avatarUrl: "https://avatars.githubusercontent.com/u/52870481?v=4",
+  },
 ];
 
 export const ORGANIZING_TEAM: TeamMember[] = [
