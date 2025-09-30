@@ -43,7 +43,7 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
           : "cursor-auto",
       )}
     >
-      {session.kind === "talk" ? (
+      {session.kind === "talk" || session.kind === "streaming" ? (
         <div className="flex flex-col gap-1 items-start">
           <div className="flex gap-1">
             {session.track !== "all" && (
@@ -58,7 +58,10 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
             </Chip>
             <Chip size="sm">{session.talk.language}</Chip>
           </div>
-          <div className="font-bold text-md">{session.talk.title}</div>
+          <div className="font-bold text-md">
+            {session.kind === "streaming" ? `(${t("streaming")}) ` : ""}
+            {session.talk.title}
+          </div>
           <ul className="flex flex-col gap-1">
             {session.talk.speakers.map((speaker) => (
               <li key={speaker.name} className="flex items-center gap-2">

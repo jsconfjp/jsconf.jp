@@ -39,6 +39,7 @@
   },
   "schedule": {
     "kind": {
+      "streaming": "ストリーム",
       "reception": "開場",
       "opening": "オープニング",
       "closed": "クローズ",
