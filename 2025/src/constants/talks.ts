@@ -819,7 +819,7 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
         type: "speaker",
         name: "Jarred Sumner",
         avatarUrl: jarredSumnerAvatar,
-        bio: "Builing Bun",
+        bio: "Building Bun",
       },
     ],
   },
