@@ -12,6 +12,7 @@ import canalunAvatar from "../../public/speaker/canalun.png";
 import deanSrebnikAvatar from "../../public/speaker/dean-srebnik.jpg";
 import islandryuAvatar from "../../public/speaker/islandryu.jpg";
 import itaiSatatiAvatar from "../../public/speaker/itai-satati.jpg";
+import jarredSumnerAvatar from "../../public/speaker/jarred-sumner.jpg";
 import jemimaAbuAvatar from "../../public/speaker/jemima-abu.jpg";
 import jiko21Avatar from "../../public/speaker/jiko21.jpg";
 import joyeeCheungAvatar from "../../public/speaker/joyee-cheung.jpg";
@@ -817,8 +818,8 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
       {
         type: "speaker",
         name: "Jarred Sumner",
-        avatarUrl: emptyAvatar,
-        bio: "TBD",
+        avatarUrl: jarredSumnerAvatar,
+        bio: "Builing Bun",
       },
     ],
   },
