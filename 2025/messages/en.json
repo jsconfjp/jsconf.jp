@@ -57,6 +57,10 @@
       "LT": "LT",
       "sponsor session": "Sponsor session",
       "sponsor LT": "Sponsor LT"
+    },
+    "language": {
+      "English": "English",
+      "Japanese": "Japanese"
     }
   },
   "venue": {
