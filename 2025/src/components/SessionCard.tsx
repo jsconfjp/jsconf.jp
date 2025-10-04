@@ -32,6 +32,7 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
   const t = useTranslations("schedule.kind");
   const tKind = useTranslations("talks.kind");
   const tTrack = useTranslations("talks.track");
+  const tLanguage = useTranslations("talks.language");
 
   return (
     <div
@@ -56,7 +57,7 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
             <Chip size="sm" track={session.track}>
               {tKind(session.talk.kind)}
             </Chip>
-            <Chip size="sm">{session.talk.language}</Chip>
+            <Chip size="sm">{tLanguage(session.talk.language)}</Chip>
           </div>
           <div className="font-bold text-md">{session.talk.title}</div>
           <ul className="flex flex-col gap-1">
