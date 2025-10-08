@@ -14,6 +14,8 @@ export function Markdown({ children }: { children: string }) {
             {children}
           </code>
         ),
+        p: ({ children }) => <p className="my-2">{children}</p>,
+        hr: () => <hr className="border-gray-100 my-4" />,
       }}
     >
       {children}

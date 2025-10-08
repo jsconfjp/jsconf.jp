@@ -3,6 +3,7 @@ import type { StaticImageData } from "next/image";
 import { type Sponsor, SPONSORS_BY_NAME } from "./sponsors.ts";
 import emptyAvatar from "../../public/speaker/250x250.png";
 import akfmSatoAvatar from "../../public/speaker/akfm-sato.png";
+import allenWirfsBrockAvatar from "../../public/speaker/allen-wirfs-brock.jpg";
 import anamAhmedAvatar from "../../public/speaker/anam-ahmed.jpg";
 import andreuBotellaAvatar from "../../public/speaker/andreu-botella.jpg";
 import baseballyamaAvatar from "../../public/speaker/baseballyama.jpg";
@@ -23,7 +24,7 @@ import leoKettmeirAvatar from "../../public/speaker/leo-kettmeir.jpg";
 import lucaMugnainiAvatar from "../../public/speaker/luca-mugnaini.jpg";
 import manishKumarAvatar from "../../public/speaker/manish-kumar.jpg";
 import mapleAvatar from "../../public/speaker/maple.jpg";
-import marcoIppolitoAvatar from "../../public/speaker/marco-ippolito.png";
+import marcoIppolitoAvatar from "../../public/speaker/marco-ippolito.jpg";
 import olivierFluckigerAvatar from "../../public/speaker/olivier-fluckiger.jpg";
 import otaMeshiAvatar from "../../public/speaker/ota-meshi.jpg";
 import petamorikenAvatar from "../../public/speaker/petamoriken.jpg";
@@ -32,6 +33,7 @@ import sachaGreifAvatar from "../../public/speaker/sacha-greif.jpg";
 import shaneCarrAvatar from "../../public/speaker/shane-carr.jpg";
 import sosukeSuzukiAvatar from "../../public/speaker/sosuke-suzuki.jpg";
 import taigaKiyokawaAvatar from "../../public/speaker/taiga-kiyokawa.jpg";
+import takaoHayashiAvatar from "../../public/speaker/takao-hayashi.jpg";
 import thomasSteinerAvatar from "../../public/speaker/thomas-steiner.jpg";
 import tomikawaSotaroAvatar from "../../public/speaker/tomikawa-sotaro.png";
 import toshiakiNagayamaAvatar from "../../public/speaker/toshiaki-nagayama.jpg";
@@ -389,7 +391,7 @@ For me, performance and user insight go hand in hand.`,
       {
         type: "speaker",
         name: "林 恭央",
-        avatarUrl: emptyAvatar,
+        avatarUrl: takaoHayashiAvatar,
         bio: "TBD",
       },
     ],
@@ -1094,8 +1096,25 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
   },
   {
     slug: "tbd-by-allen",
-    title: "TBD: Online live talk",
-    description: "TBD",
+    title: "From Chaos to Harmony: A History of JavaScript（混沌から調和へ ― JavaScriptの歴史）",
+    description: [
+      `A History of JavaScript In 2025, the World Wide Web is ubiquitous with over a billion websites accessible from billions of web-connected devices. Each of these devices runs a web browser or similar programs that are able to display or otherwise process the pages and apps those websites make available. The majority of web pages include source code written in JavaScript. Arguably the world’s most broadly deployed programming language, JavaScript is not only used for web pages but also for complex server, desktop, and embedded applications.
+
+It all started in 1995 when the Web was new, tiny, chaotic, and in the early days of changing the world. Brendan Eich, a developer, working on the Netscape web browser, was tasked with creating a Java-sidekick web-scripting language. JavaScript, created in an epic ten-day hack, shipped first as a de facto Web standard.
+
+One of the reasons for the success of the web is that it is based upon non-proprietary open technologies. Anybody should be able to create a web page that can be hosted by a variety of web servers from different vendors and accessed by a variety of browsers. But interoperability among independent implementations requires common specifications that all implementations must support. From its earliest days it was understood that JavaScript would need some form of standard specification. In 1996, the standardization process for JavaScript was begun.
+
+We are here today because of the importance of modern JavaScript and we care about how it might evolve in the future. But history has lessons for us. We will be best prepared to build the future of JavaScript if we understand earlier phases of its development and evolution. This talk sets the stage for the future by taking a deep dive into the design decisions and techno-social processes that shaped modern standard JavaScript.`,
+"---",
+"",
+    `2025年現在、ウェブは世界中に浸透し、数十億のデバイスから数十億のウェブサイトへアクセスできるようになっている。ほとんどのデバイスはブラウザや類似のソフトウェアを搭載し、ウェブページやアプリを処理している。そして、その大多数にはJavaScriptのコードが使われている。JavaScriptは世界で最も広く利用されるプログラミング言語のひとつであり、ウェブだけでなくサーバーやデスクトップ、組み込みアプリケーションにも活用されている。
+
+その始まりは1995年。当時のウェブは小規模で混沌としていたが、世界を変えつつあった。Netscapeで働いていたブレンダン・アイクが、Javaと組み合わせるウェブ向けスクリプト言語の開発を任され、わずか10日間の開発でJavaScriptを完成させた。JavaScriptは事実上のウェブ標準として登場したのである。
+
+ウェブが発展した背景には、オープンで非プロプライエタリな技術に基づいていたことがある。誰でも自由にウェブページを作成し、異なるベンダーのサーバーやブラウザで利用できるようにするには、共通の仕様が不可欠だった。1996年にJavaScriptの標準化が始まったのもそのためである。
+
+現代においてJavaScriptがこれほど重要な存在である以上、その未来を考えるには過去を学ぶ必要がある。本講演では、現在の標準的なJavaScriptを形作った設計上の決断や社会技術的プロセスを振り返り、未来を築くための視座を提供する。`
+    ].join("\n\n"),
     kind: "keynote",
     day: "1",
     language: "English",
@@ -1103,7 +1122,7 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
       {
         type: "speaker",
         name: "Allen Wirfs Brock",
-        avatarUrl: emptyAvatar,
+        avatarUrl: allenWirfsBrockAvatar,
         bio: "TBD",
       },
     ],
