@@ -392,7 +392,7 @@ For me, performance and user insight go hand in hand.`,
         type: "speaker",
         name: "林 恭央",
         avatarUrl: takaoHayashiAvatar,
-        bio: "TBD",
+        bio: "ヒールか、ヒーローか。悪夢か、奇跡か。Frontend Engineer@Tokyo",
       },
     ],
   },
@@ -811,8 +811,10 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
 
   {
     slug: "bun-video-talk",
-    title: "Bun (video talk)",
-    description: "TBD",
+    title: "Bunで実現する高速レンダリング（原題：Rendering at the speed of Bun） (video talk)",
+    description: `モダンなアプリケーション開発では、静的サイト生成、サーバーサイドレンダリング、ルーティング、ホットリロードといった複数のツールを組み合わせる必要があり、その多くは速度低下や複雑性の増大を招いてきた。
+Bunの新しいRendering APIは、これらの要素をひとつに統合し、Bunならではの高いパフォーマンスと優れた開発体験を提供する。
+本講演では、Rendering APIの仕組み、速度に最適化された理由、そしてそれが開発者にモダンなフルスタックアプリケーションをBunで構築する力をどのように与えるのかをジャレッドが解説する。`,
     kind: "session",
     day: "1",
     language: "English",
