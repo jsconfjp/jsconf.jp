@@ -2,7 +2,9 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Chip } from "@/components/Chip";
+import { IcalButton } from "@/components/IcalButton";
 import { Markdown } from "@/components/Markdown";
+import { Dropdown, DropdownButton, DropdownContent, DropdownItem, DropdownList } from "@/components/og/Dropdown";
 import { PageContainer } from "@/components/PageContainer";
 import { TalkSlug } from "@/constants/talks";
 import { Locale, LOCALES } from "@/i18n/constants";
@@ -54,13 +56,29 @@ export default async function Page({ params }: Props) {
         <time>
           {session.startTime}-{session.endTime}
         </time>
-        <p className="my-1 flex items-center gap-2">
+        <div className="my-1 flex items-center gap-2">
           <Chip>{t(`kind.${session.talk.kind}`)}</Chip>
           {session.track !== "all" && (
             <Chip track={session.track}>{t(`track.${session.track}`)}</Chip>
           )}
           <Chip>{session.talk.language}</Chip>
-        </p>
+          <Dropdown>
+            <DropdownButton className="bg-amber-300">{"🗓️" + " " + t('interactivity.addToCalendar')}</DropdownButton>
+            <DropdownContent>
+              <DropdownList>
+                <DropdownItem>
+                  <IcalButton session={session} calendarType={"Google"}></IcalButton>
+                </DropdownItem>
+                <DropdownItem>
+                  <IcalButton session={session} calendarType={"Outlook"}></IcalButton>
+                </DropdownItem>
+                  <DropdownItem>
+                  <IcalButton session={session} calendarType={"ICS"}></IcalButton>
+                </DropdownItem>
+              </DropdownList>
+            </DropdownContent>
+          </Dropdown>
+        </div>
       </div>
       <div className="mt-4">
         <Markdown>{session.talk.description}</Markdown>
