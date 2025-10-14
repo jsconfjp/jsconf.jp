@@ -250,7 +250,7 @@ export const SCHEDULE: ScheduledSession[] = [
   },
   {
     kind: "talk",
-    talk: TALKS_BY_SLUG["nextjs-over-nextjs"],
+    talk: TALKS_BY_SLUG["nextjs-caching-re-architecture"],
     track: "B",
     day: "1",
     startTime: "13:00",
