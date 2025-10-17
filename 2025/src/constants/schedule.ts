@@ -42,7 +42,12 @@ export type ScheduledSession = {
         | "networking";
     }
 );
+
 export type TalkSession = Extract<ScheduledSession, { kind: "talk" }>;
+export type StreamingSession = Extract<
+  ScheduledSession,
+  { kind: "streaming " }
+>;
 
 export const SCHEDULE: ScheduledSession[] = [
   {

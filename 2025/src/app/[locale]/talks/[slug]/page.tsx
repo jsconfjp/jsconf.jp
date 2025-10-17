@@ -2,14 +2,21 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Chip } from "@/components/Chip";
-import { IcalButton } from "@/components/IcalButton";
+import { CalendarSession, IcalButton } from "@/components/IcalButton";
 import { Markdown } from "@/components/Markdown";
-import { Dropdown, DropdownButton, DropdownContent, DropdownItem, DropdownList } from "@/components/og/Dropdown";
+import {
+  Dropdown,
+  DropdownButton,
+  DropdownContent,
+  DropdownItem,
+  DropdownList,
+} from "@/components/og/Dropdown";
 import { PageContainer } from "@/components/PageContainer";
 import { TalkSlug } from "@/constants/talks";
 import { Locale, LOCALES } from "@/i18n/constants";
 import { findTalkSession } from "@/lib/findTalkSession";
 import { getTalkSessions } from "@/lib/getTalkSessions";
+import { CalendarLinks } from "@/components/CalendarLinks";
 
 type Params = { locale: Locale; slug: string };
 
@@ -62,22 +69,7 @@ export default async function Page({ params }: Props) {
             <Chip track={session.track}>{t(`track.${session.track}`)}</Chip>
           )}
           <Chip>{session.talk.language}</Chip>
-          <Dropdown>
-            <DropdownButton className="bg-amber-300">{"🗓️" + " " + t('interactivity.addToCalendar')}</DropdownButton>
-            <DropdownContent>
-              <DropdownList>
-                <DropdownItem>
-                  <IcalButton session={session} calendarType={"Google"}></IcalButton>
-                </DropdownItem>
-                <DropdownItem>
-                  <IcalButton session={session} calendarType={"Outlook"}></IcalButton>
-                </DropdownItem>
-                  <DropdownItem>
-                  <IcalButton session={session} calendarType={"ICS"}></IcalButton>
-                </DropdownItem>
-              </DropdownList>
-            </DropdownContent>
-          </Dropdown>
+          <CalendarLinks session={session} />
         </div>
       </div>
       <div className="mt-4">
