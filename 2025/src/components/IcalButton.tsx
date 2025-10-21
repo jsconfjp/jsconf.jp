@@ -16,7 +16,7 @@ export type CalendarType = "Google" | "Outlook" | "ICS";
 export type CalendarSession = TalkSession | StreamingSession;
 
 type Props = {
-  session: CalendarSession;
+  sessions: CalendarSession[];
   calendarType: CalendarType;
   text?: string;
 };
@@ -149,17 +149,19 @@ const CALENDAR_HANDLERS = {
   ICS: downloadIcsFile,
 } as const;
 
-export function IcalButton({ session, calendarType, text }: Props) {
+export function IcalButton({ sessions, calendarType, text }: Props) {
   const path = usePathname();
 
   const handleClick = () => {
-    const pageUrl = new URL(path, window.location.origin).href;
-    const handler = CALENDAR_HANDLERS[calendarType];
-    if (calendarType === "ICS") {
-      handler(session, pageUrl);
-    } else {
-      const url = handler(session, pageUrl) as string;
-      window.open(url, "_blank");
+    if (sessions.length === 1) {
+      const pageUrl = new URL(path, window.location.origin).href;
+      const handler = CALENDAR_HANDLERS[calendarType];
+      if (calendarType === "ICS") {
+        handler(sessions[0], pageUrl);
+      } else {
+        const url = handler(sessions[0], pageUrl) as string;
+        window.open(url, "_blank");
+      }
     }
   };
 
