@@ -3,6 +3,7 @@ import type { StaticImageData } from "next/image";
 import { type Sponsor, SPONSORS_BY_NAME } from "./sponsors.ts";
 import emptyAvatar from "../../public/speaker/250x250.png";
 import akfmSatoAvatar from "../../public/speaker/akfm-sato.png";
+import allenWirfsBrockAvatar from "../../public/speaker/allen-wirfs-brock.jpg";
 import anamAhmedAvatar from "../../public/speaker/anam-ahmed.jpg";
 import andreuBotellaAvatar from "../../public/speaker/andreu-botella.jpg";
 import baseballyamaAvatar from "../../public/speaker/baseballyama.jpg";
@@ -12,6 +13,7 @@ import canalunAvatar from "../../public/speaker/canalun.png";
 import deanSrebnikAvatar from "../../public/speaker/dean-srebnik.jpg";
 import islandryuAvatar from "../../public/speaker/islandryu.jpg";
 import itaiSatatiAvatar from "../../public/speaker/itai-satati.jpg";
+import jarredSumnerAvatar from "../../public/speaker/jarred-sumner.jpg";
 import jemimaAbuAvatar from "../../public/speaker/jemima-abu.jpg";
 import jiko21Avatar from "../../public/speaker/jiko21.jpg";
 import joyeeCheungAvatar from "../../public/speaker/joyee-cheung.jpg";
@@ -22,7 +24,7 @@ import leoKettmeirAvatar from "../../public/speaker/leo-kettmeir.jpg";
 import lucaMugnainiAvatar from "../../public/speaker/luca-mugnaini.jpg";
 import manishKumarAvatar from "../../public/speaker/manish-kumar.jpg";
 import mapleAvatar from "../../public/speaker/maple.jpg";
-import marcoIppolitoAvatar from "../../public/speaker/marco-ippolito.png";
+import marcoIppolitoAvatar from "../../public/speaker/marco-ippolito.jpg";
 import olivierFluckigerAvatar from "../../public/speaker/olivier-fluckiger.jpg";
 import otaMeshiAvatar from "../../public/speaker/ota-meshi.jpg";
 import petamorikenAvatar from "../../public/speaker/petamoriken.jpg";
@@ -31,6 +33,7 @@ import sachaGreifAvatar from "../../public/speaker/sacha-greif.jpg";
 import shaneCarrAvatar from "../../public/speaker/shane-carr.jpg";
 import sosukeSuzukiAvatar from "../../public/speaker/sosuke-suzuki.jpg";
 import taigaKiyokawaAvatar from "../../public/speaker/taiga-kiyokawa.jpg";
+import takaoHayashiAvatar from "../../public/speaker/takao-hayashi.jpg";
 import thomasSteinerAvatar from "../../public/speaker/thomas-steiner.jpg";
 import tomikawaSotaroAvatar from "../../public/speaker/tomikawa-sotaro.png";
 import toshiakiNagayamaAvatar from "../../public/speaker/toshiaki-nagayama.jpg";
@@ -388,8 +391,8 @@ For me, performance and user insight go hand in hand.`,
       {
         type: "speaker",
         name: "林 恭央",
-        avatarUrl: emptyAvatar,
-        bio: "TBD",
+        avatarUrl: takaoHayashiAvatar,
+        bio: "ヒールか、ヒーローか。悪夢か、奇跡か。Frontend Engineer@Tokyo",
       },
     ],
   },
@@ -454,8 +457,8 @@ An invited expert for the WinterCG (Winter Community Group), Dean is deeply invo
     ],
   },
   {
-    slug: "nextjs-over-nextjs",
-    title: "Next.js over the Next.js",
+    slug: "nextjs-caching-re-architecture",
+    title: "Next.js Caching - Legacy, Improvement, Re-Architecture",
     description: `"use cache"は、Next.jsのキャッシュを再設計するために導入されたディレクティブで、RSCの世界観との親和性を高く保ちつつキャッシュをシンプルに実現する、とても優れた機能です。個人的には、「Next.jsを超えるフレームワークに求めたいもの」を「Next.js自身が提供してきた」ようにも感じており、Next.jsに対する評価を大きく改めるきっかけになりました。
 本発表ではNext.jsのキャッシュの変遷と、"use cache"がいかに優れた設計か筆者なりの考察を語ります。
 
@@ -825,8 +828,11 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
 
   {
     slug: "bun-video-talk",
-    title: "Bun (video talk)",
-    description: "TBD",
+    title:
+      "Bunで実現する高速レンダリング（原題：Rendering at the speed of Bun） (video talk)",
+    description: `モダンなアプリケーション開発では、静的サイト生成、サーバーサイドレンダリング、ルーティング、ホットリロードといった複数のツールを組み合わせる必要があり、その多くは速度低下や複雑性の増大を招いてきた。
+Bunの新しいRendering APIは、これらの要素をひとつに統合し、Bunならではの高いパフォーマンスと優れた開発体験を提供する。
+本講演では、Rendering APIの仕組み、速度に最適化された理由、そしてそれが開発者にモダンなフルスタックアプリケーションをBunで構築する力をどのように与えるのかをジャレッドが解説する。`,
     kind: "session",
     day: "1",
     language: "English",
@@ -834,8 +840,8 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
       {
         type: "speaker",
         name: "Jarred Sumner",
-        avatarUrl: emptyAvatar,
-        bio: "TBD",
+        avatarUrl: jarredSumnerAvatar,
+        bio: "Building Bun",
       },
     ],
   },
@@ -1145,8 +1151,26 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
   },
   {
     slug: "tbd-by-allen",
-    title: "TBD: Online live talk",
-    description: "TBD",
+    title:
+      "From Chaos to Harmony: A History of JavaScript（混沌から調和へ ― JavaScriptの歴史）",
+    description: [
+      `A History of JavaScript In 2025, the World Wide Web is ubiquitous with over a billion websites accessible from billions of web-connected devices. Each of these devices runs a web browser or similar programs that are able to display or otherwise process the pages and apps those websites make available. The majority of web pages include source code written in JavaScript. Arguably the world’s most broadly deployed programming language, JavaScript is not only used for web pages but also for complex server, desktop, and embedded applications.
+
+It all started in 1995 when the Web was new, tiny, chaotic, and in the early days of changing the world. Brendan Eich, a developer, working on the Netscape web browser, was tasked with creating a Java-sidekick web-scripting language. JavaScript, created in an epic ten-day hack, shipped first as a de facto Web standard.
+
+One of the reasons for the success of the web is that it is based upon non-proprietary open technologies. Anybody should be able to create a web page that can be hosted by a variety of web servers from different vendors and accessed by a variety of browsers. But interoperability among independent implementations requires common specifications that all implementations must support. From its earliest days it was understood that JavaScript would need some form of standard specification. In 1996, the standardization process for JavaScript was begun.
+
+We are here today because of the importance of modern JavaScript and we care about how it might evolve in the future. But history has lessons for us. We will be best prepared to build the future of JavaScript if we understand earlier phases of its development and evolution. This talk sets the stage for the future by taking a deep dive into the design decisions and techno-social processes that shaped modern standard JavaScript.`,
+      "---",
+      "",
+      `2025年現在、ウェブは世界中に浸透し、数十億のデバイスから数十億のウェブサイトへアクセスできるようになっている。ほとんどのデバイスはブラウザや類似のソフトウェアを搭載し、ウェブページやアプリを処理している。そして、その大多数にはJavaScriptのコードが使われている。JavaScriptは世界で最も広く利用されるプログラミング言語のひとつであり、ウェブだけでなくサーバーやデスクトップ、組み込みアプリケーションにも活用されている。
+
+その始まりは1995年。当時のウェブは小規模で混沌としていたが、世界を変えつつあった。Netscapeで働いていたブレンダン・アイクが、Javaと組み合わせるウェブ向けスクリプト言語の開発を任され、わずか10日間の開発でJavaScriptを完成させた。JavaScriptは事実上のウェブ標準として登場したのである。
+
+ウェブが発展した背景には、オープンで非プロプライエタリな技術に基づいていたことがある。誰でも自由にウェブページを作成し、異なるベンダーのサーバーやブラウザで利用できるようにするには、共通の仕様が不可欠だった。1996年にJavaScriptの標準化が始まったのもそのためである。
+
+現代においてJavaScriptがこれほど重要な存在である以上、その未来を考えるには過去を学ぶ必要がある。本講演では、現在の標準的なJavaScriptを形作った設計上の決断や社会技術的プロセスを振り返り、未来を築くための視座を提供する。`,
+    ].join("\n\n"),
     kind: "keynote",
     day: "1",
     language: "English",
@@ -1154,7 +1178,7 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
       {
         type: "speaker",
         name: "Allen Wirfs Brock",
-        avatarUrl: emptyAvatar,
+        avatarUrl: allenWirfsBrockAvatar,
         bio: "TBD",
       },
     ],

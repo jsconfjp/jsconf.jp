@@ -61,6 +61,31 @@ export const VOLUNTEER_TEAM: TeamMember[] = [
     url: "https://github.com/awkwardlyjoyful",
     avatarUrl: "https://avatars.githubusercontent.com/u/114798856?v=4",
   },
+  {
+    name: "Jacob Sullivan",
+    url: "https://github.com/nakajimayoshi",
+    avatarUrl: "https://avatars.githubusercontent.com/u/52870481?v=4",
+  },
+  {
+    name: "locol",
+    url: "https://github.com/locol23",
+    avatarUrl: "https://avatars.githubusercontent.com/u/6946766?v=4",
+  },
+  {
+    name: "Ahoxa",
+    url: "https://github.com/Ahoxa",
+    avatarUrl: "https://avatars.githubusercontent.com/u/106437154?v=4",
+  },
+  {
+    name: "cordelia",
+    url: "https://github.com/cordelia-sixth",
+    avatarUrl: "https://avatars.githubusercontent.com/u/80014084?v=4",
+  },
+  {
+    name: "jougen",
+    url: "https://github.com/bmthd",
+    avatarUrl: "https://avatars.githubusercontent.com/u/81406938?v=4",
+  }
 ];
 
 export const ORGANIZING_TEAM: TeamMember[] = [

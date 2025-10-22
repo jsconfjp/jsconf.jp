@@ -13,6 +13,7 @@ import geekneerLogo from "../../public/sponsor/geekneer.png";
 import hameeLogo from "../../public/sponsor/hamee.png";
 import hatenaLogo from "../../public/sponsor/hatena.png";
 import kakehashiLogo from "../../public/sponsor/kakehashi.png";
+import kickflowLogo from "../../public/sponsor/kickflow_logo.svg";
 import layerXLogo from "../../public/sponsor/layerx.svg";
 import lycorpLogo from "../../public/sponsor/lycorp.png";
 import medleyLogo from "../../public/sponsor/medley.png";
@@ -21,6 +22,7 @@ import moneyForwardLogo from "../../public/sponsor/money-forward.svg";
 import plaidLogo from "../../public/sponsor/plaid.png";
 import reiwatravelLogo from "../../public/sponsor/reiwatravel.png";
 import resilireLogo from "../../public/sponsor/resilire.png";
+import taianIncLogo from "../../public/sponsor/taian-inc.png";
 import techtouchLogo from "../../public/sponsor/techtouch.png";
 import tverLogo from "../../public/sponsor/tver.jpg";
 
@@ -290,11 +292,19 @@ export const SPONSORS = (
       plan: "sponsor",
       name: "株式会社kickflow",
       url: "https://kickflow.com/about",
-      logoUrl: "",
+      logoUrl: kickflowLogo,
       prText: `
 私たちは、企業向けのクラウドワークフローであるkickflowを開発・提供しています。
 kickflowは企業の生産性向上で高く評価されており、大手企業や成長中の企業に導入されています。
 `.trim(),
+    },
+    {
+      type: "sponsor",
+      plan: "sponsor",
+      name: "株式会社TAIAN",
+      url: "https://taian-inc.com",
+      logoUrl: taianIncLogo,
+      prText: `TAIANは「アツさとあたたかさで溢れる社会を実現する」をビジョンに、お祝い×テクノロジーで複数事業を展開する新領域スタートアップです。現在は、ブライダル・バンケット業界向けバーティカルSaaS「Oiwaii」、Web招待状・席次表サービス「Concept Marry」、AIイベントプランナー「Canjii」を展開。業界V字回復を目指し、新規事業開発にも力を入れています。今後は、既存事業で蓄積した顧客データを活用し、独自のお祝い経済圏を構築することで、ビジョン実現を目指します。`.trim(),
     },
   ] as const satisfies Sponsor[]
 ).filter((s) => !!s.name && !!s.logoUrl && !!s.url);
