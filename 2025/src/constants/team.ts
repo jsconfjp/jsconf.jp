@@ -85,6 +85,11 @@ export const VOLUNTEER_TEAM: TeamMember[] = [
     name: "jougen",
     url: "https://github.com/bmthd",
     avatarUrl: "https://avatars.githubusercontent.com/u/81406938?v=4",
+  },
+  {
+    name: "wh1tecat",
+    url: "https://github.com/wh1tecat-nya",
+    avatarUrl: "https://avatars.githubusercontent.com/u/6924358?v=4"
   }
 ];
 
