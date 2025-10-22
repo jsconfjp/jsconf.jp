@@ -501,8 +501,12 @@ Whether you're a web developer looking to expand into TV development or seeking 
   },
   {
     slug: "denkiyagi-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "なぜブラウザで帳票を生成したいのか、どのようにブラウザで帳票を生成するのか",
+    description: `デンキヤギでは、yagisan-reportsという「ブラウザ単体で動作する帳票エンジン」を開発・販売しています。
+帳票エンジンとは、ざっくり言えば「請求書のようなPDFを出力するテンプレートエンジン」です。
+
+帳票は歴史が長い分野なので、商用製品やOSSなど、帳票出力する方法はいくらでもあります。
+そんな中で、わざわざ新規でブラウザで動く帳票エンジンを開発するモチベーションと、JavaScriptで帳票エンジンを実装するための技術背景についてお話します。`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -652,8 +656,10 @@ Active contributor, releaser, and member of the Node.js Technical Steering Commi
   },
   {
     slug: "miidas-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "E2Eから始める自動テスト",
+    description: `自動テストを導入するときに何から始めるか迷子になったことはないですか?
+ミイダスではE2Eテストから始めました。なぜE2Eテストから始めたのかその理由をお話します。
+さらに、数ある機能の中から何を優先的にテストすべきなのか、何をどこまでテストすべきなのかなど、どのようにテストケースを作ったのかそのプロセスについてもお話します。`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -712,8 +718,19 @@ In 2022 we started working towards solving this problem in WinterCG, which has n
   },
   {
     slug: "line-yahoo-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "Yahoo!知恵袋における継続的な開発効率と品質向上の実践",
+    description: `Yahoo!知恵袋の現場における取り組みについて、以下をキーワードにお話します。
+
+- 開発現場で行っていること
+  - TypeScript化
+  - コーディング規約
+  - フェールセーフな設計
+  - リアーキテクト
+- 特徴的な取り組み
+  - カナリアリリース
+  - feature flag
+  - codemod
+  - 生成AI`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -964,8 +981,22 @@ Browser Enthusiast. Bug Hunter.`,
   },
   {
     slug: "cybozu-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "大規模プロダクトで実践するAI活用の仕組みづくり",
+    description: `概要：GitHub Copilot、Claude Code、Codexなど、様々なAIコーディングツールの登場によって、個々のエンジニアの生産性は向上しています。一方で、「なんかAIをうまく使っている人がいるらしい」という認識にとどまり、チーム全体でのAI活用の仕組みが整っていない現場も多いのではないでしょうか。
+
+本セッションでは、サイボウズの大規模プロダクト「kintone」の開発チームで構築・実践したAI活用の仕組みについて、具体的な設計と活用方法、成果を紹介します。
+
+具体的には次のトピックについてお話しします
+
+- AIツールに依存しないドメイン知識の管理
+- 陳腐化を防ぐ継続的なドキュメントの更新
+- auto-compactによる記憶喪失対策
+- より良いAIエージェントへの柔軟な乗り換えを可能にする開発フロー
+- MCPの活用と、AIでの複雑UI構築の現在地
+- チームを跨ぐAI活用の知見共有
+- AI導入による具体的な成果
+
+個人レベルのAI活用からチームレベルの活用へ移行したい方に向けて、実践的な知見を提供できるセッションにしたいと思っています。`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -1006,8 +1037,16 @@ Browser Enthusiast. Bug Hunter.`,
   },
   {
     slug: "cloudinary-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "When AI Stops Talking and Starts Doing",
+    description: `Generative AI is great at producing text — but what happens when it can actually do things? This talk explores the shift from AI as a conversational partner to AI as an active participant in real-world workflows.
+We’ll look at how to connect AI systems to external tools and APIs using the Model Context Protocol (MCP). Instead of stopping at answers, AI can now execute file operations, manage digital assets, analyse images, and automate tasks that normally require human intervention. The result is a move from “chatting with AI” to “working with AI.”
+Through practical examples, you’ll see how to:
+Extend AI beyond text into action-oriented workflows.
+Safely connect AI models to existing developer tools and services.
+Combine structured function calls with unstructured conversation.
+Build AI-powered assistants that handle files, images, and APIs as part of a single seamless interaction.
+This session isn’t about abstract futures — it’s about what you can build today. Whether you’re a developer, architect, or product builder, you’ll leave with a clear understanding of how to bridge the gap between natural language input and real-world execution.
+AI that acts changes the role it plays: from passive responder to proactive teammate. Come see what happens when AI stops talking — and starts doing.`,
     kind: "sponsor session",
     day: "1",
     language: "English",
@@ -1045,8 +1084,21 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
   },
   {
     slug: "money-forward-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "Micro Frontendsで築いた共通基盤の成長と、運用で積み重ねた試行の軌跡",
+    description: `マネーフォワード クラウドでは、複数サービスに共通する承認・ワークフロー機能を共通基盤として切り出し、Web ComponentsをベースにMicro Frontendsを運用しています。
+2023年7月のリリースから現在まで2年以上、実装検証の段階を含めると約3年にわたり、Micro Frontendsを使った設計・統合方式における試行錯誤を積み重ねてきました。
+
+ランタイム統合によって柔軟なリリースを実現する一方で、運用を通じて見えてきた現実的な課題も少なくありません。
+本セッションでは、その過程での意思決定の背景や、そこから得られた学びを中心にご紹介します。
+
+以下のようなテーマを通して、Micro Frontendsの運用で見えてきたリアルに迫ります。
+
+- UIをどこまで共通化すべきか ― 拡張性と組み込みコストのバランス
+- Micro Frontends間やコンテナアプリケーションとの疎結合設計とその限界
+- 認証・認可のアーキテクチャ変更の背景
+- デザインの一貫性の課題
+- 複数プロダクトを横断するログ・監視基盤の課題
+- パフォーマンス最適化やi18nに向けた取り組み`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
