@@ -50,20 +50,26 @@ export function TimeTable() {
     <div>
       <div className="tracks-header sticky top-0 z-10">
         <div className="hidden md:flex gap-4 py-2">
-          {TRACKS.map((track) => (
-            <div
-              key={track}
-              className="flex-1 flex gap-2 items-center justify-center font-bold text-lg"
-            >
+          {TRACKS.map((track) => {
+            const sessions = SCHEDULE.filter(
+              (session) => session.track === track,
+            );
+
+            return (
               <div
-                className={clsx(
-                  "w-6 h-6 rounded-full",
-                  getTrackClassNames(track),
-                )}
-              />
-              {t(track)}
-            </div>
-          ))}
+                key={track}
+                className="flex-1 flex gap-2 items-center justify-center font-bold text-lg"
+              >
+                <div
+                  className={clsx(
+                    "w-6 h-6 rounded-full",
+                    getTrackClassNames(track),
+                  )}
+                />
+                {t(track)}
+              </div>
+            );
+          })}
         </div>
       </div>
 

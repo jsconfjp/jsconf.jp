@@ -2,12 +2,21 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Chip } from "@/components/Chip";
+import { CalendarSession, IcalButton } from "@/components/IcalButton";
 import { Markdown } from "@/components/Markdown";
+import {
+  Dropdown,
+  DropdownButton,
+  DropdownContent,
+  DropdownItem,
+  DropdownList,
+} from "@/components/og/Dropdown";
 import { PageContainer } from "@/components/PageContainer";
 import { TalkSlug } from "@/constants/talks";
 import { Locale, LOCALES } from "@/i18n/constants";
 import { findTalkSession } from "@/lib/findTalkSession";
 import { getTalkSessions } from "@/lib/getTalkSessions";
+import { CalendarLinks } from "@/components/CalendarLinks";
 
 type Params = { locale: Locale; slug: string };
 
@@ -54,13 +63,14 @@ export default async function Page({ params }: Props) {
         <time>
           {session.startTime}-{session.endTime}
         </time>
-        <p className="my-1 flex items-center gap-2">
+        <div className="my-1 flex items-center gap-2">
           <Chip>{t(`kind.${session.talk.kind}`)}</Chip>
           {session.track !== "all" && (
             <Chip track={session.track}>{t(`track.${session.track}`)}</Chip>
           )}
           <Chip>{session.talk.language}</Chip>
-        </p>
+          <CalendarLinks session={session} />
+        </div>
       </div>
       <div className="mt-4">
         <Markdown>{session.talk.description}</Markdown>
