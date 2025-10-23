@@ -24,6 +24,7 @@ import reiwatravelLogo from "../../public/sponsor/reiwatravel.png";
 import resilireLogo from "../../public/sponsor/resilire.png";
 import taianIncLogo from "../../public/sponsor/taian-inc.png";
 import techtouchLogo from "../../public/sponsor/techtouch.png";
+import TimeTreeLogo from "../../public/sponsor/TimeTree.svg";
 import tverLogo from "../../public/sponsor/tver.jpg";
 
 type Plan = "premium" | "sponsor";
@@ -305,6 +306,14 @@ kickflowは企業の生産性向上で高く評価されており、大手企業
       url: "https://taian-inc.com",
       logoUrl: taianIncLogo,
       prText: `TAIANは「アツさとあたたかさで溢れる社会を実現する」をビジョンに、お祝い×テクノロジーで複数事業を展開する新領域スタートアップです。現在は、ブライダル・バンケット業界向けバーティカルSaaS「Oiwaii」、Web招待状・席次表サービス「Concept Marry」、AIイベントプランナー「Canjii」を展開。業界V字回復を目指し、新規事業開発にも力を入れています。今後は、既存事業で蓄積した顧客データを活用し、独自のお祝い経済圏を構築することで、ビジョン実現を目指します。`.trim(),
+    },
+    {
+      type: "sponsor",
+      plan: "sponsor",
+      name: "株式会社TimeTree",
+      url: "https://timetreeapp.com/intl/ja",
+      logoUrl: TimeTreeLogo,
+      prText: `株式会社TimeTreeは「世の中の時間をつなげて、 世界中の人々がよりよい 明日を選択できるようにする」をミッションにかかげ、世の中の人々のよりスムーズな予定管理を可能にするためにカレンダーシェアアプリ「TimeTree」を開発運営しています。「TimeTree」は共有とコミュニケーションを前提にしたカレンダーサービスです。家族、パートナー、サークル、職場など複数人数の予定共有が簡単にできます。 Marry」、AIイベントプランナー「Canjii」を展開。業界V字回復を目指し、新規事業開発にも力を入れています。今後は、既存事業で蓄積した顧客データを活用し、独自のお祝い経済圏を構築することで、ビジョン実現を目指します。`.trim(),
     },
   ] as const satisfies Sponsor[]
 ).filter((s) => !!s.name && !!s.logoUrl && !!s.url);
