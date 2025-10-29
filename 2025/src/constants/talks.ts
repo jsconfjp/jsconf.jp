@@ -11,6 +11,7 @@ import berlysiaAvatar from "../../public/speaker/berlysia.jpg";
 import blagojJovanovAvatar from "../../public/speaker/blagoj-jovanov.jpg";
 import canalunAvatar from "../../public/speaker/canalun.png";
 import deanSrebnikAvatar from "../../public/speaker/dean-srebnik.jpg";
+import GiovanniLaquidaraAvatar from "../../public/speaker/Giovanni-Laquidara.png";
 import islandryuAvatar from "../../public/speaker/islandryu.jpg";
 import itaiSatatiAvatar from "../../public/speaker/itai-satati.jpg";
 import jarredSumnerAvatar from "../../public/speaker/jarred-sumner.jpg";
@@ -25,6 +26,7 @@ import lucaMugnainiAvatar from "../../public/speaker/luca-mugnaini.jpg";
 import manishKumarAvatar from "../../public/speaker/manish-kumar.jpg";
 import mapleAvatar from "../../public/speaker/maple.jpg";
 import marcoIppolitoAvatar from "../../public/speaker/marco-ippolito.jpg";
+import okumuraAvatar from "../../public/speaker/okumura.jpg";
 import olivierFluckigerAvatar from "../../public/speaker/olivier-fluckiger.jpg";
 import otaMeshiAvatar from "../../public/speaker/ota-meshi.jpg";
 import petamorikenAvatar from "../../public/speaker/petamoriken.jpg";
@@ -429,7 +431,7 @@ For me, performance and user insight go hand in hand.`,
       {
         type: "speaker",
         name: "奥村雄太",
-        avatarUrl: emptyAvatar,
+        avatarUrl: okumuraAvatar,
         bio: `奥村雄太（株式会社Resilire エンジニア）。前職では LINE／出前館にてフロントエンドリプレイスやチームマネジメントを担当。現在は Resilire で IC として、デザインシステム導入、サーバサイドのリアーキテクチャ、Agentic Coding の導入などに取り組んでいる。直近は「インテント駆動フロントエンド」と MCP UI に注目している。趣味は将棋で、アマチュア代表としてプロとの対局経験あり。`,
       },
     ],
@@ -494,7 +496,7 @@ Whether you're a web developer looking to expand into TV development or seeking 
       {
         type: "speaker",
         name: "Giovanni Laquidara",
-        avatarUrl: emptyAvatar,
+        avatarUrl: GiovanniLaquidaraAvatar,
         bio: `Developer Advocate @ Amazon focused on devices, mobile apps and 👨‍💻👩‍💻 developer communities 🌎🌍🌏. Previously I worked as developer advocate, software engineer, VR and mobile developer and real-time software architect/developer. I like working with the cutting-edge technologies and people. Tinkering and sharing the experience.`,
       },
     ],
@@ -587,8 +589,11 @@ AST×Reporterでテストから“観点カタログ”を自動生成し、LLM�
   },
   {
     slug: "layerx-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "Web エンジニアが JavaScript で AI Agent を作る",
+    description: `AI機能の開発、自分には関係ないものだと思っていませんか？
+LLM の登場により、プロダクトのAI機能開発と Web エンジニアの距離はかつてないほど近いものとなりました。
+本セッションでは LLM を利用した機能開発をするために必要な知識や技術について、あるいはまだ高い専門性が要求される領域や技術的な課題がどこにあるのかなどについてお話します。
+今まで機械学習などとの距離を感じていた Web エンジニアが「自分でも（ある程度）できそう！」と感じて帰れることを目標とします。`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -818,8 +823,13 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
   },
   {
     slug: "reiwa-travel-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "AIにNext.js App Router移行を依頼して、失敗した話。 Evolving NEWT’s TypeScript Backend for the AI-Driven",
+    description: `1. AIにNext.js App Routerの移行を任せた結果、プロンプト調整だけで1ヶ月を費やしてしまい、ログ欠損も発生してしまいました。
+この経験を通じて、AI支援の正しい使い方と、人が担うべき判断・理解の順序を見直した話をします。
+
+2. As NEWT grows, its TypeScript backend is evolving from a traditional monolith into a modular, clean, and AI-assisted architecture. This transformation aims to boost development speed, maintain quality, and enable teams to release more features in parallel—laying the foundation for a truly AI-Driven Development era. 
+
+`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -972,8 +982,19 @@ Browser Enthusiast. Bug Hunter.`,
   },
   {
     slug: "tver-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "TVerのWeb内製化 - 開発スピードと品質を両立させるまでの道のり",
+    description: `本セッションでは、TVerのWebチームが内製化を推進する中で、いかにして「開発スピード」と「品質」を両立させる体制を築き上げてきたか、その具体的な道のりと実践的な取り組みについて紹介します。
+
+内製化の背景やチーム立ち上げのプロセスから、品質・スピード向上の施策まで、現場で得られた知見を共有します。
+
+具体的には、以下のトピックについてお話しします。
+
+- TVerにおけるWebフロントエンドチーム内製化の背景とチーム立ち上げのプロセス
+- 型安全な環境に向けた取り組み
+- デザインシステム構築の開始と運用
+- レビューやコード自動生成におけるAIの活用事例
+
+Webチームの内製化に取り組んでいる方、開発スピードと品質の両立に悩んでいるエンジニアの方々にとって、実践的なヒントを提供できるセッションです。`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -1106,8 +1127,18 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
   },
   {
     slug: "findy-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "大規模モノレポの秩序管理  失速しない多言語化フロントエンドの運用",
+    description: `ファインディでは開発しているサービスのすべてのフロントエンドをモノレポ管理ツールであるNxと、そのエコシステムを活用したモノレポで構成し、開発生産性や開発者体験の向上維持に注力しています。
+
+なかでも 「Findy Team+」のフロントエンドは100以上のモジュールと50万行を超えるコードを抱える巨大なモノレポです。
+
+これまでの急速な機能追加や拡張、プロダクトの多言語化（i18n）を進めたことで、コードベースは急速に肥大化しました。そしてテストやビルドを含むCI時間が指数的に増加し、開発者体験の大きな課題となりました。
+
+しかしモジュールの依存関係やキャッシュ戦略の再設計、リモートキャッシュの活用、そしてCIパイプラインの段階的チューニングをNxをベースとして実施することにより、CI時間を従来比で50％以上削減することに成功しています。
+
+また現在もコードベースが拡大していくなかで、CI時間が伸びず、開発速度が失速しないアーキテクチャを確立しました。
+
+本セッションではこの改善プロセスと、そこから得られたヒントを元に、巨大モノレポの秩序を守るためのプラクティスを紹介いたします。`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
