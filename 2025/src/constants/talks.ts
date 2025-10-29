@@ -11,6 +11,7 @@ import berlysiaAvatar from "../../public/speaker/berlysia.jpg";
 import blagojJovanovAvatar from "../../public/speaker/blagoj-jovanov.jpg";
 import canalunAvatar from "../../public/speaker/canalun.png";
 import deanSrebnikAvatar from "../../public/speaker/dean-srebnik.jpg";
+import GiovanniLaquidaraAvatar from "../../public/speaker/Giovanni-Laquidara.png";
 import islandryuAvatar from "../../public/speaker/islandryu.jpg";
 import itaiSatatiAvatar from "../../public/speaker/itai-satati.jpg";
 import jarredSumnerAvatar from "../../public/speaker/jarred-sumner.jpg";
@@ -25,6 +26,7 @@ import lucaMugnainiAvatar from "../../public/speaker/luca-mugnaini.jpg";
 import manishKumarAvatar from "../../public/speaker/manish-kumar.jpg";
 import mapleAvatar from "../../public/speaker/maple.jpg";
 import marcoIppolitoAvatar from "../../public/speaker/marco-ippolito.jpg";
+import okumuraAvatar from "../../public/speaker/okumura.jpg";
 import olivierFluckigerAvatar from "../../public/speaker/olivier-fluckiger.jpg";
 import otaMeshiAvatar from "../../public/speaker/ota-meshi.jpg";
 import petamorikenAvatar from "../../public/speaker/petamoriken.jpg";
@@ -429,7 +431,7 @@ For me, performance and user insight go hand in hand.`,
       {
         type: "speaker",
         name: "奥村雄太",
-        avatarUrl: emptyAvatar,
+        avatarUrl: okumuraAvatar,
         bio: `奥村雄太（株式会社Resilire エンジニア）。前職では LINE／出前館にてフロントエンドリプレイスやチームマネジメントを担当。現在は Resilire で IC として、デザインシステム導入、サーバサイドのリアーキテクチャ、Agentic Coding の導入などに取り組んでいる。直近は「インテント駆動フロントエンド」と MCP UI に注目している。趣味は将棋で、アマチュア代表としてプロとの対局経験あり。`,
       },
     ],
@@ -494,7 +496,7 @@ Whether you're a web developer looking to expand into TV development or seeking 
       {
         type: "speaker",
         name: "Giovanni Laquidara",
-        avatarUrl: emptyAvatar,
+        avatarUrl: GiovanniLaquidaraAvatar,
         bio: `Developer Advocate @ Amazon focused on devices, mobile apps and 👨‍💻👩‍💻 developer communities 🌎🌍🌏. Previously I worked as developer advocate, software engineer, VR and mobile developer and real-time software architect/developer. I like working with the cutting-edge technologies and people. Tinkering and sharing the experience.`,
       },
     ],
