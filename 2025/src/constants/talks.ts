@@ -56,7 +56,8 @@ export type Speaker = {
 
 export type Talk = {
   slug: string;
-  title: string;
+  enTitle: string;
+  jpTitle: string;
   description: string; // markdown
   kind: Kind;
   day: Day;
@@ -71,8 +72,9 @@ export type FlattenedSpeaker = {
 export const TALKS = [
   {
     slug: "passwordless-in-production",
-    title:
+    enTitle:
       "Passwordless in Production: Implementing FIDO Passkeys for Frontend",
+    jpTitle: "本番でもパスワードなし！フロントエンドのFIDO パスキー実装",
     description:
       "In this session, I'll share our end-to-end journey implementing FIDO passkeys in our frontend, replacing traditional password authentication with a more secure, frictionless solution. I'll dive into our technical architecture, frontend integration challenges, cross-platform considerations, and critical UX decisions that balanced security with user experience. You'll discover how we tackled browser compatibility issues, optimized performance, and overcame unexpected hurdles during our production rollout. Drawing from our real-world implementation serving millions of users, this talk provides actionable insights for developers considering or currently implementing passwordless authentication, complete with code examples, lessons learned, and tangible results that demonstrate the impact of our transition to passkeys.",
     kind: "LT",
@@ -89,7 +91,8 @@ export const TALKS = [
   },
   {
     slug: "understanding-directives-and-build-systems",
-    title: "自作して理解する、ディレクティブとビルドシステムの役割",
+    enTitle: "Understanding Directives and Build Systems in JavaScript",
+    jpTitle: "自作して理解する、ディレクティブとビルドシステムの役割",
     description: `最近、"use server" や "use server" など、ディレクティブが活用されるシーンが増えています。
 
 これらの中には、フレームワークのビルドシステムが解釈し、ビルド結果に影響を与えるものがあります。
@@ -121,7 +124,8 @@ export const TALKS = [
   },
   {
     slug: "visual-regression-testing-chromatic",
-    title:
+    enTitle: 'Using Visual Regression Testing with Chromatic Across Teams',
+    jpTitle:
       "横断組織が向き合うVisual Regression Testing —Chromaticは使い続けるべきなのか—",
     description: `概要：マネーフォワードのtoB領域では現在、20以上のプロダクトがChromaticというSaaSを使ったVisual Regression Testing（VRT）を導入しております。Chromaticはスナップショットごとの従量課金制で、我々は無為な使用を続けた結果、コストが想定以上に大幅に嵩み、予算の管理体制が整っていない状況に直面しています。私はこの課題の解決や、VRT自体の目的や戦略を標準化する取り組みの責任者です。この発表では、私が取り組んでいる内容や多様な現場でのテスト戦略立案の困難さ、Chromaticの利用コストを最適化するための工夫ポイントなどをお話しします。（現時点で絶賛取り組み中の活動のため、答えは出ていないタイプの発表です。）
 
@@ -154,7 +158,8 @@ export const TALKS = [
   },
   {
     slug: "vertical-text-web-javascript",
-    title: "縦書きWebの実用を支えるJavaScript",
+    enTitle: "Vertical Text on the Web with JavaScript",
+    jpTitle: "縦書きWebの実用を支えるJavaScript",
     description: `Webでの縦書きのサポートは年々充実していっています。2024年にはフォームの縦書き対応が主要ブラウザに揃いました。
 しかし、縦書きをWebサイトのコンテンツに実用しようとすると、様々な形で考慮が必要になります。
 
@@ -176,7 +181,8 @@ export const TALKS = [
 
   {
     slug: "whats-new-in-ecma-402",
-    title: "What's New in ECMA-402",
+    enTitle: "What's New in ECMA-402",
+    jpTitle: "ECMA-402の最新動向",
     description:
       "Many TC39 delegates are working to make JavaScript the premier language for building apps that work seamlessly across languages and cultures. Learn about some of the latest advancements, including message formatting, measurement units, durations, word segmentation, and more.",
     kind: "LT",
@@ -193,7 +199,8 @@ export const TALKS = [
   },
   {
     slug: "proposal-composites-object-comparison",
-    title: "Proposal-CompositesによるObject比較の未来",
+    enTitle: "Proposal Composites for Object Comparison",
+    jpTitle: "Proposal-CompositesによるObject比較の未来",
     description: `JavaScriptにおけるObject比較は、同じ形をしていても等しくならないなど、開発者の直感とズレた挙動を示すことがあります。
 2025年にTC39で提案された proposal-composites では、「Composites」という新しい概念が導入され、これによって オブジェクト比較にまったく新しいカタチがもたらされます。
 
@@ -220,7 +227,8 @@ export const TALKS = [
   },
   {
     slug: "understanding-atomics-api",
-    title: "Atomics APIを知る",
+    enTitle: "Understanding the Atomics API",
+    jpTitle: "Atomics APIを知る",
     description: `Atomics APIを知っていますか？
 ほとんどの人は使ったことがないのではないでしょうか。
 
@@ -244,8 +252,9 @@ SharedArrayBufferの存在・歴史を確認しつつAtomics APIで何ができ�
   },
   {
     slug: "beyond-console-log",
-    title:
+    enTitle:
       "Beyond console.log: Developing and Debugging with Observable Side Effects",
+      jpTitle: "console.logを超えて - オブザーバブル副作用で開発とデバッグを変える",
     description: `This talk explores the power of observable side effects. We'll discover how making them explicit and transparent can dramatically improve code clarity, decrease debugging time, and boost application reliability.
 
 We'll look into practical strategies for building applications where you can effortlessly track and understand these effects. The talk culminates in a live demonstration of a web application built with these principles, showcasing how gaining true insight into your code's behavior can transform your development and debugging workflow.`,
@@ -264,7 +273,8 @@ We'll look into practical strategies for building applications where you can eff
 
   {
     slug: "in-doubt-what-to-pick-choose-qwik",
-    title: "In doubt what to pick? Choose Qwik!",
+    enTitle: "In doubt what to pick? Choose Qwik!",
+    jpTitle: "迷ったらQwikを選べ！",
     description: `At first you may think: Yet another FE framework. We already have Angular, React, Vue, Svelte, how this one can be different?
 Well, the big difference is that Qwik tries to solve speed of javascript applications in a revolutionary way:
 delayed execution and resumability. The goal of this talk would be to explain the key concepts of Qwik and how it achieves extremely fast
@@ -288,7 +298,8 @@ updates in his area of expertise.`,
   },
   {
     slug: "javascript-pattern-matching",
-    title: "混沌としたJavaScriptにパターンマッチングが！",
+    enTitle: "Pattern Matching in the chaos of JavaScript!",
+    jpTitle: "混沌としたJavaScriptにパターンマッチングが！",
     description: `ECMAScriptのStage 1仕様案として、パターンマッチングが検討されています。
 動的言語ゆえに従来のJSでは書きづらかった「オブジェクトの厳密な定義」を宣言的にスマートに書ける、非常に強力で野心的ともいえる仕様です。
 そのためか、かなりの難産になっていますが、採用されれば従来オブジェクト定義を担ってきたTypeScriptを含め、JavaScriptのエコシステムの変革が促進されることでしょう。
@@ -309,7 +320,9 @@ updates in his area of expertise.`,
   },
   {
     slug: "modern-js-framework-build-process",
-    title:
+    enTitle:
+      "The Build Process of Modern JS Frameworks: Why React is 503 lines of code and Svelte is only 12 lines",
+    jpTitle:
       "モダンJSフレームワークのビルドプロセス 〜なぜReactは503行、Svelteは12行なのか〜",
     description: `JavaScriptフレームワークは、開発者が書いたコードを大幅に変換します。同一の9行のボタンコンポーネントが、Reactでは503行、Svelteではわずか12行のJavaScriptに変換されるのはなぜでしょうか？
 
@@ -333,7 +346,8 @@ Svelteへのコントリビューターとしても活動しています。`,
   },
   {
     slug: "sustainable-oss-policy",
-    title: `"善意"だけでは続かない──持続可能性の問題に取り組む世界のOSS政策の話`,
+    enTitle:`"Good Intentions" aren't enough: Global OSS Policies Addressing Sustainability Issues`,
+    jpTitle: `"善意"だけでは続かない──持続可能性の問題に取り組む世界のOSS政策の話`,
     description: `OSS は個人の善意だけで成り立つ時代を終えつつあります。日本ではいまだに「趣味」や「ボランティア」として OSS へ貢献する文化が根強く残っていますが、プロジェクトの持続可能性が限界を迎えているのは世界共通の課題です。本トークでは、OSS コミュニティの継続を“個人頼み”から“組織と制度”に移行させる必要性を提起します。加えて、各国政府のOSS 支援事例を紹介し、国によるオープンソース戦略について考察します。`,
     kind: "LT",
     day: "1",
@@ -351,7 +365,8 @@ Svelteへのコントリビューターとしても活動しています。`,
 
   {
     slug: "talks-arent-most-important",
-    title: "Talks Aren’t the Most Important Thing at JSConf",
+    enTitle: "Talks Aren’t the Most Important Thing at JSConf",
+    jpTitle: "JSConfで一番大事なのは、実はトークじゃない",
     description: `There are countless developer conferences in the world — but almost no guide on how to actually use them.
 Most developers go for the talks — but what if I told you that's not the most important part?
 
@@ -378,8 +393,10 @@ For me, performance and user insight go hand in hand.`,
   },
   {
     slug: "javascript-typespec-safety-karuta",
-    title:
+    jpTitle:
       "JavaScript/TypeSpec安全開発カルタ (カルタで安全な開発をするテクニックを学ぼう!)",
+    enTitle:
+      "Secure JavaScript/TypeSpec Development (Techniques for Safe Development with Flashcards!)",
     description: `JavaScript開発において「やりがち」「見かけがち」なコードや習慣を、カルタ形式で紹介します。
 以下の内容を話す予定です。
 - テストなし・手動チェック地獄
@@ -400,7 +417,8 @@ For me, performance and user insight go hand in hand.`,
   },
   {
     slug: "error-prototype-stack",
-    title: "`Error.prototype.stack` の今と未来",
+    jpTitle: "`Error.prototype.stack` の今と未来",
+    enTitle: "What's new with `Error.prototype.stack`",
     description: `私たちが普段の開発で何気なく見ている \`Error\` の stack trace は実は標準化されていません。
 このトークでは \`Error.prototype.stack\` について、各 JavaScript Runtime の実装と、これを標準化しようとする動きを紹介します。
 `,
@@ -418,7 +436,8 @@ For me, performance and user insight go hand in hand.`,
   },
   {
     slug: "mcp-ui-intent-driven-frontend",
-    title: "MCP UI で作るインテント駆動フロントエンド",
+    jpTitle: "MCP UI で作るインテント駆動フロントエンド",
+    enTitle: "Intent-Driven Frontend with MCP UI",
     description: `従来のフロントエンド開発では、API が JSON を返し、フロントエンドがそれを解釈して UI を構築するのが一般的でした。しかし Model Context Protocol (MCP) では、エージェントが返すのはテキストやデータだけでなく、フォームやチャートといった UI コンポーネントそのものになる可能性があります。
 
 この LT では、その仕組みを規定する MCP UI 仕様を紹介します。MCP UI は「返答＝UI」を実現するための公開仕様であり、エージェントとフロントエンドが共通の言語で UI をやり取りできるように設計されています。
@@ -439,7 +458,8 @@ For me, performance and user insight go hand in hand.`,
 
   {
     slug: "andromeda-future-of-typescript",
-    title: "Andromeda - The Future Of TypeScript",
+    enTitle: "Andromeda - The Future Of TypeScript",
+    jpTitle: "Andromeda - TypeScriptの未来",
     description:
       "In this talk, we’ll explore Andromeda, a new experimental JS/TS runtime that rethinks what a lightweight execution engine can be. You’ll get a behind-the-scenes look at how Andromeda works, why it exists, and what makes it fundamentally different from Node.js or Deno. We’ll talk about its architecture, how it handles TypeScript natively, and the motivations behind building a runtime focused on simplicity and transparency. Whether you're a runtime nerd, a systems programming enthusiast, or just curious about where the JavaScript ecosystem could go next, this session will spark new ideas about what’s possible when you strip a runtime down to its essentials — and rebuild it with Rust.",
     kind: "session",
@@ -460,7 +480,8 @@ An invited expert for the WinterCG (Winter Community Group), Dean is deeply invo
   },
   {
     slug: "nextjs-caching-re-architecture",
-    title: "Next.js Caching - Legacy, Improvement, Re-Architecture",
+    jpTitle: "Next.jsキャッシュ - レガシー、改善、再設計",
+    enTitle: "Next.js Caching - Legacy, Improvement, Re-Architecture",
     description: `"use cache"は、Next.jsのキャッシュを再設計するために導入されたディレクティブで、RSCの世界観との親和性を高く保ちつつキャッシュをシンプルに実現する、とても優れた機能です。個人的には、「Next.jsを超えるフレームワークに求めたいもの」を「Next.js自身が提供してきた」ようにも感じており、Next.jsに対する評価を大きく改めるきっかけになりました。
 本発表ではNext.jsのキャッシュの変遷と、"use cache"がいかに優れた設計か筆者なりの考察を語ります。
 
@@ -482,9 +503,11 @@ An invited expert for the WinterCG (Winter Community Group), Dean is deeply invo
   },
   {
     slug: "cross-platform-tv-development",
-    title:
+    enTitle:
       "Cross-Platform Television Application Development: JavaScript Frameworks for Smart TV Ecosystems",
-    description: `Join me for an in-depth exploration of developing television applications using JavaScript frameworks and React Native for TV across the fragmented smart TV landscape. In this session, I'll dive into practical solutions for building apps that work seamlessly across Tizen, webOS, Android TV and Fire TV platforms.
+    jpTitle:
+      "Cross-Platformテレビアプリ開発：スマートTVエコシステム向けJavaScriptフレームワーク",
+      description: `Join me for an in-depth exploration of developing television applications using JavaScript frameworks and React Native for TV across the fragmented smart TV landscape. In this session, I'll dive into practical solutions for building apps that work seamlessly across Tizen, webOS, Android TV and Fire TV platforms.
 I'll demonstrate which modern JavaScript frameworks to use for television environments, with a special focus on React Native for TV and its powerful cross-platform capabilities. You'll learn to tackle TV-specific challenges including remote control navigation, focus management, spatial navigation with D-pad controls, and designing effective 10-foot user interfaces.
 Through live coding examples and real-world case studies, I'll explore performance optimization techniques that maintain smooth 30+ FPS experiences across diverse TV hardware, memory management strategies for resource-constrained environments, and video streaming integration patterns that work reliably across platforms.
 
@@ -503,7 +526,8 @@ Whether you're a web developer looking to expand into TV development or seeking 
   },
   {
     slug: "denkiyagi-sponsor-session",
-    title: "なぜブラウザで帳票を生成したいのか、どのようにブラウザで帳票を生成するのか",
+    jpTitle: "なぜブラウザで帳票を生成したいのか、どのようにブラウザで帳票を生成するのか",
+    enTitle: "Why and How to Generate Reports in the Browser",
     description: `デンキヤギでは、yagisan-reportsという「ブラウザ単体で動作する帳票エンジン」を開発・販売しています。
 帳票エンジンとは、ざっくり言えば「請求書のようなPDFを出力するテンプレートエンジン」です。
 
@@ -517,7 +541,8 @@ Whether you're a web developer looking to expand into TV development or seeking 
 
   {
     slug: "evolving-nodejs-module-loader",
-    title: "Evolving the Node.js module loader",
+    enTitle: "Evolving the Node.js module loader",
+    jpTitle: "Node.jsモジュールローダーの進化",
     description:
       "In this talk, we will dive into the story of some of the new features in the Node.js module loader - require(esm), the compile cache, and the module loader customization hooks. We will take a brief look into the history of them, the detours that were taken, the stagnation during their development, and how we are trying to move them forward.",
     kind: "session",
@@ -534,7 +559,8 @@ Whether you're a web developer looking to expand into TV development or seeking 
   },
   {
     slug: "ast-reporter-test-catalog",
-    title: `AST×Reporterでテストから"観点カタログ"を自動生成し、LLMと人間の共通Specにする`,
+    jpTitle: `AST×Reporterでテストから"観点カタログ"を自動生成し、LLMと人間の共通Specにする`,
+    enTitle: `Generating an automated system testing tool using AST×Reporter to share knowledge between LLMs and Humans`,
     description: `## 概要
 
 AST×Reporterでテストから“観点カタログ”を自動生成し、LLMと人間の共通Specにする LLMで実装が速くなる一方、仕様漏れ・デグレ・レビュー負荷が増えがちです。このセッションは、Jest/Vitest/PlaywrightのReporterとAST解析でテストから“観点カタログ”を自動生成し、人間とLLMが共有できるSpecとして運用する方法を紹介します。LLMはこのSpecを参照して文脈を把握し、人間はSpec差分をレビューするだけで仕様漏れやデグレを素早く察知することが可能になります。 再現デモと実測値で、レビュー時間短縮と不足観点の可視化の効果を示します。
@@ -572,8 +598,10 @@ AST×Reporterでテストから“観点カタログ”を自動生成し、LLM�
   },
   {
     slug: "great-migration-webassembly",
-    title:
+    enTitle:
       "The Great Migration: Identifying and Offloading Your App's Bottlenecks to WebAssembly",
+    jpTitle:
+      "アプリケーションのボトルネックを特定し、WebAssemblyへオフロードする方法",
     description: `Even well written JavaScript application can struggle with computation intensive tasks. In the world of browser context, user experience of highly computation intensive tasks vary a lot depending on client's resources and their availability. This session discusses ideas about identifying computer intensive tasks, and strategies to migrate them to WebAssembly so a developer can accomplish more with less.`,
     kind: "session",
     day: "1",
@@ -589,7 +617,8 @@ AST×Reporterでテストから“観点カタログ”を自動生成し、LLM�
   },
   {
     slug: "layerx-sponsor-session",
-    title: "Web エンジニアが JavaScript で AI Agent を作る",
+    jpTitle: "Web エンジニアが JavaScript で AI Agent を作る",
+    enTitle: "Building AI Agents with JavaScript",
     description: `AI機能の開発、自分には関係ないものだと思っていませんか？
 LLM の登場により、プロダクトのAI機能開発と Web エンジニアの距離はかつてないほど近いものとなりました。
 本セッションでは LLM を利用した機能開発をするために必要な知識や技術について、あるいはまだ高い専門性が要求される領域や技術的な課題がどこにあるのかなどについてお話します。
@@ -602,7 +631,8 @@ LLM の登場により、プロダクトのAI機能開発と Web エンジニア
 
   {
     slug: "handling-time-in-javascript-with-temporal",
-    title: "Now and Next – Handling Time in JavaScript with Temporal",
+    enTitle: "Now and Next – Handling Time in JavaScript with Temporal",
+    jpTitle: "TemporalでJavaScript内に時間を扱う",
     description: `This year marks the 30th anniversary of JavaScript, and we are still stuck with the same old Date object from the 90s. It uses zero-based months, only works with local time or UTC, and its parsing is inconsistent across environments. On top of that, it is mutable, which can lead to hard-to-track bugs—especially when dealing with daylight saving or historical calendar changes.
 
 Many real-world applications today need to work across time zones—whether it is for scheduling meetings, showing user-friendly dates, or handling reservations that span multiple time zones. This is where the Temporal API comes in. It is a modern replacement for Date: immutable by default, accurate with time zones, and designed to be much more reliable and predictable.
@@ -626,7 +656,8 @@ At Ascenda, he innovates towards loyalty programs for financial services worldwi
   },
   {
     slug: "evolution-nodejs-inspector",
-    title: "Evolution of the Node.js Inspector",
+    jpTitle: "Evolution of the Node.js Inspector",
+    enTitle: "Evolution of the Node.js Inspector",
     description: `Node.js provides an Inspector API that allows developers to visualize and control the internal state of a running application. In this session, we will explore the fundamentals of this API, how it integrates with debugger tools, and practical use cases.
 Presentation will be given in Japanese with English slides.`,
     kind: "session",
@@ -644,7 +675,8 @@ https://github.com/islandryu`,
   },
   {
     slug: "running-typescript-natively-nodejs",
-    title: "Running TypeScript Natively in Node.js",
+    enTitle: "Running TypeScript Natively in Node.js",
+    jpTitle: "Node.jsでTypeScriptをネイティブで実行する",
     description: `Imagine the convenience of executing TypeScript files directly with Node.js using \`node file.ts\`. Just a few years ago, this concept seemed like a distant dream. Today, it stands as an exciting experimental feature. This narrative dives into the journey of transforming this dream into a reality.`,
     kind: "session",
     day: "1",
@@ -661,7 +693,8 @@ Active contributor, releaser, and member of the Node.js Technical Steering Commi
   },
   {
     slug: "miidas-sponsor-session",
-    title: "E2Eから始める自動テスト",
+    jpTitle: "E2Eから始める自動テスト",
+    enTitle: "Automated Testing with E2E",
     description: `自動テストを導入するときに何から始めるか迷子になったことはないですか?
 ミイダスではE2Eテストから始めました。なぜE2Eテストから始めたのかその理由をお話します。
 さらに、数ある機能の中から何を優先的にテストすべきなのか、何をどこまでテストすべきなのかなど、どのようにテストケースを作ったのかそのプロセスについてもお話します。`,
@@ -673,7 +706,8 @@ Active contributor, releaser, and member of the Node.js Technical Steering Commi
 
   {
     slug: "state-of-the-web",
-    title: "The State of the Web",
+    enTitle: "The State of the Web",
+    jpTitle: "The State of the Web",
     description: `I will go over key datapoints from this year's "State Of…" surveys (State of AI, State of Devs, State of CSS, State of HTML)`,
     kind: "session",
     day: "1",
@@ -689,7 +723,8 @@ Active contributor, releaser, and member of the Node.js Technical Steering Commi
   },
   {
     slug: "ai-browser-builtin-apis",
-    title: "AI right in the browser with built-in AI APIs",
+    enTitle: "AI right in the browser with built-in AI APIs",
+    jpTitle: "ブラウザ内でAIを活用する - 組み込みAI APIの紹介",
     description: `Learn how to use the new built-in AI APIs landing in Chrome, to enable your web app to translate, summarize, write, and rewrite content for your users. We’ll discuss how to transition seamlessly between cloud and on-device workloads, and the future of multimodal tasks in the browser.`,
     kind: "session",
     day: "1",
@@ -705,7 +740,8 @@ Active contributor, releaser, and member of the Node.js Technical Steering Commi
   },
   {
     slug: "wintertc-server-side-standards",
-    title: "WinterTC: Standards for server-side runtimes",
+    enTitle: "WinterTC: Standards for server-side runtimes",
+    jpTitle: "WinterTC: サーバーサイドランタイムのための標準化",
     description: `Server-side and edge JavaScript runtimes (such as Node.js, Deno, Bun, Cloudflare Workers…) have been adopting more and more web APIs over time. However, the web specifications that define these APIs are typically written with browsers in mind, without much regard for server-side runtimes, which has led to differences among those implementations.
 
 In 2022 we started working towards solving this problem in WinterCG, which has now evolved into WinterTC, an Ecma Technical Committee aiming to publish standards for server-side runtimes. In this talk, we explore why this move was necessary, what we're working on, and how this will affect developers.`,
@@ -723,7 +759,8 @@ In 2022 we started working towards solving this problem in WinterCG, which has n
   },
   {
     slug: "line-yahoo-sponsor-session",
-    title: "Yahoo!知恵袋における継続的な開発効率と品質向上の実践",
+    jpTitle: "Yahoo!知恵袋における継続的な開発効率と品質向上の実践",
+    enTitle: "Practical Approaches to Continuous Improvement of Development Efficiency and Quality at Yahoo! Chiebukuro",
     description: `Yahoo!知恵袋の現場における取り組みについて、以下をキーワードにお話します。
 
 - 開発現場で行っていること
@@ -744,7 +781,8 @@ In 2022 we started working towards solving this problem in WinterCG, which has n
 
   {
     slug: "music-visualization-javascript",
-    title: "Bringing Songs to Life: Music Visualization with JavaScript",
+    enTitle: "Bringing Songs to Life: Music Visualization with JavaScript",
+    jpTitle: "JavaScriptによる音楽の可視化",
     description: `Music and math are deeply intertwined, and visualization makes that connection visible. By translating sound into code, we can create interactive, real-time visuals that reveal the structure and emotion behind a song.
 
 You'll learn the fundamental math behind music visualization, how audio frequencies and amplitude can be interpreted in code, and how JavaScript libraries can be used to create immersive, real-time experiences. Along the way, we'll look at creative examples, walk through live demos, and discuss how this intersection of art and code can inspire new ways of thinking about both.
@@ -766,8 +804,9 @@ Outside of work, she’s often found making pottery, playing drums, or hiking th
   },
   {
     slug: "javascript-parser-using-support",
-    title:
+    jpTitle:
       "JavaScript パーサーに using 対応をする過程で与えたエコシステムへの影響",
+      enTitle:`How the Process Behind the 'using' Declaration in Javascript Impacts Your Ecosystem`,
     description: `JavaScript には acorn という JavaScript パーサーがあります。
 Next.js / Svelte / Webpack / Prettier / ESLint / Rollup (スター数順) など、多くの有名なライブラリが acorn に依存しています。
 
@@ -801,7 +840,8 @@ https://github.com/acornjs/acorn/commit/b4ae0d29384f2bf3fafac7d42f1c3e2ee9a48204
   },
   {
     slug: "state-of-deno",
-    title: "The State of Deno",
+    enTitle: "The State of Deno",
+    jpTitle: "The State of Deno",
     description: `Deno is a popular modern alternative to NodeJS, with a focus on security & modern tooling, while being compatible with Node.
 The Deno team has worked on many different projects, be it in the open source ecosystem with Deno itself and JSR amongst other, and in a commercial setting with Deno Deploy and Deno Subhosting.
 
@@ -823,7 +863,8 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
   },
   {
     slug: "reiwa-travel-sponsor-session",
-    title: "AIにNext.js App Router移行を依頼して、失敗した話。 Evolving NEWT’s TypeScript Backend for the AI-Driven",
+    jpTitle: "AIにNext.js App Router移行を依頼して、失敗した話。 Evolving NEWT’s TypeScript Backend for the AI-Driven",
+    enTitle: "A Failed Experiment: Delegating Next.js App Router Migration to AI and Evolving NEWT’s TypeScript Backend for the AI-Driven Era",
     description: `1. AIにNext.js App Routerの移行を任せた結果、プロンプト調整だけで1ヶ月を費やしてしまい、ログ欠損も発生してしまいました。
 この経験を通じて、AI支援の正しい使い方と、人が担うべき判断・理解の順序を見直した話をします。
 
@@ -838,8 +879,9 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
 
   {
     slug: "bun-video-talk",
-    title:
+    jpTitle:
       "Bunで実現する高速レンダリング（原題：Rendering at the speed of Bun） (video talk)",
+    enTitle: "Rendering at the speed of Bun",
     description: `モダンなアプリケーション開発では、静的サイト生成、サーバーサイドレンダリング、ルーティング、ホットリロードといった複数のツールを組み合わせる必要があり、その多くは速度低下や複雑性の増大を招いてきた。
 Bunの新しいRendering APIは、これらの要素をひとつに統合し、Bunならではの高いパフォーマンスと優れた開発体験を提供する。
 本講演では、Rendering APIの仕組み、速度に最適化された理由、そしてそれが開発者にモダンなフルスタックアプリケーションをBunで構築する力をどのように与えるのかをジャレッドが解説する。`,
@@ -857,8 +899,9 @@ Bunの新しいRendering APIは、これらの要素をひとつに統合し、B
   },
   {
     slug: "async-await-stack-trace",
-    title:
+    jpTitle:
       "JavaScriptにおけるasync/await呼び出しのスタックトレースの困難と実装",
+    enTitle:`Challenges and implementation of async/await call stack traces in JavaScript`,
     description: `お手元のChromeで以下のコードを実行してみてください！（もちろんしなくてもいいですよ）
 
     async function foo(x) { await bar(x); }
@@ -894,8 +937,9 @@ Bunの新しいRendering APIは、これらの要素をひとつに統合し、B
   },
   {
     slug: "profiling-typescript-at-scale",
-    title:
+    enTitle:
       "Profiling TypeScript at Scale: Finding and Fixing Compiler Bottlenecks",
+    jpTitle: "大規模プロジェクトでのコンパイラのボトルネックの発見と解消",
     description: `As TypeScript projects grow, so does the pain of waiting for the compiler. What once felt instant on a small codebase can turn into a frustrating bottleneck and lost productivity across large teams and codebases.
 
 In this talk, I’ll walk through how I used the TypeScript profiler to uncover hidden bottlenecks in a real-world monolith and applied a single fix that shaved minutes off every build. We didn’t need exotic tools or risky rewrites, just a better understanding of what the compiler was actually doing.`,
@@ -913,7 +957,8 @@ In this talk, I’ll walk through how I used the TypeScript profiler to uncover 
   },
   {
     slug: "kakehashi-sponsor-session",
-    title: "スポンサーキーノート",
+    jpTitle: "スポンサーキーノート",
+    enTitle: "Sponsor Session",
     description: "TBD",
     kind: "sponsor session",
     day: "1",
@@ -923,7 +968,8 @@ In this talk, I’ll walk through how I used the TypeScript profiler to uncover 
 
   {
     slug: "v8-from-script-to-call-rcx",
-    title: "V8: from <script> to `call $rcx`",
+    enTitle: "V8: from <script> to `call $rcx`",
+    jpTitle: "V8: <script>から`call $rcx`まで",
     description: `As a JavaScript developer you might rarely think about what happens inside the browser with your code. We throw megabytes of code at it and within milliseconds run a snappy webpage. How is that even possible?
 
 In this talk we'll peel back the covers and follow your code on its journey from the point where the first network package arrives to when your application is running. We'll revisit the classic techniques like hidden-classes, JIT compilation, and delve into the current state of the compiler pipeline. You will gain an appreciation of how many techniques like lazy compilation or background mode come together to deliver the web experience we all have gotten used to. You'll learn what the engine can do for your code, and — more importantly — what it can't.`,
@@ -941,8 +987,9 @@ In this talk we'll peel back the covers and follow your code on its journey from
   },
   {
     slug: "javascript-prototype-override",
-    title:
+    enTitle:
       "Tragedy or Hope in the Commons: The Race for JavaScript Prototype Override",
+    jpTitle: `JavaScriptプロトタイプ上書きの競争`,
     description: `JavaScript is a language of freedom. A defining feature of this freedom is the ability to override built-in prototypes.
 JavaScript also becomes a commons especially in the browser. It's a shared space where your application code, its dependencies, and even parts of browser extensions all co-exist within the same context. And, yes, malicious attackers also live there.
 In this commons, a constant struggle is happening between these stakeholders to override prototypes.
@@ -982,7 +1029,8 @@ Browser Enthusiast. Bug Hunter.`,
   },
   {
     slug: "tver-sponsor-session",
-    title: "TVerのWeb内製化 - 開発スピードと品質を両立させるまでの道のり",
+    jpTitle: "TVerのWeb内製化 - 開発スピードと品質を両立させるまでの道のり",
+    enTitle: "Balancing Speed and Quality with TVer's In-House Web Development",
     description: `本セッションでは、TVerのWebチームが内製化を推進する中で、いかにして「開発スピード」と「品質」を両立させる体制を築き上げてきたか、その具体的な道のりと実践的な取り組みについて紹介します。
 
 内製化の背景やチーム立ち上げのプロセスから、品質・スピード向上の施策まで、現場で得られた知見を共有します。
@@ -1002,7 +1050,8 @@ Webチームの内製化に取り組んでいる方、開発スピードと品�
   },
   {
     slug: "cybozu-sponsor-session",
-    title: "大規模プロダクトで実践するAI活用の仕組みづくり",
+    jpTitle: "大規模プロダクトで実践するAI活用の仕組みづくり",
+    enTitle: "Building a Framework for AI Utilization in Large-Scale Products",
     description: `概要：GitHub Copilot、Claude Code、Codexなど、様々なAIコーディングツールの登場によって、個々のエンジニアの生産性は向上しています。一方で、「なんかAIをうまく使っている人がいるらしい」という認識にとどまり、チーム全体でのAI活用の仕組みが整っていない現場も多いのではないでしょうか。
 
 本セッションでは、サイボウズの大規模プロダクト「kintone」の開発チームで構築・実践したAI活用の仕組みについて、具体的な設計と活用方法、成果を紹介します。
@@ -1026,7 +1075,8 @@ Webチームの内製化に取り組んでいる方、開発スピードと品�
 
   {
     slug: "technical-discussion-tc39",
-    title: "Technical Discussion with TC39",
+    enTitle: "Technical Discussion with TC39",
+    jpTitle: "TC39の技術的なディスカッション",
     description: "TBD",
     kind: "session",
     day: "1",
@@ -1042,7 +1092,8 @@ Webチームの内製化に取り組んでいる方、開発スピードと品�
   },
   {
     slug: "module-harmony",
-    title: "Module Harmony",
+    jpTitle: "Module Harmony",
+    enTitle: "Module Harmony",
     description: `ES2025で新しく入ったImport AttributesやJSON Importsを含めてES Modulesがどのような仕様になっているのかを振り返り、モジュールの解決、フェッチ、リンクといった各インポートフェーズを軸に現在の提案仕様を俯瞰的に解説します。`,
     kind: "session",
     day: "1",
@@ -1058,7 +1109,8 @@ Webチームの内製化に取り組んでいる方、開発スピードと品�
   },
   {
     slug: "cloudinary-sponsor-session",
-    title: "When AI Stops Talking and Starts Doing",
+    enTitle: "When AI Stops Talking and Starts Doing",
+    jpTitle: "MCP: AIがただテキスト生成するのじゃなくて、行動し始めるとき",
     description: `Generative AI is great at producing text — but what happens when it can actually do things? This talk explores the shift from AI as a conversational partner to AI as an active participant in real-world workflows.
 We’ll look at how to connect AI systems to external tools and APIs using the Model Context Protocol (MCP). Instead of stopping at answers, AI can now execute file operations, manage digital assets, analyse images, and automate tasks that normally require human intervention. The result is a move from “chatting with AI” to “working with AI.”
 Through practical examples, you’ll see how to:
@@ -1075,7 +1127,8 @@ AI that acts changes the role it plays: from passive responder to proactive team
   },
   {
     slug: "dwango-sponsor-session",
-    title: "スポンサーキーノート",
+    jpTitle: "スポンサーキーノート",
+    enTitle: "Sponsor Session",
     description: "TBD",
     kind: "sponsor session",
     day: "1",
@@ -1085,7 +1138,8 @@ AI that acts changes the role it plays: from passive responder to proactive team
 
   {
     slug: "i-cant-believe-its-not-javascript",
-    title: "I Can't Believe It's Not JavaScript!",
+    enTitle: "I Can't Believe It's Not JavaScript!",
+    jpTitle: "なんと！JavaScriptじゃないの？",
     description: `When building interactive features on a webpage, JavaScript is usually the way to go. However, with great JavaScript dependencies comes great website instability. Even a minor undefined element can cause your entire webpage to crash.
 
 That’s where going back to the basics comes in. Thanks to modern Web APIs, it’s now possible to reduce JavaScript dependency on a website by swapping out JS components for their native HTML element or CSS feature counterparts.
@@ -1105,7 +1159,8 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
   },
   {
     slug: "money-forward-sponsor-session",
-    title: "Micro Frontendsで築いた共通基盤の成長と、運用で積み重ねた試行の軌跡",
+    jpTitle: "Micro Frontendsで築いた共通基盤の成長と、運用で積み重ねた試行の軌跡",
+    enTitle: "The Growth of a Shared Platform Built with Micro Frontends and the Iterative Process",
     description: `マネーフォワード クラウドでは、複数サービスに共通する承認・ワークフロー機能を共通基盤として切り出し、Web ComponentsをベースにMicro Frontendsを運用しています。
 2023年7月のリリースから現在まで2年以上、実装検証の段階を含めると約3年にわたり、Micro Frontendsを使った設計・統合方式における試行錯誤を積み重ねてきました。
 
@@ -1127,7 +1182,8 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
   },
   {
     slug: "findy-sponsor-session",
-    title: "大規模モノレポの秩序管理  失速しない多言語化フロントエンドの運用",
+    jpTitle: "大規模モノレポの秩序管理  失速しない多言語化フロントエンドの運用",
+    enTitle: "Maintaining Order in Large Monorepos: Operating Multilingual Frontends Without Losing Momentum",
     description: `ファインディでは開発しているサービスのすべてのフロントエンドをモノレポ管理ツールであるNxと、そのエコシステムを活用したモノレポで構成し、開発生産性や開発者体験の向上維持に注力しています。
 
 なかでも 「Findy Team+」のフロントエンドは100以上のモジュールと50万行を超えるコードを抱える巨大なモノレポです。
@@ -1147,7 +1203,8 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
 
   {
     slug: "sponsor-lt-session",
-    title: "Sponsor LT x 12",
+    jpTitle: "Sponsor LT x 12",
+    enTitle: "Sponsor LT x 12",
     description: "Lightning talks by conference sponsors.",
     kind: "sponsor LT",
     day: "1",
@@ -1166,7 +1223,8 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
 
   {
     slug: "technical-welfare-and-new-capitalistic-web-development",
-    title: "TBD",
+    jpTitle: "TBD",
+    enTitle: "TBD",
     description: `TBD`,
     kind: "keynote",
     day: "1",
@@ -1182,8 +1240,9 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
   },
   {
     slug: "tbd-by-allen",
-    title:
-      "From Chaos to Harmony: A History of JavaScript（混沌から調和へ ― JavaScriptの歴史）",
+    jpTitle: "混沌から調和へ ― JavaScriptの歴史",
+    enTitle:
+      "From Chaos to Harmony: A History of JavaScript",
     description: [
       `A History of JavaScript In 2025, the World Wide Web is ubiquitous with over a billion websites accessible from billions of web-connected devices. Each of these devices runs a web browser or similar programs that are able to display or otherwise process the pages and apps those websites make available. The majority of web pages include source code written in JavaScript. Arguably the world’s most broadly deployed programming language, JavaScript is not only used for web pages but also for complex server, desktop, and embedded applications.
 

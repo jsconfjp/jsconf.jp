@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const session = findTalkSession(slug as unknown as TalkSlug);
 
   return {
-    title: session.talk.title,
+    title: locale === 'en' ? session.talk.enTitle : session.talk.jpTitle,
     description: session.talk.description,
   };
 }
@@ -46,10 +46,16 @@ export default async function Page({ params }: Props) {
     locale: locale,
     namespace: "talks",
   });
+
+  const tLanguage = await getTranslations({
+    locale: locale,
+    namespace: "talks.language",
+  });
   const session = findTalkSession(slug as unknown as TalkSlug);
 
+
   return (
-    <PageContainer title={session.talk.title} centerizeTitle={false}>
+    <PageContainer title={locale === 'en' ? session.talk.enTitle : session.talk.jpTitle} centerizeTitle={false}>
       <div>
         <time>
           {session.startTime}-{session.endTime}
@@ -59,7 +65,7 @@ export default async function Page({ params }: Props) {
           {session.track !== "all" && (
             <Chip track={session.track}>{t(`track.${session.track}`)}</Chip>
           )}
-          <Chip>{session.talk.language}</Chip>
+          <Chip>{tLanguage(session.talk.language)}</Chip>
         </p>
       </div>
       <div className="mt-4">

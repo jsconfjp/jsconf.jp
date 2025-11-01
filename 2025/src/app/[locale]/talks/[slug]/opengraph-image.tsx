@@ -32,5 +32,5 @@ export default async function Image({ params }: Props) {
 
   const session = findTalkSession(slug as unknown as TalkSlug);
 
-  return generateImage(<TalkThumbnail session={session} />);
+  return generateImage(<TalkThumbnail session={session} locale={locale} />);
 }

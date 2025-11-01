@@ -9,7 +9,12 @@ import { getTrackClassNames } from "@/lib/getTrackClassNames";
 import { timeToMinutes } from "@/lib/timeToMinutes";
 import { TalkSessionCard } from "./TalkSessionCard";
 
-export function TimeTable() {
+
+type Props = {
+  locale: string;
+};
+
+export function TimeTable({ locale }: Props) {
   const t = useTranslations("talks.track");
 
   // 5分単位のタイムスロットを生成
@@ -81,9 +86,9 @@ export function TimeTable() {
             style={{ gridArea: generateSessionId(session) }}
           >
             {session.kind === "talk" ? (
-              <TalkSessionCard session={session} />
+              <TalkSessionCard session={session} locale={locale} />
             ) : (
-              <SessionCard session={session} />
+              <SessionCard session={session} locale={locale} />
             )}
           </div>
         ))}

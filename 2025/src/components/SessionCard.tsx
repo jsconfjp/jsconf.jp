@@ -28,10 +28,11 @@ const getSessionColor = (session: ScheduledSession) => {
   }
 };
 
-export function SessionCard({ session }: { session: ScheduledSession }) {
+export function SessionCard({ session, locale }: { session: ScheduledSession, locale: string }) {
   const t = useTranslations("schedule.kind");
   const tKind = useTranslations("talks.kind");
   const tTrack = useTranslations("talks.track");
+  const tLanguage = useTranslations("talks.language");
 
   return (
     <div
@@ -56,11 +57,11 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
             <Chip size="sm" track={session.track}>
               {tKind(session.talk.kind)}
             </Chip>
-            <Chip size="sm">{session.talk.language}</Chip>
+            <Chip size="sm">{tLanguage(session.talk.language)}</Chip>
           </div>
           <div className="font-bold text-md">
             {session.kind === "streaming" ? `(${t("streaming")}) ` : ""}
-            {session.talk.title}
+            {locale == 'en' ? session.talk.enTitle : session.talk.jpTitle}
           </div>
           <ul className="flex flex-col gap-1">
             {session.talk.speakers.map((speaker) => (
