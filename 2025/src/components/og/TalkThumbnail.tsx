@@ -3,6 +3,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { StaticImageData } from "next/image";
+
 import React from "react";
 import en from "@/../messages/en.json";
 import { ScheduledSession } from "@/constants/schedule";
@@ -14,6 +15,7 @@ const DIR_NEXT = join(process.cwd(), ".next");
 
 type Props = {
   session: ScheduledSession & { kind: "talk" };
+  locale: string;
 };
 
 const toImageSrc = (src: string | StaticImageData) => {
@@ -39,7 +41,7 @@ const toImageSrc = (src: string | StaticImageData) => {
   throw new Error(`Unsupported image format: ${src.src}`);
 };
 
-export function TalkThumbnail({ session }: Props) {
+export function TalkThumbnail({ session, locale }: Props) {
   const { talk } = session;
 
   return (
@@ -47,7 +49,7 @@ export function TalkThumbnail({ session }: Props) {
       <div tw="flex-1 flex flex-col rounded-xl bg-white shadow-md">
         <main tw="flex-1 px-16 flex flex-col items-center justify-center">
           <h1 tw="text-7xl font-bold" style={{ lineHeight: "1.2" }}>
-            {talk.title}
+            {locale == 'en' ? session.talk.enTitle : session.talk.jpTitle}
           </h1>
           <div tw="flex items-center" style={{ gap: 8 }}>
             {session.track !== "all" && (
