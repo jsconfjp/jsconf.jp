@@ -1,4 +1,3 @@
-import ArrowTopRightOnSquareIcon from "@heroicons/react/24/outline/ArrowTopRightOnSquareIcon";
 import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Button } from "@/components/Button";
@@ -6,7 +5,6 @@ import { Hero } from "@/components/Hero";
 import { SponsorGrid } from "@/components/SponsorGrid";
 import { Team } from "@/components/Team";
 import { Venue } from "@/components/Venue";
-import { CFP_FORM_URL, SPONSOR_FORM_URL } from "@/constants/external";
 import { SPONSORS } from "@/constants/sponsors";
 import { Locale } from "@/i18n/constants";
 
@@ -40,29 +38,6 @@ export default async function Page({ params }: Props) {
     <div className="pt-8 md:pt-32">
       <div className="max-w-screen-md mx-auto px-4 lg:px-0">
         <Hero />
-
-        <div className="mt-8 md:mt-20 flex flex-col md:flex-row justify-center gap-4 md:gap-8">
-          <Button
-            full
-            variant="primary"
-            size="xl"
-            href={CFP_FORM_URL}
-            target="_blank"
-            endIcon={<ArrowTopRightOnSquareIcon className="w-4 h-4" />}
-          >
-            {t("cta.submitTalk")}
-          </Button>
-          <Button
-            full
-            variant="primary"
-            size="xl"
-            href={SPONSOR_FORM_URL}
-            target="_blank"
-            endIcon={<ArrowTopRightOnSquareIcon className="w-4 h-4" />}
-          >
-            {t("cta.becomeSponsor")}
-          </Button>
-        </div>
       </div>
 
       <div className="max-w-screen-md mx-auto mt-8 md:mt-32 flex flex-col gap-4">

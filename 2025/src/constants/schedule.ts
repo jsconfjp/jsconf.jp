@@ -10,6 +10,7 @@ export type SessionKind =
   | "reception"
   | "opening"
   | "talk"
+  | "streaming"
   | "closed"
   | "break"
   | "closing"
@@ -23,6 +24,10 @@ export type ScheduledSession = {
 } & (
   | {
       kind: "talk";
+      talk: Talk;
+    }
+  | {
+      kind: "streaming";
       talk: Talk;
     }
   | {
@@ -203,21 +208,24 @@ export const SCHEDULE: ScheduledSession[] = [
     endTime: "12:00",
   },
   {
-    kind: "closed",
+    kind: "streaming",
+    talk: TALKS_BY_SLUG["tbd-by-allen"],
     track: "B",
     day: "1",
     startTime: "11:00",
     endTime: "12:00",
   },
   {
-    kind: "closed",
+    kind: "streaming",
+    talk: TALKS_BY_SLUG["tbd-by-allen"],
     track: "C",
     day: "1",
     startTime: "11:00",
     endTime: "12:00",
   },
   {
-    kind: "closed",
+    kind: "streaming",
+    talk: TALKS_BY_SLUG["tbd-by-allen"],
     track: "D",
     day: "1",
     startTime: "11:00",
@@ -242,7 +250,7 @@ export const SCHEDULE: ScheduledSession[] = [
   },
   {
     kind: "talk",
-    talk: TALKS_BY_SLUG["nextjs-over-nextjs"],
+    talk: TALKS_BY_SLUG["nextjs-caching-re-architecture"],
     track: "B",
     day: "1",
     startTime: "13:00",
@@ -609,21 +617,30 @@ export const SCHEDULE: ScheduledSession[] = [
     endTime: "20:00",
   },
   {
-    kind: "closed",
+    kind: "streaming",
+    talk: TALKS_BY_SLUG[
+      "technical-welfare-and-new-capitalistic-web-development"
+    ],
     track: "B",
     day: "1",
     startTime: "19:20",
     endTime: "20:00",
   },
   {
-    kind: "closed",
+    kind: "streaming",
+    talk: TALKS_BY_SLUG[
+      "technical-welfare-and-new-capitalistic-web-development"
+    ],
     track: "C",
     day: "1",
     startTime: "19:20",
     endTime: "20:00",
   },
   {
-    kind: "closed",
+    kind: "streaming",
+    talk: TALKS_BY_SLUG[
+      "technical-welfare-and-new-capitalistic-web-development"
+    ],
     track: "D",
     day: "1",
     startTime: "19:20",

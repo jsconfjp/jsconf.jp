@@ -23,10 +23,6 @@
     "japanese": "JA",
     "english": "EN"
   },
-  "cta": {
-    "submitTalk": "トーク申込フォームへ",
-    "becomeSponsor": "スポンサー申込フォームへ"
-  },
   "team": {
     "team": "チーム",
     "organizingTeam": "オーガナイザー",
@@ -39,6 +35,7 @@
   },
   "schedule": {
     "kind": {
+      "streaming": "ストリーム",
       "reception": "開場",
       "opening": "オープニング",
       "closed": "クローズ",

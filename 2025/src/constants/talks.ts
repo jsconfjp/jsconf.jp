@@ -3,6 +3,7 @@ import type { StaticImageData } from "next/image";
 import { type Sponsor, SPONSORS_BY_NAME } from "./sponsors.ts";
 import emptyAvatar from "../../public/speaker/250x250.png";
 import akfmSatoAvatar from "../../public/speaker/akfm-sato.png";
+import allenWirfsBrockAvatar from "../../public/speaker/allen-wirfs-brock.jpg";
 import anamAhmedAvatar from "../../public/speaker/anam-ahmed.jpg";
 import andreuBotellaAvatar from "../../public/speaker/andreu-botella.jpg";
 import baseballyamaAvatar from "../../public/speaker/baseballyama.jpg";
@@ -10,8 +11,10 @@ import berlysiaAvatar from "../../public/speaker/berlysia.jpg";
 import blagojJovanovAvatar from "../../public/speaker/blagoj-jovanov.jpg";
 import canalunAvatar from "../../public/speaker/canalun.png";
 import deanSrebnikAvatar from "../../public/speaker/dean-srebnik.jpg";
+import GiovanniLaquidaraAvatar from "../../public/speaker/Giovanni-Laquidara.png";
 import islandryuAvatar from "../../public/speaker/islandryu.jpg";
 import itaiSatatiAvatar from "../../public/speaker/itai-satati.jpg";
+import jarredSumnerAvatar from "../../public/speaker/jarred-sumner.jpg";
 import jemimaAbuAvatar from "../../public/speaker/jemima-abu.jpg";
 import jiko21Avatar from "../../public/speaker/jiko21.jpg";
 import joyeeCheungAvatar from "../../public/speaker/joyee-cheung.jpg";
@@ -22,7 +25,8 @@ import leoKettmeirAvatar from "../../public/speaker/leo-kettmeir.jpg";
 import lucaMugnainiAvatar from "../../public/speaker/luca-mugnaini.jpg";
 import manishKumarAvatar from "../../public/speaker/manish-kumar.jpg";
 import mapleAvatar from "../../public/speaker/maple.jpg";
-import marcoIppolitoAvatar from "../../public/speaker/marco-ippolito.png";
+import marcoIppolitoAvatar from "../../public/speaker/marco-ippolito.jpg";
+import okumuraAvatar from "../../public/speaker/okumura.jpg";
 import olivierFluckigerAvatar from "../../public/speaker/olivier-fluckiger.jpg";
 import otaMeshiAvatar from "../../public/speaker/ota-meshi.jpg";
 import petamorikenAvatar from "../../public/speaker/petamoriken.jpg";
@@ -31,6 +35,7 @@ import sachaGreifAvatar from "../../public/speaker/sacha-greif.jpg";
 import shaneCarrAvatar from "../../public/speaker/shane-carr.jpg";
 import sosukeSuzukiAvatar from "../../public/speaker/sosuke-suzuki.jpg";
 import taigaKiyokawaAvatar from "../../public/speaker/taiga-kiyokawa.jpg";
+import takaoHayashiAvatar from "../../public/speaker/takao-hayashi.jpg";
 import thomasSteinerAvatar from "../../public/speaker/thomas-steiner.jpg";
 import tomikawaSotaroAvatar from "../../public/speaker/tomikawa-sotaro.png";
 import toshiakiNagayamaAvatar from "../../public/speaker/toshiaki-nagayama.jpg";
@@ -388,8 +393,8 @@ For me, performance and user insight go hand in hand.`,
       {
         type: "speaker",
         name: "林 恭央",
-        avatarUrl: emptyAvatar,
-        bio: "TBD",
+        avatarUrl: takaoHayashiAvatar,
+        bio: "ヒールか、ヒーローか。悪夢か、奇跡か。Frontend Engineer@Tokyo",
       },
     ],
   },
@@ -426,7 +431,7 @@ For me, performance and user insight go hand in hand.`,
       {
         type: "speaker",
         name: "奥村雄太",
-        avatarUrl: emptyAvatar,
+        avatarUrl: okumuraAvatar,
         bio: `奥村雄太（株式会社Resilire エンジニア）。前職では LINE／出前館にてフロントエンドリプレイスやチームマネジメントを担当。現在は Resilire で IC として、デザインシステム導入、サーバサイドのリアーキテクチャ、Agentic Coding の導入などに取り組んでいる。直近は「インテント駆動フロントエンド」と MCP UI に注目している。趣味は将棋で、アマチュア代表としてプロとの対局経験あり。`,
       },
     ],
@@ -454,8 +459,8 @@ An invited expert for the WinterCG (Winter Community Group), Dean is deeply invo
     ],
   },
   {
-    slug: "nextjs-over-nextjs",
-    title: "Next.js over the Next.js",
+    slug: "nextjs-caching-re-architecture",
+    title: "Next.js Caching - Legacy, Improvement, Re-Architecture",
     description: `"use cache"は、Next.jsのキャッシュを再設計するために導入されたディレクティブで、RSCの世界観との親和性を高く保ちつつキャッシュをシンプルに実現する、とても優れた機能です。個人的には、「Next.jsを超えるフレームワークに求めたいもの」を「Next.js自身が提供してきた」ようにも感じており、Next.jsに対する評価を大きく改めるきっかけになりました。
 本発表ではNext.jsのキャッシュの変遷と、"use cache"がいかに優れた設計か筆者なりの考察を語ります。
 
@@ -491,15 +496,19 @@ Whether you're a web developer looking to expand into TV development or seeking 
       {
         type: "speaker",
         name: "Giovanni Laquidara",
-        avatarUrl: emptyAvatar,
+        avatarUrl: GiovanniLaquidaraAvatar,
         bio: `Developer Advocate @ Amazon focused on devices, mobile apps and 👨‍💻👩‍💻 developer communities 🌎🌍🌏. Previously I worked as developer advocate, software engineer, VR and mobile developer and real-time software architect/developer. I like working with the cutting-edge technologies and people. Tinkering and sharing the experience.`,
       },
     ],
   },
   {
     slug: "denkiyagi-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "なぜブラウザで帳票を生成したいのか、どのようにブラウザで帳票を生成するのか",
+    description: `デンキヤギでは、yagisan-reportsという「ブラウザ単体で動作する帳票エンジン」を開発・販売しています。
+帳票エンジンとは、ざっくり言えば「請求書のようなPDFを出力するテンプレートエンジン」です。
+
+帳票は歴史が長い分野なので、商用製品やOSSなど、帳票出力する方法はいくらでもあります。
+そんな中で、わざわざ新規でブラウザで動く帳票エンジンを開発するモチベーションと、JavaScriptで帳票エンジンを実装するための技術背景についてお話します。`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -580,8 +589,11 @@ AST×Reporterでテストから“観点カタログ”を自動生成し、LLM�
   },
   {
     slug: "layerx-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "Web エンジニアが JavaScript で AI Agent を作る",
+    description: `AI機能の開発、自分には関係ないものだと思っていませんか？
+LLM の登場により、プロダクトのAI機能開発と Web エンジニアの距離はかつてないほど近いものとなりました。
+本セッションでは LLM を利用した機能開発をするために必要な知識や技術について、あるいはまだ高い専門性が要求される領域や技術的な課題がどこにあるのかなどについてお話します。
+今まで機械学習などとの距離を感じていた Web エンジニアが「自分でも（ある程度）できそう！」と感じて帰れることを目標とします。`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -649,8 +661,10 @@ Active contributor, releaser, and member of the Node.js Technical Steering Commi
   },
   {
     slug: "miidas-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "E2Eから始める自動テスト",
+    description: `自動テストを導入するときに何から始めるか迷子になったことはないですか?
+ミイダスではE2Eテストから始めました。なぜE2Eテストから始めたのかその理由をお話します。
+さらに、数ある機能の中から何を優先的にテストすべきなのか、何をどこまでテストすべきなのかなど、どのようにテストケースを作ったのかそのプロセスについてもお話します。`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -709,8 +723,19 @@ In 2022 we started working towards solving this problem in WinterCG, which has n
   },
   {
     slug: "line-yahoo-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "Yahoo!知恵袋における継続的な開発効率と品質向上の実践",
+    description: `Yahoo!知恵袋の現場における取り組みについて、以下をキーワードにお話します。
+
+- 開発現場で行っていること
+  - TypeScript化
+  - コーディング規約
+  - フェールセーフな設計
+  - リアーキテクト
+- 特徴的な取り組み
+  - カナリアリリース
+  - feature flag
+  - codemod
+  - 生成AI`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -798,8 +823,13 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
   },
   {
     slug: "reiwa-travel-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "AIにNext.js App Router移行を依頼して、失敗した話。 Evolving NEWT’s TypeScript Backend for the AI-Driven",
+    description: `1. AIにNext.js App Routerの移行を任せた結果、プロンプト調整だけで1ヶ月を費やしてしまい、ログ欠損も発生してしまいました。
+この経験を通じて、AI支援の正しい使い方と、人が担うべき判断・理解の順序を見直した話をします。
+
+2. As NEWT grows, its TypeScript backend is evolving from a traditional monolith into a modular, clean, and AI-assisted architecture. This transformation aims to boost development speed, maintain quality, and enable teams to release more features in parallel—laying the foundation for a truly AI-Driven Development era. 
+
+`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -808,8 +838,11 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
 
   {
     slug: "bun-video-talk",
-    title: "Bun (video talk)",
-    description: "TBD",
+    title:
+      "Bunで実現する高速レンダリング（原題：Rendering at the speed of Bun） (video talk)",
+    description: `モダンなアプリケーション開発では、静的サイト生成、サーバーサイドレンダリング、ルーティング、ホットリロードといった複数のツールを組み合わせる必要があり、その多くは速度低下や複雑性の増大を招いてきた。
+Bunの新しいRendering APIは、これらの要素をひとつに統合し、Bunならではの高いパフォーマンスと優れた開発体験を提供する。
+本講演では、Rendering APIの仕組み、速度に最適化された理由、そしてそれが開発者にモダンなフルスタックアプリケーションをBunで構築する力をどのように与えるのかをジャレッドが解説する。`,
     kind: "session",
     day: "1",
     language: "English",
@@ -817,8 +850,8 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
       {
         type: "speaker",
         name: "Jarred Sumner",
-        avatarUrl: emptyAvatar,
-        bio: "TBD",
+        avatarUrl: jarredSumnerAvatar,
+        bio: "Building Bun",
       },
     ],
   },
@@ -855,7 +888,7 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
         type: "speaker",
         name: "Sosuke Suzuki",
         avatarUrl: sosukeSuzukiAvatar,
-        bio: "JavaScriptエンジン開発者。",
+        bio: "Systems Engineer at Bun, WebKit reviewer",
       },
     ],
   },
@@ -936,7 +969,7 @@ Outline
 `,
     kind: "session",
     day: "1",
-    language: "Japanese",
+    language: "English",
     speakers: [
       {
         type: "speaker",
@@ -949,8 +982,19 @@ Browser Enthusiast. Bug Hunter.`,
   },
   {
     slug: "tver-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "TVerのWeb内製化 - 開発スピードと品質を両立させるまでの道のり",
+    description: `本セッションでは、TVerのWebチームが内製化を推進する中で、いかにして「開発スピード」と「品質」を両立させる体制を築き上げてきたか、その具体的な道のりと実践的な取り組みについて紹介します。
+
+内製化の背景やチーム立ち上げのプロセスから、品質・スピード向上の施策まで、現場で得られた知見を共有します。
+
+具体的には、以下のトピックについてお話しします。
+
+- TVerにおけるWebフロントエンドチーム内製化の背景とチーム立ち上げのプロセス
+- 型安全な環境に向けた取り組み
+- デザインシステム構築の開始と運用
+- レビューやコード自動生成におけるAIの活用事例
+
+Webチームの内製化に取り組んでいる方、開発スピードと品質の両立に悩んでいるエンジニアの方々にとって、実践的なヒントを提供できるセッションです。`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -958,8 +1002,22 @@ Browser Enthusiast. Bug Hunter.`,
   },
   {
     slug: "cybozu-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "大規模プロダクトで実践するAI活用の仕組みづくり",
+    description: `概要：GitHub Copilot、Claude Code、Codexなど、様々なAIコーディングツールの登場によって、個々のエンジニアの生産性は向上しています。一方で、「なんかAIをうまく使っている人がいるらしい」という認識にとどまり、チーム全体でのAI活用の仕組みが整っていない現場も多いのではないでしょうか。
+
+本セッションでは、サイボウズの大規模プロダクト「kintone」の開発チームで構築・実践したAI活用の仕組みについて、具体的な設計と活用方法、成果を紹介します。
+
+具体的には次のトピックについてお話しします
+
+- AIツールに依存しないドメイン知識の管理
+- 陳腐化を防ぐ継続的なドキュメントの更新
+- auto-compactによる記憶喪失対策
+- より良いAIエージェントへの柔軟な乗り換えを可能にする開発フロー
+- MCPの活用と、AIでの複雑UI構築の現在地
+- チームを跨ぐAI活用の知見共有
+- AI導入による具体的な成果
+
+個人レベルのAI活用からチームレベルの活用へ移行したい方に向けて、実践的な知見を提供できるセッションにしたいと思っています。`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -1000,8 +1058,16 @@ Browser Enthusiast. Bug Hunter.`,
   },
   {
     slug: "cloudinary-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "When AI Stops Talking and Starts Doing",
+    description: `Generative AI is great at producing text — but what happens when it can actually do things? This talk explores the shift from AI as a conversational partner to AI as an active participant in real-world workflows.
+We’ll look at how to connect AI systems to external tools and APIs using the Model Context Protocol (MCP). Instead of stopping at answers, AI can now execute file operations, manage digital assets, analyse images, and automate tasks that normally require human intervention. The result is a move from “chatting with AI” to “working with AI.”
+Through practical examples, you’ll see how to:
+Extend AI beyond text into action-oriented workflows.
+Safely connect AI models to existing developer tools and services.
+Combine structured function calls with unstructured conversation.
+Build AI-powered assistants that handle files, images, and APIs as part of a single seamless interaction.
+This session isn’t about abstract futures — it’s about what you can build today. Whether you’re a developer, architect, or product builder, you’ll leave with a clear understanding of how to bridge the gap between natural language input and real-world execution.
+AI that acts changes the role it plays: from passive responder to proactive teammate. Come see what happens when AI stops talking — and starts doing.`,
     kind: "sponsor session",
     day: "1",
     language: "English",
@@ -1039,8 +1105,21 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
   },
   {
     slug: "money-forward-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "Micro Frontendsで築いた共通基盤の成長と、運用で積み重ねた試行の軌跡",
+    description: `マネーフォワード クラウドでは、複数サービスに共通する承認・ワークフロー機能を共通基盤として切り出し、Web ComponentsをベースにMicro Frontendsを運用しています。
+2023年7月のリリースから現在まで2年以上、実装検証の段階を含めると約3年にわたり、Micro Frontendsを使った設計・統合方式における試行錯誤を積み重ねてきました。
+
+ランタイム統合によって柔軟なリリースを実現する一方で、運用を通じて見えてきた現実的な課題も少なくありません。
+本セッションでは、その過程での意思決定の背景や、そこから得られた学びを中心にご紹介します。
+
+以下のようなテーマを通して、Micro Frontendsの運用で見えてきたリアルに迫ります。
+
+- UIをどこまで共通化すべきか ― 拡張性と組み込みコストのバランス
+- Micro Frontends間やコンテナアプリケーションとの疎結合設計とその限界
+- 認証・認可のアーキテクチャ変更の背景
+- デザインの一貫性の課題
+- 複数プロダクトを横断するログ・監視基盤の課題
+- パフォーマンス最適化やi18nに向けた取り組み`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -1048,8 +1127,18 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
   },
   {
     slug: "findy-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "大規模モノレポの秩序管理  失速しない多言語化フロントエンドの運用",
+    description: `ファインディでは開発しているサービスのすべてのフロントエンドをモノレポ管理ツールであるNxと、そのエコシステムを活用したモノレポで構成し、開発生産性や開発者体験の向上維持に注力しています。
+
+なかでも 「Findy Team+」のフロントエンドは100以上のモジュールと50万行を超えるコードを抱える巨大なモノレポです。
+
+これまでの急速な機能追加や拡張、プロダクトの多言語化（i18n）を進めたことで、コードベースは急速に肥大化しました。そしてテストやビルドを含むCI時間が指数的に増加し、開発者体験の大きな課題となりました。
+
+しかしモジュールの依存関係やキャッシュ戦略の再設計、リモートキャッシュの活用、そしてCIパイプラインの段階的チューニングをNxをベースとして実施することにより、CI時間を従来比で50％以上削減することに成功しています。
+
+また現在もコードベースが拡大していくなかで、CI時間が伸びず、開発速度が失速しないアーキテクチャを確立しました。
+
+本セッションではこの改善プロセスと、そこから得られたヒントを元に、巨大モノレポの秩序を守るためのプラクティスを紹介いたします。`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -1093,8 +1182,26 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
   },
   {
     slug: "tbd-by-allen",
-    title: "TBD: Online live talk",
-    description: "TBD",
+    title:
+      "From Chaos to Harmony: A History of JavaScript（混沌から調和へ ― JavaScriptの歴史）",
+    description: [
+      `A History of JavaScript In 2025, the World Wide Web is ubiquitous with over a billion websites accessible from billions of web-connected devices. Each of these devices runs a web browser or similar programs that are able to display or otherwise process the pages and apps those websites make available. The majority of web pages include source code written in JavaScript. Arguably the world’s most broadly deployed programming language, JavaScript is not only used for web pages but also for complex server, desktop, and embedded applications.
+
+It all started in 1995 when the Web was new, tiny, chaotic, and in the early days of changing the world. Brendan Eich, a developer, working on the Netscape web browser, was tasked with creating a Java-sidekick web-scripting language. JavaScript, created in an epic ten-day hack, shipped first as a de facto Web standard.
+
+One of the reasons for the success of the web is that it is based upon non-proprietary open technologies. Anybody should be able to create a web page that can be hosted by a variety of web servers from different vendors and accessed by a variety of browsers. But interoperability among independent implementations requires common specifications that all implementations must support. From its earliest days it was understood that JavaScript would need some form of standard specification. In 1996, the standardization process for JavaScript was begun.
+
+We are here today because of the importance of modern JavaScript and we care about how it might evolve in the future. But history has lessons for us. We will be best prepared to build the future of JavaScript if we understand earlier phases of its development and evolution. This talk sets the stage for the future by taking a deep dive into the design decisions and techno-social processes that shaped modern standard JavaScript.`,
+      "---",
+      "",
+      `2025年現在、ウェブは世界中に浸透し、数十億のデバイスから数十億のウェブサイトへアクセスできるようになっている。ほとんどのデバイスはブラウザや類似のソフトウェアを搭載し、ウェブページやアプリを処理している。そして、その大多数にはJavaScriptのコードが使われている。JavaScriptは世界で最も広く利用されるプログラミング言語のひとつであり、ウェブだけでなくサーバーやデスクトップ、組み込みアプリケーションにも活用されている。
+
+その始まりは1995年。当時のウェブは小規模で混沌としていたが、世界を変えつつあった。Netscapeで働いていたブレンダン・アイクが、Javaと組み合わせるウェブ向けスクリプト言語の開発を任され、わずか10日間の開発でJavaScriptを完成させた。JavaScriptは事実上のウェブ標準として登場したのである。
+
+ウェブが発展した背景には、オープンで非プロプライエタリな技術に基づいていたことがある。誰でも自由にウェブページを作成し、異なるベンダーのサーバーやブラウザで利用できるようにするには、共通の仕様が不可欠だった。1996年にJavaScriptの標準化が始まったのもそのためである。
+
+現代においてJavaScriptがこれほど重要な存在である以上、その未来を考えるには過去を学ぶ必要がある。本講演では、現在の標準的なJavaScriptを形作った設計上の決断や社会技術的プロセスを振り返り、未来を築くための視座を提供する。`,
+    ].join("\n\n"),
     kind: "keynote",
     day: "1",
     language: "English",
@@ -1102,7 +1209,7 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
       {
         type: "speaker",
         name: "Allen Wirfs Brock",
-        avatarUrl: emptyAvatar,
+        avatarUrl: allenWirfsBrockAvatar,
         bio: "TBD",
       },
     ],
