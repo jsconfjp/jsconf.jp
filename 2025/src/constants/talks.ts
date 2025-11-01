@@ -864,7 +864,7 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
   {
     slug: "reiwa-travel-sponsor-session",
     jpTitle: "AIにNext.js App Router移行を依頼して、失敗した話。 Evolving NEWT’s TypeScript Backend for the AI-Driven",
-    enTitle: "A Failed Experiment: Delegating Next.js App Router Migration to AI & Evolving NEWT’s TypeScript Backend for the AI-Driven Era",
+    enTitle: "A Failed Experiment: Delegating Next.js App Router Migration to AI and Evolving NEWT’s TypeScript Backend for the AI-Driven Era",
     description: `1. AIにNext.js App Routerの移行を任せた結果、プロンプト調整だけで1ヶ月を費やしてしまい、ログ欠損も発生してしまいました。
 この経験を通じて、AI支援の正しい使い方と、人が担うべき判断・理解の順序を見直した話をします。
 
