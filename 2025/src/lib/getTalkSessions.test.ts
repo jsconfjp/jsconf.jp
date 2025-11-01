@@ -32,7 +32,8 @@ describe("getTalkSessions", () => {
       if (session.kind === "talk") {
         expect(session.talk).toBeDefined();
         expect(session.talk.slug).toBeDefined();
-        expect(session.talk.title).toBeDefined();
+        expect(session.talk.enTitle).toBeDefined();
+        expect(session.talk.jpTitle).toBeDefined();
       }
     });
   });
