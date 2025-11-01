@@ -20,7 +20,7 @@ export default async function Page({ params }: Props) {
 
   return (
     <PageContainer title={t("schedule")}>
-      <TimeTable />
+      <TimeTable locale={locale} />
     </PageContainer>
   );
 }

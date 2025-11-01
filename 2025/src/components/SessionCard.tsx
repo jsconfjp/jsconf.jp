@@ -28,7 +28,7 @@ const getSessionColor = (session: ScheduledSession) => {
   }
 };
 
-export function SessionCard({ session }: { session: ScheduledSession }) {
+export function SessionCard({ session, locale }: { session: ScheduledSession, locale: string }) {
   const t = useTranslations("schedule.kind");
   const tKind = useTranslations("talks.kind");
   const tTrack = useTranslations("talks.track");
@@ -61,7 +61,7 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
           </div>
           <div className="font-bold text-md">
             {session.kind === "streaming" ? `(${t("streaming")}) ` : ""}
-            {session.talk.title}
+            {locale == 'en' ? session.talk.enTitle : session.talk.jpTitle}
           </div>
           <ul className="flex flex-col gap-1">
             {session.talk.speakers.map((speaker) => (

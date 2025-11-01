@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const session = findTalkSession(slug as unknown as TalkSlug);
 
   return {
-    title: session.talk.title,
+    title: locale === 'en' ? session.talk.enTitle : session.talk.jpTitle,
     description: session.talk.description,
   };
 }
@@ -55,7 +55,7 @@ export default async function Page({ params }: Props) {
 
 
   return (
-    <PageContainer title={session.talk.title} centerizeTitle={false}>
+    <PageContainer title={locale === 'en' ? session.talk.enTitle : session.talk.jpTitle} centerizeTitle={false}>
       <div>
         <time>
           {session.startTime}-{session.endTime}

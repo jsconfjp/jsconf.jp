@@ -4,8 +4,10 @@ import { SessionCard } from "./SessionCard";
 
 export function TalkSessionCard({
   session,
+  locale,
 }: {
-  session: Extract<ScheduledSession, { kind: "talk" }>;
+  session: Extract<ScheduledSession, { kind: "talk" }>,
+  locale: string,
 }) {
   if (session.kind !== "talk") {
     throw new RangeError("session is not a talk");
@@ -13,7 +15,7 @@ export function TalkSessionCard({
 
   return (
     <Link href={`/talks/${session.talk.slug}`}>
-      <SessionCard session={session} />
+      <SessionCard session={session} locale={locale} />
     </Link>
   );
 }
