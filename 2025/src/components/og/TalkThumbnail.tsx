@@ -3,7 +3,6 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { StaticImageData } from "next/image";
-
 import React from "react";
 import en from "@/../messages/en.json";
 import { ScheduledSession } from "@/constants/schedule";
