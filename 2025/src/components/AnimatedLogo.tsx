@@ -15,7 +15,7 @@ type Props = {
 const FRAME_COUNT = 29;
 const SPRITE_WIDTH = 400;
 const SPRITE_HEIGHT = 11600;
-const ANIMATION_DURATION = 1200;
+const ANIMATION_DURATION = 1500;
 
 export function AnimatedLogo({
     width,
