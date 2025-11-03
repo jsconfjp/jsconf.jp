@@ -69,7 +69,7 @@ export function AnimatedLogo({
                         height: `${height}px`,
                         backgroundImage: `url(${spriteSrc.src})`,
                         backgroundSize: `${width}px ${(SPRITE_HEIGHT / SPRITE_WIDTH) * width}px`,
-                        animation: `sprite-animate ${ANIMATION_DURATION}ms steps(${FRAME_COUNT}) 1`,
+                        animation: `sprite-animate ${ANIMATION_DURATION}ms steps(${FRAME_COUNT - 1}) 1`,
                     }}
                 />
             )}
@@ -80,7 +80,7 @@ export function AnimatedLogo({
             background-position: 0 0;
           }
           to {
-            background-position: 0 100%;
+            background-position: 0 -${((FRAME_COUNT - 1) * height)}px;
           }
         }
       `}</style>
