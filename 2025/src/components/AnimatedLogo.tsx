@@ -25,6 +25,7 @@ export function AnimatedLogo({
 }: Props) {
     const [isAnimating, setIsAnimating] = useState(false);
     const [isSpriteLoaded, setIsSpriteLoaded] = useState(false);
+    const [clickCount, setClickCount] = useState(0);
 
     // detect when sprite sheet has fully loaded
     useEffect(() => {
@@ -38,11 +39,15 @@ export function AnimatedLogo({
     const handleClick = () => {
         if (isAnimating || !isSpriteLoaded) return;
 
+        setClickCount(clickCount + 1);
         setIsAnimating(true);
         setTimeout(() => {
             setIsAnimating(false);
         }, ANIMATION_DURATION);
     };
+
+    // odd clicks = forward, even clicks = reverse
+    const isReverse = clickCount % 3 === 0;
 
 
     return (
@@ -80,7 +85,7 @@ export function AnimatedLogo({
                         backgroundImage: `url(${spriteSrc.src})`,
                         backgroundSize: `${width}px ${(SPRITE_HEIGHT / SPRITE_WIDTH) * width}px`,
                         animation: isAnimating
-                            ? `sprite-animate ${ANIMATION_DURATION}ms steps(${FRAME_COUNT - 1}) 1`
+                            ? `sprite-animate ${ANIMATION_DURATION}ms steps(${FRAME_COUNT - 1}) 1 ${isReverse ? "reverse" : "normal"}`
                             : "none",
                     }}
                 />
