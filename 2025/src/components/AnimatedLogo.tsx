@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import staticLogoSrc from "@/../public/logo/buggie_bugchan_logo.png";
 import spriteSrc from "@/../public/logo/jsconf_bugchan_v5_minified.png";
@@ -24,9 +24,19 @@ export function AnimatedLogo({
     fetchPriority,
 }: Props) {
     const [isAnimating, setIsAnimating] = useState(false);
+    const [isSpriteLoaded, setIsSpriteLoaded] = useState(false);
+
+    // detect when sprite sheet has fully loaded
+    useEffect(() => {
+        const img = new window.Image();
+        img.onload = () => {
+            setIsSpriteLoaded(true);
+        };
+        img.src = spriteSrc.src;
+    }, []);
 
     const handleClick = () => {
-        if (isAnimating) return; // 連打防止
+        if (isAnimating || !isSpriteLoaded) return;
 
         setIsAnimating(true);
         setTimeout(() => {
@@ -42,10 +52,11 @@ export function AnimatedLogo({
                 width: `${width}px`,
                 height: `${height}px`,
                 flexShrink: 0,
+                cursor: isSpriteLoaded ? "pointer" : "default",
             }}
         >
-            {/* static logo */}
-            {!isAnimating && (
+            {/* show static logo only if sprite hasn't loaded yet */}
+            {!isSpriteLoaded && (
                 <Image
                     src={staticLogoSrc}
                     fetchPriority={fetchPriority}
@@ -60,16 +71,17 @@ export function AnimatedLogo({
                 />
             )}
 
-            {/* sprite animation*/}
-            {isAnimating && (
+            {/* after sprite is loaded, show sprite at frame 0 (idle) / animating */}
+            {isSpriteLoaded && (
                 <div
-                    className="sprite-animation"
                     style={{
                         width: `${width}px`,
                         height: `${height}px`,
                         backgroundImage: `url(${spriteSrc.src})`,
                         backgroundSize: `${width}px ${(SPRITE_HEIGHT / SPRITE_WIDTH) * width}px`,
-                        animation: `sprite-animate ${ANIMATION_DURATION}ms steps(${FRAME_COUNT - 1}) 1`,
+                        animation: isAnimating
+                            ? `sprite-animate ${ANIMATION_DURATION}ms steps(${FRAME_COUNT - 1}) 1`
+                            : "none",
                     }}
                 />
             )}
