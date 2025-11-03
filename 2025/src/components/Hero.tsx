@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import logoSrc from "@/../public/logo.svg";
+import logoSrc from "@/../public/logo/buggie_bugchan_logo.png";
 
 export function Hero() {
   const t = useTranslations("about");

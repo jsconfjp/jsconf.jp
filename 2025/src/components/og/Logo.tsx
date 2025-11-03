@@ -7,7 +7,7 @@ type Props = {
   size: number;
 };
 
-const LOGO_URL = join(process.cwd(), "public", "logo.svg");
+const LOGO_URL = join(process.cwd(), "public", "logo", "buggie_bugchan_logo.png");
 
 export function Logo({ size }: Props) {
   return <img alt="" src={makeDataUrl(LOGO_URL)} width={size} height={size} />;
