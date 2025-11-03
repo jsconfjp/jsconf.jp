@@ -52,6 +52,7 @@ export function AnimatedLogo({
 
     return (
         <div
+            className="logo-container"
             onClick={handleClick}
             style={{
                 width: `${width}px`,
@@ -92,6 +93,14 @@ export function AnimatedLogo({
             )}
 
             <style jsx>{`
+        .logo-container {
+          transition: transform 0.2s ease-out;
+        }
+        
+        .logo-container:hover {
+          transform: scale(1.05);
+        }
+        
         @keyframes sprite-animate {
           from {
             background-position: 0 0;
