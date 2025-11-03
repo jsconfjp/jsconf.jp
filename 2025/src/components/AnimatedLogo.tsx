@@ -46,7 +46,6 @@ export function AnimatedLogo({
         }, ANIMATION_DURATION);
     };
 
-    // odd clicks = forward, even clicks = reverse
     const isReverse = clickCount % 3 === 0;
 
 
