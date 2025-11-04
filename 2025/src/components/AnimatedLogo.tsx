@@ -79,6 +79,8 @@ export function AnimatedLogo({
             {/* after sprite is loaded, show sprite at frame 0 (idle) / animating */}
             {isSpriteLoaded && (
                 <div
+                    role="img"
+                    aria-label={alt}
                     style={{
                         width: `${width}px`,
                         height: `${height}px`,
