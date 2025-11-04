@@ -46,6 +46,14 @@ export function AnimatedLogo({
         }, ANIMATION_DURATION);
     };
 
+    const handleKeyDown = (e: React.KeyboardEvent) => {
+        // when focused, allow to animate the logo by pressing Enter or Space key
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            handleClick();
+        }
+    };
+
     const isReverse = clickCount % 3 === 0;
 
 
@@ -53,6 +61,11 @@ export function AnimatedLogo({
         <div
             className="logo-container"
             onClick={handleClick}
+            onKeyDown={handleKeyDown}
+            role="button"
+            tabIndex={0}
+            aria-label={`${alt}. Click to animate.`}
+            aria-busy={!isSpriteLoaded}
             style={{
                 width: `${width}px`,
                 height: `${height}px`,
