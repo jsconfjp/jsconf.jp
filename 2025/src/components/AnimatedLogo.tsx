@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 import staticLogoSrc from "@/../public/logo/buggie_bugchan_logo.png";
 import spriteSrc from "@/../public/logo/jsconf_bugchan_v5_minified.png";
 
