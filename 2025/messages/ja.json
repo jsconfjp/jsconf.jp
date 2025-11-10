@@ -57,6 +57,9 @@
       "LT": "LT",
       "sponsor session": "スポンサーセッション",
       "sponsor LT": "スポンサーLT"
+    },
+    "interactivity": {
+      "addToCalendar": "カレンダーに追加"
     }
   },
   "venue": {

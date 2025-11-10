@@ -2,6 +2,8 @@ import { timeToMinutes } from "@/lib/timeToMinutes";
 import { Talk, TALKS_BY_SLUG } from "./talks";
 
 type Day = "1";
+export const eventDate = new Date("2025-11-16");
+export const EventUTCOffset = "09:00";
 export type Track = "A" | "B" | "C" | "D" | "all";
 
 export const TRACKS = ["A", "B", "C", "D"] satisfies Track[];
@@ -40,7 +42,12 @@ export type ScheduledSession = {
         | "networking";
     }
 );
+
 export type TalkSession = Extract<ScheduledSession, { kind: "talk" }>;
+export type StreamingSession = Extract<
+  ScheduledSession,
+  { kind: "streaming " }
+>;
 
 export const SCHEDULE: ScheduledSession[] = [
   {
