@@ -10,7 +10,10 @@ import baseballyamaAvatar from "../../public/speaker/baseballyama.jpg";
 import berlysiaAvatar from "../../public/speaker/berlysia.jpg";
 import blagojJovanovAvatar from "../../public/speaker/blagoj-jovanov.jpg";
 import canalunAvatar from "../../public/speaker/canalun.png";
+import ctcpipAvatar from "../../public/speaker/ctcpip.png"
 import deanSrebnikAvatar from "../../public/speaker/dean-srebnik.jpg";
+import devsnekAvatar from "../../public/speaker/devsnek.jpg"
+import DmitryMakhnevAvatar from "../../public/speaker/DmitryMakhnev.jpg"
 import GiovanniLaquidaraAvatar from "../../public/speaker/Giovanni-Laquidara.png";
 import islandryuAvatar from "../../public/speaker/islandryu.jpg";
 import itaiSatatiAvatar from "../../public/speaker/itai-satati.jpg";
@@ -21,6 +24,7 @@ import joyeeCheungAvatar from "../../public/speaker/joyee-cheung.jpg";
 import jxckAvatar from "../../public/speaker/jxck.svg";
 import kazukiImamuraAvatar from "../../public/speaker/kazuki-imamura.jpg";
 import kojiKojiAvatar from "../../public/speaker/koji-koji.jpg";
+import legendecasAvatar from "../../public/speaker/legendecas.png"
 import leoKettmeirAvatar from "../../public/speaker/leo-kettmeir.jpg";
 import lucaMugnainiAvatar from "../../public/speaker/luca-mugnaini.jpg";
 import manishKumarAvatar from "../../public/speaker/manish-kumar.jpg";
@@ -31,6 +35,7 @@ import olivierFluckigerAvatar from "../../public/speaker/olivier-fluckiger.jpg";
 import otaMeshiAvatar from "../../public/speaker/ota-meshi.jpg";
 import petamorikenAvatar from "../../public/speaker/petamoriken.jpg";
 import progfayAvatar from "../../public/speaker/progfay.png";
+import robpalmer2Avatar from "../../public/speaker/robpalmer2.jpg"
 import sachaGreifAvatar from "../../public/speaker/sacha-greif.jpg";
 import shaneCarrAvatar from "../../public/speaker/shane-carr.jpg";
 import sosukeSuzukiAvatar from "../../public/speaker/sosuke-suzuki.jpg";
@@ -1016,16 +1021,40 @@ Webチームの内製化に取り組んでいる方、開発スピードと品�
   {
     slug: "technical-discussion-tc39",
     title: "Technical Discussion with TC39",
-    description: "TBD",
+    description: "",
     kind: "session",
     day: "1",
     language: "English",
     speakers: [
       {
         type: "speaker",
-        name: "TBD",
-        avatarUrl: emptyAvatar,
-        bio: "TBD",
+        name: "Chengzhong Wu",
+        avatarUrl: legendecasAvatar,
+        bio: "https://github.com/legendecas",
+      },
+      {
+        type: "speaker",
+        name: "Chris de Almedia",
+        avatarUrl: ctcpipAvatar,
+        bio: "https://github.com/ctcpip",
+      },
+      {
+        type: "speaker",
+        name: "Dmitry Makhnev",
+        avatarUrl: DmitryMakhnevAvatar,
+        bio: "https://github.com/DmitryMakhnev",
+      },
+      {
+        type: "speaker",
+        name: "Gus Caplan",
+        avatarUrl: devsnekAvatar,
+        bio: "https://github.com/devsnek",
+      },
+      {
+        type: "speaker",
+        name: "Rob Palmer",
+        avatarUrl: robpalmer2Avatar,
+        bio: "https://github.com/robpalme",
       },
     ],
   },
