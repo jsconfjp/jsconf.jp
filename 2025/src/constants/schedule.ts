@@ -22,24 +22,24 @@ export type ScheduledSession = {
   startTime: string;
   endTime: string;
 } & (
-  | {
+    | {
       kind: "talk";
       talk: Talk;
     }
-  | {
+    | {
       kind: "streaming";
       talk: Talk;
     }
-  | {
+    | {
       kind:
-        | "reception"
-        | "opening"
-        | "closed"
-        | "break"
-        | "closing"
-        | "networking";
+      | "reception"
+      | "opening"
+      | "closed"
+      | "break"
+      | "closing"
+      | "networking";
     }
-);
+  );
 export type TalkSession = Extract<ScheduledSession, { kind: "talk" }>;
 
 export const SCHEDULE: ScheduledSession[] = [
@@ -266,7 +266,7 @@ export const SCHEDULE: ScheduledSession[] = [
   },
   {
     kind: "talk",
-    talk: TALKS_BY_SLUG["denkiyagi-sponsor-session"],
+    talk: TALKS_BY_SLUG["cloudinary-sponsor-session"],
     track: "D",
     day: "1",
     startTime: "13:00",
@@ -513,7 +513,7 @@ export const SCHEDULE: ScheduledSession[] = [
   },
   {
     kind: "talk",
-    talk: TALKS_BY_SLUG["cloudinary-sponsor-session"],
+    talk: TALKS_BY_SLUG["denkiyagi-sponsor-session"],
     track: "C",
     day: "1",
     startTime: "17:00",
