@@ -17,7 +17,6 @@ import DmitryMakhnevAvatar from "../../public/speaker/DmitryMakhnev.jpg"
 import GiovanniLaquidaraAvatar from "../../public/speaker/Giovanni-Laquidara.png";
 import islandryuAvatar from "../../public/speaker/islandryu.jpg";
 import itaiSatatiAvatar from "../../public/speaker/itai-satati.jpg";
-import jarredSumnerAvatar from "../../public/speaker/jarred-sumner.jpg";
 import jemimaAbuAvatar from "../../public/speaker/jemima-abu.jpg";
 import jiko21Avatar from "../../public/speaker/jiko21.jpg";
 import joyeeCheungAvatar from "../../public/speaker/joyee-cheung.jpg";
@@ -829,23 +828,19 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
     language: "Japanese",
     speakers: [SPONSORS_BY_NAME["株式会社令和トラベル"]],
   },
-
   {
-    slug: "bun-video-talk",
-    title:
-      "Bunで実現する高速レンダリング（原題：Rendering at the speed of Bun） (video talk)",
-    description: `モダンなアプリケーション開発では、静的サイト生成、サーバーサイドレンダリング、ルーティング、ホットリロードといった複数のツールを組み合わせる必要があり、その多くは速度低下や複雑性の増大を招いてきた。
-Bunの新しいRendering APIは、これらの要素をひとつに統合し、Bunならではの高いパフォーマンスと優れた開発体験を提供する。
-本講演では、Rendering APIの仕組み、速度に最適化された理由、そしてそれが開発者にモダンなフルスタックアプリケーションをBunで構築する力をどのように与えるのかをジャレッドが解説する。`,
+    slug: "tbd",
+    title: "TBD",
+    description: "TBD",
     kind: "session",
     day: "1",
     language: "English",
     speakers: [
       {
         type: "speaker",
-        name: "Jarred Sumner",
-        avatarUrl: jarredSumnerAvatar,
-        bio: "Building Bun",
+        name: "TBD",
+        avatarUrl: emptyAvatar,
+        bio: "",
       },
     ],
   },
@@ -905,16 +900,6 @@ In this talk, I’ll walk through how I used the TypeScript profiler to uncover 
       },
     ],
   },
-  {
-    slug: "kakehashi-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
-    kind: "sponsor session",
-    day: "1",
-    language: "Japanese",
-    speakers: [SPONSORS_BY_NAME["株式会社カケハシ"]],
-  },
-
   {
     slug: "v8-from-script-to-call-rcx",
     title: "V8: from <script> to `call $rcx`",

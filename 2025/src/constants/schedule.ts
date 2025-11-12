@@ -40,9 +40,10 @@ export type ScheduledSession = {
       | "networking";
     }
   );
+
 export type TalkSession = Extract<ScheduledSession, { kind: "talk" }>;
 
-export const SCHEDULE: ScheduledSession[] = [
+const notSortedSchedule: ScheduledSession[] = [
   {
     kind: "reception",
     track: "all",
@@ -423,7 +424,7 @@ export const SCHEDULE: ScheduledSession[] = [
 
   {
     kind: "talk",
-    talk: TALKS_BY_SLUG["bun-video-talk"],
+    talk: TALKS_BY_SLUG["tbd"],
     track: "A",
     day: "1",
     startTime: "15:50",
@@ -446,14 +447,12 @@ export const SCHEDULE: ScheduledSession[] = [
     endTime: "16:20",
   },
   {
-    kind: "talk",
-    talk: TALKS_BY_SLUG["kakehashi-sponsor-session"],
+    kind: "break",
     track: "D",
     day: "1",
     startTime: "15:50",
     endTime: "16:20",
   },
-
   {
     kind: "break",
     track: "all",
@@ -663,6 +662,9 @@ export const SCHEDULE: ScheduledSession[] = [
     endTime: "22:00",
   },
 ]
+
+
+export const SCHEDULE: ScheduledSession[] = notSortedSchedule
   // 時間順、トラック順でソート
   .toSorted((a, b) => {
     const timeCompare = timeToMinutes(a.startTime) - timeToMinutes(b.startTime);
