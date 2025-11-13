@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Button } from "@/components/Button";
 import { Hero } from "@/components/Hero";
@@ -7,6 +8,7 @@ import { Team } from "@/components/Team";
 import { Venue } from "@/components/Venue";
 import { SPONSORS } from "@/constants/sponsors";
 import { Locale } from "@/i18n/constants";
+import FloorMap from "../../../public/misc/floor-map.png";
 
 type Params = { locale: Locale };
 
@@ -49,6 +51,21 @@ export default async function Page({ params }: Props) {
           <Button href="/venue" variant="secondary" size="md">
             {t("navigation.viewDetails")}
           </Button>
+        </div>
+      </div>
+
+       <div className="max-w-screen-md mx-auto mt-8 md:mt-32 flex flex-col gap-4">
+        <h2 className="text-3xl font-bold text-center">
+          {t("navigation.floorMap")}
+        </h2>
+        <div className="w-full">
+          <Image
+            alt={t("navigation.floorMap")}
+            src={FloorMap}
+            width={1192}
+            height={843}
+            className="w-full h-auto"
+          />
         </div>
       </div>
 
