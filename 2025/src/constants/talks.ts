@@ -35,7 +35,7 @@ import otaMeshiAvatar from "../../public/speaker/ota-meshi.jpg";
 import petamorikenAvatar from "../../public/speaker/petamoriken.jpg";
 import progfayAvatar from "../../public/speaker/progfay.png";
 import robpalmer2Avatar from "../../public/speaker/robpalmer2.jpg"
-import RubenBridgewaterAvatar from "../../public/speaker/RubenBridgewater.jpeg";
+import RubenBridgewaterAvatar from "../../public/speaker/RubenBridgewater.jpg";
 import sachaGreifAvatar from "../../public/speaker/sacha-greif.jpg";
 import shaneCarrAvatar from "../../public/speaker/shane-carr.jpg";
 import sosukeSuzukiAvatar from "../../public/speaker/sosuke-suzuki.jpg";
