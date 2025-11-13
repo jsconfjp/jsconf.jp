@@ -35,6 +35,7 @@ import otaMeshiAvatar from "../../public/speaker/ota-meshi.jpg";
 import petamorikenAvatar from "../../public/speaker/petamoriken.jpg";
 import progfayAvatar from "../../public/speaker/progfay.png";
 import robpalmer2Avatar from "../../public/speaker/robpalmer2.jpg"
+import RubenBridgewaterAvatar from "../../public/speaker/RubenBridgewater.jpg";
 import sachaGreifAvatar from "../../public/speaker/sacha-greif.jpg";
 import shaneCarrAvatar from "../../public/speaker/shane-carr.jpg";
 import sosukeSuzukiAvatar from "../../public/speaker/sosuke-suzuki.jpg";
@@ -829,8 +830,8 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
     speakers: [SPONSORS_BY_NAME["株式会社令和トラベル"]],
   },
   {
-    slug: "tbd",
-    title: "TBD",
+    slug: "shrink-supply-chain-risk-in-js",
+    title: "Shrink Supply Chain Risk in JS",
     description: "TBD",
     kind: "session",
     day: "1",
@@ -838,9 +839,9 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
     speakers: [
       {
         type: "speaker",
-        name: "TBD",
-        avatarUrl: emptyAvatar,
-        bio: "",
+        name: "Ruben Bridgewater",
+        avatarUrl: RubenBridgewaterAvatar,
+        bio: "Ruben Bridgewater is a Staff Engineer at Datadog, building observability that adds insight—not overhead. He serves on the Node.js Technical Steering Committee and participates in TC39 as an Invited Expert, focusing on developer experience, performance, and making things simple.",
       },
     ],
   },

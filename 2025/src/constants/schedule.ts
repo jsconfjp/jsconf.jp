@@ -424,7 +424,7 @@ const notSortedSchedule: ScheduledSession[] = [
 
   {
     kind: "talk",
-    talk: TALKS_BY_SLUG["tbd"],
+    talk: TALKS_BY_SLUG["shrink-supply-chain-risk-in-js"],
     track: "A",
     day: "1",
     startTime: "15:50",
