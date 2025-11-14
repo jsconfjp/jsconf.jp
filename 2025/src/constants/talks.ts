@@ -1097,8 +1097,8 @@ AI that acts changes the role it plays: from passive responder to proactive team
   },
   {
     slug: "dwango-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "Media Capture and Streams: W3C仕様と現場での知見",
+    description: "Media Capture and Streams API は、Web アプリケーションがカメラやマイクなどのメディアデバイスへアクセスし、MediaStreamTrack／MediaStream といったインターフェースを通じて映像・音声を扱うための仕様です。このセッションでは、標準化仕様に定義されるモデルやライフサイクル、Permissions／Constraints、ImageCapture などの周辺 API を整理しながら、実際にオンライン試験システムの開発で活用した際の体験談・失敗談を合わせて紹介します。",
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
