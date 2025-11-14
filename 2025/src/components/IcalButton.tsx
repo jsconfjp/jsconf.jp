@@ -7,10 +7,9 @@ import {
   TalkSession,
   StreamingSession,
 } from "@/constants/schedule";
-import { vendored } from "next/dist/server/route-modules/app-page/module";
 import { venueAddress } from "@/constants/venue";
-import { Talk } from "@/constants/talks";
 import { usePathname } from "@/i18n/navigation";
+import { twMerge } from "tailwind-merge";
 
 export type CalendarType = "Google" | "Outlook" | "ICS";
 export type CalendarSession = TalkSession | StreamingSession;
@@ -19,6 +18,7 @@ type Props = {
   sessions: CalendarSession[];
   calendarType: CalendarType;
   text?: string;
+  className?: string;
 };
 
 const timezone = "Asia/Tokyo";
@@ -44,6 +44,35 @@ const getEventDetails = (session: CalendarSession, eventUrl: string) => {
   };
 };
 
+const generateMultiIcalData = (
+  sessions: CalendarSession[],
+  pageUrl: string,
+  trackName: string,
+): string => {
+  const calendarName = `JSConf 2025 - ${trackName}`;
+  const calendar = ical({
+    name: calendarName,
+  });
+
+  calendar.method(ICalCalendarMethod.REQUEST);
+
+  sessions.forEach((session) => {
+    const { start, end } = getSessionDates(session);
+    const { title, description, location } = getEventDetails(session, pageUrl);
+
+    calendar.createEvent({
+      start,
+      end,
+      summary: title,
+      description,
+      location,
+      timezone,
+    });
+  });
+
+  return calendar.toString();
+};
+
 const generateIcalData = (
   session: CalendarSession,
   pageUrl: string,
@@ -53,11 +82,9 @@ const generateIcalData = (
     name: calendarName,
   });
 
-  // required because Outlook is weird
   calendar.method(ICalCalendarMethod.REQUEST);
 
   const { start, end } = getSessionDates(session);
-
   const { title, description, location } = getEventDetails(session, pageUrl);
 
   calendar.createEvent({
@@ -95,7 +122,7 @@ const makeGoogleCalendarLink = (
 
   const googleCalendarBaseUrl = new URL(
     "https://calendar.google.com/calendar/render",
-  )!;
+  );
 
   return `${googleCalendarBaseUrl.toString()}?${params.toString()}`;
 };
@@ -110,9 +137,7 @@ const makeOutlookCalendarLink = (
   const startDate = start.toISOString().replace(/[-:]/g, "").split(".")[0];
   const endDate = end.toISOString().replace(/[-:]/g, "").split(".")[0];
 
-  const baseUrl = new URL(
-    "https://outlook.live.com/calendar/0/action/compose",
-  )!;
+  const baseUrl = new URL("https://outlook.live.com/calendar/0/action/compose");
 
   const params = new URLSearchParams({
     allday: "false",
@@ -143,18 +168,47 @@ const downloadIcsFile = (session: CalendarSession, pageUrl: string) => {
   window.URL.revokeObjectURL(link.href);
 };
 
+const downloadMultiIcsFile = (
+  sessions: CalendarSession[],
+  pageUrl: string,
+  trackName: string,
+) => {
+  const icalData = generateMultiIcalData(sessions, pageUrl, trackName);
+  const blob = new Blob([icalData], { type: "text/calendar;charset=utf-8" });
+  const link = document.createElement("a");
+  link.href = window.URL.createObjectURL(blob);
+
+  const filename = `jsconf-2025-track-${trackName.toLowerCase()}.ics`;
+
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  window.URL.revokeObjectURL(link.href);
+};
+
 const CALENDAR_HANDLERS = {
   Google: makeGoogleCalendarLink,
   Outlook: makeOutlookCalendarLink,
   ICS: downloadIcsFile,
 } as const;
 
-export function IcalButton({ sessions, calendarType, text }: Props) {
+export function IcalButton({ sessions, calendarType, text, className }: Props) {
   const path = usePathname();
 
+  const multiCalendar = sessions.length > 1;
+
   const handleClick = () => {
-    if (sessions.length === 1) {
-      const pageUrl = new URL(path, window.location.origin).href;
+    const pageUrl = new URL(path, window.location.origin).href;
+
+    if (multiCalendar) {
+      // Multi-calendar: only ICS is supported
+      if (calendarType === "ICS") {
+        const trackName = sessions[0].track || "all";
+        downloadMultiIcsFile(sessions, pageUrl, trackName);
+      }
+    } else {
+      // Single session: all calendar types supported
       const handler = CALENDAR_HANDLERS[calendarType];
       if (calendarType === "ICS") {
         handler(sessions[0], pageUrl);
@@ -168,7 +222,7 @@ export function IcalButton({ sessions, calendarType, text }: Props) {
   return (
     <button
       onClick={handleClick}
-      className="flex items-center w-full text-left py-2 px-3"
+      className={twMerge("flex justify-center w-full text-center", className)}
     >
       <span>{text ?? `${calendarType}`}</span>
     </button>

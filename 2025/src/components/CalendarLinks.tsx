@@ -18,13 +18,19 @@ export function CalendarLinks({ session }: Props) {
       <DropdownContent>
         <DropdownList>
           <DropdownItem>
-            <IcalButton session={session} calendarType={"Google"}></IcalButton>
+            <IcalButton
+              sessions={[session]}
+              calendarType={"Google"}
+            ></IcalButton>
           </DropdownItem>
           <DropdownItem>
-            <IcalButton session={session} calendarType={"Outlook"}></IcalButton>
+            <IcalButton
+              sessions={[session]}
+              calendarType={"Outlook"}
+            ></IcalButton>
           </DropdownItem>
           <DropdownItem>
-            <IcalButton session={session} calendarType={"ICS"}></IcalButton>
+            <IcalButton sessions={[session]} calendarType={"ICS"}></IcalButton>
           </DropdownItem>
         </DropdownList>
       </DropdownContent>
