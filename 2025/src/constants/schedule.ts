@@ -202,7 +202,7 @@ const notSortedSchedule: ScheduledSession[] = [
 
   {
     kind: "talk",
-    talk: TALKS_BY_SLUG["tbd-by-allen"],
+    talk: TALKS_BY_SLUG["by-allen"],
     track: "A",
     day: "1",
     startTime: "11:00",
@@ -210,7 +210,7 @@ const notSortedSchedule: ScheduledSession[] = [
   },
   {
     kind: "streaming",
-    talk: TALKS_BY_SLUG["tbd-by-allen"],
+    talk: TALKS_BY_SLUG["by-allen"],
     track: "B",
     day: "1",
     startTime: "11:00",
@@ -218,7 +218,7 @@ const notSortedSchedule: ScheduledSession[] = [
   },
   {
     kind: "streaming",
-    talk: TALKS_BY_SLUG["tbd-by-allen"],
+    talk: TALKS_BY_SLUG["by-allen"],
     track: "C",
     day: "1",
     startTime: "11:00",
@@ -226,7 +226,7 @@ const notSortedSchedule: ScheduledSession[] = [
   },
   {
     kind: "streaming",
-    talk: TALKS_BY_SLUG["tbd-by-allen"],
+    talk: TALKS_BY_SLUG["by-allen"],
     track: "D",
     day: "1",
     startTime: "11:00",
@@ -447,7 +447,8 @@ const notSortedSchedule: ScheduledSession[] = [
     endTime: "16:20",
   },
   {
-    kind: "break",
+    kind: "talk",
+    talk: TALKS_BY_SLUG["aapo-alasuutari"],
     track: "D",
     day: "1",
     startTime: "15:50",
