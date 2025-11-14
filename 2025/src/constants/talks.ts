@@ -906,7 +906,7 @@ In this talk, I’ll walk through how I used the TypeScript profiler to uncover 
     slug: "aapo-alasuutari",
     title: "Out the cave, off the cliff  — data-oriented design in Nova JavaScript engine",
     description: "In the world of JavaScript, it is easy to forget that our software runs on real hardware, made up of real bits and bytes instead of being intangible shadows of objects on a wall, flickers of code on a screen. JavaScript programs tend to consume a lot of memory, and while much of the blame lies in the developer, a part of that is also the way our JavaScript engines are built. Nova JavaScript engine attempts to find a different path: in this talk we'll look at what JavaScript objects look like in memory, and ponder how much of that shadow of an object we really need or if we're perhaps ready to leave the Programmer's Cave and do away with thinking about shadows? Nova JavaScript engine is also an exploration into what is the price of walking that path: we'll see magnificent performance cliffs, and perhaps plunge off of them if the price is right.",
-    kind: "sponsor session",
+    kind: "session",
     day: "1",
     language: "English",
     speakers: [
