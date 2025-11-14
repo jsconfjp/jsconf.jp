@@ -448,7 +448,7 @@ const notSortedSchedule: ScheduledSession[] = [
   },
   {
     kind: "talk",
-    talk: TALKS_BY_SLUG["kakehashi-sponsor-session"],
+    talk: TALKS_BY_SLUG["aapo-alasuutari"],
     track: "D",
     day: "1",
     startTime: "15:50",
