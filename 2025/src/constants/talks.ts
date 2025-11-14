@@ -2,6 +2,7 @@ import type { StaticImageData } from "next/image";
 // @ts-expect-error see 2025/scripts/fetch-og-images.ts
 import { type Sponsor, SPONSORS_BY_NAME } from "./sponsors.ts";
 import emptyAvatar from "../../public/speaker/250x250.png";
+import aapoAlasuutariAvatar from "../../public/speaker/AapoAlasuutari.png";
 import akfmSatoAvatar from "../../public/speaker/akfm-sato.png";
 import allenWirfsBrockAvatar from "../../public/speaker/allen-wirfs-brock.jpg";
 import anamAhmedAvatar from "../../public/speaker/anam-ahmed.jpg";
@@ -832,7 +833,7 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
   {
     slug: "shrink-supply-chain-risk-in-js",
     title: "Shrink Supply Chain Risk in JS",
-    description: "TBD",
+    description: "",
     kind: "session",
     day: "1",
     language: "English",
@@ -899,6 +900,23 @@ In this talk, I’ll walk through how I used the TypeScript profiler to uncover 
         avatarUrl: itaiSatatiAvatar,
         bio: `Itai is a software developer with nearly a decade of experience and a love for large-scale web systems, the nuts and bolts of payment systems, performance optimizations, and all things TypeScript. Outside of coding, he’s a licensed pilot and marathon runner.`,
       },
+    ],
+  },
+  {
+    slug: "kakehashi-sponsor-session",
+    title: "Out the cave, off the cliff  — data-oriented design in Nova JavaScript engine",
+    description: "Talk description: In the world of JavaScript, it is easy to forget that our software runs on real hardware, made up of real bits and bytes instead of being intangible shadows of objects on a wall, flickers of code on a screen. JavaScript programs tend to consume a lot of memory, and while much of the blame lies in the developer, a part of that is also the way our JavaScript engines are built. Nova JavaScript engine attempts to find a different path: in this talk we'll look at what JavaScript objects look like in memory, and ponder how much of that shadow of an object we really need or if we're perhaps ready to leave the Programmer's Cave and do away with thinking about shadows? Nova JavaScript engine is also an exploration into what is the price of walking that path: we'll see magnificent performance cliffs, and perhaps plunge off of them if the price is right.",
+    kind: "sponsor session",
+    day: "1",
+    language: "English",
+    speakers: [
+      SPONSORS_BY_NAME["株式会社カケハシ"],
+      {
+        type: "speaker",
+        name: "Aapo Alasuutari",
+        avatarUrl: aapoAlasuutariAvatar,
+        bio: "Aapo Alasuutari is a data-oriented design zealot writing TypeScript by day, with 9 years of experience developing a browser-based automation control system UI at Valmet Automation, but by night he transforms into a Rust developer writing the Nova JavaScript engine."
+      }
     ],
   },
   {
@@ -1170,8 +1188,8 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
 
   {
     slug: "technical-welfare-and-new-capitalistic-web-development",
-    title: "TBD",
-    description: `TBD`,
+    title: "Webエコシステムにおける「福祉」と「受容」",
+    description: "",
     kind: "keynote",
     day: "1",
     language: "Japanese",
@@ -1185,7 +1203,7 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
     ],
   },
   {
-    slug: "tbd-by-allen",
+    slug: "by-allen",
     title:
       "From Chaos to Harmony: A History of JavaScript（混沌から調和へ ― JavaScriptの歴史）",
     description: [
@@ -1214,7 +1232,7 @@ We are here today because of the importance of modern JavaScript and we care abo
         type: "speaker",
         name: "Allen Wirfs Brock",
         avatarUrl: allenWirfsBrockAvatar,
-        bio: "TBD",
+        bio: "",
       },
     ],
   },
