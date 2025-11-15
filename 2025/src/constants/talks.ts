@@ -1188,9 +1188,18 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
   },
 
   {
-    slug: "technical-welfare-and-new-capitalistic-web-development",
-    title: "Webエコシステムにおける「福祉」と「受容」",
-    description: "",
+    slug: "embracing-technical-welfare-and-rediscovering-web-development",
+    title: "技術的福祉の受容、および Web 開発との「出会い直し」",
+    description: `Web 開発の「パラダイムシフト」は、エコシステムに何をもたらしてるんだろうか？
+今起こっている変化は、本当に「技術」の変化だけなんだろうか？
+強く成長することを求められるけど、その先に目指すものはなんなのだろうか？
+「乗り遅れ」ないためにベットしているのは、何に対してなんだろうか？
+結局俺達は、平成に直面してきた問題を解決して、「幸せ」になれていくんだろうか？
+
+急速に書き換えられたナラティブで、 Web 開発は何度目かの「出会い直し」を経験している。
+その先にぼんやり提示される物語に対し、隣の人と同じ方向を向いてるかすらもよくわからない時代。
+
+について、普段考えていることを話してみたい。`,
     kind: "keynote",
     day: "1",
     language: "Japanese",
