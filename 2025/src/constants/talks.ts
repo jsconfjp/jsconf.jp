@@ -833,7 +833,9 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
   {
     slug: "shrink-supply-chain-risk-in-js",
     title: "Shrink Supply Chain Risk in JS",
-    description: "",
+    description: `Supply‑chain attacks have become commonplace. Learn how to validate what you install, reduce blast radius, and maintain packages responsibly.
+We’ll cover common weak points in modern applications and how to tackle these. We’ll also dig into healthy maintainer practices for sustainable package upkeep.
+Use least‑privilege, dependency policies, and more mitigation strategies with ease.`,
     kind: "session",
     day: "1",
     language: "English",
