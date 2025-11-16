@@ -796,7 +796,7 @@ https://github.com/acornjs/acorn/commit/b4ae0d29384f2bf3fafac7d42f1c3e2ee9a48204
   },
   {
     slug: "state-of-deno",
-    title: "The State of Deno",
+    title: "Deno Wrapped: What happened in Deno this year",
     description: `Deno is a popular modern alternative to NodeJS, with a focus on security & modern tooling, while being compatible with Node.
 The Deno team has worked on many different projects, be it in the open source ecosystem with Deno itself and JSR amongst other, and in a commercial setting with Deno Deploy and Deno Subhosting.
 
@@ -887,11 +887,10 @@ Use least‑privilege, dependency policies, and more mitigation strategies with 
   },
   {
     slug: "profiling-typescript-at-scale",
-    title:
-      "Profiling TypeScript at Scale: Finding and Fixing Compiler Bottlenecks",
+    title: "Tracing the TypeScript compiler at Scale",
     description: `As TypeScript projects grow, so does the pain of waiting for the compiler. What once felt instant on a small codebase can turn into a frustrating bottleneck and lost productivity across large teams and codebases.
 
-In this talk, I’ll walk through how I used the TypeScript profiler to uncover hidden bottlenecks in a real-world monolith and applied a single fix that shaved minutes off every build. We didn’t need exotic tools or risky rewrites, just a better understanding of what the compiler was actually doing.`,
+In this talk, I’ll walk through how I used the TypeScript tracer to uncover hidden bottlenecks in a real-world monolith and applied a single fix that shaved minutes off every build. We didn’t need exotic tools or risky rewrites, just a better understanding of what the compiler was actually doing.`,
     kind: "session",
     day: "1",
     language: "English",
