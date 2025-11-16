@@ -609,7 +609,7 @@ const notSortedSchedule: ScheduledSession[] = [
   {
     kind: "talk",
     talk: TALKS_BY_SLUG[
-      "technical-welfare-and-new-capitalistic-web-development"
+      "embracing-technical-welfare-and-rediscovering-web-development"
     ],
     track: "A",
     day: "1",
@@ -619,7 +619,7 @@ const notSortedSchedule: ScheduledSession[] = [
   {
     kind: "streaming",
     talk: TALKS_BY_SLUG[
-      "technical-welfare-and-new-capitalistic-web-development"
+      "embracing-technical-welfare-and-rediscovering-web-development"
     ],
     track: "B",
     day: "1",
@@ -629,7 +629,7 @@ const notSortedSchedule: ScheduledSession[] = [
   {
     kind: "streaming",
     talk: TALKS_BY_SLUG[
-      "technical-welfare-and-new-capitalistic-web-development"
+      "embracing-technical-welfare-and-rediscovering-web-development"
     ],
     track: "C",
     day: "1",
@@ -639,7 +639,7 @@ const notSortedSchedule: ScheduledSession[] = [
   {
     kind: "streaming",
     talk: TALKS_BY_SLUG[
-      "technical-welfare-and-new-capitalistic-web-development"
+      "embracing-technical-welfare-and-rediscovering-web-development"
     ],
     track: "D",
     day: "1",
