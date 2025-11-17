@@ -22,24 +22,24 @@ export type ScheduledSession = {
   startTime: string;
   endTime: string;
 } & (
-    | {
+  | {
       kind: "talk";
       talk: Talk;
     }
-    | {
+  | {
       kind: "streaming";
       talk: Talk;
     }
-    | {
+  | {
       kind:
-      | "reception"
-      | "opening"
-      | "closed"
-      | "break"
-      | "closing"
-      | "networking";
+        | "reception"
+        | "opening"
+        | "closed"
+        | "break"
+        | "closing"
+        | "networking";
     }
-  );
+);
 
 export type TalkSession = Extract<ScheduledSession, { kind: "talk" }>;
 
@@ -662,8 +662,7 @@ const notSortedSchedule: ScheduledSession[] = [
     startTime: "20:05",
     endTime: "22:00",
   },
-]
-
+];
 
 export const SCHEDULE: ScheduledSession[] = notSortedSchedule
   // 時間順、トラック順でソート

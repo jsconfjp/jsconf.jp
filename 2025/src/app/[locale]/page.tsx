@@ -42,7 +42,7 @@ export default async function Page({ params }: Props) {
         <Hero />
       </div>
 
-       <div className="max-w-screen-md mx-auto mt-8 md:mt-32 flex flex-col gap-4">
+      <div className="max-w-screen-md mx-auto mt-8 md:mt-32 flex flex-col gap-4">
         <h2 className="text-3xl font-bold text-center">
           {t("navigation.floorMap")}
         </h2>
