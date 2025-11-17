@@ -44,18 +44,6 @@ export default async function Page({ params }: Props) {
 
       <div className="max-w-screen-md mx-auto mt-8 md:mt-32 flex flex-col gap-4">
         <h2 className="text-3xl font-bold text-center">
-          {t("navigation.venue")}
-        </h2>
-        <Venue locale={locale} />
-        <div className="flex items-center justify-center">
-          <Button href="/venue" variant="secondary" size="md">
-            {t("navigation.viewDetails")}
-          </Button>
-        </div>
-      </div>
-
-       <div className="max-w-screen-md mx-auto mt-8 md:mt-32 flex flex-col gap-4">
-        <h2 className="text-3xl font-bold text-center">
           {t("navigation.floorMap")}
         </h2>
         <div className="w-full">
@@ -66,6 +54,18 @@ export default async function Page({ params }: Props) {
             height={843}
             className="w-full h-auto"
           />
+        </div>
+      </div>
+
+      <div className="max-w-screen-md mx-auto mt-8 md:mt-32 flex flex-col gap-4">
+        <h2 className="text-3xl font-bold text-center">
+          {t("navigation.venue")}
+        </h2>
+        <Venue locale={locale} />
+        <div className="flex items-center justify-center">
+          <Button href="/venue" variant="secondary" size="md">
+            {t("navigation.viewDetails")}
+          </Button>
         </div>
       </div>
 
