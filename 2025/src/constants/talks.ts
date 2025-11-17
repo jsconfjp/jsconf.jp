@@ -11,10 +11,10 @@ import baseballyamaAvatar from "../../public/speaker/baseballyama.jpg";
 import berlysiaAvatar from "../../public/speaker/berlysia.jpg";
 import blagojJovanovAvatar from "../../public/speaker/blagoj-jovanov.jpg";
 import canalunAvatar from "../../public/speaker/canalun.png";
-import ctcpipAvatar from "../../public/speaker/ctcpip.png"
+import ctcpipAvatar from "../../public/speaker/ctcpip.png";
 import deanSrebnikAvatar from "../../public/speaker/dean-srebnik.jpg";
-import devsnekAvatar from "../../public/speaker/devsnek.jpg"
-import DmitryMakhnevAvatar from "../../public/speaker/DmitryMakhnev.jpg"
+import devsnekAvatar from "../../public/speaker/devsnek.jpg";
+import DmitryMakhnevAvatar from "../../public/speaker/DmitryMakhnev.jpg";
 import GiovanniLaquidaraAvatar from "../../public/speaker/Giovanni-Laquidara.png";
 import islandryuAvatar from "../../public/speaker/islandryu.jpg";
 import itaiSatatiAvatar from "../../public/speaker/itai-satati.jpg";
@@ -24,7 +24,7 @@ import joyeeCheungAvatar from "../../public/speaker/joyee-cheung.jpg";
 import jxckAvatar from "../../public/speaker/jxck.svg";
 import kazukiImamuraAvatar from "../../public/speaker/kazuki-imamura.jpg";
 import kojiKojiAvatar from "../../public/speaker/koji-koji.jpg";
-import legendecasAvatar from "../../public/speaker/legendecas.png"
+import legendecasAvatar from "../../public/speaker/legendecas.png";
 import leoKettmeirAvatar from "../../public/speaker/leo-kettmeir.jpg";
 import lucaMugnainiAvatar from "../../public/speaker/luca-mugnaini.jpg";
 import manishKumarAvatar from "../../public/speaker/manish-kumar.jpg";
@@ -35,7 +35,7 @@ import olivierFluckigerAvatar from "../../public/speaker/olivier-fluckiger.jpg";
 import otaMeshiAvatar from "../../public/speaker/ota-meshi.jpg";
 import petamorikenAvatar from "../../public/speaker/petamoriken.jpg";
 import progfayAvatar from "../../public/speaker/progfay.png";
-import robpalmer2Avatar from "../../public/speaker/robpalmer2.jpg"
+import robpalmer2Avatar from "../../public/speaker/robpalmer2.jpg";
 import RubenBridgewaterAvatar from "../../public/speaker/RubenBridgewater.jpg";
 import sachaGreifAvatar from "../../public/speaker/sacha-greif.jpg";
 import shaneCarrAvatar from "../../public/speaker/shane-carr.jpg";
@@ -68,6 +68,7 @@ export type Talk = {
   day: Day;
   language: Language;
   speakers: (Speaker | Sponsor)[];
+  recordingUrl?: string;
 };
 export type FlattenedSpeaker = {
   talk: Talk;
@@ -509,7 +510,8 @@ Whether you're a web developer looking to expand into TV development or seeking 
   },
   {
     slug: "denkiyagi-sponsor-session",
-    title: "なぜブラウザで帳票を生成したいのか、どのようにブラウザで帳票を生成するのか",
+    title:
+      "なぜブラウザで帳票を生成したいのか、どのようにブラウザで帳票を生成するのか",
     description: `デンキヤギでは、yagisan-reportsという「ブラウザ単体で動作する帳票エンジン」を開発・販売しています。
 帳票エンジンとは、ざっくり言えば「請求書のようなPDFを出力するテンプレートエンジン」です。
 
@@ -818,7 +820,8 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
   },
   {
     slug: "reiwa-travel-sponsor-session",
-    title: "AIにNext.js App Router移行を依頼して、失敗した話。 Evolving NEWT’s TypeScript Backend for the AI-Driven",
+    title:
+      "AIにNext.js App Router移行を依頼して、失敗した話。 Evolving NEWT’s TypeScript Backend for the AI-Driven",
     description: `1. AIにNext.js App Routerの移行を任せた結果、プロンプト調整だけで1ヶ月を費やしてしまい、ログ欠損も発生してしまいました。
 この経験を通じて、AI支援の正しい使い方と、人が担うべき判断・理解の順序を見直した話をします。
 
@@ -905,8 +908,10 @@ In this talk, I’ll walk through how I used the TypeScript tracer to uncover hi
   },
   {
     slug: "aapo-alasuutari",
-    title: "Out the cave, off the cliff  — data-oriented design in Nova JavaScript engine",
-    description: "In the world of JavaScript, it is easy to forget that our software runs on real hardware, made up of real bits and bytes instead of being intangible shadows of objects on a wall, flickers of code on a screen. JavaScript programs tend to consume a lot of memory, and while much of the blame lies in the developer, a part of that is also the way our JavaScript engines are built. Nova JavaScript engine attempts to find a different path: in this talk we'll look at what JavaScript objects look like in memory, and ponder how much of that shadow of an object we really need or if we're perhaps ready to leave the Programmer's Cave and do away with thinking about shadows? Nova JavaScript engine is also an exploration into what is the price of walking that path: we'll see magnificent performance cliffs, and perhaps plunge off of them if the price is right.",
+    title:
+      "Out the cave, off the cliff  — data-oriented design in Nova JavaScript engine",
+    description:
+      "In the world of JavaScript, it is easy to forget that our software runs on real hardware, made up of real bits and bytes instead of being intangible shadows of objects on a wall, flickers of code on a screen. JavaScript programs tend to consume a lot of memory, and while much of the blame lies in the developer, a part of that is also the way our JavaScript engines are built. Nova JavaScript engine attempts to find a different path: in this talk we'll look at what JavaScript objects look like in memory, and ponder how much of that shadow of an object we really need or if we're perhaps ready to leave the Programmer's Cave and do away with thinking about shadows? Nova JavaScript engine is also an exploration into what is the price of walking that path: we'll see magnificent performance cliffs, and perhaps plunge off of them if the price is right.",
     kind: "session",
     day: "1",
     language: "English",
@@ -915,8 +920,8 @@ In this talk, I’ll walk through how I used the TypeScript tracer to uncover hi
         type: "speaker",
         name: "Aapo Alasuutari",
         avatarUrl: aapoAlasuutariAvatar,
-        bio: "Aapo Alasuutari is a data-oriented design zealot writing TypeScript by day, with 9 years of experience developing a browser-based automation control system UI at Valmet Automation, but by night he transforms into a Rust developer writing the Nova JavaScript engine."
-      }
+        bio: "Aapo Alasuutari is a data-oriented design zealot writing TypeScript by day, with 9 years of experience developing a browser-based automation control system UI at Valmet Automation, but by night he transforms into a Rust developer writing the Nova JavaScript engine.",
+      },
     ],
   },
   {
@@ -1098,7 +1103,8 @@ AI that acts changes the role it plays: from passive responder to proactive team
   {
     slug: "dwango-sponsor-session",
     title: "Media Capture and Streams: W3C仕様と現場での知見",
-    description: "Media Capture and Streams API は、Web アプリケーションがカメラやマイクなどのメディアデバイスへアクセスし、MediaStreamTrack／MediaStream といったインターフェースを通じて映像・音声を扱うための仕様です。このセッションでは、標準化仕様に定義されるモデルやライフサイクル、Permissions／Constraints、ImageCapture などの周辺 API を整理しながら、実際にオンライン試験システムの開発で活用した際の体験談・失敗談を合わせて紹介します。",
+    description:
+      "Media Capture and Streams API は、Web アプリケーションがカメラやマイクなどのメディアデバイスへアクセスし、MediaStreamTrack／MediaStream といったインターフェースを通じて映像・音声を扱うための仕様です。このセッションでは、標準化仕様に定義されるモデルやライフサイクル、Permissions／Constraints、ImageCapture などの周辺 API を整理しながら、実際にオンライン試験システムの開発で活用した際の体験談・失敗談を合わせて紹介します。",
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -1127,7 +1133,8 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
   },
   {
     slug: "money-forward-sponsor-session",
-    title: "Micro Frontendsで築いた共通基盤の成長と、運用で積み重ねた試行の軌跡",
+    title:
+      "Micro Frontendsで築いた共通基盤の成長と、運用で積み重ねた試行の軌跡",
     description: `マネーフォワード クラウドでは、複数サービスに共通する承認・ワークフロー機能を共通基盤として切り出し、Web ComponentsをベースにMicro Frontendsを運用しています。
 2023年7月のリリースから現在まで2年以上、実装検証の段階を含めると約3年にわたり、Micro Frontendsを使った設計・統合方式における試行錯誤を積み重ねてきました。
 

@@ -62,6 +62,20 @@ export default async function Page({ params }: Props) {
           <Chip>{session.talk.language}</Chip>
         </p>
       </div>
+      {session.talk.recordingUrl && (
+        <div className="mt-4 flex flex-col justify-center items-center gap-2">
+          <h2 className="text-2xl font-bold">{t("recording")}</h2>
+          <iframe
+            width="560"
+            height="315"
+            src={session.talk.recordingUrl}
+            title={session.talk.title}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+      )}
       <div className="mt-4">
         <Markdown>{session.talk.description}</Markdown>
       </div>
