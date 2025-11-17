@@ -2,7 +2,7 @@ name: screenshots
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   test:
@@ -18,7 +18,7 @@ jobs:
       - run: cd 2025 && npm ci && npm run dev &
         env:
           PORT: 3001
-      - run: cd 2025 && npx playwright install --with-deps
+      - run: cd 2025 && npx playwright install --with-deps --no-shell
       - run: cd 2025 && npx playwright test
       - run: cd 2025 && npm run fetch-og-images
       - uses: actions/upload-artifact@v4
