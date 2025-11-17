@@ -6,7 +6,7 @@
     "chalk": "^5.3.0",
     "csv-parse": "^5.5.2",
     "image-type": "^5.2.0",
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.1"
   },
   "devDependencies": {
     "ts-node": "^10.9.1",
