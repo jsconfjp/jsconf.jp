@@ -17,15 +17,12 @@
     "japanNodejsAssociation": "Japan Node.js Association",
     "codeOfConduct": "Code of Conduct",
     "specifiedCommercialTransactionsAct": "Specified Commercial Transactions Act Disclosure",
-    "viewDetails": "View details"
+    "viewDetails": "View details",
+    "floorMap": "Floor Map"
   },
   "lang": {
     "japanese": "JA",
     "english": "EN"
-  },
-  "cta": {
-    "submitTalk": "Submit your talk",
-    "becomeSponsor": "Become a sponsor"
   },
   "team": {
     "team": "Our Team",
@@ -61,7 +58,8 @@
       "LT": "LT",
       "sponsor session": "Sponsor session",
       "sponsor LT": "Sponsor LT"
-    }
+    },
+    "recording": "Recording"
   },
   "venue": {
     "placeName": "Gran Tokyo South Tower",

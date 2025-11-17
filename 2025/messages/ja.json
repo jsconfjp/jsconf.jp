@@ -17,15 +17,12 @@
     "japanNodejsAssociation": "Japan Node.js Association",
     "codeOfConduct": "行動規範",
     "specifiedCommercialTransactionsAct": "特定商取引法に基づく表示",
-    "viewDetails": "詳細を見る"
+    "viewDetails": "詳細を見る",
+    "floorMap": "フロアマップ"
   },
   "lang": {
     "japanese": "JA",
     "english": "EN"
-  },
-  "cta": {
-    "submitTalk": "トーク申込フォームへ",
-    "becomeSponsor": "スポンサー申込フォームへ"
   },
   "team": {
     "team": "チーム",
@@ -61,7 +58,8 @@
       "LT": "LT",
       "sponsor session": "スポンサーセッション",
       "sponsor LT": "スポンサーLT"
-    }
+    },
+    "recording": "録画"
   },
   "venue": {
     "placeName": "グラントウキョウサウスタワー",

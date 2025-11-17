@@ -2,6 +2,7 @@ import type { StaticImageData } from "next/image";
 // @ts-expect-error see 2025/scripts/fetch-og-images.ts
 import { type Sponsor, SPONSORS_BY_NAME } from "./sponsors.ts";
 import emptyAvatar from "../../public/speaker/250x250.png";
+import aapoAlasuutariAvatar from "../../public/speaker/AapoAlasuutari.png";
 import akfmSatoAvatar from "../../public/speaker/akfm-sato.png";
 import allenWirfsBrockAvatar from "../../public/speaker/allen-wirfs-brock.jpg";
 import anamAhmedAvatar from "../../public/speaker/anam-ahmed.jpg";
@@ -10,25 +11,32 @@ import baseballyamaAvatar from "../../public/speaker/baseballyama.jpg";
 import berlysiaAvatar from "../../public/speaker/berlysia.jpg";
 import blagojJovanovAvatar from "../../public/speaker/blagoj-jovanov.jpg";
 import canalunAvatar from "../../public/speaker/canalun.png";
+import ctcpipAvatar from "../../public/speaker/ctcpip.png";
 import deanSrebnikAvatar from "../../public/speaker/dean-srebnik.jpg";
+import devsnekAvatar from "../../public/speaker/devsnek.jpg";
+import DmitryMakhnevAvatar from "../../public/speaker/DmitryMakhnev.jpg";
+import GiovanniLaquidaraAvatar from "../../public/speaker/Giovanni-Laquidara.png";
 import islandryuAvatar from "../../public/speaker/islandryu.jpg";
 import itaiSatatiAvatar from "../../public/speaker/itai-satati.jpg";
-import jarredSumnerAvatar from "../../public/speaker/jarred-sumner.jpg";
 import jemimaAbuAvatar from "../../public/speaker/jemima-abu.jpg";
 import jiko21Avatar from "../../public/speaker/jiko21.jpg";
 import joyeeCheungAvatar from "../../public/speaker/joyee-cheung.jpg";
 import jxckAvatar from "../../public/speaker/jxck.svg";
 import kazukiImamuraAvatar from "../../public/speaker/kazuki-imamura.jpg";
 import kojiKojiAvatar from "../../public/speaker/koji-koji.jpg";
+import legendecasAvatar from "../../public/speaker/legendecas.png";
 import leoKettmeirAvatar from "../../public/speaker/leo-kettmeir.jpg";
 import lucaMugnainiAvatar from "../../public/speaker/luca-mugnaini.jpg";
 import manishKumarAvatar from "../../public/speaker/manish-kumar.jpg";
 import mapleAvatar from "../../public/speaker/maple.jpg";
 import marcoIppolitoAvatar from "../../public/speaker/marco-ippolito.jpg";
+import okumuraAvatar from "../../public/speaker/okumura.jpg";
 import olivierFluckigerAvatar from "../../public/speaker/olivier-fluckiger.jpg";
 import otaMeshiAvatar from "../../public/speaker/ota-meshi.jpg";
 import petamorikenAvatar from "../../public/speaker/petamoriken.jpg";
 import progfayAvatar from "../../public/speaker/progfay.png";
+import robpalmer2Avatar from "../../public/speaker/robpalmer2.jpg";
+import RubenBridgewaterAvatar from "../../public/speaker/RubenBridgewater.jpg";
 import sachaGreifAvatar from "../../public/speaker/sacha-greif.jpg";
 import shaneCarrAvatar from "../../public/speaker/shane-carr.jpg";
 import sosukeSuzukiAvatar from "../../public/speaker/sosuke-suzuki.jpg";
@@ -60,6 +68,7 @@ export type Talk = {
   day: Day;
   language: Language;
   speakers: (Speaker | Sponsor)[];
+  recordingUrl?: string;
 };
 export type FlattenedSpeaker = {
   talk: Talk;
@@ -429,7 +438,7 @@ For me, performance and user insight go hand in hand.`,
       {
         type: "speaker",
         name: "奥村雄太",
-        avatarUrl: emptyAvatar,
+        avatarUrl: okumuraAvatar,
         bio: `奥村雄太（株式会社Resilire エンジニア）。前職では LINE／出前館にてフロントエンドリプレイスやチームマネジメントを担当。現在は Resilire で IC として、デザインシステム導入、サーバサイドのリアーキテクチャ、Agentic Coding の導入などに取り組んでいる。直近は「インテント駆動フロントエンド」と MCP UI に注目している。趣味は将棋で、アマチュア代表としてプロとの対局経験あり。`,
       },
     ],
@@ -494,15 +503,20 @@ Whether you're a web developer looking to expand into TV development or seeking 
       {
         type: "speaker",
         name: "Giovanni Laquidara",
-        avatarUrl: emptyAvatar,
+        avatarUrl: GiovanniLaquidaraAvatar,
         bio: `Developer Advocate @ Amazon focused on devices, mobile apps and 👨‍💻👩‍💻 developer communities 🌎🌍🌏. Previously I worked as developer advocate, software engineer, VR and mobile developer and real-time software architect/developer. I like working with the cutting-edge technologies and people. Tinkering and sharing the experience.`,
       },
     ],
   },
   {
     slug: "denkiyagi-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title:
+      "なぜブラウザで帳票を生成したいのか、どのようにブラウザで帳票を生成するのか",
+    description: `デンキヤギでは、yagisan-reportsという「ブラウザ単体で動作する帳票エンジン」を開発・販売しています。
+帳票エンジンとは、ざっくり言えば「請求書のようなPDFを出力するテンプレートエンジン」です。
+
+帳票は歴史が長い分野なので、商用製品やOSSなど、帳票出力する方法はいくらでもあります。
+そんな中で、わざわざ新規でブラウザで動く帳票エンジンを開発するモチベーションと、JavaScriptで帳票エンジンを実装するための技術背景についてお話します。`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -583,8 +597,11 @@ AST×Reporterでテストから“観点カタログ”を自動生成し、LLM�
   },
   {
     slug: "layerx-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "Web エンジニアが JavaScript で AI Agent を作る",
+    description: `AI機能の開発、自分には関係ないものだと思っていませんか？
+LLM の登場により、プロダクトのAI機能開発と Web エンジニアの距離はかつてないほど近いものとなりました。
+本セッションでは LLM を利用した機能開発をするために必要な知識や技術について、あるいはまだ高い専門性が要求される領域や技術的な課題がどこにあるのかなどについてお話します。
+今まで機械学習などとの距離を感じていた Web エンジニアが「自分でも（ある程度）できそう！」と感じて帰れることを目標とします。`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -652,8 +669,10 @@ Active contributor, releaser, and member of the Node.js Technical Steering Commi
   },
   {
     slug: "miidas-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "E2Eから始める自動テスト",
+    description: `自動テストを導入するときに何から始めるか迷子になったことはないですか?
+ミイダスではE2Eテストから始めました。なぜE2Eテストから始めたのかその理由をお話します。
+さらに、数ある機能の中から何を優先的にテストすべきなのか、何をどこまでテストすべきなのかなど、どのようにテストケースを作ったのかそのプロセスについてもお話します。`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -712,8 +731,8 @@ In 2022 we started working towards solving this problem in WinterCG, which has n
   },
   {
     slug: "line-yahoo-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "老舗の知恵とAIの二刀流で挑むYahoo!知恵袋の事故らない進化",
+    description: `Yahoo!知恵袋は、登録利用者数5,200万人、累計2億8,000万件の質問と6億5,000万件以上の回答を有する、国内最大級のQ&Aサービスです。性別や年代を問わず幅広く利用されています。このような規模のシステムの開発と運用を行っている私たちにとって、事故の予防と迅速な復旧は、継続的成長と信頼性維持の要です。事故が起きれば、ユーザー離れや信頼低下、ビジネス指標の悪化、最悪の場合はサービス終了につながりかねません。そのため、事故の防止と影響拡大の抑止を目的とした仕組みを整えています。一方、生成AIの普及により、開発の迅速化への期待はかつてない水準に達しています。Claude CodeやCodexなどのAIコーディングツールを前提に、私たちも開発速度の向上を図っています。「信頼性」と「速度」の両立は難題ですが、私たちは蓄積した老舗の知見とAIの二刀流で取り組んでいます。本セッションでは、その具体的な方法と取り組みを詳しくご紹介します。`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -779,7 +798,7 @@ https://github.com/acornjs/acorn/commit/b4ae0d29384f2bf3fafac7d42f1c3e2ee9a48204
   },
   {
     slug: "state-of-deno",
-    title: "The State of Deno",
+    title: "Deno Wrapped: What happened in Deno this year",
     description: `Deno is a popular modern alternative to NodeJS, with a focus on security & modern tooling, while being compatible with Node.
 The Deno team has worked on many different projects, be it in the open source ecosystem with Deno itself and JSR amongst other, and in a commercial setting with Deno Deploy and Deno Subhosting.
 
@@ -801,30 +820,34 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
   },
   {
     slug: "reiwa-travel-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title:
+      "AIにNext.js App Router移行を依頼して、失敗した話。 Evolving NEWT’s TypeScript Backend for the AI-Driven",
+    description: `1. AIにNext.js App Routerの移行を任せた結果、プロンプト調整だけで1ヶ月を費やしてしまい、ログ欠損も発生してしまいました。
+この経験を通じて、AI支援の正しい使い方と、人が担うべき判断・理解の順序を見直した話をします。
+
+2. As NEWT grows, its TypeScript backend is evolving from a traditional monolith into a modular, clean, and AI-assisted architecture. This transformation aims to boost development speed, maintain quality, and enable teams to release more features in parallel—laying the foundation for a truly AI-Driven Development era. 
+
+`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
     speakers: [SPONSORS_BY_NAME["株式会社令和トラベル"]],
   },
-
   {
-    slug: "bun-video-talk",
-    title:
-      "Bunで実現する高速レンダリング（原題：Rendering at the speed of Bun） (video talk)",
-    description: `モダンなアプリケーション開発では、静的サイト生成、サーバーサイドレンダリング、ルーティング、ホットリロードといった複数のツールを組み合わせる必要があり、その多くは速度低下や複雑性の増大を招いてきた。
-Bunの新しいRendering APIは、これらの要素をひとつに統合し、Bunならではの高いパフォーマンスと優れた開発体験を提供する。
-本講演では、Rendering APIの仕組み、速度に最適化された理由、そしてそれが開発者にモダンなフルスタックアプリケーションをBunで構築する力をどのように与えるのかをジャレッドが解説する。`,
+    slug: "shrink-supply-chain-risk-in-js",
+    title: "Shrink Supply Chain Risk in JS",
+    description: `Supply‑chain attacks have become commonplace. Learn how to validate what you install, reduce blast radius, and maintain packages responsibly.
+We’ll cover common weak points in modern applications and how to tackle these. We’ll also dig into healthy maintainer practices for sustainable package upkeep.
+Use least‑privilege, dependency policies, and more mitigation strategies with ease.`,
     kind: "session",
     day: "1",
     language: "English",
     speakers: [
       {
         type: "speaker",
-        name: "Jarred Sumner",
-        avatarUrl: jarredSumnerAvatar,
-        bio: "Building Bun",
+        name: "Ruben Bridgewater",
+        avatarUrl: RubenBridgewaterAvatar,
+        bio: "Ruben Bridgewater is a Staff Engineer at Datadog, building observability that adds insight—not overhead. He serves on the Node.js Technical Steering Committee and participates in TC39 as an Invited Expert, focusing on developer experience, performance, and making things simple.",
       },
     ],
   },
@@ -867,11 +890,10 @@ Bunの新しいRendering APIは、これらの要素をひとつに統合し、B
   },
   {
     slug: "profiling-typescript-at-scale",
-    title:
-      "Profiling TypeScript at Scale: Finding and Fixing Compiler Bottlenecks",
+    title: "Tracing the TypeScript compiler at Scale",
     description: `As TypeScript projects grow, so does the pain of waiting for the compiler. What once felt instant on a small codebase can turn into a frustrating bottleneck and lost productivity across large teams and codebases.
 
-In this talk, I’ll walk through how I used the TypeScript profiler to uncover hidden bottlenecks in a real-world monolith and applied a single fix that shaved minutes off every build. We didn’t need exotic tools or risky rewrites, just a better understanding of what the compiler was actually doing.`,
+In this talk, I’ll walk through how I used the TypeScript tracer to uncover hidden bottlenecks in a real-world monolith and applied a single fix that shaved minutes off every build. We didn’t need exotic tools or risky rewrites, just a better understanding of what the compiler was actually doing.`,
     kind: "session",
     day: "1",
     language: "English",
@@ -885,15 +907,23 @@ In this talk, I’ll walk through how I used the TypeScript profiler to uncover 
     ],
   },
   {
-    slug: "kakehashi-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
-    kind: "sponsor session",
+    slug: "aapo-alasuutari",
+    title:
+      "Out the cave, off the cliff  — data-oriented design in Nova JavaScript engine",
+    description:
+      "In the world of JavaScript, it is easy to forget that our software runs on real hardware, made up of real bits and bytes instead of being intangible shadows of objects on a wall, flickers of code on a screen. JavaScript programs tend to consume a lot of memory, and while much of the blame lies in the developer, a part of that is also the way our JavaScript engines are built. Nova JavaScript engine attempts to find a different path: in this talk we'll look at what JavaScript objects look like in memory, and ponder how much of that shadow of an object we really need or if we're perhaps ready to leave the Programmer's Cave and do away with thinking about shadows? Nova JavaScript engine is also an exploration into what is the price of walking that path: we'll see magnificent performance cliffs, and perhaps plunge off of them if the price is right.",
+    kind: "session",
     day: "1",
-    language: "Japanese",
-    speakers: [SPONSORS_BY_NAME["株式会社カケハシ"]],
+    language: "English",
+    speakers: [
+      {
+        type: "speaker",
+        name: "Aapo Alasuutari",
+        avatarUrl: aapoAlasuutariAvatar,
+        bio: "Aapo Alasuutari is a data-oriented design zealot writing TypeScript by day, with 9 years of experience developing a browser-based automation control system UI at Valmet Automation, but by night he transforms into a Rust developer writing the Nova JavaScript engine.",
+      },
+    ],
   },
-
   {
     slug: "v8-from-script-to-call-rcx",
     title: "V8: from <script> to `call $rcx`",
@@ -955,8 +985,19 @@ Browser Enthusiast. Bug Hunter.`,
   },
   {
     slug: "tver-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "TVerのWeb内製化 - 開発スピードと品質を両立させるまでの道のり",
+    description: `本セッションでは、TVerのWebチームが内製化を推進する中で、いかにして「開発スピード」と「品質」を両立させる体制を築き上げてきたか、その具体的な道のりと実践的な取り組みについて紹介します。
+
+内製化の背景やチーム立ち上げのプロセスから、品質・スピード向上の施策まで、現場で得られた知見を共有します。
+
+具体的には、以下のトピックについてお話しします。
+
+- TVerにおけるWebフロントエンドチーム内製化の背景とチーム立ち上げのプロセス
+- 型安全な環境に向けた取り組み
+- デザインシステム構築の開始と運用
+- レビューやコード自動生成におけるAIの活用事例
+
+Webチームの内製化に取り組んでいる方、開発スピードと品質の両立に悩んでいるエンジニアの方々にとって、実践的なヒントを提供できるセッションです。`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -964,8 +1005,22 @@ Browser Enthusiast. Bug Hunter.`,
   },
   {
     slug: "cybozu-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "大規模プロダクトで実践するAI活用の仕組みづくり",
+    description: `概要：GitHub Copilot、Claude Code、Codexなど、様々なAIコーディングツールの登場によって、個々のエンジニアの生産性は向上しています。一方で、「なんかAIをうまく使っている人がいるらしい」という認識にとどまり、チーム全体でのAI活用の仕組みが整っていない現場も多いのではないでしょうか。
+
+本セッションでは、サイボウズの大規模プロダクト「kintone」の開発チームで構築・実践したAI活用の仕組みについて、具体的な設計と活用方法、成果を紹介します。
+
+具体的には次のトピックについてお話しします
+
+- AIツールに依存しないドメイン知識の管理
+- 陳腐化を防ぐ継続的なドキュメントの更新
+- auto-compactによる記憶喪失対策
+- より良いAIエージェントへの柔軟な乗り換えを可能にする開発フロー
+- MCPの活用と、AIでの複雑UI構築の現在地
+- チームを跨ぐAI活用の知見共有
+- AI導入による具体的な成果
+
+個人レベルのAI活用からチームレベルの活用へ移行したい方に向けて、実践的な知見を提供できるセッションにしたいと思っています。`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -975,16 +1030,40 @@ Browser Enthusiast. Bug Hunter.`,
   {
     slug: "technical-discussion-tc39",
     title: "Technical Discussion with TC39",
-    description: "TBD",
+    description: "",
     kind: "session",
     day: "1",
     language: "English",
     speakers: [
       {
         type: "speaker",
-        name: "TBD",
-        avatarUrl: emptyAvatar,
-        bio: "TBD",
+        name: "Chengzhong Wu",
+        avatarUrl: legendecasAvatar,
+        bio: "https://github.com/legendecas",
+      },
+      {
+        type: "speaker",
+        name: "Chris de Almedia",
+        avatarUrl: ctcpipAvatar,
+        bio: "https://github.com/ctcpip",
+      },
+      {
+        type: "speaker",
+        name: "Dmitry Makhnev",
+        avatarUrl: DmitryMakhnevAvatar,
+        bio: "https://github.com/DmitryMakhnev",
+      },
+      {
+        type: "speaker",
+        name: "Gus Caplan",
+        avatarUrl: devsnekAvatar,
+        bio: "https://github.com/devsnek",
+      },
+      {
+        type: "speaker",
+        name: "Rob Palmer",
+        avatarUrl: robpalmer2Avatar,
+        bio: "https://github.com/robpalme",
       },
     ],
   },
@@ -1006,8 +1085,16 @@ Browser Enthusiast. Bug Hunter.`,
   },
   {
     slug: "cloudinary-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "When AI Stops Talking and Starts Doing",
+    description: `Generative AI is great at producing text — but what happens when it can actually do things? This talk explores the shift from AI as a conversational partner to AI as an active participant in real-world workflows.
+We’ll look at how to connect AI systems to external tools and APIs using the Model Context Protocol (MCP). Instead of stopping at answers, AI can now execute file operations, manage digital assets, analyse images, and automate tasks that normally require human intervention. The result is a move from “chatting with AI” to “working with AI.”
+Through practical examples, you’ll see how to:
+Extend AI beyond text into action-oriented workflows.
+Safely connect AI models to existing developer tools and services.
+Combine structured function calls with unstructured conversation.
+Build AI-powered assistants that handle files, images, and APIs as part of a single seamless interaction.
+This session isn’t about abstract futures — it’s about what you can build today. Whether you’re a developer, architect, or product builder, you’ll leave with a clear understanding of how to bridge the gap between natural language input and real-world execution.
+AI that acts changes the role it plays: from passive responder to proactive teammate. Come see what happens when AI stops talking — and starts doing.`,
     kind: "sponsor session",
     day: "1",
     language: "English",
@@ -1015,8 +1102,9 @@ Browser Enthusiast. Bug Hunter.`,
   },
   {
     slug: "dwango-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "Media Capture and Streams: W3C仕様と現場での知見",
+    description:
+      "Media Capture and Streams API は、Web アプリケーションがカメラやマイクなどのメディアデバイスへアクセスし、MediaStreamTrack／MediaStream といったインターフェースを通じて映像・音声を扱うための仕様です。このセッションでは、標準化仕様に定義されるモデルやライフサイクル、Permissions／Constraints、ImageCapture などの周辺 API を整理しながら、実際にオンライン試験システムの開発で活用した際の体験談・失敗談を合わせて紹介します。",
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -1045,8 +1133,22 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
   },
   {
     slug: "money-forward-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title:
+      "Micro Frontendsで築いた共通基盤の成長と、運用で積み重ねた試行の軌跡",
+    description: `マネーフォワード クラウドでは、複数サービスに共通する承認・ワークフロー機能を共通基盤として切り出し、Web ComponentsをベースにMicro Frontendsを運用しています。
+2023年7月のリリースから現在まで2年以上、実装検証の段階を含めると約3年にわたり、Micro Frontendsを使った設計・統合方式における試行錯誤を積み重ねてきました。
+
+ランタイム統合によって柔軟なリリースを実現する一方で、運用を通じて見えてきた現実的な課題も少なくありません。
+本セッションでは、その過程での意思決定の背景や、そこから得られた学びを中心にご紹介します。
+
+以下のようなテーマを通して、Micro Frontendsの運用で見えてきたリアルに迫ります。
+
+- UIをどこまで共通化すべきか ― 拡張性と組み込みコストのバランス
+- Micro Frontends間やコンテナアプリケーションとの疎結合設計とその限界
+- 認証・認可のアーキテクチャ変更の背景
+- デザインの一貫性の課題
+- 複数プロダクトを横断するログ・監視基盤の課題
+- パフォーマンス最適化やi18nに向けた取り組み`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -1054,8 +1156,18 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
   },
   {
     slug: "findy-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "大規模モノレポの秩序管理  失速しない多言語化フロントエンドの運用",
+    description: `ファインディでは開発しているサービスのすべてのフロントエンドをモノレポ管理ツールであるNxと、そのエコシステムを活用したモノレポで構成し、開発生産性や開発者体験の向上維持に注力しています。
+
+なかでも 「Findy Team+」のフロントエンドは100以上のモジュールと50万行を超えるコードを抱える巨大なモノレポです。
+
+これまでの急速な機能追加や拡張、プロダクトの多言語化（i18n）を進めたことで、コードベースは急速に肥大化しました。そしてテストやビルドを含むCI時間が指数的に増加し、開発者体験の大きな課題となりました。
+
+しかしモジュールの依存関係やキャッシュ戦略の再設計、リモートキャッシュの活用、そしてCIパイプラインの段階的チューニングをNxをベースとして実施することにより、CI時間を従来比で50％以上削減することに成功しています。
+
+また現在もコードベースが拡大していくなかで、CI時間が伸びず、開発速度が失速しないアーキテクチャを確立しました。
+
+本セッションではこの改善プロセスと、そこから得られたヒントを元に、巨大モノレポの秩序を守るためのプラクティスを紹介いたします。`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -1082,9 +1194,18 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
   },
 
   {
-    slug: "technical-welfare-and-new-capitalistic-web-development",
-    title: "TBD",
-    description: `TBD`,
+    slug: "embracing-technical-welfare-and-rediscovering-web-development",
+    title: "技術的福祉の受容、および Web 開発との「出会い直し」",
+    description: `Web 開発の「パラダイムシフト」は、エコシステムに何をもたらしてるんだろうか？
+今起こっている変化は、本当に「技術」の変化だけなんだろうか？
+強く成長することを求められるけど、その先に目指すものはなんなのだろうか？
+「乗り遅れ」ないためにベットしているのは、何に対してなんだろうか？
+結局俺達は、平成に直面してきた問題を解決して、「幸せ」になれていくんだろうか？
+
+急速に書き換えられたナラティブで、 Web 開発は何度目かの「出会い直し」を経験している。
+その先にぼんやり提示される物語に対し、隣の人と同じ方向を向いてるかすらもよくわからない時代。
+
+について、普段考えていることを話してみたい。`,
     kind: "keynote",
     day: "1",
     language: "Japanese",
@@ -1098,7 +1219,7 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
     ],
   },
   {
-    slug: "tbd-by-allen",
+    slug: "by-allen",
     title:
       "From Chaos to Harmony: A History of JavaScript（混沌から調和へ ― JavaScriptの歴史）",
     description: [
@@ -1127,7 +1248,7 @@ We are here today because of the importance of modern JavaScript and we care abo
         type: "speaker",
         name: "Allen Wirfs Brock",
         avatarUrl: allenWirfsBrockAvatar,
-        bio: "TBD",
+        bio: "",
       },
     ],
   },

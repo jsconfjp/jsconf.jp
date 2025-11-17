@@ -2,7 +2,7 @@ name: screenshots
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   test:
@@ -15,7 +15,8 @@ jobs:
           node-version: 22
           cache: npm
           cache-dependency-path: 2025/package-lock.json
-      - run: cd 2025 && npm ci && npm run dev &
+      - run: cd 2025 && npm ci
+      - run: cd 2025 && npm run dev &
         env:
           PORT: 3001
       - run: cd 2025 && npx playwright install --with-deps
