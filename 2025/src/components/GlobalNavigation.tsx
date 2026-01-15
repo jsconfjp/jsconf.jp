@@ -35,13 +35,6 @@ export function GlobalNavigation() {
       label: t("sponsors"),
       href: "/sponsors",
     },
-    {
-      ready: true,
-      label: t("tickets"),
-      href: "https://pretix.eu/jsconfjp/2025/",
-      primary: true,
-      target: "_blank",
-    },
   ].map((item) => ({
     ...item,
     active: pathname === item.href,
