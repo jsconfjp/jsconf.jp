@@ -1,14 +1,11 @@
 import { Metadata } from "next";
-import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Button } from "@/components/Button";
 import { Hero } from "@/components/Hero";
 import { SponsorGrid } from "@/components/SponsorGrid";
 import { Team } from "@/components/Team";
-import { Venue } from "@/components/Venue";
 import { SPONSORS } from "@/constants/sponsors";
 import { Locale } from "@/i18n/constants";
-import FloorMap from "../../../public/misc/floor-map.png";
 
 type Params = { locale: Locale };
 
@@ -42,30 +39,20 @@ export default async function Page({ params }: Props) {
         <Hero />
       </div>
 
-      <div className="max-w-screen-md mx-auto mt-8 md:mt-32 flex flex-col gap-4">
-        <h2 className="text-3xl font-bold text-center">
-          {t("navigation.floorMap")}
-        </h2>
-        <div className="w-full">
-          <Image
-            alt={t("navigation.floorMap")}
-            src={FloorMap}
-            width={1192}
-            height={843}
-            className="w-full h-auto"
+      <div className="max-w-screen-md mx-auto mt-8 md:mt-16 flex flex-col gap-4 px-4 lg:px-0">
+        <p className="text-lg md:text-xl font-bold text-center">
+          {t("about.thankYou")}
+        </p>
+        <div className="w-full aspect-video">
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/me9KQ1SpKK4?si=byHOxwIpCcctOFyE"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
           />
-        </div>
-      </div>
-
-      <div className="max-w-screen-md mx-auto mt-8 md:mt-32 flex flex-col gap-4">
-        <h2 className="text-3xl font-bold text-center">
-          {t("navigation.venue")}
-        </h2>
-        <Venue locale={locale} />
-        <div className="flex items-center justify-center">
-          <Button href="/venue" variant="secondary" size="md">
-            {t("navigation.viewDetails")}
-          </Button>
         </div>
       </div>
 
