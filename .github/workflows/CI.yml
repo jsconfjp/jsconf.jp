@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version-file: 2025/.nvmrc
           cache: npm
           cache-dependency-path: 2025/package-lock.json
       - run: cd 2025 && npm ci
@@ -32,7 +32,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version-file: 2025/.nvmrc
           cache: npm
           cache-dependency-path: 2025/package-lock.json
       - run: cd 2025 && npm ci
