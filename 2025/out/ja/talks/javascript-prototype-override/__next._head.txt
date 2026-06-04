@@ -1,0 +1,87 @@
+1:"$Sreact.fragment"
+2:I[83646,["/2025/_next/static/chunks/08e3wodwr84g3.js","/2025/_next/static/chunks/0oxfazk6_7s3i.js"],"ViewportBoundary"]
+3:I[83646,["/2025/_next/static/chunks/08e3wodwr84g3.js","/2025/_next/static/chunks/0oxfazk6_7s3i.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+14:I[60772,["/2025/_next/static/chunks/08e3wodwr84g3.js","/2025/_next/static/chunks/0oxfazk6_7s3i.js"],"IconMark"]
+5:T60e,JavaScript is a language of freedom. A defining feature of this freedom is the ability to override built-in prototypes.
+JavaScript also becomes a commons especially in the browser. It's a shared space where your application code, its dependencies, and even parts of browser extensions all co-exist within the same context. And, yes, malicious attackers also live there.
+In this commons, a constant struggle is happening between these stakeholders to override prototypes.
+
+This session explores the forefront of this high-stakes game from three perspectives: the ecosystem, the attack/defense techniques, and the web standards.
+Can we ever achieve a state of harmony in this commons? The answer isn't clear yet. But that's why we should discuss it at JSConf :)
+
+Outline
+ * Ecosystem: Competing Motivations for Overriding Prototypes
+ * A Contested Ground: Techniques for Attack and Defense
+   * Techniques for overwriting prototypes.
+   * Methods of defending against it.
+   * How to bypass those defenses.
+   * More stealth modification tactics.
+ * No Silver Bullet: A Look at Specifications Tackling This Issue
+   * Object.freeze is too strong
+   * ShadowRealm is not enough
+   * SES is ongoing
+ * Case Study 1: Information Theft From An Extension via Prototype Pollution
+ * Case Study 2: How MetaMask Uses Endo
+ * The Future: How should we go along with this freedom?
+   * Can We or Should We Get Access to Native Prototypes?: Lessons from debate for "use initial" directive
+   * What about outside of JS?: Proposal for CSP, debugging feature, etc.
+6:T60e,JavaScript is a language of freedom. A defining feature of this freedom is the ability to override built-in prototypes.
+JavaScript also becomes a commons especially in the browser. It's a shared space where your application code, its dependencies, and even parts of browser extensions all co-exist within the same context. And, yes, malicious attackers also live there.
+In this commons, a constant struggle is happening between these stakeholders to override prototypes.
+
+This session explores the forefront of this high-stakes game from three perspectives: the ecosystem, the attack/defense techniques, and the web standards.
+Can we ever achieve a state of harmony in this commons? The answer isn't clear yet. But that's why we should discuss it at JSConf :)
+
+Outline
+ * Ecosystem: Competing Motivations for Overriding Prototypes
+ * A Contested Ground: Techniques for Attack and Defense
+   * Techniques for overwriting prototypes.
+   * Methods of defending against it.
+   * How to bypass those defenses.
+   * More stealth modification tactics.
+ * No Silver Bullet: A Look at Specifications Tackling This Issue
+   * Object.freeze is too strong
+   * ShadowRealm is not enough
+   * SES is ongoing
+ * Case Study 1: Information Theft From An Extension via Prototype Pollution
+ * Case Study 2: How MetaMask Uses Endo
+ * The Future: How should we go along with this freedom?
+   * Can We or Should We Get Access to Native Prototypes?: Lessons from debate for "use initial" directive
+   * What about outside of JS?: Proposal for CSP, debugging feature, etc.
+0:{"rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Tragedy or Hope in the Commons: The Race for JavaScript Prototype Override | JSConf JP 2025"}],["$","meta","1",{"name":"description","content":"$5"}],["$","meta","2",{"property":"og:title","content":"Tragedy or Hope in the Commons: The Race for JavaScript Prototype Override | JSConf JP 2025"}],["$","meta","3",{"property":"og:description","content":"$6"}],"$L7","$L8","$L9","$La","$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12"]}]}]}],null]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"hSgPG9TGGqqKYYJDr2Sco"}
+7:["$","meta","4",{"property":"og:site_name","content":"JSConf JP 2025"}]
+8:["$","meta","5",{"property":"og:image","content":"https://jsconf.jp/ja/talks/javascript-prototype-override/opengraph-image?33251a403acd67b4"}]
+9:["$","meta","6",{"property":"og:image:type","content":"image/png"}]
+a:["$","meta","7",{"name":"twitter:card","content":"summary_large_image"}]
+b:["$","meta","8",{"name":"twitter:site","content":"@jsconfjp"}]
+c:["$","meta","9",{"name":"twitter:title","content":"Tragedy or Hope in the Commons: The Race for JavaScript Prototype Override | JSConf JP 2025"}]
+13:T60e,JavaScript is a language of freedom. A defining feature of this freedom is the ability to override built-in prototypes.
+JavaScript also becomes a commons especially in the browser. It's a shared space where your application code, its dependencies, and even parts of browser extensions all co-exist within the same context. And, yes, malicious attackers also live there.
+In this commons, a constant struggle is happening between these stakeholders to override prototypes.
+
+This session explores the forefront of this high-stakes game from three perspectives: the ecosystem, the attack/defense techniques, and the web standards.
+Can we ever achieve a state of harmony in this commons? The answer isn't clear yet. But that's why we should discuss it at JSConf :)
+
+Outline
+ * Ecosystem: Competing Motivations for Overriding Prototypes
+ * A Contested Ground: Techniques for Attack and Defense
+   * Techniques for overwriting prototypes.
+   * Methods of defending against it.
+   * How to bypass those defenses.
+   * More stealth modification tactics.
+ * No Silver Bullet: A Look at Specifications Tackling This Issue
+   * Object.freeze is too strong
+   * ShadowRealm is not enough
+   * SES is ongoing
+ * Case Study 1: Information Theft From An Extension via Prototype Pollution
+ * Case Study 2: How MetaMask Uses Endo
+ * The Future: How should we go along with this freedom?
+   * Can We or Should We Get Access to Native Prototypes?: Lessons from debate for "use initial" directive
+   * What about outside of JS?: Proposal for CSP, debugging feature, etc.
+d:["$","meta","10",{"name":"twitter:description","content":"$13"}]
+e:["$","meta","11",{"name":"twitter:image","content":"https://jsconf.jp/ja/talks/javascript-prototype-override/opengraph-image?33251a403acd67b4"}]
+f:["$","meta","12",{"name":"twitter:image:type","content":"image/png"}]
+10:["$","link","13",{"rel":"icon","href":"/2025/icon.svg?icon.0rt5g72mqansw.svg","sizes":"any","type":"image/svg+xml"}]
+11:["$","link","14",{"rel":"apple-touch-icon","href":"/2025/apple-icon.png?apple-icon.2cxuvpb5tyq9n.png","sizes":"230x230","type":"image/png"}]
+12:["$","$L14","15",{}]

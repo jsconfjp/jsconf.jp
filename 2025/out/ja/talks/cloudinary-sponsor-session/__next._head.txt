@@ -1,0 +1,39 @@
+1:"$Sreact.fragment"
+2:I[83646,["/2025/_next/static/chunks/08e3wodwr84g3.js","/2025/_next/static/chunks/0oxfazk6_7s3i.js"],"ViewportBoundary"]
+3:I[83646,["/2025/_next/static/chunks/08e3wodwr84g3.js","/2025/_next/static/chunks/0oxfazk6_7s3i.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+11:I[60772,["/2025/_next/static/chunks/08e3wodwr84g3.js","/2025/_next/static/chunks/0oxfazk6_7s3i.js"],"IconMark"]
+5:T534,Generative AI is great at producing text — but what happens when it can actually do things? This talk explores the shift from AI as a conversational partner to AI as an active participant in real-world workflows.
+We’ll look at how to connect AI systems to external tools and APIs using the Model Context Protocol (MCP). Instead of stopping at answers, AI can now execute file operations, manage digital assets, analyse images, and automate tasks that normally require human intervention. The result is a move from “chatting with AI” to “working with AI.”
+Through practical examples, you’ll see how to:
+Extend AI beyond text into action-oriented workflows.
+Safely connect AI models to existing developer tools and services.
+Combine structured function calls with unstructured conversation.
+Build AI-powered assistants that handle files, images, and APIs as part of a single seamless interaction.
+This session isn’t about abstract futures — it’s about what you can build today. Whether you’re a developer, architect, or product builder, you’ll leave with a clear understanding of how to bridge the gap between natural language input and real-world execution.
+AI that acts changes the role it plays: from passive responder to proactive teammate. Come see what happens when AI stops talking — and starts doing.6:T534,Generative AI is great at producing text — but what happens when it can actually do things? This talk explores the shift from AI as a conversational partner to AI as an active participant in real-world workflows.
+We’ll look at how to connect AI systems to external tools and APIs using the Model Context Protocol (MCP). Instead of stopping at answers, AI can now execute file operations, manage digital assets, analyse images, and automate tasks that normally require human intervention. The result is a move from “chatting with AI” to “working with AI.”
+Through practical examples, you’ll see how to:
+Extend AI beyond text into action-oriented workflows.
+Safely connect AI models to existing developer tools and services.
+Combine structured function calls with unstructured conversation.
+Build AI-powered assistants that handle files, images, and APIs as part of a single seamless interaction.
+This session isn’t about abstract futures — it’s about what you can build today. Whether you’re a developer, architect, or product builder, you’ll leave with a clear understanding of how to bridge the gap between natural language input and real-world execution.
+AI that acts changes the role it plays: from passive responder to proactive teammate. Come see what happens when AI stops talking — and starts doing.0:{"rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"When AI Stops Talking and Starts Doing | JSConf JP 2025"}],["$","meta","1",{"name":"description","content":"$5"}],["$","meta","2",{"property":"og:title","content":"When AI Stops Talking and Starts Doing | JSConf JP 2025"}],["$","meta","3",{"property":"og:description","content":"$6"}],["$","meta","4",{"property":"og:site_name","content":"JSConf JP 2025"}],["$","meta","5",{"property":"og:image","content":"https://jsconf.jp/ja/talks/cloudinary-sponsor-session/opengraph-image?33251a403acd67b4"}],["$","meta","6",{"property":"og:image:type","content":"image/png"}],"$L7","$L8","$L9","$La","$Lb","$Lc","$Ld","$Le","$Lf"]}]}]}],null]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"hSgPG9TGGqqKYYJDr2Sco"}
+7:["$","meta","7",{"name":"twitter:card","content":"summary_large_image"}]
+8:["$","meta","8",{"name":"twitter:site","content":"@jsconfjp"}]
+9:["$","meta","9",{"name":"twitter:title","content":"When AI Stops Talking and Starts Doing | JSConf JP 2025"}]
+10:T534,Generative AI is great at producing text — but what happens when it can actually do things? This talk explores the shift from AI as a conversational partner to AI as an active participant in real-world workflows.
+We’ll look at how to connect AI systems to external tools and APIs using the Model Context Protocol (MCP). Instead of stopping at answers, AI can now execute file operations, manage digital assets, analyse images, and automate tasks that normally require human intervention. The result is a move from “chatting with AI” to “working with AI.”
+Through practical examples, you’ll see how to:
+Extend AI beyond text into action-oriented workflows.
+Safely connect AI models to existing developer tools and services.
+Combine structured function calls with unstructured conversation.
+Build AI-powered assistants that handle files, images, and APIs as part of a single seamless interaction.
+This session isn’t about abstract futures — it’s about what you can build today. Whether you’re a developer, architect, or product builder, you’ll leave with a clear understanding of how to bridge the gap between natural language input and real-world execution.
+AI that acts changes the role it plays: from passive responder to proactive teammate. Come see what happens when AI stops talking — and starts doing.a:["$","meta","10",{"name":"twitter:description","content":"$10"}]
+b:["$","meta","11",{"name":"twitter:image","content":"https://jsconf.jp/ja/talks/cloudinary-sponsor-session/opengraph-image?33251a403acd67b4"}]
+c:["$","meta","12",{"name":"twitter:image:type","content":"image/png"}]
+d:["$","link","13",{"rel":"icon","href":"/2025/icon.svg?icon.0rt5g72mqansw.svg","sizes":"any","type":"image/svg+xml"}]
+e:["$","link","14",{"rel":"apple-touch-icon","href":"/2025/apple-icon.png?apple-icon.2cxuvpb5tyq9n.png","sizes":"230x230","type":"image/png"}]
+f:["$","$L11","15",{}]

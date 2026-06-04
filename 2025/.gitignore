@@ -15,7 +15,7 @@
 
 # next.js
 /.next/
-/out/
+# NOTE: 2025 は開催終了後に凍結。ビルド済みの out/ を commit し、CD でそのまま配信するため /out/ は ignore しない
 
 # production
 /build

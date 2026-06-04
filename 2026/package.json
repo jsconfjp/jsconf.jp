@@ -1,0 +1,46 @@
+{
+  "name": "2026",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "fetch-og-images": "node --experimental-strip-types --loader ./scripts/mock-img-loader.mjs scripts/fetch-og-images.ts",
+    "knip": "knip"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "@mdx-js/loader": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
+    "@next/mdx": "16.2.7",
+    "clsx": "^2.1.1",
+    "next": "16.2.7",
+    "next-intl": "^4.13.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-markdown": "^10.1.0",
+    "remark-frontmatter": "^5.0.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "16.2.7",
+    "@playwright/test": "^1.60.0",
+    "@tailwindcss/postcss": "^4.3.0",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "^24.13.0",
+    "@types/react": "~19.2.16",
+    "@types/react-dom": "~19.2.3",
+    "@vitest/coverage-v8": "^4.1.8",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "16.2.7",
+    "eslint-plugin-n": "^17.24.0",
+    "knip": "^6.15.0",
+    "prettier": "^3.8.3",
+    "tailwindcss": "^4.3.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.8"
+  }
+}

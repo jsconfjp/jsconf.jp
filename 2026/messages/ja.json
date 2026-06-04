@@ -1,0 +1,78 @@
+{
+  "about": {
+    "title": "JSConf JP 2026",
+    "description": "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the seventh time event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
+    "eventDate": "2026年11月22日（日）",
+    "companyAddress": "〒210-0024 神奈川県川崎市川崎区日進町27-7-903",
+    "copyright": "© 2019-2026 JSConf JP"
+  },
+  "navigation": {
+    "speakers": "スピーカー",
+    "venue": "会場・アクセス",
+    "schedule": "開催スケジュール",
+    "sponsors": "スポンサー",
+    "tickets": "チケット",
+    "nodejs": "Node.js",
+    "previousJsconfJp": "JSConf JP 2025",
+    "japanNodejsAssociation": "Japan Node.js Association",
+    "codeOfConduct": "行動規範",
+    "specifiedCommercialTransactionsAct": "特定商取引法に基づく表示",
+    "viewDetails": "詳細を見る",
+    "floorMap": "フロアマップ"
+  },
+  "cta": {
+    "callForProposals": "登壇応募（CFP）",
+    "becomeSponsor": "スポンサー応募"
+  },
+  "lang": {
+    "japanese": "JA",
+    "english": "EN"
+  },
+  "team": {
+    "team": "チーム",
+    "organizingTeam": "オーガナイザー",
+    "volunteerTeam": "ボランティア",
+    "joinUs": "Join us"
+  },
+  "sponsors": {
+    "premium": "プレミアムスポンサー",
+    "sponsor": "スポンサー"
+  },
+  "schedule": {
+    "kind": {
+      "streaming": "ストリーム",
+      "reception": "開場",
+      "opening": "オープニング",
+      "closed": "クローズ",
+      "break": "休憩",
+      "closing": "クロージング",
+      "networking": "懇親会"
+    }
+  },
+  "talks": {
+    "track": {
+      "A": "トラックA",
+      "B": "トラックB",
+      "C": "トラックC",
+      "D": "トラックD"
+    },
+    "kind": {
+      "keynote": "キーノート",
+      "session": "セッション",
+      "LT": "LT",
+      "sponsor session": "スポンサーセッション",
+      "sponsor LT": "スポンサーLT"
+    },
+    "recording": "録画"
+  },
+  "venue": {
+    "placeName": "ベルサール神田",
+    "address": "東京都千代田区神田美土代町7 住友不動産神田ビル 2・3F",
+    "access": "アクセス",
+    "accessByTrain": "電車でのアクセス",
+    "accessByTrainDescription": "* 「小川町駅」B6出口徒歩2分（新宿線）\n* 「新御茶ノ水駅」B6出口徒歩2分（千代田線）\n* 「淡路町駅」B6出口徒歩2分（丸ノ内線）\n* 「神田駅」5番出口徒歩6分（銀座線）\n* 「神田駅」西口徒歩7分（JR線）\n* 「大手町駅」C2b出口徒歩7分（半蔵門線・丸ノ内線・東西線・三田線・千代田線）",
+    "officialSite": "会場公式サイト",
+    "accessFromAirport": "空港からのアクセス",
+    "accessFromAirportDescription": "* 羽田空港→都営地下鉄 サンプル線「サンプル駅」下車徒歩5分\n* 成田空港→都営地下鉄 サンプル線「サンプル駅」下車徒歩5分"
+  }
+}
