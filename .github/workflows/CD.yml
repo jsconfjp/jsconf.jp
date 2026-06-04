@@ -28,6 +28,12 @@ jobs:
       - run: mv 2022/public dist/2022
       - run: mv 2023/public dist/2023
       - run: cd 2024 && npm i && npm run build -- --prefix-paths --verbose && (mv public/2024 ../dist || mkdir ../dist/2024) && cp -r public/* ../dist/2024
+      # 2025 は .nvmrc(Node 24 / npm 11)に合わせる。2024(Gatsby)は Node 20 のまま維持する
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: 2025/.nvmrc
+          cache: npm
+          cache-dependency-path: 2025/package-lock.json
       - run: cd 2025 && npm ci && npm run build && mv out ../dist/2025
         env:
           NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}

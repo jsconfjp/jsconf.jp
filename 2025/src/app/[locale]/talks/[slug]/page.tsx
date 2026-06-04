@@ -5,11 +5,12 @@ import { Chip } from "@/components/Chip";
 import { Markdown } from "@/components/Markdown";
 import { PageContainer } from "@/components/PageContainer";
 import { TalkSlug } from "@/constants/talks";
-import { Locale, LOCALES } from "@/i18n/constants";
+import { LOCALES } from "@/i18n/constants";
+import { ensureLocale } from "@/i18n/ensureLocale";
 import { findTalkSession } from "@/lib/findTalkSession";
 import { getTalkSessions } from "@/lib/getTalkSessions";
 
-type Params = { locale: Locale; slug: string };
+type Params = { locale: string; slug: string };
 
 type Props = {
   params: Promise<Params>;
@@ -27,8 +28,8 @@ export function generateStaticParams(): Params[] {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale, slug } = await params;
-  setRequestLocale(locale);
+  const { locale: rawLocale, slug } = await params;
+  setRequestLocale(ensureLocale(rawLocale));
 
   const session = findTalkSession(slug as unknown as TalkSlug);
 
@@ -39,7 +40,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function Page({ params }: Props) {
-  const { locale, slug } = await params;
+  const { locale: rawLocale, slug } = await params;
+  const locale = ensureLocale(rawLocale);
   setRequestLocale(locale);
 
   const t = await getTranslations({
