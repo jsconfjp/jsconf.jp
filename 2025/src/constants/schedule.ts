@@ -6,16 +6,6 @@ export type Track = "A" | "B" | "C" | "D" | "all";
 
 export const TRACKS = ["A", "B", "C", "D"] satisfies Track[];
 
-export type SessionKind =
-  | "reception"
-  | "opening"
-  | "talk"
-  | "streaming"
-  | "closed"
-  | "break"
-  | "closing"
-  | "networking";
-
 export type ScheduledSession = {
   track: Track;
   day: Day;

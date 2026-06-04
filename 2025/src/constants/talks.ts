@@ -53,7 +53,7 @@ type Day = "1";
 type Kind = "keynote" | "session" | "LT" | "sponsor session" | "sponsor LT";
 type Language = "English" | "Japanese";
 
-export type Speaker = {
+type Speaker = {
   type: "speaker";
   name: string;
   avatarUrl: string | StaticImageData;
