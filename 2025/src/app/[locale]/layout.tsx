@@ -1,24 +1,23 @@
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PropsWithChildren } from "react";
 import "@/app/globals.css";
 import bgUrl from "@/assets/bg.webp";
 import { Footer } from "@/components/Footer";
 import { GlobalNavigation } from "@/components/GlobalNavigation";
-import { LOCALES, Locale } from "@/i18n/constants";
-import { routing } from "@/i18n/routing";
+import { LOCALES } from "@/i18n/constants";
+import { ensureLocale } from "@/i18n/ensureLocale";
 // import bgFlipXUrl from "@/assets/bg-flip-x.webp";
 
-type Params = { locale: Locale };
+type Params = { locale: string };
 
 type Props = {
   params: Promise<Params>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = await params;
+  const locale = ensureLocale((await params).locale);
   const t = await getTranslations({
     locale,
     namespace: "about",
@@ -43,10 +42,7 @@ export default async function Layout({
   children,
   params,
 }: PropsWithChildren<Props>) {
-  const { locale } = await params;
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
+  const locale = ensureLocale((await params).locale);
 
   setRequestLocale(locale);
 

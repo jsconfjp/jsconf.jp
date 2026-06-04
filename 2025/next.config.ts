@@ -2,8 +2,6 @@ import bundleAnalyzer from "@next/bundle-analyzer";
 import createMDX from "@next/mdx";
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
-import remarkFrontmatter from "remark-frontmatter";
-import remarkGfm from "remark-gfm";
 
 const nextConfig: NextConfig = {
   basePath: "/2025",
@@ -20,7 +18,8 @@ const nextConfig: NextConfig = {
 const withMDX = createMDX({
   extension: /\.(md)$/,
   options: {
-    remarkPlugins: [remarkGfm, remarkFrontmatter],
+    // Turbopack 対応のためプラグインは文字列名で指定する（関数参照は直列化不可）
+    remarkPlugins: ["remark-gfm", "remark-frontmatter"],
   },
 });
 
