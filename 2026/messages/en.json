@@ -1,0 +1,78 @@
+{
+  "about": {
+    "title": "JSConf JP 2026",
+    "description": "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the seventh time event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
+    "eventDate": "November 22, 2026 (Sun)",
+    "companyAddress": "〒210-0024 27-7-903 Nisshincho Kawasaki-ku Kawasaki-shi Kanagawa",
+    "copyright": "© 2019-2026 JSConf JP"
+  },
+  "navigation": {
+    "speakers": "Speakers",
+    "venue": "Venue / Access",
+    "schedule": "Schedule",
+    "sponsors": "Sponsors",
+    "tickets": "Tickets",
+    "nodejs": "Node.js",
+    "previousJsconfJp": "JSConf JP 2025",
+    "japanNodejsAssociation": "Japan Node.js Association",
+    "codeOfConduct": "Code of Conduct",
+    "specifiedCommercialTransactionsAct": "Specified Commercial Transactions Act Disclosure",
+    "viewDetails": "View details",
+    "floorMap": "Floor Map"
+  },
+  "cta": {
+    "callForProposals": "Call for Proposals",
+    "becomeSponsor": "Become a Sponsor"
+  },
+  "lang": {
+    "japanese": "JA",
+    "english": "EN"
+  },
+  "team": {
+    "team": "Our Team",
+    "organizingTeam": "Organizing team",
+    "volunteerTeam": "Volunteer team",
+    "joinUs": "Join us"
+  },
+  "sponsors": {
+    "premium": "Premium sponsors",
+    "sponsor": "Sponsors"
+  },
+  "schedule": {
+    "kind": {
+      "streaming": "Stream",
+      "reception": "Doors Open",
+      "opening": "Opening",
+      "closed": "Closed",
+      "break": "Break",
+      "closing": "Closing",
+      "networking": "After Party"
+    }
+  },
+  "talks": {
+    "track": {
+      "A": "Track A",
+      "B": "Track B",
+      "C": "Track C",
+      "D": "Track D"
+    },
+    "kind": {
+      "keynote": "Keynote",
+      "session": "Session",
+      "LT": "LT",
+      "sponsor session": "Sponsor session",
+      "sponsor LT": "Sponsor LT"
+    },
+    "recording": "Recording"
+  },
+  "venue": {
+    "placeName": "Bellesalle Kanda",
+    "address": "Sumitomo Fudosan Kanda Bldg. 2F-3F, 7 Kanda-Mitoshirocho, Chiyoda-ku, Tokyo 101-0053",
+    "access": "Access",
+    "accessByTrain": "Access by train",
+    "accessByTrainDescription": "* Ogawamachi Sta. Exit B6, 2 min walk (Toei Shinjuku Line)\n* Shin-Ochanomizu Sta. Exit B6, 2 min walk (Chiyoda Line)\n* Awajicho Sta. Exit B6, 2 min walk (Marunouchi Line)\n* Kanda Sta. Exit 5, 6 min walk (Ginza Line)\n* Kanda Sta. West Exit, 7 min walk (JR)\n* Otemachi Sta. Exit C2b, 7 min walk (Hanzomon / Marunouchi / Tozai / Mita / Chiyoda Lines)",
+    "officialSite": "Official venue site",
+    "accessFromAirport": "Access from airport",
+    "accessFromAirportDescription": "* Haneda Airport → Toei Subway Sample Line \"Sample Station\" exit 5 minutes walk\n* Narita Airport → Toei Subway Sample Line \"Sample Station\" exit 5 minutes walk"
+  }
+}

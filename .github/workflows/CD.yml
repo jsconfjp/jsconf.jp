@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  deploy_2025:
+  deploy:
     runs-on: ubuntu-latest
     permissions:
       pages: write
@@ -27,14 +27,16 @@ jobs:
       - run: mv 2021/public dist/2021
       - run: mv 2022/public dist/2022
       - run: mv 2023/public dist/2023
+      # 2025 は凍結済み。ビルド済みの静的出力(2025/out)をそのまま配信する
+      - run: cp -r 2025/out dist/2025
       - run: cd 2024 && npm i && npm run build -- --prefix-paths --verbose && (mv public/2024 ../dist || mkdir ../dist/2024) && cp -r public/* ../dist/2024
-      # 2025 は .nvmrc(Node 24 / npm 11)に合わせる。2024(Gatsby)は Node 20 のまま維持する
+      # 2026 は .nvmrc(Node 24 / npm 11)に合わせる。2024(Gatsby)は Node 20 のまま維持する
       - uses: actions/setup-node@v4
         with:
-          node-version-file: 2025/.nvmrc
+          node-version-file: 2026/.nvmrc
           cache: npm
-          cache-dependency-path: 2025/package-lock.json
-      - run: cd 2025 && npm ci && npm run build && mv out ../dist/2025
+          cache-dependency-path: 2026/package-lock.json
+      - run: cd 2026 && npm ci && npm run build && mv out ../dist/2026
         env:
           NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
       - run: find dist
