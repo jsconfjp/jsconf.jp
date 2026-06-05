@@ -1,5 +1,5 @@
 import { timeToMinutes } from "@/lib/timeToMinutes";
-import { Talk } from "./talks";
+import { TALKS_BY_SLUG, Talk } from "./talks";
 
 type Day = "1";
 export type Track = "A" | "B" | "C" | "D" | "all";
@@ -34,8 +34,8 @@ export type ScheduledSession = {
 export type TalkSession = Extract<ScheduledSession, { kind: "talk" }>;
 
 // 開催スケジュールは未確定。
-// 登壇は募集中（CFP）のため、/talks/[slug] ルートを output: export で成立させるための
-// プレースホルダを1件だけ置く（speakers は空にして /speakers には出さない）。確定後に実データへ置き換える。
+// 登壇は募集中（CFP）のため、talks.ts のプレースホルダ talk (tba) を
+// TALKS_BY_SLUG 経由で1件だけ置き、/talks/[slug] と /schedule を成立させる。確定後に実データへ置き換える。
 const notSortedSchedule: ScheduledSession[] = [
   {
     kind: "talk",
@@ -43,15 +43,7 @@ const notSortedSchedule: ScheduledSession[] = [
     day: "1",
     startTime: "13:00",
     endTime: "13:40",
-    talk: {
-      slug: "tba",
-      title: "Coming Soon",
-      description: "セッション情報は近日公開予定です。Stay tuned!",
-      kind: "session",
-      day: "1",
-      language: "Japanese",
-      speakers: [],
-    },
+    talk: TALKS_BY_SLUG["tba"],
   },
 ];
 

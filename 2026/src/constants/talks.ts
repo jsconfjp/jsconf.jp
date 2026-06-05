@@ -28,8 +28,20 @@ export type FlattenedSpeaker = {
   speaker: Speaker | Sponsor;
 };
 
-// 登壇は募集中（CFP）のため未確定。確定次第ここに追加する。
-export const TALKS: readonly Talk[] = [];
+// 登壇は募集中（CFP）のため未確定。
+// /talks/[slug] と /schedule を output: export で成立させるためのプレースホルダを1件だけ置く。
+// speakers は空にして /speakers には出さない。確定後に実データへ置き換える。
+export const TALKS: readonly Talk[] = [
+  {
+    slug: "tba",
+    title: "Coming Soon",
+    description: "セッション情報は近日公開予定です。Stay tuned!",
+    kind: "session",
+    day: "1",
+    language: "Japanese",
+    speakers: [],
+  },
+];
 
 export type TalkSlug = (typeof TALKS)[number]["slug"];
 

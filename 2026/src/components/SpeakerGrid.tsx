@@ -15,7 +15,7 @@ export function SpeakerGrid({ speakers }: Props) {
           <Link
             key={speaker.name}
             href={`/talks/${talk.slug}`}
-            className="flex flex-col gap-2 p-2 border-1 bg-white border-dimmed hover:shadow-sm transition-all duration-100"
+            className="flex flex-col gap-2 p-2 border bg-white border-dimmed hover:shadow-sm transition-all duration-100"
           >
             <div className="relative flex-1 flex aspect-square">
               <Image

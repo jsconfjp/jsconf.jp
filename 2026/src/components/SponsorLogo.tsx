@@ -14,7 +14,7 @@ export function SponsorLogo({ sponsor }: Props) {
       href={sponsor.url}
       target="_blank"
       className={clsx(
-        "flex items-center justify-center bg-white border-1 border-dimmed",
+        "flex items-center justify-center bg-white border border-dimmed",
         sponsor.plan === "premium" && "min-h-52 p-10",
         sponsor.plan === "sponsor" && "min-h-32 p-5",
       )}
