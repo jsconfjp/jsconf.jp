@@ -29,7 +29,7 @@ export function GlobalNavigation() {
 
   return (
     <header className="shadow-sm bg-white px-2 lg:px-0">
-      <div className="flex items-stretch justify-between max-w-screen-lg mx-auto">
+      <div className="flex items-stretch justify-between max-w-5xl mx-auto">
         <Link href="/" className="flex items-center">
           <Image
             src={logoSrc}
@@ -82,7 +82,7 @@ export function GlobalNavigation() {
       </div>
       <nav
         className={clsx(
-          "flex-1 items-center gap-4 border-t-1 border-dimmed divide-y-1 divide-dimmed/50",
+          "flex-1 items-center gap-4 border-t border-dimmed divide-y divide-dimmed/50",
           isOpen ? "visible" : "hidden",
         )}
       >

@@ -76,7 +76,7 @@ export function Footer() {
           </Link>
         ))}
       </nav>
-      <nav className="mt-4 flex flex-col items-center md:flex-row gap-2 md:gap-4 md:divide-x-1 md:divide-gray-400">
+      <nav className="mt-4 flex flex-col items-center md:flex-row gap-2 md:gap-4 md:divide-x md:divide-gray-400">
         {links.map(({ label, href, target }) => (
           <Link
             key={href}

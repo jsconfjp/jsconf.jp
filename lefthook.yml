@@ -11,3 +11,9 @@ pre-commit:
       run: |
         npx prisma format {staged_files}
       stage_fixed: true
+    # 2026: Tailwind クラス診断ゲート (@tailwindcss/language-server を headless 実行)。
+    # 2026 配下のソースがステージされた時だけ全体を検査し、診断が残っていれば commit を止める。
+    tailwind-2026:
+      glob: "2026/*.{ts,tsx,js,jsx,mjs,mdx,css}"
+      run: |
+        cd 2026 && node scripts/tw-lint.mjs

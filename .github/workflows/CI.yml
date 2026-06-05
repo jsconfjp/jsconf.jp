@@ -28,3 +28,14 @@ jobs:
       - run: cd 2026 && npm run build
         env:
           NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
+  knip_2026:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: 2026/.nvmrc
+          cache: npm
+          cache-dependency-path: 2026/package-lock.json
+      - run: cd 2026 && npm ci
+      - run: cd 2026 && npm run knip
