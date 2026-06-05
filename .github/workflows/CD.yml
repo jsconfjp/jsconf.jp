@@ -16,11 +16,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-          cache-dependency-path: 2023/package-lock.json
       - run: mkdir dist
       - run: cp public/* dist/
       - run: mv 2019/public dist/2019
@@ -29,8 +24,9 @@ jobs:
       - run: mv 2023/public dist/2023
       # 2025 は凍結済み。ビルド済みの静的出力(2025/out)をそのまま配信する
       - run: cp -r 2025/out dist/2025
-      - run: cd 2024 && npm i && npm run build -- --prefix-paths --verbose && (mv public/2024 ../dist || mkdir ../dist/2024) && cp -r public/* ../dist/2024
-      # 2026 は .nvmrc(Node 24 / npm 11)に合わせる。2024(Gatsby)は Node 20 のまま維持する
+      # 2024 は凍結済み。ビルド済みの public/ をそのまま配信する
+      - run: mv 2024/public dist/2024
+      # 2026 は .nvmrc(Node 24 / npm 11)に合わせる
       - uses: actions/setup-node@v4
         with:
           node-version-file: 2026/.nvmrc
