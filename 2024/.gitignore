@@ -56,7 +56,7 @@ typings/
 
 # gatsby files
 .cache/
-public
+# NOTE: 2024 は開催終了後に凍結。ビルド済みの public/ を commit し、CD でそのまま配信するため public は ignore しない
 
 # Mac files
 .DS_Store
