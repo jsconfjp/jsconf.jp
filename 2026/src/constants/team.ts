@@ -91,6 +91,11 @@ export const VOLUNTEER_TEAM: TeamMember[] = [
     url: "https://github.com/wh1tecat-nya",
     avatarUrl: "https://avatars.githubusercontent.com/u/6924358?v=4",
   },
+  {
+    name: "Daijiro Wachi",
+    url: "https://x.com/watilde",
+    avatarUrl: "https://avatars.githubusercontent.com/u/1716463?v=4"
+  }
 ];
 
 export const ORGANIZING_TEAM: TeamMember[] = [
