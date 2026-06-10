@@ -6,6 +6,23 @@ type Props = {
   size: number;
 };
 
+// Retina 対応のためレンダリングサイズの 2 倍をリクエストする
+const PIXEL_DENSITY = 2;
+
+// GitHub のアバターは `?size=` で原寸ではなくリサイズ後の画像を配信できる。
+// GitHub 以外のホスト (Facebook CDN / Slack) はリサイズ非対応なのでそのまま返す。
+function resolveAvatarUrl(avatarUrl: string, size: number): string {
+  const url = new URL(avatarUrl);
+  const isGitHub =
+    url.hostname === "github.com" ||
+    url.hostname.endsWith(".githubusercontent.com");
+  if (!isGitHub) {
+    return avatarUrl;
+  }
+  url.searchParams.set("size", String(size * PIXEL_DENSITY));
+  return url.toString();
+}
+
 export function TeamMember({ member, size }: Props) {
   return (
     <Link
@@ -17,7 +34,7 @@ export function TeamMember({ member, size }: Props) {
       <img
         loading="lazy"
         fetchPriority="low"
-        src={member.avatarUrl}
+        src={resolveAvatarUrl(member.avatarUrl, size)}
         alt={`${member.name}'s avatar`}
         width={size}
         height={size}

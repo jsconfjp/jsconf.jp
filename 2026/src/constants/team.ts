@@ -23,7 +23,7 @@ export const VOLUNTEER_TEAM: TeamMember[] = [
   {
     name: "Naturalclar",
     url: "https://twitter.com/natural_clar",
-    avatarUrl: "https://www.github.com/Naturalclar.png",
+    avatarUrl: "https://github.com/Naturalclar.png",
   },
   {
     name: "yuik",
@@ -38,12 +38,12 @@ export const VOLUNTEER_TEAM: TeamMember[] = [
   {
     name: "Martin Heidegger",
     url: "https://github.com/martinheidegger",
-    avatarUrl: "https://avatars.githubusercontent.com/u/914122?v=4",
+    avatarUrl: "https://github.com/martinheidegger.png",
   },
   {
     name: "Himenon",
     url: "https://github.com/Himenon",
-    avatarUrl: "https://avatars.githubusercontent.com/u/6715229?v=4",
+    avatarUrl: "https://github.com/Himenon.png",
   },
   {
     name: "Maiko Yasunaga",
@@ -54,48 +54,48 @@ export const VOLUNTEER_TEAM: TeamMember[] = [
   {
     name: "shimataro",
     url: "https://x.com/shimataro999",
-    avatarUrl: "https://avatars1.githubusercontent.com/u/3448502",
+    avatarUrl: "https://github.com/shimataro.png",
   },
   {
     name: "Hannah Carson",
     url: "https://github.com/awkwardlyjoyful",
-    avatarUrl: "https://avatars.githubusercontent.com/u/114798856?v=4",
+    avatarUrl: "https://github.com/awkwardlyjoyful.png",
   },
   {
     name: "Jacob Sullivan",
     url: "https://github.com/nakajimayoshi",
-    avatarUrl: "https://avatars.githubusercontent.com/u/52870481?v=4",
+    avatarUrl: "https://github.com/nakajimayoshi.png",
   },
   {
     name: "locol",
     url: "https://github.com/locol23",
-    avatarUrl: "https://avatars.githubusercontent.com/u/6946766?v=4",
+    avatarUrl: "https://github.com/locol23.png",
   },
   {
     name: "Ahoxa",
     url: "https://github.com/Ahoxa",
-    avatarUrl: "https://avatars.githubusercontent.com/u/106437154?v=4",
+    avatarUrl: "https://github.com/Ahoxa.png",
   },
   {
     name: "cordelia",
     url: "https://github.com/cordelia-sixth",
-    avatarUrl: "https://avatars.githubusercontent.com/u/80014084?v=4",
+    avatarUrl: "https://github.com/cordelia-sixth.png",
   },
   {
     name: "jougen",
     url: "https://github.com/bmthd",
-    avatarUrl: "https://avatars.githubusercontent.com/u/81406938?v=4",
+    avatarUrl: "https://github.com/bmthd.png",
   },
   {
     name: "wh1tecat",
     url: "https://github.com/wh1tecat-nya",
-    avatarUrl: "https://avatars.githubusercontent.com/u/6924358?v=4",
+    avatarUrl: "https://github.com/wh1tecat-nya.png",
   },
   {
     name: "Daijiro Wachi",
     url: "https://x.com/watilde",
-    avatarUrl: "https://avatars.githubusercontent.com/u/1716463?v=4"
-  }
+    avatarUrl: "https://github.com/watilde.png",
+  },
 ];
 
 export const ORGANIZING_TEAM: TeamMember[] = [
