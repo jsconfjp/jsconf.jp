@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import githubUrl from "@/assets/github.svg";
 import twitterXUrl from "@/assets/twitter-x.svg";
-import youtubeUrl from "@/assets/youtube.png";
+import youtubeUrl from "@/assets/youtube.svg";
 import {
   GITHUB_URL,
   JNA_URL,
