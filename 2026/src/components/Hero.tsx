@@ -1,13 +1,12 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import logoSrc from "@/assets/logo.png";
+import logoSrc from "@/../public/logo.svg";
 
 export function Hero() {
   const t = useTranslations("about");
 
   return (
     <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-16">
-      {/* 2026 の動くロゴ(SVG)が用意できるまでは、2024 の静的ロゴを暫定表示する */}
       <Image
         src={logoSrc}
         width={240}
