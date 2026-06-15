@@ -14,5 +14,4 @@ export const PREVIOUS_URL = "https://jsconf.jp/2025";
 export const CFP_URL = "https://forms.gle/XJA7jXxV48mWnkhe7";
 
 // スポンサー応募(募集要項)
-export const SPONSORSHIP_URL =
-  "https://docs.google.com/document/d/10AJ7zCQpF8RFaprvlBBNt6vhd3apoSNhJHRL7z78pns/edit";
+export const SPONSORSHIP_URL = "https://forms.gle/EhB2VXCWvWJVw9Mz5";
