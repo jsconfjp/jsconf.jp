@@ -78,6 +78,21 @@ export default async function Page({ params }: Props) {
         </div>
       </div>
 
+      <div className="max-w-3xl mx-auto mt-8 md:mt-16 flex flex-col gap-4 px-4 lg:px-0">
+        <h2 className="text-lg md:text-xl font-bold text-center">{t("about.previousYearHighlights")}</h2>
+        <div className="w-full aspect-video">
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/me9KQ1SpKK4?si=byHOxwIpCcctOFyE"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+      </div>
+
       {SPONSORS.length > 0 && (
         <div className="max-w-3xl mx-auto mt-8 md:mt-32 flex flex-col gap-4">
           <h2 className="text-3xl font-bold text-center">{t("navigation.sponsors")}</h2>
