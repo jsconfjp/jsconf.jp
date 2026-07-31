@@ -49,9 +49,7 @@ describe("findTalkSession", () => {
   it("should throw error for non-talk sessions", () => {
     // Bypass type constraint for error case testing
     // oxlint-disable-next-line typescript/no-explicit-any
-    expect(() => findTalkSession("break" as any, mockSessions)).toThrow(
-      "Talk session not found for slug: break",
-    );
+    expect(() => findTalkSession("break" as any, mockSessions)).toThrow("Talk session not found for slug: break");
   });
 
   it("should work with the default SCHEDULE when no sessions provided", () => {

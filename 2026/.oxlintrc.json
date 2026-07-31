@@ -8,15 +8,7 @@
     "browser": true,
     "node": true
   },
-  "ignorePatterns": [
-    "out/**",
-    ".next/**",
-    "node_modules/**",
-    "dist/**",
-    "build/**",
-    "coverage/**",
-    "next-env.d.ts"
-  ],
+  "ignorePatterns": ["out/**", ".next/**", "node_modules/**", "dist/**", "build/**", "coverage/**", "next-env.d.ts"],
   "rules": {
     "no-array-constructor": "error",
     "no-unused-expressions": "warn",

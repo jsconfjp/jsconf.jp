@@ -19,11 +19,7 @@ export function SpeakerGrid({ speakers }: Props) {
           >
             <div className="relative flex-1 flex aspect-square">
               <Image
-                src={
-                  speaker.type === "speaker"
-                    ? speaker.avatarUrl
-                    : speaker.logoUrl
-                }
+                src={speaker.type === "speaker" ? speaker.avatarUrl : speaker.logoUrl}
                 alt={`${speaker.name}'s avatar`}
                 fill
                 className="object-cover"

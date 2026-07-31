@@ -20,12 +20,7 @@ export function SponsorLogo({ sponsor }: Props) {
       )}
     >
       <div className="relative w-full h-full">
-        <Image
-          src={sponsor.logoUrl}
-          alt={sponsor.name}
-          fill
-          className="object-contain"
-        />
+        <Image src={sponsor.logoUrl} alt={sponsor.name} fill className="object-contain" />
       </div>
     </Link>
   );

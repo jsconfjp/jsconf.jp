@@ -15,18 +15,9 @@ import path from "node:path";
 import { pathToFileURL, fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
-const LS_BIN = path.join(
-  ROOT,
-  "node_modules",
-  ".bin",
-  "tailwindcss-language-server",
-);
+const LS_BIN = path.join(ROOT, "node_modules", ".bin", "tailwindcss-language-server");
 
-const MODE = process.argv.includes("--fix")
-  ? "fix"
-  : process.argv.includes("--json")
-    ? "json"
-    : "check";
+const MODE = process.argv.includes("--fix") ? "fix" : process.argv.includes("--json") ? "json" : "check";
 
 // IntelliSense と揃える lint 設定。ここが commit ゲートの「ルール定義」になる。
 const TAILWIND_SETTINGS = {
@@ -63,10 +54,7 @@ function collectFiles(dir) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      if (
-        ["node_modules", ".next", "out", "dist", "build"].includes(entry.name)
-      )
-        continue;
+      if (["node_modules", ".next", "out", "dist", "build"].includes(entry.name)) continue;
       out.push(...collectFiles(full));
     } else if (LANGUAGE_ID[path.extname(entry.name)]) {
       out.push(full);
@@ -114,10 +102,7 @@ class LSPClient {
   }
 
   #dispatch(msg) {
-    if (
-      msg.id !== undefined &&
-      (msg.result !== undefined || msg.error !== undefined)
-    ) {
+    if (msg.id !== undefined && (msg.result !== undefined || msg.error !== undefined)) {
       // 自分が送った request への response
       const p = this.#pending.get(msg.id);
       if (p) {
@@ -139,11 +124,7 @@ class LSPClient {
     let result = null;
     if (msg.method === "workspace/configuration") {
       result = msg.params.items.map((item) =>
-        item.section === "tailwindCSS"
-          ? TAILWIND_SETTINGS
-          : item.section === "editor"
-            ? { tabSize: 2 }
-            : {},
+        item.section === "tailwindCSS" ? TAILWIND_SETTINGS : item.section === "editor" ? { tabSize: 2 } : {},
       );
     } else if (msg.method === "workspace/workspaceFolders") {
       result = [{ uri: pathToFileURL(ROOT).href, name: "root" }];
@@ -154,9 +135,7 @@ class LSPClient {
 
   #send(obj) {
     const body = JSON.stringify(obj);
-    this.#proc.stdin.write(
-      `Content-Length: ${Buffer.byteLength(body)}\r\n\r\n${body}`,
-    );
+    this.#proc.stdin.write(`Content-Length: ${Buffer.byteLength(body)}\r\n\r\n${body}`);
   }
 
   request(method, params) {
@@ -236,10 +215,7 @@ async function main() {
   const startedAt = Date.now();
   await new Promise((resolve) => {
     const timer = setInterval(() => {
-      if (
-        Date.now() - lastMessageAt > SETTLE_MS ||
-        Date.now() - startedAt > TIMEOUT_MS
-      ) {
+      if (Date.now() - lastMessageAt > SETTLE_MS || Date.now() - startedAt > TIMEOUT_MS) {
         clearInterval(timer);
         resolve();
       }
@@ -284,9 +260,7 @@ async function main() {
   }
   console.error(`✗ Tailwind diagnostics: ${flat.length} 件\n`);
   for (const d of flat) {
-    console.error(
-      `  ${d.file}:${d.line}:${d.col}  ${d.severity}  [${d.code}]  ${d.message}`,
-    );
+    console.error(`  ${d.file}:${d.line}:${d.col}  ${d.severity}  [${d.code}]  ${d.message}`);
   }
   client.dispose();
   process.exitCode = 1;
@@ -304,21 +278,17 @@ async function applyFixes(client, diagnostics) {
         range: diag.range,
         context: { diagnostics: [diag], only: ["quickfix"] },
       });
-      const action = (actions ?? []).find(
-        (a) => a.edit || a.kind === "quickfix",
-      );
+      const action = (actions ?? []).find((a) => a.edit || a.kind === "quickfix");
       if (!action) continue;
       let edit = action.edit;
       if (!edit && action.data) {
         const resolved = await client.request("codeAction/resolve", action);
         edit = resolved?.edit;
       }
-      const changes =
-        edit?.changes?.[uri] ??
-        edit?.documentChanges
-          ?.filter((c) => c.textDocument?.uri === uri)
-          .flatMap((c) => c.edits) ??
-        [];
+      // oxfmt-ignore
+      const changes = edit?.changes?.[uri] ?? edit?.documentChanges
+        ?.filter((c) => c.textDocument?.uri === uri)
+        .flatMap((c) => c.edits) ?? [];
       if (!changes.length) continue;
       const abs = fileURLToPath(uri);
       if (!editsByFile.has(abs)) editsByFile.set(abs, []);
@@ -331,15 +301,10 @@ async function applyFixes(client, diagnostics) {
     const text = readFileSync(abs, "utf8");
     const lines = text.split("\n");
     // offset 計算用
-    const toOffset = (pos) =>
-      lines.slice(0, pos.line).reduce((n, l) => n + l.length + 1, 0) +
-      pos.character;
+    const toOffset = (pos) => lines.slice(0, pos.line).reduce((n, l) => n + l.length + 1, 0) + pos.character;
+    // oxfmt-ignore
     const sorted = edits
-      .map((e) => ({
-        start: toOffset(e.range.start),
-        end: toOffset(e.range.end),
-        newText: e.newText,
-      }))
+      .map((e) => ({ start: toOffset(e.range.start), end: toOffset(e.range.end), newText: e.newText }))
       .sort((a, b) => b.start - a.start);
     let next = text;
     for (const e of sorted) {
@@ -351,9 +316,7 @@ async function applyFixes(client, diagnostics) {
       console.log(`fixed: ${path.relative(ROOT, abs)} (${edits.length} edits)`);
     }
   }
-  console.log(
-    `\n${fixedFiles} ファイルを修正しました。再度 check を実行してください。`,
-  );
+  console.log(`\n${fixedFiles} ファイルを修正しました。再度 check を実行してください。`);
 }
 
 main();
