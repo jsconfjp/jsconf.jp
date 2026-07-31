@@ -4,7 +4,8 @@
     "description": "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the seventh time event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
     "eventDate": "November 22, 2026 (Sun)",
     "companyAddress": "〒210-0024 27-7-903 Nisshincho Kawasaki-ku Kawasaki-shi Kanagawa",
-    "copyright": "© 2019-2026 JSConf JP"
+    "copyright": "© 2019-2026 JSConf JP",
+    "previousYearHighlights": "Last year's highlights"
   },
   "navigation": {
     "speakers": "Speakers",
