@@ -3,8 +3,8 @@
 import Bars3Icon from "@heroicons/react/24/outline/Bars3Icon";
 import XMarkIcon from "@heroicons/react/24/outline/XMarkIcon";
 import clsx from "clsx";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { useState } from "react";
 import logoSrc from "@/../public/logo.svg";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";

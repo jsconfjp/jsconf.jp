@@ -1,6 +1,6 @@
 import clsx from "clsx";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import youtubeUrl from "@/assets/youtube.svg";
 import { ScheduledSession } from "@/constants/schedule";
 import { Chip } from "./Chip";

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import Image from "next/image";
 import { Chip } from "@/components/Chip";
 import { Markdown } from "@/components/Markdown";
 import { PageContainer } from "@/components/PageContainer";

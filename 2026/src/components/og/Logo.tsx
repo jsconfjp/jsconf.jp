@@ -1,5 +1,5 @@
 // OGPではimg要素しか使えないため警告を無視
-/* eslint-disable @next/next/no-img-element */
+/* oxlint-disable nextjs/no-img-element */
 import { join } from "node:path";
 import { makeDataUrl } from "@/lib/og/url";
 

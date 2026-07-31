@@ -63,7 +63,9 @@ function collectFiles(dir) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      if (["node_modules", ".next", "out", "dist", "build"].includes(entry.name))
+      if (
+        ["node_modules", ".next", "out", "dist", "build"].includes(entry.name)
+      )
         continue;
       out.push(...collectFiles(full));
     } else if (LANGUAGE_ID[path.extname(entry.name)]) {
@@ -83,7 +85,10 @@ class LSPClient {
 
   constructor(bin, args, onNotify) {
     this.#onNotify = onNotify;
-    this.#proc = spawn(bin, args, { cwd: ROOT, stdio: ["pipe", "pipe", "pipe"] });
+    this.#proc = spawn(bin, args, {
+      cwd: ROOT,
+      stdio: ["pipe", "pipe", "pipe"],
+    });
     this.#proc.stdout.on("data", (chunk) => this.#onData(chunk));
     this.#proc.stderr.on("data", () => {}); // LS の進捗ログは捨てる
   }
@@ -109,7 +114,10 @@ class LSPClient {
   }
 
   #dispatch(msg) {
-    if (msg.id !== undefined && (msg.result !== undefined || msg.error !== undefined)) {
+    if (
+      msg.id !== undefined &&
+      (msg.result !== undefined || msg.error !== undefined)
+    ) {
       // 自分が送った request への response
       const p = this.#pending.get(msg.id);
       if (p) {
@@ -146,7 +154,9 @@ class LSPClient {
 
   #send(obj) {
     const body = JSON.stringify(obj);
-    this.#proc.stdin.write(`Content-Length: ${Buffer.byteLength(body)}\r\n\r\n${body}`);
+    this.#proc.stdin.write(
+      `Content-Length: ${Buffer.byteLength(body)}\r\n\r\n${body}`,
+    );
   }
 
   request(method, params) {
@@ -201,7 +211,9 @@ async function main() {
         },
       },
     },
-    initializationOptions: { configuration: { tailwindCSS: TAILWIND_SETTINGS } },
+    initializationOptions: {
+      configuration: { tailwindCSS: TAILWIND_SETTINGS },
+    },
   });
   client.notify("initialized", {});
 
@@ -292,16 +304,21 @@ async function applyFixes(client, diagnostics) {
         range: diag.range,
         context: { diagnostics: [diag], only: ["quickfix"] },
       });
-      const action = (actions ?? []).find((a) => a.edit || a.kind === "quickfix");
+      const action = (actions ?? []).find(
+        (a) => a.edit || a.kind === "quickfix",
+      );
       if (!action) continue;
       let edit = action.edit;
       if (!edit && action.data) {
         const resolved = await client.request("codeAction/resolve", action);
         edit = resolved?.edit;
       }
-      const changes = edit?.changes?.[uri] ?? edit?.documentChanges
-        ?.filter((c) => c.textDocument?.uri === uri)
-        .flatMap((c) => c.edits) ?? [];
+      const changes =
+        edit?.changes?.[uri] ??
+        edit?.documentChanges
+          ?.filter((c) => c.textDocument?.uri === uri)
+          .flatMap((c) => c.edits) ??
+        [];
       if (!changes.length) continue;
       const abs = fileURLToPath(uri);
       if (!editsByFile.has(abs)) editsByFile.set(abs, []);
@@ -318,7 +335,11 @@ async function applyFixes(client, diagnostics) {
       lines.slice(0, pos.line).reduce((n, l) => n + l.length + 1, 0) +
       pos.character;
     const sorted = edits
-      .map((e) => ({ start: toOffset(e.range.start), end: toOffset(e.range.end), newText: e.newText }))
+      .map((e) => ({
+        start: toOffset(e.range.start),
+        end: toOffset(e.range.end),
+        newText: e.newText,
+      }))
       .sort((a, b) => b.start - a.start);
     let next = text;
     for (const e of sorted) {
@@ -330,7 +351,9 @@ async function applyFixes(client, diagnostics) {
       console.log(`fixed: ${path.relative(ROOT, abs)} (${edits.length} edits)`);
     }
   }
-  console.log(`\n${fixedFiles} ファイルを修正しました。再度 check を実行してください。`);
+  console.log(
+    `\n${fixedFiles} ファイルを修正しました。再度 check を実行してください。`,
+  );
 }
 
 main();
