@@ -21,13 +21,7 @@ export type ScheduledSession = {
       talk: Talk;
     }
   | {
-      kind:
-        | "reception"
-        | "opening"
-        | "closed"
-        | "break"
-        | "closing"
-        | "networking";
+      kind: "reception" | "opening" | "closed" | "break" | "closing" | "networking";
     }
 );
 
@@ -55,8 +49,5 @@ export const SCHEDULE: ScheduledSession[] = notSortedSchedule
 
     // 時間が同じ場合はトラックでソート（all < A < B < C < D）
     const trackOrder = { all: 0, A: 1, B: 2, C: 3, D: 4 };
-    return (
-      trackOrder[a.track as keyof typeof trackOrder] -
-      trackOrder[b.track as keyof typeof trackOrder]
-    );
+    return trackOrder[a.track as keyof typeof trackOrder] - trackOrder[b.track as keyof typeof trackOrder];
   }) as ScheduledSession[];

@@ -38,10 +38,7 @@ export function generateStaticParams(): Params[] {
   return LOCALES.map((locale) => ({ locale }));
 }
 
-export default async function Layout({
-  children,
-  params,
-}: PropsWithChildren<Props>) {
+export default async function Layout({ children, params }: PropsWithChildren<Props>) {
   const locale = ensureLocale((await params).locale);
 
   setRequestLocale(locale);

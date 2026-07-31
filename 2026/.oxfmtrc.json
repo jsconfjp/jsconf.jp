@@ -1,0 +1,17 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "printWidth": 120,
+  "sortImports": {
+    "groups": [
+      ["type-builtin", "value-builtin"],
+      ["type-external", "value-external"],
+      ["type-internal", "value-internal"],
+      ["type-parent", "value-parent", "type-sibling", "value-sibling"],
+      ["type-index", "value-index"],
+      "unknown"
+    ],
+    "ignoreCase": true,
+    "newlinesBetween": false,
+    "order": "asc"
+  }
+}

@@ -14,7 +14,7 @@ Open [http://localhost:3000/2026](http://localhost:3000/2026) with your browser 
 ## Tech Stack
 
 - Package Manager: npm
-- Framework: Next.js with [TypeScript](https://nextjs.org/docs/pages/api-reference/config/typescript), [ESLint](https://nextjs.org/docs/app/api-reference/config/eslint) and [Static Site Generation (SSG)](https://nextjs.org/docs/pages/building-your-application/rendering/static-site-generation)
+- Framework: Next.js with [TypeScript](https://nextjs.org/docs/pages/api-reference/config/typescript), [Oxlint](https://oxc.rs/docs/guide/usage/linter.html), [Oxfmt](https://oxc.rs/docs/guide/usage/formatter.html) and [Static Site Generation (SSG)](https://nextjs.org/docs/pages/building-your-application/rendering/static-site-generation)
 - i18n: [next-intl](https://next-intl.dev/)
 - Styling: [tailwindcss](https://tailwindcss.com/)
 - Icon: [heroicons](https://heroicons.com/)

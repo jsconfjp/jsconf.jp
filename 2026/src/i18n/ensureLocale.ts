@@ -1,5 +1,5 @@
-import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
+import { notFound } from "next/navigation";
 import { Locale } from "./constants";
 import { routing } from "./routing";
 

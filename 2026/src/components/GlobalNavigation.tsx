@@ -3,8 +3,8 @@
 import Bars3Icon from "@heroicons/react/24/outline/Bars3Icon";
 import XMarkIcon from "@heroicons/react/24/outline/XMarkIcon";
 import clsx from "clsx";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { useState } from "react";
 import logoSrc from "@/../public/logo.svg";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -31,14 +31,7 @@ export function GlobalNavigation() {
     <header className="shadow-sm bg-white px-2 lg:px-0">
       <div className="flex items-stretch justify-between max-w-5xl mx-auto">
         <Link href="/" className="flex items-center">
-          <Image
-            src={logoSrc}
-            fetchPriority="high"
-            alt="JSConf JP"
-            width={40}
-            height={40}
-            className="mr-4"
-          />
+          <Image src={logoSrc} fetchPriority="high" alt="JSConf JP" width={40} height={40} className="mr-4" />
         </Link>
         <LanguageSwitcher />
         <nav className="flex-1 items-center justify-end gap-4 flex lg:hidden">
@@ -48,35 +41,28 @@ export function GlobalNavigation() {
             aria-label="Show/Hide navigations"
             onClick={() => setIsOpen((prev) => !prev)}
           >
-            {isOpen ? (
-              <XMarkIcon className="w-6 h-6" />
-            ) : (
-              <Bars3Icon className="w-6 h-6" />
-            )}
+            {isOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
           </button>
         </nav>
         <nav className="flex-1 items-center gap-4 hidden lg:flex">
-          {[...spacerItems, ...readyItems].map(
-            ({ label, href, ready, active }) =>
-              ready ? (
-                <Link
-                  key={href}
-                  href={href}
-                  className={clsx(
-                    "py-5 h-full flex-1 flex items-center justify-center text-lg font-bold underline underline-offset-8 decoration-4",
-                    active
-                      ? "decoration-primary"
-                      : "decoration-transparent hover:decoration-dimmed",
-                  )}
-                >
-                  {label}
-                </Link>
-              ) : (
-                // readyでない要素があっても幅の計算は同一になるように空の要素を入れておく
-                <div key={href} className="py-5 h-full flex-1">
-                  &nbsp;
-                </div>
-              ),
+          {[...spacerItems, ...readyItems].map(({ label, href, ready, active }) =>
+            ready ? (
+              <Link
+                key={href}
+                href={href}
+                className={clsx(
+                  "py-5 h-full flex-1 flex items-center justify-center text-lg font-bold underline underline-offset-8 decoration-4",
+                  active ? "decoration-primary" : "decoration-transparent hover:decoration-dimmed",
+                )}
+              >
+                {label}
+              </Link>
+            ) : (
+              // readyでない要素があっても幅の計算は同一になるように空の要素を入れておく
+              <div key={href} className="py-5 h-full flex-1">
+                &nbsp;
+              </div>
+            ),
           )}
         </nav>
       </div>
@@ -92,9 +78,7 @@ export function GlobalNavigation() {
             href={href}
             className={clsx(
               "py-4 flex-1 flex items-center justify-center text-md font-bold underline underline-offset-6 decoration-4",
-              active
-                ? "decoration-primary"
-                : "decoration-transparent hover:decoration-dimmed",
+              active ? "decoration-primary" : "decoration-transparent hover:decoration-dimmed",
             )}
           >
             {label}

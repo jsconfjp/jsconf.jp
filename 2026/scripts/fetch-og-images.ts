@@ -16,11 +16,7 @@ const pages = [
   ...TALKS.map((talk) => `/en/talks/${talk.slug}`),
   // http://localhost:3001/2026/en/talks/visual-regression-testing-chromatic/opengraph-image
 ].map((path) => ({
-  url: `http://localhost:3001${join(
-    nextConfig.basePath!,
-    path,
-    "opengraph-image",
-  )}`,
+  url: `http://localhost:3001${join(nextConfig.basePath!, path, "opengraph-image")}`,
   slug: path === "/" ? "top" : path.split("/").filter(Boolean).join("-"),
 }));
 
@@ -35,9 +31,7 @@ async function main() {
       return fetch(url)
         .then((res) => Readable.fromWeb(res.body! as unknown as ReadableStream))
         .then(async (stream) => {
-          const dist = stream.pipe(
-            createWriteStream(join(DIR_OG_IMAGES, `${slug}.png`)),
-          );
+          const dist = stream.pipe(createWriteStream(join(DIR_OG_IMAGES, `${slug}.png`)));
           await finished(dist);
         });
     }),

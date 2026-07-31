@@ -1,6 +1,6 @@
 import clsx from "clsx";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import youtubeUrl from "@/assets/youtube.svg";
 import { ScheduledSession } from "@/constants/schedule";
 import { Chip } from "./Chip";
@@ -39,9 +39,7 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
       className={clsx(
         "py-2 px-4 rounded-sm border-2 h-full flex flex-col gap-1 justify-start text-wrap",
         getSessionColor(session),
-        session.kind === "talk"
-          ? "cursor-pointer hover:shadow-md"
-          : "cursor-auto",
+        session.kind === "talk" ? "cursor-pointer hover:shadow-md" : "cursor-auto",
       )}
     >
       {session.kind === "talk" || session.kind === "streaming" ? (

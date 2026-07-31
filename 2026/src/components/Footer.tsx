@@ -1,16 +1,9 @@
-import Image from "next/image";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import githubUrl from "@/assets/github.svg";
 import twitterXUrl from "@/assets/twitter-x.svg";
 import youtubeUrl from "@/assets/youtube.svg";
-import {
-  GITHUB_URL,
-  JNA_URL,
-  NODEJS_OFFICIAL_URL,
-  PREVIOUS_URL,
-  X_URL,
-  YOUTUBE_URL,
-} from "@/constants/external";
+import { GITHUB_URL, JNA_URL, NODEJS_OFFICIAL_URL, PREVIOUS_URL, X_URL, YOUTUBE_URL } from "@/constants/external";
 import { Link } from "@/i18n/navigation";
 
 export function Footer() {
@@ -66,24 +59,14 @@ export function Footer() {
     <footer className="bg-dimmed py-10 flex flex-col items-center">
       <nav className="flex items-center gap-2">
         {asideLinks.map(({ icon, alt, href, target }) => (
-          <Link
-            key={href}
-            target={target}
-            href={href}
-            className="pr-4 text-sm hover:underline"
-          >
+          <Link key={href} target={target} href={href} className="pr-4 text-sm hover:underline">
             <Image src={icon} alt={alt} width={24} height={24} />
           </Link>
         ))}
       </nav>
       <nav className="mt-4 flex flex-col items-center md:flex-row gap-2 md:gap-4 md:divide-x md:divide-gray-400">
         {links.map(({ label, href, target }) => (
-          <Link
-            key={href}
-            target={target}
-            href={href}
-            className="pr-4 text-sm hover:underline"
-          >
+          <Link key={href} target={target} href={href} className="pr-4 text-sm hover:underline">
             {label}
           </Link>
         ))}

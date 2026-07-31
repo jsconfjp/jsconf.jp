@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import Image from "next/image";
 import { Chip } from "@/components/Chip";
 import { Markdown } from "@/components/Markdown";
 import { PageContainer } from "@/components/PageContainer";
@@ -58,9 +58,7 @@ export default async function Page({ params }: Props) {
         </time>
         <p className="my-1 flex items-center gap-2">
           <Chip>{t(`kind.${session.talk.kind}`)}</Chip>
-          {session.track !== "all" && (
-            <Chip track={session.track}>{t(`track.${session.track}`)}</Chip>
-          )}
+          {session.track !== "all" && <Chip track={session.track}>{t(`track.${session.track}`)}</Chip>}
           <Chip>{session.talk.language}</Chip>
         </p>
       </div>
@@ -83,20 +81,11 @@ export default async function Page({ params }: Props) {
       </div>
       <ul className="mt-8 flex flex-col gap-2">
         {session.talk.speakers.map((speaker) => (
-          <li
-            key={speaker.name}
-            className="flex items-center gap-4 bg-primary/10 p-6 rounded-md"
-          >
+          <li key={speaker.name} className="flex items-center gap-4 bg-primary/10 p-6 rounded-md">
             <div className="relative aspect-square w-48">
               <Image
-                className={
-                  speaker.type === "speaker" ? "object-cover" : "object-contain"
-                }
-                src={
-                  speaker.type === "speaker"
-                    ? speaker.avatarUrl
-                    : speaker.logoUrl
-                }
+                className={speaker.type === "speaker" ? "object-cover" : "object-contain"}
+                src={speaker.type === "speaker" ? speaker.avatarUrl : speaker.logoUrl}
                 alt={`${speaker.name}'s avatar`}
                 fill
               />
@@ -104,9 +93,7 @@ export default async function Page({ params }: Props) {
             <div className="flex-1 flex flex-col gap-2">
               <h3 className="text-2xl font-bold">{speaker.name}</h3>
               <div>
-                <Markdown>
-                  {speaker.type === "speaker" ? speaker.bio : speaker.prText}
-                </Markdown>
+                <Markdown>{speaker.type === "speaker" ? speaker.bio : speaker.prText}</Markdown>
               </div>
             </div>
           </li>

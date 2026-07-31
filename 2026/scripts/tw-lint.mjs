@@ -15,18 +15,9 @@ import path from "node:path";
 import { pathToFileURL, fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
-const LS_BIN = path.join(
-  ROOT,
-  "node_modules",
-  ".bin",
-  "tailwindcss-language-server",
-);
+const LS_BIN = path.join(ROOT, "node_modules", ".bin", "tailwindcss-language-server");
 
-const MODE = process.argv.includes("--fix")
-  ? "fix"
-  : process.argv.includes("--json")
-    ? "json"
-    : "check";
+const MODE = process.argv.includes("--fix") ? "fix" : process.argv.includes("--json") ? "json" : "check";
 
 // IntelliSense と揃える lint 設定。ここが commit ゲートの「ルール定義」になる。
 const TAILWIND_SETTINGS = {
@@ -63,8 +54,7 @@ function collectFiles(dir) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      if (["node_modules", ".next", "out", "dist", "build"].includes(entry.name))
-        continue;
+      if (["node_modules", ".next", "out", "dist", "build"].includes(entry.name)) continue;
       out.push(...collectFiles(full));
     } else if (LANGUAGE_ID[path.extname(entry.name)]) {
       out.push(full);
@@ -83,7 +73,10 @@ class LSPClient {
 
   constructor(bin, args, onNotify) {
     this.#onNotify = onNotify;
-    this.#proc = spawn(bin, args, { cwd: ROOT, stdio: ["pipe", "pipe", "pipe"] });
+    this.#proc = spawn(bin, args, {
+      cwd: ROOT,
+      stdio: ["pipe", "pipe", "pipe"],
+    });
     this.#proc.stdout.on("data", (chunk) => this.#onData(chunk));
     this.#proc.stderr.on("data", () => {}); // LS の進捗ログは捨てる
   }
@@ -131,11 +124,7 @@ class LSPClient {
     let result = null;
     if (msg.method === "workspace/configuration") {
       result = msg.params.items.map((item) =>
-        item.section === "tailwindCSS"
-          ? TAILWIND_SETTINGS
-          : item.section === "editor"
-            ? { tabSize: 2 }
-            : {},
+        item.section === "tailwindCSS" ? TAILWIND_SETTINGS : item.section === "editor" ? { tabSize: 2 } : {},
       );
     } else if (msg.method === "workspace/workspaceFolders") {
       result = [{ uri: pathToFileURL(ROOT).href, name: "root" }];
@@ -201,7 +190,9 @@ async function main() {
         },
       },
     },
-    initializationOptions: { configuration: { tailwindCSS: TAILWIND_SETTINGS } },
+    initializationOptions: {
+      configuration: { tailwindCSS: TAILWIND_SETTINGS },
+    },
   });
   client.notify("initialized", {});
 
@@ -224,10 +215,7 @@ async function main() {
   const startedAt = Date.now();
   await new Promise((resolve) => {
     const timer = setInterval(() => {
-      if (
-        Date.now() - lastMessageAt > SETTLE_MS ||
-        Date.now() - startedAt > TIMEOUT_MS
-      ) {
+      if (Date.now() - lastMessageAt > SETTLE_MS || Date.now() - startedAt > TIMEOUT_MS) {
         clearInterval(timer);
         resolve();
       }
@@ -272,9 +260,7 @@ async function main() {
   }
   console.error(`✗ Tailwind diagnostics: ${flat.length} 件\n`);
   for (const d of flat) {
-    console.error(
-      `  ${d.file}:${d.line}:${d.col}  ${d.severity}  [${d.code}]  ${d.message}`,
-    );
+    console.error(`  ${d.file}:${d.line}:${d.col}  ${d.severity}  [${d.code}]  ${d.message}`);
   }
   client.dispose();
   process.exitCode = 1;
@@ -299,6 +285,7 @@ async function applyFixes(client, diagnostics) {
         const resolved = await client.request("codeAction/resolve", action);
         edit = resolved?.edit;
       }
+      // oxfmt-ignore
       const changes = edit?.changes?.[uri] ?? edit?.documentChanges
         ?.filter((c) => c.textDocument?.uri === uri)
         .flatMap((c) => c.edits) ?? [];
@@ -314,9 +301,8 @@ async function applyFixes(client, diagnostics) {
     const text = readFileSync(abs, "utf8");
     const lines = text.split("\n");
     // offset 計算用
-    const toOffset = (pos) =>
-      lines.slice(0, pos.line).reduce((n, l) => n + l.length + 1, 0) +
-      pos.character;
+    const toOffset = (pos) => lines.slice(0, pos.line).reduce((n, l) => n + l.length + 1, 0) + pos.character;
+    // oxfmt-ignore
     const sorted = edits
       .map((e) => ({ start: toOffset(e.range.start), end: toOffset(e.range.end), newText: e.newText }))
       .sort((a, b) => b.start - a.start);
