@@ -18,6 +18,25 @@ type Props = {
 
 const toImageSrc = (src: string | StaticImageData) => {
   if (typeof src === "string") {
+    if (src.startsWith("/2026/")) {
+      const filePath = join(DIR_NEXT, "..", "public", src.slice("/2026/".length));
+      const image = readFileSync(filePath, { encoding: "base64" });
+      const extension = src.split(".").pop()?.toLowerCase();
+      const mimeType =
+        extension === "jpg" || extension === "jpeg"
+          ? "image/jpeg"
+          : extension === "png"
+            ? "image/png"
+            : extension === "svg"
+              ? "image/svg+xml"
+              : extension === "webp"
+                ? "image/webp"
+                : undefined;
+
+      if (mimeType) {
+        return `data:${mimeType};base64,${image}`;
+      }
+    }
     return src;
   }
   // ビルド中のURLは実際のパスとは異なるため置き換え
