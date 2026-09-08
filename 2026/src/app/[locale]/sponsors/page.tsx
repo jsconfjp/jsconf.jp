@@ -25,13 +25,10 @@ export default async function Page({ params }: Props) {
   const locale = ensureLocale((await params).locale);
   setRequestLocale(locale);
 
-  const t = await getTranslations({
-    locale,
-    namespace: "navigation",
-  });
+  const t = await getTranslations({ locale });
 
   return (
-    <PageContainer title={t("sponsors")}>
+    <PageContainer title={t("navigation.sponsors")}>
       <SponsorGrid sponsors={SPONSORS} showPrText={true} />
     </PageContainer>
   );
