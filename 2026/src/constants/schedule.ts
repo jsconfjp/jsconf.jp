@@ -107,8 +107,9 @@ const notSortedSchedule: ScheduledSession[] = [
   talkSession("A", "11:45", "11:50", "miidas-sponsor-lt-1"),
   talkSession("A", "11:50", "11:55", "anotherball-sponsor-lt-1"),
   talkSession("A", "11:55", "12:00", "cybozu-sponsor-lt-1"),
+  talkSession("A", "12:00", "12:05", "mcd3-sponsor-lt"),
 
-  eventSession("break", "all", "12:00", "13:00", "昼休憩"),
+  eventSession("break", "all", "12:05", "13:00", "昼休憩"),
 
   ...trackTalks("13:00", "13:30", [
     "devlin-duldulao",
@@ -130,40 +131,40 @@ const notSortedSchedule: ScheduledSession[] = [
     "cybozu-sponsor-session",
   ]),
   ...trackTalks("14:40", "15:10", [
-    "williams-kwan",
+    "ondrej-zara",
     "wataru-morita",
     "html-in-canvas-api",
     "arkor-sponsor-session",
   ]),
   eventSession("break", "all", "15:10", "15:20"),
   ...trackTalks("15:20", "15:50", [
-    "ondrej-zara",
+    "brandon-dail",
     "eiji",
     "kevin-uehara",
     "dwango-sponsor-session",
   ]),
   ...trackTalks("15:50", "16:20", [
-    "brandon-dail",
+    "saman-abaasi",
     "roland-richard",
     "enechain-sponsor-session",
     "supateam-sponsor-session",
   ]),
   eventSession("break", "all", "16:20", "16:30"),
   ...trackTalks("16:30", "17:00", [
-    "saman-abaasi",
+    "itai-satati",
     "akfm-sato",
     "ncdc-sponsor-session",
     "lincwell-sponsor-session",
   ]),
   ...trackTalks("17:00", "17:30", [
-    "itai-satati",
+    "leo-kettmeir",
     "kinocoboy",
     "cougar-sponsor-session",
     "money-forward-sponsor-session",
   ]),
   ...trackTalks("17:30", "18:00", [
-    "leo-kettmeir",
     "jessie",
+    "gmo-flatt-security-sponsor-session",
     "vercel-sponsor-session",
     "layerx-sponsor-session",
   ]),
@@ -180,7 +181,7 @@ const notSortedSchedule: ScheduledSession[] = [
   talkSession("A", "18:50", "18:55", "cougar-sponsor-lt"),
   talkSession("A", "18:55", "19:00", "vercel-sponsor-lt"),
   talkSession("A", "19:00", "19:05", "gmo-flatt-security-sponsor-lt"),
-  talkSession("A", "19:05", "19:10", "geekneer-sponsor-lt"),
+  talkSession("A", "19:05", "19:10", "everlane-sponsor-lt"),
 
   eventSession("closed", "A", "19:10", "19:40", "Room A Close (懇親会準備)"),
   talkSession("B", "19:10", "19:40", "josh-junon"),
