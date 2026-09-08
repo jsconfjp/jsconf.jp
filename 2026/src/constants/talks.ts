@@ -1,4 +1,5 @@
 import type { StaticImageData } from "next/image";
+import speakerProfiles from "./speakerProfiles.json";
 // @ts-expect-error see 2026/scripts/fetch-og-images.ts
 import { type Sponsor } from "./sponsors.ts";
 import talkDescriptions from "./talkDescriptions.json";
@@ -54,17 +55,24 @@ const makeTalk = (
     kind,
     day: "1",
     language,
-    speakers: speakerNames.map((name) => ({
-      type: "speaker",
-      name,
-      avatarUrl: emptyAvatar,
-      bio: "",
-    })),
+    speakers: speakerNames.map((name) => {
+      const speakerProfile =
+        speakerProfiles[name as keyof typeof speakerProfiles];
+      const avatarUrl =
+        speakerProfile && "avatarPath" in speakerProfile
+          ? speakerProfile.avatarPath
+          : emptyAvatar;
+
+      return {
+        type: "speaker",
+        name,
+        avatarUrl,
+        bio: speakerProfile?.bio ?? "",
+      };
+    }),
   };
 };
 
-// The schedule CSV contains titles and speaker names, but not talk descriptions
-// or speaker profiles. Those fields remain empty until the source data is available.
 export const TALKS = [
   makeTalk(
     "ajay-upreti",
