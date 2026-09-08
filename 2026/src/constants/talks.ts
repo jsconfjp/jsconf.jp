@@ -203,6 +203,7 @@ export const TALKS = [
     "sponsor LT",
     "Japanese",
   ),
+  makeTalk("mcd3-sponsor-lt", "MCD3株式会社 LT", "sponsor LT", "Japanese"),
   makeTalk(
     "devlin-duldulao",
     "Secure by Default Is a Lie — Unless You Make It the Default",
@@ -271,13 +272,6 @@ export const TALKS = [
     "サイボウズ株式会社",
     "sponsor session",
     "Japanese",
-  ),
-  makeTalk(
-    "williams-kwan",
-    "Mono Repo, Multi Region: Mercari Frontend Architecture",
-    "session",
-    "English",
-    ["Williams Kwan"],
   ),
   makeTalk(
     "wataru-morita",
@@ -420,6 +414,12 @@ export const TALKS = [
   ),
   makeTalk("vercel-sponsor-session", "Vercel", "sponsor session", "English"),
   makeTalk(
+    "gmo-flatt-security-sponsor-session",
+    "GMO Flatt Security株式会社",
+    "sponsor session",
+    "Japanese",
+  ),
+  makeTalk(
     "layerx-sponsor-session",
     "株式会社LayerX",
     "sponsor session",
@@ -446,12 +446,7 @@ export const TALKS = [
     "sponsor LT",
     "Japanese",
   ),
-  makeTalk(
-    "geekneer-sponsor-lt",
-    "株式会社ギークニア LT",
-    "sponsor LT",
-    "Japanese",
-  ),
+  makeTalk("everlane-sponsor-lt", "株式会社EVERLANE LT", "sponsor LT", "Japanese"),
   makeTalk(
     "josh-junon",
     "基調講演2: Yep, I've Been Pwned: What I Learned from Being Hacked",
