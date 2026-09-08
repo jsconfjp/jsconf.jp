@@ -24,7 +24,8 @@ export function TimeTable() {
   const gridTemplateAreas = useMemo(() => {
     return timeSlots
       .map((slotTime) => {
-        const areas = ["", "", "", ""]; // A, B, C, D
+        // CSS Gridの空セルは空文字ではなく、ドットで表す必要がある。
+        const areas = [".", ".", ".", "."]; // A, B, C, D
 
         SCHEDULE.forEach((session) => {
           const sessionStart = timeToMinutes(session.startTime);
