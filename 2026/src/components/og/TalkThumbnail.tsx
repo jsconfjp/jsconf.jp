@@ -11,6 +11,13 @@ import { Logo } from "./Logo";
 import { Template } from "./Template";
 
 const DIR_NEXT = join(process.cwd(), ".next");
+const IMAGE_MIME_TYPES: Record<string, string> = {
+  jpg: "image/jpeg",
+  jpeg: "image/jpeg",
+  png: "image/png",
+  svg: "image/svg+xml",
+  webp: "image/webp",
+};
 
 type Props = {
   session: ScheduledSession & { kind: "talk" };
@@ -19,23 +26,19 @@ type Props = {
 const toImageSrc = (src: string | StaticImageData) => {
   if (typeof src === "string") {
     if (src.startsWith("/2026/")) {
-      const filePath = join(DIR_NEXT, "..", "public", src.slice("/2026/".length));
-      const image = readFileSync(filePath, { encoding: "base64" });
       const extension = src.split(".").pop()?.toLowerCase();
-      const mimeType =
-        extension === "jpg" || extension === "jpeg"
-          ? "image/jpeg"
-          : extension === "png"
-            ? "image/png"
-            : extension === "svg"
-              ? "image/svg+xml"
-              : extension === "webp"
-                ? "image/webp"
-                : undefined;
+      const mimeType = extension ? IMAGE_MIME_TYPES[extension] : undefined;
 
-      if (mimeType) {
-        return `data:${mimeType};base64,${image}`;
-      }
+      if (!mimeType) return src;
+
+      const filePath = join(
+        DIR_NEXT,
+        "..",
+        "public",
+        src.slice("/2026/".length),
+      );
+      const image = readFileSync(filePath, { encoding: "base64" });
+      return `data:${mimeType};base64,${image}`;
     }
     return src;
   }
