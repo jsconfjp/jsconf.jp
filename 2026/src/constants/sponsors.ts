@@ -8,7 +8,7 @@ export type Sponsor = {
   name: string;
   url: string;
   prText: string;
-  logoUrl: string | StaticImageData;
+  logoUrl?: string | StaticImageData;
 };
 
 // 2026年スポンサー。スポンサーセッションを持つ企業をプレミアムとして表示する。
@@ -30,7 +30,6 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "AnotherBall Pte Ltd",
     url: "https://anotherball.com/",
-    logoUrl: "/2026/sponsor/anotherball-2026.ico",
     prText:
       `AnotherBallは「境界を越え、通じあえるユカイな体験を創る。」をミッションに掲げるスタートアップです。1分でVTuberになれるアプリ「Avvy」や、ゲーム・映像制作を行うスタジオメイフラワーを運営しています。「日本に根ざす“妄想力“を加速させる事業を同時多発的に創る」という信念のもと、クリエイターの自由な世界観の源を支え、エンタメ×グローバルの交差点で事業を展開していきます。`.trim(),
   },
@@ -57,7 +56,6 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "株式会社ドワンゴ",
     url: "https://dwango.co.jp/",
-    logoUrl: "/2026/sponsor/dwango.png",
     prText:
       `ドワンゴは "ネットの向こうの、リアルを動かす。人間らしさと、つながるデジタルを。" をコーポレートメッセージとして、ネットに特化した通信制高校「N高等学校・S高等学校・R高等学校」、ネットとリアルを融合したオンライン大学「ZEN大学」、オンライン学習アプリ「ZEN Study」、ネットの双方向性を最大限に動画や生放送に取り込んだ「ニコニコ」、ネットとリアルの融合をテーマにした巨大イベント「ニコニコ超会議」など、新しい価値を創り出し、それを事業として成立させていくことに挑戦しつづける企業です。`.trim(),
   },
@@ -66,7 +64,6 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "supateam株式会社",
     url: "https://supateam.com",
-    logoUrl: "/2026/sponsor/supateam-2026.svg",
     prText:
       `
 AIの力を100%引き出しリスクもコントロールする、ハーネスエンジニアリングゲートウェイ。
@@ -92,7 +89,6 @@ Linc'wellは「テクノロジーを通じて、医療を一歩前へ」をミ�
     plan: "premium",
     name: "NCDC株式会社",
     url: "https://ncdc.co.jp/",
-    logoUrl: "/2026/sponsor/ncdc-2026.svg",
     prText:
       `NCDCは、フロントエンドからバックエンドまでTypeScriptを中心とした技術スタックでプロダクト開発を行っています。新規サービスの立ち上げからグロースまで伴走し、生成AIやクラウド技術を活用した開発に取り組んでいます。`.trim(),
   },
@@ -141,7 +137,6 @@ Linc'wellは「テクノロジーを通じて、医療を一歩前へ」をミ�
     plan: "premium",
     name: "株式会社enechain",
     url: "https://enechain.co.jp/",
-    logoUrl: "/2026/sponsor/enechain-2026.webp",
     prText: `enechainは電力・燃料・環境価値を扱うエネルギーのマーケットプレイスを運営するスタートアップです。そして最近のニュースではエネルギーの話題が尽きません。2016年の電力完全自由化・脱炭素の加速を背景に、エネルギー取引のリスク管理ニーズは急拡大しています。レガシーな領域且つ高い技術要求が求められる国家インフラ級のプラットフォームを、モダンな技術で自社エンジニアチームが開発することにこだわっています。JSカンファレンスに集まるエンジニアの皆さんと一緒に、場を精一杯に盛り上げていきます！ぜひよろしくお願いします！`.trim(),
   },
   {

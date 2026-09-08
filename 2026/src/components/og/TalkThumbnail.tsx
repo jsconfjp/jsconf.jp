@@ -98,7 +98,7 @@ export function TalkThumbnail({ session }: Props) {
                     tw="rounded-full"
                     style={{ objectFit: "cover" }}
                   />
-                ) : (
+                ) : speaker.logoUrl ? (
                   <img
                     alt={speaker.name}
                     src={toImageSrc(speaker.logoUrl)}
@@ -106,7 +106,7 @@ export function TalkThumbnail({ session }: Props) {
                     height={120 / talk.speakers.length}
                     style={{ objectFit: "contain" }}
                   />
-                )}
+                ) : null}
                 <h2 tw="text-5xl font-bold">{speaker.name}</h2>
               </div>
             ))}
