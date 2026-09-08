@@ -96,18 +96,25 @@ export default async function Page({ params }: Props) {
             className="flex items-center gap-4 bg-primary/10 p-6 rounded-md"
           >
             <div className="relative aspect-square w-48">
-              <Image
-                className={
-                  speaker.type === "speaker" ? "object-cover" : "object-contain"
-                }
-                src={
-                  speaker.type === "speaker"
-                    ? speaker.avatarUrl
-                    : speaker.logoUrl
-                }
-                alt={`${speaker.name}'s avatar`}
-                fill
-              />
+              {speaker.type === "speaker" ? (
+                <Image
+                  className="object-cover"
+                  src={speaker.avatarUrl}
+                  alt={`${speaker.name}'s avatar`}
+                  fill
+                />
+              ) : speaker.logoUrl ? (
+                <Image
+                  className="object-contain"
+                  src={speaker.logoUrl}
+                  alt={`${speaker.name}'s avatar`}
+                  fill
+                />
+              ) : (
+                <div className="flex h-full items-center justify-center text-center font-semibold">
+                  {speaker.name}
+                </div>
+              )}
             </div>
             <div className="flex-1 flex flex-col gap-2">
               <h3 className="text-2xl font-bold">{speaker.name}</h3>

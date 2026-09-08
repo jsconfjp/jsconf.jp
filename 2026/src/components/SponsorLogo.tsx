@@ -19,14 +19,20 @@ export function SponsorLogo({ sponsor }: Props) {
         sponsor.plan === "sponsor" && "min-h-32 p-5",
       )}
     >
-      <div className="relative w-full h-full">
-        <Image
-          src={sponsor.logoUrl}
-          alt={sponsor.name}
-          fill
-          className="object-contain"
-        />
-      </div>
+      {sponsor.logoUrl ? (
+        <div className="relative w-full h-full">
+          <Image
+            src={sponsor.logoUrl}
+            alt={sponsor.name}
+            fill
+            className="object-contain"
+          />
+        </div>
+      ) : (
+        <span className="text-center text-xl font-semibold">
+          {sponsor.name}
+        </span>
+      )}
     </Link>
   );
 }

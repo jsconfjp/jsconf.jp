@@ -20,27 +20,37 @@ export function SponsorGrid({ sponsors, showPrText = false }: Props) {
 
   return (
     <div>
-      <h3 className="text-2xl font-bold my-2 text-center">{t("premium")}</h3>
-      <div className="grid grid-cols-1 gap-8">
-        {premiumSponsors.map((sponsor) => (
-          <div key={sponsor.name} className="flex flex-col gap-2">
-            <SponsorLogo sponsor={sponsor} />
-            {showPrText && <p>{sponsor.prText}</p>}
+      {premiumSponsors.length > 0 && (
+        <section>
+          <h3 className="text-2xl font-bold my-2 text-center">
+            {t("premium")}
+          </h3>
+          <div className="grid grid-cols-1 gap-8">
+            {premiumSponsors.map((sponsor) => (
+              <div key={sponsor.name} className="flex flex-col gap-2">
+                <SponsorLogo sponsor={sponsor} />
+                {showPrText && sponsor.prText && <p>{sponsor.prText}</p>}
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </section>
+      )}
 
-      <h3 className="text-2xl font-bold mt-4 my-2 text-center">
-        {t("sponsor")}
-      </h3>
-      <div className="grid grid-cols-2 gap-4">
-        {otherSponsors.map((sponsor) => (
-          <div key={sponsor.name} className="flex flex-col gap-2">
-            <SponsorLogo sponsor={sponsor} />
-            {showPrText && <p>{sponsor.prText}</p>}
+      {otherSponsors.length > 0 && (
+        <section>
+          <h3 className="text-2xl font-bold mt-4 my-2 text-center">
+            {t("sponsor")}
+          </h3>
+          <div className="grid grid-cols-2 gap-4">
+            {otherSponsors.map((sponsor) => (
+              <div key={sponsor.name} className="flex flex-col gap-2">
+                <SponsorLogo sponsor={sponsor} />
+                {showPrText && sponsor.prText && <p>{sponsor.prText}</p>}
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </section>
+      )}
     </div>
   );
 }
