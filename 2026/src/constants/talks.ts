@@ -1,6 +1,7 @@
 import type { StaticImageData } from "next/image";
 // @ts-expect-error see 2026/scripts/fetch-og-images.ts
 import { type Sponsor } from "./sponsors.ts";
+import talkDescriptions from "./talkDescriptions.json";
 import emptyAvatar from "../../public/speaker/250x250.png";
 
 type Day = "1";
@@ -19,6 +20,7 @@ export type Talk = {
   title: string;
   scheduleLabel?: string;
   description: string; // markdown
+  descriptionJa?: string; // markdown
   kind: Kind;
   day: Day;
   language: Language;
@@ -36,24 +38,30 @@ const makeTalk = (
   kind: Kind,
   language: Language,
   speakerNames: readonly string[] = [],
-): Talk => ({
-  slug,
-  title,
-  scheduleLabel:
-    speakerNames.length > 0
-      ? `${title} by ${speakerNames.join(" & ")}`
-      : title,
-  description: "",
-  kind,
-  day: "1",
-  language,
-  speakers: speakerNames.map((name) => ({
-    type: "speaker",
-    name,
-    avatarUrl: emptyAvatar,
-    bio: "",
-  })),
-});
+): Talk => {
+  const talkDescription =
+    talkDescriptions[title as keyof typeof talkDescriptions];
+
+  return {
+    slug,
+    title,
+    scheduleLabel:
+      speakerNames.length > 0
+        ? `${title} by ${speakerNames.join(" & ")}`
+        : title,
+    description: talkDescription?.en ?? "",
+    descriptionJa: talkDescription?.ja,
+    kind,
+    day: "1",
+    language,
+    speakers: speakerNames.map((name) => ({
+      type: "speaker",
+      name,
+      avatarUrl: emptyAvatar,
+      bio: "",
+    })),
+  };
+};
 
 // The schedule CSV contains titles and speaker names, but not talk descriptions
 // or speaker profiles. Those fields remain empty until the source data is available.
