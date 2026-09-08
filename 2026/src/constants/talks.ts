@@ -1,7 +1,7 @@
 import type { StaticImageData } from "next/image";
-import emptyAvatar from "../../public/speaker/250x250.png";
 // @ts-expect-error see 2026/scripts/fetch-og-images.ts
 import { type Sponsor } from "./sponsors.ts";
+import emptyAvatar from "../../public/speaker/250x250.png";
 
 type Day = "1";
 type Kind = "keynote" | "session" | "LT" | "sponsor session" | "sponsor LT";
