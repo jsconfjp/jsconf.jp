@@ -29,13 +29,17 @@ export function generateStaticParams(): Params[] {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: rawLocale, slug } = await params;
-  setRequestLocale(ensureLocale(rawLocale));
+  const locale = ensureLocale(rawLocale);
+  setRequestLocale(locale);
 
   const session = findTalkSession(slug as unknown as TalkSlug);
 
   return {
     title: session.talk.title,
-    description: session.talk.description,
+    description:
+      locale === "ja"
+        ? (session.talk.descriptionJa ?? session.talk.description)
+        : session.talk.description,
   };
 }
 
@@ -49,6 +53,10 @@ export default async function Page({ params }: Props) {
     namespace: "talks",
   });
   const session = findTalkSession(slug as unknown as TalkSlug);
+  const description =
+    locale === "ja"
+      ? (session.talk.descriptionJa ?? session.talk.description)
+      : session.talk.description;
 
   return (
     <PageContainer title={session.talk.title} centerizeTitle={false}>
@@ -79,7 +87,7 @@ export default async function Page({ params }: Props) {
         </div>
       )}
       <div className="mt-4">
-        <Markdown>{session.talk.description}</Markdown>
+        <Markdown>{description}</Markdown>
       </div>
       <ul className="mt-8 flex flex-col gap-2">
         {session.talk.speakers.map((speaker) => (

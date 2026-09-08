@@ -20,6 +20,11 @@ export function GlobalNavigation() {
       label: t("venue"),
       href: "/venue",
     },
+    {
+      ready: true,
+      label: t("schedule"),
+      href: "/schedule",
+    },
   ].map((item) => ({
     ...item,
     active: pathname === item.href,

@@ -68,25 +68,27 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
           </div>
           <div className="font-bold text-md">
             {session.kind === "streaming" ? `(${t("streaming")}) ` : ""}
-            {session.talk.title}
+            {session.talk.scheduleLabel ?? session.talk.title}
           </div>
-          <ul className="flex flex-col gap-1">
-            {session.talk.speakers.map((speaker) => (
-              <li key={speaker.name} className="flex items-center gap-2">
-                {speaker.type === "speaker" && (
-                  <div className="aspect-square w-6 h-6 relative">
-                    <Image
-                      src={speaker.avatarUrl}
-                      alt={`${speaker.name}'s avatar`}
-                      fill
-                      className="rounded-full object-cover"
-                    />
-                  </div>
-                )}
-                <span>{speaker.name}</span>
-              </li>
-            ))}
-          </ul>
+          {!session.talk.scheduleLabel && (
+            <ul className="flex flex-col gap-1">
+              {session.talk.speakers.map((speaker) => (
+                <li key={speaker.name} className="flex items-center gap-2">
+                  {speaker.type === "speaker" && (
+                    <div className="aspect-square w-6 h-6 relative">
+                      <Image
+                        src={speaker.avatarUrl}
+                        alt={`${speaker.name}'s avatar`}
+                        fill
+                        className="rounded-full object-cover"
+                      />
+                    </div>
+                  )}
+                  <span>{speaker.name}</span>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       ) : (
         <div className="flex flex-col gap-1 items-start">
@@ -99,7 +101,7 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
               </div>
             )}
           </div>
-          <div>{t(session.kind)}</div>
+          <div>{session.label ?? t(session.kind)}</div>
         </div>
       )}
       <time className="text-xs">
