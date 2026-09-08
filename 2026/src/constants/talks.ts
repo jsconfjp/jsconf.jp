@@ -42,6 +42,9 @@ const makeTalk = (
 ): Talk => {
   const talkDescription =
     talkDescriptions[title as keyof typeof talkDescriptions];
+  const description = talkDescription?.en || talkDescription?.ja || "";
+  const descriptionJa =
+    language === "English" ? talkDescription?.ja : undefined;
 
   return {
     slug,
@@ -50,8 +53,8 @@ const makeTalk = (
       speakerNames.length > 0
         ? `${title} by ${speakerNames.join(" & ")}`
         : title,
-    description: talkDescription?.en ?? "",
-    descriptionJa: talkDescription?.ja,
+    description,
+    descriptionJa,
     kind,
     day: "1",
     language,
