@@ -18,7 +18,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "ミイダス株式会社",
     url: "https://miidas.co.jp/",
-    logoUrl: "/2026/sponsor/miidas-2026.svg",
+    logoUrl: "/2026/sponsor/miidas-2026.png",
     prText: `
 ミイダスは、世界初※1の採用・転職におけるミスマッチを減らしながら、入社後の活躍までを支援する採用・転職サービスです。人口減少による人材不足が深刻化する中、主に中小企業を対象に「採用力」の向上を支援。AIや独自のビッグデータを活用し、採用課題の可視化から応募獲得、定着・活躍支援までを一気通貫で提供し、企業価値向上に貢献しています。
 
