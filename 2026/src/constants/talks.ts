@@ -206,7 +206,7 @@ export const TALKS = [
   makeTalk("mcd3-sponsor-lt", "MCD3株式会社 LT", "sponsor LT", "Japanese"),
   makeTalk(
     "devlin-duldulao",
-    "Secure by Default Is a Lie — Unless You Make It the Default",
+    "DaloyJS - The first TypeScript REST API framework built for secure AI-assisted services",
     "session",
     "English",
     ["Devlin Duldulao"],
