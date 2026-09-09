@@ -11,25 +11,25 @@ import { Logo } from "./Logo";
 import { Template } from "./Template";
 
 const DIR_NEXT = join(process.cwd(), ".next");
+// OGP 生成 (satori) が扱える画像形式のみ。webp / ico などはロゴを省略する
 const IMAGE_MIME_TYPES: Record<string, string> = {
   jpg: "image/jpeg",
   jpeg: "image/jpeg",
   png: "image/png",
   svg: "image/svg+xml",
-  webp: "image/webp",
 };
 
 type Props = {
   session: ScheduledSession & { kind: "talk" };
 };
 
-const toImageSrc = (src: string | StaticImageData) => {
+const toImageSrc = (src: string | StaticImageData): string | null => {
   if (typeof src === "string") {
     if (src.startsWith("/2026/")) {
       const extension = src.split(".").pop()?.toLowerCase();
       const mimeType = extension ? IMAGE_MIME_TYPES[extension] : undefined;
 
-      if (!mimeType) return src;
+      if (!mimeType) return null;
 
       const filePath = join(
         DIR_NEXT,
@@ -83,33 +83,37 @@ export function TalkThumbnail({ session }: Props) {
         </main>
         <footer tw="flex items-end justify-between px-8 pb-8">
           <div tw="flex flex-col">
-            {talk.speakers.map((speaker) => (
-              <div
-                key={speaker.name}
-                tw="flex items-center"
-                style={{ gap: 16 }}
-              >
-                {speaker.type === "speaker" ? (
-                  <img
-                    alt={speaker.name}
-                    src={toImageSrc(speaker.avatarUrl)}
-                    width={120 / talk.speakers.length}
-                    height={120 / talk.speakers.length}
-                    tw="rounded-full"
-                    style={{ objectFit: "cover" }}
-                  />
-                ) : speaker.logoUrl ? (
-                  <img
-                    alt={speaker.name}
-                    src={toImageSrc(speaker.logoUrl)}
-                    width={120 / talk.speakers.length}
-                    height={120 / talk.speakers.length}
-                    style={{ objectFit: "contain" }}
-                  />
-                ) : null}
-                <h2 tw="text-5xl font-bold">{speaker.name}</h2>
-              </div>
-            ))}
+            {talk.speakers.map((speaker) => {
+              const imageSrc =
+                speaker.type === "speaker"
+                  ? toImageSrc(speaker.avatarUrl)
+                  : speaker.logoUrl
+                    ? toImageSrc(speaker.logoUrl)
+                    : null;
+
+              return (
+                <div
+                  key={speaker.name}
+                  tw="flex items-center"
+                  style={{ gap: 16 }}
+                >
+                  {imageSrc && (
+                    <img
+                      alt={speaker.name}
+                      src={imageSrc}
+                      width={120 / talk.speakers.length}
+                      height={120 / talk.speakers.length}
+                      tw={speaker.type === "speaker" ? "rounded-full" : ""}
+                      style={{
+                        objectFit:
+                          speaker.type === "speaker" ? "cover" : "contain",
+                      }}
+                    />
+                  )}
+                  <h2 tw="text-5xl font-bold">{speaker.name}</h2>
+                </div>
+              );
+            })}
           </div>
           <div tw="flex items-center" style={{ gap: 16 }}>
             <Logo size={80} />
