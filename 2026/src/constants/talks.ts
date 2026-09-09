@@ -1,7 +1,7 @@
 import type { StaticImageData } from "next/image";
 import speakerProfiles from "./speakerProfiles.json";
 // @ts-expect-error see 2026/scripts/fetch-og-images.ts
-import { type Sponsor } from "./sponsors.ts";
+import { SPONSORS_BY_NAME, type Sponsor } from "./sponsors.ts";
 import talkDescriptions from "./talkDescriptions.json";
 import emptyAvatar from "../../public/speaker/250x250.png";
 
@@ -76,6 +76,23 @@ const makeTalk = (
   };
 };
 
+type SponsorKind = Extract<Kind, "sponsor session" | "sponsor LT">;
+
+// スポンサーセッション/LT。スピーカーとして SPONSORS の企業情報を紐付ける。
+const makeSponsorTalk = (
+  slug: string,
+  title: string,
+  kind: SponsorKind,
+  language: Language,
+  sponsorName: string,
+): Talk => {
+  const sponsor = SPONSORS_BY_NAME[sponsorName];
+  if (!sponsor) {
+    throw new Error(`Sponsor not found for talk "${slug}": ${sponsorName}`);
+  }
+  return { ...makeTalk(slug, title, kind, language), speakers: [sponsor] };
+};
+
 export const TALKS = [
   makeTalk(
     "ajay-upreti",
@@ -98,13 +115,9 @@ export const TALKS = [
     "Japanese",
     ["おおいし (bicstone)"],
   ),
-  makeTalk(
+  makeTalk("dynamis", "Welcome JXL! ー JPEG XL 復活の記録", "LT", "Japanese", [
     "dynamis",
-    "Welcome JXL! ー JPEG XL 復活の記録",
-    "LT",
-    "Japanese",
-    ["dynamis"],
-  ),
+  ]),
   makeTalk(
     "nurul-sundarani",
     "The TC39 Graveyard: Proposals That Died So JavaScript Could Live",
@@ -175,13 +188,9 @@ export const TALKS = [
     "Japanese",
     ["Kazuya Serizawa"],
   ),
-  makeTalk(
-    "petamoriken",
-    "Canvas 2D Context Next",
-    "LT",
-    "Japanese",
-    ["森内建太 (@petamoriken)"],
-  ),
+  makeTalk("petamoriken", "Canvas 2D Context Next", "LT", "Japanese", [
+    "森内建太 (@petamoriken)",
+  ]),
   makeTalk(
     "yuta-ikeoku",
     "Coding Agent のフロントエンドを、AsyncIterable と自作の pipe で宣言的に実装する",
@@ -190,20 +199,34 @@ export const TALKS = [
     ["池奥裕太"],
   ),
   makeTalk("keynote-1-tbd", "基調講演1: TBD", "keynote", "Japanese"),
-  makeTalk("miidas-sponsor-lt-1", "ミイダス社 LT", "sponsor LT", "Japanese"),
-  makeTalk(
+  makeSponsorTalk(
+    "miidas-sponsor-lt-1",
+    "ミイダス社 LT",
+    "sponsor LT",
+    "Japanese",
+    "ミイダス株式会社",
+  ),
+  makeSponsorTalk(
     "anotherball-sponsor-lt-1",
     "AnotherBall Pte Ltd LT",
     "sponsor LT",
     "English",
+    "AnotherBall Pte Ltd",
   ),
-  makeTalk(
+  makeSponsorTalk(
     "cybozu-sponsor-lt-1",
     "サイボウズ株式会社 LT",
     "sponsor LT",
     "Japanese",
+    "サイボウズ株式会社",
   ),
-  makeTalk("mcd3-sponsor-lt", "MCD3株式会社 LT", "sponsor LT", "Japanese"),
+  makeSponsorTalk(
+    "mcd3-sponsor-lt",
+    "MCD3株式会社 LT",
+    "sponsor LT",
+    "Japanese",
+    "MCD3株式会社",
+  ),
   makeTalk(
     "devlin-duldulao",
     "Secure by Default Is a Lie — Unless You Make It the Default",
@@ -212,18 +235,15 @@ export const TALKS = [
     ["Devlin Duldulao"],
   ),
   makeTalk("nolu", "CVEから紐解くJIT Exploit", "session", "Japanese", ["nolu"]),
-  makeTalk(
-    "neciu-dan",
-    "How NOT to Use TanStack Query",
-    "session",
-    "English",
-    ["Neciu Dan"],
-  ),
-  makeTalk(
+  makeTalk("neciu-dan", "How NOT to Use TanStack Query", "session", "English", [
+    "Neciu Dan",
+  ]),
+  makeSponsorTalk(
     "miidas-sponsor-session",
     "ミイダス株式会社",
     "sponsor session",
     "Japanese",
+    "ミイダス株式会社",
   ),
   makeTalk(
     "neeraj-pandey",
@@ -246,11 +266,12 @@ export const TALKS = [
     "English",
     ["Aileen Villanueva"],
   ),
-  makeTalk(
+  makeSponsorTalk(
     "anotherball-sponsor-session",
     "AnotherBall Pte Ltd",
     "sponsor session",
     "English",
+    "AnotherBall Pte Ltd",
   ),
   makeTalk(
     "marco-ippolito",
@@ -259,7 +280,13 @@ export const TALKS = [
     "English",
     ["Marco Ippolito"],
   ),
-  makeTalk("uhyo", "AIフレンドリーなGenerative UIをJSXで", "session", "Japanese", ["うひょ"]),
+  makeTalk(
+    "uhyo",
+    "AIフレンドリーなGenerative UIをJSXで",
+    "session",
+    "Japanese",
+    ["うひょ"],
+  ),
   makeTalk(
     "maya-shavin",
     "Frontend Beyond the Screen: Where AI Agent Is A User",
@@ -267,11 +294,12 @@ export const TALKS = [
     "English",
     ["Maya Shavin"],
   ),
-  makeTalk(
+  makeSponsorTalk(
     "cybozu-sponsor-session",
     "サイボウズ株式会社",
     "sponsor session",
     "Japanese",
+    "サイボウズ株式会社",
   ),
   makeTalk(
     "wataru-morita",
@@ -287,11 +315,12 @@ export const TALKS = [
     "English",
     ["Natalia Markoborodova", "Thomas Nattestad"],
   ),
-  makeTalk(
+  makeSponsorTalk(
     "arkor-sponsor-session",
     "Arkor",
     "sponsor session",
     "English",
+    "Arkor",
   ),
   makeTalk(
     "ondrej-zara",
@@ -314,11 +343,12 @@ export const TALKS = [
     "English",
     ["Kevin Uehara"],
   ),
-  makeTalk(
+  makeSponsorTalk(
     "dwango-sponsor-session",
     "株式会社ドワンゴ",
     "sponsor session",
     "Japanese",
+    "株式会社ドワンゴ",
   ),
   makeTalk(
     "brandon-dail",
@@ -334,17 +364,19 @@ export const TALKS = [
     "Japanese",
     ["ローランド リチャード"],
   ),
-  makeTalk(
+  makeSponsorTalk(
     "enechain-sponsor-session",
     "株式会社enechain",
     "sponsor session",
     "Japanese",
+    "株式会社enechain",
   ),
-  makeTalk(
+  makeSponsorTalk(
     "supateam-sponsor-session",
     "supateam株式会社",
     "sponsor session",
     "Japanese",
+    "supateam株式会社",
   ),
   makeTalk(
     "saman-abaasi",
@@ -360,17 +392,19 @@ export const TALKS = [
     "Japanese",
     ["akfm_sato"],
   ),
-  makeTalk(
+  makeSponsorTalk(
     "ncdc-sponsor-session",
     "NCDC株式会社",
     "sponsor session",
     "Japanese",
+    "NCDC株式会社",
   ),
-  makeTalk(
+  makeSponsorTalk(
     "lincwell-sponsor-session",
     "株式会社Linc'well",
     "sponsor session",
     "Japanese",
+    "株式会社Linc'well",
   ),
   makeTalk(
     "itai-satati",
@@ -379,24 +413,22 @@ export const TALKS = [
     "English",
     ["Itai Satati"],
   ),
-  makeTalk(
+  makeTalk("kinocoboy", "開発における リズムと一貫性", "session", "Japanese", [
     "kinocoboy",
-    "開発における リズムと一貫性",
-    "session",
-    "Japanese",
-    ["kinocoboy"],
-  ),
-  makeTalk(
+  ]),
+  makeSponsorTalk(
     "cougar-sponsor-session",
     "クーガー株式会社",
     "sponsor session",
     "Japanese",
+    "クーガー株式会社",
   ),
-  makeTalk(
+  makeSponsorTalk(
     "money-forward-sponsor-session",
     "株式会社マネーフォワード",
     "sponsor session",
     "Japanese",
+    "株式会社マネーフォワード",
   ),
   makeTalk(
     "leo-kettmeir",
@@ -412,41 +444,111 @@ export const TALKS = [
     "English",
     ["Jessie"],
   ),
-  makeTalk("vercel-sponsor-session", "Vercel", "sponsor session", "English"),
-  makeTalk(
+  makeSponsorTalk(
+    "vercel-sponsor-session",
+    "Vercel",
+    "sponsor session",
+    "English",
+    "Vercel",
+  ),
+  makeSponsorTalk(
     "gmo-flatt-security-sponsor-session",
     "GMO Flatt Security株式会社",
     "sponsor session",
     "Japanese",
+    "GMO Flatt Security株式会社",
   ),
-  makeTalk(
+  makeSponsorTalk(
     "layerx-sponsor-session",
     "株式会社LayerX",
     "sponsor session",
     "Japanese",
+    "株式会社LayerX",
   ),
-  makeTalk("arkor-sponsor-lt", "Arkor LT", "sponsor LT", "English"),
-  makeTalk("dwango-sponsor-lt", "株式会社ドワンゴ LT", "sponsor LT", "Japanese"),
-  makeTalk("supateam-sponsor-lt", "supateam株式会社 LT", "sponsor LT", "Japanese"),
-  makeTalk("lincwell-sponsor-lt", "株式会社Linc'well LT", "sponsor LT", "Japanese"),
-  makeTalk(
+  makeSponsorTalk(
+    "arkor-sponsor-lt",
+    "Arkor LT",
+    "sponsor LT",
+    "English",
+    "Arkor",
+  ),
+  makeSponsorTalk(
+    "dwango-sponsor-lt",
+    "株式会社ドワンゴ LT",
+    "sponsor LT",
+    "Japanese",
+    "株式会社ドワンゴ",
+  ),
+  makeSponsorTalk(
+    "supateam-sponsor-lt",
+    "supateam株式会社 LT",
+    "sponsor LT",
+    "Japanese",
+    "supateam株式会社",
+  ),
+  makeSponsorTalk(
+    "lincwell-sponsor-lt",
+    "株式会社Linc'well LT",
+    "sponsor LT",
+    "Japanese",
+    "株式会社Linc'well",
+  ),
+  makeSponsorTalk(
     "money-forward-sponsor-lt",
     "株式会社マネーフォワード LT",
     "sponsor LT",
     "Japanese",
+    "株式会社マネーフォワード",
   ),
-  makeTalk("layerx-sponsor-lt", "株式会社LayerX LT", "sponsor LT", "Japanese"),
-  makeTalk("enechain-sponsor-lt", "株式会社enechain LT", "sponsor LT", "Japanese"),
-  makeTalk("ncdc-sponsor-lt", "NCDC株式会社 LT", "sponsor LT", "Japanese"),
-  makeTalk("cougar-sponsor-lt", "クーガー株式会社 LT", "sponsor LT", "Japanese"),
-  makeTalk("vercel-sponsor-lt", "Vercel LT", "sponsor LT", "English"),
-  makeTalk(
+  makeSponsorTalk(
+    "layerx-sponsor-lt",
+    "株式会社LayerX LT",
+    "sponsor LT",
+    "Japanese",
+    "株式会社LayerX",
+  ),
+  makeSponsorTalk(
+    "enechain-sponsor-lt",
+    "株式会社enechain LT",
+    "sponsor LT",
+    "Japanese",
+    "株式会社enechain",
+  ),
+  makeSponsorTalk(
+    "ncdc-sponsor-lt",
+    "NCDC株式会社 LT",
+    "sponsor LT",
+    "Japanese",
+    "NCDC株式会社",
+  ),
+  makeSponsorTalk(
+    "cougar-sponsor-lt",
+    "クーガー株式会社 LT",
+    "sponsor LT",
+    "Japanese",
+    "クーガー株式会社",
+  ),
+  makeSponsorTalk(
+    "vercel-sponsor-lt",
+    "Vercel LT",
+    "sponsor LT",
+    "English",
+    "Vercel",
+  ),
+  makeSponsorTalk(
     "gmo-flatt-security-sponsor-lt",
     "GMO Flatt Security株式会社 LT",
     "sponsor LT",
     "Japanese",
+    "GMO Flatt Security株式会社",
   ),
-  makeTalk("everlane-sponsor-lt", "株式会社EVERLANE LT", "sponsor LT", "Japanese"),
+  makeSponsorTalk(
+    "everlane-sponsor-lt",
+    "株式会社EVERLANE LT",
+    "sponsor LT",
+    "Japanese",
+    "株式会社EVERLANE",
+  ),
   makeTalk(
     "josh-junon",
     "基調講演2: Yep, I've Been Pwned: What I Learned from Being Hacked",
