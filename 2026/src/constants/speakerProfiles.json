@@ -43,7 +43,7 @@
     "avatarPath": "/2026/speaker/syumai.png"
   },
   "yebis0942": {
-    "bio": "株式会社ベースマキナに勤務しているエンジニア。普段は",
+    "bio": "普段はWebアプリケーションを作っています。ECMAScript 仕様輪読会に参加して仕様書を読んでいます。",
     "avatarPath": "/2026/speaker/yebis0942.jpg"
   },
   "Daigo Fujiwara-Smith": {
@@ -108,7 +108,8 @@
     "bio": "Google の Chrome Developer Relations チームの Developer Advocate。パスキーをはじめ ID 連携、デジタル ID など、アイデンティティ技術の啓蒙をグローバルでリードしています。著書「パスキーのすべて」。"
   },
   "Kevin Uehara": {
-    "bio": "Kevin Uehara is a Frontend Engineer at iFood and an active Google Developer Groups Campinas (GDG) collaborator. Recognized twice as a Microsoft MVP and Google Developer Expert (GDE) for his contributions to the tech community, Kevin is also the organizer of FrontIn Campinas, as well as an international and national speaker and tech content creator. Based in Brazil, he is passionate about sharing knowledge and inspiring other developers in the frontend ecosystem."
+    "bio": "Kevin Uehara is a Software Engineer at iFood and an active Google Developer Groups Campinas (GDG) collaborator. Recognized three times as a Microsoft MVP and Google Developer Expert (GDE) for his contributions to the tech community, Kevin is also the organizer of FrontIn Campinas, as well as an international and national speaker and tech content creator. Based in Brazil, he is passionate about sharing knowledge and inspiring other developers in the frontend ecosystem.",
+    "avatarPath": "/2026/speaker/kevin-uehara.jpg"
   },
   "Brandon Dail": {
     "bio": "Staff Engineer at Discord leading our Design Systems team. Former React core collaborator once upon a time."

@@ -45,7 +45,7 @@
   },
   "esmeta: ECMAScript仕様書を読む機械": {
     "en": "",
-    "ja": "ECMAScript 仕様書は英語で書かれた文書ですが、これをパースして型検査するツール ESMetaが2022年からtc39/ecma262のCIで動いています。導入時に50件を超えていた型ラーは紆余曲折を経て12件まで減り、その過程で数十件の仕様書の不整合が修正されました。2025年からは、機械が解釈できない新しい言い回しをPR時点で検出するチェックも追加されています。\n\nこのトークでは、ESMetaの仕組みを概観したうえで、導入から現在までの経緯を実際の PR・issue・コミットに基づいて説明します。"
+    "ja": "ECMAScript 仕様書は英語で書かれた文書ですが、これをパースして型検査するツール ESMetaが2022年からtc39/ecma262のCIで動いています。導入時に50件を超えていた型エラーは紆余曲折を経て12件まで減り、その過程で数十件の仕様書の不整合が修正されました。2025年からは、機械が解釈できない新しい言い回しをPR時点で検出するチェックも追加されています。\n\nこのトークでは、ESMetaの仕組みを概観したうえで、導入から現在までの経緯を実際の PR・issue・コミットに基づいて説明します。"
   },
   "Scroll-Driven 3D: Storytelling with React Three Fiber": {
     "en": "Phones got fast. A mid-range Android can now render a real 3D scene without breaking a sweat, which means 3D storytelling is no longer a desktop luxury. It is available to nearly every reader.\nOver the past year I built 3D explainers at The Boston Globe using the same setup every time: React Three Fiber for the scene, Intersection Observer for the scroll.\nI will show you the pattern: how trigger divs and Intersection Observer drive scene state without fighting React's render cycle, and what it takes to keep it smooth on a phone. Then I will show the example pieces running on it. I will share the component and a Vite starter you can fork.",
