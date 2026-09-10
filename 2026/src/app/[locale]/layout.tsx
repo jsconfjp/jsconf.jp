@@ -33,6 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: t("title"),
       images: [
         {
+          // og:image: https://jsconf.jp/2026/og/opengraph-image/general.png
           url: getOgImagePath(GENERAL_OG_IMAGE_ID),
           width: 1200,
           height: 630,

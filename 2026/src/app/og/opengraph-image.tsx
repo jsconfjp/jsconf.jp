@@ -40,11 +40,13 @@ type Props = {
 export default async function Image({ id }: Props) {
   const imageId = await id;
 
+  // サイト全体で使う画像IDの場合は、https://jsconf.jp/2026/og/opengraph-image/general.png を生成する。
   if (imageId === GENERAL_OG_IMAGE_ID) {
     return generateImage(<General />);
   }
 
   const match = imageId.match(/^talk-(ja|en)-(.+)\.png$/);
+  // GeneralでもトークでもないIDは、ビルドで生成していない画像なので拒否する。
   if (!match) {
     throw new Error(`Unknown Open Graph image ID: ${imageId}`);
   }

@@ -44,6 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       images: [
         {
+          // 例: /en/talks/ajay-upreti -> https://jsconf.jp/2026/og/opengraph-image/talk-en-ajay-upreti.png
           url: getOgImagePath(getTalkOgImageId(locale, slug)),
           width: 1200,
           height: 630,
