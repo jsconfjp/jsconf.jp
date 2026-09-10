@@ -8,18 +8,21 @@ import { ReadableStream } from "node:stream/web";
 import nextConfig from "../next.config.ts";
 // @ts-expect-error --experimental-strip-types
 import { TALKS } from "../src/constants/talks.ts";
+// @ts-expect-error --experimental-strip-types
+import { GENERAL_OG_IMAGE_ID, getOgImagePath, getTalkOgImageId } from "../src/lib/og/url.ts";
 
 const DIR_OG_IMAGES = join(import.meta.dirname, "..", "screenshots", "ogp");
 
 const pages = [
-  "/",
-  ...TALKS.map((talk) => `/en/talks/${talk.slug}`),
-  // http://localhost:3001/2026/en/talks/visual-regression-testing-chromatic/opengraph-image
-].map((path) => ({
+  { path: "/", imageId: GENERAL_OG_IMAGE_ID },
+  ...TALKS.map((talk) => ({
+    path: `/en/talks/${talk.slug}`,
+    imageId: getTalkOgImageId("en", talk.slug),
+  })),
+].map(({ path, imageId }) => ({
   url: `http://localhost:3001${join(
     nextConfig.basePath!,
-    path,
-    "opengraph-image",
+    getOgImagePath(imageId),
   )}`,
   slug: path === "/" ? "top" : path.split("/").filter(Boolean).join("-"),
 }));

@@ -1,6 +1,14 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
 
+export const GENERAL_OG_IMAGE_ID = "general.png";
+
+export const getTalkOgImageId = (locale: string, slug: string) =>
+  `talk-${locale}-${slug}.png`;
+
+export const getOgImagePath = (imageId: string) =>
+  `/og/opengraph-image/${imageId}`;
+
 export const makeDataUrl = (imagePath: string) => {
   const imageData = readFileSync(imagePath);
   const base64 = imageData.toString("base64");

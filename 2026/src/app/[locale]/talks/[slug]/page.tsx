@@ -9,6 +9,7 @@ import { LOCALES } from "@/i18n/constants";
 import { ensureLocale } from "@/i18n/ensureLocale";
 import { findTalkSession } from "@/lib/findTalkSession";
 import { getTalkSessions } from "@/lib/getTalkSessions";
+import { getOgImagePath, getTalkOgImageId } from "@/lib/og/url";
 
 type Params = { locale: string; slug: string };
 
@@ -40,6 +41,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       locale === "ja"
         ? (session.talk.descriptionJa ?? session.talk.description)
         : session.talk.description,
+    openGraph: {
+      images: [
+        {
+          url: getOgImagePath(getTalkOgImageId(locale, slug)),
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
   };
 }
 
