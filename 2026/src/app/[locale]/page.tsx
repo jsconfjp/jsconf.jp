@@ -6,7 +6,7 @@ import { Hero } from "@/components/Hero";
 import { SponsorGrid } from "@/components/SponsorGrid";
 import { Team } from "@/components/Team";
 import { Venue } from "@/components/Venue";
-import { CFP_URL, SPONSORSHIP_URL } from "@/constants/external";
+import { SPONSORSHIP_URL } from "@/constants/external";
 import { SPONSORS } from "@/constants/sponsors";
 import { ensureLocale } from "@/i18n/ensureLocale";
 
@@ -42,31 +42,16 @@ export default async function Page({ params }: Props) {
         <Hero />
       </div>
 
-      <div className="max-w-3xl mx-auto mt-8 md:mt-16 flex flex-col sm:flex-row gap-4 px-4 lg:px-0">
-        <div className="flex-1">
-          <Button
-            href={CFP_URL}
-            target="_blank"
-            variant="primary"
-            size="lg"
-            full
-            endIcon={<ArrowTopRightOnSquareIcon className="w-5 h-5" />}
-          >
-            {t("cta.callForProposals")}
-          </Button>
-        </div>
-        <div className="flex-1">
-          <Button
-            href={SPONSORSHIP_URL}
-            target="_blank"
-            variant="primary"
-            size="lg"
-            full
-            endIcon={<ArrowTopRightOnSquareIcon className="w-5 h-5" />}
-          >
-            {t("cta.becomeSponsor")}
-          </Button>
-        </div>
+      <div className="max-w-3xl mx-auto mt-8 md:mt-16 flex justify-center px-4 lg:px-0">
+        <Button
+          href={SPONSORSHIP_URL}
+          target="_blank"
+          variant="primary"
+          size="lg"
+          endIcon={<ArrowTopRightOnSquareIcon className="w-5 h-5" />}
+        >
+          {t("cta.becomeSponsor")}
+        </Button>
       </div>
 
       <div className="max-w-3xl mx-auto mt-12 md:mt-24 px-4 lg:px-0">
