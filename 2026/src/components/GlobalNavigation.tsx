@@ -17,6 +17,11 @@ export function GlobalNavigation() {
   const navigations = [
     {
       ready: true,
+      label: t("speakers"),
+      href: "/speakers",
+    },
+    {
+      ready: true,
       label: t("venue"),
       href: "/venue",
     },
