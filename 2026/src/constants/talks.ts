@@ -544,7 +544,7 @@ export const TALKS = [
   ),
   makeSponsorTalk(
     "everlane-sponsor-lt",
-    "株式会社EVERLANE LT",
+    "CodeCast LT",
     "sponsor LT",
     "Japanese",
     "株式会社EVERLANE",
