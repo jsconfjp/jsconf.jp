@@ -1,11 +1,13 @@
 import type { StaticImageData } from "next/image";
 
 type Plan = "premium" | "sponsor";
+type SponsorHeight = "1/3";
 
 export type Sponsor = {
   type: "sponsor";
   plan: Plan;
   name: string;
+  height?: SponsorHeight;
   url: string;
   prText: string;
   logoUrl?: string | StaticImageData;
@@ -39,7 +41,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "サイボウズ株式会社",
     url: "https://cybozu.co.jp/",
-    logoUrl: "/2026/sponsor/cybozu-2026.svg",
+    logoUrl: "/2026/sponsor/cybozu.png",
     prText:
       `サイボウズはクラウドベースのグループウェアや業務改善サービスを軸に、社会のチームワーク向上を支援しています。 サイボウズではプロダクトを最高にするメンバーを募集しています！`.trim(),
   },
@@ -112,7 +114,7 @@ Linc'wellは「テクノロジーを通じて、医療を一歩前へ」をミ�
     plan: "premium",
     name: "株式会社マネーフォワード",
     url: "https://corp.moneyforward.com/",
-    logoUrl: "/2026/sponsor/money-forward-2026.png",
+    logoUrl: "/2026/sponsor/money-forward.svg",
     prText: `
 「お金を前へ。人生をもっと前へ。」をMissionに、すべての人のお金の課題解決を目指し、お金の見える化サービス『マネーフォワード ME』やバックオフィスSaaS『マネーフォワード クラウド』などを提供しています。
 `.trim(),
@@ -131,7 +133,8 @@ Linc'wellは「テクノロジーを通じて、医療を一歩前へ」をミ�
     plan: "premium",
     name: "Vercel",
     url: "https://vercel.com/",
-    logoUrl: "/2026/sponsor/vercel-2026.png",
+    logoUrl: "/2026/sponsor/vercel-2026.svg",
+    height: "1/3",
     prText:
       `Vercelは、次世代のAI向けエージェンティック・インフラを開発しています。Next.js、AI SDK、v0の開発元であるVercelは、人間とAIエージェントが共にソフトウェアを開発、リリース、拡張できるプラットフォームを提供しています。Meta、Ramp、Supremeをはじめとする、世界中の数多くの開発者がVercelを使って日々プロダクトをリリースしています。`.trim(),
   },
