@@ -30,6 +30,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "AnotherBall Pte Ltd",
     url: "https://anotherball.com/",
+    logoUrl: "/2026/sponsor/anotherball-2026.png",
     prText:
       `AnotherBallは「境界を越え、通じあえるユカイな体験を創る。」をミッションに掲げるスタートアップです。1分でVTuberになれるアプリ「Avvy」や、ゲーム・映像制作を行うスタジオメイフラワーを運営しています。「日本に根ざす“妄想力“を加速させる事業を同時多発的に創る」という信念のもと、クリエイターの自由な世界観の源を支え、エンタメ×グローバルの交差点で事業を展開していきます。`.trim(),
   },
