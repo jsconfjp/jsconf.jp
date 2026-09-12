@@ -80,8 +80,9 @@ export const SPONSORS: Sponsor[] = [
   {
     type: "sponsor",
     plan: "premium",
-    name: "supateam株式会社",
+    name: "supa株式会社",
     url: "https://supateam.com",
+    logoUrl: "/2026/sponsor/supa-2026.svg",
     prText: `
 AIの力を100%引き出しリスクもコントロールする、ハーネスエンジニアリングゲートウェイ。
 「supateam」は、GitHub Claude・Cursor・Jiraなどを連携するだけでAI開発の活用度・ROI・リスクを自動レポーティング。感覚値だったAI活用を経営に説明できる数字へ変えます。コーディングルール整備やツール活用の偏り検知など、データに基づく改善提案を提供します。
@@ -106,6 +107,7 @@ Linc'wellは「テクノロジーを通じて、医療を一歩前へ」をミ�
     plan: "premium",
     name: "NCDC株式会社",
     url: "https://ncdc.co.jp/",
+    logoUrl: "/2026/sponsor/ncdc-2026.png",
     prText:
       `NCDCは、フロントエンドからバックエンドまでTypeScriptを中心とした技術スタックでプロダクト開発を行っています。新規サービスの立ち上げからグロースまで伴走し、生成AIやクラウド技術を活用した開発に取り組んでいます。`.trim(),
   },

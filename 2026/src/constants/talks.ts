@@ -373,10 +373,10 @@ export const TALKS = [
   ),
   makeSponsorTalk(
     "supateam-sponsor-session",
-    "supateam株式会社",
+    "supa株式会社",
     "sponsor session",
     "Japanese",
-    "supateam株式会社",
+    "supa株式会社",
   ),
   makeTalk(
     "saman-abaasi",
@@ -481,10 +481,10 @@ export const TALKS = [
   ),
   makeSponsorTalk(
     "supateam-sponsor-lt",
-    "supateam株式会社 LT",
+    "supa株式会社 LT",
     "sponsor LT",
     "Japanese",
-    "supateam株式会社",
+    "supa株式会社",
   ),
   makeSponsorTalk(
     "lincwell-sponsor-lt",
