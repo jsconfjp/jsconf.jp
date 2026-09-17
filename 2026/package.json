@@ -10,8 +10,10 @@
     "lint:tw": "node scripts/tw-lint.mjs",
     "lint:tw:fix": "node scripts/tw-lint.mjs --fix",
     "test": "vitest run",
-    "fetch-og-images": "node --experimental-strip-types --loader ./scripts/mock-img-loader.mjs scripts/fetch-og-images.ts",
-    "knip": "knip"
+    "fetch-og-images": "node --strip-types --loader ./scripts/mock-img-loader.mjs scripts/fetch-og-images.ts",
+    "knip": "knip",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
   },
   "dependencies": {
     "@heroicons/react": "2.2.0",
@@ -34,10 +36,11 @@
     "@tailwindcss/postcss": "4.3.3",
     "@types/mdx": "2.0.14",
     "@types/node": "24.13.0",
-    "@types/react": "~19.3.0",
-    "@types/react-dom": "~19.3.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
     "@vitest/coverage-v8": "5.0.1",
     "knip": "6.36.0",
+    "oxfmt": "0.68.0",
     "oxlint": "1.83.0",
     "prettier": "3.9.7",
     "tailwindcss": "4.3.3",

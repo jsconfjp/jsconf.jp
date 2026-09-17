@@ -13,9 +13,7 @@ const PIXEL_DENSITY = 2;
 // GitHub 以外のホスト (Facebook CDN / Slack) はリサイズ非対応なのでそのまま返す。
 function resolveAvatarUrl(avatarUrl: string, size: number): string {
   const url = new URL(avatarUrl);
-  const isGitHub =
-    url.hostname === "github.com" ||
-    url.hostname.endsWith(".githubusercontent.com");
+  const isGitHub = url.hostname === "github.com" || url.hostname.endsWith(".githubusercontent.com");
   if (!isGitHub) {
     return avatarUrl;
   }
@@ -25,11 +23,7 @@ function resolveAvatarUrl(avatarUrl: string, size: number): string {
 
 export function TeamMember({ member, size }: Props) {
   return (
-    <Link
-      href={member.url}
-      target="_blank"
-      className="text-center flex flex-col items-center gap-2"
-    >
+    <Link href={member.url} target="_blank" className="text-center flex flex-col items-center gap-2">
       {/* oxlint-disable-next-line nextjs/no-img-element */}
       <img
         loading="lazy"

@@ -14,6 +14,7 @@ Note: Use `nvm use` before starting development to ensure correct Node.js versio
 ## Architecture Overview
 
 This is a **Next.js 16** conference website with:
+
 - **Static Site Generation (SSG)** - Exports to static HTML
 - **Internationalization** - English and Japanese via next-intl
 - **Styling** - Tailwind CSS v4 with custom theme colors
@@ -39,6 +40,7 @@ Example flow: A speaker gives multiple talks → Each talk has session info → 
 ### Routing Structure
 
 All routes are internationalized under `/[locale]/`:
+
 - `/[locale]/speakers` - Speaker grid
 - `/[locale]/talks/[slug]` - Individual talk pages with dynamic OG images
 - `/[locale]/schedule` - Conference timetable
@@ -53,5 +55,6 @@ All routes are internationalized under `/[locale]/`:
 ### Theme Colors
 
 Defined in `globals.css`:
+
 - Primary: Orange `rgb(234 81 6)`
 - Track A: Orange, Track B: Teal, Track C: Yellow, Track D: Blue

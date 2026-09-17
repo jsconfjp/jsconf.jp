@@ -4,8 +4,7 @@
 export const PLACE_ID = "ChIJK-ZD4wSMGGARegUEgpW4kiY"; // ベルサール神田
 
 // 会場公式サイト
-export const OFFICIAL_URL =
-  "https://www.bellesalle.co.jp/shisetsu/tokyo/bs_kanda/";
+export const OFFICIAL_URL = "https://www.bellesalle.co.jp/shisetsu/tokyo/bs_kanda/";
 
 // 過去の会場をまた利用するケースもあるので調べる手間を省くために残しておく
 // export const PLACE_ID = "ChIJxe2InfyLGGARY7lD5QxJ2fg"; // グラントウキョウ サウスタワー
