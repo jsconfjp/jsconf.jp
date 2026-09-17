@@ -1,10 +1,7 @@
 import { SCHEDULE, ScheduledSession, TalkSession } from "@/constants/schedule";
 import { TalkSlug } from "@/constants/talks";
 
-type ExtractTalkSlug<T extends readonly ScheduledSession[]> = Extract<
-  T[number],
-  { kind: "talk" }
->["talk"]["slug"];
+type ExtractTalkSlug<T extends readonly ScheduledSession[]> = Extract<T[number], { kind: "talk" }>["talk"]["slug"];
 
 // Finds a talk session by its slug (recommended for production use)
 export function findTalkSession(slug: TalkSlug): TalkSession;
@@ -15,13 +12,8 @@ export function findTalkSession<T extends readonly ScheduledSession[]>(
   sessions: T,
 ): TalkSession;
 // Implementation: handles both overloads with loose string typing
-export function findTalkSession(
-  slug: string,
-  sessions: readonly ScheduledSession[] = SCHEDULE,
-): TalkSession {
-  const session = sessions.find(
-    (s) => s.kind === "talk" && s.talk.slug === slug,
-  );
+export function findTalkSession(slug: string, sessions: readonly ScheduledSession[] = SCHEDULE): TalkSession {
+  const session = sessions.find((s) => s.kind === "talk" && s.talk.slug === slug);
   if (!session) {
     throw new Error(`Talk session not found for slug: ${slug}`);
   }

@@ -112,18 +112,14 @@ describe("generateSessionId", () => {
     const uniqueIds = new Set(allIds);
 
     // Find and expose duplicates if they exist
-    const duplicates = allIds.filter(
-      (id, index) => allIds.indexOf(id) !== index,
-    );
+    const duplicates = allIds.filter((id, index) => allIds.indexOf(id) !== index);
     expect(duplicates).toEqual([]);
 
     // This will show the exact count difference if uniqueness fails
     expect(uniqueIds.size).toBe(allIds.length);
 
     // Verify no empty/invalid IDs exist by filtering them out
-    const validIds = allIds.filter(
-      (id) => id && typeof id === "string" && id.length > 0,
-    );
+    const validIds = allIds.filter((id) => id && typeof id === "string" && id.length > 0);
     expect(validIds).toHaveLength(allIds.length);
   });
 });

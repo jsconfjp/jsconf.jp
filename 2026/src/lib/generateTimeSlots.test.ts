@@ -1,9 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { SCHEDULE, ScheduledSession } from "@/constants/schedule";
-import {
-  generateTimeSlots,
-  TIME_SLOT_INTERVAL_MINUTES,
-} from "./generateTimeSlots";
+import { generateTimeSlots, TIME_SLOT_INTERVAL_MINUTES } from "./generateTimeSlots";
 
 describe("generateTimeSlots", () => {
   const mockSessions: ScheduledSession[] = [
@@ -36,9 +33,7 @@ describe("generateTimeSlots", () => {
   });
 
   it("should throw error for empty sessions array", () => {
-    expect(() => generateTimeSlots([])).toThrow(
-      "Sessions array cannot be empty for time slot generation",
-    );
+    expect(() => generateTimeSlots([])).toThrow("Sessions array cannot be empty for time slot generation");
   });
 
   it("should use the default SCHEDULE when no argument is provided", () => {
@@ -46,9 +41,7 @@ describe("generateTimeSlots", () => {
       expect(generateTimeSlots().length).toBeGreaterThan(0);
     } else {
       // スケジュール未確定（SCHEDULE が空）の間は default 引数でも throw する
-      expect(() => generateTimeSlots()).toThrow(
-        "Sessions array cannot be empty for time slot generation",
-      );
+      expect(() => generateTimeSlots()).toThrow("Sessions array cannot be empty for time slot generation");
     }
   });
 
@@ -64,8 +57,6 @@ describe("generateTimeSlots", () => {
       },
     ];
 
-    expect(() => generateTimeSlots(invalidSessions)).toThrow(
-      "Invalid time range: start time must be before end time",
-    );
+    expect(() => generateTimeSlots(invalidSessions)).toThrow("Invalid time range: start time must be before end time");
   });
 });

@@ -37,10 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: session.talk.title,
-    description:
-      locale === "ja"
-        ? (session.talk.descriptionJa ?? session.talk.description)
-        : session.talk.description,
+    description: locale === "ja" ? (session.talk.descriptionJa ?? session.talk.description) : session.talk.description,
     openGraph: {
       images: [
         {
@@ -65,9 +62,7 @@ export default async function Page({ params }: Props) {
   });
   const session = findTalkSession(slug as unknown as TalkSlug);
   const description =
-    locale === "ja"
-      ? (session.talk.descriptionJa ?? session.talk.description)
-      : session.talk.description;
+    locale === "ja" ? (session.talk.descriptionJa ?? session.talk.description) : session.talk.description;
 
   return (
     <PageContainer title={session.talk.title} centerizeTitle={false}>
@@ -77,9 +72,7 @@ export default async function Page({ params }: Props) {
         </time>
         <p className="my-1 flex items-center gap-2">
           <Chip>{t(`kind.${session.talk.kind}`)}</Chip>
-          {session.track !== "all" && (
-            <Chip track={session.track}>{t(`track.${session.track}`)}</Chip>
-          )}
+          {session.track !== "all" && <Chip track={session.track}>{t(`track.${session.track}`)}</Chip>}
           <Chip>{session.talk.language}</Chip>
         </p>
       </div>
@@ -102,37 +95,20 @@ export default async function Page({ params }: Props) {
       </div>
       <ul className="mt-8 flex flex-col gap-2">
         {session.talk.speakers.map((speaker) => (
-          <li
-            key={speaker.name}
-            className="flex items-center gap-4 bg-primary/10 p-6 rounded-md"
-          >
+          <li key={speaker.name} className="flex items-center gap-4 bg-primary/10 p-6 rounded-md">
             <div className="relative aspect-square w-48">
               {speaker.type === "speaker" ? (
-                <Image
-                  className="object-cover"
-                  src={speaker.avatarUrl}
-                  alt={`${speaker.name}'s avatar`}
-                  fill
-                />
+                <Image className="object-cover" src={speaker.avatarUrl} alt={`${speaker.name}'s avatar`} fill />
               ) : speaker.logoUrl ? (
-                <Image
-                  className="object-contain"
-                  src={speaker.logoUrl}
-                  alt={`${speaker.name}'s avatar`}
-                  fill
-                />
+                <Image className="object-contain" src={speaker.logoUrl} alt={`${speaker.name}'s avatar`} fill />
               ) : (
-                <div className="flex h-full items-center justify-center text-center font-semibold">
-                  {speaker.name}
-                </div>
+                <div className="flex h-full items-center justify-center text-center font-semibold">{speaker.name}</div>
               )}
             </div>
             <div className="flex-1 flex flex-col gap-2">
               <h3 className="text-2xl font-bold">{speaker.name}</h3>
               <div>
-                <Markdown>
-                  {speaker.type === "speaker" ? speaker.bio : speaker.prText}
-                </Markdown>
+                <Markdown>{speaker.type === "speaker" ? speaker.bio : speaker.prText}</Markdown>
               </div>
             </div>
           </li>

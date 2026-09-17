@@ -40,31 +40,22 @@ const makeTalk = (
   language: Language,
   speakerNames: readonly string[] = [],
 ): Talk => {
-  const talkDescription =
-    talkDescriptions[title as keyof typeof talkDescriptions];
+  const talkDescription = talkDescriptions[title as keyof typeof talkDescriptions];
   const description = talkDescription?.en || talkDescription?.ja || "";
-  const descriptionJa =
-    language === "English" ? talkDescription?.ja : undefined;
+  const descriptionJa = language === "English" ? talkDescription?.ja : undefined;
 
   return {
     slug,
     title,
-    scheduleLabel:
-      speakerNames.length > 0
-        ? `${title} by ${speakerNames.join(" & ")}`
-        : title,
+    scheduleLabel: speakerNames.length > 0 ? `${title} by ${speakerNames.join(" & ")}` : title,
     description,
     descriptionJa,
     kind,
     day: "1",
     language,
     speakers: speakerNames.map((name) => {
-      const speakerProfile =
-        speakerProfiles[name as keyof typeof speakerProfiles];
-      const avatarUrl =
-        speakerProfile && "avatarPath" in speakerProfile
-          ? speakerProfile.avatarPath
-          : emptyAvatar;
+      const speakerProfile = speakerProfiles[name as keyof typeof speakerProfiles];
+      const avatarUrl = speakerProfile && "avatarPath" in speakerProfile ? speakerProfile.avatarPath : emptyAvatar;
 
       return {
         type: "speaker",
@@ -94,13 +85,9 @@ const makeSponsorTalk = (
 };
 
 export const TALKS = [
-  makeTalk(
-    "ajay-upreti",
-    "Automating Frontend Performance Optimization with AI Agents",
-    "LT",
-    "English",
-    ["Ajay Upreti"],
-  ),
+  makeTalk("ajay-upreti", "Automating Frontend Performance Optimization with AI Agents", "LT", "English", [
+    "Ajay Upreti",
+  ]),
   makeTalk(
     "azukiazusa",
     "ワークフローからハーネスへ — Web フレームワークの作者たちが AI エージェントに向かう理由",
@@ -115,23 +102,11 @@ export const TALKS = [
     "Japanese",
     ["おおいし (bicstone)"],
   ),
-  makeTalk("dynamis", "Welcome JXL! ー JPEG XL 復活の記録", "LT", "Japanese", [
-    "dynamis",
+  makeTalk("dynamis", "Welcome JXL! ー JPEG XL 復活の記録", "LT", "Japanese", ["dynamis"]),
+  makeTalk("nurul-sundarani", "The TC39 Graveyard: Proposals That Died So JavaScript Could Live", "LT", "English", [
+    "Nurul Sundarani",
   ]),
-  makeTalk(
-    "nurul-sundarani",
-    "The TC39 Graveyard: Proposals That Died So JavaScript Could Live",
-    "LT",
-    "English",
-    ["Nurul Sundarani"],
-  ),
-  makeTalk(
-    "keisuke-tsuji",
-    "フロントエンドのテストカバレッジは 100% 強制がいい",
-    "LT",
-    "Japanese",
-    ["辻佳佑"],
-  ),
+  makeTalk("keisuke-tsuji", "フロントエンドのテストカバレッジは 100% 強制がいい", "LT", "Japanese", ["辻佳佑"]),
   makeTalk(
     "yuya-inoue",
     "debug> を待ってもダメだった — Node.jsのflaky testから学ぶ非同期処理の同期点",
@@ -139,58 +114,20 @@ export const TALKS = [
     "Japanese",
     ["Yuya Inoue"],
   ),
-  makeTalk(
+  makeTalk("progfay", "多様化する npm サプライチェーン攻撃: 多角的な備えという向き合い方", "LT", "Japanese", [
     "progfay",
-    "多様化する npm サプライチェーン攻撃: 多角的な備えという向き合い方",
-    "LT",
-    "Japanese",
-    ["progfay"],
-  ),
-  makeTalk(
-    "rikito-taniguchi",
-    "Compiling Your Language to WasmGC & Friends",
-    "LT",
-    "English",
-    ["Rikito Taniguchi"],
-  ),
-  makeTalk(
-    "tomikawa-sotaro",
-    "JavaScriptはシングルバイナリの夢を見るか",
-    "LT",
-    "Japanese",
-    ["TOMIKAWA Sotaro"],
-  ),
-  makeTalk(
-    "syumai",
-    "Math.sumPreciseから学ぶ、ECMAScript仕様の数値の種類",
-    "LT",
-    "Japanese",
-    ["syumai"],
-  ),
-  makeTalk(
-    "yebis0942",
-    "esmeta: ECMAScript仕様書を読む機械",
-    "LT",
-    "Japanese",
-    ["yebis0942"],
-  ),
-  makeTalk(
-    "daigo-fujiwara-smith",
-    "Scroll-Driven 3D: Storytelling with React Three Fiber",
-    "LT",
-    "English",
-    ["Daigo Fujiwara-Smith"],
-  ),
-  makeTalk(
-    "kazuya-serizawa",
-    "Promiseの向こう側へコンテキストを届ける ― proposal-async-context",
-    "LT",
-    "Japanese",
-    ["Kazuya Serizawa"],
-  ),
-  makeTalk("petamoriken", "Canvas 2D Context Next", "LT", "Japanese", [
-    "森内建太 (@petamoriken)",
   ]),
+  makeTalk("rikito-taniguchi", "Compiling Your Language to WasmGC & Friends", "LT", "English", ["Rikito Taniguchi"]),
+  makeTalk("tomikawa-sotaro", "JavaScriptはシングルバイナリの夢を見るか", "LT", "Japanese", ["TOMIKAWA Sotaro"]),
+  makeTalk("syumai", "Math.sumPreciseから学ぶ、ECMAScript仕様の数値の種類", "LT", "Japanese", ["syumai"]),
+  makeTalk("yebis0942", "esmeta: ECMAScript仕様書を読む機械", "LT", "Japanese", ["yebis0942"]),
+  makeTalk("daigo-fujiwara-smith", "Scroll-Driven 3D: Storytelling with React Three Fiber", "LT", "English", [
+    "Daigo Fujiwara-Smith",
+  ]),
+  makeTalk("kazuya-serizawa", "Promiseの向こう側へコンテキストを届ける ― proposal-async-context", "LT", "Japanese", [
+    "Kazuya Serizawa",
+  ]),
+  makeTalk("petamoriken", "Canvas 2D Context Next", "LT", "Japanese", ["森内建太 (@petamoriken)"]),
   makeTalk(
     "yuta-ikeoku",
     "Coding Agent のフロントエンドを、AsyncIterable と自作の pipe で宣言的に実装する",
@@ -199,34 +136,10 @@ export const TALKS = [
     ["池奥裕太"],
   ),
   makeTalk("keynote-1-tbd", "基調講演1: TBD", "keynote", "Japanese"),
-  makeSponsorTalk(
-    "miidas-sponsor-lt-1",
-    "ミイダス社 LT",
-    "sponsor LT",
-    "Japanese",
-    "ミイダス株式会社",
-  ),
-  makeSponsorTalk(
-    "anotherball-sponsor-lt-1",
-    "AnotherBall Pte Ltd LT",
-    "sponsor LT",
-    "English",
-    "AnotherBall Pte Ltd",
-  ),
-  makeSponsorTalk(
-    "cybozu-sponsor-lt-1",
-    "サイボウズ株式会社 LT",
-    "sponsor LT",
-    "Japanese",
-    "サイボウズ株式会社",
-  ),
-  makeSponsorTalk(
-    "mcd3-sponsor-lt",
-    "MCD3株式会社 LT",
-    "sponsor LT",
-    "Japanese",
-    "MCD3株式会社",
-  ),
+  makeSponsorTalk("miidas-sponsor-lt-1", "ミイダス社 LT", "sponsor LT", "Japanese", "ミイダス株式会社"),
+  makeSponsorTalk("anotherball-sponsor-lt-1", "AnotherBall Pte Ltd LT", "sponsor LT", "English", "AnotherBall Pte Ltd"),
+  makeSponsorTalk("cybozu-sponsor-lt-1", "サイボウズ株式会社 LT", "sponsor LT", "Japanese", "サイボウズ株式会社"),
+  makeSponsorTalk("mcd3-sponsor-lt", "MCD3株式会社 LT", "sponsor LT", "Japanese", "MCD3株式会社"),
   makeTalk(
     "devlin-duldulao",
     "DaloyJS - The first TypeScript REST API framework built for secure AI-assisted services",
@@ -235,23 +148,11 @@ export const TALKS = [
     ["Devlin Duldulao"],
   ),
   makeTalk("nolu", "CVEから紐解くJIT Exploit", "session", "Japanese", ["nolu"]),
-  makeTalk("neciu-dan", "How NOT to Use TanStack Query", "session", "English", [
-    "Neciu Dan",
+  makeTalk("neciu-dan", "How NOT to Use TanStack Query", "session", "English", ["Neciu Dan"]),
+  makeSponsorTalk("miidas-sponsor-session", "ミイダス株式会社", "sponsor session", "Japanese", "ミイダス株式会社"),
+  makeTalk("neeraj-pandey", "npm install Should Never Compile: Killing Native Addons", "session", "English", [
+    "Neeraj Pandey",
   ]),
-  makeSponsorTalk(
-    "miidas-sponsor-session",
-    "ミイダス株式会社",
-    "sponsor session",
-    "Japanese",
-    "ミイダス株式会社",
-  ),
-  makeTalk(
-    "neeraj-pandey",
-    "npm install Should Never Compile: Killing Native Addons",
-    "session",
-    "English",
-    ["Neeraj Pandey"],
-  ),
   makeTalk(
     "yuta-nishi",
     "V8のArray.prototype.flatを最大約5倍速くするまでと、巨大OSSへの大規模コミットの道のり",
@@ -259,13 +160,9 @@ export const TALKS = [
     "Japanese",
     ["Yuta Nishi"],
   ),
-  makeTalk(
-    "aileen-villanueva",
-    "When AI writes the code, what do JavaScript developers write?",
-    "session",
-    "English",
-    ["Aileen Villanueva"],
-  ),
+  makeTalk("aileen-villanueva", "When AI writes the code, what do JavaScript developers write?", "session", "English", [
+    "Aileen Villanueva",
+  ]),
   makeSponsorTalk(
     "anotherball-sponsor-session",
     "AnotherBall Pte Ltd",
@@ -273,118 +170,35 @@ export const TALKS = [
     "English",
     "AnotherBall Pte Ltd",
   ),
-  makeTalk(
-    "marco-ippolito",
-    "The Missing Piece in Node.js Configuration",
-    "session",
-    "English",
-    ["Marco Ippolito"],
-  ),
-  makeTalk(
-    "uhyo",
-    "AIフレンドリーなGenerative UIをJSXで",
-    "session",
-    "Japanese",
-    ["うひょ"],
-  ),
-  makeTalk(
-    "maya-shavin",
-    "Frontend Beyond the Screen: Where AI Agent Is A User",
-    "session",
-    "English",
-    ["Maya Shavin"],
-  ),
-  makeSponsorTalk(
-    "cybozu-sponsor-session",
-    "サイボウズ株式会社",
-    "sponsor session",
-    "Japanese",
-    "サイボウズ株式会社",
-  ),
-  makeTalk(
-    "wataru-morita",
-    "Webメール開発を大幅に変えたJMAPというゲームチェンジャー",
-    "session",
-    "Japanese",
-    ["Wataru Morita(@tascript)"],
-  ),
-  makeTalk(
-    "html-in-canvas-api",
-    "Build next-generation UIs with the HTML-in-Canvas API",
-    "session",
-    "English",
-    ["Natalia Markoborodova", "Thomas Nattestad"],
-  ),
-  makeSponsorTalk(
-    "arkor-sponsor-session",
-    "Arkor",
-    "sponsor session",
-    "English",
-    "Arkor",
-  ),
-  makeTalk(
-    "ondrej-zara",
-    "You are never going to do these 10 JS mistakes",
-    "session",
-    "English",
-    ["Ondřej Žára"],
-  ),
-  makeTalk(
-    "eiji",
-    "ブラウザで変わるID連携 — EVPとFedCMが描く未来の認証",
-    "session",
-    "Japanese",
-    ["えーじ"],
-  ),
-  makeTalk(
-    "kevin-uehara",
-    "WebMCP and WebAI: Exploring native AI tools in Chrome",
-    "session",
-    "English",
-    ["Kevin Uehara"],
-  ),
-  makeSponsorTalk(
-    "dwango-sponsor-session",
-    "株式会社ドワンゴ",
-    "sponsor session",
-    "Japanese",
-    "株式会社ドワンゴ",
-  ),
-  makeTalk(
-    "brandon-dail",
-    "Design Systems Engineering at Discord",
-    "session",
-    "English",
-    ["Brandon Dail"],
-  ),
-  makeTalk(
-    "roland-richard",
-    "Node.jsで覗くV8バイトコード：3つのJavaScript実験",
-    "session",
-    "Japanese",
-    ["ローランド リチャード"],
-  ),
-  makeSponsorTalk(
-    "enechain-sponsor-session",
-    "株式会社enechain",
-    "sponsor session",
-    "Japanese",
-    "株式会社enechain",
-  ),
-  makeSponsorTalk(
-    "supateam-sponsor-session",
-    "supa株式会社",
-    "sponsor session",
-    "Japanese",
-    "supa株式会社",
-  ),
-  makeTalk(
-    "saman-abaasi",
-    "React Fiber Unplugged: How the Internal Scheduler Shapes React",
-    "session",
-    "English",
-    ["Saman Abaasi"],
-  ),
+  makeTalk("marco-ippolito", "The Missing Piece in Node.js Configuration", "session", "English", ["Marco Ippolito"]),
+  makeTalk("uhyo", "AIフレンドリーなGenerative UIをJSXで", "session", "Japanese", ["うひょ"]),
+  makeTalk("maya-shavin", "Frontend Beyond the Screen: Where AI Agent Is A User", "session", "English", [
+    "Maya Shavin",
+  ]),
+  makeSponsorTalk("cybozu-sponsor-session", "サイボウズ株式会社", "sponsor session", "Japanese", "サイボウズ株式会社"),
+  makeTalk("wataru-morita", "Webメール開発を大幅に変えたJMAPというゲームチェンジャー", "session", "Japanese", [
+    "Wataru Morita(@tascript)",
+  ]),
+  makeTalk("html-in-canvas-api", "Build next-generation UIs with the HTML-in-Canvas API", "session", "English", [
+    "Natalia Markoborodova",
+    "Thomas Nattestad",
+  ]),
+  makeSponsorTalk("arkor-sponsor-session", "Arkor", "sponsor session", "English", "Arkor"),
+  makeTalk("ondrej-zara", "You are never going to do these 10 JS mistakes", "session", "English", ["Ondřej Žára"]),
+  makeTalk("eiji", "ブラウザで変わるID連携 — EVPとFedCMが描く未来の認証", "session", "Japanese", ["えーじ"]),
+  makeTalk("kevin-uehara", "WebMCP and WebAI: Exploring native AI tools in Chrome", "session", "English", [
+    "Kevin Uehara",
+  ]),
+  makeSponsorTalk("dwango-sponsor-session", "株式会社ドワンゴ", "sponsor session", "Japanese", "株式会社ドワンゴ"),
+  makeTalk("brandon-dail", "Design Systems Engineering at Discord", "session", "English", ["Brandon Dail"]),
+  makeTalk("roland-richard", "Node.jsで覗くV8バイトコード：3つのJavaScript実験", "session", "Japanese", [
+    "ローランド リチャード",
+  ]),
+  makeSponsorTalk("enechain-sponsor-session", "株式会社enechain", "sponsor session", "Japanese", "株式会社enechain"),
+  makeSponsorTalk("supateam-sponsor-session", "supa株式会社", "sponsor session", "Japanese", "supa株式会社"),
+  makeTalk("saman-abaasi", "React Fiber Unplugged: How the Internal Scheduler Shapes React", "session", "English", [
+    "Saman Abaasi",
+  ]),
   makeTalk(
     "akfm-sato",
     "Next.js Instant Navigations - JavaScriptによるWeb Navigationチューニング",
@@ -392,37 +206,11 @@ export const TALKS = [
     "Japanese",
     ["akfm_sato"],
   ),
-  makeSponsorTalk(
-    "ncdc-sponsor-session",
-    "NCDC株式会社",
-    "sponsor session",
-    "Japanese",
-    "NCDC株式会社",
-  ),
-  makeSponsorTalk(
-    "lincwell-sponsor-session",
-    "株式会社Linc'well",
-    "sponsor session",
-    "Japanese",
-    "株式会社Linc'well",
-  ),
-  makeTalk(
-    "itai-satati",
-    "You've Been Hacked. It Just Hasn't Happened Yet.",
-    "session",
-    "English",
-    ["Itai Satati"],
-  ),
-  makeTalk("kinocoboy", "開発における リズムと一貫性", "session", "Japanese", [
-    "kinocoboy",
-  ]),
-  makeSponsorTalk(
-    "cougar-sponsor-session",
-    "クーガー株式会社",
-    "sponsor session",
-    "Japanese",
-    "クーガー株式会社",
-  ),
+  makeSponsorTalk("ncdc-sponsor-session", "NCDC株式会社", "sponsor session", "Japanese", "NCDC株式会社"),
+  makeSponsorTalk("lincwell-sponsor-session", "株式会社Linc'well", "sponsor session", "Japanese", "株式会社Linc'well"),
+  makeTalk("itai-satati", "You've Been Hacked. It Just Hasn't Happened Yet.", "session", "English", ["Itai Satati"]),
+  makeTalk("kinocoboy", "開発における リズムと一貫性", "session", "Japanese", ["kinocoboy"]),
+  makeSponsorTalk("cougar-sponsor-session", "クーガー株式会社", "sponsor session", "Japanese", "クーガー株式会社"),
   makeSponsorTalk(
     "money-forward-sponsor-session",
     "株式会社マネーフォワード",
@@ -430,27 +218,9 @@ export const TALKS = [
     "Japanese",
     "株式会社マネーフォワード",
   ),
-  makeTalk(
-    "leo-kettmeir",
-    "Creating desktop apps with Deno",
-    "session",
-    "English",
-    ["Leo Kettmeir"],
-  ),
-  makeTalk(
-    "jessie",
-    "Your Node.js App Is Lying to You: What axios Taught Us",
-    "session",
-    "English",
-    ["Jessie"],
-  ),
-  makeSponsorTalk(
-    "vercel-sponsor-session",
-    "Vercel",
-    "sponsor session",
-    "English",
-    "Vercel",
-  ),
+  makeTalk("leo-kettmeir", "Creating desktop apps with Deno", "session", "English", ["Leo Kettmeir"]),
+  makeTalk("jessie", "Your Node.js App Is Lying to You: What axios Taught Us", "session", "English", ["Jessie"]),
+  makeSponsorTalk("vercel-sponsor-session", "Vercel", "sponsor session", "English", "Vercel"),
   makeSponsorTalk(
     "gmo-flatt-security-sponsor-session",
     "GMO Flatt Security株式会社",
@@ -458,41 +228,11 @@ export const TALKS = [
     "Japanese",
     "GMO Flatt Security株式会社",
   ),
-  makeSponsorTalk(
-    "layerx-sponsor-session",
-    "株式会社LayerX",
-    "sponsor session",
-    "Japanese",
-    "株式会社LayerX",
-  ),
-  makeSponsorTalk(
-    "arkor-sponsor-lt",
-    "Arkor LT",
-    "sponsor LT",
-    "English",
-    "Arkor",
-  ),
-  makeSponsorTalk(
-    "dwango-sponsor-lt",
-    "株式会社ドワンゴ LT",
-    "sponsor LT",
-    "Japanese",
-    "株式会社ドワンゴ",
-  ),
-  makeSponsorTalk(
-    "supateam-sponsor-lt",
-    "supa株式会社 LT",
-    "sponsor LT",
-    "Japanese",
-    "supa株式会社",
-  ),
-  makeSponsorTalk(
-    "lincwell-sponsor-lt",
-    "株式会社Linc'well LT",
-    "sponsor LT",
-    "Japanese",
-    "株式会社Linc'well",
-  ),
+  makeSponsorTalk("layerx-sponsor-session", "株式会社LayerX", "sponsor session", "Japanese", "株式会社LayerX"),
+  makeSponsorTalk("arkor-sponsor-lt", "Arkor LT", "sponsor LT", "English", "Arkor"),
+  makeSponsorTalk("dwango-sponsor-lt", "株式会社ドワンゴ LT", "sponsor LT", "Japanese", "株式会社ドワンゴ"),
+  makeSponsorTalk("supateam-sponsor-lt", "supa株式会社 LT", "sponsor LT", "Japanese", "supa株式会社"),
+  makeSponsorTalk("lincwell-sponsor-lt", "株式会社Linc'well LT", "sponsor LT", "Japanese", "株式会社Linc'well"),
   makeSponsorTalk(
     "money-forward-sponsor-lt",
     "株式会社マネーフォワード LT",
@@ -500,41 +240,11 @@ export const TALKS = [
     "Japanese",
     "株式会社マネーフォワード",
   ),
-  makeSponsorTalk(
-    "layerx-sponsor-lt",
-    "株式会社LayerX LT",
-    "sponsor LT",
-    "Japanese",
-    "株式会社LayerX",
-  ),
-  makeSponsorTalk(
-    "enechain-sponsor-lt",
-    "株式会社enechain LT",
-    "sponsor LT",
-    "Japanese",
-    "株式会社enechain",
-  ),
-  makeSponsorTalk(
-    "ncdc-sponsor-lt",
-    "NCDC株式会社 LT",
-    "sponsor LT",
-    "Japanese",
-    "NCDC株式会社",
-  ),
-  makeSponsorTalk(
-    "cougar-sponsor-lt",
-    "クーガー株式会社 LT",
-    "sponsor LT",
-    "Japanese",
-    "クーガー株式会社",
-  ),
-  makeSponsorTalk(
-    "vercel-sponsor-lt",
-    "Vercel LT",
-    "sponsor LT",
-    "English",
-    "Vercel",
-  ),
+  makeSponsorTalk("layerx-sponsor-lt", "株式会社LayerX LT", "sponsor LT", "Japanese", "株式会社LayerX"),
+  makeSponsorTalk("enechain-sponsor-lt", "株式会社enechain LT", "sponsor LT", "Japanese", "株式会社enechain"),
+  makeSponsorTalk("ncdc-sponsor-lt", "NCDC株式会社 LT", "sponsor LT", "Japanese", "NCDC株式会社"),
+  makeSponsorTalk("cougar-sponsor-lt", "クーガー株式会社 LT", "sponsor LT", "Japanese", "クーガー株式会社"),
+  makeSponsorTalk("vercel-sponsor-lt", "Vercel LT", "sponsor LT", "English", "Vercel"),
   makeSponsorTalk(
     "gmo-flatt-security-sponsor-lt",
     "GMO Flatt Security株式会社 LT",
@@ -542,20 +252,10 @@ export const TALKS = [
     "Japanese",
     "GMO Flatt Security株式会社",
   ),
-  makeSponsorTalk(
-    "everlane-sponsor-lt",
-    "CodeCast LT",
-    "sponsor LT",
-    "Japanese",
-    "株式会社EVERLANE",
-  ),
-  makeTalk(
-    "josh-junon",
-    "基調講演2: Yep, I've Been Pwned: What I Learned from Being Hacked",
-    "keynote",
-    "English",
-    ["Josh Junon"],
-  ),
+  makeSponsorTalk("everlane-sponsor-lt", "CodeCast LT", "sponsor LT", "Japanese", "株式会社EVERLANE"),
+  makeTalk("josh-junon", "基調講演2: Yep, I've Been Pwned: What I Learned from Being Hacked", "keynote", "English", [
+    "Josh Junon",
+  ]),
 ] satisfies readonly Talk[];
 
 export type TalkSlug = (typeof TALKS)[number]["slug"];

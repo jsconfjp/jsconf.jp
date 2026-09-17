@@ -5,7 +5,7 @@
   "bracketSpacing": true,
   "endOfLine": "lf",
   "objectWrap": "preserve",
-  "printWidth": 80,
+  "printWidth": 120,
   "proseWrap": "preserve",
   "semi": true,
   "singleQuote": false,

@@ -28,23 +28,14 @@ export function SponsorLogo({ sponsor }: Props) {
           <div
             className="relative w-full"
             style={{
-              height: sponsor.height
-                ? SPONSOR_HEIGHT_MAP[sponsor.height]
-                : "100%",
+              height: sponsor.height ? SPONSOR_HEIGHT_MAP[sponsor.height] : "100%",
             }}
           >
-            <Image
-              src={sponsor.logoUrl}
-              alt={sponsor.name}
-              fill
-              className="object-contain"
-            />
+            <Image src={sponsor.logoUrl} alt={sponsor.name} fill className="object-contain" />
           </div>
         </div>
       ) : (
-        <span className="text-center text-xl font-semibold">
-          {sponsor.name}
-        </span>
+        <span className="text-center text-xl font-semibold">{sponsor.name}</span>
       )}
     </Link>
   );

@@ -24,9 +24,7 @@ export function LanguageSwitcher() {
           href={pathname.replace(`/${locale}`, `/${lang}`)}
           className={clsx(
             "pr-2 font-bold underline underline-offset-8 decoration-4",
-            locale === lang
-              ? "decoration-primary"
-              : "cursor-pointer decoration-transparent hover:decoration-dimmed",
+            locale === lang ? "decoration-primary" : "cursor-pointer decoration-transparent hover:decoration-dimmed",
           )}
         >
           {label}

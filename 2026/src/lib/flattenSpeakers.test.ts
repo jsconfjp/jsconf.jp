@@ -62,9 +62,7 @@ describe("flattenSpeakers", () => {
     const flattened = flattenSpeakers(mockTalks);
 
     // talk-1 has 2 speakers, so there should be 2 entries
-    const talk1Entries = flattened.filter(
-      (item) => item.talk.slug === "talk-1",
-    );
+    const talk1Entries = flattened.filter((item) => item.talk.slug === "talk-1");
     expect(talk1Entries.length).toBe(2);
   });
 
@@ -73,9 +71,7 @@ describe("flattenSpeakers", () => {
 
     // Verify correct relationships are maintained
     flattened.forEach((item) => {
-      const originalTalk = mockTalks.find(
-        (talk) => talk.slug === item.talk.slug,
-      );
+      const originalTalk = mockTalks.find((talk) => talk.slug === item.talk.slug);
       expect(originalTalk).toBeDefined();
       if (originalTalk) {
         expect(originalTalk.speakers).toContain(item.speaker);
@@ -86,12 +82,8 @@ describe("flattenSpeakers", () => {
   it("should handle both regular speakers and sponsor speakers", () => {
     const flattened = flattenSpeakers(mockTalks);
 
-    const regularSpeakers = flattened.filter(
-      (item) => item.speaker.type === "speaker",
-    );
-    const sponsorSpeakers = flattened.filter(
-      (item) => item.speaker.type === "sponsor",
-    );
+    const regularSpeakers = flattened.filter((item) => item.speaker.type === "speaker");
+    const sponsorSpeakers = flattened.filter((item) => item.speaker.type === "sponsor");
 
     expect(regularSpeakers.length).toBe(2); // Speaker A and B
     expect(sponsorSpeakers.length).toBe(1); // Sponsor Company
@@ -100,9 +92,7 @@ describe("flattenSpeakers", () => {
 
   it("should derive entries from the default TALKS", () => {
     const flattened = flattenSpeakers();
-    const expected = TALKS.flatMap((talk) =>
-      talk.speakers.map((speaker) => ({ talk, speaker })),
-    );
+    const expected = TALKS.flatMap((talk) => talk.speakers.map((speaker) => ({ talk, speaker })));
     expect(flattened).toEqual(expected);
   });
 });

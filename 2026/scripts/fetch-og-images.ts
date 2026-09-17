@@ -9,11 +9,7 @@ import nextConfig from "../next.config.ts";
 // @ts-expect-error --experimental-strip-types
 import { TALKS } from "../src/constants/talks.ts";
 // @ts-expect-error --experimental-strip-types
-import {
-  GENERAL_OG_IMAGE_ID,
-  getOgImagePath,
-  getTalkOgImageId,
-} from "../src/lib/og/url.ts";
+import { GENERAL_OG_IMAGE_ID, getOgImagePath, getTalkOgImageId } from "../src/lib/og/url.ts";
 
 const DIR_OG_IMAGES = join(import.meta.dirname, "..", "screenshots", "ogp");
 
@@ -24,10 +20,7 @@ const pages = [
     imageId: getTalkOgImageId("en", talk.slug),
   })),
 ].map(({ path, imageId }) => ({
-  url: `http://localhost:3001${join(
-    nextConfig.basePath!,
-    getOgImagePath(imageId),
-  )}`,
+  url: `http://localhost:3001${join(nextConfig.basePath!, getOgImagePath(imageId))}`,
   slug: path === "/" ? "top" : path.split("/").filter(Boolean).join("-"),
 }));
 
@@ -42,9 +35,7 @@ async function main() {
       return fetch(url)
         .then((res) => Readable.fromWeb(res.body! as unknown as ReadableStream))
         .then(async (stream) => {
-          const dist = stream.pipe(
-            createWriteStream(join(DIR_OG_IMAGES, `${slug}.png`)),
-          );
+          const dist = stream.pipe(createWriteStream(join(DIR_OG_IMAGES, `${slug}.png`)));
           await finished(dist);
         });
     }),

@@ -64,9 +64,7 @@ export default async function Page({ params }: Props) {
       </div>
 
       <div className="max-w-3xl mx-auto mt-8 md:mt-16 flex flex-col gap-4 px-4 lg:px-0">
-        <h2 className="text-lg md:text-xl font-bold text-center">
-          {t("about.previousYearHighlights")}
-        </h2>
+        <h2 className="text-lg md:text-xl font-bold text-center">{t("about.previousYearHighlights")}</h2>
         <div className="w-full aspect-video">
           <iframe
             className="w-full h-full"
@@ -82,9 +80,7 @@ export default async function Page({ params }: Props) {
 
       {SPONSORS.length > 0 && (
         <div className="max-w-3xl mx-auto mt-8 md:mt-32 flex flex-col gap-4">
-          <h2 className="text-3xl font-bold text-center">
-            {t("navigation.sponsors")}
-          </h2>
+          <h2 className="text-3xl font-bold text-center">{t("navigation.sponsors")}</h2>
           <SponsorGrid sponsors={SPONSORS} showPrText={false} />
           <div className="flex items-center justify-center">
             <Button href="/sponsors" variant="secondary" size="md">
@@ -96,9 +92,7 @@ export default async function Page({ params }: Props) {
 
       <div className="bg-trinidad-100 pt-12 pb-24 px-4 lg:px-0 mt-8 md:mt-32">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold my-4 text-center">
-            {t("team.team")}
-          </h2>
+          <h2 className="text-3xl font-bold my-4 text-center">{t("team.team")}</h2>
           <Team />
         </div>
       </div>
