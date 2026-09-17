@@ -7,11 +7,17 @@ const nextConfig: NextConfig = {
   basePath: "/2026",
   pageExtensions: ["ts", "tsx", "md"],
   output: "export",
+  outputFileTracingRoot: process.cwd(),
   images: {
     unoptimized: true,
   },
   experimental: {
-    viewTransition: true,
+    mdxRs: {
+      mdxType: "gfm",
+    },
+  },
+  turbopack: {
+    root: process.cwd(),
   },
 };
 
