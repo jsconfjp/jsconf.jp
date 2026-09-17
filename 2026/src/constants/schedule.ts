@@ -69,7 +69,10 @@ const trackTalks = (
   startTime: string,
   endTime: string,
   slugs: readonly [TalkSlug, TalkSlug, TalkSlug, TalkSlug],
-) => TRACKS.map((track, index) => talkSession(track, startTime, endTime, slugs[index]!));
+) =>
+  TRACKS.map((track, index) =>
+    talkSession(track, startTime, endTime, slugs[index]!),
+  );
 
 const notSortedSchedule: ScheduledSession[] = [
   eventSession("reception", "all", "09:30", "10:00"),

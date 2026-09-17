@@ -9,7 +9,11 @@ import nextConfig from "../next.config.ts";
 // @ts-expect-error --experimental-strip-types
 import { TALKS } from "../src/constants/talks.ts";
 // @ts-expect-error --experimental-strip-types
-import { GENERAL_OG_IMAGE_ID, getOgImagePath, getTalkOgImageId } from "../src/lib/og/url.ts";
+import {
+  GENERAL_OG_IMAGE_ID,
+  getOgImagePath,
+  getTalkOgImageId,
+} from "../src/lib/og/url.ts";
 
 const DIR_OG_IMAGES = join(import.meta.dirname, "..", "screenshots", "ogp");
 

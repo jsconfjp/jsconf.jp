@@ -7,10 +7,7 @@ import { ensureLocale } from "@/i18n/ensureLocale";
 import { findTalkSession } from "@/lib/findTalkSession";
 import { getTalkSessions } from "@/lib/getTalkSessions";
 import { generateImage } from "@/lib/og/image";
-import {
-  GENERAL_OG_IMAGE_ID,
-  getTalkOgImageId,
-} from "@/lib/og/url";
+import { GENERAL_OG_IMAGE_ID, getTalkOgImageId } from "@/lib/og/url";
 
 export const dynamic = "force-static";
 
