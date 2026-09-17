@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run dev` - Start development server at http://localhost:3000/2026
 - `npm run build` - Build static site for production
 - `npm run start` - Start production server
-- `npm run lint` - Run ESLint to check code quality
+- `npm run lint` - Run Oxlint and Tailwind CSS checks
 
 Note: Use `nvm use` before starting development to ensure correct Node.js version.
 

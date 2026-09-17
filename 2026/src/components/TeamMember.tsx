@@ -30,7 +30,7 @@ export function TeamMember({ member, size }: Props) {
       target="_blank"
       className="text-center flex flex-col items-center gap-2"
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
+      {/* oxlint-disable-next-line nextjs/no-img-element */}
       <img
         loading="lazy"
         fetchPriority="low"
