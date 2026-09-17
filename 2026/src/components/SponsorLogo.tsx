@@ -12,10 +12,6 @@ const SPONSOR_HEIGHT_MAP: Record<NonNullable<Sponsor["height"]>, string> = {
 };
 
 export function SponsorLogo({ sponsor }: Props) {
-  const logoHeight = sponsor.height
-    ? SPONSOR_HEIGHT_MAP[sponsor.height]
-    : "100%";
-
   return (
     <Link
       key={sponsor.name}
@@ -29,7 +25,14 @@ export function SponsorLogo({ sponsor }: Props) {
     >
       {sponsor.logoUrl ? (
         <div className="flex h-full w-full items-center justify-center">
-          <div className="relative w-full" style={{ height: logoHeight }}>
+          <div
+            className="relative w-full"
+            style={{
+              height: sponsor.height
+                ? SPONSOR_HEIGHT_MAP[sponsor.height]
+                : "100%",
+            }}
+          >
             <Image
               src={sponsor.logoUrl}
               alt={sponsor.name}
