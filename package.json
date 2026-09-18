@@ -4,6 +4,8 @@
   "description": "JSConf Japan Website",
   "main": "index.js",
   "scripts": {
+    "fmt": "oxfmt 2026",
+    "fmt:check": "oxfmt --check 2026",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +21,6 @@
   "homepage": "https://github.com/jsconfjp/jsconf.jp#readme",
   "devDependencies": {
     "lefthook": "^1.13.1",
-    "prettier": "^3.6.2"
+    "oxfmt": "0.68.0"
   }
 }

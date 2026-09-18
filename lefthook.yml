@@ -1,10 +1,18 @@
 pre-commit:
   parallel: true
   commands:
-    prettier:
+    oxfmt:
       glob: "*.{json,md,yml,ts,tsx,js,mjs,css}"
+      exclude:
+        - "2019/**"
+        - "2020/**"
+        - "2021/**"
+        - "2022/**"
+        - "2023/**"
+        - "2024/**"
+        - "2025/**"
       run: |
-        npx prettier -w {staged_files}
+        npx oxfmt -w {staged_files}
       stage_fixed: true
     prisma:
       glob: "*.prisma"
