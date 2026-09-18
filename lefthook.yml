@@ -12,7 +12,9 @@ pre-commit:
         - "2024/**"
         - "2025/**"
       run: |
-        npx oxfmt -w {staged_files}
+        npx oxfmt --write {staged_files}
+      skip:
+        - merge
       stage_fixed: true
     prisma:
       glob: "*.prisma"

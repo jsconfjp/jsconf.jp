@@ -20,7 +20,10 @@
   },
   "homepage": "https://github.com/jsconfjp/jsconf.jp#readme",
   "devDependencies": {
-    "lefthook": "^1.13.1",
+    "lefthook": "2.1.14",
     "oxfmt": "0.68.0"
+  },
+  "allowScripts": {
+    "lefthook@2.1.14": true
   }
 }
