@@ -11,9 +11,12 @@ jobs:
         with:
           node-version-file: 2026/.nvmrc
           cache: npm
-          cache-dependency-path: 2026/package-lock.json
+          cache-dependency-path: |
+            package-lock.json
+            2026/package-lock.json
+      - run: npm ci
       - run: cd 2026 && npm ci
-      - run: cd 2026 && npm run fmt:check
+      - run: npm run fmt:check
       - run: cd 2026 && npm run lint
       - run: cd 2026 && npm run test
   build_2026:
