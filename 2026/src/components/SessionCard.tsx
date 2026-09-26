@@ -26,6 +26,16 @@ const getSessionColor = (session: ScheduledSession) => {
     case "break":
     case "closed":
       return "bg-slate-100/80 border-slate-400 border-dashed";
+    case "tba":
+      return session.track === "A"
+        ? "bg-track-a/20 border-track-a border-dashed"
+        : session.track === "B"
+          ? "bg-track-b/20 border-track-b border-dashed"
+          : session.track === "C"
+            ? "bg-track-c/20 border-track-c border-dashed"
+            : session.track === "D"
+              ? "bg-track-d/20 border-track-d border-dashed"
+              : "bg-slate-100/80 border-slate-400 border-dashed";
   }
 };
 
