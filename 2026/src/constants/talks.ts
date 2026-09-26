@@ -121,9 +121,6 @@ export const TALKS = [
   makeTalk("tomikawa-sotaro", "JavaScriptはシングルバイナリの夢を見るか", "LT", "Japanese", ["TOMIKAWA Sotaro"]),
   makeTalk("syumai", "Math.sumPreciseから学ぶ、ECMAScript仕様の数値の種類", "LT", "Japanese", ["syumai"]),
   makeTalk("yebis0942", "esmeta: ECMAScript仕様書を読む機械", "LT", "Japanese", ["yebis0942"]),
-  makeTalk("daigo-fujiwara-smith", "Scroll-Driven 3D: Storytelling with React Three Fiber", "LT", "English", [
-    "Daigo Fujiwara-Smith",
-  ]),
   makeTalk("kazuya-serizawa", "Promiseの向こう側へコンテキストを届ける ― proposal-async-context", "LT", "Japanese", [
     "Kazuya Serizawa",
   ]),
@@ -140,13 +137,6 @@ export const TALKS = [
   makeSponsorTalk("anotherball-sponsor-lt-1", "AnotherBall Pte Ltd LT", "sponsor LT", "English", "AnotherBall Pte Ltd"),
   makeSponsorTalk("cybozu-sponsor-lt-1", "サイボウズ株式会社 LT", "sponsor LT", "Japanese", "サイボウズ株式会社"),
   makeSponsorTalk("mcd3-sponsor-lt", "MCD3株式会社 LT", "sponsor LT", "Japanese", "MCD3株式会社"),
-  makeTalk(
-    "devlin-duldulao",
-    "DaloyJS - The first TypeScript REST API framework built for secure AI-assisted services",
-    "session",
-    "English",
-    ["Devlin Duldulao"],
-  ),
   makeTalk("nolu", "CVEから紐解くJIT Exploit", "session", "Japanese", ["nolu"]),
   makeTalk("neciu-dan", "How NOT to Use TanStack Query", "session", "English", ["Neciu Dan"]),
   makeSponsorTalk("miidas-sponsor-session", "ミイダス株式会社", "sponsor session", "Japanese", "ミイダス株式会社"),
@@ -172,9 +162,6 @@ export const TALKS = [
   ),
   makeTalk("marco-ippolito", "The Missing Piece in Node.js Configuration", "session", "English", ["Marco Ippolito"]),
   makeTalk("uhyo", "AIフレンドリーなGenerative UIをJSXで", "session", "Japanese", ["うひょ"]),
-  makeTalk("maya-shavin", "Frontend Beyond the Screen: Where AI Agent Is A User", "session", "English", [
-    "Maya Shavin",
-  ]),
   makeSponsorTalk("cybozu-sponsor-session", "サイボウズ株式会社", "sponsor session", "Japanese", "サイボウズ株式会社"),
   makeTalk("wataru-morita", "Webメール開発を大幅に変えたJMAPというゲームチェンジャー", "session", "Japanese", [
     "Wataru Morita(@tascript)",
@@ -190,7 +177,6 @@ export const TALKS = [
     "Kevin Uehara",
   ]),
   makeSponsorTalk("dwango-sponsor-session", "株式会社ドワンゴ", "sponsor session", "Japanese", "株式会社ドワンゴ"),
-  makeTalk("brandon-dail", "Design Systems Engineering at Discord", "session", "English", ["Brandon Dail"]),
   makeTalk("roland-richard", "Node.jsで覗くV8バイトコード：3つのJavaScript実験", "session", "Japanese", [
     "ローランド リチャード",
   ]),

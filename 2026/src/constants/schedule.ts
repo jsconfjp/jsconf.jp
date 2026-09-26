@@ -4,7 +4,7 @@ import { TALKS_BY_SLUG, Talk, TalkSlug } from "./talks";
 type Day = "1";
 export type Track = "A" | "B" | "C" | "D" | "all";
 type TrackOnly = Exclude<Track, "all">;
-type EventKind = "reception" | "opening" | "closed" | "break" | "closing" | "networking";
+type EventKind = "reception" | "opening" | "closed" | "break" | "closing" | "networking" | "tba";
 
 export const TRACKS = ["A", "B", "C", "D"] satisfies Track[];
 
@@ -64,7 +64,10 @@ const notSortedSchedule: ScheduledSession[] = [
   ...trackTalks("10:10", "10:20", ["ajay-upreti", "azukiazusa", "bicstone", "dynamis"]),
   ...trackTalks("10:20", "10:30", ["nurul-sundarani", "keisuke-tsuji", "yuya-inoue", "progfay"]),
   ...trackTalks("10:30", "10:40", ["rikito-taniguchi", "tomikawa-sotaro", "syumai", "yebis0942"]),
-  ...trackTalks("10:40", "10:50", ["daigo-fujiwara-smith", "kazuya-serizawa", "petamoriken", "yuta-ikeoku"]),
+  eventSession("tba", "A", "10:40", "10:50"),
+  talkSession("B", "10:40", "10:50", "kazuya-serizawa"),
+  talkSession("C", "10:40", "10:50", "petamoriken"),
+  talkSession("D", "10:40", "10:50", "yuta-ikeoku"),
 
   eventSession("break", "all", "10:50", "11:00"),
 
@@ -77,13 +80,22 @@ const notSortedSchedule: ScheduledSession[] = [
 
   eventSession("break", "all", "12:05", "13:00", "昼休憩"),
 
-  ...trackTalks("13:00", "13:30", ["devlin-duldulao", "nolu", "neciu-dan", "miidas-sponsor-session"]),
+  eventSession("tba", "A", "13:00", "13:30"),
+  talkSession("B", "13:00", "13:30", "nolu"),
+  talkSession("C", "13:00", "13:30", "neciu-dan"),
+  talkSession("D", "13:00", "13:30", "miidas-sponsor-session"),
   ...trackTalks("13:30", "14:00", ["neeraj-pandey", "yuta-nishi", "aileen-villanueva", "anotherball-sponsor-session"]),
   eventSession("break", "all", "14:00", "14:10"),
-  ...trackTalks("14:10", "14:40", ["marco-ippolito", "uhyo", "maya-shavin", "cybozu-sponsor-session"]),
+  talkSession("A", "14:10", "14:40", "marco-ippolito"),
+  talkSession("B", "14:10", "14:40", "uhyo"),
+  eventSession("tba", "C", "14:10", "14:40"),
+  talkSession("D", "14:10", "14:40", "cybozu-sponsor-session"),
   ...trackTalks("14:40", "15:10", ["ondrej-zara", "wataru-morita", "html-in-canvas-api", "arkor-sponsor-session"]),
   eventSession("break", "all", "15:10", "15:20"),
-  ...trackTalks("15:20", "15:50", ["brandon-dail", "eiji", "kevin-uehara", "dwango-sponsor-session"]),
+  eventSession("tba", "A", "15:20", "15:50"),
+  talkSession("B", "15:20", "15:50", "eiji"),
+  talkSession("C", "15:20", "15:50", "kevin-uehara"),
+  talkSession("D", "15:20", "15:50", "dwango-sponsor-session"),
   ...trackTalks("15:50", "16:20", [
     "saman-abaasi",
     "roland-richard",
