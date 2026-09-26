@@ -16,7 +16,8 @@
     "avatarPath": "/2026/speaker/dynamis-2026.png"
   },
   "Nurul Sundarani": {
-    "bio": "Nurul Sundarani is an international speaker and open source contributor. Outside of work he is usually tinkering with AI agents that were supposed to stay weekend projects, or watching Formula 1. He is an engineer on the Prisma team."
+    "bio": "Nurul Sundarani is an international speaker, open source contributor, and software engineer who enjoys building developer tools and exploring emerging technologies. Outside of work, he is usually tinkering with AI agents that were supposed to stay weekend projects, or watching Formula 1.",
+    "avatarPath": "/2026/speaker/nurul-sundarani.jpg"
   },
   "辻佳佑": {
     "bio": "ソフトウェアエンジニア。Vue.js / Nuxt を中心としたWebアプリケーション開発に従事。",
@@ -83,10 +84,12 @@
     "bio": "さくらインターネット研究所の研究開発エンジニアです。(https://research.sakura.ad.jp/members/tascript)"
   },
   "Natalia Markoborodova": {
-    "bio": "Natalia Markoborodova is a Developer Relations Engineer in Chrome with focus on modern UI, user authentication and identity"
+    "bio": "Natalia is a Developer Relations Engineer at Chrome, Google. Natalia develops technical guides, gathers platform feedback, and helps developers across two core domains: next-generation UI capabilities and frictionless user authentication APIs.",
+    "avatarPath": "/2026/speaker/natalia-markoborodova.jpg"
   },
   "Thomas Nattestad": {
-    "bio": "Thomas Nattestad is a a Senior Product Manager at Google, with a focus on the Canvas, WebGPU & WebGL, Skia, and more."
+    "bio": "Thomas Nattestad is a Senior Product Manager at Chrome, Google. Thomas leads product efforts for modern web graphics and performance APIs that enable developers to build fast, rich, and visually expressive experiences.",
+    "avatarPath": "/2026/speaker/thomas-nattestad.jpg"
   },
   "Ondřej Žára": {
     "bio": "An experienced web developer (15+ years), speaker and lecturer. Apart from working for a major Czech online company (Seznam.cz, a.s.), I regularly give talks at the Czech Technical University in Prague. Focus on all frontend web technologies.",
