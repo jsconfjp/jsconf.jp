@@ -92,9 +92,9 @@ const notSortedSchedule: ScheduledSession[] = [
   talkSession("D", "14:10", "14:40", "cybozu-sponsor-session"),
   ...trackTalks("14:40", "15:10", ["ondrej-zara", "wataru-morita", "html-in-canvas-api", "arkor-sponsor-session"]),
   eventSession("break", "all", "15:10", "15:20"),
-  talkSession("A", "15:20", "15:50", "yuji-yamamoto"),
+  talkSession("A", "15:20", "15:50", "kevin-uehara"),
   talkSession("B", "15:20", "15:50", "eiji"),
-  talkSession("C", "15:20", "15:50", "kevin-uehara"),
+  talkSession("C", "15:20", "15:50", "yuji-yamamoto"),
   talkSession("D", "15:20", "15:50", "dwango-sponsor-session"),
   ...trackTalks("15:50", "16:20", [
     "saman-abaasi",
