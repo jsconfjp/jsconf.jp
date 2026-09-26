@@ -162,6 +162,9 @@ export const TALKS = [
   ),
   makeTalk("marco-ippolito", "The Missing Piece in Node.js Configuration", "session", "English", ["Marco Ippolito"]),
   makeTalk("uhyo", "AIフレンドリーなGenerative UIをJSXで", "session", "Japanese", ["うひょ"]),
+  makeTalk("hong-minhee", "Oseo：SBCLスタイルのJavaScript/TypeScript AOTコンパイラ", "session", "Japanese", [
+    "洪 民憙",
+  ]),
   makeSponsorTalk("cybozu-sponsor-session", "サイボウズ株式会社", "sponsor session", "Japanese", "サイボウズ株式会社"),
   makeTalk("wataru-morita", "Webメール開発を大幅に変えたJMAPというゲームチェンジャー", "session", "Japanese", [
     "Wataru Morita(@tascript)",
@@ -173,6 +176,13 @@ export const TALKS = [
   makeSponsorTalk("arkor-sponsor-session", "Arkor", "sponsor session", "English", "Arkor"),
   makeTalk("ondrej-zara", "You are never going to do these 10 JS mistakes", "session", "English", ["Ondřej Žára"]),
   makeTalk("eiji", "ブラウザで変わるID連携 — EVPとFedCMが描く未来の認証", "session", "Japanese", ["えーじ"]),
+  makeTalk(
+    "yuji-yamamoto",
+    "JS･WasmにもあるRustのアレ - コンポーネント間でやりとりするオブジェクトを管理する",
+    "session",
+    "Japanese",
+    ["山本悠滋"],
+  ),
   makeTalk("kevin-uehara", "WebMCP and WebAI: Exploring native AI tools in Chrome", "session", "English", [
     "Kevin Uehara",
   ]),
