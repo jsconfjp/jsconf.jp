@@ -129,9 +129,11 @@
     "bio": "Jessie Auguste is a software engineer at CybSafe, where she builds secure software and works at the human side of cybersecurity. This year she hosted JSNation and React Summit Amsterdam, and she has taken the stage at React Universe, React Miami, LeadDev, Docker, DevConf, and BeJS, among others. She has also built and delivered secure coding courses based on OWASP principles. Away from the keyboard, Jessie co-founds and co-hosts Glowing in Tech, an award-winning podcast and community for people building in tech without the access others take for granted."
   },
   "洪 民憙": {
-    "bio": "ソウル在住のソロOSS開発者。構造化ロギングライブラリ[LogTape](https://logtape.org/)と、Sovereign Tech Fundの支援を受けるActivityPubサーバーフレームワーク[Fedify](https://fedify.dev/)を開発している。\n\nWebsite: https://hongminhee.org/\nGitHub: https://github.com/dahlia"
+    "bio": "ソウル在住のソロOSS開発者。構造化ロギングライブラリ[LogTape](https://logtape.org/)と、Sovereign Tech Fundの支援を受けるActivityPubサーバーフレームワーク[Fedify](https://fedify.dev/)を開発している。\n\nWebsite: https://hongminhee.org/\nGitHub: https://github.com/dahlia",
+    "avatarPath": "/2026/speaker/hong-minhee.jpg"
   },
   "山本悠滋": {
-    "bio": "WebAssemblyとプリキュアとポムポムプリンが好きなプログラマー。株式会社MagicPod所属。"
+    "bio": "WebAssemblyとプリキュアとポムポムプリンが好きなプログラマー。株式会社MagicPod所属。",
+    "avatarPath": "/2026/speaker/yuji-yamamoto.jpg"
   }
 }
