@@ -50,6 +50,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "MCD3株式会社",
     url: "https://www.mcd3.co.jp/",
+    logoUrl: "/2026/sponsor/mcd3-2026.png",
     prText: `
 エムシーディースリーは、三菱商事100%出資のテクノロジーカンパニーです。
 
