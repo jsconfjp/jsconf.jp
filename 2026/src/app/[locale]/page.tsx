@@ -42,6 +42,13 @@ export default async function Page({ params }: Props) {
         <Hero />
       </div>
 
+      <div className="max-w-3xl mx-auto mt-8 md:mt-12 px-4 lg:px-0">
+        <section className="rounded-md border-2 border-primary bg-primary/10 px-6 py-4 text-center">
+          <h2 className="text-lg md:text-xl font-bold">{t("about.ticketNotice.title")}</h2>
+          <p className="mt-1 text-base md:text-lg">{t("about.ticketNotice.body")}</p>
+        </section>
+      </div>
+
       <div className="max-w-3xl mx-auto mt-8 md:mt-16 flex justify-center px-4 lg:px-0">
         <Button
           href={SPONSORSHIP_URL}
