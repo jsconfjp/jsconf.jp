@@ -132,6 +132,7 @@
     "bio": "ソウル在住のソロOSS開発者。構造化ロギングライブラリ[LogTape](https://logtape.org/)と、Sovereign Tech Fundの支援を受けるActivityPubサーバーフレームワーク[Fedify](https://fedify.dev/)を開発している。\n\nWebsite: https://hongminhee.org/\nGitHub: https://github.com/dahlia"
   },
   "山本悠滋": {
-    "bio": "WebAssemblyとプリキュアとポムポムプリンが好きなプログラマー。株式会社MagicPod所属。"
+    "bio": "WebAssemblyとプリキュアとポムポムプリンが好きなプログラマー。株式会社MagicPod所属。",
+    "avatarPath": "/2026/public/speaker/igrep.jpg"
   }
 }
