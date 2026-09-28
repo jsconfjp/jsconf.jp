@@ -121,6 +121,7 @@ export const TALKS = [
   makeTalk("tomikawa-sotaro", "JavaScriptはシングルバイナリの夢を見るか", "LT", "Japanese", ["TOMIKAWA Sotaro"]),
   makeTalk("syumai", "Math.sumPreciseから学ぶ、ECMAScript仕様の数値の種類", "LT", "Japanese", ["syumai"]),
   makeTalk("yebis0942", "esmeta: ECMAScript仕様書を読む機械", "LT", "Japanese", ["yebis0942"]),
+  makeTalk("jiko21", "Objectの比較と同一性を考える — ComparisonsからCompositesまで", "LT", "Japanese", ["jiko21"]),
   makeTalk("kazuya-serizawa", "Promiseの向こう側へコンテキストを届ける ― proposal-async-context", "LT", "Japanese", [
     "Kazuya Serizawa",
   ]),

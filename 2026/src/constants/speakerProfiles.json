@@ -96,7 +96,8 @@
     "avatarPath": "/2026/speaker/ondrej-zara.png"
   },
   "えーじ": {
-    "bio": "Google の Chrome Developer Relations チームの Developer Advocate。パスキーをはじめ ID 連携、デジタル ID など、アイデンティティ技術の啓蒙をグローバルでリードしています。著書「パスキーのすべて」。"
+    "bio": "Google の Chrome Developer Relations チームの Developer Advocate。パスキーをはじめ ID 連携、デジタル ID など、アイデンティティ技術の啓蒙をグローバルでリードしています。著書「パスキーのすべて」。",
+    "avatarPath": "/2026/speaker/eiji.jpg"
   },
   "Kevin Uehara": {
     "bio": "Kevin Uehara is a Software Engineer at iFood and an active Google Developer Groups Campinas (GDG) collaborator. Recognized three times as a Microsoft MVP and Google Developer Expert (GDE) for his contributions to the tech community, Kevin is also the organizer of FrontIn Campinas, as well as an international and national speaker and tech content creator. Based in Brazil, he is passionate about sharing knowledge and inspiring other developers in the frontend ecosystem.",
@@ -135,5 +136,8 @@
   "山本悠滋": {
     "bio": "WebAssemblyとプリキュアとポムポムプリンが好きなプログラマー。株式会社MagicPod所属。",
     "avatarPath": "/2026/speaker/yuji-yamamoto.jpg"
+  },
+  "jiko21": {
+    "bio": "エムスリー株式会社 / ソフトウェアエンジニア\n\n新卒時よりフロントエンドエンジニアとしてキャリアをスタートし、メガベンチャーやスタートアップを経て、現職。"
   }
 }

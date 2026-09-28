@@ -64,7 +64,7 @@ const notSortedSchedule: ScheduledSession[] = [
   ...trackTalks("10:10", "10:20", ["ajay-upreti", "azukiazusa", "bicstone", "dynamis"]),
   ...trackTalks("10:20", "10:30", ["nurul-sundarani", "keisuke-tsuji", "yuya-inoue", "progfay"]),
   ...trackTalks("10:30", "10:40", ["rikito-taniguchi", "tomikawa-sotaro", "syumai", "yebis0942"]),
-  eventSession("tba", "A", "10:40", "10:50"),
+  talkSession("A", "10:40", "10:50", "jiko21"),
   talkSession("B", "10:40", "10:50", "kazuya-serizawa"),
   talkSession("C", "10:40", "10:50", "petamoriken"),
   talkSession("D", "10:40", "10:50", "yuta-ikeoku"),
