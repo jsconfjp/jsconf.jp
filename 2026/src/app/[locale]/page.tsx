@@ -5,6 +5,7 @@ import { Button } from "@/components/Button";
 import { Hero } from "@/components/Hero";
 import { SponsorGrid } from "@/components/SponsorGrid";
 import { Team } from "@/components/Team";
+import { TicketCountdown } from "@/components/TicketCountdown";
 import { Venue } from "@/components/Venue";
 import { SPONSORSHIP_URL } from "@/constants/external";
 import { SPONSORS } from "@/constants/sponsors";
@@ -45,6 +46,7 @@ export default async function Page({ params }: Props) {
       <div className="max-w-3xl mx-auto mt-8 md:mt-12 px-4 lg:px-0">
         <section className="rounded-md border-2 border-primary bg-primary/10 px-6 py-4 text-center">
           <h2 className="text-lg md:text-xl font-bold">{t("about.ticketNotice.title")}</h2>
+          <TicketCountdown />
           <p className="mt-1 text-base md:text-lg">{t("about.ticketNotice.body")}</p>
           <p className="mt-3 text-sm md:text-base">
             {t.rich("about.ticketNotice.sponsor", {
