@@ -9,7 +9,12 @@
     "ticketNotice": {
       "title": "Tickets",
       "body": "Tickets go on sale on October 1, 2026 at 00:00 JST.",
-      "sponsor": "Sponsors can secure attendee tickets before general sales begin. If your company would like early access to tickets, apply through the <link>sponsor application form</link> and choose the regular Sponsor plan."
+      "sponsor": "Sponsors can secure attendee tickets before general sales begin. If your company would like early access to tickets, apply through the <link>sponsor application form</link> and choose the regular Sponsor plan.",
+      "countdown": {
+        "label": "Opens in",
+        "days": "{count, plural, one {# day} other {# days}}",
+        "open": "Tickets are on sale now"
+      }
     }
   },
   "navigation": {
