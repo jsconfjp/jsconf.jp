@@ -14,6 +14,7 @@ type Speaker = {
   name: string;
   avatarUrl: string | StaticImageData;
   bio: string; // markdown
+  bioJa?: string; // markdown
 };
 
 export type Talk = {
@@ -62,6 +63,7 @@ const makeTalk = (
         name,
         avatarUrl,
         bio: speakerProfile?.bio ?? "",
+        bioJa: speakerProfile && "bioJa" in speakerProfile ? speakerProfile.bioJa : undefined,
       };
     }),
   };

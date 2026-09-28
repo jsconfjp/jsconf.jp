@@ -108,7 +108,13 @@ export default async function Page({ params }: Props) {
             <div className="flex-1 flex flex-col gap-2">
               <h3 className="text-2xl font-bold">{speaker.name}</h3>
               <div>
-                <Markdown>{speaker.type === "speaker" ? speaker.bio : speaker.prText}</Markdown>
+                <Markdown>
+                  {speaker.type === "speaker"
+                    ? locale === "ja"
+                      ? (speaker.bioJa ?? speaker.bio)
+                      : speaker.bio
+                    : speaker.prText}
+                </Markdown>
               </div>
             </div>
           </li>
