@@ -3,7 +3,7 @@ import type { Temporal } from "temporal-polyfill";
 export type TemporalApi = typeof Temporal;
 
 // チケット販売開始日時（JST）
-export const TICKET_OPEN = {
+const TICKET_OPEN = {
   timeZone: "Asia/Tokyo",
   year: 2026,
   month: 10,

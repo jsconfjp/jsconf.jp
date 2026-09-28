@@ -1,13 +1,13 @@
 import { describe, it, expect } from "vitest";
 import { Temporal } from "temporal-polyfill";
-import { TICKET_OPEN, getRemaining } from "./ticketCountdown";
+import { getRemaining } from "./ticketCountdown";
 
 const at = (iso: string) => Temporal.ZonedDateTime.from(`${iso}[Asia/Tokyo]`);
 
 describe("getRemaining", () => {
   it("opens at 2026-10-01 00:00 JST", () => {
-    const target = Temporal.ZonedDateTime.from(TICKET_OPEN);
-    expect(target.toString()).toBe("2026-10-01T00:00:00+09:00[Asia/Tokyo]");
+    expect(getRemaining(Temporal, at("2026-09-30T23:59:59"))).toEqual({ days: 0, hours: 0, minutes: 0, seconds: 1 });
+    expect(getRemaining(Temporal, at("2026-10-01T00:00:00"))).toBeNull();
   });
 
   it("counts down days, hours, minutes and seconds", () => {
