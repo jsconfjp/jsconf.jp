@@ -1,8 +1,9 @@
 import clsx from "clsx";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import youtubeUrl from "@/assets/youtube.svg";
 import { ScheduledSession } from "@/constants/schedule";
+import { getTalkTitle } from "@/lib/getTalkTitle";
 import { Chip } from "./Chip";
 
 const getSessionColor = (session: ScheduledSession) => {
@@ -43,6 +44,7 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
   const t = useTranslations("schedule.kind");
   const tKind = useTranslations("talks.kind");
   const tTrack = useTranslations("talks.track");
+  const locale = useLocale();
 
   return (
     <div
@@ -76,7 +78,7 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
           </div>
           <div className="font-bold text-md">
             {session.kind === "streaming" ? `(${t("streaming")}) ` : ""}
-            {session.talk.title}
+            {getTalkTitle(session.talk, locale)}
           </div>
           <ul className="flex flex-col gap-1">
             {session.talk.speakers.map((speaker) => (

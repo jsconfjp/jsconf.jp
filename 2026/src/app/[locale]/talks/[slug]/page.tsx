@@ -8,6 +8,7 @@ import { TalkSlug } from "@/constants/talks";
 import { LOCALES } from "@/i18n/constants";
 import { ensureLocale } from "@/i18n/ensureLocale";
 import { findTalkSession } from "@/lib/findTalkSession";
+import { getTalkTitle } from "@/lib/getTalkTitle";
 import { getTalkSessions } from "@/lib/getTalkSessions";
 import { getOgImagePath, getTalkOgImageId } from "@/lib/og/url";
 
@@ -36,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const session = findTalkSession(slug as unknown as TalkSlug);
 
   return {
-    title: session.talk.title,
+    title: getTalkTitle(session.talk, locale),
     description: locale === "ja" ? (session.talk.descriptionJa ?? session.talk.description) : session.talk.description,
     openGraph: {
       images: [
@@ -65,7 +66,7 @@ export default async function Page({ params }: Props) {
     locale === "ja" ? (session.talk.descriptionJa ?? session.talk.description) : session.talk.description;
 
   return (
-    <PageContainer title={session.talk.title} centerizeTitle={false}>
+    <PageContainer title={getTalkTitle(session.talk, locale)} centerizeTitle={false}>
       <div>
         <time>
           {session.startTime}-{session.endTime}
@@ -83,7 +84,7 @@ export default async function Page({ params }: Props) {
             width="560"
             height="315"
             src={session.talk.recordingUrl}
-            title={session.talk.title}
+            title={getTalkTitle(session.talk, locale)}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
