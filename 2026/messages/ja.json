@@ -5,7 +5,17 @@
     "eventDate": "2026年11月22日（日）",
     "companyAddress": "〒210-0024 神奈川県川崎市川崎区日進町27-7-903",
     "copyright": "© 2019-2026 JSConf JP",
-    "previousYearHighlights": "去年のハイライト"
+    "previousYearHighlights": "去年のハイライト",
+    "ticketNotice": {
+      "title": "チケット販売のお知らせ",
+      "body": "チケットは 2026年10月1日（木）0:00（JST）より販売開始予定です。",
+      "sponsor": "スポンサー企業は一般販売の開始前に参加チケットを確保できます。チケットの早期確保をご希望の企業は、<link>スポンサー応募フォーム</link>から通常スポンサープランをお選びください。",
+      "countdown": {
+        "label": "販売開始まで",
+        "days": "{count}日",
+        "open": "チケット販売中です"
+      }
+    }
   },
   "navigation": {
     "speakers": "スピーカー",
@@ -46,7 +56,8 @@
       "closed": "クローズ",
       "break": "休憩",
       "closing": "クロージング",
-      "networking": "懇親会"
+      "networking": "懇親会",
+      "tba": "調整中"
     }
   },
   "talks": {

@@ -25,7 +25,8 @@
     "react-dom": "19.3.0",
     "react-markdown": "10.1.0",
     "remark-frontmatter": "5.0.0",
-    "remark-gfm": "4.0.1"
+    "remark-gfm": "4.0.1",
+    "temporal-polyfill": "1.0.5"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "16.3.5",

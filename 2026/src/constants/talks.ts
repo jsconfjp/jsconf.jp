@@ -14,11 +14,13 @@ type Speaker = {
   name: string;
   avatarUrl: string | StaticImageData;
   bio: string; // markdown
+  bioJa?: string; // markdown
 };
 
 export type Talk = {
   slug: string;
   title: string;
+  titleJa?: string;
   scheduleLabel?: string;
   description: string; // markdown
   descriptionJa?: string; // markdown
@@ -39,6 +41,7 @@ const makeTalk = (
   kind: Kind,
   language: Language,
   speakerNames: readonly string[] = [],
+  titleJa?: string,
 ): Talk => {
   const talkDescription = talkDescriptions[title as keyof typeof talkDescriptions];
   const description = talkDescription?.en || talkDescription?.ja || "";
@@ -47,6 +50,7 @@ const makeTalk = (
   return {
     slug,
     title,
+    titleJa,
     scheduleLabel: speakerNames.length > 0 ? `${title} by ${speakerNames.join(" & ")}` : title,
     description,
     descriptionJa,
@@ -62,6 +66,7 @@ const makeTalk = (
         name,
         avatarUrl,
         bio: speakerProfile?.bio ?? "",
+        bioJa: speakerProfile && "bioJa" in speakerProfile ? speakerProfile.bioJa : undefined,
       };
     }),
   };
@@ -121,9 +126,7 @@ export const TALKS = [
   makeTalk("tomikawa-sotaro", "JavaScriptはシングルバイナリの夢を見るか", "LT", "Japanese", ["TOMIKAWA Sotaro"]),
   makeTalk("syumai", "Math.sumPreciseから学ぶ、ECMAScript仕様の数値の種類", "LT", "Japanese", ["syumai"]),
   makeTalk("yebis0942", "esmeta: ECMAScript仕様書を読む機械", "LT", "Japanese", ["yebis0942"]),
-  makeTalk("daigo-fujiwara-smith", "Scroll-Driven 3D: Storytelling with React Three Fiber", "LT", "English", [
-    "Daigo Fujiwara-Smith",
-  ]),
+  makeTalk("jiko21", "Objectの比較と同一性を考える — ComparisonsからCompositesまで", "LT", "Japanese", ["jiko21"]),
   makeTalk("kazuya-serizawa", "Promiseの向こう側へコンテキストを届ける ― proposal-async-context", "LT", "Japanese", [
     "Kazuya Serizawa",
   ]),
@@ -135,18 +138,18 @@ export const TALKS = [
     "Japanese",
     ["池奥裕太"],
   ),
-  makeTalk("keynote-1-tbd", "基調講演1: TBD", "keynote", "Japanese"),
+  makeTalk(
+    "brendan-eich",
+    "An Interview with Brendan Eich \u2014 30 Years of JavaScript: Past, Present, and Future",
+    "keynote",
+    "English",
+    ["Brendan Eich"],
+    "Brendan Eich インタビュー — JavaScript生誕30周年の振り返りとこれから",
+  ),
   makeSponsorTalk("miidas-sponsor-lt-1", "ミイダス社 LT", "sponsor LT", "Japanese", "ミイダス株式会社"),
   makeSponsorTalk("anotherball-sponsor-lt-1", "AnotherBall Pte Ltd LT", "sponsor LT", "English", "AnotherBall Pte Ltd"),
   makeSponsorTalk("cybozu-sponsor-lt-1", "サイボウズ株式会社 LT", "sponsor LT", "Japanese", "サイボウズ株式会社"),
   makeSponsorTalk("mcd3-sponsor-lt", "MCD3株式会社 LT", "sponsor LT", "Japanese", "MCD3株式会社"),
-  makeTalk(
-    "devlin-duldulao",
-    "DaloyJS - The first TypeScript REST API framework built for secure AI-assisted services",
-    "session",
-    "English",
-    ["Devlin Duldulao"],
-  ),
   makeTalk("nolu", "CVEから紐解くJIT Exploit", "session", "Japanese", ["nolu"]),
   makeTalk("neciu-dan", "How NOT to Use TanStack Query", "session", "English", ["Neciu Dan"]),
   makeSponsorTalk("miidas-sponsor-session", "ミイダス株式会社", "sponsor session", "Japanese", "ミイダス株式会社"),
@@ -172,8 +175,8 @@ export const TALKS = [
   ),
   makeTalk("marco-ippolito", "The Missing Piece in Node.js Configuration", "session", "English", ["Marco Ippolito"]),
   makeTalk("uhyo", "AIフレンドリーなGenerative UIをJSXで", "session", "Japanese", ["うひょ"]),
-  makeTalk("maya-shavin", "Frontend Beyond the Screen: Where AI Agent Is A User", "session", "English", [
-    "Maya Shavin",
+  makeTalk("hong-minhee", "Oseo：SBCLスタイルのJavaScript/TypeScript AOTコンパイラ", "session", "Japanese", [
+    "洪 民憙",
   ]),
   makeSponsorTalk("cybozu-sponsor-session", "サイボウズ株式会社", "sponsor session", "Japanese", "サイボウズ株式会社"),
   makeTalk("wataru-morita", "Webメール開発を大幅に変えたJMAPというゲームチェンジャー", "session", "Japanese", [
@@ -186,11 +189,17 @@ export const TALKS = [
   makeSponsorTalk("arkor-sponsor-session", "Arkor", "sponsor session", "English", "Arkor"),
   makeTalk("ondrej-zara", "You are never going to do these 10 JS mistakes", "session", "English", ["Ondřej Žára"]),
   makeTalk("eiji", "ブラウザで変わるID連携 — EVPとFedCMが描く未来の認証", "session", "Japanese", ["えーじ"]),
+  makeTalk(
+    "yuji-yamamoto",
+    "JS･WasmにもあるRustのアレ - コンポーネント間でやりとりするオブジェクトを管理する",
+    "session",
+    "Japanese",
+    ["山本悠滋"],
+  ),
   makeTalk("kevin-uehara", "WebMCP and WebAI: Exploring native AI tools in Chrome", "session", "English", [
     "Kevin Uehara",
   ]),
   makeSponsorTalk("dwango-sponsor-session", "株式会社ドワンゴ", "sponsor session", "Japanese", "株式会社ドワンゴ"),
-  makeTalk("brandon-dail", "Design Systems Engineering at Discord", "session", "English", ["Brandon Dail"]),
   makeTalk("roland-richard", "Node.jsで覗くV8バイトコード：3つのJavaScript実験", "session", "Japanese", [
     "ローランド リチャード",
   ]),
