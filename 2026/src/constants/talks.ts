@@ -158,7 +158,7 @@ export const TALKS = [
   ]),
   makeTalk(
     "yuta-nishi",
-    "V8のArray.prototype.flatを最大約5倍速くするまでと、巨大OSSへの大規模コミットの道のり",
+    "V8のArray.prototype.flatを最大約20倍速くするまでと、巨大OSSへの大規模コミットの道のり",
     "session",
     "Japanese",
     ["Yuta Nishi"],
