@@ -20,6 +20,7 @@ type Speaker = {
 export type Talk = {
   slug: string;
   title: string;
+  titleJa?: string;
   scheduleLabel?: string;
   description: string; // markdown
   descriptionJa?: string; // markdown
@@ -40,6 +41,7 @@ const makeTalk = (
   kind: Kind,
   language: Language,
   speakerNames: readonly string[] = [],
+  titleJa?: string,
 ): Talk => {
   const talkDescription = talkDescriptions[title as keyof typeof talkDescriptions];
   const description = talkDescription?.en || talkDescription?.ja || "";
@@ -48,6 +50,7 @@ const makeTalk = (
   return {
     slug,
     title,
+    titleJa,
     scheduleLabel: speakerNames.length > 0 ? `${title} by ${speakerNames.join(" & ")}` : title,
     description,
     descriptionJa,
@@ -135,7 +138,14 @@ export const TALKS = [
     "Japanese",
     ["池奥裕太"],
   ),
-  makeTalk("keynote-1-tbd", "基調講演1: TBD", "keynote", "Japanese"),
+  makeTalk(
+    "brendan-eich",
+    "An Interview with Brendan Eich \u2014 30 Years of JavaScript: Past, Present, and Future",
+    "keynote",
+    "English",
+    ["Brendan Eich"],
+    "Brendan Eich インタビュー — JavaScript生誕30周年の振り返りとこれから",
+  ),
   makeSponsorTalk("miidas-sponsor-lt-1", "ミイダス社 LT", "sponsor LT", "Japanese", "ミイダス株式会社"),
   makeSponsorTalk("anotherball-sponsor-lt-1", "AnotherBall Pte Ltd LT", "sponsor LT", "English", "AnotherBall Pte Ltd"),
   makeSponsorTalk("cybozu-sponsor-lt-1", "サイボウズ株式会社 LT", "sponsor LT", "Japanese", "サイボウズ株式会社"),

@@ -146,5 +146,9 @@
   "Objectの比較と同一性を考える — ComparisonsからCompositesまで": {
     "en": "",
     "ja": "現在のJavaScriptでは、Object同士をその内容に基づいて比較する標準的な手段は提供されておらず、等値比較ではObjectの同一性に基づいて判定されます。\n\nそのため、Objectの内容を比較する処理を自前で実装したり、MapのkeyやSetの値として利用する際に、プリミティブとは異なる挙動を意識したりする必要があります。\n\nこうした問題に関連して、近年TC39ではComparisonsやCompositesといったProposalが議論されています。これらはObjectの比較やMap、Setでの扱いなど、互いに近い領域の課題に関わるProposalですが、その対象やアプローチは異なります。\n\nこのLTでは、ComparisonsとCompositesを紹介しながら、それぞれがObjectの比較や同一性に関わる課題にどのようなアプローチを取っているのかを対比的に説明します。"
+  },
+  "An Interview with Brendan Eich — 30 Years of JavaScript: Past, Present, and Future": {
+    "en": "An interview with Brendan Eich, the creator of JavaScript. From the untold story of its creation in 1995, through 30 years of standardization and evolution, to where JavaScript and the web are headed in the age of AI. (Pre-recorded appearance)",
+    "ja": "JavaScriptの生みの親、Brendan Eich氏へのインタビューをお届けします。1995年の誕生秘話から、標準化と進化をめぐる30年の歩み、そしてAI時代のJavaScriptとWebのこれからまで、じっくり伺います。（事前収録でのご出演です）"
   }
 }

@@ -6,6 +6,7 @@ import { StaticImageData } from "next/image";
 import React from "react";
 import en from "@/../messages/en.json";
 import { ScheduledSession } from "@/constants/schedule";
+import { getTalkTitle } from "@/lib/getTalkTitle";
 import { Chip } from "./Chip";
 import { Logo } from "./Logo";
 import { Template } from "./Template";
@@ -21,6 +22,7 @@ const IMAGE_MIME_TYPES: Record<string, string> = {
 
 type Props = {
   session: ScheduledSession & { kind: "talk" };
+  locale: string;
 };
 
 const toImageSrc = (src: string | StaticImageData): string | null => {
@@ -53,7 +55,7 @@ const toImageSrc = (src: string | StaticImageData): string | null => {
   throw new Error(`Unsupported image format: ${src.src}`);
 };
 
-export function TalkThumbnail({ session }: Props) {
+export function TalkThumbnail({ session, locale }: Props) {
   const { talk } = session;
 
   return (
@@ -61,7 +63,7 @@ export function TalkThumbnail({ session }: Props) {
       <div tw="flex-1 flex flex-col rounded-xl bg-white shadow-md">
         <main tw="flex-1 px-16 flex flex-col items-center justify-center">
           <h1 tw="text-7xl font-bold" style={{ lineHeight: "1.2" }}>
-            {talk.title}
+            {getTalkTitle(talk, locale)}
           </h1>
           <div tw="flex items-center" style={{ gap: 8 }}>
             {session.track !== "all" && <Chip track={session.track}>Track {session.track}</Chip>}

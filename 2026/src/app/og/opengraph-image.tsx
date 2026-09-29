@@ -53,5 +53,5 @@ export default async function Image({ id }: Props) {
   setRequestLocale(locale);
 
   const session = findTalkSession(rawSlug as TalkSlug);
-  return generateImage(<TalkThumbnail session={session} />);
+  return generateImage(<TalkThumbnail session={session} locale={locale} />);
 }

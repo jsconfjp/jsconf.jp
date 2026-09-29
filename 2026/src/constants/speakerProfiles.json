@@ -155,5 +155,8 @@
     "bio": "Josh Junon is an American professional software engineer and hobbyist electronics engineer. He has more than twenty years of programming experience, including 17 years in the software industry, and has maintained popular open-source projects since 2011. His work includes Node.js's Chalk, Debug, and Color libraries, better-exceptions for Python, and, most recently, the Oro Operating System.",
     "bioJa": "米国出身のソフトウェアエンジニア。趣味で電子工作（ハードウェア開発）も手がけている。プログラミング歴は20年以上、うち17年はソフトウェア業界での実務経験で、2011年から広く使われているオープンソースプロジェクトのメンテナーを務めている。代表的な仕事に、Node.js エコシステムで定番の Chalk・Debug・Color といったライブラリ、Python 向けの better-exceptions、そして直近では自作OS「Oro Operating System」がある。",
     "avatarPath": "/2026/speaker/josh-junon.jpg"
+  },
+  "Brendan Eich": {
+    "bio": ""
   }
 }
