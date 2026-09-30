@@ -21,7 +21,7 @@ export function SpeakerGrid({ speakers }: Props) {
               {speaker.type === "speaker" ? (
                 <Image src={speaker.avatarUrl} alt={`${speaker.name}'s avatar`} fill className="object-cover" />
               ) : speaker.logoUrl ? (
-                <Image src={speaker.logoUrl} alt={`${speaker.name}'s avatar`} fill className="object-cover" />
+                <Image src={speaker.logoUrl} alt={`${speaker.name}'s logo`} fill className="object-cover" />
               ) : (
                 <div className="flex items-center justify-center text-center font-semibold">{speaker.name}</div>
               )}
