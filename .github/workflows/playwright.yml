@@ -183,7 +183,7 @@ jobs:
                   .replaceAll("<", "&lt;")
                   .replaceAll(">", "&gt;")
                   .replaceAll('"', "&quot;");
-              screenshots = changed
+              const rows = changed
                 .map((uri) => {
                   const pathname = new URL(uri, "https://example.invalid").pathname;
                   const route = pathname.slice("/2026".length).replace(/\/$/, "") || "/";
@@ -191,18 +191,14 @@ jobs:
                   const imageUrl = imageUrlByFilename.get(`${slug}.png`);
                   if (!imageUrl) throw new Error(`No screenshot was generated for ${uri}`);
                   const safeUri = escapeHtml(uri);
-                  const tableUri = uri.replaceAll("`", "\\`").replaceAll("|", "\\|");
-                  return [
-                    "<details>",
-                    `<summary>${safeUri}</summary>`,
-                    "",
-                    "| URI | Screenshot |",
-                    "| :-- | :-- |",
-                    `| \`${tableUri}\` | ![${slug}](${imageUrl}) |`,
-                    "</details>",
-                  ].join("\n");
-                })
-                .join("\n\n");
+                  return `<tr><td><code>${safeUri}</code></td><td><details><summary>${safeUri}</summary><br /><img src="${imageUrl}" alt="${safeUri}" /></details></td></tr>`;
+                });
+              screenshots = [
+                "<table>",
+                "<thead><tr><th>URI</th><th>Screenshot</th></tr></thead>",
+                `<tbody>${rows.join("")}</tbody>`,
+                "</table>",
+              ].join("\n");
             }
 
             const result = count > 10
