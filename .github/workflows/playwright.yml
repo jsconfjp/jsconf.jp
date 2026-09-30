@@ -2,7 +2,7 @@ name: screenshots
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, test/update-test-performance]
 
 permissions:
   contents: read
