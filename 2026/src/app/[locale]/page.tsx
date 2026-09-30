@@ -7,7 +7,7 @@ import { SponsorGrid } from "@/components/SponsorGrid";
 import { Team } from "@/components/Team";
 import { TicketCountdown } from "@/components/TicketCountdown";
 import { Venue } from "@/components/Venue";
-import { SPONSORSHIP_URL } from "@/constants/external";
+import { SPONSORSHIP_URL, TICKETS_URL } from "@/constants/external";
 import { SPONSORS } from "@/constants/sponsors";
 import { ensureLocale } from "@/i18n/ensureLocale";
 
@@ -48,6 +48,17 @@ export default async function Page({ params }: Props) {
           <h2 className="text-lg md:text-xl font-bold">{t("about.ticketNotice.title")}</h2>
           <TicketCountdown />
           <p className="mt-1 text-base md:text-lg">{t("about.ticketNotice.body")}</p>
+          <div className="mt-4 flex justify-center">
+            <Button
+              href={TICKETS_URL}
+              target="_blank"
+              variant="primary"
+              size="lg"
+              endIcon={<ArrowTopRightOnSquareIcon className="w-5 h-5" />}
+            >
+              {t("navigation.tickets")}
+            </Button>
+          </div>
           <p className="mt-3 text-sm md:text-base">
             {t.rich("about.ticketNotice.sponsor", {
               link: (chunks) => (
