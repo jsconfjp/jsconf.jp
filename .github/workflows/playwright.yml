@@ -2,7 +2,7 @@ name: screenshots
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, test/update-test-performance]
 
 concurrency:
   group: screenshots-${{ github.event.pull_request.number || github.ref }}
