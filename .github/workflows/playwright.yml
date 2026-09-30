@@ -4,37 +4,154 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  contents: read
+  issues: write
+
 jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.base.ref }}
+          fetch-depth: 0
+
+      - name: Pull latest base branch
+        env:
+          BASE_REF: ${{ github.event.pull_request.base.ref }}
+        run: git pull --ff-only origin "$BASE_REF"
+
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: 2026/.nvmrc
           cache: npm
           cache-dependency-path: 2026/package-lock.json
-      - run: cd 2026 && npm ci
-      - run: cd 2026 && npm run dev &
+
+      - name: Install base dependencies
+        run: cd 2026 && npm ci
+
+      - name: Build base
+        run: |
+          cd 2026
+          npm run build:compare
+          mkdir -p sandbox
+          rm -rf sandbox/base
+          mv out sandbox/base
+
+      - name: Preserve base export before checkout
         env:
-          PORT: 3001
-      - run: cd 2026 && npx playwright install --with-deps
-      - run: cd 2026 && npx playwright test
-      - run: cd 2026 && npm run fetch-og-images
+          BASE_EXPORT_DIR: ${{ runner.temp }}/jsconf-2026-base-export
+        run: |
+          rm -rf "$BASE_EXPORT_DIR"
+          mv 2026/sandbox/base "$BASE_EXPORT_DIR"
+
+      - name: Checkout latest pull request branch
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          git fetch --no-tags origin "refs/pull/${PR_NUMBER}/head"
+          git checkout -B "pr-${PR_NUMBER}-head" FETCH_HEAD
+          git pull --ff-only origin "refs/pull/${PR_NUMBER}/head"
+          git config --local --unset-all http.https://github.com/.extraheader || true
+
+      - name: Restore base export
+        env:
+          BASE_EXPORT_DIR: ${{ runner.temp }}/jsconf-2026-base-export
+        run: |
+          mkdir -p 2026/sandbox
+          mv "$BASE_EXPORT_DIR" 2026/sandbox/base
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: 2026/.nvmrc
+          cache: npm
+          cache-dependency-path: 2026/package-lock.json
+
+      - name: Install pull request dependencies
+        run: cd 2026 && npm ci
+
+      - name: Build pull request branch
+        run: |
+          cd 2026
+          npm run build:compare
+          mkdir -p sandbox
+          rm -rf sandbox/head
+          mv out sandbox/head
+
+      - name: Compare exported sites
+        id: compare
+        run: |
+          cd 2026
+          npm run --silent compare -- sandbox/base sandbox/head | tee sandbox/compare.json
+          node --input-type=module -e '
+            import { appendFileSync, readFileSync } from "node:fs";
+            const { changed } = JSON.parse(readFileSync("sandbox/compare.json", "utf8"));
+            appendFileSync(process.env.GITHUB_OUTPUT, `changed_count=${changed.length}\nchanged_uris=${JSON.stringify(changed)}\n`);
+            console.log(`Changed pages: ${changed.length}`);
+          '
+
+      - name: Capture changed Open Graph images
+        if: ${{ fromJSON(steps.compare.outputs.changed_count) > 0 && fromJSON(steps.compare.outputs.changed_count) <= 10 }}
+        env:
+          CHANGED_URIS_JSON: ${{ steps.compare.outputs.changed_uris }}
+        run: |
+          cd 2026
+          PORT=3001 npm run dev > sandbox/next-dev.log 2>&1 &
+          for attempt in $(seq 1 60); do
+            if curl --fail --silent --output /dev/null http://localhost:3001/2026/en; then
+              break
+            fi
+            if [ "$attempt" -eq 60 ]; then
+              cat sandbox/next-dev.log
+              exit 1
+            fi
+            sleep 2
+          done
+          npm run fetch-og-images
+
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        if: ${{ !cancelled() }}
+        id: upload
+        if: ${{ fromJSON(steps.compare.outputs.changed_count) > 0 && fromJSON(steps.compare.outputs.changed_count) <= 10 }}
         with:
           name: screenshots
-          path: 2026/screenshots/**/*
+          path: 2026/screenshots/ogp/*.png
           retention-days: 7
+
       - uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        if: ${{ success() && github.event_name == 'pull_request' }}
+        env:
+          CHANGED_URIS_JSON: ${{ steps.compare.outputs.changed_uris }}
+          CHANGED_COUNT: ${{ steps.compare.outputs.changed_count }}
         with:
           script: |
-            const url = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: `📦 Screenshots: [Download](${url})`
+            const marker = "<!-- jsconf-2026-visual-regression -->";
+            const changed = JSON.parse(process.env.CHANGED_URIS_JSON || "[]");
+            const count = Number(process.env.CHANGED_COUNT || 0);
+            const lines = changed.length
+              ? changed.map((uri) => `- \`${encodeURI(uri).replaceAll("`", "%60")}\``).join("\n")
+              : "変更されたページはありません。";
+            const artifactUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}#artifacts`;
+            const result = count > 10
+              ? `変更ページが ${count} 件あるため、スクリーンショットは撮影していません。確認対象 URI:\n\n${lines}`
+              : count > 0
+                ? `変更ページ: ${count} 件\n\n${lines}\n\n📦 [スクリーンショットをダウンロード](${artifactUrl})`
+                : `変更ページはありません。`;
+            const body = `${marker}\n${result}`;
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner,
+              repo,
+              issue_number,
+              per_page: 100,
             });
+            const previous = comments.find(
+              (comment) => comment.user?.type === "Bot" && comment.body?.includes(marker),
+            );
+            if (previous) {
+              await github.rest.issues.updateComment({ owner, repo, comment_id: previous.id, body });
+            } else {
+              await github.rest.issues.createComment({ owner, repo, issue_number, body });
+            }
