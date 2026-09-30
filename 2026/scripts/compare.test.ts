@@ -19,8 +19,18 @@ test("reports changed pages, including added and removed pages", async () => {
   await put(head, "en/new.html", "<h1>New</h1>");
   await put(base, "ja.html", "<h1>Same</h1>");
   await put(head, "ja.html", "<h1>Same</h1>");
+  await put(base, "404.html", "Old error page");
+  await put(head, "404.html", "New error page");
 
-  assert.deepEqual(compare(base, head), { changed: ["/en", "/en/new", "/en/old"] });
+  assert.deepEqual(compare(base, head), { changed: ["/2026/en", "/2026/en/new", "/2026/en/old"] });
+});
+
+test("rejects an export copied into a nested out directory", async () => {
+  const [base, head] = await fixture();
+  await put(base, "en.html", "<h1>Base</h1>");
+  await put(head, "out/index.html", "<h1>Head</h1>");
+
+  assert.throws(() => compare(base, head), /Nested out\/ directory/);
 });
 
 test("follows page assets without reporting unrelated changes", async () => {
@@ -36,7 +46,7 @@ test("follows page assets without reporting unrelated changes", async () => {
   await put(head, "bg.png", "after");
   await put(head, "unused.png", "unrelated");
 
-  assert.deepEqual(compare(base, head), { changed: ["/en"] });
+  assert.deepEqual(compare(base, head), { changed: ["/2026/en"] });
 });
 
 async function fixture(): Promise<[string, string]> {

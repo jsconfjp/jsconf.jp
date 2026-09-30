@@ -31,6 +31,8 @@ async function loadSite(path: string): Promise<ExportedSite> {
   if (!(await stat(root)).isDirectory()) throw new Error(`Not a directory: ${root}`);
   const files = new Map<string, string>();
   for (const file of await listFiles(root)) files.set(file, join(root, file));
+  if (files.has("out/index.html"))
+    throw new Error(`Nested out/ directory found in ${root}; pass the inner out/ directory`);
   return { root, files, digests: new Map() };
 }
 
@@ -101,11 +103,17 @@ async function dependencies(site: ExportedSite, page: string): Promise<Set<strin
 
 function pageUrl(file: string): string {
   const path = file.slice(0, -".html".length);
-  return path === "index" ? "/" : `/${path.replace(/\/index$/, "")}`;
+  // out/ の相対パスを、実際に公開される basePath 付きの URL パスへ変換する。
+  return path === "index" ? `${BASE_PATH}/` : `${BASE_PATH}/${path.replace(/\/index$/, "")}`;
 }
 
 async function changedPages(base: ExportedSite, head: ExportedSite): Promise<string[]> {
-  const pages = new Set([...base.files.keys(), ...head.files.keys()].filter((file) => file.endsWith(".html")));
+  // 404 と _not-found は通常のページ URL ではないので撮影対象から外す。
+  const pages = new Set(
+    [...base.files.keys(), ...head.files.keys()].filter(
+      (file) => file.endsWith(".html") && file !== "404.html" && file !== "_not-found.html",
+    ),
+  );
   const changed: string[] = [];
   for (const page of [...pages].sort()) {
     // HTML の差分には、ページ本文やハッシュ付きアセット URL の変更が含まれる。

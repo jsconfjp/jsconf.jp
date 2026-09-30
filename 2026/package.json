@@ -2,9 +2,11 @@
   "name": "2026",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:compare": "FIXED_BUILD_ID=compare next build",
     "start": "next start",
     "lint": "oxlint . --deny-warnings && npm run lint:tw",
     "lint:tw": "node scripts/tw-lint.mjs",
