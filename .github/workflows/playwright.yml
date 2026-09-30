@@ -29,10 +29,23 @@ jobs:
           cache: npm
           cache-dependency-path: 2026/package-lock.json
 
+      - name: Check base build:compare script
+        id: base_compare
+        working-directory: 2026
+        run: |
+          if node -e 'const scripts = require("./package.json").scripts ?? {}; process.exit(typeof scripts["build:compare"] === "string" && scripts["build:compare"].trim() ? 0 : 1)'; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::The base branch does not define build:compare; skipping screenshot comparison."
+          fi
+
       - name: Install base dependencies
+        if: ${{ steps.base_compare.outputs.available == 'true' }}
         run: cd 2026 && npm ci
 
       - name: Build base
+        if: ${{ steps.base_compare.outputs.available == 'true' }}
         run: |
           cd 2026
           npm run build:compare
@@ -41,6 +54,7 @@ jobs:
           mv out sandbox/base
 
       - name: Preserve base export before checkout
+        if: ${{ steps.base_compare.outputs.available == 'true' }}
         env:
           BASE_EXPORT_DIR: ${{ runner.temp }}/jsconf-2026-base-export
         run: |
@@ -48,6 +62,7 @@ jobs:
           mv 2026/sandbox/base "$BASE_EXPORT_DIR"
 
       - name: Checkout latest pull request branch
+        if: ${{ steps.base_compare.outputs.available == 'true' }}
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
@@ -57,6 +72,7 @@ jobs:
           git config --local --unset-all http.https://github.com/.extraheader || true
 
       - name: Restore base export
+        if: ${{ steps.base_compare.outputs.available == 'true' }}
         env:
           BASE_EXPORT_DIR: ${{ runner.temp }}/jsconf-2026-base-export
         run: |
@@ -64,15 +80,30 @@ jobs:
           mv "$BASE_EXPORT_DIR" 2026/sandbox/base
 
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        if: ${{ steps.base_compare.outputs.available == 'true' }}
         with:
           node-version-file: 2026/.nvmrc
           cache: npm
           cache-dependency-path: 2026/package-lock.json
 
+      - name: Check pull request build:compare script
+        id: head_compare
+        if: ${{ steps.base_compare.outputs.available == 'true' }}
+        working-directory: 2026
+        run: |
+          if node -e 'const scripts = require("./package.json").scripts ?? {}; process.exit(typeof scripts["build:compare"] === "string" && scripts["build:compare"].trim() ? 0 : 1)'; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::The pull request branch does not define build:compare; skipping screenshot comparison."
+          fi
+
       - name: Install pull request dependencies
+        if: ${{ steps.base_compare.outputs.available == 'true' && steps.head_compare.outputs.available == 'true' }}
         run: cd 2026 && npm ci
 
       - name: Build pull request branch
+        if: ${{ steps.base_compare.outputs.available == 'true' && steps.head_compare.outputs.available == 'true' }}
         run: |
           cd 2026
           npm run build:compare
@@ -82,6 +113,7 @@ jobs:
 
       - name: Compare exported sites
         id: compare
+        if: ${{ steps.base_compare.outputs.available == 'true' && steps.head_compare.outputs.available == 'true' }}
         run: |
           cd 2026
           npm run --silent compare -- sandbox/base sandbox/head | tee sandbox/compare.json
@@ -93,7 +125,7 @@ jobs:
           '
 
       - name: Capture changed Open Graph images
-        if: ${{ fromJSON(steps.compare.outputs.changed_count) > 0 && fromJSON(steps.compare.outputs.changed_count) <= 10 }}
+        if: ${{ steps.base_compare.outputs.available == 'true' && steps.head_compare.outputs.available == 'true' && fromJSON(steps.compare.outputs.changed_count) > 0 && fromJSON(steps.compare.outputs.changed_count) <= 10 }}
         env:
           CHANGED_URIS_JSON: ${{ steps.compare.outputs.changed_uris }}
         run: |
@@ -112,7 +144,7 @@ jobs:
           npm run fetch-og-images
 
       - uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
-        if: ${{ success() && github.event_name == 'pull_request' }}
+        if: ${{ success() && github.event_name == 'pull_request' && steps.base_compare.outputs.available == 'true' && steps.head_compare.outputs.available == 'true' }}
         env:
           CHANGED_URIS_JSON: ${{ steps.compare.outputs.changed_uris }}
           CHANGED_COUNT: ${{ steps.compare.outputs.changed_count }}
