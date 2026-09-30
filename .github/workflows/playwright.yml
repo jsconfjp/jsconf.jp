@@ -135,7 +135,7 @@ jobs:
               const screenshotDirectory = path.join(process.env.GITHUB_WORKSPACE, "2026", "screenshots", "ogp");
               const imageFiles = fs
                 .readdirSync(screenshotDirectory)
-                .filter((filename) => /^[a-z0-9-]+\.png$/.test(filename))
+                .filter((filename) => /^[a-z0-9-]+\.png$/i.test(filename))
                 .sort();
               if (imageFiles.length === 0) throw new Error("No Open Graph screenshots were generated");
 
@@ -171,11 +171,36 @@ jobs:
               });
               assetBranch = `visual-regression/pr-${issue_number}/run-${context.runId}-attempt-${process.env.GITHUB_RUN_ATTEMPT || "1"}`;
               await github.rest.git.createRef({ owner, repo, ref: `refs/heads/${assetBranch}`, sha: commit.sha });
-              screenshots = imageFiles
-                .map((filename) => {
-                  const alt = filename.slice(0, -4).replaceAll("-", " ");
-                  const url = `https://raw.githubusercontent.com/${owner}/${repo}/${commit.sha}/pr-${issue_number}/${filename}`;
-                  return `![${alt}](${url})`;
+              const imageUrlByFilename = new Map(
+                imageFiles.map((filename) => [
+                  filename,
+                  `https://raw.githubusercontent.com/${owner}/${repo}/${commit.sha}/pr-${issue_number}/${filename}`,
+                ]),
+              );
+              const escapeHtml = (value) =>
+                value
+                  .replaceAll("&", "&amp;")
+                  .replaceAll("<", "&lt;")
+                  .replaceAll(">", "&gt;")
+                  .replaceAll('"', "&quot;");
+              screenshots = changed
+                .map((uri) => {
+                  const pathname = new URL(uri, "https://example.invalid").pathname;
+                  const route = pathname.slice("/2026".length).replace(/\/$/, "") || "/";
+                  const slug = route === "/" ? "top" : route.split("/").filter(Boolean).join("-");
+                  const imageUrl = imageUrlByFilename.get(`${slug}.png`);
+                  if (!imageUrl) throw new Error(`No screenshot was generated for ${uri}`);
+                  const safeUri = escapeHtml(uri);
+                  const tableUri = uri.replaceAll("`", "\\`").replaceAll("|", "\\|");
+                  return [
+                    "<details>",
+                    `<summary>${safeUri}</summary>`,
+                    "",
+                    "| URI | Screenshot |",
+                    "| :-- | :-- |",
+                    `| \`${tableUri}\` | ![${slug}](${imageUrl}) |`,
+                    "</details>",
+                  ].join("\n");
                 })
                 .join("\n\n");
             }
@@ -183,7 +208,7 @@ jobs:
             const result = count > 10
               ? `変更ページが ${count} 件あるため、スクリーンショットは撮影していません。確認対象 URI:\n\n${lines}`
               : count > 0
-                ? `変更ページ: ${count} 件\n\n${lines}\n\n### スクリーンショット\n\n${screenshots}`
+                ? `変更ページ: ${count} 件\n\n${screenshots}`
                 : `変更ページはありません。`;
             const body = `${marker}\n${result}`;
             const comments = await github.paginate(github.rest.issues.listComments, {
