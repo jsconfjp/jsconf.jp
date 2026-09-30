@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   basePath: "/2026",
   pageExtensions: ["ts", "tsx", "md"],
   output: "export",
+  ...(process.env.VRT_BUILD_ID ? { generateBuildId: async () => process.env.VRT_BUILD_ID! } : {}),
   outputFileTracingRoot: process.cwd(),
   images: {
     unoptimized: true,
