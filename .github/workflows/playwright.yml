@@ -4,10 +4,6 @@ on:
   pull_request:
     branches: [main, test/update-test-performance]
 
-permissions:
-  contents: read
-  issues: write
-
 jobs:
   test:
     timeout-minutes: 60
