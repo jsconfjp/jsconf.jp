@@ -4,6 +4,10 @@ on:
   pull_request:
     branches: [main, test/update-test-performance]
 
+concurrency:
+  group: screenshots-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
 jobs:
   test:
     timeout-minutes: 60
@@ -107,14 +111,6 @@ jobs:
           done
           npm run fetch-og-images
 
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        id: upload
-        if: ${{ fromJSON(steps.compare.outputs.changed_count) > 0 && fromJSON(steps.compare.outputs.changed_count) <= 10 }}
-        with:
-          name: screenshots
-          path: 2026/screenshots/ogp/*.png
-          retention-days: 7
-
       - uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         if: ${{ success() && github.event_name == 'pull_request' }}
         env:
@@ -122,21 +118,74 @@ jobs:
           CHANGED_COUNT: ${{ steps.compare.outputs.changed_count }}
         with:
           script: |
+            const fs = require("node:fs");
+            const path = require("node:path");
             const marker = "<!-- jsconf-2026-visual-regression -->";
             const changed = JSON.parse(process.env.CHANGED_URIS_JSON || "[]");
             const count = Number(process.env.CHANGED_COUNT || 0);
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
             const lines = changed.length
               ? changed.map((uri) => `- \`${encodeURI(uri).replaceAll("`", "%60")}\``).join("\n")
               : "変更されたページはありません。";
-            const artifactUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}#artifacts`;
+
+            let assetBranch;
+            let screenshots = "";
+            if (count > 0 && count <= 10) {
+              const screenshotDirectory = path.join(process.env.GITHUB_WORKSPACE, "2026", "screenshots", "ogp");
+              const imageFiles = fs
+                .readdirSync(screenshotDirectory)
+                .filter((filename) => /^[a-z0-9-]+\.png$/.test(filename))
+                .sort();
+              if (imageFiles.length === 0) throw new Error("No Open Graph screenshots were generated");
+
+              const treeEntries = [];
+              for (const filename of imageFiles) {
+                const filePath = path.join(screenshotDirectory, filename);
+                const file = fs.readFileSync(filePath);
+                if (file.length > 10 * 1024 * 1024) throw new Error(`Screenshot is too large: ${filename}`);
+                if (file.subarray(0, 8).toString("hex") !== "89504e470d0a1a0a") {
+                  throw new Error(`Screenshot is not a PNG: ${filename}`);
+                }
+                const { data: blob } = await github.rest.git.createBlob({
+                  owner,
+                  repo,
+                  content: file.toString("base64"),
+                  encoding: "base64",
+                });
+                treeEntries.push({
+                  path: `pr-${issue_number}/${filename}`,
+                  mode: "100644",
+                  type: "blob",
+                  sha: blob.sha,
+                });
+              }
+
+              const { data: tree } = await github.rest.git.createTree({ owner, repo, tree: treeEntries });
+              const { data: commit } = await github.rest.git.createCommit({
+                owner,
+                repo,
+                message: `chore: publish screenshots for PR #${issue_number}`,
+                tree: tree.sha,
+                parents: [],
+              });
+              assetBranch = `visual-regression/pr-${issue_number}/run-${context.runId}-attempt-${process.env.GITHUB_RUN_ATTEMPT || "1"}`;
+              await github.rest.git.createRef({ owner, repo, ref: `refs/heads/${assetBranch}`, sha: commit.sha });
+              screenshots = imageFiles
+                .map((filename) => {
+                  const alt = filename.slice(0, -4).replaceAll("-", " ");
+                  const url = `https://raw.githubusercontent.com/${owner}/${repo}/${commit.sha}/pr-${issue_number}/${filename}`;
+                  return `![${alt}](${url})`;
+                })
+                .join("\n\n");
+            }
+
             const result = count > 10
               ? `変更ページが ${count} 件あるため、スクリーンショットは撮影していません。確認対象 URI:\n\n${lines}`
               : count > 0
-                ? `変更ページ: ${count} 件\n\n${lines}\n\n📦 [スクリーンショットをダウンロード](${artifactUrl})`
+                ? `変更ページ: ${count} 件\n\n${lines}\n\n### スクリーンショット\n\n${screenshots}`
                 : `変更ページはありません。`;
             const body = `${marker}\n${result}`;
-            const { owner, repo } = context.repo;
-            const issue_number = context.issue.number;
             const comments = await github.paginate(github.rest.issues.listComments, {
               owner,
               repo,
@@ -150,4 +199,20 @@ jobs:
               await github.rest.issues.updateComment({ owner, repo, comment_id: previous.id, body });
             } else {
               await github.rest.issues.createComment({ owner, repo, issue_number, body });
+            }
+
+            const refs = await github.paginate(github.rest.git.listMatchingRefs, {
+              owner,
+              repo,
+              ref: `heads/visual-regression/pr-${issue_number}/`,
+            });
+            const currentRef = assetBranch ? `refs/heads/${assetBranch}` : undefined;
+            const obsoleteRefs = refs.filter(({ ref }) => ref !== currentRef);
+            const cleanup = await Promise.allSettled(
+              obsoleteRefs.map(({ ref }) =>
+                github.rest.git.deleteRef({ owner, repo, ref: ref.replace(/^refs\/heads\//, "") }),
+              ),
+            );
+            for (const result of cleanup) {
+              if (result.status === "rejected") console.warn("Could not remove an old screenshot branch", result.reason);
             }
