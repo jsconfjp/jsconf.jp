@@ -157,6 +157,8 @@
     "avatarPath": "/2026/speaker/josh-junon.jpg"
   },
   "Brendan Eich": {
-    "bio": ""
+    "bio": "Brendan Eich, CEO and co-founder of Brave, and creator of JavaScript\n\nBrendan is the co-founder and CEO of Brave, the privacy-preserving browser and search engine. He previously served as CTO, then CEO of the Mozilla Corporation. While at Mozilla, he helped launch the award-winning Firefox browser. He is also the creator of JavaScript, the Internet's most widely used programming language.",
+    "bioJa": "ブレンダン・アイク（Brendan Eich） — [Brave](https://brave.com/ja/)のCEO兼共同創業者、JavaScriptの生みの親\n\nブレンダンは、プライバシーを保護するブラウザおよび検索エンジンであるBraveの共同創業者兼CEOです。以前はMozilla CorporationでCTOを務め、その後CEOを務めました。Mozilla在籍中には、数々の賞を受賞したFirefoxブラウザの立ち上げに貢献しました。また、インターネットで最も広く使われているプログラミング言語であるJavaScriptの生みの親でもあります。",
+    "avatarPath": "/2026/speaker/brendan-eich.jpg"
   }
 }
