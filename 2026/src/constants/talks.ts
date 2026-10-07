@@ -210,7 +210,7 @@ export const TALKS = [
     "anotherball-sponsor-lt-1",
     "AnotherBall Pte Ltd LT",
     "sponsor LT",
-    "English",
+    "Japanese",
     "AnotherBall Pte Ltd",
   ),
   makeSponsorTalk(
