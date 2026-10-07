@@ -1,8 +1,9 @@
 import clsx from "clsx";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import youtubeUrl from "@/assets/youtube.svg";
 import { ScheduledSession } from "@/constants/schedule";
+import { getTalkTitle } from "@/lib/getTalkTitle";
 import { Chip } from "./Chip";
 
 const getSessionColor = (session: ScheduledSession) => {
@@ -26,6 +27,16 @@ const getSessionColor = (session: ScheduledSession) => {
     case "break":
     case "closed":
       return "bg-slate-100/80 border-slate-400 border-dashed";
+    case "tba":
+      return session.track === "A"
+        ? "bg-track-a/20 border-track-a border-dashed"
+        : session.track === "B"
+          ? "bg-track-b/20 border-track-b border-dashed"
+          : session.track === "C"
+            ? "bg-track-c/20 border-track-c border-dashed"
+            : session.track === "D"
+              ? "bg-track-d/20 border-track-d border-dashed"
+              : "bg-slate-100/80 border-slate-400 border-dashed";
   }
 };
 
@@ -33,15 +44,14 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
   const t = useTranslations("schedule.kind");
   const tKind = useTranslations("talks.kind");
   const tTrack = useTranslations("talks.track");
+  const locale = useLocale();
 
   return (
     <div
       className={clsx(
         "py-2 px-4 rounded-sm border-2 h-full flex flex-col gap-1 justify-start text-wrap",
         getSessionColor(session),
-        session.kind === "talk"
-          ? "cursor-pointer hover:shadow-md"
-          : "cursor-auto",
+        session.kind === "talk" ? "cursor-pointer hover:shadow-md" : "cursor-auto",
       )}
     >
       {session.kind === "talk" || session.kind === "streaming" ? (
@@ -68,7 +78,7 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
           </div>
           <div className="font-bold text-md">
             {session.kind === "streaming" ? `(${t("streaming")}) ` : ""}
-            {session.talk.title}
+            {getTalkTitle(session.talk, locale)}
           </div>
           <ul className="flex flex-col gap-1">
             {session.talk.speakers.map((speaker) => (

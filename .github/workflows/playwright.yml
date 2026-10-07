@@ -4,37 +4,268 @@ on:
   pull_request:
     branches: [main]
 
+concurrency:
+  group: screenshots-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
 jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.base.ref }}
+          fetch-depth: 0
+
+      - name: Pull latest base branch
+        env:
+          BASE_REF: ${{ github.event.pull_request.base.ref }}
+        run: git pull --ff-only origin "$BASE_REF"
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: 2026/.nvmrc
           cache: npm
           cache-dependency-path: 2026/package-lock.json
-      - run: cd 2026 && npm ci
-      - run: cd 2026 && npm run dev &
+
+      - name: Check base build:compare script
+        id: base_compare
+        working-directory: 2026
+        run: |
+          if node -e 'const scripts = require("./package.json").scripts ?? {}; process.exit(typeof scripts["build:compare"] === "string" && scripts["build:compare"].trim() ? 0 : 1)'; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::The base branch does not define build:compare; skipping screenshot comparison."
+          fi
+
+      - name: Install base dependencies
+        if: ${{ steps.base_compare.outputs.available == 'true' }}
+        run: cd 2026 && npm ci
+
+      - name: Build base
+        if: ${{ steps.base_compare.outputs.available == 'true' }}
+        run: |
+          cd 2026
+          npm run build:compare
+          mkdir -p sandbox
+          rm -rf sandbox/base
+          mv out sandbox/base
+
+      - name: Preserve base export before checkout
+        if: ${{ steps.base_compare.outputs.available == 'true' }}
         env:
-          PORT: 3001
-      - run: cd 2026 && npx playwright install --with-deps
-      - run: cd 2026 && npx playwright test
-      - run: cd 2026 && npm run fetch-og-images
-      - uses: actions/upload-artifact@v4
-        if: ${{ !cancelled() }}
+          BASE_EXPORT_DIR: ${{ runner.temp }}/jsconf-2026-base-export
+        run: |
+          rm -rf "$BASE_EXPORT_DIR"
+          mv 2026/sandbox/base "$BASE_EXPORT_DIR"
+
+      - name: Checkout latest pull request branch
+        if: ${{ steps.base_compare.outputs.available == 'true' }}
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          git fetch --no-tags origin "refs/pull/${PR_NUMBER}/head"
+          git checkout -B "pr-${PR_NUMBER}-head" FETCH_HEAD
+          git pull --ff-only origin "refs/pull/${PR_NUMBER}/head"
+          git config --local --unset-all http.https://github.com/.extraheader || true
+
+      - name: Restore base export
+        if: ${{ steps.base_compare.outputs.available == 'true' }}
+        env:
+          BASE_EXPORT_DIR: ${{ runner.temp }}/jsconf-2026-base-export
+        run: |
+          mkdir -p 2026/sandbox
+          mv "$BASE_EXPORT_DIR" 2026/sandbox/base
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        if: ${{ steps.base_compare.outputs.available == 'true' }}
         with:
-          name: screenshots
-          path: 2026/screenshots/**/*
-          retention-days: 7
-      - uses: actions/github-script@v7
+          node-version-file: 2026/.nvmrc
+          cache: npm
+          cache-dependency-path: 2026/package-lock.json
+
+      - name: Check pull request build:compare script
+        id: head_compare
+        if: ${{ steps.base_compare.outputs.available == 'true' }}
+        working-directory: 2026
+        run: |
+          if node -e 'const scripts = require("./package.json").scripts ?? {}; process.exit(typeof scripts["build:compare"] === "string" && scripts["build:compare"].trim() ? 0 : 1)'; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::The pull request branch does not define build:compare; skipping screenshot comparison."
+          fi
+
+      - name: Install pull request dependencies
+        if: ${{ steps.base_compare.outputs.available == 'true' && steps.head_compare.outputs.available == 'true' }}
+        run: cd 2026 && npm ci
+
+      - name: Build pull request branch
+        if: ${{ steps.base_compare.outputs.available == 'true' && steps.head_compare.outputs.available == 'true' }}
+        run: |
+          cd 2026
+          npm run build:compare
+          mkdir -p sandbox
+          rm -rf sandbox/head
+          mv out sandbox/head
+
+      - name: Compare exported sites
+        id: compare
+        if: ${{ steps.base_compare.outputs.available == 'true' && steps.head_compare.outputs.available == 'true' }}
+        run: |
+          cd 2026
+          npm run --silent compare -- sandbox/base sandbox/head | tee sandbox/compare.json
+          node --input-type=module -e '
+            import { appendFileSync, readFileSync } from "node:fs";
+            const { changed } = JSON.parse(readFileSync("sandbox/compare.json", "utf8"));
+            appendFileSync(process.env.GITHUB_OUTPUT, `changed_count=${changed.length}\nchanged_uris=${JSON.stringify(changed)}\n`);
+            console.log(`Changed pages: ${changed.length}`);
+          '
+
+      - name: Capture changed Open Graph images
+        if: ${{ steps.base_compare.outputs.available == 'true' && steps.head_compare.outputs.available == 'true' && fromJSON(steps.compare.outputs.changed_count) > 0 && fromJSON(steps.compare.outputs.changed_count) <= 10 }}
+        env:
+          CHANGED_URIS_JSON: ${{ steps.compare.outputs.changed_uris }}
+        run: |
+          cd 2026
+          PORT=3001 npm run dev > sandbox/next-dev.log 2>&1 &
+          for attempt in $(seq 1 60); do
+            if curl --fail --silent --output /dev/null http://localhost:3001/2026/en; then
+              break
+            fi
+            if [ "$attempt" -eq 60 ]; then
+              cat sandbox/next-dev.log
+              exit 1
+            fi
+            sleep 2
+          done
+          npm run fetch-og-images
+
+      - uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        if: ${{ success() && github.event_name == 'pull_request' && steps.base_compare.outputs.available == 'true' && steps.head_compare.outputs.available == 'true' }}
+        env:
+          CHANGED_URIS_JSON: ${{ steps.compare.outputs.changed_uris }}
+          CHANGED_COUNT: ${{ steps.compare.outputs.changed_count }}
         with:
           script: |
-            const url = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: `📦 Screenshots: [Download](${url})`
+            const fs = require("node:fs");
+            const path = require("node:path");
+            const marker = "<!-- jsconf-2026-visual-regression -->";
+            const changed = JSON.parse(process.env.CHANGED_URIS_JSON || "[]");
+            const count = Number(process.env.CHANGED_COUNT || 0);
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+            const lines = changed.length
+              ? changed.map((uri) => `- \`${encodeURI(uri).replaceAll("`", "%60")}\``).join("\n")
+              : "変更されたページはありません。";
+
+            let assetBranch;
+            let screenshots = "";
+            if (count > 0 && count <= 10) {
+              const screenshotDirectory = path.join(process.env.GITHUB_WORKSPACE, "2026", "screenshots", "ogp");
+              const imageFiles = fs
+                .readdirSync(screenshotDirectory)
+                .filter((filename) => /^[a-z0-9-]+\.png$/i.test(filename))
+                .sort();
+              if (imageFiles.length === 0) throw new Error("No Open Graph screenshots were generated");
+
+              const treeEntries = [];
+              for (const filename of imageFiles) {
+                const filePath = path.join(screenshotDirectory, filename);
+                const file = fs.readFileSync(filePath);
+                if (file.length > 10 * 1024 * 1024) throw new Error(`Screenshot is too large: ${filename}`);
+                if (file.subarray(0, 8).toString("hex") !== "89504e470d0a1a0a") {
+                  throw new Error(`Screenshot is not a PNG: ${filename}`);
+                }
+                const { data: blob } = await github.rest.git.createBlob({
+                  owner,
+                  repo,
+                  content: file.toString("base64"),
+                  encoding: "base64",
+                });
+                treeEntries.push({
+                  path: `pr-${issue_number}/${filename}`,
+                  mode: "100644",
+                  type: "blob",
+                  sha: blob.sha,
+                });
+              }
+
+              const { data: tree } = await github.rest.git.createTree({ owner, repo, tree: treeEntries });
+              const { data: commit } = await github.rest.git.createCommit({
+                owner,
+                repo,
+                message: `chore: publish screenshots for PR #${issue_number}`,
+                tree: tree.sha,
+                parents: [],
+              });
+              assetBranch = `visual-regression/pr-${issue_number}/run-${context.runId}-attempt-${process.env.GITHUB_RUN_ATTEMPT || "1"}`;
+              await github.rest.git.createRef({ owner, repo, ref: `refs/heads/${assetBranch}`, sha: commit.sha });
+              const imageUrlByFilename = new Map(
+                imageFiles.map((filename) => [
+                  filename,
+                  `https://raw.githubusercontent.com/${owner}/${repo}/${commit.sha}/pr-${issue_number}/${filename}`,
+                ]),
+              );
+              const escapeHtml = (value) =>
+                value
+                  .replaceAll("&", "&amp;")
+                  .replaceAll("<", "&lt;")
+                  .replaceAll(">", "&gt;")
+                  .replaceAll('"', "&quot;");
+              const rows = changed
+                .map((uri) => {
+                  const pathname = new URL(uri, "https://example.invalid").pathname;
+                  const route = pathname.slice("/2026".length).replace(/\/$/, "") || "/";
+                  const slug = route === "/" ? "top" : route.split("/").filter(Boolean).join("-");
+                  const imageUrl = imageUrlByFilename.get(`${slug}.png`);
+                  if (!imageUrl) throw new Error(`No screenshot was generated for ${uri}`);
+                  const safeUri = escapeHtml(uri);
+                  return `<tr><td><code>${safeUri}</code></td><td><details><summary>${safeUri}</summary><br /><img src="${imageUrl}" alt="${safeUri}" /></details></td></tr>`;
+                });
+              screenshots = [
+                "<table>",
+                "<thead><tr><th>URI</th><th>Screenshot</th></tr></thead>",
+                `<tbody>${rows.join("")}</tbody>`,
+                "</table>",
+              ].join("\n");
+            }
+
+            const result = count > 10
+              ? `変更ページが ${count} 件あるため、スクリーンショットは撮影していません。確認対象 URI:\n\n${lines}`
+              : count > 0
+                ? `変更ページ: ${count} 件\n\n${screenshots}`
+                : `変更ページはありません。`;
+            const body = `${marker}\n${result}`;
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner,
+              repo,
+              issue_number,
+              per_page: 100,
             });
+            const previous = comments.find(
+              (comment) => comment.user?.type === "Bot" && comment.body?.includes(marker),
+            );
+            if (previous) {
+              await github.rest.issues.updateComment({ owner, repo, comment_id: previous.id, body });
+            } else {
+              await github.rest.issues.createComment({ owner, repo, issue_number, body });
+            }
+
+            const refs = await github.paginate(github.rest.git.listMatchingRefs, {
+              owner,
+              repo,
+              ref: `heads/visual-regression/pr-${issue_number}/`,
+            });
+            const currentRef = assetBranch ? `refs/heads/${assetBranch}` : undefined;
+            const obsoleteRefs = refs.filter(({ ref }) => ref !== currentRef);
+            const cleanup = await Promise.allSettled(
+              obsoleteRefs.map(({ ref }) =>
+                github.rest.git.deleteRef({ owner, repo, ref: ref.replace(/^refs\/heads\//, "") }),
+              ),
+            );
+            for (const result of cleanup) {
+              if (result.status === "rejected") console.warn("Could not remove an old screenshot branch", result.reason);
+            }

@@ -11,20 +11,14 @@ type Props = {
 export function SponsorGrid({ sponsors, showPrText = false }: Props) {
   const t = useTranslations("sponsors");
 
-  const premiumSponsors = sponsors.filter(
-    (sponsor) => sponsor.plan === "premium",
-  );
-  const otherSponsors = sponsors.filter(
-    (sponsor) => sponsor.plan === "sponsor",
-  );
+  const premiumSponsors = sponsors.filter((sponsor) => sponsor.plan === "premium");
+  const otherSponsors = sponsors.filter((sponsor) => sponsor.plan === "sponsor");
 
   return (
     <div>
       {premiumSponsors.length > 0 && (
         <section>
-          <h3 className="text-2xl font-bold my-2 text-center">
-            {t("premium")}
-          </h3>
+          <h3 className="text-2xl font-bold my-2 text-center">{t("premium")}</h3>
           <div className="grid grid-cols-1 gap-8">
             {premiumSponsors.map((sponsor) => (
               <div key={sponsor.name} className="flex flex-col gap-2">
@@ -38,9 +32,7 @@ export function SponsorGrid({ sponsors, showPrText = false }: Props) {
 
       {otherSponsors.length > 0 && (
         <section>
-          <h3 className="text-2xl font-bold mt-4 my-2 text-center">
-            {t("sponsor")}
-          </h3>
+          <h3 className="text-2xl font-bold mt-4 my-2 text-center">{t("sponsor")}</h3>
           <div className="grid grid-cols-2 gap-4">
             {otherSponsors.map((sponsor) => (
               <div key={sponsor.name} className="flex flex-col gap-2">

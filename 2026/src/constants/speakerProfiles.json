@@ -16,7 +16,8 @@
     "avatarPath": "/2026/speaker/dynamis-2026.png"
   },
   "Nurul Sundarani": {
-    "bio": "Nurul Sundarani is an international speaker and open source contributor. Outside of work he is usually tinkering with AI agents that were supposed to stay weekend projects, or watching Formula 1. He is an engineer on the Prisma team."
+    "bio": "Nurul Sundarani is an international speaker, open source contributor, and software engineer who enjoys building developer tools and exploring emerging technologies. Outside of work, he is usually tinkering with AI agents that were supposed to stay weekend projects, or watching Formula 1.",
+    "avatarPath": "/2026/speaker/nurul-sundarani.jpg"
   },
   "辻佳佑": {
     "bio": "ソフトウェアエンジニア。Vue.js / Nuxt を中心としたWebアプリケーション開発に従事。",
@@ -46,76 +47,73 @@
     "bio": "普段はWebアプリケーションを作っています。ECMAScript 仕様輪読会に参加して仕様書を読んでいます。",
     "avatarPath": "/2026/speaker/yebis0942.jpg"
   },
-  "Daigo Fujiwara-Smith": {
-    "bio": "Daigo Fujiwara-Smith is a Senior Newsroom Developer at The Boston Globe, builds interactive javascript graphics, charts, maps, and data visualizations for the newsroom.\nHe has been making things for the web since tables were for layout. Currently obsessed with React Three Fiber, WebGPU, and getting scroll to behave. Originally from Japan, now in Portland, Maine.",
-    "avatarPath": "/2026/speaker/daigo-fujiwara-smith.jpg"
-  },
   "Kazuya Serizawa": {
-    "bio": "PeopleXという会社でAIロープレという製品を開発しています。"
+    "bio": "PeopleXという会社でAIロープレという製品を開発しています。",
+    "avatarPath": "/2026/speaker/kazuya-serizawa.jpg"
   },
   "森内建太 (@petamoriken)": {
-    "bio": "Web標準を追うのが好きで、趣味でTC39の会議をまとめたりZennに記事を書いたりしています。昨年ECMAScriptにNormative Changeを入れました。Denoコントリビューター。"
+    "bio": "Web標準を追うのが好きで、趣味でTC39の会議をまとめたりZennに記事を書いたりしています。昨年ECMAScriptにNormative Changeを入れました。Denoコントリビューター。",
+    "avatarPath": "/2026/speaker/petamoriken.jpg"
   },
   "池奥裕太": {
-    "bio": "2024年にエムスリー株式会社に新卒で入社。チームリーダーとして新規プロダクトの開発に取り組む。TSKaigiコアスタッフ。Figmaと型パズルが好きです。"
-  },
-  "Devlin Duldulao": {
-    "bio": "Devlin Duldulao is the creator of DaloyJS, a software engineer, educator, and published author with 10+ years of experience building and teaching modern web development. Originally from the Philippines and based in Norway since 2019, he writes books and courses for developers who want to ship real, secure systems, and takes his Asian home cooking about as seriously as his TypeScript."
+    "bio": "2024年にエムスリー株式会社に新卒で入社。チームリーダーとして新規プロダクトの開発に取り組む。TSKaigiコアスタッフ。Figmaと型パズルが好きです。",
+    "avatarPath": "/2026/speaker/yuta-ikeoku.jpg"
   },
   "nolu": {
-    "bio": "JavaScript愛好家\n\n運営の方へ：前回「Evolution of the Node.js Inspector」で登壇させていただいた者です。今回は会社都合により、匿名で応募させていただいております。"
+    "bio": "JavaScript愛好家",
+    "avatarPath": "/2026/speaker/nolu.jpg"
   },
   "Neciu Dan": {
-    "bio": "Dan Neciu is a Lead Engineer at Rover.com with 14+ years building frontend at scale. He's an international speaker who has taken the stage at React Rally, React Summit, WeAreDevelopers World Congress, JS World, KCDC, Techorama, Frontmania, and many more — 30+ talks across 15 countries. He organizes the ReactJS Barcelona meetup, hosts the Señors at Scale podcast (50+ episodes with engineers from Spotify, Vercel, Google, Netflix), and created the sold-out Lizard to Wizard engineering excellence workshop. Previously Staff Engineer and Technical Co-Founder at CareerOS. Based in Barcelona."
+    "bio": "Dan Neciu is a Lead Engineer at Rover.com with 14+ years building frontend at scale. He's an international speaker who has taken the stage at React Rally, React Summit, WeAreDevelopers World Congress, JS World, KCDC, Techorama, Frontmania, and many more — 30+ talks across 15 countries. He organizes the ReactJS Barcelona meetup, hosts the Señors at Scale podcast (50+ episodes with engineers from Spotify, Vercel, Google, Netflix), and created the sold-out Lizard to Wizard engineering excellence workshop. Previously Staff Engineer and Technical Co-Founder at CareerOS. Based in Barcelona.",
+    "avatarPath": "/2026/speaker/neciu-dan.jpg"
   },
   "Neeraj Pandey": {
-    "bio": "Neeraj is the co-founder of Lyntcube, a AI native digital workforce for Real Estate. Over the years, he has worked on a variety of full-stack software and data-science applications, as well as computational arts, and likes the challenge of creating new tools and applications, and is an active speaker with talks and tutorials presented at multiple conferences. \n\nPast performances: http://n4jp4y.com/talks"
+    "bio": "Neeraj is the co-founder of Lyntcube, a AI native digital workforce for Real Estate. Over the years, he has worked on a variety of full-stack software and data-science applications, as well as computational arts, and likes the challenge of creating new tools and applications, and is an active speaker with talks and tutorials presented at multiple conferences. \n\nPast performances: http://n4jp4y.com/talks",
+    "avatarPath": "/2026/speaker/neeraj-pandey.jpg"
   },
   "Yuta Nishi": {
     "bio": "Platform Engineerとしてプロダクト開発に携わっています。Webが大好きで、特にフロントエンド領域、TypeScriptとV8を愛しています。中でも型パズルとV8の配列領域には強い関心があります。Webの歴史や仕様を追いかけるのも好きです。TSKaigiのスタッフ活動、Zennでの技術記事執筆、各種カンファレンスへの登壇なども行っています。",
     "avatarPath": "/2026/speaker/yuta-nishi.png"
   },
   "Aileen Villanueva": {
-    "bio": "I’m a Software Engineer, Google Developer Expert (GDE), and community builder based in Mexico. My work centers around JavaScript, web development, and emerging AI tooling. I use AI as a tool in my engineering workflow, helping me prototype rapidly and take my ideas further. I'm highly interested in the future of interaction design and building interfaces where users and agents work side-by-side. Outside of work, I actively organize tech communities in Mexico. Whether I'm running a meetup, hosting a workshop, or speaking at a conference, my goal is to create approachable spaces for anybody to learn and share knowledge"
+    "bio": "I’m a Software Engineer, Google Developer Expert (GDE), and community builder based in Mexico. My work centers around JavaScript, web development, and emerging AI tooling. I use AI as a tool in my engineering workflow, helping me prototype rapidly and take my ideas further. I'm highly interested in the future of interaction design and building interfaces where users and agents work side-by-side. Outside of work, I actively organize tech communities in Mexico. Whether I'm running a meetup, hosting a workshop, or speaking at a conference, my goal is to create approachable spaces for anybody to learn and share knowledge",
+    "avatarPath": "/2026/speaker/aileen-villanueva.jpg"
   },
   "Marco Ippolito": {
-    "bio": "Marco is a Senior Security Engineer at HeroDevs.\nActive contributor, releaser, and member of the Node.js Technical Steering Committee, he is a renowned international speaker and a former Microsoft MVP. Marco is actively involved in many projects within the Node.js ecosystem and also serves as a delegate in TC39."
+    "bio": "Marco is a Senior Security Engineer at HeroDevs.\nActive contributor, releaser, and member of the Node.js Technical Steering Committee, he is a renowned international speaker and a former Microsoft MVP. Marco is actively involved in many projects within the Node.js ecosystem and also serves as a delegate in TC39.",
+    "avatarPath": "/2026/speaker/marco-ippolito.jpg"
   },
   "うひょ": {
-    "bio": "株式会社カオナビ　フロントエンドエキスパート。TypeScriptとReactに詳しい。技術評論社『プロを目指す人のためのTypeScript入門』著者。"
-  },
-  "Maya Shavin": {
-    "bio": "Maya Shavin is a Lead Software Engineer at Salesforce, where she leads frontend and fullstack initiatives with a focus on performance, scalability, and developer experience. With a background in Computer Science and Business, she brings a balanced technical expertise and product mindset to modern web architecture, emphasizing on accessibility and engineering quality.\n\nBeyond coding, Maya is an international speaker, author of Learning Vue, and the host of the “Build With Maya” podcast, where she shares insights on engineering decisions, system design, and building in the age of AI.",
-    "avatarPath": "/2026/speaker/maya-shavin.jpg"
-  },
-  "Williams Kwan": {
-    "bio": "Frontend engineer at Mercari, where I've been building the architecture that powers our international expansion. I work at the intersection of product and engineering, obsessing over systems that scale across markets and teams."
+    "bio": "株式会社カオナビ　フロントエンドエキスパート。TypeScriptとReactに詳しい。技術評論社『プロを目指す人のためのTypeScript入門』著者。",
+    "avatarPath": "/2026/speaker/uhyo.jpg"
   },
   "Wataru Morita(@tascript)": {
-    "bio": "さくらインターネット研究所の研究開発エンジニアです。(https://research.sakura.ad.jp/members/tascript)"
+    "bio": "さくらインターネット研究所の研究開発エンジニアです。(https://research.sakura.ad.jp/members/tascript)",
+    "avatarPath": "/2026/speaker/wataru-morita.jpg"
   },
   "Natalia Markoborodova": {
-    "bio": "Natalia Markoborodova is a Developer Relations Engineer in Chrome with focus on modern UI, user authentication and identity"
+    "bio": "Natalia is a Developer Relations Engineer at Chrome, Google. Natalia develops technical guides, gathers platform feedback, and helps developers across two core domains: next-generation UI capabilities and frictionless user authentication APIs.",
+    "avatarPath": "/2026/speaker/natalia-markoborodova.jpg"
   },
   "Thomas Nattestad": {
-    "bio": "Thomas Nattestad is a a Senior Product Manager at Google, with a focus on the Canvas, WebGPU & WebGL, Skia, and more."
+    "bio": "Thomas Nattestad is a Senior Product Manager at Chrome, Google. Thomas leads product efforts for modern web graphics and performance APIs that enable developers to build fast, rich, and visually expressive experiences.",
+    "avatarPath": "/2026/speaker/thomas-nattestad.jpg"
   },
   "Ondřej Žára": {
     "bio": "An experienced web developer (15+ years), speaker and lecturer. Apart from working for a major Czech online company (Seznam.cz, a.s.), I regularly give talks at the Czech Technical University in Prague. Focus on all frontend web technologies.",
     "avatarPath": "/2026/speaker/ondrej-zara.png"
   },
   "えーじ": {
-    "bio": "Google の Chrome Developer Relations チームの Developer Advocate。パスキーをはじめ ID 連携、デジタル ID など、アイデンティティ技術の啓蒙をグローバルでリードしています。著書「パスキーのすべて」。"
+    "bio": "Google の Chrome Developer Relations チームの Developer Advocate。パスキーをはじめ ID 連携、デジタル ID など、アイデンティティ技術の啓蒙をグローバルでリードしています。著書「パスキーのすべて」。",
+    "avatarPath": "/2026/speaker/eiji.jpg"
   },
   "Kevin Uehara": {
     "bio": "Kevin Uehara is a Software Engineer at iFood and an active Google Developer Groups Campinas (GDG) collaborator. Recognized three times as a Microsoft MVP and Google Developer Expert (GDE) for his contributions to the tech community, Kevin is also the organizer of FrontIn Campinas, as well as an international and national speaker and tech content creator. Based in Brazil, he is passionate about sharing knowledge and inspiring other developers in the frontend ecosystem.",
     "avatarPath": "/2026/speaker/kevin-uehara.jpg"
   },
-  "Brandon Dail": {
-    "bio": "Staff Engineer at Discord leading our Design Systems team. Former React core collaborator once upon a time."
-  },
   "ローランド リチャード": {
-    "bio": "これまでに、PythonとGolangのコンパイラについて国内外のカンファレンスで解説してきました。\n\nP2Pネットワークを活用したデータ保存技術など、分散システムおよびブロックチェーン技術に関する研究に取り組んだことがあります。その後、SoftBankやOKCoin Japanなどで、ブロックチェーン関連システムの開発に携わっています。"
+    "bio": "これまでに、PythonとGolangのコンパイラについて国内外のカンファレンスで解説してきました。\n\nP2Pネットワークを活用したデータ保存技術など、分散システムおよびブロックチェーン技術に関する研究に取り組んだことがあります。その後、SoftBankやOKCoin Japanなどで、ブロックチェーン関連システムの開発に携わっています。",
+    "avatarPath": "/2026/speaker/roland-richard.jpg"
   },
   "Saman Abaasi": {
     "bio": "Sam Abaasi is a Staff Frontend Engineer and squad lead at MTN Irancell, Iran's largest mobile network operator, where he architected a Camunda-based workflow platform replacing a legacy production system. He is the creator of an open-source signals-based rendering engine that runs unmodified React components without a virtual DOM (four published npm packages), and the author of three technical deep-dive series including \"How React Works\" (9 parts, source-verified against React's internals). He is a selected speaker at React Day Berlin 2026 and React Advanced London 2026.\nA lifelong fan of Japanese culture — from growing up on Sega and Sony to cheering for Japan at the 2026 World Cup — Sam would consider speaking in Tokyo a dream come true.",
@@ -138,6 +136,29 @@
     "avatarPath": "/2026/speaker/leo-kettmeir-2026.jpg"
   },
   "Jessie": {
-    "bio": "Jessie Auguste is a software engineer at CybSafe, where she builds secure software and works at the human side of cybersecurity. This year she hosted JSNation and React Summit Amsterdam, and she has taken the stage at React Universe, React Miami, LeadDev, Docker, DevConf, and BeJS, among others. She has also built and delivered secure coding courses based on OWASP principles. Away from the keyboard, Jessie co-founds and co-hosts Glowing in Tech, an award-winning podcast and community for people building in tech without the access others take for granted."
+    "bio": "Jessie Auguste is a software engineer at CybSafe, where she builds secure software and works at the human side of cybersecurity. This year she hosted JSNation and React Summit Amsterdam, and she has taken the stage at React Universe, React Miami, LeadDev, Docker, DevConf, and BeJS, among others. She has also built and delivered secure coding courses based on OWASP principles. Away from the keyboard, Jessie co-founds and co-hosts Glowing in Tech, an award-winning podcast and community for people building in tech without the access others take for granted.",
+    "avatarPath": "/2026/speaker/jessie.jpg"
+  },
+  "洪 民憙": {
+    "bio": "ソウル在住のソロOSS開発者。構造化ロギングライブラリ[LogTape](https://logtape.org/)と、Sovereign Tech Fundの支援を受けるActivityPubサーバーフレームワーク[Fedify](https://fedify.dev/)を開発している。\n\nWebsite: https://hongminhee.org/\nGitHub: https://github.com/dahlia",
+    "avatarPath": "/2026/speaker/hong-minhee.jpg"
+  },
+  "山本悠滋": {
+    "bio": "WebAssemblyとプリキュアとポムポムプリンが好きなプログラマー。株式会社MagicPod所属。",
+    "avatarPath": "/2026/speaker/yuji-yamamoto.jpg"
+  },
+  "jiko21": {
+    "bio": "エムスリー株式会社 / ソフトウェアエンジニア\n\n新卒時よりフロントエンドエンジニアとしてキャリアをスタートし、メガベンチャーやスタートアップを経て、現職。",
+    "avatarPath": "/2026/speaker/jiko21.jpg"
+  },
+  "Josh Junon": {
+    "bio": "Josh Junon is an American professional software engineer and hobbyist electronics engineer. He has more than twenty years of programming experience, including 17 years in the software industry, and has maintained popular open-source projects since 2011. His work includes Node.js's Chalk, Debug, and Color libraries, better-exceptions for Python, and, most recently, the Oro Operating System.",
+    "bioJa": "米国出身のソフトウェアエンジニア。趣味で電子工作（ハードウェア開発）も手がけている。プログラミング歴は20年以上、うち17年はソフトウェア業界での実務経験で、2011年から広く使われているオープンソースプロジェクトのメンテナーを務めている。代表的な仕事に、Node.js エコシステムで定番の Chalk・Debug・Color といったライブラリ、Python 向けの better-exceptions、そして直近では自作OS「Oro Operating System」がある。",
+    "avatarPath": "/2026/speaker/josh-junon.jpg"
+  },
+  "Brendan Eich": {
+    "bio": "Brendan Eich, CEO and co-founder of Brave, and creator of JavaScript\n\nBrendan is the co-founder and CEO of Brave, the privacy-preserving browser and search engine. He previously served as CTO, then CEO of the Mozilla Corporation. While at Mozilla, he helped launch the award-winning Firefox browser. He is also the creator of JavaScript, the Internet's most widely used programming language.",
+    "bioJa": "ブレンダン・アイク（Brendan Eich） — [Brave](https://brave.com/ja/)のCEO兼共同創業者、JavaScriptの生みの親\n\nブレンダンは、プライバシーを保護するブラウザおよび検索エンジンであるBraveの共同創業者兼CEOです。以前はMozilla CorporationでCTOを務め、その後CEOを務めました。Mozilla在籍中には、数々の賞を受賞したFirefoxブラウザの立ち上げに貢献しました。また、インターネットで最も広く使われているプログラミング言語であるJavaScriptの生みの親でもあります。",
+    "avatarPath": "/2026/speaker/brendan-eich.jpg"
   }
 }

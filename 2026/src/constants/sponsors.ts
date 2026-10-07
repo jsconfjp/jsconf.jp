@@ -1,11 +1,13 @@
 import type { StaticImageData } from "next/image";
 
 type Plan = "premium" | "sponsor";
+type SponsorHeight = "1/3";
 
 export type Sponsor = {
   type: "sponsor";
   plan: Plan;
   name: string;
+  height?: SponsorHeight;
   url: string;
   prText: string;
   logoUrl?: string | StaticImageData;
@@ -30,6 +32,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "AnotherBall Pte Ltd",
     url: "https://anotherball.com/",
+    logoUrl: "/2026/sponsor/anotherball-2026.png",
     prText:
       `AnotherBallは「境界を越え、通じあえるユカイな体験を創る。」をミッションに掲げるスタートアップです。1分でVTuberになれるアプリ「Avvy」や、ゲーム・映像制作を行うスタジオメイフラワーを運営しています。「日本に根ざす“妄想力“を加速させる事業を同時多発的に創る」という信念のもと、クリエイターの自由な世界観の源を支え、エンタメ×グローバルの交差点で事業を展開していきます。`.trim(),
   },
@@ -38,7 +41,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "サイボウズ株式会社",
     url: "https://cybozu.co.jp/",
-    logoUrl: "/2026/sponsor/cybozu-2026.svg",
+    logoUrl: "/2026/sponsor/cybozu.png",
     prText:
       `サイボウズはクラウドベースのグループウェアや業務改善サービスを軸に、社会のチームワーク向上を支援しています。 サイボウズではプロダクトを最高にするメンバーを募集しています！`.trim(),
   },
@@ -47,6 +50,7 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "MCD3株式会社",
     url: "https://www.mcd3.co.jp/",
+    logoUrl: "/2026/sponsor/mcd3-2026.png",
     prText: `
 エムシーディースリーは、三菱商事100%出資のテクノロジーカンパニーです。
 
@@ -71,14 +75,16 @@ export const SPONSORS: Sponsor[] = [
     plan: "premium",
     name: "株式会社ドワンゴ",
     url: "https://dwango.co.jp/",
+    logoUrl: "/2026/sponsor/dwango.png",
     prText:
       `ドワンゴは "ネットの向こうの、リアルを動かす。人間らしさと、つながるデジタルを。" をコーポレートメッセージとして、ネットに特化した通信制高校「N高等学校・S高等学校・R高等学校」、ネットとリアルを融合したオンライン大学「ZEN大学」、オンライン学習アプリ「ZEN Study」、ネットの双方向性を最大限に動画や生放送に取り込んだ「ニコニコ」、ネットとリアルの融合をテーマにした巨大イベント「ニコニコ超会議」など、新しい価値を創り出し、それを事業として成立させていくことに挑戦しつづける企業です。`.trim(),
   },
   {
     type: "sponsor",
     plan: "premium",
-    name: "supateam株式会社",
+    name: "supa株式会社",
     url: "https://supateam.com",
+    logoUrl: "/2026/sponsor/supa-2026.svg",
     prText: `
 AIの力を100%引き出しリスクもコントロールする、ハーネスエンジニアリングゲートウェイ。
 「supateam」は、GitHub Claude・Cursor・Jiraなどを連携するだけでAI開発の活用度・ROI・リスクを自動レポーティング。感覚値だったAI活用を経営に説明できる数字へ変えます。コーディングルール整備やツール活用の偏り検知など、データに基づく改善提案を提供します。
@@ -103,6 +109,7 @@ Linc'wellは「テクノロジーを通じて、医療を一歩前へ」をミ�
     plan: "premium",
     name: "NCDC株式会社",
     url: "https://ncdc.co.jp/",
+    logoUrl: "/2026/sponsor/ncdc-2026.png",
     prText:
       `NCDCは、フロントエンドからバックエンドまでTypeScriptを中心とした技術スタックでプロダクト開発を行っています。新規サービスの立ち上げからグロースまで伴走し、生成AIやクラウド技術を活用した開発に取り組んでいます。`.trim(),
   },
@@ -111,7 +118,7 @@ Linc'wellは「テクノロジーを通じて、医療を一歩前へ」をミ�
     plan: "premium",
     name: "株式会社マネーフォワード",
     url: "https://corp.moneyforward.com/",
-    logoUrl: "/2026/sponsor/money-forward-2026.png",
+    logoUrl: "/2026/sponsor/money-forward.svg",
     prText: `
 「お金を前へ。人生をもっと前へ。」をMissionに、すべての人のお金の課題解決を目指し、お金の見える化サービス『マネーフォワード ME』やバックオフィスSaaS『マネーフォワード クラウド』などを提供しています。
 `.trim(),
@@ -130,7 +137,8 @@ Linc'wellは「テクノロジーを通じて、医療を一歩前へ」をミ�
     plan: "premium",
     name: "Vercel",
     url: "https://vercel.com/",
-    logoUrl: "/2026/sponsor/vercel-2026.png",
+    logoUrl: "/2026/sponsor/vercel-2026.svg",
+    height: "1/3",
     prText:
       `Vercelは、次世代のAI向けエージェンティック・インフラを開発しています。Next.js、AI SDK、v0の開発元であるVercelは、人間とAIエージェントが共にソフトウェアを開発、リリース、拡張できるプラットフォームを提供しています。Meta、Ramp、Supremeをはじめとする、世界中の数多くの開発者がVercelを使って日々プロダクトをリリースしています。`.trim(),
   },
@@ -139,7 +147,7 @@ Linc'wellは「テクノロジーを通じて、医療を一歩前へ」をミ�
     plan: "sponsor",
     name: "株式会社ビーワークス",
     url: "https://beeworks.co.jp",
-    logoUrl: "/2026/sponsor/beeworks-2026.svg",
+    logoUrl: "/2026/sponsor/beeworks-2026.png",
     prText: `
 2001年創業、200名規模の総合デザイン会社です。Web制作・出版サービス・自社ゲーム開発など、幅広い事業を展開しています。クライアントワークにおいては、課題の本質を見極め、ブランディング・UX/UI設計からアウトプットの制作まで、工程・媒体を問わないデザインを通して課題解決をサポートしています。また、自社ゲームブランド BEEWORKS GAMESの代表作『なめこ栽培キット』シリーズは、全世界累計6,000万ダウンロードを突破し、10年以上にわたり多くのファンに親しまれています。
 `.trim(),
@@ -177,7 +185,7 @@ Linc'wellは「テクノロジーを通じて、医療を一歩前へ」をミ�
     plan: "premium",
     name: "クーガー株式会社",
     url: "https://couger.co.jp/",
-    logoUrl: "/2026/sponsor/couger-2026.ico",
+    logoUrl: "/2026/sponsor/couger-2026.png",
     prText:
       `クーガーは、人型AIプラットフォーム「LUDENS」を開発・展開しています。そこから生まれたAIキャラクター「レイチェル」は、現実世界をゲームのようにつなげるナビゲーター。現在、全国約7,000店舗のファミリーマートに導入され、店長の業務を支援しています。私たちは、あらゆる業界・職種で働く人々に寄り添い、一人ひとりの成長を加速させるAIを提供していきます。`.trim(),
   },
@@ -187,11 +195,8 @@ Linc'wellは「テクノロジーを通じて、医療を一歩前へ」をミ�
     name: "GMO Flatt Security株式会社",
     url: "https://flatt.tech/",
     logoUrl: "/2026/sponsor/gmo-flatt-security-2026.png",
-    prText: `
-GMO Flatt Securityは、開発組織のセキュリティおよびソフトウェアサプライチェーンの保護に注力する、サイバーセキュリティ企業です。Web/モバイル/クラウド/LLM/IoT領域における世界トップクラスのペネトレーションテストと、セキュリティAIエージェントTakumiを組み合わせたサービスを提供しています。
-
-Takumiは、安全な攻撃シミュレーションを伴うハイブリッドなSAST/DAST解析により、誤検知を限りなくゼロに抑えます。さらに、悪性パッケージのブロックやCI/CDワークフローの保護を通じて、お客様のソフトウェアサプライチェーンを強力に守り抜きます。
-`.trim(),
+    prText:
+      `GMO Flatt Securityは"エンジニアの背中を預かる"をミッションに掲げ、ソフトウェアの開発組織とそこで働くエンジニアにとって最適なセキュリティサービスを提供します。世界トップクラスのセキュリティエンジニアによる脆弱性診断・ペネトレーションテストの実施に加え、継続的なセキュリティレビュー・ソフトウェアサプライチェーンリスク対策を行うAIエージェント「Takumi」を開発しています。`.trim(),
   },
   {
     type: "sponsor",

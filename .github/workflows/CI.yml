@@ -6,20 +6,24 @@ jobs:
   test_2026:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: 2026/.nvmrc
           cache: npm
-          cache-dependency-path: 2026/package-lock.json
+          cache-dependency-path: |
+            package-lock.json
+            2026/package-lock.json
+      - run: npm ci
       - run: cd 2026 && npm ci
+      - run: npm run fmt:check
       - run: cd 2026 && npm run lint
       - run: cd 2026 && npm run test
   build_2026:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: 2026/.nvmrc
           cache: npm
@@ -31,8 +35,8 @@ jobs:
   knip_2026:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: 2026/.nvmrc
           cache: npm

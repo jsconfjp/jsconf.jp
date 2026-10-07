@@ -11,9 +11,7 @@ describe("TALKS", () => {
   });
 
   it("links every sponsor session/LT to exactly one registered sponsor", () => {
-    const sponsorTalks = TALKS.filter((talk) =>
-      SPONSOR_KINDS.includes(talk.kind),
-    );
+    const sponsorTalks = TALKS.filter((talk) => SPONSOR_KINDS.includes(talk.kind));
     expect(sponsorTalks.length).toBeGreaterThan(0);
 
     for (const talk of sponsorTalks) {

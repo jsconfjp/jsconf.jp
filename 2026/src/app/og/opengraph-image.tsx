@@ -7,10 +7,7 @@ import { ensureLocale } from "@/i18n/ensureLocale";
 import { findTalkSession } from "@/lib/findTalkSession";
 import { getTalkSessions } from "@/lib/getTalkSessions";
 import { generateImage } from "@/lib/og/image";
-import {
-  GENERAL_OG_IMAGE_ID,
-  getTalkOgImageId,
-} from "@/lib/og/url";
+import { GENERAL_OG_IMAGE_ID, getTalkOgImageId } from "@/lib/og/url";
 
 export const dynamic = "force-static";
 
@@ -56,5 +53,5 @@ export default async function Image({ id }: Props) {
   setRequestLocale(locale);
 
   const session = findTalkSession(rawSlug as TalkSlug);
-  return generateImage(<TalkThumbnail session={session} />);
+  return generateImage(<TalkThumbnail session={session} locale={locale} />);
 }
