@@ -192,7 +192,7 @@ export const TALKS = [
     "Natalia Markoborodova",
     "Thomas Nattestad",
   ]),
-  makeSponsorTalk("arkor-sponsor-session", "Arkor", "sponsor session", "English", "Arkor"),
+  makeSponsorTalk("arkor-sponsor-session", "Arkor", "sponsor session", "Japanese", "Arkor"),
   makeTalk("ondrej-zara", "You are never going to do these 10 JS mistakes", "session", "English", ["Ondřej Žára"]),
   makeTalk("eiji", "ブラウザで変わるID連携 — EVPとFedCMが描く未来の認証", "session", "Japanese", ["えーじ"]),
   makeTalk(
@@ -244,7 +244,7 @@ export const TALKS = [
     "GMO Flatt Security株式会社",
   ),
   makeSponsorTalk("layerx-sponsor-session", "株式会社LayerX", "sponsor session", "Japanese", "株式会社LayerX"),
-  makeSponsorTalk("arkor-sponsor-lt", "Arkor LT", "sponsor LT", "English", "Arkor"),
+  makeSponsorTalk("arkor-sponsor-lt", "Arkor LT", "sponsor LT", "Japanese", "Arkor"),
   makeSponsorTalk("dwango-sponsor-lt", "株式会社ドワンゴ LT", "sponsor LT", "Japanese", "株式会社ドワンゴ"),
   makeSponsorTalk("supateam-sponsor-lt", "supa株式会社 LT", "sponsor LT", "Japanese", "supa株式会社"),
   makeSponsorTalk("lincwell-sponsor-lt", "株式会社Linc'well LT", "sponsor LT", "Japanese", "株式会社Linc'well"),

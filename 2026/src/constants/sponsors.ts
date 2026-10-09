@@ -65,7 +65,7 @@ export const SPONSORS: Sponsor[] = [
     type: "sponsor",
     plan: "premium",
     name: "Arkor",
-    url: "https://arkor.ai",
+    url: "https://www.arkor.dev",
     logoUrl: "/2026/sponsor/arkor-2026.webp",
     prText:
       `TypeScript でLLMのファインチューニングを可能にするフレームワーク「Arkor」を開発。サンフランシスコと札幌を拠点に活動するスタートアップ企業です。`.trim(),
