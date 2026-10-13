@@ -233,7 +233,13 @@ export const TALKS = [
     "Japanese",
     "株式会社マネーフォワード",
   ),
-  makeTalk("leo-kettmeir", "Creating desktop apps with Deno", "session", "English", ["Leo Kettmeir"]),
+  makeTalk(
+    "ypresto",
+    "The Cost of the DOM ― jsdom / happy-dom とVitest Browser Modeの実行時間を分解する",
+    "session",
+    "Japanese",
+    ["ypresto"],
+  ),
   makeTalk("jessie", "Your Node.js App Is Lying to You: What axios Taught Us", "session", "English", ["Jessie"]),
   makeSponsorTalk("vercel-sponsor-session", "Vercel", "sponsor session", "English", "Vercel"),
   makeSponsorTalk(

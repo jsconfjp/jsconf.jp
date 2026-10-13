@@ -104,12 +104,7 @@ const notSortedSchedule: ScheduledSession[] = [
   ]),
   eventSession("break", "all", "16:20", "16:30"),
   ...trackTalks("16:30", "17:00", ["itai-satati", "akfm-sato", "ncdc-sponsor-session", "lincwell-sponsor-session"]),
-  ...trackTalks("17:00", "17:30", [
-    "leo-kettmeir",
-    "kinocoboy",
-    "cougar-sponsor-session",
-    "money-forward-sponsor-session",
-  ]),
+  ...trackTalks("17:00", "17:30", ["ypresto", "kinocoboy", "cougar-sponsor-session", "money-forward-sponsor-session"]),
   ...trackTalks("17:30", "18:00", [
     "jessie",
     "gmo-flatt-security-sponsor-session",
