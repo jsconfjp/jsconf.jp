@@ -131,10 +131,6 @@
     "bio": "株式会社カオナビ所属のフロントエンドエンジニア。\nフロントエンドカンファレンス東京2025, TSKaigi 北陸 登壇経験あり。",
     "avatarPath": "/2026/speaker/kinocoboy.jpg"
   },
-  "Leo Kettmeir": {
-    "bio": "I am a software engineer at Deno, where I've implemented key Web APIs (including WebSocket, WebGPU, and Web Storage) and contributed to core runtime features.\n\nI focus on improving developer experience through tooling and documentation.",
-    "avatarPath": "/2026/speaker/leo-kettmeir-2026.jpg"
-  },
   "Jessie": {
     "bio": "Jessie Auguste is a software engineer at CybSafe, where she builds secure software and works at the human side of cybersecurity. This year she hosted JSNation and React Summit Amsterdam, and she has taken the stage at React Universe, React Miami, LeadDev, Docker, DevConf, and BeJS, among others. She has also built and delivered secure coding courses based on OWASP principles. Away from the keyboard, Jessie co-founds and co-hosts Glowing in Tech, an award-winning podcast and community for people building in tech without the access others take for granted.",
     "avatarPath": "/2026/speaker/jessie.jpg"
@@ -160,5 +156,9 @@
     "bio": "Brendan Eich, CEO and co-founder of Brave, and creator of JavaScript\n\nBrendan is the co-founder and CEO of Brave, the privacy-preserving browser and search engine. He previously served as CTO, then CEO of the Mozilla Corporation. While at Mozilla, he helped launch the award-winning Firefox browser. He is also the creator of JavaScript, the Internet's most widely used programming language.",
     "bioJa": "ブレンダン・アイク（Brendan Eich） — [Brave](https://brave.com/ja/)のCEO兼共同創業者、JavaScriptの生みの親\n\nブレンダンは、プライバシーを保護するブラウザおよび検索エンジンであるBraveの共同創業者兼CEOです。以前はMozilla CorporationでCTOを務め、その後CEOを務めました。Mozilla在籍中には、数々の賞を受賞したFirefoxブラウザの立ち上げに貢献しました。また、インターネットで最も広く使われているプログラミング言語であるJavaScriptの生みの親でもあります。",
     "avatarPath": "/2026/speaker/brendan-eich.jpg"
+  },
+  "ypresto": {
+    "bio": "2012年に新卒でMIXIに入社。2014年より「みてね」の立ち上げに関わり、Androidを中心に開発を担当。その後、教育・流通系のスタートアップ複数社に籍を移し、開発全般を担いつつ、フロントエンドやUIデザインをリードする役割を担う。2024年1月にLayerXに入社し、バクラク事業部にてプロダクト開発やフロントエンド基盤の改善を中心に携わる。TypeScript自体のパフォーマンスについて調査し、改善のためのPull Requestがマージされた。型魔術師は憧れ。",
+    "avatarPath": "/2026/speaker/ypresto.jpg"
   }
 }
