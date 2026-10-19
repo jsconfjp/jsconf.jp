@@ -31,6 +31,10 @@
     "viewDetails": "View details",
     "floorMap": "Floor Map"
   },
+  "specialSpeakers": {
+    "title": "Special Speakers",
+    "viewAll": "See all speakers"
+  },
   "cta": {
     "becomeSponsor": "Become a Sponsor"
   },

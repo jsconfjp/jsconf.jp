@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Button } from "@/components/Button";
 import { Hero } from "@/components/Hero";
+import { SpecialSpeakers } from "@/components/SpecialSpeakers";
 import { SponsorGrid } from "@/components/SponsorGrid";
 import { Team } from "@/components/Team";
 import { TicketCountdown } from "@/components/TicketCountdown";
@@ -10,6 +11,7 @@ import { Venue } from "@/components/Venue";
 import { SPONSORSHIP_URL, TICKETS_URL } from "@/constants/external";
 import { SPONSORS } from "@/constants/sponsors";
 import { ensureLocale } from "@/i18n/ensureLocale";
+import { getSpecialSpeakers } from "@/lib/getSpecialSpeakers";
 
 type Params = { locale: string };
 
@@ -36,6 +38,7 @@ export default async function Page({ params }: Props) {
   setRequestLocale(locale);
 
   const t = await getTranslations({ locale });
+  const specialSpeakers = getSpecialSpeakers();
 
   return (
     <div className="pt-8 md:pt-32">
@@ -70,6 +73,18 @@ export default async function Page({ params }: Props) {
           </p>
         </section>
       </div>
+
+      {specialSpeakers.length > 0 && (
+        <div className="max-w-3xl mx-auto mt-12 md:mt-24 flex flex-col gap-6 px-4 lg:px-0">
+          <h2 className="text-3xl font-bold text-center">{t("specialSpeakers.title")}</h2>
+          <SpecialSpeakers speakers={specialSpeakers} />
+          <div className="flex items-center justify-center">
+            <Button href="/speakers" variant="secondary" size="md">
+              {t("specialSpeakers.viewAll")}
+            </Button>
+          </div>
+        </div>
+      )}
 
       <div className="max-w-3xl mx-auto mt-8 md:mt-16 flex justify-center px-4 lg:px-0">
         <Button

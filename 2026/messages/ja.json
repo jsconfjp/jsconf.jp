@@ -31,6 +31,10 @@
     "viewDetails": "詳細を見る",
     "floorMap": "フロアマップ"
   },
+  "specialSpeakers": {
+    "title": "スペシャルスピーカー",
+    "viewAll": "スピーカー一覧へ"
+  },
   "cta": {
     "becomeSponsor": "スポンサー応募"
   },
