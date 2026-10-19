@@ -14,7 +14,7 @@ export function SpecialSpeakers({ speakers }: Props) {
   const tKind = useTranslations("talks.kind");
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       {speakers.map(({ speaker, talk }) => (
         <Link
           key={speaker.name}
