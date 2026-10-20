@@ -9,6 +9,7 @@ import { Team } from "@/components/Team";
 import { TicketCountdown } from "@/components/TicketCountdown";
 import { Venue } from "@/components/Venue";
 import { SPONSORSHIP_URL, TICKETS_URL } from "@/constants/external";
+import { RANDOM_SPECIAL_SPEAKER_COUNT } from "@/constants/specialSpeakers";
 import { SPONSORS } from "@/constants/sponsors";
 import { ensureLocale } from "@/i18n/ensureLocale";
 import { getSpecialSpeakers } from "@/lib/getSpecialSpeakers";
@@ -74,10 +75,14 @@ export default async function Page({ params }: Props) {
         </section>
       </div>
 
-      {specialSpeakers.length > 0 && (
+      {specialSpeakers.pinned.length + specialSpeakers.pool.length > 0 && (
         <div className="max-w-3xl mx-auto mt-12 md:mt-24 flex flex-col gap-6 px-4 lg:px-0">
           <h2 className="text-3xl font-bold text-center">{t("specialSpeakers.title")}</h2>
-          <SpecialSpeakers speakers={specialSpeakers} />
+          <SpecialSpeakers
+            pinned={specialSpeakers.pinned}
+            pool={specialSpeakers.pool}
+            randomCount={RANDOM_SPECIAL_SPEAKER_COUNT}
+          />
           <div className="flex items-center justify-center">
             <Button href="/speakers" variant="secondary" size="md">
               {t("specialSpeakers.viewAll")}
