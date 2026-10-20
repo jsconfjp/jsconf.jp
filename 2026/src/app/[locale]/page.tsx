@@ -77,7 +77,7 @@ export default async function Page({ params }: Props) {
 
       {specialSpeakers.pinned.length + specialSpeakers.pool.length > 0 && (
         <div className="max-w-3xl mx-auto mt-12 md:mt-24 flex flex-col gap-6 px-4 lg:px-0">
-          <h2 className="text-3xl font-bold text-center">{t("specialSpeakers.title")}</h2>
+          <h2 className="text-3xl font-bold text-center">{t("navigation.speakers")}</h2>
           <SpecialSpeakers
             pinned={specialSpeakers.pinned}
             pool={specialSpeakers.pool}
