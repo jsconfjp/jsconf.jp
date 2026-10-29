@@ -48,7 +48,7 @@
     "language": "Japanese"
   },
   "cybozu-sponsor-lt-1": {
-    "title": "sperf の「速い書き方」は、今も速いのか測ってみた 概要",
+    "title": "jsperf の「速い書き方」は今も速いのか測ってみた",
     "description": "jsperf.com は、JavaScript のコード片の速さを比べるテストを公開・共有できるサービスで、「この書き方の方が速い」の根拠として長く広く参照されてきましたが、現在は閉鎖されています。後継の jsperf.app で過去のテストを今のブラウザで走らせ直せますが、テストの多くは 10 年前のもので、データも作者が置いた小さなものです。この LT では、jsperf.app で見つけた「速い書き方」を、同じ形のまま Vitest bench に写して自分のコードとデータで測り直す手順と、それをやる価値があるのはどんな場面かを話します。",
     "presenterNames": "ともやん",
     "language": "Japanese"
