@@ -1,5 +1,6 @@
 import type { StaticImageData } from "next/image";
 import speakerProfiles from "./speakerProfiles.json";
+import sponsorTalkDetails from "./sponsorTalkDetails.json";
 // @ts-expect-error see 2026/scripts/fetch-og-images.ts
 import { SPONSORS_BY_NAME, type Sponsor } from "./sponsors.ts";
 import talkDescriptions from "./talkDescriptions.json";
@@ -22,6 +23,7 @@ export type Talk = {
   title: string;
   titleJa?: string;
   scheduleLabel?: string;
+  presenterNames?: string;
   description: string; // markdown
   descriptionJa?: string; // markdown
   kind: Kind;
@@ -86,7 +88,18 @@ const makeSponsorTalk = (
   if (!sponsor) {
     throw new Error(`Sponsor not found for talk "${slug}": ${sponsorName}`);
   }
-  return { ...makeTalk(slug, title, kind, language), speakers: [sponsor] };
+  const details = sponsorTalkDetails[slug as keyof typeof sponsorTalkDetails];
+  return {
+    ...makeTalk(slug, title, kind, language),
+    ...(details && {
+      title: details.title,
+      description: details.description,
+      presenterNames: details.presenterNames,
+      language: details.language as Language,
+      scheduleLabel: `${details.title} by ${details.presenterNames}`,
+    }),
+    speakers: [sponsor],
+  };
 };
 
 export const TALKS = [

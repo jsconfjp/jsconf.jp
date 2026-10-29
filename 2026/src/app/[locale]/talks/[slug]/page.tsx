@@ -92,6 +92,7 @@ export default async function Page({ params }: Props) {
         </div>
       )}
       <div className="mt-4">
+        {session.talk.presenterNames && <p className="mb-4 font-bold">{session.talk.presenterNames}</p>}
         <Markdown>{description}</Markdown>
       </div>
       <ul className="mt-8 flex flex-col gap-2">
