@@ -80,9 +80,9 @@ const notSortedSchedule: ScheduledSession[] = [
 
   eventSession("break", "all", "12:05", "13:00", "昼休憩"),
 
-  eventSession("tba", "A", "13:00", "13:30"),
+  talkSession("A", "13:00", "13:30", "html-in-canvas-api"),
   talkSession("B", "13:00", "13:30", "nolu"),
-  talkSession("C", "13:00", "13:30", "neciu-dan"),
+  talkSession("C", "13:00", "13:30", "ypresto"),
   talkSession("D", "13:00", "13:30", "miidas-sponsor-session"),
   ...trackTalks("13:30", "14:00", ["neeraj-pandey", "yuta-nishi", "aileen-villanueva", "anotherball-sponsor-session"]),
   eventSession("break", "all", "14:00", "14:10"),
@@ -90,7 +90,10 @@ const notSortedSchedule: ScheduledSession[] = [
   talkSession("B", "14:10", "14:40", "uhyo"),
   talkSession("C", "14:10", "14:40", "hong-minhee"),
   talkSession("D", "14:10", "14:40", "cybozu-sponsor-session"),
-  ...trackTalks("14:40", "15:10", ["ondrej-zara", "wataru-morita", "html-in-canvas-api", "arkor-sponsor-session"]),
+  talkSession("A", "14:40", "15:10", "ondrej-zara"),
+  talkSession("B", "14:40", "15:10", "wataru-morita"),
+  eventSession("tba", "C", "14:40", "15:10"),
+  talkSession("D", "14:40", "15:10", "arkor-sponsor-session"),
   eventSession("break", "all", "15:10", "15:20"),
   talkSession("A", "15:20", "15:50", "kevin-uehara"),
   talkSession("B", "15:20", "15:50", "eiji"),
@@ -104,7 +107,12 @@ const notSortedSchedule: ScheduledSession[] = [
   ]),
   eventSession("break", "all", "16:20", "16:30"),
   ...trackTalks("16:30", "17:00", ["itai-satati", "akfm-sato", "ncdc-sponsor-session", "lincwell-sponsor-session"]),
-  ...trackTalks("17:00", "17:30", ["ypresto", "kinocoboy", "cougar-sponsor-session", "money-forward-sponsor-session"]),
+  ...trackTalks("17:00", "17:30", [
+    "neciu-dan",
+    "kinocoboy",
+    "cougar-sponsor-session",
+    "money-forward-sponsor-session",
+  ]),
   ...trackTalks("17:30", "18:00", [
     "jessie",
     "gmo-flatt-security-sponsor-session",
