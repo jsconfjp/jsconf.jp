@@ -1,10 +1,20 @@
 import { describe, it, expect } from "vitest";
 import { SPONSORS } from "./sponsors";
 import { TALKS } from "./talks";
+import sponsorTalkDetails from "./sponsorTalkDetails.json";
 
 const SPONSOR_KINDS = ["sponsor session", "sponsor LT"];
 
 describe("TALKS", () => {
+  it("publishes every submitted sponsor talk in its existing slot", () => {
+    for (const [slug, details] of Object.entries(sponsorTalkDetails)) {
+      const talk = TALKS.find((talk) => talk.slug === slug);
+      expect(talk, slug).toMatchObject(details);
+      expect(SPONSOR_KINDS, slug).toContain(talk?.kind);
+    }
+    expect(TALKS.some((talk) => talk.slug === "mcd3-sponsor-session")).toBe(false);
+  });
+
   it("has unique slugs", () => {
     const slugs = TALKS.map((talk) => talk.slug);
     expect(new Set(slugs).size).toBe(slugs.length);

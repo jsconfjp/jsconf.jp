@@ -81,6 +81,7 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
             {getTalkTitle(session.talk, locale)}
           </div>
           <ul className="flex flex-col gap-1">
+            {session.talk.presenterNames && <li>{session.talk.presenterNames}</li>}
             {session.talk.speakers.map((speaker) => (
               <li key={speaker.name} className="flex items-center gap-2">
                 {speaker.type === "speaker" && (
