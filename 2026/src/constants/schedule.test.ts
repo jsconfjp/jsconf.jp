@@ -41,7 +41,30 @@ describe("SCHEDULE", () => {
     expect(SCHEDULE.find((session) => session.kind === "closed")).toMatchObject({
       track: "A",
       startTime: "19:10",
-      endTime: "19:40",
+      endTime: "19:50",
+    });
+  });
+
+  it("allows transfer after the LTs and preserves the 30-minute keynote", () => {
+    expect(SCHEDULE.filter((session) => session.kind === "break" && session.startTime === "19:10")).toEqual(
+      ["B", "C", "D"].map((track) => ({
+        kind: "break",
+        track,
+        day: "1",
+        startTime: "19:10",
+        endTime: "19:20",
+        label: undefined,
+      })),
+    );
+    expect(SCHEDULE.find((session) => session.kind === "talk" && session.talk.slug === "josh-junon")).toMatchObject({
+      track: "B",
+      startTime: "19:20",
+      endTime: "19:50",
+    });
+    expect(SCHEDULE.find((session) => session.kind === "networking")).toMatchObject({
+      track: "all",
+      startTime: "19:50",
+      endTime: "21:30",
     });
   });
 });

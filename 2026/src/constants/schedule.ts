@@ -134,10 +134,13 @@ const notSortedSchedule: ScheduledSession[] = [
   talkSession("A", "19:00", "19:05", "gmo-flatt-security-sponsor-lt"),
   talkSession("A", "19:05", "19:10", "everlane-sponsor-lt"),
 
-  eventSession("closed", "A", "19:10", "19:40", "Room A Close (懇親会準備)"),
-  talkSession("B", "19:10", "19:40", "josh-junon"),
+  eventSession("closed", "A", "19:10", "19:50", "Room A Close (懇親会準備)"),
+  eventSession("break", "B", "19:10", "19:20"),
+  eventSession("break", "C", "19:10", "19:20"),
+  eventSession("break", "D", "19:10", "19:20"),
+  talkSession("B", "19:20", "19:50", "josh-junon"),
 
-  eventSession("networking", "all", "19:40", "21:30"),
+  eventSession("networking", "all", "19:50", "21:30"),
 ];
 
 export const SCHEDULE: ScheduledSession[] = notSortedSchedule
