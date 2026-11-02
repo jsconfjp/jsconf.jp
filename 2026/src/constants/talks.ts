@@ -225,7 +225,7 @@ export const TALKS = [
   makeSponsorTalk("enechain-sponsor-session", "株式会社enechain", "sponsor session", "Japanese", "株式会社enechain"),
   makeSponsorTalk("supateam-sponsor-session", "supa株式会社", "sponsor session", "Japanese", "supa株式会社"),
   makeTalk("saman-abaasi", "React Fiber Unplugged: How the Internal Scheduler Shapes React", "session", "English", [
-    "Saman Abaasi",
+    "Saman Abbasi",
   ]),
   makeTalk(
     "akfm-sato",
