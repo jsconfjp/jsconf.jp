@@ -52,5 +52,71 @@
     "description": "jsperf.com は、JavaScript のコード片の速さを比べるテストを公開・共有できるサービスで、「この書き方の方が速い」の根拠として長く広く参照されてきましたが、現在は閉鎖されています。後継の jsperf.app で過去のテストを今のブラウザで走らせ直せますが、テストの多くは 10 年前のもので、データも作者が置いた小さなものです。この LT では、jsperf.app で見つけた「速い書き方」を、同じ形のまま Vitest bench に写して自分のコードとデータで測り直す手順と、それをやる価値があるのはどんな場面かを話します。",
     "presenterNames": "ともやん",
     "language": "Japanese"
+  },
+  "enechain-sponsor-session": {
+    "title": "認証基盤の内製化に伴うフロントエンド開発について",
+    "description": "enechainでは、サービスの認証部分を外部のIDaaSから内製した新基盤へ移行しました。\nプロジェクト開始から1年程度で、稼働中の主要サービスの停止を行わずに切り替えています。\nフロントエンドでは、SPAで認証部分を担うライブラリやログイン画面などいくつか新しく開発しました。その過程でどのような意思決定を行ない、移行を進めていったかお話しします。",
+    "presenterNames": "choco",
+    "language": "Japanese"
+  },
+  "everlane-sponsor-lt": {
+    "title": "AIにスキルシートを書かせる前に、知っておきたいこと。",
+    "description": "ITエンジニア向けキャリアサービス「CodeCast」の事例をもとに、企業が書類選考やスカウトの際、プロフィールのどこに注目しているのかをご紹介します。AIでスキルシートを作成できる今、差がつくのはAIに渡す経験や強みです。実際の運用で直面した課題や、そのときの判断・工夫を振り返り、自分では当たり前だと思っている経験の中から、企業が評価するポイントを見つけて伝わる形にする方法をお話しします。キャリアアドバイザーが第三者の視点で経験を深掘りする意義についても、具体例を交えてご紹介します。",
+    "presenterNames": "齋 伶奈",
+    "language": "Japanese"
+  },
+  "dwango-sponsor-session": {
+    "title": "Panda CSSにみる、ライブラリを直接importしないCSS in JSだからできること",
+    "description": "CSS-in-JSの主流は、Emotionのように実行時にスタイルを注入する方式から、StyleXやvanilla-extractのようにビルド時にCSSを出力する方式へと移り変わってきました。\n\n私が担当するプロダクトでは、Next.jsのApp Routerへの移行をきっかけに、EmotionからPanda CSSに乗り換えました。Panda CSSは、使うときにimportするのがライブラリ自身ではなく、設定から生成されたコードだという点が特徴です。\n\n本セッションでは、StyleXやvanilla-extractと比べながら、生成されたコードをimportするこの作りが何をもたらすのかを解説します。\nデザイントークン以外の値を禁止する型チェックを一部のプロパティだけ緩めるプラグインを例に、この作りだからこそできることを、その辛さも含め紹介します。",
+    "presenterNames": "k8o",
+    "language": "Japanese"
+  },
+  "gmo-flatt-security-sponsor-session": {
+    "title": "npmパッケージの全量解析から学ぶソフトウェアサプライチェーン攻撃の実態と、開発者・メンテナ観点の守り方",
+    "description": "今年は axios や Mastra をはじめ、広く使われる npm パッケージの侵害が相次ぎ、エコシステム全体に影響が及んだ 1 年でした。本セッションでは、こうした侵害事例に加えて、GMO Flatt Security 独自の全量解析パイプラインが捉えた、npm をめぐるソフトウェアサプライチェーン攻撃の実態を紹介します。npmをはじめとした主要レジストリに公開されたパッケージの解析から見受けられる攻撃の型や傾向について解説します。その後、install scriptの既定無効化等のnpm側の変化を踏まえながら、開発者・メンテナそれぞれの立場でできる守り方を整理します。",
+    "presenterNames": "taiga",
+    "language": "Japanese"
+  },
+  "gmo-flatt-security-sponsor-lt": {
+    "title": "「脆弱性」と「悪性」に同時に立ち向かう、現代のプロダクトセキュリティ",
+    "description": "昨今ニュースが連日報道されているように、不正アクセスの脅威はますます身近なものになってしまいました。高度に発達したAIのハッキング技術に対抗するために「脆弱性」のないアプリケーション開発がより求められます。一方、今回のJSConf JPでも複数のセッションがある通り、昨年から今年にかけてパッケージ起因のマルウェア感染が流行しています。すなわち我々は「悪性」にも備えなければいけません。この視点での、GMO Flatt Securityとその製品「Takumi」の取り組みをご紹介します。",
+    "presenterNames": "toyojuni",
+    "language": "Japanese"
+  },
+  "ncdc-sponsor-session": {
+    "title": "一人フロントエンド。Agentが全コードを書く時代の治安維持戦略",
+    "description": "普段はクライアントワークが中心のNCDCで、新規プロダクトのWebフロントエンドを一人でイチから立ち上げました。本セッションでは、その立ち上げから現在に至るまでの技術的な変遷と、品質担保の工夫についてお話しします。\n\n現在このフロントエンドのコードはすべてAI Agentが書く体制になっています。当然「Agentが書くコードの品質をいかに担保するか」という課題に向き合う必要が出てきます。Agentは指示を読んでも忘れますし、lintに詰まればdisableコメントで黙らせますし、存在するAPIは使ってはいけないものでも使ってしまいます。\n\n本セッションでは1年かけてガードを育てた1つ目のプロダクトと、その知見を持ち込んで立ち上げた2つ目のプロダクトの実際のPRをもとに、工夫とハマった点を紹介します。\n\n- 読ませるルール・逃げられないlint\n- lintメッセージをプロンプトにする\n- 見た目の差分もAgentが自分で確認\n- エラーログをAgentが読む前提で残す",
+    "presenterNames": "高橋 陽星",
+    "language": "Japanese"
+  },
+  "ncdc-sponsor-lt": {
+    "title": "フルTypeScript × AI駆動開発で開発量が数倍に。「書く」より「決める」エンジニアへ",
+    "description": "NCDCでは、フロントエンドもバックエンドもインフラも、TypeScriptで書くことが多いです。\nエンジニアチームでは、これまでもクラウドをはじめとする新しい技術を積極的に取り入れてきましたが、ここ数年はAI駆動開発に力を入れてきました。その結果、社内のPR数は昨年度の1年間で約2倍に増え、今年度に入ってからはさらにその倍に迫るペースで伸びています。\n一方で、AIが書くコードが増えるほど、設計やトレードオフを「決める」人の判断も増えていきます。本トークでは、そんなNCDCのエンジニアチームの取り組みを紹介します。",
+    "presenterNames": "茨木 啓太",
+    "language": "Japanese"
+  },
+  "money-forward-sponsor-session": {
+    "title": "4LT Mix: 自然言語起点のE2Eテスト基盤 / AI時代のドメイン固有UIレイヤー / 93-Field Dynamic Form / Rails to Next.js Without a Big Bang",
+    "description": "マネーフォワードのエンジニア4名が、5〜7分のLT形式でそれぞれの開発現場での取り組みを紹介します。日本語と英語の発表が混在し、次の4つのテーマについてお話しします。\nFour engineers from Money Forward will share their experiences in 5–7 minute lightning talks. Here's the mix of four talks in Japanese and English.\n\n[JA] 自然言語を起点としたE2Eテスト基盤 by seito\n自然言語のシナリオをもとに、AIによるテストの生成から実行・修復までをつなぎ、人間のレビューを組み合わせて継続的に改善するE2Eテスト基盤を紹介します。\n\n[JA] AI時代のUI開発を支えるドメイン固有UIレイヤー by locol\n共通デザインシステムでは扱いにくいプロダクト固有のUIを再利用可能なレイヤーにまとめ、AIによるコード生成の精度向上やデザイナーによるUI作成、PoCでの再利用につなげる取り組みを紹介します。\n\n[EN] 93-Field Dynamic Form with Zod and RHF by Darren\nThis talk covers how we used AI pair programming to build a dynamic form for a loan application feature with 93 fields across 12 input types.\n\n[EN] Rails to Next.js Without a Big Bang: Feature Flags & Micro Frontends by Alghi\nThis talk covers how we are gradually migrating a Rails-based payroll system to Next.js using feature flags and Micro Frontends, including how we use AI agents and the lessons learned along the way.",
+    "presenterNames": "seito, locol, Darren, Alghi",
+    "language": "Japanese and English"
+  },
+  "enechain-sponsor-lt": {
+    "title": "Generative UIに学ぶ、リアルタイムに更新されるテーブル基盤のすすめ",
+    "description": "enechainでは、国内最大級のエネルギーのマーケットプレイスを運営しており、価格や注文がリアルタイムに更新されるテーブルを数多く扱っています。\n\nこうしたテーブルを画面ごとに作っていくと、パフォーマンスや操作感、検証の手間が少しずつばらばらになっていきます。\n\nそこで、Generative UIの考え方を取り入れ、UIはJSONで、挙動はライブラリで担うテーブル基盤を試しています。\n\nこのLTでは、開発にAIを活かしつつ、パフォーマンスとカスタマイズ性を保った一貫した体験を届けるための考え方を紹介します。",
+    "presenterNames": "中山 晶平 (@nakker1218)",
+    "language": "Japanese"
+  },
+  "arkor-sponsor-lt": {
+    "title": "正しくWeb サイトを守るためのコンテンツセキュリティーポリシー",
+    "description": "コンテンツセキュリティポリシー（CSP：Content Security Policy） とは、Web サイトをサイバー攻撃から守るためのセキュリティー機能です。\n有効に機能させることで、情報漏洩、クロスサイトスクリプティング（XSS）、不正なスクリプトの読み込みを防止、または最小限に抑えることができます。\nしかし、多くの Web サイトでは、CSP が設定されていないか、設定されていても CSP の恩恵の大半を無効にしてしまう方法になってしまっており、正しく設定できていることは非常に稀です。\n正しいコンテンツセキュリティーポリシーの指定方法を学んで、Web サイトの安全をさらに強化しましょう。",
+    "presenterNames": "Hina Nakahira",
+    "language": "Japanese"
+  },
+  "arkor-sponsor-session": {
+    "title": "なぜ、ArkorのWebアプリは一瞬で動くのか？先読みとキャッシュの舞台裏",
+    "description": "動的なデータを含む画面でも、表示・遷移した瞬間から操作できるようにしたい。Arkorでは、この体験を目指してReact フレームワーク「reactive-state」を作りました。\n\n肝となるポイントは、動的なデータを含む描画結果までキャッシュし、先読みできるようにすることです。描画時に参照したDB のデータを追跡し、変更を検知したら関連するキャッシュを無効化（purge）します。データが変わるまでは描画結果を再利用し、変わったときに取り直すことで、速さと更新への追従を両立します。\n\n本セッションでは、動的データまで先読みするためのキャッシュ境界と、先読み結果・データ更新の順序を扱う仕組みを、実際の本番アプリのデモとコードで解説します。",
+    "presenterNames": "たろー",
+    "language": "Japanese"
   }
 }
