@@ -8,7 +8,7 @@ import emptyAvatar from "../../public/speaker/250x250.png";
 
 type Day = "1";
 type Kind = "keynote" | "session" | "LT" | "sponsor session" | "sponsor LT";
-type Language = "English" | "Japanese";
+type Language = "English" | "Japanese" | "Japanese and English";
 
 type Speaker = {
   type: "speaker";
