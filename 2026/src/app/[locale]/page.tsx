@@ -3,12 +3,16 @@ import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Button } from "@/components/Button";
 import { Hero } from "@/components/Hero";
+import { SpecialSpeakers } from "@/components/SpecialSpeakers";
 import { SponsorGrid } from "@/components/SponsorGrid";
 import { Team } from "@/components/Team";
+import { TicketCountdown } from "@/components/TicketCountdown";
 import { Venue } from "@/components/Venue";
-import { SPONSORSHIP_URL } from "@/constants/external";
+import { SPONSORSHIP_URL, TICKETS_URL } from "@/constants/external";
+import { RANDOM_SPECIAL_SPEAKER_COUNT } from "@/constants/specialSpeakers";
 import { SPONSORS } from "@/constants/sponsors";
 import { ensureLocale } from "@/i18n/ensureLocale";
+import { getSpecialSpeakers } from "@/lib/getSpecialSpeakers";
 
 type Params = { locale: string };
 
@@ -35,12 +39,57 @@ export default async function Page({ params }: Props) {
   setRequestLocale(locale);
 
   const t = await getTranslations({ locale });
+  const specialSpeakers = getSpecialSpeakers();
 
   return (
     <div className="pt-8 md:pt-32">
       <div className="max-w-3xl mx-auto px-4 lg:px-0">
         <Hero />
       </div>
+
+      <div className="max-w-3xl mx-auto mt-8 md:mt-12 px-4 lg:px-0">
+        <section className="rounded-md border-2 border-primary bg-primary/10 px-6 py-4 text-center">
+          <h2 className="text-lg md:text-xl font-bold">{t("about.ticketNotice.title")}</h2>
+          <TicketCountdown />
+          <p className="mt-1 text-base md:text-lg">{t("about.ticketNotice.body")}</p>
+          <div className="mt-4 flex justify-center">
+            <Button
+              href={TICKETS_URL}
+              target="_blank"
+              variant="primary"
+              size="lg"
+              endIcon={<ArrowTopRightOnSquareIcon className="w-5 h-5" />}
+            >
+              {t("navigation.tickets")}
+            </Button>
+          </div>
+          <p className="mt-3 text-sm md:text-base">
+            {t.rich("about.ticketNotice.sponsor", {
+              link: (chunks) => (
+                <a href={SPONSORSHIP_URL} target="_blank" rel="noreferrer" className="text-primary underline">
+                  {chunks}
+                </a>
+              ),
+            })}
+          </p>
+        </section>
+      </div>
+
+      {specialSpeakers.pinned.length + specialSpeakers.pool.length > 0 && (
+        <div className="max-w-3xl mx-auto mt-12 md:mt-24 flex flex-col gap-6 px-4 lg:px-0">
+          <h2 className="text-3xl font-bold text-center">{t("navigation.speakers")}</h2>
+          <SpecialSpeakers
+            pinned={specialSpeakers.pinned}
+            pool={specialSpeakers.pool}
+            randomCount={RANDOM_SPECIAL_SPEAKER_COUNT}
+          />
+          <div className="flex items-center justify-center">
+            <Button href="/speakers" variant="secondary" size="md">
+              {t("specialSpeakers.viewAll")}
+            </Button>
+          </div>
+        </div>
+      )}
 
       <div className="max-w-3xl mx-auto mt-8 md:mt-16 flex justify-center px-4 lg:px-0">
         <Button
@@ -64,9 +113,7 @@ export default async function Page({ params }: Props) {
       </div>
 
       <div className="max-w-3xl mx-auto mt-8 md:mt-16 flex flex-col gap-4 px-4 lg:px-0">
-        <h2 className="text-lg md:text-xl font-bold text-center">
-          {t("about.previousYearHighlights")}
-        </h2>
+        <h2 className="text-lg md:text-xl font-bold text-center">{t("about.previousYearHighlights")}</h2>
         <div className="w-full aspect-video">
           <iframe
             className="w-full h-full"
@@ -82,9 +129,7 @@ export default async function Page({ params }: Props) {
 
       {SPONSORS.length > 0 && (
         <div className="max-w-3xl mx-auto mt-8 md:mt-32 flex flex-col gap-4">
-          <h2 className="text-3xl font-bold text-center">
-            {t("navigation.sponsors")}
-          </h2>
+          <h2 className="text-3xl font-bold text-center">{t("navigation.sponsors")}</h2>
           <SponsorGrid sponsors={SPONSORS} showPrText={false} />
           <div className="flex items-center justify-center">
             <Button href="/sponsors" variant="secondary" size="md">
@@ -96,9 +141,7 @@ export default async function Page({ params }: Props) {
 
       <div className="bg-trinidad-100 pt-12 pb-24 px-4 lg:px-0 mt-8 md:mt-32">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold my-4 text-center">
-            {t("team.team")}
-          </h2>
+          <h2 className="text-3xl font-bold my-4 text-center">{t("team.team")}</h2>
           <Team />
         </div>
       </div>

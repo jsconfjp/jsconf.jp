@@ -10,17 +10,12 @@ export const TIME_SLOT_INTERVAL_MINUTES = 5;
  * an array of time slots in regular increments. Used for timetable grid layout
  * to ensure consistent spacing and alignment of sessions.
  */
-export function generateTimeSlots(
-  sessions: ScheduledSession[] = SCHEDULE,
-): number[] {
+export function generateTimeSlots(sessions: ScheduledSession[] = SCHEDULE): number[] {
   if (!sessions || sessions.length === 0) {
     throw new Error("Sessions array cannot be empty for time slot generation");
   }
 
-  const allTimes = sessions.flatMap((session) => [
-    timeToMinutes(session.startTime),
-    timeToMinutes(session.endTime),
-  ]);
+  const allTimes = sessions.flatMap((session) => [timeToMinutes(session.startTime), timeToMinutes(session.endTime)]);
   const startMinutes = Math.min(...allTimes);
   const endMinutes = Math.max(...allTimes);
 
@@ -29,11 +24,7 @@ export function generateTimeSlots(
   }
 
   const slots = [];
-  for (
-    let time = startMinutes;
-    time < endMinutes;
-    time += TIME_SLOT_INTERVAL_MINUTES
-  ) {
+  for (let time = startMinutes; time < endMinutes; time += TIME_SLOT_INTERVAL_MINUTES) {
     slots.push(time);
   }
   return slots;

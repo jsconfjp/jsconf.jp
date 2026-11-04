@@ -9,9 +9,7 @@ export function Team() {
 
   return (
     <div>
-      <h3 className="text-2xl font-bold my-2 text-center">
-        {t("organizingTeam")}
-      </h3>
+      <h3 className="text-2xl font-bold my-2 text-center">{t("organizingTeam")}</h3>
       <div className="max-w-screen-sm mx-auto">
         <ol className="grid grid-cols-3 gap-4">
           {ORGANIZING_TEAM.map((member) => (
@@ -22,15 +20,10 @@ export function Team() {
         </ol>
       </div>
 
-      <h3 className="text-2xl font-bold my-2 text-center">
-        {t("volunteerTeam")}
-      </h3>
+      <h3 className="text-2xl font-bold my-2 text-center">{t("volunteerTeam")}</h3>
       <ol className="grid grid-cols-4 gap-4">
         {VOLUNTEER_TEAM.map((member) => (
-          <li
-            key={member.name}
-            className="flex flex-col items-center hover:underline cursor-pointer"
-          >
+          <li key={member.name} className="flex flex-col items-center hover:underline cursor-pointer">
             <TeamMember member={member} size={120} />
           </li>
         ))}

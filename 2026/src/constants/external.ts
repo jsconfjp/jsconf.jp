@@ -12,3 +12,6 @@ export const PREVIOUS_URL = "https://jsconf.jp/2025";
 
 // スポンサー応募(募集要項)
 export const SPONSORSHIP_URL = "https://forms.gle/EhB2VXCWvWJVw9Mz5";
+
+// チケット購入(pretix)
+export const TICKETS_URL = "https://pretix.eu/jsconfjp/2026/";

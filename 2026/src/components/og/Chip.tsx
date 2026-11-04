@@ -12,15 +12,10 @@ const trackColors = {
 } as const;
 
 export function Chip({ children, track }: React.PropsWithChildren<Props>) {
-  const [backgroundColor, color] = track
-    ? trackColors[track]
-    : ["rgb(17 24 39)", "white"];
+  const [backgroundColor, color] = track ? trackColors[track] : ["rgb(17 24 39)", "white"];
 
   return (
-    <span
-      tw={"flex text-lg py-1 px-2 rounded-md text-white"}
-      style={{ color, backgroundColor }}
-    >
+    <span tw={"flex text-lg py-1 px-2 rounded-md text-white"} style={{ color, backgroundColor }}>
       {children}
     </span>
   );

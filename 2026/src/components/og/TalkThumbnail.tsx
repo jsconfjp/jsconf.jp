@@ -1,11 +1,12 @@
 // OGPではimg要素しか使えないため警告を無視
-/* eslint-disable @next/next/no-img-element */
+/* oxlint-disable nextjs/no-img-element */
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { StaticImageData } from "next/image";
 import React from "react";
 import en from "@/../messages/en.json";
 import { ScheduledSession } from "@/constants/schedule";
+import { getTalkTitle } from "@/lib/getTalkTitle";
 import { Chip } from "./Chip";
 import { Logo } from "./Logo";
 import { Template } from "./Template";
@@ -21,6 +22,7 @@ const IMAGE_MIME_TYPES: Record<string, string> = {
 
 type Props = {
   session: ScheduledSession & { kind: "talk" };
+  locale: string;
 };
 
 const toImageSrc = (src: string | StaticImageData): string | null => {
@@ -31,12 +33,7 @@ const toImageSrc = (src: string | StaticImageData): string | null => {
 
       if (!mimeType) return null;
 
-      const filePath = join(
-        DIR_NEXT,
-        "..",
-        "public",
-        src.slice("/2026/".length),
-      );
+      const filePath = join(DIR_NEXT, "..", "public", src.slice("/2026/".length));
       const image = readFileSync(filePath, { encoding: "base64" });
       return `data:${mimeType};base64,${image}`;
     }
@@ -44,10 +41,7 @@ const toImageSrc = (src: string | StaticImageData): string | null => {
   }
   // ビルド中のURLは実際のパスとは異なるため置き換え
   const parts = src.src.split("/");
-  const absPath = join(
-    DIR_NEXT,
-    parts.slice(parts.indexOf("_next") + 1).join("/"),
-  );
+  const absPath = join(DIR_NEXT, parts.slice(parts.indexOf("_next") + 1).join("/"));
   const avatarUrl = readFileSync(absPath, { encoding: "base64" });
   if (src.src.endsWith(".jpg")) {
     return `data:image/jpeg;base64,${avatarUrl}`;
@@ -61,7 +55,7 @@ const toImageSrc = (src: string | StaticImageData): string | null => {
   throw new Error(`Unsupported image format: ${src.src}`);
 };
 
-export function TalkThumbnail({ session }: Props) {
+export function TalkThumbnail({ session, locale }: Props) {
   const { talk } = session;
 
   return (
@@ -69,12 +63,10 @@ export function TalkThumbnail({ session }: Props) {
       <div tw="flex-1 flex flex-col rounded-xl bg-white shadow-md">
         <main tw="flex-1 px-16 flex flex-col items-center justify-center">
           <h1 tw="text-7xl font-bold" style={{ lineHeight: "1.2" }}>
-            {talk.title}
+            {getTalkTitle(talk, locale)}
           </h1>
           <div tw="flex items-center" style={{ gap: 8 }}>
-            {session.track !== "all" && (
-              <Chip track={session.track}>Track {session.track}</Chip>
-            )}
+            {session.track !== "all" && <Chip track={session.track}>Track {session.track}</Chip>}
             <Chip>
               {session.startTime}-{session.endTime}
             </Chip>
@@ -92,11 +84,7 @@ export function TalkThumbnail({ session }: Props) {
                     : null;
 
               return (
-                <div
-                  key={speaker.name}
-                  tw="flex items-center"
-                  style={{ gap: 16 }}
-                >
+                <div key={speaker.name} tw="flex items-center" style={{ gap: 16 }}>
                   {imageSrc && (
                     <img
                       alt={speaker.name}
@@ -105,8 +93,7 @@ export function TalkThumbnail({ session }: Props) {
                       height={120 / talk.speakers.length}
                       tw={speaker.type === "speaker" ? "rounded-full" : ""}
                       style={{
-                        objectFit:
-                          speaker.type === "speaker" ? "cover" : "contain",
+                        objectFit: speaker.type === "speaker" ? "cover" : "contain",
                       }}
                     />
                   )}

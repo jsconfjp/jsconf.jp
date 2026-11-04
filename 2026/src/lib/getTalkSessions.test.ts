@@ -63,8 +63,6 @@ describe("getTalkSessions", () => {
   });
 
   it("should default to the SCHEDULE constant", () => {
-    expect(getTalkSessions()).toEqual(
-      SCHEDULE.filter((session) => session.kind === "talk"),
-    );
+    expect(getTalkSessions()).toEqual(SCHEDULE.filter((session) => session.kind === "talk"));
   });
 });

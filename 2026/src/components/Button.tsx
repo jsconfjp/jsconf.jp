@@ -26,8 +26,7 @@ export function Button({
         "flex items-center gap-2 rounded-lg font-bold transition-colors shadow-sm",
         full && "w-full",
         variant === "primary" && "bg-primary text-white hover:bg-primary/80",
-        variant === "secondary" &&
-          "bg-secondary text-white hover:bg-secondary/80",
+        variant === "secondary" && "bg-secondary text-white hover:bg-secondary/80",
       )}
     >
       <div

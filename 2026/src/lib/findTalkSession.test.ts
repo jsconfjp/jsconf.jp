@@ -41,17 +41,15 @@ describe("findTalkSession", () => {
   it("should throw error for non-existent slug", () => {
     // Bypass type constraint for error case testing
     expect(() =>
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      // oxlint-disable-next-line typescript/no-explicit-any
       findTalkSession("non-existent-slug" as any, mockSessions),
     ).toThrow("Talk session not found for slug: non-existent-slug");
   });
 
   it("should throw error for non-talk sessions", () => {
     // Bypass type constraint for error case testing
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    expect(() => findTalkSession("break" as any, mockSessions)).toThrow(
-      "Talk session not found for slug: break",
-    );
+    // oxlint-disable-next-line typescript/no-explicit-any
+    expect(() => findTalkSession("break" as any, mockSessions)).toThrow("Talk session not found for slug: break");
   });
 
   it("should work with the default SCHEDULE when no sessions provided", () => {
@@ -62,7 +60,7 @@ describe("findTalkSession", () => {
     } else {
       // スケジュール未確定（SCHEDULE が空）の間は、どの slug でも見つからず throw する
       expect(() =>
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        // oxlint-disable-next-line typescript/no-explicit-any
         findTalkSession("any-slug" as any),
       ).toThrow();
     }

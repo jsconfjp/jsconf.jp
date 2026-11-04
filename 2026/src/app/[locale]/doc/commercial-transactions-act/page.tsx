@@ -21,6 +21,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function Page({}: Props) {
+export default function Page() {
   return <CommercialTransactionsAct />;
 }
