@@ -162,7 +162,7 @@ export const TALKS = [
   makeSponsorTalk("miidas-sponsor-lt-1", "ミイダス社 LT", "sponsor LT", "Japanese", "ミイダス株式会社"),
   makeSponsorTalk(
     "anotherball-sponsor-lt-1",
-    "AnotherBall Pte Ltd LT",
+    "オレ達が戦ってきたOOMの正体の話をしよう",
     "sponsor LT",
     "Japanese",
     "AnotherBall Pte Ltd",
@@ -187,9 +187,9 @@ export const TALKS = [
   ]),
   makeSponsorTalk(
     "anotherball-sponsor-session",
-    "AnotherBall Pte Ltd",
+    "Slackエージェントが動き続けるVTuber配信アプリの裏側",
     "sponsor session",
-    "English",
+    "Japanese",
     "AnotherBall Pte Ltd",
   ),
   makeTalk("marco-ippolito", "The Missing Piece in Node.js Configuration", "session", "English", ["Marco Ippolito"]),
