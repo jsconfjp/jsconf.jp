@@ -168,7 +168,7 @@ export const TALKS = [
     "AnotherBall Pte Ltd",
   ),
   makeSponsorTalk("cybozu-sponsor-lt-1", "サイボウズ株式会社 LT", "sponsor LT", "Japanese", "サイボウズ株式会社"),
-  makeSponsorTalk("mcd3-sponsor-lt", "MCD3株式会社 LT", "sponsor LT", "Japanese", "MCD3株式会社"),
+  makeSponsorTalk("mcd3-sponsor-lt", "MCD3株式会社 LT", "sponsor LT", "Japanese", "エムシーディースリー株式会社"),
   makeTalk("nolu", "CVEから紐解くJIT Exploit", "session", "Japanese", ["nolu"]),
   makeTalk("neciu-dan", "How NOT to Use TanStack Query", "session", "English", ["Neciu Dan"]),
   makeSponsorTalk("miidas-sponsor-session", "ミイダス株式会社", "sponsor session", "Japanese", "ミイダス株式会社"),

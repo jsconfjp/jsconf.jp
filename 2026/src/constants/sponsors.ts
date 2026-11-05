@@ -48,7 +48,7 @@ export const SPONSORS: Sponsor[] = [
   {
     type: "sponsor",
     plan: "premium",
-    name: "MCD3株式会社",
+    name: "エムシーディースリー株式会社",
     url: "https://www.mcd3.co.jp/",
     logoUrl: "/2026/sponsor/mcd3-2026.png",
     prText: `
