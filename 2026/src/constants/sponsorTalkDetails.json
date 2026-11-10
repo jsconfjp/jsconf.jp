@@ -130,5 +130,11 @@
     "description": "ドワンゴの教育事業では、国語の教材を中心に縦書きの表現を活用しています。\n2026年には積年の未実装や未検討に動きがありました。注目の出来事を紹介します。",
     "presenterNames": "berlysia",
     "language": "Japanese"
+  },
+  "anotherball-sponsor-lt-1": {
+    "title": "オレ達が戦ってきたOOMの正体の話をしよう",
+    "description": "直しても直しても落ちる Node.js サーバーの OOM。怪しいところを一つずつ潰しても止まらず、手元では再現しない。追い詰められて本番のヒープをのぞいたら、原因は意外なものでした。数か月の泥沼と、そこから学んだ教訓を5分で話します。",
+    "presenterNames": "Daisuke Tsuji",
+    "language": "Japanese"
   }
 }
