@@ -13,7 +13,7 @@ export type Sponsor = {
   logoUrl?: string | StaticImageData;
 };
 
-// 2026年スポンサー。スポンサーセッションを持つ企業をプレミアムとして表示する。
+// 2026年スポンサー。契約プランに応じて表示する。
 export const SPONSORS: Sponsor[] = [
   {
     type: "sponsor",
@@ -215,6 +215,14 @@ Linc'wellは「テクノロジーを通じて、医療を一歩前へ」をミ�
     logoUrl: "/2026/sponsor/forcia-2026.png",
     prText:
       `フォルシアは、社員の半数近くをフルスタックエンジニアが占める技術者集団です。 膨大・複雑なデータを高速かつ正確に処理できる技術を強みとし、独自の技術基盤を用いたプロダクト開発や、旅行・観光業界のオンライン販売を支援するSaaS型サービスの提供などを行っています。 「検索」・「高速化」・「トラベルテック」・「JavaScript」、気になる単語がありましたらフォルシアHPをぜひご覧ください！柔軟な発想と技術力を活かして課題解決から社会を変える仲間を募集中です。`.trim(),
+  },
+  {
+    type: "sponsor",
+    plan: "premium",
+    name: "Auth0",
+    url: "https://auth0.com/",
+    logoUrl: "/2026/sponsor/auth0-2026.svg",
+    prText: "",
   },
 ];
 
