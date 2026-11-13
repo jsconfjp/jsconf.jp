@@ -205,6 +205,7 @@ export const TALKS = [
     "Natalia Markoborodova",
     "Thomas Nattestad",
   ]),
+  makeSponsorTalk("auth0-sponsor-session", "Auth0", "sponsor session", "Japanese", "Auth0"),
   makeSponsorTalk("arkor-sponsor-session", "Arkor", "sponsor session", "Japanese", "Arkor"),
   makeTalk("ondrej-zara", "You are never going to do these 10 JS mistakes", "session", "English", ["Ondřej Žára"]),
   makeTalk("eiji", "ブラウザで変わるID連携 — EVPとFedCMが描く未来の認証", "session", "Japanese", ["えーじ"]),

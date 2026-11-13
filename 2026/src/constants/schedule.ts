@@ -92,7 +92,7 @@ const notSortedSchedule: ScheduledSession[] = [
   talkSession("D", "14:10", "14:40", "cybozu-sponsor-session"),
   talkSession("A", "14:40", "15:10", "ondrej-zara"),
   talkSession("B", "14:40", "15:10", "wataru-morita"),
-  eventSession("tba", "C", "14:40", "15:10"),
+  talkSession("C", "14:40", "15:10", "auth0-sponsor-session"),
   talkSession("D", "14:40", "15:10", "arkor-sponsor-session"),
   eventSession("break", "all", "15:10", "15:20"),
   talkSession("A", "15:20", "15:50", "kevin-uehara"),
