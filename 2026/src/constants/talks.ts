@@ -224,7 +224,13 @@ export const TALKS = [
     "ローランド リチャード",
   ]),
   makeSponsorTalk("enechain-sponsor-session", "株式会社enechain", "sponsor session", "Japanese", "株式会社enechain"),
-  makeSponsorTalk("supateam-sponsor-session", "supa株式会社", "sponsor session", "Japanese", "supa株式会社"),
+  makeSponsorTalk(
+    "supateam-sponsor-session",
+    "株式会社HelloCloud",
+    "sponsor session",
+    "Japanese",
+    "株式会社HelloCloud",
+  ),
   makeTalk("saman-abaasi", "React Fiber Unplugged: How the Internal Scheduler Shapes React", "session", "English", [
     "Saman Abbasi",
   ]),
@@ -266,7 +272,7 @@ export const TALKS = [
   makeSponsorTalk("layerx-sponsor-session", "株式会社LayerX", "sponsor session", "Japanese", "株式会社LayerX"),
   makeSponsorTalk("arkor-sponsor-lt", "Arkor LT", "sponsor LT", "Japanese", "Arkor"),
   makeSponsorTalk("dwango-sponsor-lt", "株式会社ドワンゴ LT", "sponsor LT", "Japanese", "株式会社ドワンゴ"),
-  makeSponsorTalk("supateam-sponsor-lt", "supa株式会社 LT", "sponsor LT", "Japanese", "supa株式会社"),
+  makeSponsorTalk("supateam-sponsor-lt", "株式会社HelloCloud LT", "sponsor LT", "Japanese", "株式会社HelloCloud"),
   makeSponsorTalk("lincwell-sponsor-lt", "株式会社Linc'well LT", "sponsor LT", "Japanese", "株式会社Linc'well"),
   makeSponsorTalk(
     "money-forward-sponsor-lt",

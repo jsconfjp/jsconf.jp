@@ -82,9 +82,9 @@ export const SPONSORS: Sponsor[] = [
   {
     type: "sponsor",
     plan: "premium",
-    name: "supa株式会社",
+    name: "株式会社HelloCloud",
     url: "https://supateam.com",
-    logoUrl: "/2026/sponsor/supa-2026.svg",
+    logoUrl: "/2026/sponsor/hellocloud-2026.svg",
     prText: `
 AIの力を100%引き出しリスクもコントロールする、ハーネスエンジニアリングゲートウェイ。
 「supateam」は、GitHub Claude・Cursor・Jiraなどを連携するだけでAI開発の活用度・ROI・リスクを自動レポーティング。感覚値だったAI活用を経営に説明できる数字へ変えます。コーディングルール整備やツール活用の偏り検知など、データに基づく改善提案を提供します。
