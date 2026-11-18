@@ -137,6 +137,12 @@
     "presenterNames": "Daisuke Tsuji",
     "language": "Japanese"
   },
+  "vercel-sponsor-session": {
+    "title": "Vercel Functionsの舞台裏",
+    "description": "Vercelは、JavaScriptをはじめとする様々な言語のアプリケーションを実行する「Vercel Functions」を提供しています。Vercel FunctionsはシンプルなFunction as a Serviceとして始まりましたが、この数年で、Streaming SSRやLLMの普及といった時代のニーズに合わせて大きく進化してきました。\n本セッションでは、これまでの変遷とその背景、今の仕組み、今後の展望をご紹介します。後半では、多くのNode.jsアプリケーションを本番で運用する中で見えてきた、コールドスタート問題や、よくある落とし穴についてお話しします。",
+    "presenterNames": "Seiya Nuta",
+    "language": "Japanese"
+  },
   "auth0-sponsor-session": {
     "title": "認証の先にあるAIセキュリティ: プロンプトに頼らない、エージェントの「意図」に基づく動的認可",
     "description": "AIエージェントを業務システムやサービスに実装する際に、どのように権限を付与するか（認可）は大きな課題となっています。実用的なものにしようとすればするほど、APIやデータベースへの過剰なアクセス権（特権）を渡さざるを得ないというジレンマに直面します。「悪意ある操作はしないでください」というシステムプロンプトに頼る設計は通用しません。これらの課題を解決するために認可の主体を単なる「静的な権限」から「意図（Intent）をベースとして動的な権限」へとシフトすることが重要になります。このセッションではCNCFプロジェクトであるOpenFGA (https://openfga.dev/) を用いてユーザーやエージェントの意図に基づいた動的な認可処理をWebアプリケーションに実装する方法についてご紹介します。",
