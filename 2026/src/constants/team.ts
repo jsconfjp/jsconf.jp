@@ -48,7 +48,7 @@ export const VOLUNTEER_TEAM: TeamMember[] = [
   {
     name: "Maiko Yasunaga",
     url: "https://www.facebook.com/ma1mai",
-    avatarUrl:"https://avatars.githubusercontent.com/u/307911834?v=4",
+    avatarUrl: "https://avatars.githubusercontent.com/u/307911834?v=4",
   },
   {
     name: "shimataro",
