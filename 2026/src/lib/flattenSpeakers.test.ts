@@ -12,8 +12,8 @@ describe("flattenSpeakers", () => {
       day: "1",
       language: "English",
       speakers: [
-        { type: "speaker", name: "Speaker A", avatarUrl: "", bio: "" },
-        { type: "speaker", name: "Speaker B", avatarUrl: "", bio: "" },
+        { type: "speaker", name: "Speaker A", avatarUrl: "", bio: "", bioJa: "" },
+        { type: "speaker", name: "Speaker B", avatarUrl: "", bio: "", bioJa: "" },
       ],
     },
     {
