@@ -1,12 +1,13 @@
 import { setRequestLocale } from "next-intl/server";
 import { TalkThumbnail } from "@/components/og/TalkThumbnail";
 import { TalkSlug } from "@/constants/talks";
-import { Locale, LOCALES } from "@/i18n/constants";
+import { LOCALES } from "@/i18n/constants";
+import { ensureLocale } from "@/i18n/ensureLocale";
 import { findTalkSession } from "@/lib/findTalkSession";
 import { getTalkSessions } from "@/lib/getTalkSessions";
 import { generateImage } from "@/lib/og/image";
 
-type Params = { locale: Locale; slug: string };
+type Params = { locale: string; slug: string };
 
 type Props = {
   params: Promise<Params>;
@@ -27,8 +28,8 @@ export async function generateStaticParams(): Promise<Params[]> {
 }
 
 export default async function Image({ params }: Props) {
-  const { locale, slug } = await params;
-  setRequestLocale(locale);
+  const { locale: rawLocale, slug } = await params;
+  setRequestLocale(ensureLocale(rawLocale));
 
   const session = findTalkSession(slug as unknown as TalkSlug);
 

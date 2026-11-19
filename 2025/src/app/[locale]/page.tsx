@@ -4,18 +4,17 @@ import { Button } from "@/components/Button";
 import { Hero } from "@/components/Hero";
 import { SponsorGrid } from "@/components/SponsorGrid";
 import { Team } from "@/components/Team";
-import { Venue } from "@/components/Venue";
 import { SPONSORS } from "@/constants/sponsors";
-import { Locale } from "@/i18n/constants";
+import { ensureLocale } from "@/i18n/ensureLocale";
 
-type Params = { locale: Locale };
+type Params = { locale: string };
 
 type Props = {
   params: Promise<Params>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = await params;
+  const locale = ensureLocale((await params).locale);
   const t = await getTranslations({
     locale,
     namespace: "about",
@@ -29,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function Page({ params }: Props) {
-  const { locale } = await params;
+  const locale = ensureLocale((await params).locale);
   setRequestLocale(locale);
 
   const t = await getTranslations({ locale });
@@ -40,15 +39,20 @@ export default async function Page({ params }: Props) {
         <Hero />
       </div>
 
-      <div className="max-w-screen-md mx-auto mt-8 md:mt-32 flex flex-col gap-4">
-        <h2 className="text-3xl font-bold text-center">
-          {t("navigation.venue")}
-        </h2>
-        <Venue locale={locale} />
-        <div className="flex items-center justify-center">
-          <Button href="/venue" variant="secondary" size="md">
-            {t("navigation.viewDetails")}
-          </Button>
+      <div className="max-w-screen-md mx-auto mt-8 md:mt-16 flex flex-col gap-4 px-4 lg:px-0">
+        <p className="text-lg md:text-xl font-bold text-center">
+          {t("about.thankYou")}
+        </p>
+        <div className="w-full aspect-video">
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/me9KQ1SpKK4?si=byHOxwIpCcctOFyE"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
         </div>
       </div>
 

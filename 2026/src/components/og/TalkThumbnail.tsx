@@ -1,0 +1,113 @@
+// OGPではimg要素しか使えないため警告を無視
+/* oxlint-disable nextjs/no-img-element */
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+import { StaticImageData } from "next/image";
+import React from "react";
+import en from "@/../messages/en.json";
+import { ScheduledSession } from "@/constants/schedule";
+import { getTalkTitle } from "@/lib/getTalkTitle";
+import { Chip } from "./Chip";
+import { Logo } from "./Logo";
+import { Template } from "./Template";
+
+const DIR_NEXT = join(process.cwd(), ".next");
+// OGP 生成 (satori) が扱える画像形式のみ。webp / ico などはロゴを省略する
+const IMAGE_MIME_TYPES: Record<string, string> = {
+  jpg: "image/jpeg",
+  jpeg: "image/jpeg",
+  png: "image/png",
+  svg: "image/svg+xml",
+};
+
+type Props = {
+  session: ScheduledSession & { kind: "talk" };
+  locale: string;
+};
+
+const toImageSrc = (src: string | StaticImageData): string | null => {
+  if (typeof src === "string") {
+    if (src.startsWith("/2026/")) {
+      const extension = src.split(".").pop()?.toLowerCase();
+      const mimeType = extension ? IMAGE_MIME_TYPES[extension] : undefined;
+
+      if (!mimeType) return null;
+
+      const filePath = join(DIR_NEXT, "..", "public", src.slice("/2026/".length));
+      const image = readFileSync(filePath, { encoding: "base64" });
+      return `data:${mimeType};base64,${image}`;
+    }
+    return src;
+  }
+  // ビルド中のURLは実際のパスとは異なるため置き換え
+  const parts = src.src.split("/");
+  const absPath = join(DIR_NEXT, parts.slice(parts.indexOf("_next") + 1).join("/"));
+  const avatarUrl = readFileSync(absPath, { encoding: "base64" });
+  if (src.src.endsWith(".jpg")) {
+    return `data:image/jpeg;base64,${avatarUrl}`;
+  }
+  if (src.src.endsWith(".png")) {
+    return `data:image/png;base64,${avatarUrl}`;
+  }
+  if (src.src.endsWith(".svg")) {
+    return `data:image/svg+xml;base64,${avatarUrl}`;
+  }
+  throw new Error(`Unsupported image format: ${src.src}`);
+};
+
+export function TalkThumbnail({ session, locale }: Props) {
+  const { talk } = session;
+
+  return (
+    <Template>
+      <div tw="flex-1 flex flex-col rounded-xl bg-white shadow-md">
+        <main tw="flex-1 px-16 flex flex-col items-center justify-center">
+          <h1 tw="text-7xl font-bold" style={{ lineHeight: "1.2" }}>
+            {getTalkTitle(talk, locale)}
+          </h1>
+          <div tw="flex items-center" style={{ gap: 8 }}>
+            {session.track !== "all" && <Chip track={session.track}>Track {session.track}</Chip>}
+            <Chip>
+              {session.startTime}-{session.endTime}
+            </Chip>
+            <Chip>{talk.language}</Chip>
+          </div>
+        </main>
+        <footer tw="flex items-end justify-between px-8 pb-8">
+          <div tw="flex flex-col">
+            {talk.speakers.map((speaker) => {
+              const imageSrc =
+                speaker.type === "speaker"
+                  ? toImageSrc(speaker.avatarUrl)
+                  : speaker.logoUrl
+                    ? toImageSrc(speaker.logoUrl)
+                    : null;
+
+              return (
+                <div key={speaker.name} tw="flex items-center" style={{ gap: 16 }}>
+                  {imageSrc && (
+                    <img
+                      alt={speaker.name}
+                      src={imageSrc}
+                      width={120 / talk.speakers.length}
+                      height={120 / talk.speakers.length}
+                      tw={speaker.type === "speaker" ? "rounded-full" : ""}
+                      style={{
+                        objectFit: speaker.type === "speaker" ? "cover" : "contain",
+                      }}
+                    />
+                  )}
+                  <h2 tw="text-5xl font-bold">{speaker.name}</h2>
+                </div>
+              );
+            })}
+          </div>
+          <div tw="flex items-center" style={{ gap: 16 }}>
+            <Logo size={80} />
+            <h2 tw="text-4xl font-bold">{en.about.title}</h2>
+          </div>
+        </footer>
+      </div>
+    </Template>
+  );
+}

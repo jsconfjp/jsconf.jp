@@ -1,0 +1,56 @@
+{
+  "name": "2026",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:compare": "FIXED_BUILD_ID=compare next build",
+    "start": "next start",
+    "lint": "oxlint . --deny-warnings && npm run lint:tw",
+    "lint:tw": "node scripts/tw-lint.mjs",
+    "lint:tw:fix": "node scripts/tw-lint.mjs --fix",
+    "test": "vitest run",
+    "fetch-og-images": "node --strip-types --loader ./scripts/mock-img-loader.mjs scripts/fetch-og-images.ts",
+    "compare": "node --strip-types scripts/compare.ts",
+    "knip": "knip"
+  },
+  "dependencies": {
+    "@heroicons/react": "2.2.0",
+    "@mdx-js/loader": "3.1.1",
+    "@mdx-js/react": "3.1.1",
+    "@next/mdx": "16.3.5",
+    "clsx": "2.1.1",
+    "next": "16.3.8",
+    "next-intl": "4.14.5",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-markdown": "10.1.0",
+    "remark-frontmatter": "5.0.0",
+    "remark-gfm": "4.0.1",
+    "temporal-polyfill": "1.0.5"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "16.3.5",
+    "@playwright/test": "1.63.0",
+    "@tailwindcss/language-server": "0.16.0",
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/mdx": "2.0.14",
+    "@types/node": "24.13.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitest/coverage-v8": "5.0.1",
+    "knip": "6.36.0",
+    "oxlint": "1.83.0",
+    "tailwindcss": "4.3.3",
+    "typescript": "7.0.2",
+    "vitest": "5.0.1"
+  },
+  "allowScripts": {
+    "@parcel/watcher@2.5.6": true,
+    "@swc/core@1.16.2": true,
+    "fsevents@2.3.3": true,
+    "unrs-resolver@1.12.2": true
+  }
+}

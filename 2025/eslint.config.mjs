@@ -1,23 +1,24 @@
-import { dirname } from "node:path";
-import { fileURLToPath } from "node:url";
-import { FlatCompat } from "@eslint/eslintrc";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
+import nextTypescript from "eslint-config-next/typescript";
+import n from "eslint-plugin-n";
 
 const eslintConfig = [
   {
-    ignores: ["out/**", ".next/**", "node_modules/**", "dist/**", "build/**"],
+    ignores: [
+      "out/**",
+      ".next/**",
+      "node_modules/**",
+      "dist/**",
+      "build/**",
+      "coverage/**",
+    ],
   },
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...nextCoreWebVitals,
+  ...nextTypescript,
   {
+    // `import` プラグインは eslint-config-next が登録済みなので、ここでは `n` のみ追加する
     plugins: {
-      import: (await import("eslint-plugin-import")).default,
-      n: (await import("eslint-plugin-n")).default,
+      n,
     },
     rules: {
       "import/order": [

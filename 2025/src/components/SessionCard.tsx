@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import youtubeUrl from "@/assets/youtube.png";
 import { ScheduledSession } from "@/constants/schedule";
 import { Chip } from "./Chip";
 
@@ -45,18 +46,25 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
     >
       {session.kind === "talk" || session.kind === "streaming" ? (
         <div className="flex flex-col gap-1 items-start">
-          <div className="flex gap-1">
-            {session.track !== "all" && (
-              <div className="visible md:hidden">
-                <Chip size="sm" track={session.track}>
-                  {tTrack(session.track)}
-                </Chip>
+          <div className="flex items-center justify-between w-full">
+            <div className="flex gap-1">
+              {session.track !== "all" && (
+                <div className="visible md:hidden">
+                  <Chip size="sm" track={session.track}>
+                    {tTrack(session.track)}
+                  </Chip>
+                </div>
+              )}
+              <Chip size="sm" track={session.track}>
+                {tKind(session.talk.kind)}
+              </Chip>
+              <Chip size="sm">{session.talk.language}</Chip>
+            </div>
+            {session.kind !== "streaming" && session.talk.recordingUrl && (
+              <div className="flex gap-1 justify-end">
+                <Image src={youtubeUrl} alt="YouTube" width={24} height={24} />
               </div>
             )}
-            <Chip size="sm" track={session.track}>
-              {tKind(session.talk.kind)}
-            </Chip>
-            <Chip size="sm">{session.talk.language}</Chip>
           </div>
           <div className="font-bold text-md">
             {session.kind === "streaming" ? `(${t("streaming")}) ` : ""}

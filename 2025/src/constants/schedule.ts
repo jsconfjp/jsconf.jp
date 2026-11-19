@@ -6,16 +6,6 @@ export type Track = "A" | "B" | "C" | "D" | "all";
 
 export const TRACKS = ["A", "B", "C", "D"] satisfies Track[];
 
-export type SessionKind =
-  | "reception"
-  | "opening"
-  | "talk"
-  | "streaming"
-  | "closed"
-  | "break"
-  | "closing"
-  | "networking";
-
 export type ScheduledSession = {
   track: Track;
   day: Day;
@@ -40,9 +30,10 @@ export type ScheduledSession = {
         | "networking";
     }
 );
+
 export type TalkSession = Extract<ScheduledSession, { kind: "talk" }>;
 
-export const SCHEDULE: ScheduledSession[] = [
+const notSortedSchedule: ScheduledSession[] = [
   {
     kind: "reception",
     track: "all",
@@ -201,7 +192,7 @@ export const SCHEDULE: ScheduledSession[] = [
 
   {
     kind: "talk",
-    talk: TALKS_BY_SLUG["tbd-by-allen"],
+    talk: TALKS_BY_SLUG["by-allen"],
     track: "A",
     day: "1",
     startTime: "11:00",
@@ -209,7 +200,7 @@ export const SCHEDULE: ScheduledSession[] = [
   },
   {
     kind: "streaming",
-    talk: TALKS_BY_SLUG["tbd-by-allen"],
+    talk: TALKS_BY_SLUG["by-allen"],
     track: "B",
     day: "1",
     startTime: "11:00",
@@ -217,7 +208,7 @@ export const SCHEDULE: ScheduledSession[] = [
   },
   {
     kind: "streaming",
-    talk: TALKS_BY_SLUG["tbd-by-allen"],
+    talk: TALKS_BY_SLUG["by-allen"],
     track: "C",
     day: "1",
     startTime: "11:00",
@@ -225,7 +216,7 @@ export const SCHEDULE: ScheduledSession[] = [
   },
   {
     kind: "streaming",
-    talk: TALKS_BY_SLUG["tbd-by-allen"],
+    talk: TALKS_BY_SLUG["by-allen"],
     track: "D",
     day: "1",
     startTime: "11:00",
@@ -266,7 +257,7 @@ export const SCHEDULE: ScheduledSession[] = [
   },
   {
     kind: "talk",
-    talk: TALKS_BY_SLUG["denkiyagi-sponsor-session"],
+    talk: TALKS_BY_SLUG["cloudinary-sponsor-session"],
     track: "D",
     day: "1",
     startTime: "13:00",
@@ -423,7 +414,7 @@ export const SCHEDULE: ScheduledSession[] = [
 
   {
     kind: "talk",
-    talk: TALKS_BY_SLUG["bun-video-talk"],
+    talk: TALKS_BY_SLUG["shrink-supply-chain-risk-in-js"],
     track: "A",
     day: "1",
     startTime: "15:50",
@@ -447,13 +438,12 @@ export const SCHEDULE: ScheduledSession[] = [
   },
   {
     kind: "talk",
-    talk: TALKS_BY_SLUG["kakehashi-sponsor-session"],
+    talk: TALKS_BY_SLUG["aapo-alasuutari"],
     track: "D",
     day: "1",
     startTime: "15:50",
     endTime: "16:20",
   },
-
   {
     kind: "break",
     track: "all",
@@ -513,7 +503,7 @@ export const SCHEDULE: ScheduledSession[] = [
   },
   {
     kind: "talk",
-    talk: TALKS_BY_SLUG["cloudinary-sponsor-session"],
+    talk: TALKS_BY_SLUG["denkiyagi-sponsor-session"],
     track: "C",
     day: "1",
     startTime: "17:00",
@@ -609,7 +599,7 @@ export const SCHEDULE: ScheduledSession[] = [
   {
     kind: "talk",
     talk: TALKS_BY_SLUG[
-      "technical-welfare-and-new-capitalistic-web-development"
+      "embracing-technical-welfare-and-rediscovering-web-development"
     ],
     track: "A",
     day: "1",
@@ -619,7 +609,7 @@ export const SCHEDULE: ScheduledSession[] = [
   {
     kind: "streaming",
     talk: TALKS_BY_SLUG[
-      "technical-welfare-and-new-capitalistic-web-development"
+      "embracing-technical-welfare-and-rediscovering-web-development"
     ],
     track: "B",
     day: "1",
@@ -629,7 +619,7 @@ export const SCHEDULE: ScheduledSession[] = [
   {
     kind: "streaming",
     talk: TALKS_BY_SLUG[
-      "technical-welfare-and-new-capitalistic-web-development"
+      "embracing-technical-welfare-and-rediscovering-web-development"
     ],
     track: "C",
     day: "1",
@@ -639,7 +629,7 @@ export const SCHEDULE: ScheduledSession[] = [
   {
     kind: "streaming",
     talk: TALKS_BY_SLUG[
-      "technical-welfare-and-new-capitalistic-web-development"
+      "embracing-technical-welfare-and-rediscovering-web-development"
     ],
     track: "D",
     day: "1",
@@ -662,7 +652,9 @@ export const SCHEDULE: ScheduledSession[] = [
     startTime: "20:05",
     endTime: "22:00",
   },
-]
+];
+
+export const SCHEDULE: ScheduledSession[] = notSortedSchedule
   // 時間順、トラック順でソート
   .toSorted((a, b) => {
     const timeCompare = timeToMinutes(a.startTime) - timeToMinutes(b.startTime);

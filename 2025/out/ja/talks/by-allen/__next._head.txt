@@ -1,0 +1,72 @@
+1:"$Sreact.fragment"
+2:I[83646,["/2025/_next/static/chunks/08e3wodwr84g3.js","/2025/_next/static/chunks/0oxfazk6_7s3i.js"],"ViewportBoundary"]
+3:I[83646,["/2025/_next/static/chunks/08e3wodwr84g3.js","/2025/_next/static/chunks/0oxfazk6_7s3i.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+14:I[60772,["/2025/_next/static/chunks/08e3wodwr84g3.js","/2025/_next/static/chunks/0oxfazk6_7s3i.js"],"IconMark"]
+5:Tdff,A History of JavaScript In 2025, the World Wide Web is ubiquitous with over a billion websites accessible from billions of web-connected devices. Each of these devices runs a web browser or similar programs that are able to display or otherwise process the pages and apps those websites make available. The majority of web pages include source code written in JavaScript. Arguably the world’s most broadly deployed programming language, JavaScript is not only used for web pages but also for complex server, desktop, and embedded applications.
+
+It all started in 1995 when the Web was new, tiny, chaotic, and in the early days of changing the world. Brendan Eich, a developer, working on the Netscape web browser, was tasked with creating a Java-sidekick web-scripting language. JavaScript, created in an epic ten-day hack, shipped first as a de facto Web standard.
+
+One of the reasons for the success of the web is that it is based upon non-proprietary open technologies. Anybody should be able to create a web page that can be hosted by a variety of web servers from different vendors and accessed by a variety of browsers. But interoperability among independent implementations requires common specifications that all implementations must support. From its earliest days it was understood that JavaScript would need some form of standard specification. In 1996, the standardization process for JavaScript was begun.
+
+We are here today because of the importance of modern JavaScript and we care about how it might evolve in the future. But history has lessons for us. We will be best prepared to build the future of JavaScript if we understand earlier phases of its development and evolution. This talk sets the stage for the future by taking a deep dive into the design decisions and techno-social processes that shaped modern standard JavaScript.
+
+---
+
+
+
+2025年現在、ウェブは世界中に浸透し、数十億のデバイスから数十億のウェブサイトへアクセスできるようになっている。ほとんどのデバイスはブラウザや類似のソフトウェアを搭載し、ウェブページやアプリを処理している。そして、その大多数にはJavaScriptのコードが使われている。JavaScriptは世界で最も広く利用されるプログラミング言語のひとつであり、ウェブだけでなくサーバーやデスクトップ、組み込みアプリケーションにも活用されている。
+
+その始まりは1995年。当時のウェブは小規模で混沌としていたが、世界を変えつつあった。Netscapeで働いていたブレンダン・アイクが、Javaと組み合わせるウェブ向けスクリプト言語の開発を任され、わずか10日間の開発でJavaScriptを完成させた。JavaScriptは事実上のウェブ標準として登場したのである。
+
+ウェブが発展した背景には、オープンで非プロプライエタリな技術に基づいていたことがある。誰でも自由にウェブページを作成し、異なるベンダーのサーバーやブラウザで利用できるようにするには、共通の仕様が不可欠だった。1996年にJavaScriptの標準化が始まったのもそのためである。
+
+現代においてJavaScriptがこれほど重要な存在である以上、その未来を考えるには過去を学ぶ必要がある。本講演では、現在の標準的なJavaScriptを形作った設計上の決断や社会技術的プロセスを振り返り、未来を築くための視座を提供する。6:Tdff,A History of JavaScript In 2025, the World Wide Web is ubiquitous with over a billion websites accessible from billions of web-connected devices. Each of these devices runs a web browser or similar programs that are able to display or otherwise process the pages and apps those websites make available. The majority of web pages include source code written in JavaScript. Arguably the world’s most broadly deployed programming language, JavaScript is not only used for web pages but also for complex server, desktop, and embedded applications.
+
+It all started in 1995 when the Web was new, tiny, chaotic, and in the early days of changing the world. Brendan Eich, a developer, working on the Netscape web browser, was tasked with creating a Java-sidekick web-scripting language. JavaScript, created in an epic ten-day hack, shipped first as a de facto Web standard.
+
+One of the reasons for the success of the web is that it is based upon non-proprietary open technologies. Anybody should be able to create a web page that can be hosted by a variety of web servers from different vendors and accessed by a variety of browsers. But interoperability among independent implementations requires common specifications that all implementations must support. From its earliest days it was understood that JavaScript would need some form of standard specification. In 1996, the standardization process for JavaScript was begun.
+
+We are here today because of the importance of modern JavaScript and we care about how it might evolve in the future. But history has lessons for us. We will be best prepared to build the future of JavaScript if we understand earlier phases of its development and evolution. This talk sets the stage for the future by taking a deep dive into the design decisions and techno-social processes that shaped modern standard JavaScript.
+
+---
+
+
+
+2025年現在、ウェブは世界中に浸透し、数十億のデバイスから数十億のウェブサイトへアクセスできるようになっている。ほとんどのデバイスはブラウザや類似のソフトウェアを搭載し、ウェブページやアプリを処理している。そして、その大多数にはJavaScriptのコードが使われている。JavaScriptは世界で最も広く利用されるプログラミング言語のひとつであり、ウェブだけでなくサーバーやデスクトップ、組み込みアプリケーションにも活用されている。
+
+その始まりは1995年。当時のウェブは小規模で混沌としていたが、世界を変えつつあった。Netscapeで働いていたブレンダン・アイクが、Javaと組み合わせるウェブ向けスクリプト言語の開発を任され、わずか10日間の開発でJavaScriptを完成させた。JavaScriptは事実上のウェブ標準として登場したのである。
+
+ウェブが発展した背景には、オープンで非プロプライエタリな技術に基づいていたことがある。誰でも自由にウェブページを作成し、異なるベンダーのサーバーやブラウザで利用できるようにするには、共通の仕様が不可欠だった。1996年にJavaScriptの標準化が始まったのもそのためである。
+
+現代においてJavaScriptがこれほど重要な存在である以上、その未来を考えるには過去を学ぶ必要がある。本講演では、現在の標準的なJavaScriptを形作った設計上の決断や社会技術的プロセスを振り返り、未来を築くための視座を提供する。0:{"rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"From Chaos to Harmony: A History of JavaScript（混沌から調和へ ― JavaScriptの歴史） | JSConf JP 2025"}],["$","meta","1",{"name":"description","content":"$5"}],["$","meta","2",{"property":"og:title","content":"From Chaos to Harmony: A History of JavaScript（混沌から調和へ ― JavaScriptの歴史） | JSConf JP 2025"}],["$","meta","3",{"property":"og:description","content":"$6"}],"$L7","$L8","$L9","$La","$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12"]}]}]}],null]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"hSgPG9TGGqqKYYJDr2Sco"}
+7:["$","meta","4",{"property":"og:site_name","content":"JSConf JP 2025"}]
+8:["$","meta","5",{"property":"og:image","content":"https://jsconf.jp/ja/talks/by-allen/opengraph-image?33251a403acd67b4"}]
+9:["$","meta","6",{"property":"og:image:type","content":"image/png"}]
+a:["$","meta","7",{"name":"twitter:card","content":"summary_large_image"}]
+b:["$","meta","8",{"name":"twitter:site","content":"@jsconfjp"}]
+c:["$","meta","9",{"name":"twitter:title","content":"From Chaos to Harmony: A History of JavaScript（混沌から調和へ ― JavaScriptの歴史） | JSConf JP 2025"}]
+13:Tdff,A History of JavaScript In 2025, the World Wide Web is ubiquitous with over a billion websites accessible from billions of web-connected devices. Each of these devices runs a web browser or similar programs that are able to display or otherwise process the pages and apps those websites make available. The majority of web pages include source code written in JavaScript. Arguably the world’s most broadly deployed programming language, JavaScript is not only used for web pages but also for complex server, desktop, and embedded applications.
+
+It all started in 1995 when the Web was new, tiny, chaotic, and in the early days of changing the world. Brendan Eich, a developer, working on the Netscape web browser, was tasked with creating a Java-sidekick web-scripting language. JavaScript, created in an epic ten-day hack, shipped first as a de facto Web standard.
+
+One of the reasons for the success of the web is that it is based upon non-proprietary open technologies. Anybody should be able to create a web page that can be hosted by a variety of web servers from different vendors and accessed by a variety of browsers. But interoperability among independent implementations requires common specifications that all implementations must support. From its earliest days it was understood that JavaScript would need some form of standard specification. In 1996, the standardization process for JavaScript was begun.
+
+We are here today because of the importance of modern JavaScript and we care about how it might evolve in the future. But history has lessons for us. We will be best prepared to build the future of JavaScript if we understand earlier phases of its development and evolution. This talk sets the stage for the future by taking a deep dive into the design decisions and techno-social processes that shaped modern standard JavaScript.
+
+---
+
+
+
+2025年現在、ウェブは世界中に浸透し、数十億のデバイスから数十億のウェブサイトへアクセスできるようになっている。ほとんどのデバイスはブラウザや類似のソフトウェアを搭載し、ウェブページやアプリを処理している。そして、その大多数にはJavaScriptのコードが使われている。JavaScriptは世界で最も広く利用されるプログラミング言語のひとつであり、ウェブだけでなくサーバーやデスクトップ、組み込みアプリケーションにも活用されている。
+
+その始まりは1995年。当時のウェブは小規模で混沌としていたが、世界を変えつつあった。Netscapeで働いていたブレンダン・アイクが、Javaと組み合わせるウェブ向けスクリプト言語の開発を任され、わずか10日間の開発でJavaScriptを完成させた。JavaScriptは事実上のウェブ標準として登場したのである。
+
+ウェブが発展した背景には、オープンで非プロプライエタリな技術に基づいていたことがある。誰でも自由にウェブページを作成し、異なるベンダーのサーバーやブラウザで利用できるようにするには、共通の仕様が不可欠だった。1996年にJavaScriptの標準化が始まったのもそのためである。
+
+現代においてJavaScriptがこれほど重要な存在である以上、その未来を考えるには過去を学ぶ必要がある。本講演では、現在の標準的なJavaScriptを形作った設計上の決断や社会技術的プロセスを振り返り、未来を築くための視座を提供する。d:["$","meta","10",{"name":"twitter:description","content":"$13"}]
+e:["$","meta","11",{"name":"twitter:image","content":"https://jsconf.jp/ja/talks/by-allen/opengraph-image?33251a403acd67b4"}]
+f:["$","meta","12",{"name":"twitter:image:type","content":"image/png"}]
+10:["$","link","13",{"rel":"icon","href":"/2025/icon.svg?icon.0rt5g72mqansw.svg","sizes":"any","type":"image/svg+xml"}]
+11:["$","link","14",{"rel":"apple-touch-icon","href":"/2025/apple-icon.png?apple-icon.2cxuvpb5tyq9n.png","sizes":"230x230","type":"image/png"}]
+12:["$","$L14","15",{}]

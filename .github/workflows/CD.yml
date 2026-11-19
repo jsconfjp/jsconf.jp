@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  deploy_2025:
+  deploy:
     runs-on: ubuntu-latest
     permissions:
       pages: write
@@ -15,25 +15,29 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-          cache-dependency-path: 2023/package-lock.json
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - run: mkdir dist
       - run: cp public/* dist/
       - run: mv 2019/public dist/2019
       - run: mv 2021/public dist/2021
       - run: mv 2022/public dist/2022
       - run: mv 2023/public dist/2023
-      - run: cd 2024 && npm i && npm run build -- --prefix-paths --verbose && (mv public/2024 ../dist || mkdir ../dist/2024) && cp -r public/* ../dist/2024
-      - run: cd 2025 && npm ci && npm run build && mv out ../dist/2025
+      # 2025 は凍結済み。ビルド済みの静的出力(2025/out)をそのまま配信する
+      - run: cp -r 2025/out dist/2025
+      # 2024 は凍結済み。ビルド済みの public/ をそのまま配信する
+      - run: mv 2024/public dist/2024
+      # 2026 は .nvmrc(Node 24 / npm 11)に合わせる
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: 2026/.nvmrc
+          cache: npm
+          cache-dependency-path: 2026/package-lock.json
+      - run: cd 2026 && npm ci && npm run build && mv out ../dist/2026
         env:
           NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
       - run: find dist
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: dist
-      - uses: actions/deploy-pages@v4
+      - uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
         id: deployment

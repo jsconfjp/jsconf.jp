@@ -1,0 +1,36 @@
+1:"$Sreact.fragment"
+2:I[83646,["/2025/_next/static/chunks/08e3wodwr84g3.js","/2025/_next/static/chunks/0oxfazk6_7s3i.js"],"ViewportBoundary"]
+3:I[83646,["/2025/_next/static/chunks/08e3wodwr84g3.js","/2025/_next/static/chunks/0oxfazk6_7s3i.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+14:I[60772,["/2025/_next/static/chunks/08e3wodwr84g3.js","/2025/_next/static/chunks/0oxfazk6_7s3i.js"],"IconMark"]
+5:T5ba,This year marks the 30th anniversary of JavaScript, and we are still stuck with the same old Date object from the 90s. It uses zero-based months, only works with local time or UTC, and its parsing is inconsistent across environments. On top of that, it is mutable, which can lead to hard-to-track bugs—especially when dealing with daylight saving or historical calendar changes.
+
+Many real-world applications today need to work across time zones—whether it is for scheduling meetings, showing user-friendly dates, or handling reservations that span multiple time zones. This is where the Temporal API comes in. It is a modern replacement for Date: immutable by default, accurate with time zones, and designed to be much more reliable and predictable.
+
+In this talk, I will go through common problems with Date, and show how Temporal solves them in a much simpler and safer way. We will look at concepts like Instant, ZonedDateTime, PlainDateTime, and Duration, and see how they map to real-world use cases. 
+
+Even though browser support is still experimental, there are reliable polyfills that let you start using Temporal today for learning and prototyping. The API may still evolve, but it is already in a solid state to explore—and understanding it now will prepare you for the next generation of web applications where time handling is no longer a headache. If you have ever struggled with time in JavaScript, this is the upgrade you have been waiting for!6:T5ba,This year marks the 30th anniversary of JavaScript, and we are still stuck with the same old Date object from the 90s. It uses zero-based months, only works with local time or UTC, and its parsing is inconsistent across environments. On top of that, it is mutable, which can lead to hard-to-track bugs—especially when dealing with daylight saving or historical calendar changes.
+
+Many real-world applications today need to work across time zones—whether it is for scheduling meetings, showing user-friendly dates, or handling reservations that span multiple time zones. This is where the Temporal API comes in. It is a modern replacement for Date: immutable by default, accurate with time zones, and designed to be much more reliable and predictable.
+
+In this talk, I will go through common problems with Date, and show how Temporal solves them in a much simpler and safer way. We will look at concepts like Instant, ZonedDateTime, PlainDateTime, and Duration, and see how they map to real-world use cases. 
+
+Even though browser support is still experimental, there are reliable polyfills that let you start using Temporal today for learning and prototyping. The API may still evolve, but it is already in a solid state to explore—and understanding it now will prepare you for the next generation of web applications where time handling is no longer a headache. If you have ever struggled with time in JavaScript, this is the upgrade you have been waiting for!0:{"rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Now and Next – Handling Time in JavaScript with Temporal | JSConf JP 2025"}],["$","meta","1",{"name":"description","content":"$5"}],["$","meta","2",{"property":"og:title","content":"Now and Next – Handling Time in JavaScript with Temporal | JSConf JP 2025"}],["$","meta","3",{"property":"og:description","content":"$6"}],"$L7","$L8","$L9","$La","$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12"]}]}]}],null]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"hSgPG9TGGqqKYYJDr2Sco"}
+7:["$","meta","4",{"property":"og:site_name","content":"JSConf JP 2025"}]
+8:["$","meta","5",{"property":"og:image","content":"https://jsconf.jp/ja/talks/handling-time-in-javascript-with-temporal/opengraph-image?33251a403acd67b4"}]
+9:["$","meta","6",{"property":"og:image:type","content":"image/png"}]
+a:["$","meta","7",{"name":"twitter:card","content":"summary_large_image"}]
+b:["$","meta","8",{"name":"twitter:site","content":"@jsconfjp"}]
+c:["$","meta","9",{"name":"twitter:title","content":"Now and Next – Handling Time in JavaScript with Temporal | JSConf JP 2025"}]
+13:T5ba,This year marks the 30th anniversary of JavaScript, and we are still stuck with the same old Date object from the 90s. It uses zero-based months, only works with local time or UTC, and its parsing is inconsistent across environments. On top of that, it is mutable, which can lead to hard-to-track bugs—especially when dealing with daylight saving or historical calendar changes.
+
+Many real-world applications today need to work across time zones—whether it is for scheduling meetings, showing user-friendly dates, or handling reservations that span multiple time zones. This is where the Temporal API comes in. It is a modern replacement for Date: immutable by default, accurate with time zones, and designed to be much more reliable and predictable.
+
+In this talk, I will go through common problems with Date, and show how Temporal solves them in a much simpler and safer way. We will look at concepts like Instant, ZonedDateTime, PlainDateTime, and Duration, and see how they map to real-world use cases. 
+
+Even though browser support is still experimental, there are reliable polyfills that let you start using Temporal today for learning and prototyping. The API may still evolve, but it is already in a solid state to explore—and understanding it now will prepare you for the next generation of web applications where time handling is no longer a headache. If you have ever struggled with time in JavaScript, this is the upgrade you have been waiting for!d:["$","meta","10",{"name":"twitter:description","content":"$13"}]
+e:["$","meta","11",{"name":"twitter:image","content":"https://jsconf.jp/ja/talks/handling-time-in-javascript-with-temporal/opengraph-image?33251a403acd67b4"}]
+f:["$","meta","12",{"name":"twitter:image:type","content":"image/png"}]
+10:["$","link","13",{"rel":"icon","href":"/2025/icon.svg?icon.0rt5g72mqansw.svg","sizes":"any","type":"image/svg+xml"}]
+11:["$","link","14",{"rel":"apple-touch-icon","href":"/2025/apple-icon.png?apple-icon.2cxuvpb5tyq9n.png","sizes":"230x230","type":"image/png"}]
+12:["$","$L14","15",{}]

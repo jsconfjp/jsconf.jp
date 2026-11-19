@@ -1,13 +1,29 @@
 pre-commit:
   parallel: true
   commands:
-    prettier:
+    oxfmt:
       glob: "*.{json,md,yml,ts,tsx,js,mjs,css}"
+      exclude:
+        - "2019/**"
+        - "2020/**"
+        - "2021/**"
+        - "2022/**"
+        - "2023/**"
+        - "2024/**"
+        - "2025/**"
       run: |
-        npx prettier -w {staged_files}
+        npx oxfmt --write {staged_files}
+      skip:
+        - merge
       stage_fixed: true
     prisma:
       glob: "*.prisma"
       run: |
         npx prisma format {staged_files}
       stage_fixed: true
+    # 2026: Tailwind クラス診断ゲート (@tailwindcss/language-server を headless 実行)。
+    # 2026 配下のソースがステージされた時だけ全体を検査し、診断が残っていれば commit を止める。
+    tailwind-2026:
+      glob: "2026/*.{ts,tsx,js,jsx,mjs,mdx,css}"
+      run: |
+        cd 2026 && node scripts/tw-lint.mjs

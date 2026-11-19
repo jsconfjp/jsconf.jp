@@ -1,5 +1,6 @@
+/// <reference types="react/canary" />
 import { Metadata, Viewport } from "next";
-import { unstable_ViewTransition as ViewTransition } from "react";
+import { ViewTransition } from "react";
 import en from "@/../messages/en.json";
 
 export const viewport: Viewport = {

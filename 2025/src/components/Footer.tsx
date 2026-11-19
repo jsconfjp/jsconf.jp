@@ -2,12 +2,14 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import githubUrl from "@/assets/github.svg";
 import twitterXUrl from "@/assets/twitter-x.svg";
+import youtubeUrl from "@/assets/youtube.png";
 import {
   GITHUB_URL,
   JNA_URL,
   NODEJS_OFFICIAL_URL,
   PREVIOUS_URL,
   X_URL,
+  YOUTUBE_URL,
 } from "@/constants/external";
 import { Link } from "@/i18n/navigation";
 
@@ -25,6 +27,12 @@ export function Footer() {
       icon: githubUrl,
       alt: "GitHub",
       href: GITHUB_URL,
+      target: "_blank",
+    },
+    {
+      icon: youtubeUrl,
+      alt: "YouTube",
+      href: YOUTUBE_URL,
       target: "_blank",
     },
   ];

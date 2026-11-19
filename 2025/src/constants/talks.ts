@@ -2,6 +2,7 @@ import type { StaticImageData } from "next/image";
 // @ts-expect-error see 2025/scripts/fetch-og-images.ts
 import { type Sponsor, SPONSORS_BY_NAME } from "./sponsors.ts";
 import emptyAvatar from "../../public/speaker/250x250.png";
+import aapoAlasuutariAvatar from "../../public/speaker/AapoAlasuutari.png";
 import akfmSatoAvatar from "../../public/speaker/akfm-sato.png";
 import allenWirfsBrockAvatar from "../../public/speaker/allen-wirfs-brock.jpg";
 import anamAhmedAvatar from "../../public/speaker/anam-ahmed.jpg";
@@ -10,17 +11,20 @@ import baseballyamaAvatar from "../../public/speaker/baseballyama.jpg";
 import berlysiaAvatar from "../../public/speaker/berlysia.jpg";
 import blagojJovanovAvatar from "../../public/speaker/blagoj-jovanov.jpg";
 import canalunAvatar from "../../public/speaker/canalun.png";
+import ctcpipAvatar from "../../public/speaker/ctcpip.png";
 import deanSrebnikAvatar from "../../public/speaker/dean-srebnik.jpg";
+import devsnekAvatar from "../../public/speaker/devsnek.jpg";
+import DmitryMakhnevAvatar from "../../public/speaker/DmitryMakhnev.jpg";
 import GiovanniLaquidaraAvatar from "../../public/speaker/Giovanni-Laquidara.png";
 import islandryuAvatar from "../../public/speaker/islandryu.jpg";
 import itaiSatatiAvatar from "../../public/speaker/itai-satati.jpg";
-import jarredSumnerAvatar from "../../public/speaker/jarred-sumner.jpg";
 import jemimaAbuAvatar from "../../public/speaker/jemima-abu.jpg";
 import jiko21Avatar from "../../public/speaker/jiko21.jpg";
 import joyeeCheungAvatar from "../../public/speaker/joyee-cheung.jpg";
 import jxckAvatar from "../../public/speaker/jxck.svg";
 import kazukiImamuraAvatar from "../../public/speaker/kazuki-imamura.jpg";
 import kojiKojiAvatar from "../../public/speaker/koji-koji.jpg";
+import legendecasAvatar from "../../public/speaker/legendecas.png";
 import leoKettmeirAvatar from "../../public/speaker/leo-kettmeir.jpg";
 import lucaMugnainiAvatar from "../../public/speaker/luca-mugnaini.jpg";
 import manishKumarAvatar from "../../public/speaker/manish-kumar.jpg";
@@ -31,6 +35,8 @@ import olivierFluckigerAvatar from "../../public/speaker/olivier-fluckiger.jpg";
 import otaMeshiAvatar from "../../public/speaker/ota-meshi.jpg";
 import petamorikenAvatar from "../../public/speaker/petamoriken.jpg";
 import progfayAvatar from "../../public/speaker/progfay.png";
+import robpalmer2Avatar from "../../public/speaker/robpalmer2.jpg";
+import RubenBridgewaterAvatar from "../../public/speaker/RubenBridgewater.jpg";
 import sachaGreifAvatar from "../../public/speaker/sacha-greif.jpg";
 import shaneCarrAvatar from "../../public/speaker/shane-carr.jpg";
 import sosukeSuzukiAvatar from "../../public/speaker/sosuke-suzuki.jpg";
@@ -47,7 +53,7 @@ type Day = "1";
 type Kind = "keynote" | "session" | "LT" | "sponsor session" | "sponsor LT";
 type Language = "English" | "Japanese";
 
-export type Speaker = {
+type Speaker = {
   type: "speaker";
   name: string;
   avatarUrl: string | StaticImageData;
@@ -62,6 +68,7 @@ export type Talk = {
   day: Day;
   language: Language;
   speakers: (Speaker | Sponsor)[];
+  recordingUrl?: string;
 };
 export type FlattenedSpeaker = {
   talk: Talk;
@@ -503,7 +510,8 @@ Whether you're a web developer looking to expand into TV development or seeking 
   },
   {
     slug: "denkiyagi-sponsor-session",
-    title: "なぜブラウザで帳票を生成したいのか、どのようにブラウザで帳票を生成するのか",
+    title:
+      "なぜブラウザで帳票を生成したいのか、どのようにブラウザで帳票を生成するのか",
     description: `デンキヤギでは、yagisan-reportsという「ブラウザ単体で動作する帳票エンジン」を開発・販売しています。
 帳票エンジンとは、ざっくり言えば「請求書のようなPDFを出力するテンプレートエンジン」です。
 
@@ -723,19 +731,8 @@ In 2022 we started working towards solving this problem in WinterCG, which has n
   },
   {
     slug: "line-yahoo-sponsor-session",
-    title: "Yahoo!知恵袋における継続的な開発効率と品質向上の実践",
-    description: `Yahoo!知恵袋の現場における取り組みについて、以下をキーワードにお話します。
-
-- 開発現場で行っていること
-  - TypeScript化
-  - コーディング規約
-  - フェールセーフな設計
-  - リアーキテクト
-- 特徴的な取り組み
-  - カナリアリリース
-  - feature flag
-  - codemod
-  - 生成AI`,
+    title: "老舗の知恵とAIの二刀流で挑むYahoo!知恵袋の事故らない進化",
+    description: `Yahoo!知恵袋は、登録利用者数5,200万人、累計2億8,000万件の質問と6億5,000万件以上の回答を有する、国内最大級のQ&Aサービスです。性別や年代を問わず幅広く利用されています。このような規模のシステムの開発と運用を行っている私たちにとって、事故の予防と迅速な復旧は、継続的成長と信頼性維持の要です。事故が起きれば、ユーザー離れや信頼低下、ビジネス指標の悪化、最悪の場合はサービス終了につながりかねません。そのため、事故の防止と影響拡大の抑止を目的とした仕組みを整えています。一方、生成AIの普及により、開発の迅速化への期待はかつてない水準に達しています。Claude CodeやCodexなどのAIコーディングツールを前提に、私たちも開発速度の向上を図っています。「信頼性」と「速度」の両立は難題ですが、私たちは蓄積した老舗の知見とAIの二刀流で取り組んでいます。本セッションでは、その具体的な方法と取り組みを詳しくご紹介します。`,
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -801,7 +798,7 @@ https://github.com/acornjs/acorn/commit/b4ae0d29384f2bf3fafac7d42f1c3e2ee9a48204
   },
   {
     slug: "state-of-deno",
-    title: "The State of Deno",
+    title: "Deno Wrapped: What happened in Deno this year",
     description: `Deno is a popular modern alternative to NodeJS, with a focus on security & modern tooling, while being compatible with Node.
 The Deno team has worked on many different projects, be it in the open source ecosystem with Deno itself and JSR amongst other, and in a commercial setting with Deno Deploy and Deno Subhosting.
 
@@ -823,7 +820,8 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
   },
   {
     slug: "reiwa-travel-sponsor-session",
-    title: "AIにNext.js App Router移行を依頼して、失敗した話。 Evolving NEWT’s TypeScript Backend for the AI-Driven",
+    title:
+      "AIにNext.js App Router移行を依頼して、失敗した話。 Evolving NEWT’s TypeScript Backend for the AI-Driven",
     description: `1. AIにNext.js App Routerの移行を任せた結果、プロンプト調整だけで1ヶ月を費やしてしまい、ログ欠損も発生してしまいました。
 この経験を通じて、AI支援の正しい使い方と、人が担うべき判断・理解の順序を見直した話をします。
 
@@ -835,23 +833,21 @@ Additionally, I am a maintainer to jsr.io, a modern alternative to npm, where I 
     language: "Japanese",
     speakers: [SPONSORS_BY_NAME["株式会社令和トラベル"]],
   },
-
   {
-    slug: "bun-video-talk",
-    title:
-      "Bunで実現する高速レンダリング（原題：Rendering at the speed of Bun） (video talk)",
-    description: `モダンなアプリケーション開発では、静的サイト生成、サーバーサイドレンダリング、ルーティング、ホットリロードといった複数のツールを組み合わせる必要があり、その多くは速度低下や複雑性の増大を招いてきた。
-Bunの新しいRendering APIは、これらの要素をひとつに統合し、Bunならではの高いパフォーマンスと優れた開発体験を提供する。
-本講演では、Rendering APIの仕組み、速度に最適化された理由、そしてそれが開発者にモダンなフルスタックアプリケーションをBunで構築する力をどのように与えるのかをジャレッドが解説する。`,
+    slug: "shrink-supply-chain-risk-in-js",
+    title: "Shrink Supply Chain Risk in JS",
+    description: `Supply‑chain attacks have become commonplace. Learn how to validate what you install, reduce blast radius, and maintain packages responsibly.
+We’ll cover common weak points in modern applications and how to tackle these. We’ll also dig into healthy maintainer practices for sustainable package upkeep.
+Use least‑privilege, dependency policies, and more mitigation strategies with ease.`,
     kind: "session",
     day: "1",
     language: "English",
     speakers: [
       {
         type: "speaker",
-        name: "Jarred Sumner",
-        avatarUrl: jarredSumnerAvatar,
-        bio: "Building Bun",
+        name: "Ruben Bridgewater",
+        avatarUrl: RubenBridgewaterAvatar,
+        bio: "Ruben Bridgewater is a Staff Engineer at Datadog, building observability that adds insight—not overhead. He serves on the Node.js Technical Steering Committee and participates in TC39 as an Invited Expert, focusing on developer experience, performance, and making things simple.",
       },
     ],
   },
@@ -894,11 +890,10 @@ Bunの新しいRendering APIは、これらの要素をひとつに統合し、B
   },
   {
     slug: "profiling-typescript-at-scale",
-    title:
-      "Profiling TypeScript at Scale: Finding and Fixing Compiler Bottlenecks",
+    title: "Tracing the TypeScript compiler at Scale",
     description: `As TypeScript projects grow, so does the pain of waiting for the compiler. What once felt instant on a small codebase can turn into a frustrating bottleneck and lost productivity across large teams and codebases.
 
-In this talk, I’ll walk through how I used the TypeScript profiler to uncover hidden bottlenecks in a real-world monolith and applied a single fix that shaved minutes off every build. We didn’t need exotic tools or risky rewrites, just a better understanding of what the compiler was actually doing.`,
+In this talk, I’ll walk through how I used the TypeScript tracer to uncover hidden bottlenecks in a real-world monolith and applied a single fix that shaved minutes off every build. We didn’t need exotic tools or risky rewrites, just a better understanding of what the compiler was actually doing.`,
     kind: "session",
     day: "1",
     language: "English",
@@ -912,15 +907,23 @@ In this talk, I’ll walk through how I used the TypeScript profiler to uncover 
     ],
   },
   {
-    slug: "kakehashi-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
-    kind: "sponsor session",
+    slug: "aapo-alasuutari",
+    title:
+      "Out the cave, off the cliff  — data-oriented design in Nova JavaScript engine",
+    description:
+      "In the world of JavaScript, it is easy to forget that our software runs on real hardware, made up of real bits and bytes instead of being intangible shadows of objects on a wall, flickers of code on a screen. JavaScript programs tend to consume a lot of memory, and while much of the blame lies in the developer, a part of that is also the way our JavaScript engines are built. Nova JavaScript engine attempts to find a different path: in this talk we'll look at what JavaScript objects look like in memory, and ponder how much of that shadow of an object we really need or if we're perhaps ready to leave the Programmer's Cave and do away with thinking about shadows? Nova JavaScript engine is also an exploration into what is the price of walking that path: we'll see magnificent performance cliffs, and perhaps plunge off of them if the price is right.",
+    kind: "session",
     day: "1",
-    language: "Japanese",
-    speakers: [SPONSORS_BY_NAME["株式会社カケハシ"]],
+    language: "English",
+    speakers: [
+      {
+        type: "speaker",
+        name: "Aapo Alasuutari",
+        avatarUrl: aapoAlasuutariAvatar,
+        bio: "Aapo Alasuutari is a data-oriented design zealot writing TypeScript by day, with 9 years of experience developing a browser-based automation control system UI at Valmet Automation, but by night he transforms into a Rust developer writing the Nova JavaScript engine.",
+      },
+    ],
   },
-
   {
     slug: "v8-from-script-to-call-rcx",
     title: "V8: from <script> to `call $rcx`",
@@ -1027,16 +1030,40 @@ Webチームの内製化に取り組んでいる方、開発スピードと品�
   {
     slug: "technical-discussion-tc39",
     title: "Technical Discussion with TC39",
-    description: "TBD",
+    description: "",
     kind: "session",
     day: "1",
     language: "English",
     speakers: [
       {
         type: "speaker",
-        name: "TBD",
-        avatarUrl: emptyAvatar,
-        bio: "TBD",
+        name: "Chengzhong Wu",
+        avatarUrl: legendecasAvatar,
+        bio: "https://github.com/legendecas",
+      },
+      {
+        type: "speaker",
+        name: "Chris de Almedia",
+        avatarUrl: ctcpipAvatar,
+        bio: "https://github.com/ctcpip",
+      },
+      {
+        type: "speaker",
+        name: "Dmitry Makhnev",
+        avatarUrl: DmitryMakhnevAvatar,
+        bio: "https://github.com/DmitryMakhnev",
+      },
+      {
+        type: "speaker",
+        name: "Gus Caplan",
+        avatarUrl: devsnekAvatar,
+        bio: "https://github.com/devsnek",
+      },
+      {
+        type: "speaker",
+        name: "Rob Palmer",
+        avatarUrl: robpalmer2Avatar,
+        bio: "https://github.com/robpalme",
       },
     ],
   },
@@ -1075,8 +1102,9 @@ AI that acts changes the role it plays: from passive responder to proactive team
   },
   {
     slug: "dwango-sponsor-session",
-    title: "スポンサーキーノート",
-    description: "TBD",
+    title: "Media Capture and Streams: W3C仕様と現場での知見",
+    description:
+      "Media Capture and Streams API は、Web アプリケーションがカメラやマイクなどのメディアデバイスへアクセスし、MediaStreamTrack／MediaStream といったインターフェースを通じて映像・音声を扱うための仕様です。このセッションでは、標準化仕様に定義されるモデルやライフサイクル、Permissions／Constraints、ImageCapture などの周辺 API を整理しながら、実際にオンライン試験システムの開発で活用した際の体験談・失敗談を合わせて紹介します。",
     kind: "sponsor session",
     day: "1",
     language: "Japanese",
@@ -1105,7 +1133,8 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
   },
   {
     slug: "money-forward-sponsor-session",
-    title: "Micro Frontendsで築いた共通基盤の成長と、運用で積み重ねた試行の軌跡",
+    title:
+      "Micro Frontendsで築いた共通基盤の成長と、運用で積み重ねた試行の軌跡",
     description: `マネーフォワード クラウドでは、複数サービスに共通する承認・ワークフロー機能を共通基盤として切り出し、Web ComponentsをベースにMicro Frontendsを運用しています。
 2023年7月のリリースから現在まで2年以上、実装検証の段階を含めると約3年にわたり、Micro Frontendsを使った設計・統合方式における試行錯誤を積み重ねてきました。
 
@@ -1165,9 +1194,18 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
   },
 
   {
-    slug: "technical-welfare-and-new-capitalistic-web-development",
-    title: "TBD",
-    description: `TBD`,
+    slug: "embracing-technical-welfare-and-rediscovering-web-development",
+    title: "技術的福祉の受容、および Web 開発との「出会い直し」",
+    description: `Web 開発の「パラダイムシフト」は、エコシステムに何をもたらしてるんだろうか？
+今起こっている変化は、本当に「技術」の変化だけなんだろうか？
+強く成長することを求められるけど、その先に目指すものはなんなのだろうか？
+「乗り遅れ」ないためにベットしているのは、何に対してなんだろうか？
+結局俺達は、平成に直面してきた問題を解決して、「幸せ」になれていくんだろうか？
+
+急速に書き換えられたナラティブで、 Web 開発は何度目かの「出会い直し」を経験している。
+その先にぼんやり提示される物語に対し、隣の人と同じ方向を向いてるかすらもよくわからない時代。
+
+について、普段考えていることを話してみたい。`,
     kind: "keynote",
     day: "1",
     language: "Japanese",
@@ -1181,7 +1219,7 @@ In this talk, we’ll take a look at how to use HTML and CSS to build simpler al
     ],
   },
   {
-    slug: "tbd-by-allen",
+    slug: "by-allen",
     title:
       "From Chaos to Harmony: A History of JavaScript（混沌から調和へ ― JavaScriptの歴史）",
     description: [
@@ -1210,7 +1248,7 @@ We are here today because of the importance of modern JavaScript and we care abo
         type: "speaker",
         name: "Allen Wirfs Brock",
         avatarUrl: allenWirfsBrockAvatar,
-        bio: "TBD",
+        bio: "",
       },
     ],
   },

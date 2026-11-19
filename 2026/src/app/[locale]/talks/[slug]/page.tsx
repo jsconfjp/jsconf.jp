@@ -1,0 +1,127 @@
+import { Metadata } from "next";
+import Image from "next/image";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Chip } from "@/components/Chip";
+import { Markdown } from "@/components/Markdown";
+import { PageContainer } from "@/components/PageContainer";
+import { TalkSlug } from "@/constants/talks";
+import { LOCALES } from "@/i18n/constants";
+import { ensureLocale } from "@/i18n/ensureLocale";
+import { findTalkSession } from "@/lib/findTalkSession";
+import { getTalkTitle } from "@/lib/getTalkTitle";
+import { getTalkSessions } from "@/lib/getTalkSessions";
+import { getOgImagePath, getTalkOgImageId } from "@/lib/og/url";
+
+type Params = { locale: string; slug: string };
+
+type Props = {
+  params: Promise<Params>;
+};
+
+export function generateStaticParams(): Params[] {
+  const talkSessions = getTalkSessions();
+
+  return talkSessions.flatMap((session) =>
+    LOCALES.map((locale) => ({
+      locale,
+      slug: session.talk.slug,
+    })),
+  );
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale: rawLocale, slug } = await params;
+  const locale = ensureLocale(rawLocale);
+  setRequestLocale(locale);
+
+  const session = findTalkSession(slug as unknown as TalkSlug);
+
+  return {
+    title: getTalkTitle(session.talk, locale),
+    description: locale === "ja" ? (session.talk.descriptionJa ?? session.talk.description) : session.talk.description,
+    openGraph: {
+      images: [
+        {
+          // 例: /en/talks/ajay-upreti -> https://jsconf.jp/2026/og/opengraph-image/talk-en-ajay-upreti.png
+          url: getOgImagePath(getTalkOgImageId(locale, slug)),
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+  };
+}
+
+export default async function Page({ params }: Props) {
+  const { locale: rawLocale, slug } = await params;
+  const locale = ensureLocale(rawLocale);
+  setRequestLocale(locale);
+
+  const t = await getTranslations({
+    locale: locale,
+    namespace: "talks",
+  });
+  const session = findTalkSession(slug as unknown as TalkSlug);
+  const description =
+    locale === "ja" ? (session.talk.descriptionJa ?? session.talk.description) : session.talk.description;
+
+  return (
+    <PageContainer title={getTalkTitle(session.talk, locale)} centerizeTitle={false}>
+      <div>
+        <time>
+          {session.startTime}-{session.endTime}
+        </time>
+        <p className="my-1 flex items-center gap-2">
+          <Chip>{t(`kind.${session.talk.kind}`)}</Chip>
+          {session.track !== "all" && <Chip track={session.track}>{t(`track.${session.track}`)}</Chip>}
+          <Chip>{session.talk.language}</Chip>
+        </p>
+      </div>
+      {session.talk.recordingUrl && (
+        <div className="mt-4 flex flex-col justify-center items-center gap-2">
+          <h2 className="text-2xl font-bold">{t("recording")}</h2>
+          <iframe
+            width="560"
+            height="315"
+            src={session.talk.recordingUrl}
+            title={getTalkTitle(session.talk, locale)}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+      )}
+      <div className="mt-4">
+        {session.talk.presenterNames && <p className="mb-4 font-bold">{session.talk.presenterNames}</p>}
+        <Markdown>{description}</Markdown>
+      </div>
+      <ul className="mt-8 flex flex-col gap-2">
+        {session.talk.speakers.map((speaker) => (
+          <li key={speaker.name} className="flex items-center gap-4 bg-primary/10 p-6 rounded-md">
+            <div className="relative aspect-square w-48">
+              {speaker.type === "speaker" ? (
+                <Image className="object-cover" src={speaker.avatarUrl} alt={`${speaker.name}'s avatar`} fill />
+              ) : speaker.logoUrl ? (
+                <Image className="object-contain" src={speaker.logoUrl} alt={`${speaker.name}'s avatar`} fill />
+              ) : (
+                <div className="flex h-full items-center justify-center text-center font-semibold">{speaker.name}</div>
+              )}
+            </div>
+            <div className="flex-1 flex flex-col gap-2">
+              <h3 className="text-2xl font-bold">{speaker.name}</h3>
+              <div>
+                <Markdown>
+                  {speaker.type === "speaker"
+                    ? locale === "ja"
+                      ? (speaker.bioJa ?? speaker.bio)
+                      : speaker.bio
+                    : speaker.prText}
+                </Markdown>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </PageContainer>
+  );
+}
