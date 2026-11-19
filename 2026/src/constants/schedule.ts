@@ -25,6 +25,7 @@ export type ScheduledSession = {
   | {
       kind: EventKind;
       label?: string;
+      labelEn?: string;
     }
 );
 
@@ -45,6 +46,7 @@ const eventSession = (
   startTime: string,
   endTime: string,
   label?: string,
+  labelEn?: string,
 ): ScheduledSession => ({
   kind,
   track,
@@ -52,6 +54,7 @@ const eventSession = (
   startTime,
   endTime,
   label,
+  labelEn,
 });
 
 const trackTalks = (startTime: string, endTime: string, slugs: readonly [TalkSlug, TalkSlug, TalkSlug, TalkSlug]) =>
@@ -59,7 +62,7 @@ const trackTalks = (startTime: string, endTime: string, slugs: readonly [TalkSlu
 
 const notSortedSchedule: ScheduledSession[] = [
   eventSession("reception", "all", "09:00", "10:00"),
-  eventSession("opening", "all", "10:00", "10:10", "オープニング/開場説明"),
+  eventSession("opening", "all", "10:00", "10:10", "オープニング/開場説明", "Opening / Venue Information"),
 
   ...trackTalks("10:10", "10:20", ["ajay-upreti", "azukiazusa", "bicstone", "dynamis"]),
   ...trackTalks("10:20", "10:30", ["nurul-sundarani", "keisuke-tsuji", "yuya-inoue", "progfay"]),

@@ -8,6 +8,7 @@ import { TalkSlug } from "@/constants/talks";
 import { LOCALES } from "@/i18n/constants";
 import { ensureLocale } from "@/i18n/ensureLocale";
 import { findTalkSession } from "@/lib/findTalkSession";
+import { getTalkDescription } from "@/lib/getTalkDescription";
 import { getTalkTitle } from "@/lib/getTalkTitle";
 import { getTalkSessions } from "@/lib/getTalkSessions";
 import { getOgImagePath, getTalkOgImageId } from "@/lib/og/url";
@@ -38,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: getTalkTitle(session.talk, locale),
-    description: locale === "ja" ? (session.talk.descriptionJa ?? session.talk.description) : session.talk.description,
+    description: getTalkDescription(session.talk, locale),
     openGraph: {
       images: [
         {
@@ -62,8 +63,7 @@ export default async function Page({ params }: Props) {
     namespace: "talks",
   });
   const session = findTalkSession(slug as unknown as TalkSlug);
-  const description =
-    locale === "ja" ? (session.talk.descriptionJa ?? session.talk.description) : session.talk.description;
+  const description = getTalkDescription(session.talk, locale);
 
   return (
     <PageContainer title={getTalkTitle(session.talk, locale)} centerizeTitle={false}>
@@ -114,7 +114,7 @@ export default async function Page({ params }: Props) {
                   {speaker.type === "speaker"
                     ? locale === "ja"
                       ? (speaker.bioJa ?? speaker.bio)
-                      : speaker.bio
+                      : (speaker.bioEn ?? speaker.bio)
                     : speaker.prText}
                 </Markdown>
               </div>

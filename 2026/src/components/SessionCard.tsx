@@ -110,7 +110,7 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
               </div>
             )}
           </div>
-          <div>{session.label ?? t(session.kind)}</div>
+          <div>{(locale === "ja" ? session.label : session.labelEn) ?? session.label ?? t(session.kind)}</div>
         </div>
       )}
       <time className="text-xs">

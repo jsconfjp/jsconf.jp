@@ -18,6 +18,7 @@ describe("generateSessionId", () => {
           name: "Test Speaker",
           avatarUrl: "https://example.com/avatar.png",
           bio: "Test bio",
+          bioJa: "",
         },
       ],
     };
