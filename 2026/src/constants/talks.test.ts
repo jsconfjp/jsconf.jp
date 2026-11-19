@@ -1,11 +1,47 @@
 import { describe, it, expect } from "vitest";
 import { SPONSORS } from "./sponsors";
+import speakerProfiles from "./speakerProfiles.json";
 import { TALKS } from "./talks";
 import sponsorTalkDetails from "./sponsorTalkDetails.json";
 
 const SPONSOR_KINDS = ["sponsor session", "sponsor LT"];
 
 describe("TALKS", () => {
+  it("provides English titles for Japanese-language talks", () => {
+    const untranslated = TALKS.filter((talk) => talk.language === "Japanese" && !talk.titleEn);
+    expect(untranslated.map((talk) => talk.slug)).toEqual([]);
+  });
+
+  it("provides Japanese titles for English-language talks", () => {
+    const untranslated = TALKS.filter((talk) => talk.language === "English" && !talk.titleJa);
+    expect(untranslated.map((talk) => talk.slug)).toEqual([]);
+  });
+
+  it("provides English descriptions for Japanese-language talks", () => {
+    const untranslated = TALKS.filter(
+      (talk) =>
+        (talk.language === "Japanese" || talk.language === "Japanese and English") && !talk.descriptionEn?.trim(),
+    );
+    expect(untranslated.map((talk) => talk.slug)).toEqual([]);
+  });
+
+  it("provides a Japanese bio for every speaker", () => {
+    const speakers = TALKS.flatMap((talk) => talk.speakers).filter((speaker) => speaker.type === "speaker");
+
+    for (const speaker of speakers) {
+      expect(speaker.bioJa.trim(), speaker.name).not.toBe("");
+    }
+  });
+
+  it("provides an English bio for every Japanese bio", () => {
+    const japaneseBio = /[\u3040-\u30ff\u3400-\u9fff]/;
+    const untranslated = Object.entries(speakerProfiles).filter(
+      ([, profile]) => japaneseBio.test(profile.bio) && (!("bioEn" in profile) || !profile.bioEn.trim()),
+    );
+
+    expect(untranslated.map(([name]) => name)).toEqual([]);
+  });
+
   it("publishes every submitted sponsor talk in its existing slot", () => {
     for (const [slug, details] of Object.entries(sponsorTalkDetails)) {
       const talk = TALKS.find((talk) => talk.slug === slug);

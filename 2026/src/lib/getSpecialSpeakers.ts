@@ -8,6 +8,7 @@ export type SpecialSpeakerCard = {
   avatarUrl: Extract<Talk["speakers"][number], { type: "speaker" }>["avatarUrl"];
   slug: Talk["slug"];
   title: Talk["title"];
+  titleEn?: Talk["titleEn"];
   titleJa?: Talk["titleJa"];
   kind: Talk["kind"];
 };
@@ -34,6 +35,7 @@ export function getSpecialSpeakers(
         avatarUrl: speaker.avatarUrl,
         slug: talk.slug,
         title: talk.title,
+        titleEn: talk.titleEn,
         titleJa: talk.titleJa,
         kind: talk.kind,
       });

@@ -1,150 +1,187 @@
 {
   "Ajay Upreti": {
     "bio": "I'm Ajay Upreti, a Software Engineer focused on building scalable web applications using React, Next.js, TypeScript, and modern frontend technologies. I have a strong interest in web performance, developer experience, and AI-powered engineering workflows. Recently, I've been exploring how AI agents can help automate performance analysis, streamline development workflows, and improve productivity for frontend teams. I enjoy sharing practical insights that developers can apply immediately in their day-to-day work.",
+    "bioJa": "Ajay Upretiです。React、Next.js、TypeScriptなどのモダンなフロントエンド技術を使った、スケーラブルなWebアプリケーションの開発に取り組むソフトウェアエンジニアです。Webパフォーマンス、開発者体験、AIを活用したエンジニアリングのワークフローに関心があります。最近は、AIエージェントによるパフォーマンス分析の自動化や、開発ワークフローの効率化、フロントエンドチームの生産性向上に取り組んでいます。日々の開発ですぐに役立つ実践的な知見を共有することが好きです。",
     "avatarPath": "/2026/speaker/ajay-upreti.jpg"
   },
   "azukiazusa": {
     "bio": "フロントエンドエンジニア。ブログ azukiazusa.dev にて、フロントエンドや AI エージェント開発に関する記事を毎週発信している。",
+    "bioEn": "A frontend engineer who publishes weekly articles about frontend and AI agent development on the blog azukiazusa.dev.",
     "avatarPath": "/2026/speaker/azukiazusa.png"
   },
   "おおいし (bicstone)": {
     "bio": "Webエンジニア。建設業界で機械設計に従事した後、2019年に Web エンジニアへ転向し、一貫して Vertical SaaS の開発に携わる。",
+    "bioEn": "A web engineer who worked in mechanical design in the construction industry before switching to web engineering in 2019. Since then, he has focused on developing vertical SaaS.",
     "avatarPath": "/2026/speaker/bicstone.png"
   },
   "dynamis": {
     "bio": "Web 系のれっさーぱんだ。",
+    "bioEn": "A lesser panda of the web.",
     "avatarPath": "/2026/speaker/dynamis-2026.png"
   },
   "Nurul Sundarani": {
     "bio": "Nurul Sundarani is an international speaker, open source contributor, and software engineer who enjoys building developer tools and exploring emerging technologies. Outside of work, he is usually tinkering with AI agents that were supposed to stay weekend projects, or watching Formula 1.",
+    "bioJa": "Nurul Sundaraniは、開発者向けツールの開発や新しい技術の探求を楽しむ、国際的に登壇するソフトウェアエンジニアであり、オープンソースへの貢献者です。仕事以外では、週末だけのつもりだったAIエージェントをいじったり、F1を観戦したりしています。",
     "avatarPath": "/2026/speaker/nurul-sundarani.jpg"
   },
   "辻佳佑": {
     "bio": "ソフトウェアエンジニア。Vue.js / Nuxt を中心としたWebアプリケーション開発に従事。",
+    "bioEn": "A software engineer focused on web application development, primarily with Vue.js and Nuxt.",
     "avatarPath": "/2026/speaker/keisuke-tsuji.png"
   },
   "Yuya Inoue": {
     "bio": "PKSHA Technology所属のソフトウェアエンジニア。2026年からNode.js coreへのコントリビューションに取り組んでおり、現在はNode.js Triagersチームのメンバーとしても活動しています。",
+    "bioEn": "A software engineer at PKSHA Technology. Since 2026, he has been contributing to Node.js core and is also a member of the Node.js Triagers team.",
     "avatarPath": "/2026/speaker/yuya-inoue.jpg"
   },
   "progfay": {
     "bio": "Web Frontend Engineer",
+    "bioJa": "Webフロントエンドエンジニア",
     "avatarPath": "/2026/speaker/progfay-2026.png"
   },
   "Rikito Taniguchi": {
     "bio": "Rikito (@tanishiking) is working as a Scala Compiler Engineer at VirtusLab and Scala Center. Most of his development work has been on the Scala 3 compiler and build tooling, and he is currently focused on the Scala-to-Wasm compiler. In his spare time he enjoys bouldering and MtG though these days he's mostly busy by parenting.",
+    "bioJa": "Rikito（@tanishiking）は、VirtusLabとScala CenterでScalaコンパイラエンジニアとして働いています。これまで主にScala 3コンパイラやビルドツールの開発に携わり、現在はScalaからWasmへのコンパイラに取り組んでいます。趣味はボルダリングとMagic: The Gatheringですが、最近は子育てに忙しくしています。",
     "avatarPath": "/2026/speaker/rikito-taniguchi.jpg"
   },
   "TOMIKAWA Sotaro": {
     "bio": "株式会社ZOZOでフロントエンドエンジニア（テックリード）をしています。",
+    "bioEn": "A frontend engineer and tech lead at ZOZO, Inc.",
     "avatarPath": "/2026/speaker/tomikawa-sotaro-2026.png"
   },
   "syumai": {
     "bio": "2025 年 12 月に LayerX に入社し、現在はバクラクヘルプデスク エージェントの開発を担当している。 Asakusa.go 、ECMAScript 仕様輪読会主催。「Web 開発者のための［入門］Cloudflare Workers」を執筆。",
+    "bioEn": "Joined LayerX in December 2025 and currently develops the Bakuraku Helpdesk Agent. Organizes Asakusa.go and an ECMAScript specification reading group. Author of *Cloudflare Workers for Web Developers: An Introduction*.",
     "avatarPath": "/2026/speaker/syumai.png"
   },
   "yebis0942": {
     "bio": "普段はWebアプリケーションを作っています。ECMAScript 仕様輪読会に参加して仕様書を読んでいます。",
+    "bioEn": "Usually builds web applications and reads the ECMAScript specification with a specification reading group.",
     "avatarPath": "/2026/speaker/yebis0942.jpg"
   },
   "Kazuya Serizawa": {
     "bio": "PeopleXという会社でAIロープレという製品を開発しています。",
+    "bioEn": "Develops an AI role-play product at PeopleX.",
     "avatarPath": "/2026/speaker/kazuya-serizawa.jpg"
   },
   "森内建太 (@petamoriken)": {
     "bio": "Web標準を追うのが好きで、趣味でTC39の会議をまとめたりZennに記事を書いたりしています。昨年ECMAScriptにNormative Changeを入れました。Denoコントリビューター。",
+    "bioEn": "Enjoys following web standards and, as a hobby, writes summaries of TC39 meetings and articles on Zenn. Contributed a normative change to ECMAScript last year. Deno contributor.",
     "avatarPath": "/2026/speaker/petamoriken.jpg"
   },
   "池奥裕太": {
     "bio": "2024年にエムスリー株式会社に新卒で入社。チームリーダーとして新規プロダクトの開発に取り組む。TSKaigiコアスタッフ。Figmaと型パズルが好きです。",
+    "bioEn": "Joined M3, Inc. as a new graduate in 2024 and works on new product development as a team lead. Core staff member of TSKaigi. Enjoys Figma and type puzzles.",
     "avatarPath": "/2026/speaker/yuta-ikeoku.jpg"
   },
   "nolu": {
     "bio": "JavaScript愛好家",
+    "bioEn": "JavaScript enthusiast.",
     "avatarPath": "/2026/speaker/nolu.jpg"
   },
   "Neciu Dan": {
     "bio": "Dan Neciu is a Lead Engineer at Rover.com with 14+ years building frontend at scale. He's an international speaker who has taken the stage at React Rally, React Summit, WeAreDevelopers World Congress, JS World, KCDC, Techorama, Frontmania, and many more — 30+ talks across 15 countries. He organizes the ReactJS Barcelona meetup, hosts the Señors at Scale podcast (50+ episodes with engineers from Spotify, Vercel, Google, Netflix), and created the sold-out Lizard to Wizard engineering excellence workshop. Previously Staff Engineer and Technical Co-Founder at CareerOS. Based in Barcelona.",
+    "bioJa": "Dan NeciuはRover.comのリードエンジニアで、14年以上にわたり大規模なフロントエンド開発に携わっています。React Rally、React Summit、WeAreDevelopers World Congress、JS World、KCDC、Techorama、Frontmaniaなど、15か国で30回以上登壇してきた国際的なスピーカーです。ReactJS Barcelonaのミートアップを主催し、Spotify、Vercel、Google、Netflixのエンジニアなどを迎えた50回以上のエピソードを持つポッドキャスト「Señors at Scale」のホストも務めています。また、完売したエンジニアリング向上ワークショップ「Lizard to Wizard」を立ち上げました。以前はCareerOSでスタッフエンジニア兼テクニカル共同創業者を務めていました。バルセロナ在住です。",
     "avatarPath": "/2026/speaker/neciu-dan.jpg"
   },
   "Neeraj Pandey": {
     "bio": "Neeraj is the co-founder of Lyntcube, a AI native digital workforce for Real Estate. Over the years, he has worked on a variety of full-stack software and data-science applications, as well as computational arts, and likes the challenge of creating new tools and applications, and is an active speaker with talks and tutorials presented at multiple conferences. \n\nPast performances: http://n4jp4y.com/talks",
+    "bioJa": "Neerajは、不動産業界向けのAIネイティブなデジタルワークフォースを提供するLyntcubeの共同創業者です。これまで、さまざまなフルスタックソフトウェアやデータサイエンスのアプリケーション、コンピュテーショナルアートに携わってきました。新しいツールやアプリケーションを作ることにやりがいを感じ、複数のカンファレンスで講演やチュートリアルを行うなど、積極的に登壇しています。\n\n過去の登壇: http://n4jp4y.com/talks",
     "avatarPath": "/2026/speaker/neeraj-pandey.jpg"
   },
   "Yuta Nishi": {
     "bio": "Platform Engineerとしてプロダクト開発に携わっています。Webが大好きで、特にフロントエンド領域、TypeScriptとV8を愛しています。中でも型パズルとV8の配列領域には強い関心があります。Webの歴史や仕様を追いかけるのも好きです。TSKaigiのスタッフ活動、Zennでの技術記事執筆、各種カンファレンスへの登壇なども行っています。",
+    "bioEn": "A platform engineer working on product development. Loves the web, especially frontend development, TypeScript, and V8, with a particular interest in type puzzles and V8's array internals. Also enjoys exploring the history and specifications of the web, contributing to TSKaigi, writing technical articles on Zenn, and speaking at conferences.",
     "avatarPath": "/2026/speaker/yuta-nishi.png"
   },
   "Aileen Villanueva": {
     "bio": "I’m a Software Engineer, Google Developer Expert (GDE), and community builder based in Mexico. My work centers around JavaScript, web development, and emerging AI tooling. I use AI as a tool in my engineering workflow, helping me prototype rapidly and take my ideas further. I'm highly interested in the future of interaction design and building interfaces where users and agents work side-by-side. Outside of work, I actively organize tech communities in Mexico. Whether I'm running a meetup, hosting a workshop, or speaking at a conference, my goal is to create approachable spaces for anybody to learn and share knowledge",
+    "bioJa": "メキシコを拠点とするソフトウェアエンジニアで、Google Developer Expert（GDE）として活動し、コミュニティづくりにも取り組んでいます。JavaScript、Web開発、新しいAIツールを中心に活動しています。エンジニアリングのワークフローでAIを活用し、素早くプロトタイプを作ってアイデアを発展させています。インタラクションデザインの未来や、ユーザーとエージェントが協働するインターフェースに強い関心があります。仕事以外では、メキシコで技術コミュニティを積極的に運営しています。ミートアップの開催、ワークショップの運営、カンファレンスでの登壇を通じて、誰もが気軽に学び、知識を共有できる場を作ることを目指しています。",
     "avatarPath": "/2026/speaker/aileen-villanueva.jpg"
   },
   "Marco Ippolito": {
     "bio": "Marco is a Senior Security Engineer at HeroDevs.\nActive contributor, releaser, and member of the Node.js Technical Steering Committee, he is a renowned international speaker and a former Microsoft MVP. Marco is actively involved in many projects within the Node.js ecosystem and also serves as a delegate in TC39.",
+    "bioJa": "MarcoはHeroDevsのシニアセキュリティエンジニアです。Node.js Technical Steering Committeeのメンバーとして、プロジェクトへの貢献やリリースにも携わっています。国際的に知られるスピーカーで、元Microsoft MVPです。Node.jsエコシステムの多くのプロジェクトに積極的に関わり、TC39のデリゲートも務めています。",
     "avatarPath": "/2026/speaker/marco-ippolito.jpg"
   },
   "うひょ": {
     "bio": "株式会社カオナビ　フロントエンドエキスパート。TypeScriptとReactに詳しい。技術評論社『プロを目指す人のためのTypeScript入門』著者。",
+    "bioEn": "Frontend expert at Kaonavi, specializing in TypeScript and React. Author of *Introduction to TypeScript for Aspiring Professionals* (Gijutsu-Hyoron Co., Ltd.).",
     "avatarPath": "/2026/speaker/uhyo.jpg"
   },
   "Wataru Morita(@tascript)": {
     "bio": "さくらインターネット研究所の研究開発エンジニアです。(https://research.sakura.ad.jp/members/tascript)",
+    "bioEn": "A research and development engineer at Sakura Internet Research Center. (https://research.sakura.ad.jp/members/tascript)",
     "avatarPath": "/2026/speaker/wataru-morita.jpg"
   },
   "Natalia Markoborodova": {
     "bio": "Natalia is a Developer Relations Engineer at Chrome, Google. Natalia develops technical guides, gathers platform feedback, and helps developers across two core domains: next-generation UI capabilities and frictionless user authentication APIs.",
+    "bioJa": "NataliaはGoogle ChromeのDeveloper Relations Engineerです。技術ガイドの作成やプラットフォームへのフィードバック収集を行い、次世代のUI機能と、スムーズなユーザー認証APIという2つの領域で開発者を支援しています。",
     "avatarPath": "/2026/speaker/natalia-markoborodova.jpg"
   },
   "Thomas Nattestad": {
     "bio": "Thomas Nattestad is a Senior Product Manager at Chrome, Google. Thomas leads product efforts for modern web graphics and performance APIs that enable developers to build fast, rich, and visually expressive experiences.",
+    "bioJa": "Thomas NattestadはGoogle Chromeのシニアプロダクトマネージャーです。開発者が高速で豊か、かつ視覚的に表現力のある体験を構築できるよう、モダンなWebグラフィックスやパフォーマンスAPIのプロダクト開発を主導しています。",
     "avatarPath": "/2026/speaker/thomas-nattestad.jpg"
   },
   "Ondřej Žára": {
     "bio": "An experienced web developer (15+ years), speaker and lecturer. Apart from working for a major Czech online company (Seznam.cz, a.s.), I regularly give talks at the Czech Technical University in Prague. Focus on all frontend web technologies.",
+    "bioJa": "Web開発の経験が15年以上ある開発者、スピーカー、講師です。チェコの大手インターネット企業Seznam.cz, a.s.で働く傍ら、プラハのチェコ工科大学で定期的に講義を行っています。フロントエンドのあらゆるWeb技術を専門としています。",
     "avatarPath": "/2026/speaker/ondrej-zara.png"
   },
   "えーじ": {
     "bio": "Google の Chrome Developer Relations チームの Developer Advocate。パスキーをはじめ ID 連携、デジタル ID など、アイデンティティ技術の啓蒙をグローバルでリードしています。著書「パスキーのすべて」。",
+    "bioEn": "A Developer Advocate on Google's Chrome Developer Relations team. Leads global advocacy for identity technologies, including passkeys, identity federation, and digital IDs. Author of *All About Passkeys*.",
     "avatarPath": "/2026/speaker/eiji.jpg"
   },
   "Kevin Uehara": {
     "bio": "Kevin Uehara is a Software Engineer at iFood and an active Google Developer Groups Campinas (GDG) collaborator. Recognized three times as a Microsoft MVP and Google Developer Expert (GDE) for his contributions to the tech community, Kevin is also the organizer of FrontIn Campinas, as well as an international and national speaker and tech content creator. Based in Brazil, he is passionate about sharing knowledge and inspiring other developers in the frontend ecosystem.",
+    "bioJa": "Kevin UeharaはiFoodのソフトウェアエンジニアで、Google Developer Groups Campinas（GDG）の活動にも積極的に参加しています。技術コミュニティへの貢献により、Microsoft MVPとGoogle Developer Expert（GDE）にそれぞれ3度認定されました。FrontIn Campinasの主催者であり、国内外で登壇するスピーカー、技術コンテンツ制作者としても活動しています。ブラジルを拠点に、知識を共有し、フロントエンド分野の開発者を鼓舞することに情熱を注いでいます。",
     "avatarPath": "/2026/speaker/kevin-uehara.jpg"
   },
   "ローランド リチャード": {
     "bio": "これまでに、PythonとGolangのコンパイラについて国内外のカンファレンスで解説してきました。\n\nP2Pネットワークを活用したデータ保存技術など、分散システムおよびブロックチェーン技術に関する研究に取り組んだことがあります。その後、SoftBankやOKCoin Japanなどで、ブロックチェーン関連システムの開発に携わっています。",
+    "bioEn": "Has spoken at conferences in Japan and abroad about Python and Go compilers.\n\nHas researched distributed systems and blockchain technologies, including data storage using P2P networks. Later worked on developing blockchain-related systems at SoftBank and OKCoin Japan.",
     "avatarPath": "/2026/speaker/roland-richard.jpg"
   },
   "Saman Abbasi": {
     "bio": "Saman Abbasi is a Staff Frontend Engineer and squad lead at MTN Irancell, Iran's largest mobile network operator, where he architected a Camunda-based workflow platform replacing a legacy production system. He is the creator of an open-source signals-based rendering engine that runs unmodified React components without a virtual DOM (four published npm packages), and the author of three technical deep-dive series including \"How React Works\" (9 parts, source-verified against React's internals). He is a selected speaker at React Day Berlin 2026 and React Advanced London 2026.\nA lifelong fan of Japanese culture — from growing up on Sega and Sony to cheering for Japan at the 2026 World Cup — Sam would consider speaking in Tokyo a dream come true.",
+    "bioJa": "Saman Abbasiは、イラン最大の携帯電話事業者MTN Irancellのスタッフフロントエンドエンジニア兼スクワッドリーダーです。レガシーな本番システムを置き換える、Camundaベースのワークフロープラットフォームを設計しました。仮想DOMを使わずにReactコンポーネントをそのまま実行できる、シグナルベースのオープンソースレンダリングエンジンを開発し、npmで4つのパッケージを公開しています。また、Reactの内部実装をソースコードで検証した全9回の「How React Works」を含む、3つの技術解説シリーズを執筆しています。React Day Berlin 2026とReact Advanced London 2026の登壇者にも選ばれています。\nセガやソニーに親しんで育ち、2026年のワールドカップで日本を応援するほど日本文化を長年愛しており、東京で登壇することを夢見ています。",
     "avatarPath": "/2026/speaker/saman-abaasi.jpg"
   },
   "akfm_sato": {
     "bio": "ReactやNext.jsを使ったWebアプリケーション開発を得意とするエンジニア。著書『Next.jsの考え方』（Zenn）",
+    "bioEn": "An engineer specializing in web application development with React and Next.js. Author of *How to Think About Next.js* (Zenn).",
     "avatarPath": "/2026/speaker/akfm-sato-2026.png"
   },
   "Itai Satati": {
     "bio": "Itai is a software developer with a decade of experience and a love for large-scale web systems, the nuts and bolts of payment systems, performance optimizations, and all things TypeScript. Outside of coding, he’s a licensed pilot and marathon runner.",
+    "bioJa": "Itaiは、10年の経験を持つソフトウェア開発者です。大規模なWebシステムや決済システムの仕組み、パフォーマンス最適化、そしてTypeScript全般に情熱を注いでいます。コーディング以外では、操縦士のライセンスを持ち、マラソンにも取り組んでいます。",
     "avatarPath": "/2026/speaker/itai-satati-2026.jpg"
   },
   "kinocoboy": {
     "bio": "株式会社カオナビ所属のフロントエンドエンジニア。\nフロントエンドカンファレンス東京2025, TSKaigi 北陸 登壇経験あり。",
+    "bioEn": "A frontend engineer at Kaonavi. Has spoken at Frontend Conference Tokyo 2025 and TSKaigi Hokuriku.",
     "avatarPath": "/2026/speaker/kinocoboy.jpg"
   },
   "Jessie": {
     "bio": "Jessie Auguste is a software engineer at CybSafe, where she builds secure software and works at the human side of cybersecurity. This year she hosted JSNation and React Summit Amsterdam, and she has taken the stage at React Universe, React Miami, LeadDev, Docker, DevConf, and BeJS, among others. She has also built and delivered secure coding courses based on OWASP principles. Away from the keyboard, Jessie co-founds and co-hosts Glowing in Tech, an award-winning podcast and community for people building in tech without the access others take for granted.",
+    "bioJa": "Jessie AugusteはCybSafeのソフトウェアエンジニアで、安全なソフトウェアの開発と、サイバーセキュリティにおける人間の側面に取り組んでいます。今年はJSNationとReact Summit Amsterdamの司会を務め、React Universe、React Miami、LeadDev、Docker、DevConf、BeJSなどでも登壇しました。OWASPの原則に基づくセキュアコーディング講座の開発と講師も担当しています。仕事以外では、テクノロジー業界で見過ごされがちな人々を支援する、受賞歴のあるポッドキャスト兼コミュニティ「Glowing in Tech」を共同で立ち上げ、共同ホストを務めています。",
     "avatarPath": "/2026/speaker/jessie.jpg"
   },
   "洪 民憙": {
     "bio": "ソウル在住のソロOSS開発者。構造化ロギングライブラリ[LogTape](https://logtape.org/)と、Sovereign Tech Fundの支援を受けるActivityPubサーバーフレームワーク[Fedify](https://fedify.dev/)を開発している。\n\nWebsite: https://hongminhee.org/\nGitHub: https://github.com/dahlia",
+    "bioEn": "A solo open-source developer based in Seoul. Develops [LogTape](https://logtape.org/), a structured logging library, and [Fedify](https://fedify.dev/), an ActivityPub server framework supported by the Sovereign Tech Fund.\n\nWebsite: https://hongminhee.org/\nGitHub: https://github.com/dahlia",
     "avatarPath": "/2026/speaker/hong-minhee.jpg"
   },
   "山本悠滋": {
     "bio": "WebAssemblyとプリキュアとポムポムプリンが好きなプログラマー。株式会社MagicPod所属。",
+    "bioEn": "A programmer at MagicPod, Inc. who loves WebAssembly, PreCure, and Pompompurin.",
     "avatarPath": "/2026/speaker/yuji-yamamoto.jpg"
   },
   "jiko21": {
     "bio": "エムスリー株式会社 / ソフトウェアエンジニア\n\n新卒時よりフロントエンドエンジニアとしてキャリアをスタートし、メガベンチャーやスタートアップを経て、現職。",
+    "bioEn": "Software engineer at M3, Inc.\n\nStarted a career as a frontend engineer after graduating, then worked at several large tech companies and startups before joining M3.",
     "avatarPath": "/2026/speaker/jiko21.jpg"
   },
   "Josh Junon": {
@@ -159,6 +196,7 @@
   },
   "ypresto": {
     "bio": "2012年に新卒でMIXIに入社。2014年より「みてね」の立ち上げに関わり、Androidを中心に開発を担当。その後、教育・流通系のスタートアップ複数社に籍を移し、開発全般を担いつつ、フロントエンドやUIデザインをリードする役割を担う。2024年1月にLayerXに入社し、バクラク事業部にてプロダクト開発やフロントエンド基盤の改善を中心に携わる。TypeScript自体のパフォーマンスについて調査し、改善のためのPull Requestがマージされた。型魔術師は憧れ。",
+    "bioEn": "Joined MIXI as a new graduate in 2012 and helped launch Mitene from 2014, primarily working on Android development. Later joined several startups in education and retail, taking on broad development responsibilities and leading frontend and UI design. Joined LayerX in January 2024, where he works on product development and frontend platform improvements in the Bakuraku division. Investigated TypeScript's performance, resulting in a merged pull request to improve it. Aspires to become a type wizard.",
     "avatarPath": "/2026/speaker/ypresto.jpg"
   }
 }
