@@ -137,6 +137,18 @@
     "presenterNames": "Daisuke Tsuji",
     "language": "Japanese"
   },
+  "supateam-sponsor-session": {
+    "title": "TypeScript Behind a Pluggable, Declarative Software Factory",
+    "titleJa": "プラガブルで宣言的なソフトウェアファクトリーを支えるTypeScript",
+    "description": "As companies build software factories to automate software development, setting up development environments for cloud agents and implementing custom features takes some extra work. At HelloCloud (BaseMachina), we are building an in-house software factory that lets teams select tools as plugins and define task routing and end-to-end workflows declaratively. This talk offers an overview of how we are building that platform in TypeScript.",
+    "descriptionJa": "ソフトウェア開発の無人化に向け、各社がソフトウェアファクトリーを実装する時代。クラウドエージェントでの開発環境は立ち上げ・独自機能の実装に一工夫が必要です。HelloCloud（ベースマキナ）では各種ツールをプラグインとして選択したり、タスクルーティングや一連のワークフローを宣言的に行えるソフトウェアファクトリーを内製しています。TypeScriptで実装されるこの基盤について、取り組みを広くご紹介します。",
+    "presenterNames": "timakin",
+    "presenterProfile": {
+      "avatarUrl": "/2026/speaker/timakin.jpg",
+      "url": "https://x.com/__timakin__"
+    },
+    "language": "Japanese"
+  },
   "vercel-sponsor-session": {
     "title": "Vercel Functionsの舞台裏",
     "description": "Vercelは、JavaScriptをはじめとする様々な言語のアプリケーションを実行する「Vercel Functions」を提供しています。Vercel FunctionsはシンプルなFunction as a Serviceとして始まりましたが、この数年で、Streaming SSRやLLMの普及といった時代のニーズに合わせて大きく進化してきました。\n本セッションでは、これまでの変遷とその背景、今の仕組み、今後の展望をご紹介します。後半では、多くのNode.jsアプリケーションを本番で運用する中で見えてきた、コールドスタート問題や、よくある落とし穴についてお話しします。",

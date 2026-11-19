@@ -92,7 +92,24 @@ export default async function Page({ params }: Props) {
         </div>
       )}
       <div className="mt-4">
-        {session.talk.presenterNames && <p className="mb-4 font-bold">{session.talk.presenterNames}</p>}
+        {session.talk.presenterNames && (
+          <p className="mb-4 font-bold">
+            {session.talk.presenterProfile ? (
+              <a href={session.talk.presenterProfile.url} className="inline-flex items-center gap-2 underline">
+                <Image
+                  src={session.talk.presenterProfile.avatarUrl}
+                  alt=""
+                  width={48}
+                  height={48}
+                  className="rounded-full object-cover"
+                />
+                {session.talk.presenterNames}
+              </a>
+            ) : (
+              session.talk.presenterNames
+            )}
+          </p>
+        )}
         <Markdown>{description}</Markdown>
       </div>
       <ul className="mt-8 flex flex-col gap-2">
@@ -115,7 +132,9 @@ export default async function Page({ params }: Props) {
                     ? locale === "ja"
                       ? (speaker.bioJa ?? speaker.bio)
                       : speaker.bio
-                    : speaker.prText}
+                    : locale === "en"
+                      ? (speaker.prTextEn ?? speaker.prText)
+                      : speaker.prText}
                 </Markdown>
               </div>
             </div>

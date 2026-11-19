@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import React from "react";
 import { Sponsor } from "@/constants/sponsors";
 import { SponsorLogo } from "./SponsorLogo";
@@ -10,6 +10,8 @@ type Props = {
 
 export function SponsorGrid({ sponsors, showPrText = false }: Props) {
   const t = useTranslations("sponsors");
+  const locale = useLocale();
+  const getPrText = (sponsor: Sponsor) => (locale === "en" ? (sponsor.prTextEn ?? sponsor.prText) : sponsor.prText);
 
   const premiumSponsors = sponsors.filter((sponsor) => sponsor.plan === "premium");
   const otherSponsors = sponsors.filter((sponsor) => sponsor.plan === "sponsor");
@@ -23,7 +25,7 @@ export function SponsorGrid({ sponsors, showPrText = false }: Props) {
             {premiumSponsors.map((sponsor) => (
               <div key={sponsor.name} className="flex flex-col gap-2">
                 <SponsorLogo sponsor={sponsor} />
-                {showPrText && sponsor.prText && <p>{sponsor.prText}</p>}
+                {showPrText && getPrText(sponsor) && <p>{getPrText(sponsor)}</p>}
               </div>
             ))}
           </div>
@@ -37,7 +39,7 @@ export function SponsorGrid({ sponsors, showPrText = false }: Props) {
             {otherSponsors.map((sponsor) => (
               <div key={sponsor.name} className="flex flex-col gap-2">
                 <SponsorLogo sponsor={sponsor} />
-                {showPrText && sponsor.prText && <p>{sponsor.prText}</p>}
+                {showPrText && getPrText(sponsor) && <p>{getPrText(sponsor)}</p>}
               </div>
             ))}
           </div>

@@ -24,6 +24,7 @@ export type Talk = {
   titleJa?: string;
   scheduleLabel?: string;
   presenterNames?: string;
+  presenterProfile?: { avatarUrl: string; url: string };
   description: string; // markdown
   descriptionJa?: string; // markdown
   kind: Kind;
@@ -75,6 +76,14 @@ const makeTalk = (
 };
 
 type SponsorKind = Extract<Kind, "sponsor session" | "sponsor LT">;
+const sponsorDetails: Partial<
+  Record<
+    string,
+    Pick<Talk, "title" | "titleJa" | "description" | "descriptionJa" | "presenterNames" | "presenterProfile"> & {
+      language: string;
+    }
+  >
+> = sponsorTalkDetails;
 
 // スポンサーセッション/LT。スピーカーとして SPONSORS の企業情報を紐付ける。
 const makeSponsorTalk = (
@@ -88,13 +97,11 @@ const makeSponsorTalk = (
   if (!sponsor) {
     throw new Error(`Sponsor not found for talk "${slug}": ${sponsorName}`);
   }
-  const details = sponsorTalkDetails[slug as keyof typeof sponsorTalkDetails];
+  const details = sponsorDetails[slug];
   return {
     ...makeTalk(slug, title, kind, language),
     ...(details && {
-      title: details.title,
-      description: details.description,
-      presenterNames: details.presenterNames,
+      ...details,
       language: details.language as Language,
       scheduleLabel: `${details.title} by ${details.presenterNames}`,
     }),
