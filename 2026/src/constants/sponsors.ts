@@ -10,6 +10,7 @@ export type Sponsor = {
   height?: SponsorHeight;
   url: string;
   prText: string;
+  prTextEn?: string;
   logoUrl?: string | StaticImageData;
 };
 
@@ -86,9 +87,12 @@ export const SPONSORS: Sponsor[] = [
     url: "https://supateam.com",
     logoUrl: "/2026/sponsor/hellocloud-2026.svg",
     prText: `
-AIの力を100%引き出しリスクもコントロールする、ハーネスエンジニアリングゲートウェイ。
-「supateam」は、GitHub Claude・Cursor・Jiraなどを連携するだけでAI開発の活用度・ROI・リスクを自動レポーティング。感覚値だったAI活用を経営に説明できる数字へ変えます。コーディングルール整備やツール活用の偏り検知など、データに基づく改善提案を提供します。
+HelloCloudは、毎年30億円規模の投資とともにAI推論に特化したインフラ（ネオクラウド）をデータセンター構築からオープンウェイトモデルのルーター提供まで一気通貫に行うプラットフォームカンパニーです。
+計算資源の調達から提供はもちろんのこと、AIエージェントによる業務の完全自動運転に向けたイネーブルメント事業、開発基盤「ベースマキナ」の提供も行っています。
+OSSのコアなコントリビューション経験を持つエンジニア出身の共同代表制で運営される技術集団です。
 `.trim(),
+    prTextEn:
+      "HelloCloud invests around ¥3 billion annually in AI inference infrastructure. It provides an end-to-end neocloud platform, from building data centers to offering routers for open-weight models. In addition to sourcing and providing computing resources, it helps organizations work toward fully autonomous operations with AI agents and provides the BaseMachina development platform. The company is led by co-CEOs with engineering backgrounds and experience making core contributions to open source.",
   },
   {
     type: "sponsor",
