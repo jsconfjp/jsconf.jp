@@ -19,7 +19,7 @@
   },
   "navigation": {
     "speakers": "スピーカー",
-    "venue": "会場・アクセス",
+    "venue": "会場・フロアガイド",
     "schedule": "開催スケジュール",
     "sponsors": "スポンサー",
     "tickets": "チケット",
@@ -82,6 +82,8 @@
   "venue": {
     "placeName": "ベルサール神田",
     "address": "東京都千代田区神田美土代町7 住友不動産神田ビル 2・3F",
+    "floorGuide": "フロアガイド",
+    "floorGuideAlt": "フロアガイド（{floor}）",
     "access": "アクセス",
     "accessByTrain": "電車でのアクセス",
     "accessByTrainDescription": "* 「小川町駅」B6出口徒歩2分（新宿線）\n* 「新御茶ノ水駅」B6出口徒歩2分（千代田線）\n* 「淡路町駅」B6出口徒歩2分（丸ノ内線）\n* 「神田駅」5番出口徒歩6分（銀座線）\n* 「神田駅」西口徒歩7分（JR線）\n* 「大手町駅」C2b出口徒歩7分（半蔵門線・丸ノ内線・東西線・三田線・千代田線）",

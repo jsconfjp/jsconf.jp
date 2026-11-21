@@ -5,6 +5,7 @@ import { Button } from "@/components/Button";
 import { Markdown } from "@/components/Markdown";
 import { PageContainer } from "@/components/PageContainer";
 import { Venue } from "@/components/Venue";
+import { VenueFloorGuide } from "@/components/VenueFloorGuide";
 import { OFFICIAL_URL } from "@/constants/venue";
 import { ensureLocale } from "@/i18n/ensureLocale";
 
@@ -32,6 +33,7 @@ export default async function Page({ params }: Props) {
 
   return (
     <PageContainer title={t("navigation.venue")}>
+      <VenueFloorGuide locale={locale} />
       <Venue locale={locale} />
       <div className="flex flex-col gap-2 max-w-screen-sm mx-auto">
         <h2 className="text-2xl font-bold text-center">{t("venue.access")}</h2>
