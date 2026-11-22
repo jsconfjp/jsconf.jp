@@ -1,0 +1,105 @@
+{
+  "keisuke-tsuji": [
+    {
+      "url": "https://speakerdeck.com/bengo4com/20261122-jsconfjp2026-coverage-100",
+      "title": "フロントエンドのテストカバレッジは 100%強制がいい",
+      "image": "https://files.speakerdeck.com/presentations/3d178a78a86d4a08a34f064673b6e1d2/slide_0.jpg?41448932"
+    }
+  ],
+  "bicstone": [
+    {
+      "url": "https://speakerdeck.com/bicstone/tc39-stage3-spec-changes",
+      "title": "Stage 3でも仕様は変わる。アプリケーション開発者のためのTC39プロセスの読み方",
+      "image": "https://files.speakerdeck.com/presentations/8e07faaadd9d40acb7f990d6825ac5c2/slide_0.jpg?41466231"
+    }
+  ],
+  "yuta-ikeoku": [
+    {
+      "url": "https://www.docswell.com/s/4136989/KJWDLE-jsconfjp2026",
+      "title": "【JSConf JP 2026】Coding Agent のフロントエンドを、AsyncIterable と自作の pipe で宣言的に実装する",
+      "image": "https://bcdn.docswell.com/page/Y76MY1ZDEV.jpg?width=480"
+    }
+  ],
+  "petamoriken": [
+    {
+      "url": "https://speakerdeck.com/petamoriken/canvas-2d-context-next",
+      "title": "Canvas 2D Context Next",
+      "image": "https://files.speakerdeck.com/presentations/3ab90d5b590c4161b22d882b81b7f313/slide_0.jpg?41467883"
+    }
+  ],
+  "azukiazusa": [
+    {
+      "url": "https://speakerdeck.com/azukiazusa1/slide-ca142a4a-9ec4-4750-91c1-07892c44a423",
+      "title": "ワークフローからハーネスへ — Web フレームワークの作者たちが AI エージェントに向かう理由",
+      "image": "https://files.speakerdeck.com/presentations/4ad81a7fd0714df38f5dd29d1eb45448/slide_0.jpg?41464838"
+    }
+  ],
+  "tomikawa-sotaro": [
+    {
+      "url": "https://speakerdeck.com/ssssota/javascript-ha-shinguru-bainari-no-yume-o-miru-ka",
+      "title": "JavaScriptはシングルバイナリの夢を見るか / Does JavaScript Dream of a Single Binary?",
+      "image": "https://files.speakerdeck.com/presentations/be3d6105269a4fc3ae90a9127862c215/slide_0.jpg?41468072"
+    }
+  ],
+  "syumai": [
+    {
+      "url": "https://speakerdeck.com/syumai/slides-303885bd-9a9f-41a1-b9e5-04ac53bb041c",
+      "title": "Math.sumPreciseから学ぶ、ECMAScript仕様の数値の種類",
+      "image": "https://files.speakerdeck.com/presentations/c79b12eff2e64936a0ae7c162ac8fc91/slide_0.jpg?41467906"
+    }
+  ],
+  "kazuya-serizawa": [
+    {
+      "url": "https://speakerdeck.com/seriseri/jsconf-2026-propsal-async-context-v2",
+      "title": "Promiseの向こう側へコンテキストを届ける ― proposal-async-context",
+      "image": "https://files.speakerdeck.com/presentations/be77b8a1b3f54c419206f5c1102174c8/slide_0.jpg?41468101"
+    }
+  ],
+  "dynamis": [
+    {
+      "url": "https://speakerdeck.com/dynamis/welcome-jxl",
+      "title": "Welcome JXL!",
+      "image": "https://files.speakerdeck.com/presentations/a277825fc80a4da4b2e09875975a4467/slide_0.jpg?41468150"
+    }
+  ],
+  "jiko21": [
+    {
+      "url": "https://speakerdeck.com/jiko21/jsconf2026",
+      "title": "Objectの同一性を考える ComaprisonsからCompositesまで",
+      "image": "https://files.speakerdeck.com/presentations/c3e23f67c0ec479ba8b6f3da9be676e4/slide_0.jpg?41467858"
+    }
+  ],
+  "rikito-taniguchi": [
+    {
+      "url": "https://speakerdeck.com/tanishiking/compiling-your-language-to-wasmgc-friends",
+      "title": "Compiling Your Language to WasmGC & Friends",
+      "image": "https://files.speakerdeck.com/presentations/c88d49fd279b47189e0d1006745a97b1/slide_0.jpg?41468252"
+    }
+  ],
+  "cybozu-sponsor-lt-1": [
+    {
+      "url": "https://www.docswell.com/s/tomoya0318/KN7DR2-2026-11-22-101940",
+      "title": "jsconf_cybozu_LT_2026-11-22",
+      "image": "https://bcdn.docswell.com/page/4EZPGD5MJ3.jpg?width=480"
+    }
+  ],
+  "yuta-nishi": [
+    {
+      "url": "https://speakerdeck.com/riyaamemiya/v8-no-array-prototype-flat-o-saitaiyaku-20-bai-hayaku-suru-madeto-kyodai-oss-heno-daikibo-komitto-no-michinori",
+      "title": "V8のArray.prototype.flatを最大約20倍速くするまでと、巨大OSSへの大規模コミットの道のり",
+      "image": "https://files.speakerdeck.com/presentations/6d93874ca8d141eca367580b5e2d6c28/slide_0.jpg?40984702"
+    },
+    {
+      "url": "https://speakerdeck.com/riyaamemiya/slides-export-07497c87-919a-4f35-a8c8-b76a91ba3417",
+      "title": "How I Made V8's Array.prototype.flat Up to 20× Faster—and the Journey to a Large-Scale OSS Contribution",
+      "image": "https://files.speakerdeck.com/presentations/12ab330620ec404abbd3d5f5c6e96903/slide_0.jpg?41468361"
+    }
+  ],
+  "progfay": [
+    {
+      "url": "https://progfay.github.io/diversified-npm-supply-chain-attack/",
+      "title": "多様化する npm サプライチェーン攻撃: 多角的な備えという向き合い方",
+      "image": "/2026/slides/progfay.png"
+    }
+  ]
+}

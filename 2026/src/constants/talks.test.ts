@@ -3,10 +3,23 @@ import { SPONSORS } from "./sponsors";
 import speakerProfiles from "./speakerProfiles.json";
 import { TALKS } from "./talks";
 import sponsorTalkDetails from "./sponsorTalkDetails.json";
+import talkSlides from "./talkSlides.json";
 
 const SPONSOR_KINDS = ["sponsor session", "sponsor LT"];
 
 describe("TALKS", () => {
+  it("maps slides only to existing talk slugs", () => {
+    const slugs = new Set(TALKS.map((talk) => talk.slug));
+    expect(Object.keys(talkSlides).filter((slug) => !slugs.has(slug))).toEqual([]);
+  });
+
+  it("provides a title and an image for every slide", () => {
+    const incomplete = Object.values(talkSlides)
+      .flat()
+      .filter((slide) => !slide.title.trim() || !/^(https:\/\/|\/2026\/)/.test(slide.image));
+    expect(incomplete.map((slide) => slide.url)).toEqual([]);
+  });
+
   it("provides English titles for Japanese-language talks", () => {
     const untranslated = TALKS.filter((talk) => talk.language === "Japanese" && !talk.titleEn);
     expect(untranslated.map((talk) => talk.slug)).toEqual([]);

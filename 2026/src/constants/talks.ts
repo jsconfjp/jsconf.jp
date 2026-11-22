@@ -4,6 +4,7 @@ import sponsorTalkDetails from "./sponsorTalkDetails.json";
 // @ts-expect-error see 2026/scripts/fetch-og-images.ts
 import { SPONSORS_BY_NAME, type Sponsor } from "./sponsors.ts";
 import talkDescriptions from "./talkDescriptions.json";
+import talkSlides from "./talkSlides.json";
 import emptyAvatar from "../../public/speaker/250x250.png";
 
 type Day = "1";
@@ -35,6 +36,12 @@ export type Talk = {
   language: Language;
   speakers: (Speaker | Sponsor)[];
   recordingUrl?: string;
+  slides?: readonly Slide[];
+};
+export type Slide = {
+  url: string;
+  title: string;
+  image: string; // og:image の URL、または public 配下のパス
 };
 export type FlattenedSpeaker = {
   talk: Talk;
@@ -65,6 +72,7 @@ const makeTalk = (
     kind,
     day: "1",
     language,
+    slides: talkSlides[slug as keyof typeof talkSlides],
     speakers: speakerNames.map((name) => {
       const speakerProfile = speakerProfiles[name as keyof typeof speakerProfiles];
       const avatarUrl = speakerProfile && "avatarPath" in speakerProfile ? speakerProfile.avatarPath : emptyAvatar;
