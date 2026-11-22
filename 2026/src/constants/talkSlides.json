@@ -143,5 +143,19 @@
       "title": "Oseo：SBCLスタイルのJavaScript/TypeScript AOTコンパイラ",
       "image": "https://hongminhee.codefloe.page/oseo-jsconf-jp-2026/assets/og-image-COpQD5ws.png"
     }
+  ],
+  "wataru-morita": [
+    {
+      "url": "https://speakerdeck.com/tascript/jmap-is-game-changer",
+      "title": "Webメール開発を大幅に変えたJMAPというゲームチェンジャー",
+      "image": "https://files.speakerdeck.com/presentations/34fdb086664c4af3b97c5694903700fa/slide_0.jpg?41470359"
+    }
+  ],
+  "auth0-sponsor-session": [
+    {
+      "url": "https://www.docswell.com/s/Neri78/ZN76PR-fga-intent-based-authorization",
+      "title": "システムプロンプト依存からの脱却_ AIエージェントを守る意図ベースの認可とは",
+      "image": "https://bcdn.docswell.com/page/LJL8ZL1MER.jpg?width=480"
+    }
   ]
 }
