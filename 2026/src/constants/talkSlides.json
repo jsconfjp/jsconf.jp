@@ -108,5 +108,19 @@
       "title": "The Cost of the DOM",
       "image": "https://files.speakerdeck.com/presentations/3d8122640a8f4e89a24f72133adda48b/slide_0.jpg?41468689"
     }
+  ],
+  "cybozu-sponsor-session": [
+    {
+      "url": "https://speakerdeck.com/oguemon/learn-communication-skills-from-ai",
+      "title": "チームワークなどの「人間力」をAIの背中を見て学ぼう",
+      "image": "https://files.speakerdeck.com/presentations/f653ebe961cf4b22aac886d52fd5636c/slide_0.jpg?41468795"
+    }
+  ],
+  "uhyo": [
+    {
+      "url": "https://speakerdeck.com/uhyo/jsconfjp-2026-ingenui",
+      "title": "AIフレンドリーなGenerative UIをJSXで",
+      "image": "https://files.speakerdeck.com/presentations/0dff0fba9a5146d9b56c375dbe17c656/slide_0.jpg?41463123"
+    }
   ]
 }
