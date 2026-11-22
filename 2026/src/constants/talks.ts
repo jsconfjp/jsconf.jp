@@ -38,7 +38,7 @@ export type Talk = {
   recordingUrl?: string;
   slides?: readonly Slide[];
 };
-export type Slide = {
+type Slide = {
   url: string;
   title: string;
   image: string; // og:image の URL、または public 配下のパス
