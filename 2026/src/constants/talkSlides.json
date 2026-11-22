@@ -206,5 +206,33 @@
       "title": "ariaNotify()で届けるAIチャットの当たり前品質",
       "image": "/2026/slides/layerx-sponsor-lt.png"
     }
+  ],
+  "lincwell-sponsor-lt": [
+    {
+      "url": "https://speakerdeck.com/yamakenji24/20261122-jsconf2026-lt-kenji-yamashita",
+      "title": "リリースしたで終わらない。 観測できるフロントエンド開発",
+      "image": "https://files.speakerdeck.com/presentations/b88c5424cfb64de1b487985ceefc161f/slide_0.jpg?41473768"
+    }
+  ],
+  "yuya-inoue": [
+    {
+      "url": "https://speakerdeck.com/inoway46/jsconfjp2026-yuya-inoue",
+      "title": "debug> を待ってもダメだった — Node.jsのflaky testから学ぶ非同期処理の同期点 (JSConfJP 2026)",
+      "image": "https://files.speakerdeck.com/presentations/9ace8269e68a4f8593cf46441f3670a9/slide_0.jpg?41473575"
+    }
+  ],
+  "arkor-sponsor-lt": [
+    {
+      "url": "https://speakerdeck.com/hinalin/arkor-jsconf2026-csp",
+      "title": "正しくWeb サイトを守るためのコンテンツセキュリティーポリシー",
+      "image": "https://files.speakerdeck.com/presentations/6b2674b407e24599ad48bdadc503efff/slide_0.jpg?41473715"
+    }
+  ],
+  "ncdc-sponsor-lt": [
+    {
+      "url": "https://speakerdeck.com/keitaibaraki/jsconfjp2026-ncdc-sponsorlt-v5",
+      "title": "フルTypeScript × AI駆動開発で開発量が数倍に （JSConf JP 2026 スポンサーLT：NCDC株式会社）",
+      "image": "https://files.speakerdeck.com/presentations/8c309ffcf126444499829512cebc5c37/slide_0.jpg?41473789"
+    }
   ]
 }
