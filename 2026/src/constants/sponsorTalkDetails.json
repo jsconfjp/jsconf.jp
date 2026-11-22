@@ -195,10 +195,10 @@
     "language": "Japanese"
   },
   "cougar-sponsor-session": {
-    "title": "クーガー株式会社",
-    "description": "クーガー株式会社によるスポンサーセッションです。",
-    "descriptionEn": "This is a sponsor session presented by Couger, Inc.",
-    "presenterNames": "クーガー株式会社",
+    "title": "同僚のレイチェルを紹介します ── 7,000店舗で働くAIのプロダクト開発",
+    "description": "クーガーのバーチャルヒューマンエージェント「レイチェル」は、ファミリーマート7,000店舗以上で店舗支援を行っています。\nこのLTでは、まずレイチェル本人を紹介します。そのあと、レイチェルを支える私たちフルスタックウェブチームが取り組むプロダクト開発について、技術的な考え方や、パフォーマンスと安定性を両立させるための工夫を中心にお話しします。\n続きは「レイチェル AI」で検索してみてください！",
+    "descriptionEn": "Our virtual human agent, Rachel, supports in-store operations at more than 7,000 FamilyMart locations.\nIn this LT, we’ll first introduce Rachel herself. We’ll then explain the product development undertaken by our full-stack web team, which supports Rachel, with a focus on our technical approach and the ingenuity used to balance performance and stability.\nContinue the search with “Rachel AI”!",
+    "presenterNames": "平崎 葵",
     "language": "Japanese"
   },
   "money-forward-sponsor-lt": {

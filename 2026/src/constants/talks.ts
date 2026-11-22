@@ -461,7 +461,7 @@ export const TALKS = [
     "sponsor session",
     "Japanese",
     "クーガー株式会社",
-    "Couger, Inc.",
+    "Meet Rachel, Our Colleague: Building AI Products for 7,000 Stores",
   ),
   makeSponsorTalk(
     "money-forward-sponsor-session",
