@@ -136,5 +136,12 @@
       "title": "Panda CSSにみる、ライブラリを直接importしないCSS in JSだからできること",
       "image": "https://files.speakerdeck.com/presentations/138c6a4591574fb2951e9bcfce5be799/slide_0.jpg?41469570"
     }
+  ],
+  "hong-minhee": [
+    {
+      "url": "https://hongminhee.codefloe.page/oseo-jsconf-jp-2026/",
+      "title": "Oseo：SBCLスタイルのJavaScript/TypeScript AOTコンパイラ",
+      "image": "https://hongminhee.codefloe.page/oseo-jsconf-jp-2026/assets/og-image-COpQD5ws.png"
+    }
   ]
 }
