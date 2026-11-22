@@ -84,7 +84,7 @@ export const SPONSORS: Sponsor[] = [
     type: "sponsor",
     plan: "premium",
     name: "株式会社HelloCloud",
-    url: "https://supateam.com",
+    url: "https://cloud.hello.ai/",
     logoUrl: "/2026/sponsor/hellocloud-2026.svg",
     prText: `
 HelloCloudは、毎年30億円規模の投資とともにAI推論に特化したインフラ（ネオクラウド）をデータセンター構築からオープンウェイトモデルのルーター提供まで一気通貫に行うプラットフォームカンパニーです。
