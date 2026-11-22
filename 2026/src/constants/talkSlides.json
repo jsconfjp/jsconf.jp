@@ -164,5 +164,12 @@
       "title": "useReducerで実現する、堅牢で拡張可能なスプシ風コンポーネント設計",
       "image": "https://files.speakerdeck.com/presentations/abcd84e215c14cef8c42ffe0522fbeb3/slide_0.jpg?41471606"
     }
+  ],
+  "supateam-sponsor-session": [
+    {
+      "url": "https://speakerdeck.com/timakin/definitive-and-pluggable-software-factory",
+      "title": "プラガブルで宣言的なソフトウェアファクトリーを支えるTypeScript",
+      "image": "https://files.speakerdeck.com/presentations/877319baf87c4b8ab9e3a630f4761664/slide_0.jpg?41472014"
+    }
   ]
 }
