@@ -199,5 +199,12 @@
       "title": "デザインシステムのフィードバックループをほぼ自動化した話",
       "image": "https://files.speakerdeck.com/presentations/bded635c97864a25afac9c6b91404236/slide_0.jpg?41468283"
     }
+  ],
+  "layerx-sponsor-lt": [
+    {
+      "url": "https://kazhiro999.github.io/jsconf-arianotify/",
+      "title": "ariaNotify()で届けるAIチャットの当たり前品質",
+      "image": "/2026/slides/layerx-sponsor-lt.png"
+    }
   ]
 }
