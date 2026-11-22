@@ -1,3 +1,4 @@
+import { PaperClipIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
@@ -44,12 +45,13 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
   const t = useTranslations("schedule.kind");
   const tKind = useTranslations("talks.kind");
   const tTrack = useTranslations("talks.track");
+  const tTalks = useTranslations("talks");
   const locale = useLocale();
 
   return (
     <div
       className={clsx(
-        "py-2 px-4 rounded-sm border-2 h-full flex flex-col gap-1 justify-start text-wrap",
+        "relative py-2 px-4 rounded-sm border-2 h-full flex flex-col gap-1 justify-start text-wrap",
         getSessionColor(session),
         session.kind === "talk" ? "cursor-pointer hover:shadow-md" : "cursor-auto",
       )}
@@ -116,6 +118,9 @@ export function SessionCard({ session }: { session: ScheduledSession }) {
       <time className="text-xs">
         {session.startTime} - {session.endTime}
       </time>
+      {session.kind === "talk" && session.talk.slides && (
+        <PaperClipIcon className="absolute right-2 bottom-2 size-4" aria-label={tTalks("slides")} role="img" />
+      )}
     </div>
   );
 }
