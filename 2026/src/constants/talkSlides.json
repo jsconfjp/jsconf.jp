@@ -171,5 +171,19 @@
       "title": "プラガブルで宣言的なソフトウェアファクトリーを支えるTypeScript",
       "image": "https://files.speakerdeck.com/presentations/877319baf87c4b8ab9e3a630f4761664/slide_0.jpg?41472014"
     }
+  ],
+  "kinocoboy": [
+    {
+      "url": "https://speakerdeck.com/kinocoboy2/jsconf2026",
+      "title": "開発におけるリズムと一貫性",
+      "image": "https://files.speakerdeck.com/presentations/2d5654a4e4cb4358be69de90c420396f/slide_0.jpg?41468765"
+    }
+  ],
+  "lincwell-sponsor-session": [
+    {
+      "url": "https://www.docswell.com/s/toshi_toma/K6NRV7-deconstructing-monolith",
+      "title": "モノリシックなフロントエンドに境界を引いてコツコツ分割した話",
+      "image": "https://bcdn.docswell.com/page/GJ5ZGVMQE4.jpg?width=480"
+    }
   ]
 }
