@@ -122,5 +122,12 @@
       "title": "AIフレンドリーなGenerative UIをJSXで",
       "image": "https://files.speakerdeck.com/presentations/0dff0fba9a5146d9b56c375dbe17c656/slide_0.jpg?41463123"
     }
+  ],
+  "yuji-yamamoto": [
+    {
+      "url": "https://the.igreque.info/slides/2026-11-22-ownership",
+      "title": "JS･WasmにもあるRustのアレ - コンポーネント間でやりとりするオブジェクトを管理する",
+      "image": "/2026/slides/yuji-yamamoto.png"
+    }
   ]
 }
