@@ -157,5 +157,12 @@
       "title": "システムプロンプト依存からの脱却_ AIエージェントを守る意図ベースの認可とは",
       "image": "https://bcdn.docswell.com/page/LJL8ZL1MER.jpg?width=480"
     }
+  ],
+  "layerx-sponsor-session": [
+    {
+      "url": "https://speakerdeck.com/arfes0e2b3c/jsconf2026-yata",
+      "title": "useReducerで実現する、堅牢で拡張可能なスプシ風コンポーネント設計",
+      "image": "https://files.speakerdeck.com/presentations/abcd84e215c14cef8c42ffe0522fbeb3/slide_0.jpg?41471606"
+    }
   ]
 }
