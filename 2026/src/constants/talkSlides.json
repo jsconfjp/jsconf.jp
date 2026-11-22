@@ -1,0 +1,238 @@
+{
+  "keisuke-tsuji": [
+    {
+      "url": "https://speakerdeck.com/bengo4com/20261122-jsconfjp2026-coverage-100",
+      "title": "フロントエンドのテストカバレッジは 100%強制がいい",
+      "image": "https://files.speakerdeck.com/presentations/3d178a78a86d4a08a34f064673b6e1d2/slide_0.jpg?41448932"
+    }
+  ],
+  "bicstone": [
+    {
+      "url": "https://speakerdeck.com/bicstone/tc39-stage3-spec-changes",
+      "title": "Stage 3でも仕様は変わる。アプリケーション開発者のためのTC39プロセスの読み方",
+      "image": "https://files.speakerdeck.com/presentations/8e07faaadd9d40acb7f990d6825ac5c2/slide_0.jpg?41466231"
+    }
+  ],
+  "yuta-ikeoku": [
+    {
+      "url": "https://www.docswell.com/s/4136989/KJWDLE-jsconfjp2026",
+      "title": "【JSConf JP 2026】Coding Agent のフロントエンドを、AsyncIterable と自作の pipe で宣言的に実装する",
+      "image": "https://bcdn.docswell.com/page/Y76MY1ZDEV.jpg?width=480"
+    }
+  ],
+  "petamoriken": [
+    {
+      "url": "https://speakerdeck.com/petamoriken/canvas-2d-context-next",
+      "title": "Canvas 2D Context Next",
+      "image": "https://files.speakerdeck.com/presentations/3ab90d5b590c4161b22d882b81b7f313/slide_0.jpg?41467883"
+    }
+  ],
+  "azukiazusa": [
+    {
+      "url": "https://speakerdeck.com/azukiazusa1/slide-ca142a4a-9ec4-4750-91c1-07892c44a423",
+      "title": "ワークフローからハーネスへ — Web フレームワークの作者たちが AI エージェントに向かう理由",
+      "image": "https://files.speakerdeck.com/presentations/4ad81a7fd0714df38f5dd29d1eb45448/slide_0.jpg?41464838"
+    }
+  ],
+  "tomikawa-sotaro": [
+    {
+      "url": "https://speakerdeck.com/ssssota/javascript-ha-shinguru-bainari-no-yume-o-miru-ka",
+      "title": "JavaScriptはシングルバイナリの夢を見るか / Does JavaScript Dream of a Single Binary?",
+      "image": "https://files.speakerdeck.com/presentations/be3d6105269a4fc3ae90a9127862c215/slide_0.jpg?41468072"
+    }
+  ],
+  "syumai": [
+    {
+      "url": "https://speakerdeck.com/syumai/slides-303885bd-9a9f-41a1-b9e5-04ac53bb041c",
+      "title": "Math.sumPreciseから学ぶ、ECMAScript仕様の数値の種類",
+      "image": "https://files.speakerdeck.com/presentations/c79b12eff2e64936a0ae7c162ac8fc91/slide_0.jpg?41467906"
+    }
+  ],
+  "kazuya-serizawa": [
+    {
+      "url": "https://speakerdeck.com/seriseri/jsconf-2026-propsal-async-context-v2",
+      "title": "Promiseの向こう側へコンテキストを届ける ― proposal-async-context",
+      "image": "https://files.speakerdeck.com/presentations/be77b8a1b3f54c419206f5c1102174c8/slide_0.jpg?41468101"
+    }
+  ],
+  "dynamis": [
+    {
+      "url": "https://speakerdeck.com/dynamis/welcome-jxl",
+      "title": "Welcome JXL!",
+      "image": "https://files.speakerdeck.com/presentations/a277825fc80a4da4b2e09875975a4467/slide_0.jpg?41468150"
+    }
+  ],
+  "jiko21": [
+    {
+      "url": "https://speakerdeck.com/jiko21/jsconf2026",
+      "title": "Objectの同一性を考える ComaprisonsからCompositesまで",
+      "image": "https://files.speakerdeck.com/presentations/c3e23f67c0ec479ba8b6f3da9be676e4/slide_0.jpg?41467858"
+    }
+  ],
+  "rikito-taniguchi": [
+    {
+      "url": "https://speakerdeck.com/tanishiking/compiling-your-language-to-wasmgc-friends",
+      "title": "Compiling Your Language to WasmGC & Friends",
+      "image": "https://files.speakerdeck.com/presentations/c88d49fd279b47189e0d1006745a97b1/slide_0.jpg?41468252"
+    }
+  ],
+  "cybozu-sponsor-lt-1": [
+    {
+      "url": "https://www.docswell.com/s/tomoya0318/KN7DR2-2026-11-22-101940",
+      "title": "jsconf_cybozu_LT_2026-11-22",
+      "image": "https://bcdn.docswell.com/page/4EZPGD5MJ3.jpg?width=480"
+    }
+  ],
+  "yuta-nishi": [
+    {
+      "url": "https://speakerdeck.com/riyaamemiya/v8-no-array-prototype-flat-o-saitaiyaku-20-bai-hayaku-suru-madeto-kyodai-oss-heno-daikibo-komitto-no-michinori",
+      "title": "V8のArray.prototype.flatを最大約20倍速くするまでと、巨大OSSへの大規模コミットの道のり",
+      "image": "https://files.speakerdeck.com/presentations/6d93874ca8d141eca367580b5e2d6c28/slide_0.jpg?40984702"
+    },
+    {
+      "url": "https://speakerdeck.com/riyaamemiya/slides-export-07497c87-919a-4f35-a8c8-b76a91ba3417",
+      "title": "How I Made V8's Array.prototype.flat Up to 20× Faster—and the Journey to a Large-Scale OSS Contribution",
+      "image": "https://files.speakerdeck.com/presentations/12ab330620ec404abbd3d5f5c6e96903/slide_0.jpg?41468361"
+    }
+  ],
+  "progfay": [
+    {
+      "url": "https://progfay.github.io/diversified-npm-supply-chain-attack/",
+      "title": "多様化する npm サプライチェーン攻撃: 多角的な備えという向き合い方",
+      "image": "/2026/slides/progfay.png"
+    }
+  ],
+  "ypresto": [
+    {
+      "url": "https://speakerdeck.com/ypresto/the-cost-of-the-dom",
+      "title": "The Cost of the DOM",
+      "image": "https://files.speakerdeck.com/presentations/3d8122640a8f4e89a24f72133adda48b/slide_0.jpg?41468689"
+    }
+  ],
+  "cybozu-sponsor-session": [
+    {
+      "url": "https://speakerdeck.com/oguemon/learn-communication-skills-from-ai",
+      "title": "チームワークなどの「人間力」をAIの背中を見て学ぼう",
+      "image": "https://files.speakerdeck.com/presentations/f653ebe961cf4b22aac886d52fd5636c/slide_0.jpg?41468795"
+    }
+  ],
+  "uhyo": [
+    {
+      "url": "https://uhyo.github.io/jsconfjp-202611/",
+      "title": "AIフレンドリーなGenerative UIをJSXで",
+      "image": "https://files.speakerdeck.com/presentations/0dff0fba9a5146d9b56c375dbe17c656/slide_0.jpg?41463123"
+    }
+  ],
+  "yuji-yamamoto": [
+    {
+      "url": "https://the.igreque.info/slides/2026-11-22-ownership",
+      "title": "JS･WasmにもあるRustのアレ - コンポーネント間でやりとりするオブジェクトを管理する",
+      "image": "/2026/slides/yuji-yamamoto.png"
+    }
+  ],
+  "dwango-sponsor-session": [
+    {
+      "url": "https://k8o.me/talks/jsconf-jp-2026",
+      "title": "Panda CSSにみる、ライブラリを直接importしないCSS in JSだからできること",
+      "image": "https://files.speakerdeck.com/presentations/138c6a4591574fb2951e9bcfce5be799/slide_0.jpg?41469570"
+    }
+  ],
+  "hong-minhee": [
+    {
+      "url": "https://hongminhee.codefloe.page/oseo-jsconf-jp-2026/",
+      "title": "Oseo：SBCLスタイルのJavaScript/TypeScript AOTコンパイラ",
+      "image": "https://hongminhee.codefloe.page/oseo-jsconf-jp-2026/assets/og-image-COpQD5ws.png"
+    }
+  ],
+  "wataru-morita": [
+    {
+      "url": "https://speakerdeck.com/tascript/jmap-is-game-changer",
+      "title": "Webメール開発を大幅に変えたJMAPというゲームチェンジャー",
+      "image": "https://files.speakerdeck.com/presentations/34fdb086664c4af3b97c5694903700fa/slide_0.jpg?41470359"
+    }
+  ],
+  "auth0-sponsor-session": [
+    {
+      "url": "https://www.docswell.com/s/Neri78/ZN76PR-fga-intent-based-authorization",
+      "title": "システムプロンプト依存からの脱却_ AIエージェントを守る意図ベースの認可とは",
+      "image": "https://bcdn.docswell.com/page/LJL8ZL1MER.jpg?width=480"
+    }
+  ],
+  "layerx-sponsor-session": [
+    {
+      "url": "https://speakerdeck.com/arfes0e2b3c/jsconf2026-yata",
+      "title": "useReducerで実現する、堅牢で拡張可能なスプシ風コンポーネント設計",
+      "image": "https://files.speakerdeck.com/presentations/abcd84e215c14cef8c42ffe0522fbeb3/slide_0.jpg?41471606"
+    }
+  ],
+  "supateam-sponsor-session": [
+    {
+      "url": "https://speakerdeck.com/timakin/definitive-and-pluggable-software-factory",
+      "title": "プラガブルで宣言的なソフトウェアファクトリーを支えるTypeScript",
+      "image": "https://files.speakerdeck.com/presentations/877319baf87c4b8ab9e3a630f4761664/slide_0.jpg?41472014"
+    }
+  ],
+  "kinocoboy": [
+    {
+      "url": "https://speakerdeck.com/kinocoboy2/jsconf2026",
+      "title": "開発におけるリズムと一貫性",
+      "image": "https://files.speakerdeck.com/presentations/2d5654a4e4cb4358be69de90c420396f/slide_0.jpg?41468765"
+    }
+  ],
+  "lincwell-sponsor-session": [
+    {
+      "url": "https://www.docswell.com/s/toshi_toma/K6NRV7-deconstructing-monolith",
+      "title": "モノリシックなフロントエンドに境界を引いてコツコツ分割した話",
+      "image": "https://bcdn.docswell.com/page/GJ5ZGVMQE4.jpg?width=480"
+    }
+  ],
+  "dwango-sponsor-lt": [
+    {
+      "url": "https://slides.berlysia.net/jsconfjp2026-vertical-writing-web-2026/",
+      "title": "縦書きWebの周辺状況 2026",
+      "image": "https://slides.berlysia.net/jsconfjp2026-vertical-writing-web-2026/slide-assets/ogp.png"
+    }
+  ],
+  "money-forward-sponsor-lt": [
+    {
+      "url": "https://speakerdeck.com/tongari07/dezain-shisutemu-no-fidobakku-rupu-o-hobo-jidouka-shita-hanashi",
+      "title": "デザインシステムのフィードバックループをほぼ自動化した話",
+      "image": "https://files.speakerdeck.com/presentations/bded635c97864a25afac9c6b91404236/slide_0.jpg?41468283"
+    }
+  ],
+  "layerx-sponsor-lt": [
+    {
+      "url": "https://kazhiro999.github.io/jsconf-arianotify/",
+      "title": "ariaNotify()で届けるAIチャットの当たり前品質",
+      "image": "/2026/slides/layerx-sponsor-lt.png"
+    }
+  ],
+  "lincwell-sponsor-lt": [
+    {
+      "url": "https://speakerdeck.com/yamakenji24/20261122-jsconf2026-lt-kenji-yamashita",
+      "title": "リリースしたで終わらない。 観測できるフロントエンド開発",
+      "image": "https://files.speakerdeck.com/presentations/b88c5424cfb64de1b487985ceefc161f/slide_0.jpg?41473768"
+    }
+  ],
+  "yuya-inoue": [
+    {
+      "url": "https://speakerdeck.com/inoway46/jsconfjp2026-yuya-inoue",
+      "title": "debug> を待ってもダメだった — Node.jsのflaky testから学ぶ非同期処理の同期点 (JSConfJP 2026)",
+      "image": "https://files.speakerdeck.com/presentations/9ace8269e68a4f8593cf46441f3670a9/slide_0.jpg?41473575"
+    }
+  ],
+  "arkor-sponsor-lt": [
+    {
+      "url": "https://speakerdeck.com/hinalin/arkor-jsconf2026-csp",
+      "title": "正しくWeb サイトを守るためのコンテンツセキュリティーポリシー",
+      "image": "https://files.speakerdeck.com/presentations/6b2674b407e24599ad48bdadc503efff/slide_0.jpg?41473715"
+    }
+  ],
+  "ncdc-sponsor-lt": [
+    {
+      "url": "https://speakerdeck.com/keitaibaraki/jsconfjp2026-ncdc-sponsorlt-v5",
+      "title": "フルTypeScript × AI駆動開発で開発量が数倍に （JSConf JP 2026 スポンサーLT：NCDC株式会社）",
+      "image": "https://files.speakerdeck.com/presentations/8c309ffcf126444499829512cebc5c37/slide_0.jpg?41473789"
+    }
+  ]
+}

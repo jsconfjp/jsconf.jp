@@ -91,6 +91,23 @@ export default async function Page({ params }: Props) {
           />
         </div>
       )}
+      {session.talk.slides && (
+        <div className="mt-4">
+          <h2 className="text-2xl font-bold">{t("slides")}</h2>
+          <ul className="mt-2 grid gap-4 sm:grid-cols-2">
+            {session.talk.slides.map((slide) => (
+              <li key={slide.url}>
+                <a href={slide.url} target="_blank" rel="noopener noreferrer" className="block hover:opacity-80">
+                  <span className="relative block aspect-video overflow-hidden rounded border border-gray-200">
+                    <Image src={slide.image} alt="" fill className="object-cover" />
+                  </span>
+                  <span className="mt-1 block font-bold underline">{slide.title}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       <div className="mt-4">
         {session.talk.presenterNames && (
           <p className="mb-4 font-bold">
