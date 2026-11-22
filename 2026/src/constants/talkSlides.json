@@ -129,5 +129,12 @@
       "title": "JS･WasmにもあるRustのアレ - コンポーネント間でやりとりするオブジェクトを管理する",
       "image": "/2026/slides/yuji-yamamoto.png"
     }
+  ],
+  "dwango-sponsor-session": [
+    {
+      "url": "https://k8o.me/talks/jsconf-jp-2026",
+      "title": "Panda CSSにみる、ライブラリを直接importしないCSS in JSだからできること",
+      "image": "https://files.speakerdeck.com/presentations/138c6a4591574fb2951e9bcfce5be799/slide_0.jpg?41469570"
+    }
   ]
 }
