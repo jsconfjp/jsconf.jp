@@ -234,5 +234,26 @@
       "title": "フルTypeScript × AI駆動開発で開発量が数倍に （JSConf JP 2026 スポンサーLT：NCDC株式会社）",
       "image": "https://files.speakerdeck.com/presentations/8c309ffcf126444499829512cebc5c37/slide_0.jpg?41473789"
     }
+  ],
+  "akfm-sato": [
+    {
+      "url": "https://akifumisato.github.io/akfm-slides/2026/nextjs-instant-navigations/",
+      "title": "Next.js Instant Navigations - Navigation最適化の最高到達点",
+      "image": "/2026/slides/akfm-sato.png"
+    }
+  ],
+  "yebis0942": [
+    {
+      "url": "https://yebis0942.github.io/jsconfjp-2026-esmeta-lt/",
+      "title": "esmeta: ECMAScript仕様書を読む機械",
+      "image": "/2026/slides/yebis0942.png"
+    }
+  ],
+  "enechain-sponsor-lt": [
+    {
+      "url": "https://speakerdeck.com/nakker1218/generative-ui-ni-manabu-riarutaimu-ni-koushin-sareru-teburu-kiban-no-susume",
+      "title": "Generative UIに学ぶ リアルタイムに更新される テーブル基盤のすすめ",
+      "image": "https://files.speakerdeck.com/presentations/edb8ef2338ac429186408b306331bccf/slide_0.jpg?41477574"
+    }
   ]
 }
